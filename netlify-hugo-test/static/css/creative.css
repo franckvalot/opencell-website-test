@@ -66,7 +66,7 @@ header {
   min-height: 100%;
   text-align: center;
   color: #fff;
-  background-image: url("/img/bg/bg_slider_1.jpg");
+  background-image: url("../img/bg/bg_slider_1.jpg");
   -webkit-background-size: cover !important;
   -moz-background-size: cover !important;
   background-size: cover !important;
@@ -105,7 +105,7 @@ header .header-content .header-content-inner p {
   header {
     margin-top: 100px;
     min-height: 70%;
-    background-image: url("/img/bg/bg_slider_1.jpg");
+    background-image: url("../img/bg/bg_slider_1.jpg");
   }
 
   header .header-content {
@@ -251,7 +251,7 @@ section {
   color: white;
   min-height: 50vh;
   height: 20vw;
-  background-image: url("/img/bg/bg_testimonials.jpg");
+  background-image: url("../img/bg/bg_testimonials.jpg");
 }
 
 .testimonials .quote {
@@ -261,7 +261,7 @@ section {
 }
 
 .testimonials .quote::before {
-  background-image: url("/img/icon/quote.svg");
+  background-image: url("../img/icon/quote.svg");
   background-size: 35px 35px;
   display: inline-block;
   width: 35px;
@@ -270,7 +270,7 @@ section {
   margin-right: 10px;
 }
 .testimonials .quote::after {
-  background-image: url("/img/icon/quote.svg");
+  background-image: url("../img/icon/quote.svg");
   background-size: 35px 35px;
   display: inline-block;
   width: 35px;
