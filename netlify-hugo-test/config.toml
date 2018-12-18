@@ -1,0 +1,5 @@
+baseURL = "https://opencellsoft.com/"
+languageCode = "en-us"
+title = "Opencellsoft"
+
+[params]
