@@ -188,8 +188,16 @@ header {
   margin-bottom: 5vh;
 }
 
+.hero-1 {
+  background-color: white;
+}
+
+.hero-2 {
+  background-color: #dedede;
+}
+
 section {
-  padding: 1vh 0 5vh 0;
+  padding: 5vh 0;
 }
 
 @media(min-width:1024px) {
@@ -199,7 +207,7 @@ section {
 
   section {
     min-height: 70%;
-    padding: 1vh 0 10vh 0;
+    padding: 10vh 0 10vh 0;
   }
 }
 
