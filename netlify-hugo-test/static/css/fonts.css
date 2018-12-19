@@ -32,18 +32,18 @@
 }
 
 @font-face{
-  font-family:'Neo-Display';
-  src: url("../fonts/neo-display/NeoDisplay-Regular.woff2") format("woff2"),
-  url("../fonts/neo-display/NeoDisplay-Regular.woff") format("woff"),
-  url("../fonts/gt-walsheim/NeoDisplay-Regular.ttf") format("truetype";
+  font-family:'Noe-Display-Regular';
+  src: url("../fonts/noe-display/NoeDisplay-Regular.woff2") format("woff2"),
+  url("../fonts/noe-display/NoeDisplay-Regular.woff") format("woff"),
+  url("../fonts/noe-display/NoeDisplay-Regular.otf") format("opentype");
   font-weight:normal;
   font-style:normal;
 }
 
 @font-face{
-  font-family:'Neo-Display';
-  src: url("../fonts/neo-display/NeoDisplay-Black.woff") format("woff"),
-  url("../fonts/gt-walsheim/NeoDisplay-Black.ttf") format("truetype");
-  font-weight:black;
+  font-family:'Noe-Display-Black';
+  src: url("../fonts/noe-display/NoeDisplay-Black.woff") format("woff"),
+  url("../fonts/noe-display/NoeDisplay-Black.otf") format("opentype");
+  font-weight:normal;
   font-style:normal;
 }

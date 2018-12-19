@@ -28,6 +28,8 @@
 }
 
 
+
+
 .nav-item .opencell-btn{
   margin-top: 15px;
 }
@@ -36,6 +38,12 @@
   .nav-item .opencell-btn {
     margin-top: 0;
   }
+
+  .navbar-collapse {
+    background-color: white;
+    padding: 0;
+  }
+
 }
 
 .opencell-btn {
@@ -63,7 +71,7 @@ header {
   position: relative;
   padding-top: 60px;
   width: 100%;
-  min-height: 100%;
+  min-height: calc(100% - 60px);
   text-align: center;
   color: #fff;
   background-image: url("../img/bg/bg_slider_1.jpg");
@@ -88,7 +96,7 @@ header .header-content {
 header .header-content .header-content-inner h1 {
     margin: auto;
     text-transform: none;
-    font-family: "Neo-Display-Black";
+    font-family: "Noe-Display-Black";
     font-size: 26px;
     line-height: 34px;
     font-weight: 500;
@@ -104,7 +112,7 @@ header .header-content .header-content-inner p {
 @media(min-width:1024px) {
   header {
     margin-top: 100px;
-    min-height: 70%;
+    min-height: calc(100% - 100px);
     background-image: url("../img/bg/bg_slider_1.jpg");
   }
 
@@ -139,7 +147,7 @@ header .header-content .header-content-inner p {
 
 section h1 {
   color: #5A5A5A;
-  font-family: 'Neo-Display';
+  font-family: 'Noe-Display-Black';
   font-weight: black;
   text-transform: none;
   font-size: 50px;
@@ -184,30 +192,21 @@ span.h2 {
   height: 100px;
 }
 
-header {
-  margin-bottom: 5vh;
-}
-
 .hero-1 {
   background-color: white;
 }
 
 .hero-2 {
-  background-color: #dedede;
+  background-color: white;
 }
 
 section {
-  padding: 5vh 0;
+  padding: 3vh 0;
 }
 
 @media(min-width:1024px) {
-  header {
-    margin-bottom: 10vh;
-  }
-
   section {
-    min-height: 70%;
-    padding: 10vh 0 10vh 0;
+    padding: 5vh 0;
   }
 }
 
@@ -263,7 +262,9 @@ section {
 }
 
 .testimonials .quote {
-  font-family: 'GT-Walsheim-Thin';
+  font-family: 'Noe-Display-Regular';
+  font-weight: bold;
+  letter-spacing: 2px;
   font-size: 30px;
   padding-top: 10vh;
 }
@@ -318,11 +319,12 @@ section.get-demo {
 div.get-demo {
   font-size: 50px;
   line-height: 50px;
-  font-family: 'Neo-Display';
+  font-family: 'Noe-Display-Black';
   font-weight: black;
   color: white;
   padding: 10px 40px;
   border: 3px solid white;
+  margin: calc(25vh / 2 - 50px) 0;
 }
 
 .youtube {
@@ -358,7 +360,7 @@ section.footer div {
 
 section.footer h1 {
   font-size: 20px;
-  font-family: 'NeoDisplay';
+  font-family: 'Noe-Display-Black';
   font-weight: bold;
   color: white;
   padding: 0;
