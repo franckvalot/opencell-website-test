@@ -12,8 +12,6 @@ public_folder: "/uploads"
 display_url: https://opencell-test.netlify.com/admin
 logo_url: https:/opencell-test.netlify.com/img/logo-opencell.svg
 
-
-
 collections:
   - name: "testimonials"
     label: "Testimonials" # Used in the UI
@@ -29,12 +27,12 @@ collections:
       - {label: "Testimonial", name: "testimonial", widget: "string"}
       - {label: "Author", name: "author", widget: "string"}
 
-    - name: "indexpage"
-      label: "Index Page"
-      files:
-        - name: "whatweprovide"
-          label: "What we provide"
-          file: "data/provide/whatweprovide.yaml"
-          fields:
-            - {label: Content, name: content, widget: markdown}
-            - {label: Image, name: image, widget: image}
+  - name: "indexpage"
+    label: "Index Page"
+    files:
+      - name: "whatweprovide"
+        label: "What we provide"
+        file: "data/provide/whatweprovide.yaml"
+        fields:
+          - {label: Content, name: content, widget: markdown}
+          - {label: Image, name: image, widget: image}
