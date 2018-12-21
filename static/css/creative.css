@@ -256,7 +256,7 @@ section {
 
 .testimonials {
   color: white;
-  min-height: 50vh;
+  min-height: 40vh;
   height: 20vw;
   background-image: url("../img/bg/bg_testimonials.jpg");
 }

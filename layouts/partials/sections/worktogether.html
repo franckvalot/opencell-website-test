@@ -13,57 +13,25 @@
             <li data-target="#carouselTestimonials" data-slide-to="2"></li>
           </ol>
           <div class="carousel-inner testimonials">
-            <div class="carousel-item active">
+            {{ range $index, $value := first 3 (where .Site.Pages "Type" "=" "testimonials") }}
+            <div class="carousel-item {{ if (eq $index 0)}}active{{ end }}">
               <div class="row justify-content-center align-items-center">
                 <div class="col-10 col-md-8 col-lg-6">
                   <div class="row justify-content-center">
                     <div class="quote text-center ">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed rutrum libero. Suspendisse potenti.
+                      {{ .Params.testimonials }}
                     </div>
                     <div class="w-100"></div>
                     <hr>
                     <div class="w-100"></div>
                     <div class="author">
-                      David Meyer
+                      {{ .Params.author }}
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="carousel-item">
-              <div class="row justify-content-center align-items-center">
-                <div class="col-10 col-md-8 col-lg-6">
-                  <div class="row justify-content-center">
-                    <div class="quote text-center ">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed rutrum libero. Suspendisse potenti.
-                    </div>
-                    <div class="w-100"></div>
-                    <hr>
-                    <div class="w-100"></div>
-                    <div class="author">
-                      Ethan Barsley
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="carousel-item">
-              <div class="row justify-content-center align-items-center">
-                <div class="col-10 col-md-8 col-lg-6">
-                  <div class="row justify-content-center">
-                    <div class="quote text-center ">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed rutrum libero. Suspendisse potenti.
-                    </div>
-                    <div class="w-100"></div>
-                    <hr>
-                    <div class="w-100"></div>
-                    <div class="author">
-                      Stéphane Dine
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+            {{ end }}
           </div>
           <a class="carousel-control-prev" href="#carouselTestimonials" role="button" data-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>

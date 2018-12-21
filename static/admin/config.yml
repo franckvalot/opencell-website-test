@@ -9,7 +9,7 @@ backend:
 media_folder: "static/uploads" # Media files will be stored in the repo under static/img/uploads
 public_folder: "/uploads" # The src attribute for uploaded media will begin with /img/uploads
 
-display_url: https://opencell-test.netlify.com
+display_url: https://opencell-test.netlify.com/admin
 logo_url: https:/opencell-test.netlify.com/img/logo-opencell.svg
 
 
@@ -27,4 +27,4 @@ collections:
         pattern: ['.{3,}', "Must have at least 3 characters"]
       - {label: "Publish Date", name: "date", widget: "datetime"}
       - {label: "Content", name: "content", widget: "string"}
-      - {label: "Auther", name: "auther", widget: "string"}
+      - {label: "Author", name: "author", widget: "string"}
