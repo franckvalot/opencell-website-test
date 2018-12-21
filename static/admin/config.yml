@@ -6,8 +6,8 @@ backend:
   branch: master # Branch to update (optional; defaults to master)
   publish_mode: editorial_workflow
 
-media_folder: "static/uploads" # Media files will be stored in the repo under static/img/uploads
-public_folder: "/uploads" # The src attribute for uploaded media will begin with /img/uploads
+media_folder: "static/uploads"
+public_folder: "/uploads"
 
 display_url: https://opencell-test.netlify.com/admin
 logo_url: https:/opencell-test.netlify.com/img/logo-opencell.svg
@@ -28,3 +28,13 @@ collections:
       - {label: "Publish Date", name: "date", widget: "datetime"}
       - {label: "Testimonial", name: "testimonial", widget: "string"}
       - {label: "Author", name: "author", widget: "string"}
+
+    - name: "indexpage"
+      label: "Index Page"
+      files:
+        - name: "whatweprovide"
+          label: "What we provide"
+          file: "data/provide/whatweprovide.yaml"
+          fields:
+            - {label: Content, name: content, widget: markdown}
+            - {label: Image, name: image, widget: image}
