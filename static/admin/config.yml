@@ -72,13 +72,21 @@ collections:
         file: "data/indexpage/ourcustomers.yml"
         fields:
           - {label: "Logo 1", name: "logo1", widget: image}
+          - {label: "Alternative text 1", name: "alt1", widget: string}
           - {label: "Logo 2", name: "logo2", widget: image}
+          - {label: "Alternative text 2", name: "alt2", widget: string}
           - {label: "Logo 3", name: "logo3", widget: image}
+          - {label: "Alternative text 3", name: "alt3", widget: string}
           - {label: "Logo 4", name: "logo4", widget: image}
+          - {label: "Alternative text 4", name: "alt4", widget: string}
           - {label: "Logo 5", name: "logo5", widget: image}
+          - {label: "Alternative text 5", name: "alt5", widget: string}
           - {label: "Logo 6", name: "logo6", widget: image}
+          - {label: "Alternative text 6", name: "alt6", widget: string}
           - {label: "Logo 7", name: "logo7", widget: image}
+          - {label: "Alternative text 7", name: "alt7", widget: string}
           - {label: "Logo 8", name: "logo8", widget: image}
+          - {label: "Alternative text 8", name: "alt8", widget: string}
       - name: "worktogether"
         label: "We work together"
         file: "data/indexpage/worktogether.yml"
