@@ -63,10 +63,6 @@ collections:
         file: "data/indexpage/mainindustries.yml"
         fields:
           - {label: "Subtitle", name: "subtitle", widget: string}
-          - {label: "Block 1", name: "block1", widget: string)
-          - {label: "Block 2", name: "block2", widget: string)
-          - {label: "Block 3", name: "block3", widget: string)
-          - {label: "Block 4", name: "block4", widget: string)
       - name: "ourcustomers"
         label: "Our customers."
         file: "data/indexpage/ourcustomers.yml"
