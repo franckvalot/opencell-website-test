@@ -5,11 +5,10 @@
         </div>
         <div class="row align-items-center justify-content-center">
           <div class="col-12 col-md-8 col-lg-6">
-            <img src="img/hp_schema.png" class="img-fluid" alt="">
+            <img src="{{ .Site.Data.indexpage.whatweprovide.image }}" class="img-fluid" alt="">
           </div>
           <div class="col-12 col-md-4 col-lg-6">
-            <p>Opencell is an end-to-end platform for monetizing subscription and usage-based revenue businesses.</p>
-            <p>We enable recurring revenue businesses to quickly launch new services, to monetize new revenue streams and deliver improved customer experiences.</p>
+            {{ .Site.Data.indexpage.whatweprovide.content | markdownify }}
             <button type="button" name="button" class="opencell-btn">DISCOVER</button>
           </div>
         </div>

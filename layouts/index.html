@@ -2,17 +2,17 @@
 <html>
   {{ partial "head.html" }}
   <body>
-    {{ partial "header/navBar.html" }}
-    {{ partial "sections/header-service.html" }}
-    {{ partial "sections/paradigm.html" }}
-    {{ partial "sections/provide.html" }}
-    {{ partial "sections/whatmakesus.html" }}
-    {{ partial "sections/mainindustries.html" }}
-    {{ partial "sections/customers.html" }}
+    {{ partial "header/navBar.html" . }}
+    {{ partial "sections/header-service.html" . }}
+    {{ partial "sections/paradigm.html" . }}
+    {{ partial "sections/provide.html" . }}
+    {{ partial "sections/whatmakesus.html" . }}
+    {{ partial "sections/mainindustries.html" . }}
+    {{ partial "sections/customers.html" . }}
     {{ partial "sections/worktogether.html" . }}
-    {{ partial "sections/learnmore.html" }}
-    {{ partial "sections/getdemo.html" }}
-    {{ partial "sections/mentions.html" }}
+    {{ partial "sections/learnmore.html" . }}
+    {{ partial "sections/getdemo.html" . }}
+    {{ partial "sections/mentions.html" . }}
 
     {{ partial "script.html" }}
   </body>
