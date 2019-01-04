@@ -67,7 +67,7 @@ body {
   font-size: 20px;
 }
 
-header {
+header #header {
   position: relative;
   padding-top: 60px;
   width: 100%;
