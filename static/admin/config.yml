@@ -63,18 +63,22 @@ collections:
         file: "data/indexpage/mainindustries.yml"
         fields:
           - {label: "Subtitle", name: "subtitle", widget: string}
+          - {label: "Block 1", name: "block1", widget: string}
+          - {label: "Block 2", name: "block2", widget: string}
+          - {label: "Block 3", name: "block3", widget: string}
+          - {label: "Block 4 ", name: "block4", widget: string}
       - name: "ourcustomers"
         label: "Our customers."
         file: "data/indexpage/ourcustomers.yml"
         fields:
           - {label: "Logo 1", name: "logo1", widget: image}
-          - {label: "Logo 2", name: "logo2", widget: image)
-          - {label: "Logo 3", name: "logo3", widget: image)
-          - {label: "Logo 4", name: "logo4", widget: image)
-          - {label: "Logo 5", name: "logo5", widget: image)
-          - {label: "Logo 6", name: "logo6", widget: image)
-          - {label: "Logo 7", name: "logo7", widget: image)
-          - {label: "Logo 8", name: "logo8", widget: image)
+          - {label: "Logo 2", name: "logo2", widget: image}
+          - {label: "Logo 3", name: "logo3", widget: image}
+          - {label: "Logo 4", name: "logo4", widget: image}
+          - {label: "Logo 5", name: "logo5", widget: image}
+          - {label: "Logo 6", name: "logo6", widget: image}
+          - {label: "Logo 7", name: "logo7", widget: image}
+          - {label: "Logo 8", name: "logo8", widget: image}
       - name: "worktogether"
         label: "We work together"
         file: "data/indexpage/worktogether.yml"
