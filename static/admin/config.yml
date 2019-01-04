@@ -93,5 +93,5 @@ collections:
         label: "Learn more"
         file: "data/indexpage/learnmore.yml"
         fields:
-          - {label: "Video 1", name: "video1", widget: string}
-          - {label: "Video 2", name: "video2", widget: string}
+          - {label: "Video Id 1", name: "video1", widget: string}
+          - {label: "Video Id 2", name: "video2", widget: string}

@@ -13,25 +13,57 @@
             <li data-target="#carouselTestimonials" data-slide-to="2"></li>
           </ol>
           <div class="carousel-inner testimonials">
-            {{ range $index, $value := first 3 (where .Site.Pages "Type" "=" "testimonials") }}
-            <div class="carousel-item {{ if (eq $index 0)}}active{{ end }}">
+            <div class="carousel-item active">
               <div class="row justify-content-center align-items-center">
                 <div class="col-10 col-md-8 col-lg-6">
                   <div class="row justify-content-center">
                     <div class="quote text-center ">
-                      {{ .Params.testimonial }}
+                      {{ .Site.Data.indexpage.worktogether.testimonial1 }}
                     </div>
                     <div class="w-100"></div>
                     <hr>
                     <div class="w-100"></div>
                     <div class="author">
-                      {{ .Params.author }}
+                      {{ .Site.Data.indexpage.worktogether.author1 }}
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-            {{ end }}
+            <div class="carousel-item">
+              <div class="row justify-content-center align-items-center">
+                <div class="col-10 col-md-8 col-lg-6">
+                  <div class="row justify-content-center">
+                    <div class="quote text-center ">
+                      {{ .Site.Data.indexpage.worktogether.testimonial2 }}
+                    </div>
+                    <div class="w-100"></div>
+                    <hr>
+                    <div class="w-100"></div>
+                    <div class="author">
+                      {{ .Site.Data.indexpage.worktogether.author2 }}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="row justify-content-center align-items-center">
+                <div class="col-10 col-md-8 col-lg-6">
+                  <div class="row justify-content-center">
+                    <div class="quote text-center ">
+                      {{ .Site.Data.indexpage.worktogether.testimonial3 }}
+                    </div>
+                    <div class="w-100"></div>
+                    <hr>
+                    <div class="w-100"></div>
+                    <div class="author">
+                      {{ .Site.Data.indexpage.worktogether.author3 }}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
           <a class="carousel-control-prev" href="#carouselTestimonials" role="button" data-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>

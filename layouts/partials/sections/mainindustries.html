@@ -3,21 +3,21 @@
         <div class="row justify-content-center">
           <h1 class="col-12 text-center">Our main industries.</h1>
           <div class="w-100"></div>
-          <h2 class="col-12 col-md-8 col-lg-6">OUR PLATFORM IS ADAPTED FOR ALL INDUSTRIES AND ALL BUSINESS SIZES. IT WORKS IN B2C, B2B AND B2BC</h2>
+          <h2 class="col-12 col-md-8 col-lg-6">{{ .Site.Data.indexpage.mainindustries.subtitle }}</h2>
         </div>
         <div class="row justify-content-center">
           <div class="col-8 col-md-5 col-lg-4 indus-telco">
-            TELCO, IOT & <br> CLOUD INFRASTRUCTURE
+            {{ .Site.Data.indexpage.mainindustries.block1 | safeHTML}}
           </div>
           <div class="col-8 col-md-5 col-lg-4 indus-energy">
-            ENERGY & UTILITIES
+            {{ .Site.Data.indexpage.mainindustries.block2 | safeHTML }}
           </div>
           <div class="w-100"></div>
           <div class="col-8 col-md-5 col-lg-4 indus-mobility">
-            MOBILITY & TRANSPORT
+            {{ .Site.Data.indexpage.mainindustries.block3 | safeHTML }}
           </div>
           <div class="col-8 col-md-5 col-lg-4 indus-retail">
-            RETAIL
+            {{ .Site.Data.indexpage.mainindustries.block4 | safeHTML }}
           </div>
         </div>
       </div>
