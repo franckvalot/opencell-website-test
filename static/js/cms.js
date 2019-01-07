@@ -1,4 +1,4 @@
-var paradigmPreview = createClass({
+var ParadigmPreview = createClass({
   render: function(){
     var entry = this.props.entry;
     var video = entry.getIn(['data', 'video']);
