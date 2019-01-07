@@ -83,6 +83,7 @@ var WhatMakesUsView = createClass({
 
 CMS.registerPreviewTemplate("paradigm", ParadigmPreview);
 CMS.registerPreviewTemplate("whatweprovide", WhatWeProvideView);
+CMS.registerPreviewTemplate("whatmakesus", WhatMakesUsView);
 CMS.registerPreviewStyle("/css/cms.css");
 CMS.registerPreviewStyle("/css/creative.css");
 CMS.registerPreviewStyle("/css/fonts.css");
