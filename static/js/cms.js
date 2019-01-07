@@ -36,3 +36,4 @@ var WhatWeProvideView = createClass({
 CMS.registerPreviewTemplate("paradigm", ParadigmPreview);
 CMS.registerPreviewTemplate("whatweprovide", WhatWeProvideView);
 CMS.registerPreviewStyle("/css/cms.css");
+CMS.registerPreviewStyle("/css/creative.css");
