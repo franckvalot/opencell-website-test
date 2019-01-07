@@ -33,8 +33,18 @@ var WhatWeProvideView = createClass({
   }
 })
 
+var WhatMakesUsView = createClass({
+  render: function(){
+    var entry = this.props.entry;
+
+    return h('div', {className:'container'}, "test")
+  }
+})
+
+
 CMS.registerPreviewTemplate("paradigm", ParadigmPreview);
 CMS.registerPreviewTemplate("whatweprovide", WhatWeProvideView);
+CMS.registerPreviewTemplate("whatmakesus", WhatMakesUsView);
 
 CMS.registerPreviewStyle("/css/cms.css");
 CMS.registerPreviewStyle("/css/creative.css");
