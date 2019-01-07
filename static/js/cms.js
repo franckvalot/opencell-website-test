@@ -49,7 +49,7 @@ var WhatMakesUsView = createClass({
           h('h2', {}, entry.getIn(['data', 'subtitle_1_2'])),
           h('p', {}, entry.getIn(['data', 'text_1_2'])),
           h('h2', {}, entry.getIn(['data', 'subtitle_1_3'])),
-          h('p', {}, entry.getIn(['data', 'text-1_3'])),
+          h('p', {}, entry.getIn(['data', 'text_1_3'])),
           h('h2', {}, entry.getIn(['data', 'subtitle_1_4'])),
           h('p', {}, entry.getIn(['data', 'text_1_4'])),
         ),
@@ -74,7 +74,7 @@ var WhatMakesUsView = createClass({
           h('p', {}, entry.getIn(['data', 'text_3_3'])),
           h('h2', {}, entry.getIn(['data', 'subtitle_3_4'])),
           h('p', {}, entry.getIn(['data', 'text_3_4']))
-      )
+        )
       )
     )
   }
@@ -84,6 +84,7 @@ var WhatMakesUsView = createClass({
 CMS.registerPreviewTemplate("paradigm", ParadigmPreview);
 CMS.registerPreviewTemplate("whatweprovide", WhatWeProvideView);
 CMS.registerPreviewTemplate("whatmakesus", WhatMakesUsView);
+
 CMS.registerPreviewStyle("/css/cms.css");
 CMS.registerPreviewStyle("/css/creative.css");
 CMS.registerPreviewStyle("/css/fonts.css");
