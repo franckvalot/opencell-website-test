@@ -4,31 +4,12 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Content Manager</title>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-  <link rel="stylesheet" href="/css/creative.css" type="text/css">
   <link rel="stylesheet" href="/css/fonts.css">
   <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 </head>
 <body>
   <!-- Include the script that builds the page and powers Netlify CMS -->
   <script src="https://unpkg.com/netlify-cms@^2.0.0/dist/netlify-cms.js"></script>
-  <script>
-    var ParadigmPreview = createClass({
-      render: function() {
-        var entry = this.props.entry;
-        var youtubeid = entry.getIn(['data', 'video']);
-        return
-        "<div class=\"row justify-content-center\">\n"
-          + "<div class=\"col-sm-12 col-md-10 col-lg-8 embed-responsive embed-responsive-16by9\">\n"
-            + "<iframe class=\"youtube\" src=\"https://www.youtube.com/embed/"+ youtubeid +"?controls=0\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>\n"
-          + "</div>"
-        +"</div>"
-        ;
-      }
-    });
-
-    CMS.registerPreviewTemplate("paradigm", ParadigmPreview);
-    CMS.registerPreviewStyle("/css/cms.css");
-  </script>
+  <script src="/js/cms.js">
 </body>
 </html>
