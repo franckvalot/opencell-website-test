@@ -22,7 +22,7 @@ var WhatWeProvideView = createClass({
       ),
       h('div', {className:'row align-items-center justify-content-center'},
         h('div', {className:'col-12 col-md-8 col-lg-6'},
-          h('img', {src:image, className:'img-fluid'},'')
+          h('img', {src:image, className:'img-fluid'})
         ),
         h('div', {className:'col-12 col-md-4 col-lg-6'},
           content,
