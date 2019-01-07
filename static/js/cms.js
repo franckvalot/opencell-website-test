@@ -37,3 +37,5 @@ CMS.registerPreviewTemplate("paradigm", ParadigmPreview);
 CMS.registerPreviewTemplate("whatweprovide", WhatWeProvideView);
 CMS.registerPreviewStyle("/css/cms.css");
 CMS.registerPreviewStyle("/css/creative.css");
+CMS.registerPreviewStyle("/css/fonts.css");
+CMS.registerPreviewStyle("https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css");
