@@ -87,9 +87,33 @@ var WhatMakesUsView = createClass({
 })
 
 
+var MainIndustriesPreview = createClass({
+  render: function(){
+    var entry = this.props.entry;
+
+    return h('section', {className:'hero-2'},
+      h('div', {className:'container'},
+        h('div', {className:'row justify-content-center'},
+          h('h1', {className:'col-12 text-center'}, 'Our main industries.'),
+          h('div', {className:'w-100'},''),
+          h('h2', {className:'col-12 col-md-8 col-lg-6'}, entry.getIn(['data', 'subtitle']))
+        ),
+        h('div', {className:'row justify-content-center'},
+          h('div', {className:'col-8 col-md-5 col-lg-4 indus-telco'}, entry.getIn(['data', 'block1'])),
+          h('div', {className:'col-8 col-md-5 col-lg-4 indus-energy'}, entry.getIn(['data', 'block2'])),
+          h('div', {className:'col-8 col-md-5 col-lg-4 indus-mobility'}, entry.getIn(['data', 'block3'])),
+          h('div', {className:'col-8 col-md-5 col-lg-4 indus-retail'}, entry.getIn(['data', 'block4']))
+        )
+      )
+    )
+  }
+
+})
+
 CMS.registerPreviewTemplate("paradigm", ParadigmPreview);
 CMS.registerPreviewTemplate("whatweprovide", WhatWeProvideView);
 CMS.registerPreviewTemplate("whatmakesus", WhatMakesUsView);
+CMS.registerPreviewTemplate("mainindustries", MainIndustriesPreview);
 
 CMS.registerPreviewStyle("/css/cms.css");
 CMS.registerPreviewStyle("/css/creative.css");
