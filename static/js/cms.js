@@ -110,10 +110,59 @@ var MainIndustriesPreview = createClass({
 
 })
 
+
+var OurCustomersPreview = createClass({
+  render: function(){
+    var entry = this.props.entry;
+
+    return h('section', {className:'hero-1'},
+      h('div', {className:'container'},
+        h('div', {className:'row align-items-center justify-content-center'},
+          h('h1', {className:'col-12 text-center'}, 'Our Customers.')
+        ),
+        h('div', {className:'row align-items-center justify-content-center customer-logo'},
+          h('div', {className:'col-6 col-md-4 col-lg-3'},
+            h('img', {className:'img-fluid', alt:entry.getIn(['data', 'alt1']), src:entry.getIn(['data', 'logo1'])})
+          ),
+          h('div', {className:'col-6 col-md-4 col-lg-3'},
+            h('img', {className:'img-fluid', alt:entry.getIn(['data', 'alt2']), src:entry.getIn(['data', 'logo2'])})
+          ),
+          h('div', {className:'col-6 col-md-4 col-lg-3'},
+            h('img', {className:'img-fluid', alt:entry.getIn(['data', 'alt3']), src:entry.getIn(['data', 'logo3'])})
+          ),
+          h('div', {className:'col-6 col-md-4 col-lg-3'},
+            h('img', {className:'img-fluid', alt:entry.getIn(['data', 'alt4']), src:entry.getIn(['data', 'logo4'])})
+          ),
+          h('div', {className:'col-6 col-md-4 col-lg-3'},
+            h('img', {className:'img-fluid', alt:entry.getIn(['data', 'alt5']), src:entry.getIn(['data', 'logo5'])})
+          ),
+          h('div', {className:'col-6 col-md-4 col-lg-3'},
+            h('img', {className:'img-fluid', alt:entry.getIn(['data', 'alt6']), src:entry.getIn(['data', 'logo6'])})
+          ),
+          h('div', {className:'col-6 col-md-4 col-lg-3'},
+            h('img', {className:'img-fluid', alt:entry.getIn(['data', 'alt7']), src:entry.getIn(['data', 'logo7'])})
+          ),
+          h('div', {className:'col-6 col-md-4 col-lg-3'},
+            h('img', {className:'img-fluid', alt:entry.getIn(['data', 'alt8']), src:entry.getIn(['data', 'logo8'])})
+          )
+        ),
+        h('div', {className:'row align-items-center justify-content-center text-center'},
+          h('div', {className:'col'},
+            h('button', {className:'opencell-btn', name:'button', type:'button'}, 'DISCOVER OUR CUSTOMERS')
+          )
+        )
+      )
+    )
+  }
+})
+
+
+
 CMS.registerPreviewTemplate("paradigm", ParadigmPreview);
 CMS.registerPreviewTemplate("whatweprovide", WhatWeProvideView);
 CMS.registerPreviewTemplate("whatmakesus", WhatMakesUsView);
 CMS.registerPreviewTemplate("mainindustries", MainIndustriesPreview);
+CMS.registerPreviewTemplate("ourcustomers", OurCustomersPreview);
 
 CMS.registerPreviewStyle("/css/cms.css");
 CMS.registerPreviewStyle("/css/creative.css");
