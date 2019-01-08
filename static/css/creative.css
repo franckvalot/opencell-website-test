@@ -318,9 +318,10 @@ section.get-demo div{
   margin-right: 0;
 }
 
-div.get-demo {
+button.get-demo {
   font-size: 50px;
   line-height: 50px;
+  background-color: inherit;
   font-family: 'Noe-Display-Black';
   font-weight: black;
   color: white;

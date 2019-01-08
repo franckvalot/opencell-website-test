@@ -3,3 +3,12 @@ languageCode = "en-us"
 title = "Opencellsoft"
 
 [params]
+
+  [params.navbar]
+    platform   = "#"
+    solution    = "#"
+    aboutUs     = "#"
+    support     = "#"
+    getADemo    = "#"
+    logIn       = "/admin"
+  adminUrl = "/admin"

@@ -7,25 +7,29 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-              <a class="nav-link" href="#">PLATFORM</a>
+              <a class="nav-link" href="{{ .Site.Params.navbar.platform }}">PLATFORM</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">SOLUTION</a>
+              <a class="nav-link" href="{{ .Site.Params.navbar.solution }}">SOLUTION</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">ABOUT US</a>
+              <a class="nav-link" href="{{ .Site.Params.navbar.aboutUs }}">ABOUT US</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">SUPPORT</a>
+              <a class="nav-link" href="{{ .Site.Params.navbar.support }}">SUPPORT</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">SEARCH</a>
             </li>
             <li class="nav-item">
-              <button type="button" name="getDemo" class="opencell-btn">GET A DEMO</button>
+              <form action="#" method="get">
+                <button type="submit" class="opencell-btn">GET A DEMO</button>
+              </form>
             </li>
             <li class="nav-item">
-              <button type="button" name="login" class="opencell-btn">LOG IN</button>
+              <form action="{{ .Site.Params.navbar.logIn }}" method="get">
+                <button type="submit" class="opencell-btn">LOG IN</button>
+              </form>
             </li>
           </ul>
         </div>
