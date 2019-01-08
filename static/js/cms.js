@@ -1,7 +1,3 @@
-import Markdown from 'markdown-to-jsx';
-import React from 'react';
-import { render } from 'react-dom';
-
 var ParadigmPreview = createClass({
   render: function(){
     var entry = this.props.entry;
@@ -30,15 +26,15 @@ var HeaderPreview = createClass({
           h('div', {className:'carousel-inner'},
             h('div', {className:'carousel-item active'},
               h('h1', {}, entry.getIn(['data', 'title1'])),
-              h('p', {}, entry.getIn(['data', 'subtitle1'])),
+              h('p', {}, entry.getIn(['data', 'subtitle1']))
             ),
             h('div', {className:'carousel-item'},
               h('h1', {}, entry.getIn(['data', 'title2'])),
-              h('p', {}, entry.getIn(['data', 'subtitle2'])),
+              h('p', {}, entry.getIn(['data', 'subtitle2']))
             ),
             h('div', {className:'carousel-item'},
               h('h1', {}, entry.getIn(['data', 'title3'])),
-              h('p', {}, entry.getIn(['data', 'subtitle3'])),
+              h('p', {}, entry.getIn(['data', 'subtitle3']))
             )
           ),
           h('a', {className:'carousel-control-prev', href:'#carouselHeader', role:'button', 'data-slide':'prev'},
