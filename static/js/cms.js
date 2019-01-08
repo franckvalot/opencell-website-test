@@ -25,15 +25,15 @@ var HeaderPreview = createClass({
           ),
           h('div', {className:'carousel-inner'},
             h('div', {className:'carousel-item active'},
-              h('h1', {dangerouslySetInnerHTML:entry.getIn(['data', 'title1'])}, ''),
+              h('h1', {dangerouslySetInnerHTML:{__html: entry.getIn(['data', 'title1'])}}, ''),
               h('p', {}, entry.getIn(['data', 'subtitle1'])),
             ),
             h('div', {className:'carousel-item'},
-              h('h1', {dangerouslySetInnerHTML:entry.getIn(['data', 'title2'])}, ''),
+              h('h1', {dangerouslySetInnerHTML:{__html: entry.getIn(['data', 'title2'])}}, ''),
               h('p', {}, entry.getIn(['data', 'subtitle2'])),
             ),
             h('div', {className:'carousel-item'},
-              h('h1', {dangerouslySetInnerHTML:entry.getIn(['data', 'title3'])}, ''),
+              h('h1', {dangerouslySetInnerHTML:{__html: entry.getIn(['data', 'title3'])}}, ''),
               h('p', {}, entry.getIn(['data', 'subtitle3'])),
             )
           ),
@@ -66,7 +66,7 @@ var WhatWeProvideView = createClass({
             h('img', {src:image, className:'img-fluid'})
           ),
           h('div', {className:'col-12 col-md-4 col-lg-6'},
-            content,
+            h('p', {}, content),
             h('button', {type:'button', name:'button', className:'opencell-btn'}, 'DISCOVER')
           )
         )
