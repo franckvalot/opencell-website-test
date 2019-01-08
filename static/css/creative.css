@@ -248,9 +248,15 @@ section {
 
 .testimonials {
   color: white;
-  min-height: 40vh;
+  min-height: 400px;
   height: 20vw;
   background-image: url("../img/bg/bg_testimonials.jpg");
+}
+
+@media(min-width:1200px) {
+  .testimonials {
+    min-height: 360px;
+  }
 }
 
 .testimonials .quote {
