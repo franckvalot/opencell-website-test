@@ -1,4 +1,4 @@
-createMarkup(stringToConvertToHtml) {
+function createMarkup(stringToConvertToHtml) {
     return { __html: stringToConvertToHtml }
 }
 
