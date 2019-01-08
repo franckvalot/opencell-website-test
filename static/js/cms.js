@@ -167,7 +167,7 @@ var WorkTogetherPreview = createClass({
           h('div', {className:'w-100'},''),
           h('h2', {className:'col-12 col-md-8 col-lg-6'}, 'TESTIMONIALS')
         ),
-        h('div', {classId:'carouselTestimonials', className:'carousel slide', 'data-ride':'carousel'},
+        h('div', {id:'carouselTestimonials', className:'carousel slide', 'data-ride':'carousel'},
           h('ol', {className:'carousel-indicators'},
             h('li', {className: 'active', 'data-target':'"#carouselTestimonials', 'data-slide-to':'0'}, ''),
             h('li', {'data-target':'"#carouselTestimonials', 'data-slide-to':'1'}, ''),
