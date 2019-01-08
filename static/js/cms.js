@@ -12,6 +12,44 @@ var ParadigmPreview = createClass({
   }
 })
 
+var HeaderPreview = createClass({
+  render: function(){
+    var entry = this.props.entry;
+    return h('header', {className:'hero-'},
+      h('div', {className:'header-content-inner'},
+        h('div', {id:'carouselHeader', className:'carousel slide row align-items-center', 'data-ride':'carousel'},
+          h('ol', {className:'carousel-indicators'},
+            h('li', {className: 'active', 'data-target':'"#carouselHeader', 'data-slide-to':'0'}, ''),
+            h('li', {'data-target':'"#carouselHeader', 'data-slide-to':'1'}, ''),
+            h('li', {'data-target':'"#carouselHeader', 'data-slide-to':'2'}, '')
+          ),
+          h('div', {className:'carousel-inner'},
+            h('div', {className:'carousel-item active'},
+              h('h1', {dangerouslySetInnerHTML:entry.getIn(['data', 'title1'])}, ''),
+              h('p', {}, entry.getIn(['data', 'subtitle1'])),
+            ),
+            h('div', {className:'carousel-item'},
+              h('h1', {dangerouslySetInnerHTML:entry.getIn(['data', 'title2'])}, ''),
+              h('p', {}, entry.getIn(['data', 'subtitle2'])),
+            ),
+            h('div', {className:'carousel-item'},
+              h('h1', {dangerouslySetInnerHTML:entry.getIn(['data', 'title3'])}, ''),
+              h('p', {}, entry.getIn(['data', 'subtitle3'])),
+            )
+          ),
+          h('a', {className:'carousel-control-prev', href:'#carouselHeader', role:'button', 'data-slide':'prev'},
+            h('span', {className:'carousel-control-prev-icon', 'area-hidden':'true'}, ''),
+            h('span', {className:'sr-only'}, 'Previous'),
+          ),
+          h('a', {className:'carousel-control-next', href:'#carouselTestimonials', role:'button', 'data-slide':'next'},
+            h('span', {className:'carousel-control-next-icon', 'area-hidden':'true'}, ''),
+            h('span', {className:'sr-only'}, 'Next'),
+          )
+        )
+      )
+    )
+  }
+})
 
 var WhatWeProvideView = createClass({
   render: function(){
@@ -211,7 +249,7 @@ var WorkTogetherPreview = createClass({
                   )
                 )
               )
-            ),
+            )
           ),
           h('a', {className:'carousel-control-prev', href:'#carouselTestimonials', role:'button', 'data-slide':'prev'},
             h('span', {className:'carousel-control-prev-icon', 'area-hidden':'true'}, ''),
