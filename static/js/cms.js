@@ -290,6 +290,7 @@ var LearnMorePreview = createClass({
   }
 })
 
+CMS.registerPreviewTemplate("header", HeaderPreview);
 CMS.registerPreviewTemplate("paradigm", ParadigmPreview);
 CMS.registerPreviewTemplate("whatweprovide", WhatWeProvideView);
 CMS.registerPreviewTemplate("whatmakesus", WhatMakesUsView);
