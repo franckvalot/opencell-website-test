@@ -219,7 +219,7 @@ var WorkTogetherPreview = createClass({
             h('span', {className:'sr-only'}, 'Previous'),
           ),
           h('a', {className:'carousel-control-next', href:'#carouselTestimonials', role:'button', 'data-slide':'next'},
-            h('span', {className:'carousel-control-prev-icon', 'area-hidden':'true'}, ''),
+            h('span', {className:'carousel-control-next-icon', 'area-hidden':'true'}, ''),
             h('span', {className:'sr-only'}, 'Next'),
           )
         )
@@ -237,7 +237,7 @@ CMS.registerPreviewTemplate("mainindustries", MainIndustriesPreview);
 CMS.registerPreviewTemplate("ourcustomers", OurCustomersPreview);
 CMS.registerPreviewTemplate("worktogether", WorkTogetherPreview);
 
-CMS.registerPreviewStyle("/css/cms.css");
-CMS.registerPreviewStyle("/css/creative.css");
-CMS.registerPreviewStyle("/css/fonts.css");
 CMS.registerPreviewStyle("https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css");
+CMS.registerPreviewStyle("/css/cms.css");
+CMS.registerPreviewStyle("/css/fonts.css");
+CMS.registerPreviewStyle("/css/creative.css");
