@@ -156,6 +156,78 @@ var OurCustomersPreview = createClass({
   }
 })
 
+var WorkTogetherPreview = createClass({
+  render: function(){
+    var entry = this.props.entry;
+
+    return h('section', {className:'hero-2'},
+      h('div', {className:'container'},
+        h('div', {className:'row justify-content-center text-center'},
+          h('h1', {className:'col-12 text-center'}, 'We work together'),
+          h('div', {className:'w-100'},''),
+          h('h2', {className:'col-12 col-md-8 col-lg-6'}, 'TESTIMONIALS')
+        ),
+        h('div', {classId:'carouselTestimonials', className:'carousel slide', data-ride:'carousel'},
+          h('ol', {className:'carousel-indicators'},
+            h('li', {className: 'active', data-target:'"#carouselTestimonials', data-slide-to:'0'}, ''),
+            h('li', {data-target:'"#carouselTestimonials', data-slide-to:'1'}, ''),
+            h('li', {data-target:'"#carouselTestimonials', data-slide-to:'2'}, '')
+          ),
+          h('div', {className:'carousel-inner testimonials'},
+            h('div', {className:'carousel-item active'},
+              h('div', {className:'row justify-content-center align-items-center'},
+                h('div', {className:'col-10 col-md-8 col-lg-6'},
+                  h('div', {className:'row justify-content-center'},
+                    h('div', {className:'quote text-center'}, entry.getIn(['data', 'testimonial1'])),
+                    h('div', {className:'w-100'},''),
+                    h('hr', {}),
+                    h('div', {className:'w-100'},''),
+                    h('div', {className:'author'}, entry.getIn(['data', 'author1']))
+                  )
+                )
+              )
+            ),
+            h('div', {className:'carousel-item'},
+              h('div', {className:'row justify-content-center align-items-center'},
+                h('div', {className:'col-10 col-md-8 col-lg-6'},
+                  h('div', {className:'row justify-content-center'},
+                    h('div', {className:'quote text-center'}, entry.getIn(['data', 'testimonial2'])),
+                    h('div', {className:'w-100'},''),
+                    h('hr', {}),
+                    h('div', {className:'w-100'},''),
+                    h('div', {className:'author'}, entry.getIn(['data', 'author2']))
+                  )
+                )
+              )
+            ),
+            h('div', {className:'carousel-item'},
+              h('div', {className:'row justify-content-center align-items-center'},
+                h('div', {className:'col-10 col-md-8 col-lg-6'},
+                  h('div', {className:'row justify-content-center'},
+                    h('div', {className:'quote text-center'}, entry.getIn(['data', 'testimonial3'])),
+                    h('div', {className:'w-100'},''),
+                    h('hr', {}),
+                    h('div', {className:'w-100'},''),
+                    h('div', {className:'author'}, entry.getIn(['data', 'author3']))
+                  )
+                )
+              )
+            ),
+          ),
+          h('a', {className:'carousel-control-prev', href:'#carouselTestimonials', role:'button', data-slide:'prev'},
+            h('span', {className:'carousel-control-prev-icon', area-hidden:'true'}, ''),
+            h('span', {className:'sr-only'}, 'Previous'),
+          ),
+          h('a', {className:'carousel-control-next', href:'#carouselTestimonials', role:'button', data-slide:'next'},
+            h('span', {className:'carousel-control-prev-icon', area-hidden:'true'}, ''),
+            h('span', {className:'sr-only'}, 'Next'),
+          )
+        )
+      )
+    )
+  }
+})
+
 
 
 CMS.registerPreviewTemplate("paradigm", ParadigmPreview);
@@ -163,6 +235,7 @@ CMS.registerPreviewTemplate("whatweprovide", WhatWeProvideView);
 CMS.registerPreviewTemplate("whatmakesus", WhatMakesUsView);
 CMS.registerPreviewTemplate("mainindustries", MainIndustriesPreview);
 CMS.registerPreviewTemplate("ourcustomers", OurCustomersPreview);
+CMS.registerPreviewTemplate("worktogether", WorkTogetherPreview);
 
 CMS.registerPreviewStyle("/css/cms.css");
 CMS.registerPreviewStyle("/css/creative.css");
