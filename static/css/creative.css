@@ -57,7 +57,7 @@ section .opencell-btn {
   margin-top: 5vh;
 }
 
-html, body, body .frame-content {
+html, body, body div .frame-content , body .frame-content {
     width: 100%;
     height: 100%;
 }
