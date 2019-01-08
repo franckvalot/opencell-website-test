@@ -107,7 +107,6 @@ var MainIndustriesPreview = createClass({
       )
     )
   }
-
 })
 
 
@@ -229,6 +228,29 @@ var WorkTogetherPreview = createClass({
 })
 
 
+var LearnMorePreview = createClass({
+  render: function(){
+    var entry = this.props.entry;
+
+    return h('section', {className:'hero-1'},
+      h('div', {className:'container'},
+        h('div', {className:'row justify-content-center text-center'},
+          h('h1', {className:'col-12 text-center'}, 'Learn more'),
+          h('div', {className:'w-100'},''),
+          h('h2', {className:'col-12 col-md-8 col-lg-6'}, 'FEATURED VIDEOS')
+        ),
+        h('div', {className:'row justify-content-center'},
+          h('div', {className:'col-sm-12 col-md-8 col-lg-6 embed-responsive embed-responsive-16by9'},
+            h('iframe', {className:'youtube', src:'https://www.youtube.com/embed/' + entry.getIn(['data', 'video1']) + '?controls=0', frameborder:'0', allow:'accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture', allowfullscreen:'true'}, '')
+          ),
+          h('div', {className:'col-sm-12 col-md-8 col-lg-6 embed-responsive embed-responsive-16by9'},
+            h('iframe', {className:'youtube', src:'https://www.youtube.com/embed/' + entry.getIn(['data', 'video2']) + '?controls=0', frameborder:'0', allow:'accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture', allowfullscreen:'true'}, '')
+          )
+        )
+      )
+    )
+  }
+})
 
 CMS.registerPreviewTemplate("paradigm", ParadigmPreview);
 CMS.registerPreviewTemplate("whatweprovide", WhatWeProvideView);
@@ -236,6 +258,7 @@ CMS.registerPreviewTemplate("whatmakesus", WhatMakesUsView);
 CMS.registerPreviewTemplate("mainindustries", MainIndustriesPreview);
 CMS.registerPreviewTemplate("ourcustomers", OurCustomersPreview);
 CMS.registerPreviewTemplate("worktogether", WorkTogetherPreview);
+CMS.registerPreviewTemplate("learnmore", LearnMorePreview);
 
 CMS.registerPreviewStyle("https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css");
 CMS.registerPreviewStyle("/css/cms.css");
