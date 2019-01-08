@@ -167,11 +167,11 @@ var WorkTogetherPreview = createClass({
           h('div', {className:'w-100'},''),
           h('h2', {className:'col-12 col-md-8 col-lg-6'}, 'TESTIMONIALS')
         ),
-        h('div', {classId:'carouselTestimonials', className:'carousel slide', data-ride:'carousel'},
+        h('div', {classId:'carouselTestimonials', className:'carousel slide', 'data-ride':'carousel'},
           h('ol', {className:'carousel-indicators'},
-            h('li', {className: 'active', data-target:'"#carouselTestimonials', data-slide-to:'0'}, ''),
-            h('li', {data-target:'"#carouselTestimonials', data-slide-to:'1'}, ''),
-            h('li', {data-target:'"#carouselTestimonials', data-slide-to:'2'}, '')
+            h('li', {className: 'active', 'data-target':'"#carouselTestimonials', 'data-slide-to':'0'}, ''),
+            h('li', {'data-target':'"#carouselTestimonials', 'data-slide-to':'1'}, ''),
+            h('li', {'data-target':'"#carouselTestimonials', 'data-slide-to':'2'}, '')
           ),
           h('div', {className:'carousel-inner testimonials'},
             h('div', {className:'carousel-item active'},
@@ -214,12 +214,12 @@ var WorkTogetherPreview = createClass({
               )
             ),
           ),
-          h('a', {className:'carousel-control-prev', href:'#carouselTestimonials', role:'button', data-slide:'prev'},
-            h('span', {className:'carousel-control-prev-icon', area-hidden:'true'}, ''),
+          h('a', {className:'carousel-control-prev', href:'#carouselTestimonials', role:'button', 'data-slide':'prev'},
+            h('span', {className:'carousel-control-prev-icon', 'area-hidden':'true'}, ''),
             h('span', {className:'sr-only'}, 'Previous'),
           ),
-          h('a', {className:'carousel-control-next', href:'#carouselTestimonials', role:'button', data-slide:'next'},
-            h('span', {className:'carousel-control-prev-icon', area-hidden:'true'}, ''),
+          h('a', {className:'carousel-control-next', href:'#carouselTestimonials', role:'button', 'data-slide':'next'},
+            h('span', {className:'carousel-control-prev-icon', 'area-hidden':'true'}, ''),
             h('span', {className:'sr-only'}, 'Next'),
           )
         )
