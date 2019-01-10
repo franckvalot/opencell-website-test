@@ -121,7 +121,7 @@ collections:
       - name: 'metadatas'
         label: 'Metadata for all pages'
         widget: list
-        types:
+        fields:
           - label: 'Metadata'
             name: 'metadata'
             widget: list
