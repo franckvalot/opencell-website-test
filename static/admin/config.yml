@@ -118,7 +118,7 @@ collections:
     files:
       - label: 'Metadata for all pages'
         name: 'allpagesmetadata'
-        file: 'data/allpagesmetadata.yml'
+        file: 'data/metadatas/allpages.yml'
         fields:
           - label: 'Metadata'
             name: 'metadata'
