@@ -113,16 +113,16 @@ collections:
         fields:
           - {label: "Video Id 1", name: "video1", widget: string}
           - {label: "Video Id 2", name: "video2", widget: string}
-  - label: 'Metadatas'
-    name: 'metadatas'
+  - label: "Metadatas"
+    name: "metadatas"
     files:
-      - label: 'Metadata for all pages'
-        name: 'allpagesmetadata'
-        file: 'data/metadatas/allpages.yml'
+    - label: "All Pages"
+      name: "allpages"
+      file: "data/metadatas/allpages.yml"
+      fields:
+      - label: "Metadatas"
+        name: metadatas
+        widget: list
         fields:
-          - label: 'Metadata'
-            name: 'metadata'
-            widget: list
-            fields:
-              - {label: 'Metadata Name', name: 'name', widget: 'string'}
-              - {label: 'Metadata Content', name: 'content', widget: 'string'}
+        - {label: 'Name', name: 'name', widget: string}
+        - {label: 'Content', name: 'content', widget: string}
