@@ -115,8 +115,15 @@ collections:
           - {label: "Video Id 2", name: "video2", widget: string}
   - name: 'metadatas'
     label: 'Metadatas'
-    widget: 'list'
-    file: 'data/metadata.yml'
-    fields:
-      - {name: 'name', label: 'Metadata Name', widget: 'string'}
-      - {name: 'description', label: 'description', widget: 'string'}
+    file: 'data/metadatas.yml'
+    field:
+      - name: 'metadatas'
+        label: 'Metadata for all pages'
+        widget: list
+        types:
+          - name: 'metadata'
+            label: 'Metadata'
+            widget: object
+            fields:
+              - {name: 'name', label: 'Metadata Name', widget: 'string'}
+              - {name: 'content', label: 'Metadata Content', widget: 'string'}
