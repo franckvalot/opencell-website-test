@@ -126,3 +126,23 @@ collections:
         fields:
         - {label: 'Name', name: 'name', widget: string}
         - {label: 'Content', name: 'content', widget: string}
+  - label: About Us
+    name: aboutus
+    files:
+      - label: Our partners
+        name: ourpartners
+        file: data/aboutus/ourpartners.yml
+        fields:
+          - label: Title
+            name: title
+            widget: string
+          - label: Logos
+            name: logos
+            widget: list
+            fields:
+              - label: Logo
+                name: url
+                widget: string
+              - label: Alternative
+                name: alt
+                widget: string
