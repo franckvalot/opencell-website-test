@@ -100,7 +100,7 @@ collections:
       - name: "worktogether"
         label: "We work together"
         file: "data/indexpage/worktogether.yml"
-        field:
+        fields:
           - label: Testimonials
             name: testimonials
             widget: list
