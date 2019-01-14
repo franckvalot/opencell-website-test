@@ -148,7 +148,7 @@ collections:
             fields:
               - label: Logo
                 name: url
-                widget: string
+                widget: image
               - label: Alternative
                 name: alt
                 widget: string
