@@ -15,6 +15,8 @@ var ParadigmPreview = createClass({
 var HeaderPreview = createClass({
   render: function(){
     var entry = this.props.entry;
+    var carousel = entry.getIn['data', 'carousel'];
+    alert(carousel);
     return h('header', {className:'hero'},
       h('div', {className:'header-content-inner'},
         h('div', {id:'carouselHeader', className:'carousel slide row align-items-center', 'data-ride':'carousel'},
