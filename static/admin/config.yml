@@ -100,13 +100,13 @@ collections:
       - name: "worktogether"
         label: "We work together"
         file: "data/indexpage/worktogether.yml"
-        fields:
-          - {label: "Testimonial 1", name: "testimonial1", widget: string}
-          - {label: "Author 1", name: "author1", widget: string}
-          - {label: "Testimonial 2", name: "testimonial2", widget: string}
-          - {label: "Author 2", name: "author2", widget: string}
-          - {label: "Testimonial 3", name: "testimonial3", widget: string}
-          - {label: "Author 3", name: "author3", widget: string}
+        field:
+          - label: Testimonials
+            name: testimonials
+            widget: list
+            fields:
+            - {label: "Testimonial", name: "testimonial", widget: string}
+            - {label: "Author", name: "author", widget: string}
       - name: "learnmore"
         label: "Learn more"
         file: "data/indexpage/learnmore.yml"
