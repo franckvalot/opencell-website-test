@@ -32,7 +32,7 @@ var HeaderPreview = createClass({
             carousel.map(carouselIndicator)
           ),
           h('div', {className:'carousel-inner'},
-            carousel.map(carouselInner);
+            carousel.map(carouselInner)
           ),
           h('a', {className:'carousel-control-prev', href:'#carouselHeader', role:'button', 'data-slide':'prev'},
             h('span', {className:'carousel-control-prev-icon', 'area-hidden':'true'}, ''),
