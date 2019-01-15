@@ -7,9 +7,18 @@
   height: 44px;
 }
 
+
+.navbar-spacer {
+  margin-top: 60px;
+}
+
 @media(min-width:1024px) {
   .navbar .container {
     height: 84px;
+  }
+
+  .navbar-spacer {
+    margin-top: 100px;
   }
 }
 
@@ -27,11 +36,12 @@
   padding-bottom: 20px;
 }
 
-
-
-
 .nav-item .opencell-btn{
   margin-top: 15px;
+}
+
+.navbar-nav .dropdown-menu {
+    margin-right: 15px;
 }
 
 @media(min-width:992px) {
@@ -72,6 +82,20 @@ header.hero {
   margin-top: 60px;
   width: 100%;
   min-height: calc(100vh - 60px);
+  text-align: center;
+  color: #fff;
+  background-image: url("../img/bg/bg_slider_1.jpg");
+  -webkit-background-size: cover !important;
+  -moz-background-size: cover !important;
+  background-size: cover !important;
+  -o-background-size: cover !important;
+  background-position: 50% 0px !important;
+  background-color: #DD594E;background-repeat: no-repeat !important;
+}
+
+header.small_header{
+  width: 100%;
+  min-height: 40vh;
   text-align: center;
   color: #fff;
   background-image: url("../img/bg/bg_slider_1.jpg");
@@ -147,10 +171,8 @@ section h1 {
   padding: 0 0 4vw 0;
 }
 
-h2 {
-  font-family: 'GT-Walsheim-Bold';
-}
 section h2, span.h2 {
+  font-family: 'GT-Walsheim-Bold';
   color: black;
   min-height: 40px;
   font-weight: bold;
@@ -160,7 +182,6 @@ section h2, span.h2 {
   line-height: 20px;
   margin-top: 10px;
 }
-
 
 span.h2 {
   margin-top: -20px;
@@ -177,6 +198,15 @@ span.h2 {
   text-transform: none;
   font-size: 22px;
   letter-spacing: 5px;
+}
+
+.ourstory-box {
+  background-color: #EB5048;
+  border: 10px solid white;
+  height: 140px;
+  margin: 10px 0;
+  font-size: 18px;
+  color: white;
 }
 
 .whatmakesus p {
@@ -389,4 +419,8 @@ section.footer li {
   transform: rotate(180deg);
   height: 44px;
   width: 23px;
+}
+
+code {
+  font-family: Consolas,Menlo,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier New,monospace,sans-serif;
 }

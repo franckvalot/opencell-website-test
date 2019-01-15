@@ -5,10 +5,16 @@ title = "Opencellsoft"
 [params]
 
   [params.navbar]
-    platform   = "#"
-    solution    = "#"
-    aboutUs     = "#"
-    support     = "#"
-    getADemo    = "#"
-    logIn       = "/admin"
+    [params.navbar.url]
+      platform   = "#"
+      solution    = "#"
+      support     = "#"
+      getADemo    = "#"
+      logIn       = "/admin"
+      aboutUs     = "#"
+      story       = "/aboutus/story/"
+      businessModel = "/aboutus/businessmodel/"
+      customers = "/aboutus/customers/"
+      partners = "/aboutus/partners/"
+      workplaceAndJobs = "/aboutus/workplaceandjobs/"
   adminUrl = "/admin"

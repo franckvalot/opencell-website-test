@@ -2,23 +2,17 @@
       <div class="header-content-inner">
         <div id="carouselHeader" class="carousel slide row align-items-center" data-ride="carousel">
           <ol class="carousel-indicators">
-            <li data-target="#carouselHeader" data-slide-to="0" class="active"></li>
-            <li data-target="#carouselHeader" data-slide-to="1"></li>
-            <li data-target="#carouselHeader" data-slide-to="2"></li>
+            {{ range $index, $element := .Site.Data.indexpage.header.carousel }}
+            <li data-target="#carouselHeader" data-slide-to="{{ add $index 1 }}" {{if eq $index 0}}class="active"{{end}}></li>
+            {{end}}
           </ol>
           <div class="carousel-inner">
-            <div class="carousel-item active">
-                <h1>{{ .Site.Data.indexpage.header.title1 | safeHTML }}</h1>
-                <p>{{ .Site.Data.indexpage.header.subtitle1 }}</p>
+            {{ range $index, $element := .Site.Data.indexpage.header.carousel }}
+            <div class="carousel-item {{if eq $index 0}}active{{end}}">
+                <h1>{{ $element.title | safeHTML }}</h1>
+                <p>{{ $element.subtitle }}</p>
             </div>
-            <div class="carousel-item">
-                <h1>{{ .Site.Data.indexpage.header.title2 | safeHTML }}</h1>
-                <p>{{ .Site.Data.indexpage.header.subtitle2 }}</p>
-            </div>
-            <div class="carousel-item">
-                  <h1>{{ .Site.Data.indexpage.header.title3 | safeHTML }}</h1>
-                  <p>{{ .Site.Data.indexpage.header.subtitle3 }}</p>
-            </div>
+            {{end}}
           </div>
           <a class="carousel-control-prev" href="#carouselHeader" role="button" data-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>

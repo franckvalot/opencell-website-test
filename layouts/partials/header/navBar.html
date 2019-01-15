@@ -1,22 +1,29 @@
 <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-white">
       <div class="container">
-        <a class="navbar-brand" href="index.html"><img src="img/logo-opencell.svg" alt="Opencell-logo"></a>
+        <a class="navbar-brand" href="/index.html"><img src="/img/logo-opencell.svg" alt="Opencell-logo"></a>
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-              <a class="nav-link" href="{{ .Site.Params.navbar.platform }}">PLATFORM</a>
+              <a class="nav-link" href="{{ .Site.Params.navbar.url.platform }}">PLATFORM</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="{{ .Site.Params.navbar.solution }}">SOLUTION</a>
+              <a class="nav-link" href="{{ .Site.Params.navbar.url.solution }}">SOLUTION</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown">ABOUT US</a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="{{ .Site.Params.navbar.url.story }}">Story</a>
+                <a class="dropdown-item" href="{{ .Site.Params.navbar.url.businessModel }}">Business model</a>
+                <a class="dropdown-item" href="{{ .Site.Params.navbar.url.customers }}">Customers</a>
+                <a class="dropdown-item" href="{{ .Site.Params.navbar.url.partners }}">Partners</a>
+                <a class="dropdown-item" href="{{ .Site.Params.navbar.url.workplaceAndJobs }}">Workplace & jobs</a>
+              </div>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="{{ .Site.Params.navbar.aboutUs }}">ABOUT US</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="{{ .Site.Params.navbar.support }}">SUPPORT</a>
+              <a class="nav-link" href="{{ .Site.Params.navbar.url.support }}">SUPPORT</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">SEARCH</a>
@@ -27,7 +34,7 @@
               </form>
             </li>
             <li class="nav-item">
-              <form action="{{ .Site.Params.navbar.logIn }}" method="get">
+              <form action="{{ .Site.Params.navbar.url.logIn }}" method="get">
                 <button type="submit" class="opencell-btn">LOG IN</button>
               </form>
             </li>
@@ -35,3 +42,4 @@
         </div>
       </div>
     </nav>
+    <div class="navbar-spacer"></div>

@@ -1,1 +1,23 @@
-<h1>404 - Page Not Found</h1>
+<!DOCTYPE html>
+
+<html>
+  {{ partial "head.html" }}
+  <body>
+    {{ partial "header/navBar.html" . }}
+    <header class="hero">
+      <div class="header-content-inner">
+        <div id="carouselHeader" class="carousel slide row align-items-center" data-ride="carousel">
+          <div class="col">
+            <h1>Page not found</h1>
+            <br/>
+            <p>Please check your URL or send us and email with contact form.</p>
+          </div>
+        </div>
+      </div>
+    </header>
+
+
+    {{ partial "sections/mentions.html" . }}
+    {{ partial "script.html" }}
+  </body>
+</html>
