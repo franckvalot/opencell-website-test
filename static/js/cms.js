@@ -13,14 +13,16 @@ var ParadigmPreview = createClass({
 })
 
 var HeaderPreview = createClass({
+  function carouselIndicator(item, index){
+    if(index==0) return h('li', {className: 'active', 'data-target':'"#carouselHeader', 'data-slide-to':index}, '');
+    else return h('li', {'data-target':'"#carouselHeader', 'data-slide-to':index}, '');
+  }
+
+
   render: function(){
     var entry = this.props.entry;
     var carousel = entry.getIn(['data', 'carousel']);
 
-    function carouselIndicator(item, index){
-      if(index==0) return h('li', {className: 'active', 'data-target':'"#carouselHeader', 'data-slide-to':index}, '');
-      else return h('li', {'data-target':'"#carouselHeader', 'data-slide-to':index}, '');
-    }
 
     alert(carousel.map(carouselIndicator);
 
