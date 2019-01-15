@@ -91,7 +91,7 @@ var WhatMakesUsView = createClass({
 
     var content = function(item){
       var result = h('h2', {}, item.get('title')) + h('p', {}, item.get('text'))
-      return result;
+      return h('h2', {}, item.get('title'));
     };
 
     var columns = function(item){
