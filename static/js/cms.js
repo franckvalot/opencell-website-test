@@ -265,16 +265,16 @@ var AllPagesMetadatas = createClass({
     var metadatas = entry.getIn(['data', 'metadatas']);
     var metadata = function(item){
       return h('div', {style:{fontWeight: 'bold'}},
-        h('span', {style: {color: 'white'}}, '<'),
+        h('span', {style: {color: 'gray'}}, '<'),
         h('span', {style: {color: '#ed5f5f'}}, 'meta '),
         h('span', {style: {color: '#f0b363'}}, 'name '),
-        h('span', {style: {color: 'white'}}, '=\"'),
+        h('span', {style: {color: 'gray'}}, '=\"'),
         h('span', {style: {color: '#82cc6c'}}, item.get('name')),
-        h('span', {style: {color: 'white'}}, '\" '),
+        h('span', {style: {color: 'gray'}}, '\" '),
         h('span', {style: {color: '#f0b363'}}, 'content '),
-        h('span', {style: {color: 'white'}}, '=\"'),
+        h('span', {style: {color: 'gray'}}, '=\"'),
         h('span', {style: {color: '#82cc6c'}}, item.get('content')),
-        h('span', {style: {color: 'white'}}, '\">')
+        h('span', {style: {color: 'gray'}}, '\">')
       )
     }
     return h('div', {}, metadatas.map(metadata));
