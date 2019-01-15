@@ -1,8 +1,20 @@
 title: Leadership
 leaders:
-  - name: David Meyer
+  - name: DAVID MEYER
     position: CEO
     url: /img/uploads/portrait1.jpg
-  - name: Ethan Beardsley
+  - name: ETHAN BEARDSLEY
     position: CMO/CFO
     url: /img/uploads/portrait2.jpg
+  - name: BRUCE WAYNE
+    position: CTO
+    url: /img/uploads/portrait3.jpg
+  - name: STEPHANE DINE
+    position: COO
+    url: /img/uploads/portrait4.jpg
+  - name: CEDRIC BASSAGET
+    position: Sales director
+    url: /img/uploads/portrait5.jpg
+  - name: EMMANUEL PIERRE
+    position: Product Manager
+    url: /img/uploads/portrait6.jpg
