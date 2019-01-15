@@ -213,11 +213,11 @@ var WorkTogetherPreview = createClass({
         h('div', {className:'row justify-content-center align-items-center'},
           h('div', {className:'col-10 col-md-8 col-lg-6'},
             h('div', {className:'row justify-content-center'},
-              h('div', {className:'quote text-center'}, item.get("testimonial"),
+              h('div', {className:'quote text-center'}, item.get("testimonial")),
               h('div', {className:'w-100'},''),
               h('hr', {}),
               h('div', {className:'w-100'},''),
-              h('div', {className:'author'}, item.get("author")
+              h('div', {className:'author'}, item.get("author"))
             )
           )
         )
@@ -226,11 +226,11 @@ var WorkTogetherPreview = createClass({
         h('div', {className:'row justify-content-center align-items-center'},
           h('div', {className:'col-10 col-md-8 col-lg-6'},
             h('div', {className:'row justify-content-center'},
-              h('div', {className:'quote text-center'}, item.get("testimonial"),
+              h('div', {className:'quote text-center'}, item.get("testimonial")),
               h('div', {className:'w-100'},''),
               h('hr', {}),
               h('div', {className:'w-100'},''),
-              h('div', {className:'author'}, item.get("author")
+              h('div', {className:'author'}, item.get("author"))
             )
           )
         )
