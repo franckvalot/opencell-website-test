@@ -262,7 +262,7 @@ var LearnMorePreview = createClass({
 var AllPagesMetadatas = createClass({
   render: function(){
     var entry = this.props.entry;
-    var metadatas = entry.getIn(['data', 'metadatas']).map(metadatas);
+    var metadatas = entry.getIn(['data', 'metadatas']);
     var metadata = function(item){
       return h('div', {style:'font-weight: bold;'},
         h('span', {style:'color: white;'}, '<'),
