@@ -21,15 +21,12 @@ var HeaderPreview = createClass({
       else return h('li', {'data-target':'"#carouselHeader', 'data-slide-to':index}, '');
     }
 
-    alert(carousel.map(carouselIndicator);
 
     return h('header', {className:'hero'},
       h('div', {className:'header-content-inner'},
         h('div', {id:'carouselHeader', className:'carousel slide row align-items-center', 'data-ride':'carousel'},
           h('ol', {className:'carousel-indicators'},
-            h('li', {className: 'active', 'data-target':'"#carouselHeader', 'data-slide-to':'0'}, ''),
-            h('li', {'data-target':'"#carouselHeader', 'data-slide-to':'1'}, ''),
-            h('li', {'data-target':'"#carouselHeader', 'data-slide-to':'2'}, '')
+            carousel.map(carouselIndicator)
           ),
           h('div', {className:'carousel-inner'},
             h('div', {className:'carousel-item active'},
