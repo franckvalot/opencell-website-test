@@ -22,14 +22,8 @@ var HeaderPreview = createClass({
     }
 
     var carouselInner = function(item, index){
-      if(index==0) return h('div', {className:'carousel-item active'},
-                            h('h1', {}, item.title),
-                            h('p', {}, item.subtitle)
-      );
-      else return h('div', {className:'carousel-item'},
-                    h('h1', {}, item.title),
-                    h('p', {}, item.subtitle)
-      );
+      if(index==0) return h('div', {className:'carousel-item active'}, h('h1', {}, item.title), h('p', {}, item.subtitle));
+      else return h('div', {className:'carousel-item'}, h('h1', {}, item.title), h('p', {}, item.subtitle));
     }
 
     return h('header', {className:'hero'},
