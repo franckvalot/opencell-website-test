@@ -16,8 +16,15 @@ var HeaderPreview = createClass({
   render: function(){
     var entry = this.props.entry;
     var carousel = entry.getIn(['data', 'carousel']);
-    alert(carousel);
-    alert(carousel[0].title);
+    var datatarget = "";
+
+    carousel.foreach(function(element, index){
+        if(index == 0) datatarget += h('li', {className: 'active', 'data-target':'"#carouselHeader', 'data-slide-to': index+1}, '');
+        else datatarget += h('li', {'data-target':'"#carouselHeader', 'data-slide-to':index+1}, '');
+    });
+
+    alert(datatarget);
+
     return h('header', {className:'hero'},
       h('div', {className:'header-content-inner'},
         h('div', {id:'carouselHeader', className:'carousel slide row align-items-center', 'data-ride':'carousel'},
