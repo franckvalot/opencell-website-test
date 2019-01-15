@@ -90,16 +90,15 @@ var WhatMakesUsView = createClass({
     var entry = this.props.entry;
 
     var content = function(item){
+      console.log(item)
       return h('h2', {}, item.get('title'))
         + h('p', {}, item.get('text'));
     };
 
     var columns = function(item){
-      console.log(item.content);
-      console.log(item.get('content'));
       return h('div', {className:'col-8 col-md-4'},
-        (item.get('content')).map(content),
         h('div', {className:'title-box text-center'}, item.get('title')),
+        (item.get('content')).map(content),
       );
     };
 
