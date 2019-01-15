@@ -1,17 +1,17 @@
 logos:
-  - logo: /img/uploads/logo-adidas.svg
+  - url: /img/uploads/logo-adidas.svg
     alt: Adidas
-  - logo: /img/uploads/logo-dona.svg
+  - url: /img/uploads/logo-dona.svg
     alt: Dona International
-  - logo: /img/uploads/logo-gunster.svg
+  - url: /img/uploads/logo-gunster.svg
     alt: Gunster
-  - logo: /img/uploads/logo-mosaic.svg
+  - url: /img/uploads/logo-mosaic.svg
     alt: Mosaic
-  - logo: /img/uploads/logo-eckerd.svg
+  - url: /img/uploads/logo-eckerd.svg
     alt: Eckerd
-  - logo: /img/uploads/logo-fsu.svg
+  - url: /img/uploads/logo-fsu.svg
     alt: Florida State University
-  - logo: /img/uploads/logo-rayonier.svg
+  - url: /img/uploads/logo-rayonier.svg
     alt: Rayonier
-  - logo: /img/uploads/logo-fl-chamber.svg
+  - url: /img/uploads/logo-fl-chamber.svg
     alt: Florida Chamber of Commerce

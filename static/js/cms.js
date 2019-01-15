@@ -163,7 +163,7 @@ var OurCustomersPreview = createClass({
 
     var logo = function(item){
       return h('div', {className:'col-6 col-md-4 col-lg-3'},
-        h('img', {className:'img-fluid', alt:item.get('alt'), src:item.get('logo')})
+        h('img', {className:'img-fluid', alt:item.get('alt'), src:item.get('url')})
       );
     }
 
