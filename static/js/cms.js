@@ -23,14 +23,14 @@ var HeaderPreview = createClass({
     }
 
     var carouselInner = function(item, index){
-      alert(item.title);
+      alert(item.get("title"));
       if(index==0) return h('div', {className:'carousel-item active'},
-          h('h1', {}, item.title),
-          h('p', {}, item.subtitle)
+          h('h1', {}, item.get("title")),
+          h('p', {}, item.get("subtitle"))
         );
       else return h('div', {className:'carousel-item'},
-          h('h1', {}, item.title),
-          h('p', {}, item.subtitle)
+          h('h1', {}, item.get("title")),
+          h('p', {}, item.get("subtitle"))
         );
     }
 
