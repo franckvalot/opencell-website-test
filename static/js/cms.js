@@ -90,6 +90,7 @@ var WhatMakesUsView = createClass({
     var entry = this.props.entry;
 
     var content = function(item){
+      alert(item);
       return h('h2', {}, item.get('title')) + h('p', {}, item.get('text'));
     };
 
