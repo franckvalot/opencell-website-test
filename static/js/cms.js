@@ -20,6 +20,10 @@ var HeaderPreview = createClass({
       if(index==0) return h('li', {className: 'active', 'data-target':'"#carouselHeader', 'data-slide-to':index}, '');
       else return h('li', {'data-target':'"#carouselHeader', 'data-slide-to':index}, '');
     }
+    var carouselInner = function(item, index){
+      if(index==0) return "Hey";
+      else return "Hello";
+    }
 
     return h('header', {className:'hero'},
       h('div', {className:'header-content-inner'},
