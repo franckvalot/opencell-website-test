@@ -108,7 +108,7 @@ var WhatMakesUsView = createClass({
           h('h1', {className:'col text-center'}, 'What makes us')
         ),
         h('div', {className:'row justify-content-center whatmakesus text-center'},
-          entry.getIn(['data', 'columns']).map(columns);
+          entry.getIn(['data', 'columns']).map(columns)
         )
       )
     )

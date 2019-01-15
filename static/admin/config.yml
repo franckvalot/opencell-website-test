@@ -46,7 +46,7 @@ collections:
         file: "data/indexpage/whatmakesus.yml"
         fields:
           - label: Columns
-            name: colums
+            name: columns
             widget: list
             allow_add: false
             fields:
