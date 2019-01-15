@@ -21,8 +21,8 @@ var HeaderPreview = createClass({
       else return h('li', {'data-target':'"#carouselHeader', 'data-slide-to':index}, '');
     }
     var carouselInner = function(item, index){
-      if(index==0) return "Hey";
-      else return "Hello";
+      if(index==0) return h('div', {className:'carousel-item active'}, "Active" + index );
+      else return h('div', {className:'carousel-item'}, "Innactive" + index );
     }
 
     return h('header', {className:'hero'},
