@@ -288,7 +288,7 @@ var LeadershipPreview = createClass({
     var leader = function(item){
       return h('div', {className: 'col-8 col-md-6 col-lg-4 leadership'},
         h('img', {src:item.get('url'), alt:item.get('name')}),
-        h('h2', {}, (item.get('name')).toUpperCase()),
+        h('h2', {}, item.get('name')),
         h('p', {}, item.get('position'))
       );
     }
