@@ -281,7 +281,7 @@ var AllPagesMetadatas = createClass({
   }
 })
 
-var Leadership = createClass({
+var LeadershipPreview = createClass({
   render: function(){
     var entry = this.props.entry;
     var leaders = entry.getIn(['data', 'leaders']);
@@ -315,6 +315,7 @@ CMS.registerPreviewTemplate("ourcustomers", OurCustomersPreview);
 CMS.registerPreviewTemplate("worktogether", WorkTogetherPreview);
 CMS.registerPreviewTemplate("learnmore", LearnMorePreview);
 CMS.registerPreviewTemplate("allpagesmetadatas", AllPagesMetadatas)
+CMS.registerPreviewTemplate("leadership", LeadershipPreview);
 
 CMS.registerPreviewStyle("https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css");
 CMS.registerPreviewStyle("/css/cms.css");
