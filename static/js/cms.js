@@ -16,12 +16,13 @@ var HeaderPreview = createClass({
   render: function(){
     var entry = this.props.entry;
     var carousel = entry.getIn(['data', 'carousel']);
-    var carouselIndicator = carousel.map(function(carousel, index){
+
+    function carouselIndicator(item, index){
       if(index==0) return h('li', {className: 'active', 'data-target':'"#carouselHeader', 'data-slide-to':index}, '');
       else return h('li', {'data-target':'"#carouselHeader', 'data-slide-to':index}, '');
-    })
+    }
 
-    alert({carouselIndicator});
+    alert(carousel.map(carouselIndicator);
 
     return h('header', {className:'hero'},
       h('div', {className:'header-content-inner'},
