@@ -3,9 +3,14 @@ var ParadigmPreview = createClass({
     var entry = this.props.entry;
     var videoId = entry.getIn(['data', 'video']);
     return h('section', {className:'hero-1'},
-      h('div', {className:"row justify-content-center"},
-        h('div', {className:"col-sm-12 col-md-10 col-lg-8 embed-responsive embed-responsive-16by9"},
-          h('iframe', {className:"youtube", src:'https://www.youtube.com/embed/'+ videoId +'?controls=0', frameborder:'0', allow:'accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture', allowfullscreen:'true'},'')
+      h('div', {className:'container'},
+        h('div', {className:'row justify-content-center'},
+          h('h1', {className:'col-12 text-center'}, 'A new paradigm.')
+        ),
+        h('div', {className:"row justify-content-center"},
+          h('div', {className:"col-sm-12 col-md-10 col-lg-8 embed-responsive embed-responsive-16by9"},
+            h('iframe', {className:"youtube", src:'https://www.youtube.com/embed/'+ videoId +'?controls=0', frameborder:'0', allow:'accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture', allowfullscreen:'true'},'')
+          )
         )
       )
     )
