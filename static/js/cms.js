@@ -264,7 +264,7 @@ var AllPagesMetadatas = createClass({
     var entry = this.props.entry;
     var metadatas = entry.getIn(['data', 'metadatas']);
     var metadata = function(item){
-      return h('div', {style:'font-weight: bold;'},
+      return h('div', {style:{fontWeight: 'bold'}},
         h('span', {style: {color: 'white'}}, '<'),
         h('span', {style: {color: '#ed5f5f'}}, 'meta '),
         h('span', {style: {color: '#f0b363'}}, 'name '),
