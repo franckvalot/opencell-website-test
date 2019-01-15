@@ -281,6 +281,31 @@ var AllPagesMetadatas = createClass({
   }
 })
 
+var Leadership = createClass({
+  render: function(){
+    var entry = this.props.entry;
+    var leaders = entry.getIn(['data', 'leaders']);
+    var leader = function(item){
+      return h('div', {className: 'col-12 col-md-6 col-lg-4 leadership'},
+        h('img', {src:item.get('url'), alt:item.get('name')}),
+        h('h2', {}, item.get('name').toUpperCase()),
+        h('p', {}, item.get('position'))
+      );
+    }
+
+    return h('section', {className:'hero-1'},
+      h('div',{className:'container'},
+        h('div', {className:'row justify-content-center'},
+          h('h1', {className:'col-12 text-center'}, entry.getIn(['data', 'title']))
+        ),
+        h('div', {className:'row justify-content-center'},
+          leaders.map(leader)
+        )
+      )
+    );
+  }
+})
+
 CMS.registerPreviewTemplate("header", HeaderPreview);
 CMS.registerPreviewTemplate("paradigm", ParadigmPreview);
 CMS.registerPreviewTemplate("whatweprovide", WhatWeProvideView);

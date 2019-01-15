@@ -139,3 +139,23 @@ collections:
               - label: Alternative
                 name: alt
                 widget: string
+      - label: Leadership
+        name: leadership
+        file: data/aboutus/leadership.yml
+        fields:
+          - label: Title
+            name: title
+            widget: string
+          - label: Leaders
+            name: leaders
+            widget: list
+            fields:
+              - label: Name
+                name: name
+                widget: string
+              - label: Position
+                name: position
+                widget: string
+              - label: Photo
+                name: url
+                widget: image

@@ -77,12 +77,15 @@ body {
   font-size: 20px;
 }
 
+header.hero, header.small_header, .indus-telco, .indus-energy, .indus-mobility, .indus-retail, .leadership {
+  text-align: center;
+}
+
 header.hero {
   position: relative;
   margin-top: 60px;
   width: 100%;
   min-height: calc(100vh - 60px);
-  text-align: center;
   color: #fff;
   background-image: url("../img/bg/bg_slider_1.jpg");
   -webkit-background-size: cover !important;
@@ -96,7 +99,6 @@ header.hero {
 header.small_header{
   width: 100%;
   min-height: 40vh;
-  text-align: center;
   color: #fff;
   background-image: url("../img/bg/bg_slider_1.jpg");
   -webkit-background-size: cover !important;
@@ -243,7 +245,6 @@ section {
 }
 
 .indus-telco, .indus-energy, .indus-mobility, .indus-retail {
-  text-align: center;
   font-family: 'GT-Walsheim-Bold';
   font-size: 22px;
   line-height: 44px;
@@ -420,6 +421,23 @@ section.footer li {
   height: 44px;
   width: 23px;
 }
+
+.leadersship{
+  margin: 30px 0;
+}
+
+.leadership > img {
+  width: inherit;
+  padding: 0 20px;
+}
+
+.leadership > h2{
+  min-height: 0;
+}
+.leadership > p{
+  font-size: 16px;
+}
+
 
 code {
   font-family: Consolas,Menlo,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier New,monospace,sans-serif;
