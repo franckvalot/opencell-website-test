@@ -16,12 +16,12 @@ var HeaderPreview = createClass({
   render: function(){
     var entry = this.props.entry;
     var carousel = entry.getIn(['data', 'carousel']);
-    var datatarget = "";
-    for(var i=0; i<carousel.length;i++){
-      if(i==0) h('li', {className: 'active', 'data-target':'"#carouselHeader', 'data-slide-to':i}, '');
-      else h('li', {'data-target':'"#carouselHeader', 'data-slide-to':i}, '');
-    };
-    alert(datatarget);
+    var carouselIndicator = carousel.map(function(carousel, index){
+      if(index==0) return h('li', {className: 'active', 'data-target':'"#carouselHeader', 'data-slide-to':index}, '');
+      else return h('li', {'data-target':'"#carouselHeader', 'data-slide-to':index}, '');
+    })
+
+    alert({carouselIndicator});
 
     return h('header', {className:'hero'},
       h('div', {className:'header-content-inner'},
