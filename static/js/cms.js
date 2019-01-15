@@ -89,45 +89,26 @@ var WhatMakesUsView = createClass({
   render: function(){
     var entry = this.props.entry;
 
+    var content = function(item){
+      return h('h2', {}, item.get('title'))
+        + h('p', {}, item.get('text'));
+    };
+
+    var columns = function(item){
+      return h('div', {className:'col-8 col-md-4'},
+        item.get('content').map(content),
+        h('div', {className:'title-box text-center'}, item.get('title')),
+      );
+    };
+
+
     return h('section', {className:'hero-1'},
       h('div', {className:'container'},
         h('div', {className:'row justify-content-center'},
           h('h1', {className:'col text-center'}, 'What makes us')
         ),
         h('div', {className:'row justify-content-center whatmakesus text-center'},
-          h('div', {className:'col-8 col-md-4'},
-            h('div', {className:'title-box text-center'}, entry.getIn(['data', 'title1'])),
-            h('h2', {}, entry.getIn(['data', 'subtitle_1_1'])),
-            h('p', {}, entry.getIn(['data', 'text_1_1'])),
-            h('h2', {}, entry.getIn(['data', 'subtitle_1_2'])),
-            h('p', {}, entry.getIn(['data', 'text_1_2'])),
-            h('h2', {}, entry.getIn(['data', 'subtitle_1_3'])),
-            h('p', {}, entry.getIn(['data', 'text_1_3'])),
-            h('h2', {}, entry.getIn(['data', 'subtitle_1_4'])),
-            h('p', {}, entry.getIn(['data', 'text_1_4'])),
-          ),
-          h('div', {className:'col-8 col-md-4'},
-            h('div', {className:'title-box text-center'}, entry.getIn(['data', 'title2'])),
-            h('h2', {}, entry.getIn(['data', 'subtitle_2_1'])),
-            h('p', {}, entry.getIn(['data', 'text_2_1'])),
-            h('h2', {}, entry.getIn(['data', 'subtitle_2_2'])),
-            h('p', {}, entry.getIn(['data', 'text_2_2'])),
-            h('h2', {}, entry.getIn(['data', 'subtitle_2_3'])),
-            h('p', {}, entry.getIn(['data', 'text_2_3'])),
-            h('h2', {}, entry.getIn(['data', 'subtitle_2_4'])),
-            h('p', {}, entry.getIn(['data', 'text_2_4'])),
-          ),
-          h('div', {className:'col-8 col-md-4'},
-            h('div', {className:'title-box text-center'}, entry.getIn(['data', 'title3'])),
-            h('h2', {}, entry.getIn(['data', 'subtitle_3_1'])),
-            h('p', {}, entry.getIn(['data', 'text_3_1'])),
-            h('h2', {}, entry.getIn(['data', 'subtitle_3_2'])),
-            h('p', {}, entry.getIn(['data', 'text_3_2'])),
-            h('h2', {}, entry.getIn(['data', 'subtitle_3_3'])),
-            h('p', {}, entry.getIn(['data', 'text_3_3'])),
-            h('h2', {}, entry.getIn(['data', 'subtitle_3_4'])),
-            h('p', {}, entry.getIn(['data', 'text_3_4']))
-          )
+          entry.getIn(['data', 'columns']).map(columns);
         )
       )
     )

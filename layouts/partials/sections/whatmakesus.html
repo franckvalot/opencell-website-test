@@ -4,39 +4,15 @@
           <h1 class="col-12 text-center">What makes us</h1>
         </div>
         <div class="row justify-content-center whatmakesus text-center">
+          {{ range .Site.Data.indexpage.whatmakesus.columns}}
           <div class="col-8 col-md-4">
-            <div class="title-box text-center">{{ .Site.Data.indexpage.whatmakesus.title1 }}</div>
-            <h2>{{ .Site.Data.indexpage.whatmakesus.subtitle_1_1 }}</h2>
-            <p>{{ .Site.Data.indexpage.whatmakesus.text_1_1 }}</p>
-            <h2>{{ .Site.Data.indexpage.whatmakesus.subtitle_1_2 }}</h2>
-            <p>{{ .Site.Data.indexpage.whatmakesus.text_1_2 }}</p>
-            <h2>{{ .Site.Data.indexpage.whatmakesus.subtitle_1_3 }}</h2>
-            <p>{{ .Site.Data.indexpage.whatmakesus.text_1_3 }}</p>
-            <h2>{{ .Site.Data.indexpage.whatmakesus.subtitle_1_4 }}</h2>
-            <p>{{ .Site.Data.indexpage.whatmakesus.text_1_4 }}</p>
+            <div class="title-box text-center">{{ .title }}</div>
+            {{ range .content }}
+              <h2>{{ .title }}</h2>
+              <p>{{ .text }}</p>
+            {{ end }}
           </div>
-          <div class="col-8 col-md-4">
-            <div class="title-box text-center">{{ .Site.Data.indexpage.whatmakesus.title2 }}</div>
-            <h2>{{ .Site.Data.indexpage.whatmakesus.subtitle_2_1 }}</h2>
-            <p>{{ .Site.Data.indexpage.whatmakesus.text_2_1 }}</p>
-            <h2>{{ .Site.Data.indexpage.whatmakesus.subtitle_2_2 }}</h2>
-            <p>{{ .Site.Data.indexpage.whatmakesus.text_2_2 }}</p>
-            <h2>{{ .Site.Data.indexpage.whatmakesus.subtitle_2_3 }}</h2>
-            <p>{{ .Site.Data.indexpage.whatmakesus.text_2_3 }}</p>
-            <h2>{{ .Site.Data.indexpage.whatmakesus.subtitle_2_4 }}</h2>
-            <p>{{ .Site.Data.indexpage.whatmakesus.text_2_4 }}</p>
-          </div>
-          <div class="col-8 col-md-4">
-            <div class="title-box text-center">{{ .Site.Data.indexpage.whatmakesus.title3 }}</div>
-            <h2>{{ .Site.Data.indexpage.whatmakesus.subtitle_3_1 }}</h2>
-            <p>{{ .Site.Data.indexpage.whatmakesus.text_3_1 }}</p>
-            <h2>{{ .Site.Data.indexpage.whatmakesus.subtitle_3_2 }}</h2>
-            <p>{{ .Site.Data.indexpage.whatmakesus.text_3_2 }}</p>
-            <h2>{{ .Site.Data.indexpage.whatmakesus.subtitle_3_3 }}</h2>
-            <p>{{ .Site.Data.indexpage.whatmakesus.text_3_3 }}</p>
-            <h2>{{ .Site.Data.indexpage.whatmakesus.subtitle_3_4 }}</h2>
-            <p>{{ .Site.Data.indexpage.whatmakesus.text_3_4 }}</p>
-          </div>
+          {{ end }}
         </div>
       </div>
     </section>
