@@ -235,7 +235,6 @@ var WorkTogetherPreview = createClass({
   }
 })
 
-
 var LearnMorePreview = createClass({
   render: function(){
     var entry = this.props.entry;
@@ -260,6 +259,27 @@ var LearnMorePreview = createClass({
   }
 })
 
+var AllPagesMetadatas = createClass({
+  render: function(){
+    var entry = this.props.entry;
+    var metadatas = function(item){
+      return h('div', {style:'font-weight: bold;'},
+        h('span', {style:'color: white;'}, '<'),
+        h('span', {style:'color: #ed5f5f;'}, 'meta '),
+        h('span', {style:'color: #f0b363;'}, 'name '),
+        h('span', {style:'color: white;'}, '=\"'),
+        h('span', {style:'color: #82cc6c;'}, item.get('name')),
+        h('span', {style:'color: white;'}, '\" '),
+        h('span', {style:'color: #f0b363;'}, 'content '),
+        h('span', {style:'color: white;'}, '=\"'),
+        h('span', {style:'color: #82cc6c;'}, item.get('content')),
+        h('span', {style:'color: white;'}, '\">')
+      )
+    }
+    return entry.getIn(['data', 'metadatas']).map(metadatas);
+  }
+})
+
 CMS.registerPreviewTemplate("header", HeaderPreview);
 CMS.registerPreviewTemplate("paradigm", ParadigmPreview);
 CMS.registerPreviewTemplate("whatweprovide", WhatWeProvideView);
@@ -268,6 +288,7 @@ CMS.registerPreviewTemplate("mainindustries", MainIndustriesPreview);
 CMS.registerPreviewTemplate("ourcustomers", OurCustomersPreview);
 CMS.registerPreviewTemplate("worktogether", WorkTogetherPreview);
 CMS.registerPreviewTemplate("learnmore", LearnMorePreview);
+CMS.registerPreviewTemplate("allpagesmetadatas", AllPagesMetadatas)
 
 CMS.registerPreviewStyle("https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css");
 CMS.registerPreviewStyle("/css/cms.css");

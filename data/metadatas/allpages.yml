@@ -1,0 +1,5 @@
+metadatas:
+  - name: generator
+    content: Hugo 0.52
+  - name: robots
+    content: noodp

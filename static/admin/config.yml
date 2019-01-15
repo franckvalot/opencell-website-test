@@ -109,7 +109,7 @@ collections:
     name: "metadatas"
     files:
     - label: "All Pages"
-      name: "allpages"
+      name: "allpagesmetadatas"
       file: "data/metadatas/allpages.yml"
       fields:
       - label: "Metadatas"
