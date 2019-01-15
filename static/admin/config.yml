@@ -10,7 +10,7 @@ media_folder: "static/img/uploads"
 public_folder: "/img/uploads"
 
 display_url: https://opencell-test.netlify.com/
-logo_url: https:/opencell-test.netlify.com/img/logo-opencell.svg
+logo_url: /img/logo-opencell.svg
 
 collections:
   - name: "indexpage"
