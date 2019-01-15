@@ -17,12 +17,10 @@ var HeaderPreview = createClass({
     var entry = this.props.entry;
     var carousel = entry.getIn(['data', 'carousel']);
     var datatarget = "";
-
-    carousel.foreach(function(element, index){
-        if(index == 0) datatarget += h('li', {className: 'active', 'data-target':'"#carouselHeader', 'data-slide-to': index+1}, '');
-        else datatarget += h('li', {'data-target':'"#carouselHeader', 'data-slide-to':index+1}, '');
-    });
-
+    for(var i=0; i<carousel.length;i++){
+      if(i==0) h('li', {className: 'active', 'data-target':'"#carouselHeader', 'data-slide-to':i}, '');
+      else h('li', {'data-target':'"#carouselHeader', 'data-slide-to':i}, '');
+    };
     alert(datatarget);
 
     return h('header', {className:'hero'},
