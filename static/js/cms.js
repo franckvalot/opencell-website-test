@@ -173,7 +173,7 @@ var OurCustomersPreview = createClass({
           h('h1', {className:'col-12 text-center'}, 'Our Customers.')
         ),
         h('div', {className:'row align-items-center justify-content-center customer-logo'},
-          logos.map(logo);
+          logos.map(logo)
         ),
         h('div', {className:'row align-items-center justify-content-center text-center'},
           h('div', {className:'col'},
