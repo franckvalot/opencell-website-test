@@ -23,7 +23,6 @@ var HeaderPreview = createClass({
     }
 
     var carouselInner = function(item, index){
-      alert(item.get("title"));
       if(index==0) return h('div', {className:'carousel-item active'},
           h('h1', {}, item.get("title")),
           h('p', {}, item.get("subtitle"))
@@ -202,6 +201,41 @@ var OurCustomersPreview = createClass({
 var WorkTogetherPreview = createClass({
   render: function(){
     var entry = this.props.entry;
+    var testimonials = entry.getIn(['data', 'testimonials']);
+
+    var carouselIndicator = function(item, index){
+      if(index==0) return h('li', {className: 'active', 'data-target':'"#carouselHeader', 'data-slide-to':index}, '');
+      else return h('li', {'data-target':'"#carouselHeader', 'data-slide-to':index}, '');
+    }
+
+    var carouselInner = function(item, index){
+      if(index==0) return h('div', {className:'carousel-item active'},
+        h('div', {className:'row justify-content-center align-items-center'},
+          h('div', {className:'col-10 col-md-8 col-lg-6'},
+            h('div', {className:'row justify-content-center'},
+              h('div', {className:'quote text-center'}, item.get("testimonial"),
+              h('div', {className:'w-100'},''),
+              h('hr', {}),
+              h('div', {className:'w-100'},''),
+              h('div', {className:'author'}, item.get("author")
+            )
+          )
+        )
+      );
+      else return h('div', {className:'carousel-item active'},
+        h('div', {className:'row justify-content-center align-items-center'},
+          h('div', {className:'col-10 col-md-8 col-lg-6'},
+            h('div', {className:'row justify-content-center'},
+              h('div', {className:'quote text-center'}, item.get("testimonial"),
+              h('div', {className:'w-100'},''),
+              h('hr', {}),
+              h('div', {className:'w-100'},''),
+              h('div', {className:'author'}, item.get("author")
+            )
+          )
+        )
+      );
+    }
 
     return h('section', {className:'hero-2'},
       h('div', {className:'container'},
@@ -212,50 +246,10 @@ var WorkTogetherPreview = createClass({
         ),
         h('div', {id:'carouselTestimonials', className:'carousel slide', 'data-ride':'carousel'},
           h('ol', {className:'carousel-indicators'},
-            h('li', {className: 'active', 'data-target':'"#carouselTestimonials', 'data-slide-to':'0'}, ''),
-            h('li', {'data-target':'"#carouselTestimonials', 'data-slide-to':'1'}, ''),
-            h('li', {'data-target':'"#carouselTestimonials', 'data-slide-to':'2'}, '')
+            testimonials.map(carouselIndicator)
           ),
           h('div', {className:'carousel-inner testimonials'},
-            h('div', {className:'carousel-item active'},
-              h('div', {className:'row justify-content-center align-items-center'},
-                h('div', {className:'col-10 col-md-8 col-lg-6'},
-                  h('div', {className:'row justify-content-center'},
-                    h('div', {className:'quote text-center'}, entry.getIn(['data', 'testimonial1'])),
-                    h('div', {className:'w-100'},''),
-                    h('hr', {}),
-                    h('div', {className:'w-100'},''),
-                    h('div', {className:'author'}, entry.getIn(['data', 'author1']))
-                  )
-                )
-              )
-            ),
-            h('div', {className:'carousel-item'},
-              h('div', {className:'row justify-content-center align-items-center'},
-                h('div', {className:'col-10 col-md-8 col-lg-6'},
-                  h('div', {className:'row justify-content-center'},
-                    h('div', {className:'quote text-center'}, entry.getIn(['data', 'testimonial2'])),
-                    h('div', {className:'w-100'},''),
-                    h('hr', {}),
-                    h('div', {className:'w-100'},''),
-                    h('div', {className:'author'}, entry.getIn(['data', 'author2']))
-                  )
-                )
-              )
-            ),
-            h('div', {className:'carousel-item'},
-              h('div', {className:'row justify-content-center align-items-center'},
-                h('div', {className:'col-10 col-md-8 col-lg-6'},
-                  h('div', {className:'row justify-content-center'},
-                    h('div', {className:'quote text-center'}, entry.getIn(['data', 'testimonial3'])),
-                    h('div', {className:'w-100'},''),
-                    h('hr', {}),
-                    h('div', {className:'w-100'},''),
-                    h('div', {className:'author'}, entry.getIn(['data', 'author3']))
-                  )
-                )
-              )
-            )
+            testimonials.map(carouselInner)
           ),
           h('a', {className:'carousel-control-prev', href:'#carouselTestimonials', role:'button', 'data-slide':'prev'},
             h('span', {className:'carousel-control-prev-icon', 'area-hidden':'true'}, ''),
