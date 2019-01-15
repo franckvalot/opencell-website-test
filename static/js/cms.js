@@ -286,7 +286,7 @@ var LeadershipPreview = createClass({
     var entry = this.props.entry;
     var leaders = entry.getIn(['data', 'leaders']);
     var leader = function(item){
-      return h('div', {className: 'col-12 col-md-6 col-lg-4 leadership'},
+      return h('div', {className: 'col-8 col-md-6 col-lg-4 leadership'},
         h('img', {src:item.get('url'), alt:item.get('name')}),
         h('h2', {}, item.get('name').toUpperCase()),
         h('p', {}, item.get('position'))
