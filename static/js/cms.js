@@ -22,15 +22,13 @@ var HeaderPreview = createClass({
     }
 
     var carouselInner = function(item, index){
-      if(index==0) return
-      h('div', {className:'carousel-item active'},
-        h('h1', {}, item.title),
-        h('p', {}, item.subtitle)
+      if(index==0) return h('div', {className:'carousel-item active'},
+                            h('h1', {}, item.title),
+                            h('p', {}, item.subtitle)
       );
-      else return
-      h('div', {className:'carousel-item'},
-        h('h1', {}, item.title),
-        h('p', {}, item.subtitle)
+      else return h('div', {className:'carousel-item'},
+                    h('h1', {}, item.title),
+                    h('p', {}, item.subtitle)
       );
     }
 
@@ -41,18 +39,7 @@ var HeaderPreview = createClass({
             carousel.map(carouselIndicator)
           ),
           h('div', {className:'carousel-inner'},
-            h('div', {className:'carousel-item active'},
-              h('h1', {}, entry.getIn(['data', 'title1'])),
-              h('p', {}, entry.getIn(['data', 'subtitle1']))
-            ),
-            h('div', {className:'carousel-item'},
-              h('h1', {}, entry.getIn(['data', 'title2'])),
-              h('p', {}, entry.getIn(['data', 'subtitle2']))
-            ),
-            h('div', {className:'carousel-item'},
-              h('h1', {}, entry.getIn(['data', 'title3'])),
-              h('p', {}, entry.getIn(['data', 'subtitle3']))
-            )
+            carousel.map(carouselInner);
           ),
           h('a', {className:'carousel-control-prev', href:'#carouselHeader', role:'button', 'data-slide':'prev'},
             h('span', {className:'carousel-control-prev-icon', 'area-hidden':'true'}, ''),
