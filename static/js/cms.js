@@ -21,6 +21,7 @@ var HeaderPreview = createClass({
       else return h('li', {'data-target':'"#carouselHeader', 'data-slide-to':index}, '');
     }
     var carouselInner = function(item, index){
+      alert(item);
       if(index==0) return h('div', {className:'carousel-item active'},
           h('h1', {}, item.title),
           h('p', {}, item.subtitle)
