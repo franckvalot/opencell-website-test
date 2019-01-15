@@ -17,6 +17,7 @@ var HeaderPreview = createClass({
     var entry = this.props.entry;
     var carousel = entry.getIn(['data', 'carousel']);
     alert(carousel);
+    alert(carousel[0].title);
     return h('header', {className:'hero'},
       h('div', {className:'header-content-inner'},
         h('div', {id:'carouselHeader', className:'carousel slide row align-items-center', 'data-ride':'carousel'},
