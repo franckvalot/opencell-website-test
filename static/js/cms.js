@@ -366,7 +366,6 @@ var CustomersPreview = createClass({
     }
 
     var section = function(item){
-      h('div',{className:''},)
       return h('section',{className:'hero-1'},
         h('div',{className:'container'},
           h('div',{className:'row justify-content-center'},
@@ -386,16 +385,19 @@ var CustomersPreview = createClass({
       );
     }
 
-    return h('section', {className:'hero-1'},
-      h('div',{className:'container'},
-        h('div', {className:'row justify-content-center'},
-          h('h1', {className:'col-12 text-center'}, entry.getIn(['data', 'title']))
-        ),
-        h('div', {className:'row justify-content-center'},
-          h('div', {className: 'col-10 col-md-8'}, entry.getIn(['data', 'content']))
+    return h('div', {},
+      h('section', {className:'hero-1'},
+        h('div',{className:'container'},
+          h('div', {className:'row justify-content-center'},
+            h('h1', {className:'col-12 text-center'}, entry.getIn(['data', 'title']))
+          ),
+          h('div', {className:'row justify-content-center'},
+            h('div', {className: 'col-10 col-md-8'}, entry.getIn(['data', 'content']))
+          )
         )
-      )
-    ), sections.map(section);
+      ),
+      sections.map(section)
+    );
   }
 
 
