@@ -413,6 +413,8 @@ var PressReleasesPreview = createClass({
 */
 
 function smallHeader(item){
+    alert(item);
+    console.log(item);
     return h('header', {className:'small_header'},
       h('div', {className:'header-content-inner'},
         h('div', {className:'row align-items-center justify-content-center'},
@@ -433,7 +435,6 @@ var AboutUSStoryPreview = createClass({
     var partnersdata = entry.getIn(['data', 'partners']);
     var leadershipdata = entry.getIn(['data', 'leadership']);
 
-    alert(entry);
 
     return h('div', {},
       smallHeader(entry)
