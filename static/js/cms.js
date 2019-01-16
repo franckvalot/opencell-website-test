@@ -453,6 +453,7 @@ var AboutUSStoryPreview = createClass({
           h('div', {className:'row justify-content-center'},
 
           )
+        )
       )
     );
 
