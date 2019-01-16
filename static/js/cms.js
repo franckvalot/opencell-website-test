@@ -451,14 +451,14 @@ var AboutUSStoryPreview = createClass({
     var boxes = function(item, index){
       if(index == 2){
         return [h('div', {className:'col-5 col-md-3 col-lg ourstory-box row align-items-center'},
-          h('div', {className:'col'}, item.getIn(['data', 'content']))
+          h('div', {className:'col'}, item.getIn('content'))
         ),
         h('div', {className:'col-12 d-none d-md-block d-lg-none'}, '')
         ];
       }
       else{
         return h('div', {className:'col-5 col-md-3 col-lg ourstory-box row align-items-center'},
-          h('div', {className:'col'}, item.getIn(['data', 'content']))
+          h('div', {className:'col'}, item.get('content'))
         );
       }
     }
@@ -469,7 +469,7 @@ var AboutUSStoryPreview = createClass({
         h('div', {className:'container'},
           titleanddescription(ourstorydata),
           h('div', {className:'row justify-content-center'},
-            ourstorydata.getIn(['data', 'boxes']).map(boxes)
+            ourstorydata.get('boxes']).map(boxes)
           )
         )
       )
