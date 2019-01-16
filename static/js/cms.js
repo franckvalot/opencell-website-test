@@ -302,7 +302,7 @@ var LeadershipPreview = createClass({
     var entry = this.props.entry;
     var leaders = entry.getIn(['data', 'leaders']);
     var leader = function(item){
-      return h('div', {className: 'col-8 col-md-6 col-lg-4 leadership'},
+      return h('div', {className: 'col-8 col-md-6 col-lg-4 leadership-box text-center'},
         h('img', {src:item.get('url'), alt:item.get('name')}),
         h('h2', {}, item.get('name')),
         h('p', {}, item.get('position'))
@@ -448,6 +448,7 @@ CMS.registerPreviewTemplate("allpagesmetadatas", AllPagesMetadatas)
 CMS.registerPreviewTemplate("leadership", LeadershipPreview);
 CMS.registerPreviewTemplate("businessmodel", BusinessModelPreview);
 CMS.registerPreviewTemplate("customers", CustomersPreview);
+CMS.registerPreviewTemplate("pressreleases", PressReleasesPreview);
 
 CMS.registerPreviewStyle("https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css");
 CMS.registerPreviewStyle("/css/cms.css");
