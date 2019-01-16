@@ -361,7 +361,6 @@ CMS.registerPreviewTemplate("learnmore", LearnMorePreview);
 CMS.registerPreviewTemplate("allpagesmetadatas", AllPagesMetadatas)
 CMS.registerPreviewTemplate("leadership", LeadershipPreview);
 CMS.registerPreviewTemplate("businessmodel", BusinessModelPreview);
-CMS.registerPreviewTemplate("customers", CustomersPreview);
 
 CMS.registerPreviewStyle("https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css");
 CMS.registerPreviewStyle("/css/cms.css");
