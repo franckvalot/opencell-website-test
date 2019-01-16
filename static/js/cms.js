@@ -436,9 +436,10 @@ var AboutUSStoryPreview = createClass({
     var boxes = function(item, index){
 
     }
+    alert(entry);
 
     return h('div', {},
-      entry.map(smallHeader)
+      entry.getIn(['data', '']).map(smallHeader)
     );
 
   }
