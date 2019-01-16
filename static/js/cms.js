@@ -426,8 +426,7 @@ function smallHeader(item){
 }
 
 function titleanddescription(item){
-  return
-    h('div', {className:'row justify-content-center'},
+  return h('div', {className:'row justify-content-center'},
       h('h1', {className:'col-12 text-center'}, item.get('title'))
     ),
     h('div', {className:'row justify-content-center text-center'},
