@@ -426,12 +426,14 @@ function smallHeader(title, subtitle){
 }
 
 function titleanddescription(title, content){
-  return h('div', {className:'row justify-content-center'},
-    h('h1', {className:'col-12 text-center'}, title)
-  ),
-  h('div', {className:'row justify-content-center text-center'},
-    h('h1', {className:'col-10 col-md-8'}, content)
-  )
+  return h('div', {},
+    h('div', {className:'row justify-content-center'},
+      h('h1', {className:'col-12 text-center'}, title)
+    ),
+    h('div', {className:'row justify-content-center text-center'},
+      h('h1', {className:'col-10 col-md-8'}, content)
+    )
+  );
 }
 
 var AboutUSStoryPreview = createClass({
@@ -449,7 +451,7 @@ var AboutUSStoryPreview = createClass({
         h('div', {className:'container'},
           titleanddescription(ourstorydata.getIn(['data', 'title']), ourstorydata.getIn(['data', 'content'])),
           h('div', {className:'row justify-content-center'},
-            
+
           )
       )
     );
