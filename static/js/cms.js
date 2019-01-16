@@ -438,7 +438,7 @@ var AboutUSStoryPreview = createClass({
     }
 
     return h('div', {},
-      entry.map(smallHeader);
+      entry.map(smallHeader)
     );
 
   }
