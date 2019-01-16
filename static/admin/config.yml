@@ -201,7 +201,7 @@ collections:
                 widget: string
               - logos: Logos
                 name: logos
-                widget: List
+                widget: list
                 fields:
                   - label: Alternative Text (Name)
                     name: alt
