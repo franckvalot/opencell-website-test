@@ -494,8 +494,8 @@ var AboutUSStoryPreview = createClass({
           )
         )
       ),
-      investorsdata.get('logos').map(logos),
-      partnersdata.get('logos').map(logos),
+      logos(investorsdata),
+      logos(partnersdata),
       h('section', {className:'hero-1'},
         h('div', {className:'container'},
           h('div', {className:'row justify-content-center'},
