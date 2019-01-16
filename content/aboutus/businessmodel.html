@@ -4,13 +4,13 @@
   <body>
     {{ partial "header/navBar.html" . }}
     {{ partial "header/smallheader.html" . }}
-    
+
     <section class="hero-1">
       <div class="container">
         {{ partial "titleanddescription.html" (dict "Data" .Site.Data.aboutus.businessmodel "OwnSection" true) }}
         <div class="row justify-content-center">
           {{ range .Site.Data.aboutus.businessmodel.boxes }}
-          <div class="h-100 col-7 col-md-5 row justify-content-center text-center businessmodel-box">
+          <div class="col-8 col-md-5 row justify-content-center text-center businessmodel-box">
             <img src="{{ .url }}" alt="icon">
             <h2 class="col-12">{{ .title }}</h2>
             <p class="col-12">{{ .description }}</p>
