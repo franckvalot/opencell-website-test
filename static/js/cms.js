@@ -397,8 +397,7 @@ var CustomersPreview = createClass({
             h('div', {className: 'col-10 col-md-8'}, entry.getIn(['data', 'content']))
           )
         )
-      ),
-      sections.map(section)
+      )
     );
   }
 })
