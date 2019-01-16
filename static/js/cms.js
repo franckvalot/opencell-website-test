@@ -434,9 +434,22 @@ function titleanddescription(item){
     )];
 }
 
+function logo(item){
+  return h('div', {className:'col-6 col-md-4 col-lg-3'},
+    h('img', {className:'img-fluid', src: item.get('url'), alt:item.get('alt')})
+  );
+}
+
 function logos(item){
   return h('section',{className:'hero-1'},
-    h('div', {className:'container'}, '')
+    h('div', {className:'container'},
+      h('div', {className:'row align-items-center justify-content-center'},
+        h('h1', {className:'col-12 text-center'}, item.get('title'))
+      ),
+      h('div', {className:'row align-items-center justify-content-center customer-logo'},
+        item.get('logos').map(logo)
+      )
+    )
   );
 }
 
