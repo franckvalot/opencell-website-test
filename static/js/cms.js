@@ -451,7 +451,7 @@ var AboutUSStoryPreview = createClass({
     var boxes = function(item, index){
       if(index == 2){
         return [h('div', {className:'col-5 col-md-3 col-lg ourstory-box row align-items-center'},
-          h('div', {className:'col'}, item.getIn('content'))
+          h('div', {className:'col'}, item.get('content'))
         ),
         h('div', {className:'col-12 d-none d-md-block d-lg-none'}, '')
         ];
