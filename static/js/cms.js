@@ -476,6 +476,14 @@ var AboutUSStoryPreview = createClass({
       }
     }
 
+    var leaders = function(item){
+      return h('div', {className:'col-8 col-md-6 col-lg-4 leadership-box text-center'},
+        h('img', {src: item.get('url'), alt: item.get('alt')}),
+        h('h2', {}, item.get('name')),
+        h('p', {}, item.get('position'))
+      );
+    }
+
     return h('div', {},
       smallHeader(entry),
       h('section', {className:'hero-1'},
@@ -483,6 +491,18 @@ var AboutUSStoryPreview = createClass({
           titleanddescription(ourstorydata),
           h('div', {className:'row justify-content-center'},
             ourstorydata.get('boxes').map(boxes)
+          )
+        )
+      ),
+      investorsdata.get('logos').map(logos),
+      partnersdata.get('logos').map(logos),
+      h('section', {className:'hero-1'},
+        h('div', {className:'container'},
+          h('div', {className:'row justify-content-center'},
+            h('h1', {className:'col-12 text-center'}, leadershipdata.get('title'))
+          ),
+          h('div', {className:'row justify-content-center'},
+            leadershipdata.get('leaders').map(leaders)
           )
         )
       )
