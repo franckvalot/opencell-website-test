@@ -403,10 +403,11 @@ var CustomersPreview = createClass({
   }
 })
 
-var PressReleasesPreview = createClass(){
+var PressReleasesPreview = createClass({
     render: function(){
       var entry = this.props.entry;
       var articles = entry.getIn(['data', 'articles']);
+
       var article = function(item){
         return h('div', {className:'col-10 col-md-6 col-lg-4 row align-items-center justify-content-center'},
             h('div', {className:'col-12 row align-items-center justify-content-center pressreleases-box'},
@@ -428,13 +429,13 @@ var PressReleasesPreview = createClass(){
 
       return h('section', {className:'hero-1'},
         h('div',{className:'container'},
-          h('div', {className:'row justify-content-center'},
-            articles.map(article)
-          )
+          h('div', {className:'row justify-content-center'}, articles.map(article))
         )
       );
     }
-}
+})
+
+
 CMS.registerPreviewTemplate("header", HeaderPreview);
 CMS.registerPreviewTemplate("paradigm", ParadigmPreview);
 CMS.registerPreviewTemplate("whatweprovide", WhatWeProvideView);
