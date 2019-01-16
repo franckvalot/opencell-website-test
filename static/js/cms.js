@@ -376,11 +376,11 @@ var CustomersPreview = createClass({
                 h('h1',{}, item.get('name'))
               ),
               h('ul',{className:'customers-list'},
-                item.get('logos').map(logoname);
+                item.get('logos').map(logoname)
               )
             ),
             h('div', {className:'col-12 col-md-8 col-lg-9 row align-items-center customers-logos'},
-              item.get('logos').map(logo);
+              item.get('logos').map(logo)
             )
           )
         )
