@@ -412,9 +412,7 @@ var PressReleasesPreview = createClass({
 })
 */
 
-function smallHeader(item){
-    alert(item);
-    console.log(item);
+function smallHeader(title, subtitle){
     return h('header', {className:'small_header'},
       h('div', {className:'header-content-inner'},
         h('div', {className:'row align-items-center justify-content-center'},
