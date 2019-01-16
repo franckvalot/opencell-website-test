@@ -419,8 +419,8 @@ function smallHeader(item){
       h('div', {className:'header-content-inner'},
         h('div', {className:'row align-items-center justify-content-center'},
           h('div', {className:'col-10'},
-            h('h1', {}, item.get('title')),
-            h('p', {}, item.get('subtitle'))
+            h('h1', {}, title),
+            h('p', {}, subtitle)
           )
         )
       )
@@ -437,7 +437,7 @@ var AboutUSStoryPreview = createClass({
 
 
     return h('div', {},
-      smallHeader(entry)
+      smallHeader(entry.getIn(['data', 'title']), entry.getIn(['data', 'subtitle']))
     );
 
   }
