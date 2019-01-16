@@ -412,13 +412,13 @@ var PressReleasesPreview = createClass({
 })
 */
 
-function smallHeader(title, subtitle){
+function smallHeader(item){
     return h('header', {className:'small_header'},
       h('div', {className:'header-content-inner'},
         h('div', {className:'row align-items-center justify-content-center'},
           h('div', {className:'col-10'},
-            h('h1', {}, title),
-            h('p', {}, subtitle)
+            h('h1', {}, item.getIn(['data', 'title'])),
+            h('p', {}, item.getIn(['data', 'subtitle']))
           )
         )
       )
@@ -426,14 +426,12 @@ function smallHeader(title, subtitle){
 }
 
 function titleanddescription(item){
-  console.log(item);
-  alert(item);
   return h('div', {},
     h('div', {className:'row justify-content-center'},
       h('h1', {className:'col-12 text-center'}, item.get('title'))
     ),
     h('div', {className:'row justify-content-center text-center'},
-      h('h1', {className:'col-10 col-md-8'}, item.get('content'))
+      h('div', {className:'col-10 col-md-8'}, item.get('content'))
     )
   );
 }
@@ -448,7 +446,7 @@ var AboutUSStoryPreview = createClass({
 
 
     return h('div', {},
-      smallHeader(entry.getIn(['data', 'title']), entry.getIn(['data', 'subtitle'])),
+      smallHeader(entry),
       h('section', {className:'hero-1'},
         h('div', {className:'container'},
           titleanddescription(ourstorydata),
