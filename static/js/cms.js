@@ -412,7 +412,7 @@ var PressReleasesPreview = createClass({
 })
 */
 
-var smallHeader = function(item){
+function smallHeader(item){
     return h('header', {className:'small_header'},
       h('div', {className:'header-content-inner'},
         h('div', {className:'row align-items-center justify-content-center'},
@@ -439,7 +439,7 @@ var AboutUSStoryPreview = createClass({
     alert(entry);
 
     return h('div', {},
-      entry.getIn(['data', '']).map(smallHeader)
+      smallHeader(entry);
     );
 
   }
