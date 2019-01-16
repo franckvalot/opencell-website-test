@@ -403,6 +403,38 @@ var CustomersPreview = createClass({
   }
 })
 
+var PressReleasesPreview = createClass(){
+    render: function(){
+      var entry = this.props.entry;
+      var articles = entry.getIn(['data', 'articles']);
+      var article = function(item){
+        return h('div', {className:'col-10 col-md-6 col-lg-4 row align-items-center justify-content-center'},
+            h('div', {className:'col-12 row align-items-center justify-content-center pressreleases-box'},
+              h('div', {className:'date'},
+                h('h2', {}, item.get('month')),
+                h('p', {}, item.get('year'))
+              ),
+              h('div', {className:'col-12 row align-items-center justify-content-center description'},
+                h('div', {className:'col-10 row justify-content-center text-center'},
+                  item.get('description'),
+                  h('form', {action:item.get('url'), method:'get'},
+                    h('button', {className:'opencell-btn', type:'submit', name:'button'}, 'READ')
+                  )
+                )
+              )
+            )
+        );
+      }
+
+      return h('section', {className:'hero-1'},
+        h('div',{className:'container'},
+          h('div', {className:'row justify-content-center'},
+            articles.map(article)
+          )
+        )
+      );
+    }
+}
 CMS.registerPreviewTemplate("header", HeaderPreview);
 CMS.registerPreviewTemplate("paradigm", ParadigmPreview);
 CMS.registerPreviewTemplate("whatweprovide", WhatWeProvideView);

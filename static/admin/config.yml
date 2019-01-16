@@ -121,6 +121,18 @@ collections:
   - label: About Us
     name: aboutus
     files:
+      - label: Press Releases
+        name: pressreleases
+        file: data/aboutus/pressreleases.yml
+        fields:
+          - label: Articles
+            name: articles
+            widget: list
+            fields:
+              - { label: Month of release, name: month, widget: string }
+              - { label: Year of release, name: year, widget: string }
+              - { label: Description, name: description, widget: string }
+              - { label: Article Link, name: url, widget: string }
       - label: Our partners
         name: ourpartners
         file: data/aboutus/ourpartners.yml

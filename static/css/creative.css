@@ -53,7 +53,13 @@
     background-color: white;
     padding: 0;
   }
+}
 
+.dropdown:hover > .dropdown-menu {
+    display: block;
+}
+.dropdown > .dropdown-toggle:active {
+    //pointer-events: none;
 }
 
 .opencell-btn {
@@ -239,7 +245,6 @@ span.h2 {
   color: #BBB5B5;
 }
 
-
 .customers-box {
   position: relative;
   margin-top: 50px;
@@ -298,6 +303,35 @@ span.h2 {
     text-align: inherit;
   }
 }
+
+.pressreleases-box{
+  margin: 20px 0;
+}
+.pressreleases-box .date {
+  position: relative;
+  z-index: 10;
+  background-color: #EB5048;
+  text-align: center;
+  color: white;
+  width: 120px;
+  padding: 20px 0;
+}
+.pressreleases-box .date > h2, .pressreleases-box .date > p {
+  color: inherit;
+  min-height: 0;
+  font-size: 16px;
+}
+.pressreleases-box .description {
+  background-color: #F9F9F8;
+  min-height: 300px;
+  color: black;
+  padding: 80px 0 30px 0;
+  margin-top: -50px;
+}
+.pressreleases-box .opencell-btn {
+  margin-top: 20px;
+}
+
 
 
 .whatmakesus p {
