@@ -16,14 +16,14 @@ ourstory:
     - content: 55 employees & FTEs
 investors:
   title: Investors
-  logos :
+  logos:
   - url: /img/uploads/logo-adidas.svg
     alt: Adidas
   - url: /img/uploads/logo-mosaic.svg
     alt: Mosaic
 partners:
   title: Parners
-  logos :
+  logos:
   - url: /img/uploads/logo-gunster.svg
     alt: Gunster
   - url: /img/uploads/logo-fsu.svg

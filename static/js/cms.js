@@ -507,9 +507,7 @@ var AboutUSStoryPreview = createClass({
         )
       )
     );
-
   }
-
 })
 
 /*

@@ -160,8 +160,8 @@ collections:
                 name: logos
                 widget: list
                 fields:
-                  - { label: Logo, name: url, widget: image }
                   - { label: Alternative Text (name), name: alt, widget: string }
+                  - { label: Logo, name: url, widget: image }
           - label: Partners Section
             name: partners
             widget: object
@@ -171,8 +171,8 @@ collections:
                 name: logos
                 widget: list
                 fields:
-                  - { label: Logo, name: url, widget: image }
                   - { label: Alternative Text (name), name: alt, widget: string }
+                  - { label: Logo, name: url, widget: image }
           - label: Leadership Section
             name: leadership
             widget: object
