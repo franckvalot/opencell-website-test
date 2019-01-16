@@ -14,6 +14,7 @@ var Template = createClass({
   }
 })
 
+/*
 var ParadigmPreview = createClass({
   render: function(){
     var entry = this.props.entry;
@@ -297,31 +298,6 @@ var AllPagesMetadatas = createClass({
   }
 })
 
-var LeadershipPreview = createClass({
-  render: function(){
-    var entry = this.props.entry;
-    var leaders = entry.getIn(['data', 'leaders']);
-    var leader = function(item){
-      return h('div', {className: 'col-8 col-md-6 col-lg-4 leadership-box text-center'},
-        h('img', {src:item.get('url'), alt:item.get('name')}),
-        h('h2', {}, item.get('name')),
-        h('p', {}, item.get('position'))
-      );
-    }
-
-    return h('section', {className:'hero-1'},
-      h('div',{className:'container'},
-        h('div', {className:'row justify-content-center'},
-          h('h1', {className:'col-12 text-center'}, entry.getIn(['data', 'title']))
-        ),
-        h('div', {className:'row justify-content-center'},
-          leaders.map(leader)
-        )
-      )
-    );
-  }
-})
-
 var BusinessModelPreview = createClass({
   render: function(){
       var entry = this.props.entry;
@@ -434,8 +410,42 @@ var PressReleasesPreview = createClass({
       );
     }
 })
+*/
 
+var smallHeader = function(item){
+    return h('header', {className:'small_header'},
+      h('div', {className:'header-content-inner'},
+        h('div', {className:'row align-items-center justify-content-center'},
+          h('div', {className:'col-10'},
+            h('h1', {}, item.get('title')),
+            h('p', {}, item.get('subtitle'))
+          )
+        )
+      )
+    );
+}
 
+var AboutUSStoryPreview = createClass({
+  render: function(){
+    var entry = this.props.entry
+    var ourstorydata = entry.getIn(['data', 'ourstory']);
+    var investorsdata = entry.getIn(['data', 'investors']);
+    var partnersdata = entry.getIn(['data', 'partners']);
+    var leadershipdata = entry.getIn(['data', 'leadership']);
+
+    var boxes = function(item, index){
+
+    }
+
+    return h('div', {},
+      entry.map(smallHeader);
+    );
+
+  }
+
+})
+
+/*
 CMS.registerPreviewTemplate("header", HeaderPreview);
 CMS.registerPreviewTemplate("paradigm", ParadigmPreview);
 CMS.registerPreviewTemplate("whatweprovide", WhatWeProvideView);
@@ -445,10 +455,13 @@ CMS.registerPreviewTemplate("ourcustomers", OurCustomersPreview);
 CMS.registerPreviewTemplate("worktogether", WorkTogetherPreview);
 CMS.registerPreviewTemplate("learnmore", LearnMorePreview);
 CMS.registerPreviewTemplate("allpagesmetadatas", AllPagesMetadatas)
-CMS.registerPreviewTemplate("leadership", LeadershipPreview);
+
 CMS.registerPreviewTemplate("businessmodel", BusinessModelPreview);
 CMS.registerPreviewTemplate("customers", CustomersPreview);
 CMS.registerPreviewTemplate("pressreleases", PressReleasesPreview);
+*/
+CMS.registerPreviewTemplate("aboutusstory", AboutUSStoryPreview);
+
 
 CMS.registerPreviewStyle("https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css");
 CMS.registerPreviewStyle("/css/cms.css");

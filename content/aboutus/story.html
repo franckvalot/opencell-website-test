@@ -1,13 +1,52 @@
+
 <!DOCTYPE html>
+{{ $Data := .Site.Data.aboutus.story }}
 <html>
   {{ partial "head.html" . }}
   <body>
     {{ partial "header/navBar.html" . }}
-    {{ partial "header/smallheader.html" . }}
-    {{ partial "story/ourstory.html" . }}
-    {{ partial "logos.html" (dict "Data" .Site.Data.aboutus.ourinvestors) }}
-    {{ partial "logos.html" (dict "Data" .Site.Data.aboutus.ourpartners) }}
-    {{ partial "story/leadership.html" .Site.Data.aboutus.leadership }}
+    {{ partial "header/smallheader.html" (dict "Data" $Data) }}
+
+    <section class="hero-1">
+      <div class="container">
+        {{ partial "titleanddescription.html" (dict "Data" $Data.ourstory "OwnSection" "false") }}
+        <div class="row justify-content-center">
+          {{ range $index, $element :=  $Data.ourstory.boxes }}
+          <div class="col-5 col-md-3 col-lg ourstory-box row align-items-center">
+            <div class="col">{{ .content }}</div>
+          </div>
+          {{ if eq $index 2 }}
+          <div class="col-12 d-none d-md-block d-lg-none"></div>
+          {{ end }}
+          {{ end }}
+
+        </div>
+      </div>
+    </section>
+
+    {{ partial "logos.html" (dict "Data" $Data.investors) }}
+    
+    {{ partial "logos.html" (dict "Data" $Data.partners) }}
+
+    <section class="hero-1">
+      <div class="container">
+        <div class="row justify-content-center">
+          <h1 class="col-12 text-center">{{ $Data.leadership.title}}</h1>
+        </div>
+        <div class="row justify-content-center">
+          {{ range $Data.leadership.leaders }}
+          <div class="col-8 col-md-6 col-lg-4 leadership-box text-center">
+            <img src="{{ .url }}" alt="{{ .name }}">
+            <h2>{{ .name | upper }}</h2>
+            <p>{{ .position }}</p>
+          </div>
+          {{ end }}
+        </div>
+      </div>
+    </section>
+
+
+
     {{ partial "sections/getdemo.html" . }}
     {{ partial "sections/mentions.html" . }}
 
