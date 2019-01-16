@@ -434,6 +434,12 @@ function titleanddescription(item){
     )];
 }
 
+function logos(item){
+  return h('section',{className:'hero-1'},
+    h('div', {className:'container'}, '')
+  );
+}
+
 var AboutUSStoryPreview = createClass({
   render: function(){
     var entry = this.props.entry;
