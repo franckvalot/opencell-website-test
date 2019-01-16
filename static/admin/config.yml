@@ -182,3 +182,30 @@ collections:
               - label: Icon
                 name: url
                 widget: image
+      - label: Customers
+        name: customers
+        file: data/aboutus/customers.yml
+        fields:
+          - label: Title
+            name: title
+            widget: string
+          - label: Description
+            name: content
+            widget: string
+          - label: Sections
+            name: sections
+            widget: list
+            fields:
+              - label: Name
+                name: name
+                widget: string
+              - logos: Logos
+                name: logos
+                widget: List
+                fields:
+                  - label: Alternative Text (Name)
+                    name: alt
+                    widget: string
+                  - label: Logo
+                    name: url
+                    widget: image
