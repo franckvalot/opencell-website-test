@@ -433,13 +433,10 @@ var AboutUSStoryPreview = createClass({
     var partnersdata = entry.getIn(['data', 'partners']);
     var leadershipdata = entry.getIn(['data', 'leadership']);
 
-    var boxes = function(item, index){
-
-    }
     alert(entry);
 
     return h('div', {},
-      smallHeader(entry);
+      smallHeader(entry)
     );
 
   }
