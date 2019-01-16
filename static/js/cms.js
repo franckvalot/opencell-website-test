@@ -427,7 +427,7 @@ function smallHeader(item){
 
 var AboutUSStoryPreview = createClass({
   render: function(){
-    var entry = this.props.entry
+    var entry = this.props.entry;
     var ourstorydata = entry.getIn(['data', 'ourstory']);
     var investorsdata = entry.getIn(['data', 'investors']);
     var partnersdata = entry.getIn(['data', 'partners']);
