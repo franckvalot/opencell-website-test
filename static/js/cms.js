@@ -469,7 +469,7 @@ var AboutUSStoryPreview = createClass({
         h('div', {className:'container'},
           titleanddescription(ourstorydata),
           h('div', {className:'row justify-content-center'},
-            ourstorydata.get('boxes']).map(boxes)
+            ourstorydata.get('boxes').map(boxes)
           )
         )
       )
