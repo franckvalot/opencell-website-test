@@ -1,0 +1,12 @@
+<svg id="Groupe_262" data-name="Groupe 262" xmlns="http://www.w3.org/2000/svg" width="59.4" height="46.5" viewBox="0 0 59.4 46.5">
+  <circle id="Ellipse_65" data-name="Ellipse 65" cx="15.2" cy="15.2" r="15.2" transform="translate(29 0)" fill="#d85051" opacity="0.85"/>
+  <path id="Tracé_589" data-name="Tracé 589" d="M50.8,45.5H2a1,1,0,0,1-1-1v-9a1.075,1.075,0,0,1,1-1H50.8a1.075,1.075,0,0,1,1,1v9A1.075,1.075,0,0,1,50.8,45.5Z" fill="none" stroke="#575756" stroke-miterlimit="10" stroke-width="2"/>
+  <path id="Tracé_590" data-name="Tracé 590" d="M50.8,34.5H2a1,1,0,0,1-1-1v-9a1,1,0,0,1,1-1H50.8a1,1,0,0,1,1,1v9A1,1,0,0,1,50.8,34.5Z" fill="none" stroke="#575756" stroke-miterlimit="10" stroke-width="2"/>
+  <path id="Tracé_591" data-name="Tracé 591" d="M50.8,23.5H2a1.075,1.075,0,0,1-1-1v-9a1,1,0,0,1,1-1H50.8a1,1,0,0,1,1,1v9A1,1,0,0,1,50.8,23.5Z" fill="none" stroke="#575756" stroke-miterlimit="10" stroke-width="2"/>
+  <circle id="Ellipse_66" data-name="Ellipse 66" cx="2.4" cy="2.4" r="2.4" transform="translate(6.4 15.7)" fill="#ed6b5d" stroke="#575756" stroke-miterlimit="10" stroke-width="2"/>
+  <circle id="Ellipse_67" data-name="Ellipse 67" cx="2.4" cy="2.4" r="2.4" transform="translate(6.4 26.6)" fill="#ed6b5d" stroke="#575756" stroke-miterlimit="10" stroke-width="2"/>
+  <circle id="Ellipse_68" data-name="Ellipse 68" cx="2.4" cy="2.4" r="2.4" transform="translate(6.4 37.6)" fill="#ed6b5d" stroke="#575756" stroke-miterlimit="10" stroke-width="2"/>
+  <line id="Ligne_81" data-name="Ligne 81" x2="22.2" transform="translate(24.2 18)" fill="none" stroke="#575756" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1.942"/>
+  <line id="Ligne_82" data-name="Ligne 82" x2="22.2" transform="translate(24.2 29)" fill="none" stroke="#575756" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1.942"/>
+  <line id="Ligne_83" data-name="Ligne 83" x2="22.2" transform="translate(24.2 40)" fill="none" stroke="#575756" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1.942"/>
+</svg>

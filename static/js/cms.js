@@ -1,3 +1,19 @@
+var Template = createClass({
+  render: function(){
+
+      return h('section', {className:'hero-1'},
+        h('div',{className:'container'},
+          h('div', {className:'row justify-content-center'},
+            h('h1', {className:'col-12 text-center'}, entry.getIn(['data', 'title']))
+          ),
+          h('div', {className:'row justify-content-center'},
+            "some variables"
+          )
+        )
+      );
+  }
+})
+
 var ParadigmPreview = createClass({
   render: function(){
     var entry = this.props.entry;
@@ -306,6 +322,34 @@ var LeadershipPreview = createClass({
   }
 })
 
+var BusinessModelPreview = createClass({
+  render: function(){
+      var entry = this.props.entry;
+      var boxes = entry.getIn(['data', 'boxes']);
+      var boxe = function(item){
+        return h('div', {className:'h-100 col-7 col-md-5 row justify-content-center text-center businessmodel-box'},
+          h('img', {src:item.get('url'), alt:'icon'}),
+          h('h2', {className:'col-12'}, item.get('title')),
+          h('p', {className:'col-12'}, item.get('description'))
+        )
+      }
+
+      return h('section', {className:'hero-1'},
+        h('div',{className:'container'},
+          h('div', {className:'row justify-content-center'},
+            h('h1', {className:'col-12 text-center'}, entry.getIn(['data', 'title']))
+          ),
+          h('div', {className:'row justify-content-center'},
+            h('div', {className: 'col-10 col-md-8'}, entry.getIn(['data', 'content']))
+          ),
+          h('div', {className:'row justify-content-center'},
+            boxes.map(boxe)
+          )
+        )
+      );
+  }
+})
+
 CMS.registerPreviewTemplate("header", HeaderPreview);
 CMS.registerPreviewTemplate("paradigm", ParadigmPreview);
 CMS.registerPreviewTemplate("whatweprovide", WhatWeProvideView);
@@ -316,6 +360,7 @@ CMS.registerPreviewTemplate("worktogether", WorkTogetherPreview);
 CMS.registerPreviewTemplate("learnmore", LearnMorePreview);
 CMS.registerPreviewTemplate("allpagesmetadatas", AllPagesMetadatas)
 CMS.registerPreviewTemplate("leadership", LeadershipPreview);
+CMS.registerPreviewTemplate("businessmodel", BusinessModelPreview);
 
 CMS.registerPreviewStyle("https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css");
 CMS.registerPreviewStyle("/css/cms.css");

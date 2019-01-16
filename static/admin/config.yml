@@ -159,3 +159,26 @@ collections:
               - label: Photo
                 name: url
                 widget: image
+      - label: Business Model
+        name: businessmodel
+        file: data/aboutus/businessmodel.yml
+        fields:
+          - label: Title
+            name: title
+            widget: string
+          - label: Description
+            name: content
+            widget: string
+          - label: Boxes
+            name: boxes
+            widget: list
+            fields:
+              - label: title
+                name: name
+                widget: string
+              - label: description
+                name: position
+                widget: string
+              - label: Icon
+                name: url
+                widget: image

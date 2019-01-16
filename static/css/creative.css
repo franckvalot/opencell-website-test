@@ -211,6 +211,34 @@ span.h2 {
   color: white;
 }
 
+
+.leadership-box{
+  margin: 10px 0;
+}
+.leadership-box > img {
+  width: inherit;
+  padding: 0 20px;
+}
+.leadership-box > h2{
+  min-height: 0;
+}
+.leadership-box > p{
+  font-size: 16px;
+}
+
+.businessmodel-box {
+  margin: 50px 0;
+  padding: 0 30px;
+  background-color: #F9F9F8;
+}
+.businessmodel-box > img {
+  height: 50px;
+  margin: 20px;
+}
+.businessmodel-box > p {
+  color: #BBB5B5;
+}
+
 .whatmakesus p {
   line-height: 20px;
   height: 100px;
@@ -420,22 +448,6 @@ section.footer li {
   transform: rotate(180deg);
   height: 44px;
   width: 23px;
-}
-
-.leadership{
-  margin: 10px 0;
-}
-
-.leadership > img {
-  width: inherit;
-  padding: 0 20px;
-}
-
-.leadership > h2{
-  min-height: 0;
-}
-.leadership > p{
-  font-size: 16px;
 }
 
 

@@ -1,0 +1,15 @@
+{{if .OwnSection }}
+<section class="hero-1">
+  <div class="container">
+{{ end}}
+<div class="row justify-content-center">
+  <h1 class="col-12 text-center">{{ .Data.title}}</h1>
+</div>
+<div class="row justify-content-center text-center">
+  <div class="col-10 col-md-8">{{ .Data.content | markdownify }}
+  </div>
+</div>
+{{if .OwnSection }}
+  </div>
+</section>
+{{ end}}
