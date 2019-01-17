@@ -9,7 +9,7 @@
 
     <section class="hero-1">
       <div class="container">
-        {{ partial "titleanddescription.html" (dict "Data" $Data.ourstory "OwnSection" "false") }}
+        {{ partial "titleanddescription.html" (dict "Data" $Data.ourstory) }}
         <div class="row justify-content-center">
           {{ range $index, $element :=  $Data.ourstory.boxes }}
           <div class="col-5 col-md-3 col-lg ourstory-box row align-items-center">
@@ -25,7 +25,7 @@
     </section>
 
     {{ partial "logos.html" (dict "Data" $Data.investors) }}
-    
+
     {{ partial "logos.html" (dict "Data" $Data.partners) }}
 
     <section class="hero-1">

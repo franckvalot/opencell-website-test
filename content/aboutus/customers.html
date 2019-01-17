@@ -1,12 +1,19 @@
 <!DOCTYPE html>
+{{ $Data := .Site.Data.aboutus.customers }}
+
 <html>
   {{ partial "head.html" . }}
   <body>
     {{ partial "header/navBar.html" . }}
-    {{ partial "header/smallheader.html" . }}
-    {{ partial "titleanddescription.html" (dict "Data" .Site.Data.aboutus.customers "OwnSection" true) }}
+    {{ partial "header/smallheader.html" (dict "Data" $Data) }}
 
-    {{ range .Site.Data.aboutus.customers.sections }}
+    <section class="hero-1">
+      <div class="container">
+        {{ partial "titleanddescription.html" (dict "Data" $Data.introduction) }}
+      </div>
+    </section>
+
+    {{ range $Data.sections }}
     <section class="hero-1">
       <div class="container">
         <div class="row justify-content-center">

@@ -211,16 +211,19 @@ collections:
               - label: Icon
                 name: url
                 widget: image
-      - label: Customers
-        name: customers
+      - label: About us - Customers
+        name: aboutuscustomers
         file: data/aboutus/customers.yml
         fields:
-          - label: Title
-            name: title
-            widget: string
-          - label: Description
-            name: content
-            widget: string
+          - { label: Title, name: title, widget: string }
+          - { label: Subtitle, name: subtitle, widget: string }
+          - { label: Description, name: description, widget: text, required: false }
+          - label: Introduction paragraph
+            name: introduction
+            widget: object
+            fields:
+              - { label: Title, name: title, widget: string }
+              - { label: Content, name: content, widget: text }
           - label: Sections
             name: sections
             widget: list

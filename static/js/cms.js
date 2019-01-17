@@ -484,29 +484,28 @@ var AboutUSStoryPreview = createClass({
       );
     }
 
-    return h('div', {},
-      smallHeader(entry),
-      h('section', {className:'hero-1'},
-        h('div', {className:'container'},
-          titleanddescription(ourstorydata),
-          h('div', {className:'row justify-content-center'},
-            ourstorydata.get('boxes').map(boxes)
-          )
-        )
-      ),
-      logos(investorsdata),
-      logos(partnersdata),
-      h('section', {className:'hero-1'},
-        h('div', {className:'container'},
-          h('div', {className:'row justify-content-center'},
-            h('h1', {className:'col-12 text-center'}, leadershipdata.get('title'))
-          ),
-          h('div', {className:'row justify-content-center'},
-            leadershipdata.get('leaders').map(leaders)
-          )
+    return [smallHeader(entry),
+    h('section', {className:'hero-1'},
+      h('div', {className:'container'},
+        titleanddescription(ourstorydata),
+        h('div', {className:'row justify-content-center'},
+          ourstorydata.get('boxes').map(boxes)
         )
       )
-    );
+    ),
+    logos(investorsdata),
+    logos(partnersdata),
+    h('section', {className:'hero-1'},
+      h('div', {className:'container'},
+        h('div', {className:'row justify-content-center'},
+          h('h1', {className:'col-12 text-center'}, leadershipdata.get('title'))
+        ),
+        h('div', {className:'row justify-content-center'},
+          leadershipdata.get('leaders').map(leaders)
+        )
+      )
+    )
+    ];
   }
 })
 
@@ -515,7 +514,6 @@ var AboutUsBusinessModelPreview = createClass({
   render: function(){
       var entry = this.props.entry;
       var introductiondata = entry.getIn(['data', 'introduction']);
-
       var boxes = function(item){
         return h('div', {className:'col-8 col-md-5 row justify-content-center text-center businessmodel-box'},
           h('img', {src:item.get('url'), alt:'icon'}),
@@ -524,17 +522,66 @@ var AboutUsBusinessModelPreview = createClass({
         )
       }
 
-      return h('div', {},
-        smallHeader(entry),
-        h('section', {className:'hero-1'},
-          h('div', {className:'container'},
-            titleanddescription(introductiondata),
-            h('div', {className:'row justify-content-center'},
+      return [smallHeader(entry),
+      h('section', {className:'hero-1'},
+        h('div', {className:'container'},
+          titleanddescription(introductiondata)
+        )
+      ),
+      h('section', {className:'hero-1'},
+        h('div', {className:'container'},
+          h('div', {className:'row justify-content-center'},
               entry.getIn(['data', 'boxes']).map(boxes)
+          )
+        )
+      )
+      ];
+  }
+})
+
+var AboutUsCustomersPreview = createClass({
+  render: function(){
+      var entry = this.props.entry;
+      var introductiondata = entry.getIn(['data', 'introduction']);
+
+      var logos = function(item){
+        return h('div', {className:'col-6 col-md-6 col-lg-4'},
+          h('img', {className:'img-fluid', src: item.get('url'), alt: item.get('alt')})
+        );
+      }
+
+      var logoslist = function(item){
+          return h('li',{}, h('h2', {}, item.get('alt')));
+      }
+
+      var sections = function(item){
+        return h('section', {className:'hero-1'},
+          h('div', {className:'container'},
+            h('div', {className:'row justify-content-center'},
+              h('div', {className:'col-12 col-md-4 col-lg-3'},
+                h('div', {className:'customers-box row align-items-center text-center'},
+                  h('h1', {}, item.get('name'))
+                ),
+                h('ul', {className:'customers-list'},
+                  item.get('logos').map(logoslist)
+                )
+              ),
+              h('div', {className:'col-12 col-md-8 col-lg-9 row align-items-center customers-logos'},
+                item.get('logos').map(logos)
+              )
             )
           )
         )
-      );
+      }
+
+      return [smallHeader(entry),
+      h('section', {className:'hero-1'},
+        h('div', {className:'container'},
+          titleanddescription(introductiondata),
+        )
+      ),
+      entry.getIn(['data', 'sections']).map(sections)
+      ];
   }
 })
 
@@ -556,6 +603,7 @@ CMS.registerPreviewTemplate("pressreleases", PressReleasesPreview);
 */
 CMS.registerPreviewTemplate("aboutusstory", AboutUSStoryPreview);
 CMS.registerPreviewTemplate("aboutusbusinessmodel", AboutUsBusinessModelPreview);
+CMS.registerPreviewTemplate("aboutuscustomers", AboutUsCustomersPreview);
 
 
 CMS.registerPreviewStyle("https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css");
