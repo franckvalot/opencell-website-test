@@ -530,7 +530,7 @@ var AboutUsBusinessModelPreview = createClass({
           h('div', {className:'container'},
             titleanddescription(introductiondata),
             h('div', {className:'row justify-content-center'},
-              entry.get('boxes').map(boxes)
+              entry.getIn(['data', 'boxes']).map(boxes)
             )
           )
         )
