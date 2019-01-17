@@ -462,7 +462,7 @@ var AboutUSStoryPreview = createClass({
     var leadershipdata = entry.getIn(['data', 'leadership']);
 
     var boxes = function(item, index){
-      if(index == 2){
+      if(index%3==0){
         return [h('div', {className:'col-5 col-md-3 col-lg ourstory-box row align-items-center'},
           h('div', {className:'col'}, item.get('content'))
         ),
@@ -510,6 +510,33 @@ var AboutUSStoryPreview = createClass({
   }
 })
 
+
+var BusinessModelPreview = createClass({
+  render: function(){
+      var entry = this.props.entry;
+      var introductiondata = entry.getIn(['data', 'introduction']);
+
+      var boxes = function(item){
+        return h('div', {className:'col-8 col-md-5 row justify-content-center text-center businessmodel-box'},
+          h('img', {src:item.get('url'), alt:'icon'}),
+          h('h2', {className:'col-12'}, item.get('title')),
+          h('p', {className:'col-12'}, item.get('description'))
+        )
+      }
+
+      return h('div', {},
+        smallHeader(entry),
+        h('section', {className:'hero-1'},
+          h('div', {className:'container'},
+            titleanddescription(introductiondata),
+            h('div', {className:'row justify-content-center'},
+              entry.get('boxes').map(boxes)
+            )
+          )
+        )
+      );
+  }
+})
 /*
 CMS.registerPreviewTemplate("header", HeaderPreview);
 CMS.registerPreviewTemplate("paradigm", ParadigmPreview);

@@ -185,16 +185,19 @@ collections:
                   - { label: Name, name: name, widget: string }
                   - { label: Position, name: position, widget: string }
                   - { label: Photo, name: url, widget: image }
-      - label: Business Model
-        name: businessmodel
+      - label: About us - Business Model
+        name: aboutusbusinessmodel
         file: data/aboutus/businessmodel.yml
         fields:
-          - label: Title
-            name: title
-            widget: string
-          - label: Description
-            name: content
-            widget: string
+          - { label: Title, name: title, widget: string }
+          - { label: Subtitle, name: subtitle, widget: string }
+          - { label: Description, name: description, widget: text, required: false }
+          - label: Introduction paragraph
+            name: introduction
+            widget: object
+            fields:
+              - { label: Title, name: title, widget: string }
+              - { label: Content, name: content, widget: text }
           - label: Boxes
             name: boxes
             widget: list
