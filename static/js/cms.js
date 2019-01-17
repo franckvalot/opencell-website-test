@@ -432,14 +432,10 @@ function titleanddescription(item){
     h('div', {className:'row justify-content-center text-center'},
       h('div', {className:'col-10 col-md-8'}, item.get('content'))
     ),
-    (item.get('img') != null ?
-    [h('div', {className:'w-100'},''),
+    if(item.get('img') != null ) [h('div', {className:'w-100'},''),
     h('div', {className:'col'},
       h('img', {className:'img-fluid', src: item.get('img').get('url'), alt:item.get('img').get('alt')})
     )]
-    ,
-    null
-    )
   ];
 }
 
