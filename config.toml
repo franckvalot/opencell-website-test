@@ -3,7 +3,6 @@ languageCode = "en-us"
 title = "Opencellsoft"
 
 [params]
-
   [params.navbar]
     [params.navbar.url]
       platform   = "#"
@@ -17,4 +16,7 @@ title = "Opencellsoft"
       customers = "/aboutus/customers/"
       partners = "/aboutus/partners/"
       workplaceAndJobs = "/aboutus/workplaceandjobs/"
+    [params.url]
+      getInTouch  = "#"
+      getDemo  = "#"
   adminUrl = "/admin"

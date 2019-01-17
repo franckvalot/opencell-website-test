@@ -192,6 +192,7 @@ section h2, span.h2 {
   font-size: 14px;
   line-height: 20px;
   margin-top: 10px;
+  letter-spacing: 2px;
 }
 
 span.h2 {
@@ -284,7 +285,7 @@ span.h2 {
 .customers-logos {
   margin-left: -30px;
   background-color:#F9F9F8;
-  padding: 30px;
+  padding: 8%;
   z-index: 0;
 }
 .customers-logos img {
@@ -356,7 +357,7 @@ section {
 
 @media(min-width:1024px) {
   section {
-    padding: 5vh 0;
+    padding: 8vh 0;
   }
 }
 

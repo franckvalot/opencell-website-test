@@ -228,8 +228,32 @@ collections:
             name: sections
             widget: list
             fields:
-              - label: Name
-                name: name
+              - label: Title
+                name: title
+                widget: string
+              - logos: Logos
+                name: logos
+                widget: list
+                fields:
+                  - label: Alternative Text (Name)
+                    name: alt
+                    widget: string
+                  - label: Logo
+                    name: url
+                    widget: image
+      - label: About us - Partners
+        name: aboutuspartners
+        file: data/aboutus/partners.yml
+        fields:
+          - { label: Title, name: title, widget: string }
+          - { label: Subtitle, name: subtitle, widget: string }
+          - { label: Description, name: description, widget: text, required: false }
+          - label: Sections
+            name: sections
+            widget: list
+            fields:
+              - label: Title
+                name: title
                 widget: string
               - logos: Logos
                 name: logos

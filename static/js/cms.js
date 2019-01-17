@@ -509,7 +509,6 @@ var AboutUSStoryPreview = createClass({
   }
 })
 
-
 var AboutUsBusinessModelPreview = createClass({
   render: function(){
       var entry = this.props.entry;
@@ -586,6 +585,21 @@ var AboutUsCustomersPreview = createClass({
 })
 
 
+var AboutUsParnersPreview = createClass({
+  render: function(){
+      var entry = this.props.entry;
+
+      var sections = function(item){
+          return logos(item);
+      }
+
+      return [smallHeader(entry),
+      entry.getIn(['data', 'sections']).map(sections)
+      ];
+  }
+})
+
+
 /*
 CMS.registerPreviewTemplate("header", HeaderPreview);
 CMS.registerPreviewTemplate("paradigm", ParadigmPreview);
@@ -604,6 +618,7 @@ CMS.registerPreviewTemplate("pressreleases", PressReleasesPreview);
 CMS.registerPreviewTemplate("aboutusstory", AboutUSStoryPreview);
 CMS.registerPreviewTemplate("aboutusbusinessmodel", AboutUsBusinessModelPreview);
 CMS.registerPreviewTemplate("aboutuscustomers", AboutUsCustomersPreview);
+CMS.registerPreviewTemplate("aboutuspartners", AboutUsParnersPreview);
 
 
 CMS.registerPreviewStyle("https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css");
