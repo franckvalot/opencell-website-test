@@ -479,6 +479,20 @@ section.get-demo div{
 section.job-offer{
   min-height: 40vh;
 }
+section.job-offer h1, section.job-offer h2 {
+  font-size: inherit;
+  padding: 0;
+  margin: 0;
+}
+section.job-offer h1{
+  font-size: 25px;
+}
+section.job-offer h2{
+  font-size: 20px;
+}
+.job-offer .opencell-btn{
+  margin: 50px 10px;
+}
 
 button.get-demo {
   font-size: 50px;

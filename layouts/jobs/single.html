@@ -8,21 +8,21 @@
 
     <section class="job-offer">
       <div class="container">
-        <div class="row text-right">
-          <div class="col">
+        <div class="row justify-content-center text-right">
+          <div class="col-11 col-md-10 col-lg-8">
             <span>Published Date: </span><span>{{ dateFormat "02 Jan 2006" .Date }}</span>
           </div>
         </div>
-        <div class="row">
-          <p class="col-12">
-            <span>Job Title: </span><span>{{.Title}}</span>
-          </p>
-          <div class="col-12">
-            <div>Job Description: </div>
+        <div class="row justify-content-center">
+          <p class="col-11 col-md-10 col-lg-8">
+          <div class="col-11 col-md-10 col-lg-8">
             {{ .Content | markdownify }}
           </div>
         </div>
         <div class="row justify-content-center text-center">
+          <form action="mailto:jobs@opencellsoft.com?subject=Applying for {{ .Title }} &body=Concerns the following offer: {{ .Permalink }}" method="get">
+            <button class="opencell-btn" type="submit" name="button">Apply for this offer now</button>
+          </form>
           <form action="/{{ .Section }}" method="get">
             <button class="opencell-btn" type="submit" name="button">Back to job offers</button>
           </form>
