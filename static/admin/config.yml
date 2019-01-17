@@ -265,13 +265,8 @@ collections:
     folder: content/jobs
     create: true
     fields:
-      - label: Articles
-        name: articles
-        widget: list
-        fields:
-          - { label: Month of release, name: month, widget: string }
-          - { label: "Publish Date", name: "date", widget: "datetime" }
-          - { label: "Featured Image", name: "thumbnail", widget: "image" }
-          - { label: Short description, name: description, widget: string }
-          - { label: "Title", name: "title", widget: "string" }
-          - { label: "Body", name: "body", widget: "markdown" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Featured Image", name: "thumbnail", widget: "image" }
+      - { label: Short description, name: description, widget: string }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Body", name: "body", widget: "markdown" }
