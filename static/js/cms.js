@@ -511,7 +511,7 @@ var AboutUSStoryPreview = createClass({
 })
 
 
-var BusinessModelPreview = createClass({
+var AboutUsBusinessModelPreview = createClass({
   render: function(){
       var entry = this.props.entry;
       var introductiondata = entry.getIn(['data', 'introduction']);
@@ -553,6 +553,7 @@ CMS.registerPreviewTemplate("customers", CustomersPreview);
 CMS.registerPreviewTemplate("pressreleases", PressReleasesPreview);
 */
 CMS.registerPreviewTemplate("aboutusstory", AboutUSStoryPreview);
+CMS.registerPreviewTemplate("aboutusbusinessmodel", AboutUsBusinessModelPreview);
 
 
 CMS.registerPreviewStyle("https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css");
