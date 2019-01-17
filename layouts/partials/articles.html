@@ -1,0 +1,24 @@
+<section class="hero-1">
+  <div class="container">
+    <div class="row justify-content-center">
+      {{range .Data.articles }}
+      <div class="col-10 col-md-6 col-lg-4 row align-items-center justify-content-center">
+        <div class="col-12 row align-items-center justify-content-center article-box">
+          <div class="date">
+            <h2>{{ .month }}</h2>
+            <p>{{ .year }}</p>
+          </div>
+          <div class="col-12 row align-items-center justify-content-center description">
+            <div class="col-10 row justify-content-center text-center">
+              {{ .description | markdownify }}
+              <form action="{{ .url }}" method="get">
+                <button class="opencell-btn" type="submit" name="button">{{ .button }}</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</section>

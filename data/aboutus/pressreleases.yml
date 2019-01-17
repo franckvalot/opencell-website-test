@@ -1,3 +1,6 @@
+title: We want to do things differently.
+subtitle: Bringing agility and simplicity to enterprise B2B software.
+description:
 articles:
   - month: Jan
     year: 2018
@@ -5,15 +8,18 @@ articles:
       Opencell Software raises 650 k €
       in seed funding to accelerate development […]
     url: '#'
+    button: READ
   - month: Fev
     year: 2018
     description: >-
       Opencell Software raises 650 k €
       in seed funding to accelerate development […]
     url: '#'
+    button: READ
   - month: Mars
     year: 2018
     description: >-
       Opencell Software raises 650 k €
       in seed funding to accelerate development […]
     url: '#'
+    button: READ

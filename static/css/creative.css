@@ -308,10 +308,10 @@ span.h2 {
   }
 }
 
-.pressreleases-box{
+.article-box{
   margin: 20px 0;
 }
-.pressreleases-box .date {
+.article-box .date {
   position: relative;
   z-index: 10;
   background-color: #EB5048;
@@ -320,19 +320,19 @@ span.h2 {
   width: 120px;
   padding: 20px 0;
 }
-.pressreleases-box .date > h2, .pressreleases-box .date > p {
+.article-box .date > h2, .article-box .date > p {
   color: inherit;
   min-height: 0;
   font-size: 16px;
 }
-.pressreleases-box .description {
+.article-box .description {
   background-color: #F9F9F8;
   min-height: 300px;
   color: black;
   padding: 80px 0 30px 0;
   margin-top: -50px;
 }
-.pressreleases-box .opencell-btn {
+.article-box .opencell-btn {
   margin-top: 20px;
 }
 

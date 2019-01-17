@@ -241,27 +241,37 @@ collections:
                   - label: Logo
                     name: url
                     widget: image
-      - label: About us - Partners
-        name: aboutuspartners
-        file: data/aboutus/partners.yml
+      - label: About us - Workplace & jobs
+        name: aboutusworkplaceandjobs
+        file: data/aboutus/workplaceandjobs.yml
         fields:
           - { label: Title, name: title, widget: string }
           - { label: Subtitle, name: subtitle, widget: string }
           - { label: Description, name: description, widget: text, required: false }
-          - label: Sections
-            name: sections
-            widget: list
+          - label: Introduction paragraph
+            name: introduction
+            widget: object
             fields:
-              - label: Title
-                name: title
-                widget: string
-              - logos: Logos
-                name: logos
-                widget: list
+              - { label: Title, name: title, widget: string }
+              - { label: Content, name: content, widget: text }
+              - label: Image
+                name: img
+                widget: object
                 fields:
-                  - label: Alternative Text (Name)
-                    name: alt
-                    widget: string
-                  - label: Logo
-                    name: url
-                    widget: image
+                  - { label: Image, name: url, widget: image }
+                  - { label: Alternative Text, name: alt, widget: string }
+  - label: Job offers
+    name: joboffers
+    folder: content/jobs
+    create: true
+    fields:
+      - label: Articles
+        name: articles
+        widget: list
+        fields:
+          - { label: Month of release, name: month, widget: string }
+          - { label: "Publish Date", name: "date", widget: "datetime" }
+          - { label: "Featured Image", name: "thumbnail", widget: "image" }
+          - { label: Short description, name: description, widget: string }
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Body", name: "body", widget: "markdown" }
