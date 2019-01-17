@@ -476,6 +476,10 @@ section.get-demo div{
   margin-right: 0;
 }
 
+section.job-offer{
+  min-height: 40vh;
+}
+
 button.get-demo {
   font-size: 50px;
   line-height: 50px;
