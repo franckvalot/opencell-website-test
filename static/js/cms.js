@@ -606,9 +606,9 @@ var AboutUsParnersPreview = createClass({
   }
 })
 
-var JobsOffersPreview = createClass(){
-
-}
+// var JobsOffersPreview = createClass(){
+//
+// }
 /*
 CMS.registerPreviewTemplate("header", HeaderPreview);
 CMS.registerPreviewTemplate("paradigm", ParadigmPreview);
