@@ -1,16 +1,18 @@
     <section class="hero-1">
       <div class="container">
+        {{if .Title }}
         <div class="row justify-content-center">
-          <h1 class="col-12 text-center">What makes us</h1>
+          <h1 class="col-12 text-center">{{.Title}}</h1>
         </div>
-        <div class="row justify-content-center whatmakesus text-center">
-          {{ range .Site.Data.indexpage.whatmakesus.columns}}
-          <div class="col-8 col-md-4">
-            <div class="title-box text-center">{{ .title }}</div>
+        {{end}}
+        <div class="row justify-content-center whatmakesus-box text-center">
+          {{ range .Data.columns}}
+          <div class="col-12 col-md-4">
+            <div class="title-box text-center">{{ .title | safeHTML }}</div>
             {{ range .content }}
             <div>
-              <h2>{{ .title }}</h2>
-              <p>{{ .text }}</p>
+              {{if .title }}<h2>{{ .title }}</h2>{{end}}
+              {{if .text }}<p>{{ .text }}</p>{{end}}
             </div>
             {{ end }}
           </div>

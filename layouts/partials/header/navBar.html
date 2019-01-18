@@ -6,15 +6,24 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="{{ .Site.Params.navbar.url.platform }}">PLATFORM</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="{{ .Site.Params.navbar.url.solution }}">SOLUTION</a>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="{{ .Site.Params.navbar.url.platform }}" id="navbarDropdownPlatform" role="button">PLATFORM</a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdownPlatform">
+                <a class="dropdown-item" href="{{ .Site.Params.navbar.url.modules }}">Modules</a>
+                <a class="dropdown-item" href="{{ .Site.Params.navbar.url.technology }}">Technology</a>
+                <a class="dropdown-item" href="{{ .Site.Params.navbar.url.ecosystem }}">Ecosystem</a>
+              </div>
             </li>
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="{{ .Site.Params.navbar.url.aboutus }}" id="navbarDropdown" role="button">ABOUT US</a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="nav-link dropdown-toggle" href="{{ .Site.Params.navbar.url.solution }}" id="navbarDropdownSolution" role="button">SOLUTION</a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdownSolution">
+                <a class="dropdown-item" href="{{ .Site.Params.navbar.url.byindustry }}">By industry</a>
+                <a class="dropdown-item" href="{{ .Site.Params.navbar.url.byrole }}">By role</a>
+              </div>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="{{ .Site.Params.navbar.url.aboutus }}" id="navbarDropdownAboutus" role="button">ABOUT US</a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdownAboutus">
                 <a class="dropdown-item" href="{{ .Site.Params.navbar.url.story }}">Story</a>
                 <a class="dropdown-item" href="{{ .Site.Params.navbar.url.businessModel }}">Business model</a>
                 <a class="dropdown-item" href="{{ .Site.Params.navbar.url.customers }}">Customers</a>

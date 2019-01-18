@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+{{ $Data := .Site.Data.solution.byindustry }}
+<html>
+  {{ partial "head.html" . }}
+  <body>
+    {{ partial "header/navBar.html" . }}
+    {{ partial "header/smallheader.html" (dict "Data" $Data) }}
+
+
+    <section class="hero-1 industries-box">
+      <div class="container">
+        <div class="text-center">
+          {{ range $Data.industries }}
+            <h2 class="navigation">
+              <a href="#{{ anchorize .nav }}">{{ .nav }}</a>
+            </h2>
+          {{ end }}
+      </div>
+    </section>
+
+    {{ range $Data.industries }}
+    <section class="hero-1 industries-box" >
+      <div class="container">
+        <a class="anchor" id="{{ anchorize .nav }}"></a>
+        <div class="row justify-content-center">
+          <h1 class="col text-center">{{ .title }}</h1>
+          <div class="w-100"></div>
+          <div class="col-10 col-md-8 col-lg-6 embed-responsive embed-responsive-16by9 video">
+            <iframe class="youtube" src="https://www.youtube.com/embed/{{ .videoid }}?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <div class="col-10 row justify-content-center content">
+            {{ range .contents }}
+            <div class="col-10 col-md">
+              <h2>{{ .title }}</h2>
+              <p>{{ .content }}</p>
+            </div>
+            {{ end }}
+            <div class="w-100"></div>
+            <form action="{{ .Site.Params.url.getInTouch }}" method="get">
+              <button type="submit" name="button" class="opencell-btn">DISCOVER</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    {{ end }}
+
+    {{ partial "sections/getdemo.html" . }}
+    {{ partial "sections/mentions.html" . }}
+
+    {{ partial "script.html" }}
+  </body>
+</html>

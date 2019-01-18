@@ -6,7 +6,7 @@
     {{ partial "header/header.html" . }}
     {{ partial "sections/paradigm.html" . }}
     {{ partial "sections/provide.html" . }}
-    {{ partial "sections/whatmakesus.html" . }}
+    {{ partial "sections/whatmakesus.html" (dict "Title" "What makes us" "Data" .Site.Data.indexpage.whatmakesus) }}
     {{ partial "sections/mainindustries.html" . }}
     {{ partial "logos.html" (dict "Data" .Site.Data.indexpage.ourcustomers "IsHome" .IsHome) }}
     {{ partial "sections/worktogether.html" . }}

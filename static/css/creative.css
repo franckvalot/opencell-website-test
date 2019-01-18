@@ -28,7 +28,7 @@
 }
 
 .nav-item {
-  margin-left: 15px;
+  margin-left: 12px;
 }
 
 .navbar-collapse {
@@ -81,11 +81,9 @@ html, body {
 body {
   font-family: "GT-Walsheim-Thin";
   font-size: 20px;
+  color: #4B4B4B;
 }
 
-header.hero, header.small_header, .indus-telco, .indus-energy, .indus-mobility, .indus-retail, .leadership {
-  text-align: center;
-}
 
 header.hero {
   position: relative;
@@ -102,7 +100,7 @@ header.hero {
   background-color: #DD594E;background-repeat: no-repeat !important;
 }
 
-header.small_header{
+header.small-header{
   width: 100%;
   height: 40vh;
   min-height: 40vh;
@@ -116,7 +114,9 @@ header.small_header{
   background-color: #DD594E;background-repeat: no-repeat !important;
 }
 
-header .header-content-inner, header .header-content-inner > div {
+header .header-content-inner,
+header .header-content-inner .container,
+header .header-content-inner .container > div {
   height: inherit;
 }
 
@@ -124,14 +124,14 @@ header .header-content-inner h1 {
     margin: auto;
     text-transform: none;
     font-family: "Noe-Display-Black";
-    font-size: 26px;
-    line-height: 34px;
+    font-size: 30px;
+    line-height: 40px;
     font-weight: 500;
     padding-bottom: 20px;
 }
 
 header .header-content-inner p {
-    font-size: 16px;
+    font-size: 20px;
     font-weight: 300;
 }
 
@@ -155,15 +155,13 @@ header .carousel {
     header .header-content-inner h1 {
         margin: auto;
         text-transform: none;
-        font-size: 4vw;
-        line-height: 5.2vw;
-        font-weight: 500;
+        font-size: 50px;
+        line-height: 60px;
         padding-bottom: 20px;
     }
 
     header .header-content-inner p {
-        font-size: 2.4vw;
-        font-weight: 300;
+        font-size: 25px;
     }
 }
 
@@ -175,30 +173,43 @@ header .carousel {
 section h1 {
   color: #5A5A5A;
   font-family: 'Noe-Display-Black';
-  font-weight: black;
   text-transform: none;
-  font-size: 50px;
-  line-height: 50px;
-  padding: 0 0 4vw 0;
+  font-size: 30px;
+  line-height: 40px;
+  margin: 0 0 30px 0;
 }
 
 section h2, span.h2 {
-  font-family: 'GT-Walsheim-Bold';
-  color: black;
+  font-family: 'GT-Walsheim-Regular';
+  color: #4B4B4B;
   min-height: 40px;
   font-weight: bold;
   text-transform: none;
   vertical-align: middle;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 20px;
   margin-top: 10px;
   letter-spacing: 2px;
+}
+
+@media(min-width:1024px) {
+  section h1 {
+      font-size: 40px;
+      line-height: 45px;
+      margin: 0 0 50px 0;
+  }
 }
 
 span.h2 {
   margin-top: -20px;
 }
 
+.anchor{
+  display: block;
+  position: relative;
+  top: -100px;
+  visibility: hidden;
+}
 .title-box {
   background-color: #EB5048;
   font-family: 'GT-Walsheim-Regular';
@@ -208,9 +219,10 @@ span.h2 {
   margin-bottom: 25px;
   border: 0;
   text-transform: none;
-  font-size: 22px;
+  font-size: 16px;
   letter-spacing: 5px;
 }
+
 
 .ourstory-box {
   background-color: #EB5048;
@@ -236,17 +248,106 @@ span.h2 {
   font-size: 16px;
 }
 
-.businessmodel-box {
+.businessmodel-box, .platformtechnology-box {
   margin: 10px;
-  padding: 40px 20px;
+  padding: 60px 20px;
   background-color: #F9F9F8;
 }
-.businessmodel-box > img {
+.businessmodel-box > img{
   height: 50px;
   margin: 20px;
 }
-.businessmodel-box > p {
+.businessmodel-box > p, {
   color: #BBB5B5;
+}
+.platformtechnology-box > p{
+  color: #5A5A5A;
+}
+.platformtechnology-box > h1 {
+  margin: inherit;
+}
+.platformtechnology-box > hr {
+  border-top: 2px solid black;
+  margin: 25px 0;
+}
+
+
+.roles-box h2.navigation,
+.industries-box h2.navigation
+{
+  min-height: 0;
+  display: inline-block;
+}
+.roles-box h2.navigation a,
+.industries-box h2.navigation a
+{
+  color: inherit;
+}
+.roles-box h2.navigation a:hover ,
+.industries-box h2.navigation a:hover,
+.navbar-light .navbar-nav .nav-link:focus,
+.navbar-light .navbar-nav .nav-link:hover,
+.dropdown-item:focus, .dropdown-item:hover
+{
+  color: #EF6155;
+  text-decoration: none;
+}
+.roles-box .navigation:after,
+.industries-box .navigation:after {
+  content: "/";
+  margin: 0 20px;
+}
+.roles-box .navigation:last-child:after,
+.industries-box .navigation:last-child:after {
+  content: "";
+  margin: 0;
+}
+
+
+section.roles-box .content {
+  position: relative;
+  background-color: #F9F9F8;
+  margin: -20% 0 0 0;
+  padding: calc(20% + 20px) 20px 20px 20px;
+  z-index: 0;
+}
+section.roles-box .img {
+  position: relative;
+  margin: inherit;
+  z-index: 10;
+}
+@media(min-width:768px) {
+  section.roles-box:nth-child(odd) .content {
+    background-color: #F9F9F8;
+    margin: 0 0 0 -25%;
+    z-index: 0;
+    padding: 20px 20px 20px calc(25% + 20px);
+  }
+  section.roles-box:nth-child(odd) .img {
+    margin-top: 50px;
+    z-index: 10;
+  }
+  section.roles-box:nth-child(even) .content  {
+    background-color: #F9F9F8;
+    margin: 0 -25% 0 0;
+    z-index: 0;
+    padding: 20px calc(25% + 20px) 20px 20px;
+  }
+  section.roles-box:nth-child(even) .img  {
+    order: 13;
+    margin-top: 50px;
+    z-index: 10;
+  }
+}
+
+section.industries-box .video {
+  position: relative;
+  z-index: 10;
+}
+section.industries-box .content {
+  background-color: #F9F9F8;
+  padding: calc(20px + 100px) 20px 20px 20px;
+  margin-top: -100px;
 }
 
 .customers-box {
@@ -336,28 +437,54 @@ span.h2 {
   margin-top: 20px;
 }
 
-
-
-.whatmakesus p {
-  line-height: 20px;
-  height: 100px;
-}
-
 .hero-1 {
   background-color: white;
 }
 
 .hero-2 {
-  background-color: white;
+  background-color: #F8F8F8;
+}
+
+.businesslogic h1 {
+  margin: 0 0 20px 0;
+}
+.businesslogic h2 {
+  color: #707070;
+  font-family: 'GT-Walsheim-Regular';
+  font-weight: normal;
+}
+.businesslogic > div{
+  margin: 30px 0;
+}
+.technologies{
+  margin: 0 0 auto 0;
+}
+.technologies .img img {
+  height: 60px;
+}
+.technologies .description {
+  height: auto;
+  margin: 10px 0 20px 0;
 }
 
 section {
-  padding: 3vh 0;
+  padding: 30px 0;
 }
 
 @media(min-width:1024px) {
   section {
-    padding: 8vh 0;
+    padding: 50px 0;
+  }
+}
+
+.whatmakesus-box p {
+  line-height: 30px;
+  min-height: 90px;
+}
+
+@media(min-width:768px) {
+  .whatmakesus-box p {
+    min-height: 120px;
   }
 }
 
@@ -366,13 +493,13 @@ section {
     height: 40px;
   }
 
-  .whatmakesus p {
-    min-height: 100px;
+  .whatmakesus-box p {
+    min-height: 90px;
   }
 }
 
 .indus-telco, .indus-energy, .indus-mobility, .indus-retail {
-  font-family: 'GT-Walsheim-Bold';
+  font-family: 'GT-Walsheim-Regular';
   font-size: 22px;
   line-height: 44px;
   font-weight: bold;
@@ -454,7 +581,8 @@ section {
 }
 
 .testimonials .author {
-  font-family: 'GT-Walsheim-Bold';
+  font-family: 'GT-Walsheim-Regular';
+  font-weight: bold;
   font-size: 15px;
 }
 
