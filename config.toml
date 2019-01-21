@@ -5,9 +5,9 @@ title = "Opencellsoft"
 [params]
   [params.navbar]
     [params.navbar.url]
-      platform   = "#"
-      solution    = "#"
-      support     = "#"
+      platform   = "/platform/modules/"
+      solution    = "/solution/byindustry/"
+      support     = "/support/"
       getADemo    = "#"
       logIn       = "/admin"
       aboutUs     = "/aboutus/pressreleases/"
@@ -16,12 +16,18 @@ title = "Opencellsoft"
       customers = "/aboutus/customers/"
       partners = "/aboutus/partners/"
       workplaceAndJobs = "/aboutus/workplaceandjobs/"
-      byindustry = "/solution/byindustry/"
-      byrole = "/solution/byrole/"
+      byIndustry = "/solution/byindustry/"
+      byRole = "/solution/byrole/"
       modules = "/platform/modules/"
       technology = "/platform/technology/"
       ecosystem = "/platform/ecosystem/"
-  adminUrl = "/admin"
+  [params.resources]
+    [params.resources.url]
+      video = "/video/"
+      webinar = "/webinar/"
+      blog = "/blog/"
+
   [params.url]
     getInTouch  = "#"
     getDemo  = "#"
+    contact = "/contact/"

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  {{ partial "head.html" . }}
+  <body>
+    {{ partial "header/navBar.html" . }}
+
+    <section class="blog">
+      <div class="container">
+        <div class="row justify-content-center">
+          {{ range .Pages }}
+          <div class="col-12 col-md-10 col-lg-8">
+            <a href="{{ .URL }}">{{ .Title }}</a>
+          </div>
+          {{ end }}
+        </div>
+    </section>
+
+
+    {{ partial "sections/getdemo.html" . }}
+    {{ partial "sections/mentions.html" . }}
+
+    {{ partial "script.html" }}
+  </body>
+</html>
