@@ -8,7 +8,7 @@
         <div id="carouselTestimonials" class="carousel slide" data-ride="carousel">
           <ol class="carousel-indicators">
             {{ range $index, $element := .Site.Data.indexpage.header.carousel }}
-            <li data-target="#carouselTestimonials" data-slide-to="{{ add $index 1 }}" {{if eq $index 0}}class="active"{{end}}></li>
+            <li data-target="#carouselTestimonials" data-slide-to="{{$index}}" {{if eq $index 0}}class="active"{{end}}></li>
             {{end}}
           </ol>
           <div class="carousel-inner testimonials">
