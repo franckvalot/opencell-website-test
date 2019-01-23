@@ -1,3 +1,10 @@
+.row-no-margin {
+   margin-left: 0;
+   margin-right: 0;
+   padding-left: 0;
+   padding-right: 0;
+}
+
 .navbar {
   font-family: 'GT-Walsheim-Regular';
   font-size: 14px;
@@ -63,6 +70,7 @@
 }
 
 .opencell-btn {
+  cursor: pointer;
   background-color: #DD594E;
   color: white;
   padding: 7px 20PX;
@@ -519,6 +527,22 @@ input, textarea{
     margin: auto 15px;
     border-radius: 5px;
     background-color: #EC6156;
+}
+
+.blog .tags {
+  height: 100%;
+  background-color: #F9F9F8;
+  padding: 20px;
+}
+.blog .tags .active{
+  color: #EF6155;
+}
+.blog .list {
+  margin-top: 30px;
+}
+
+.blog .list button {
+  margin-top: 20px;
 }
 
 .article-box{
