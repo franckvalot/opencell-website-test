@@ -2,6 +2,7 @@
 layout: workplaceandjobs
 title: We want to do things differently.
 subtitle: Bringing agility and simplicity to enterprise B2B software.
+description:
 introduction:
   title: Introduction
   content: >-
