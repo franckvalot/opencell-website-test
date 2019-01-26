@@ -474,6 +474,18 @@ collections:
         field:
           -  {label: Tag, name: tag, widget: string}
       - {label: Thumbnail, name: thumbnail, widget: image}
+  - label: "Jobs"
+    name: "jobs"
+    folder: "content/jobs"
+    create: true
+    fields:
+      - {label: Title, name: title, widget: string}
+      - {label: Subtitle, name: subtitle, widget: string}
+      - {label: Description, name: description, widget: text}
+      - {label: Date, name: date, widget: date}
+      - {label: Button, name: button, widget: string}
+      - {label: Thumbnail, name: thumbnail, widget: image}
+      - {label: Body, name: body, widget: markdown}
   - label: "Metadatas"
     name: "metadatas"
     files:
