@@ -109,6 +109,25 @@ collections:
               fields:
                 - {label: "Video Id", name: "videoId", widget: string}
         - {label: Markdown, name: body, widget: hidden}
+      - label: About Us
+        name: aboutus
+        files:
+          - label: Press Releases (About us main page)
+            name: pressreleases
+            file: content/aboutus/pressreleases.md
+            fields:
+              - {label: Layout, name: layout, widget: hidden, default: pressreleases}
+              - {label: Title, name: title, widget: string}
+              - {label: Subtitle, name: subtitle, widget: string}
+              - {label: Description, name: description, widget: string}
+              - label: Articles
+                name: articles
+                widget: list
+                fields:
+                  - {label: Date of release, name: date, widget: date}
+                  - {label: Description, name: description, widget: string}
+                  - {label: Article Link, name: url, widget: string}
+                  - {label: Button, name: button, widget: string, default: READ}
   - label: "Metadatas"
     name: "metadatas"
     files:
