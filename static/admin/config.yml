@@ -197,6 +197,123 @@ collections:
                   - {label: Alternative, name: alt, widget: string}
                   - {label: Description, name: description, widget: text}
           - {label: Markdown, name: body, widget: hidden}
+  - label: Solution
+    name: solution
+    files:
+      - label: By Industry
+        name: solutionbyindustry
+        file: content/solution/byindustry.md
+        fields:
+          - {label: Layout, name: layout, widget: hidden, default: byindustry}
+          - {label: Title, name: title, widget: string}
+          - {label: Subtitle, name: subtitle, widget: string}
+          - {label: Description, name: description, widget: text}
+          - label: Industries
+            name: industries
+            widget: list
+            fields:
+              - {label: Title, name: title, widget: string}
+              - {label: Navigation title, name: nav, widget: string}
+              - {label: Video Id, name: videoId, widget: string}
+              - label: Contents
+                name: contents
+                widget: list
+                fields:
+                  - {label: Title, name: title, widget: string}
+                  - {label: Content, name: content, widget: text}
+          - {label: Markdown, name: body, widget: hidden}
+      - label: By Role
+        name: solutionbyrole
+        file: content/solution/byindustry.md
+        fields:
+          - {label: Layout, name: layout, widget: hidden, default: byrole}
+          - {label: Title, name: title, widget: string}
+          - {label: Subtitle, name: subtitle, widget: string}
+          - {label: Description, name: description, widget: text}
+          - label: Roles
+            name: roles
+            widget: list
+            fields:
+              - {label: Title, name: title, widget: string}
+              - {label: Navigation title, name: nav, widget: string}
+              - {label: Image, name: url, widget: image}
+              - {label: Background, name: background, widget: text}
+              - label: Benefits
+                name: benefits
+                widget: list
+                fields:
+                  - {label: Benefit, name: benefit, widget: text}
+          - {label: Markdown, name: body, widget: hidden}
+      - label: Technology
+        name: platformtechnology
+        file: content/platform/technology.md
+        fields:
+          - {label: Layout, name: layout, widget: hidden, default: technology}
+          - {label: Title, name: title, widget: string}
+          - {label: Subtitle, name: subtitle, widget: string}
+          - {label: Description, name: description, widget: text}
+          - label: Text 1
+            name: text1
+            widget: object
+            fields:
+              - {label: Title, name: title, widget: string}
+              - {label: Content, name: content, widget: text}
+          - label: Boxes
+            name: boxes
+            widget: list
+            fields:
+              - {label: Title, name: title, widget: string}
+              - {label: Description, name: description, widget: text}
+          - label: Text 2
+            name: text2
+            widget: object
+            fields:
+              - {label: Title, name: title, widget: string}
+              - {label: Content, name: content, widget: text}
+          - label: Columns
+            name: columns
+            widget: list
+            fields:
+              - {label: Title, name: title, widget: string}
+              - label: Content
+                name: content
+                widget: list
+                fields:
+                  - {label: Text, name: text, widget: text}
+          - label: Business Logic
+            name: businesslogic
+            widget: object
+            fields:
+              - {label: Image, name: url, widget: image}
+              - {label: Alternative, name: alt, widget: string}
+              - label: Sections
+                name: sections
+                widget: list
+                fields:
+                  - {label: Title, name: title, widget: string}
+                  - label: Subtitles
+                    name: subtitles
+                    widget: list
+                    fields:
+                      - {label: Subtitle, name: subtitle, widget: string}
+          - label: Technologies
+            name: technologies
+            widget: object
+            fields:
+              - label: Introduction
+                name: introduction
+                widget: object
+                fields:
+                  - {label: Title, name: title, widget: string}
+                  - {label: Content, name: content, widget: text}
+              - label: Technologies
+                name: technologies
+                widget: list
+                fields:
+                  - {label: Icon, name: url, widget: image}
+                  - {label: Alternative, name: alt, widget: string}
+                  - {label: Description, name: description, widget: text}
+          - {label: Markdown, name: body, widget: hidden}
   - label: About Us
     name: aboutus
     files:

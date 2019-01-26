@@ -7,12 +7,7 @@ subtitle: >-
 industries:
   - title: Utilities
     nav: UTILITIES
-    videoid: Bey4XXJAqS8
-    background: >-
-      Maria is the marketing VP of XX …She’s managing a lot of offers
-      and often needs to do trials for limited time and/or geographic areas.
-      She’s fed up with her current system that requires heavy involvement
-      from IT everytime she needs to release a new offer.
+    videoId: Bey4XXJAqS8
     contents:
       - title: CRITICAL FEATURES
         content: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -25,12 +20,7 @@ industries:
           Efficitur facilisis est et lacinia.
   - title: Health
     nav: Health
-    videoid: xcJtL7QggTI
-    background: >-
-      Maria is the marketing VP of XX …She’s managing a lot of offers
-      and often needs to do trials for limited time and/or geographic areas.
-      She’s fed up with her current system that requires heavy involvement
-      from IT everytime she needs to release a new offer.
+    videoId: xcJtL7QggTI
     contents:
       - title: CRITICAL FEATURES
         content: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
