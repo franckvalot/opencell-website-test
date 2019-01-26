@@ -1,18 +1,18 @@
     <section class="hero">
       <div class="container">
         <div class="row justify-content-center text-center">
-          <h1 class="col-12">We work together</h1>
+          <h1 class="col-12">{{ .title }}</h1>
           <div class="w-100"></div>
           <h2 class="col-12 col-md-8 col-lg-6">TESTIMONIALS</h2>
         </div>
         <div id="carouselTestimonials" class="carousel slide" data-ride="carousel">
           <ol class="carousel-indicators">
-            {{ range $index, $element := .Site.Data.indexpage.header.carousel }}
+            {{ range $index, $element := .testimonials }}
             <li data-target="#carouselTestimonials" data-slide-to="{{$index}}" {{if eq $index 0}}class="active"{{end}}></li>
             {{end}}
           </ol>
           <div class="carousel-inner testimonials">
-            {{ range $index, $element := .Site.Data.indexpage.worktogether.testimonials }}
+            {{ range $index, $element := .testimonials }}
             <div class="carousel-item {{if eq $index 0}}active{{end}}">
               <div class="row justify-content-center align-items-center">
                 <div class="col-10 col-md-8 col-lg-6">

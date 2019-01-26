@@ -1,3 +1,5 @@
+---
+layout: technology
 title: Powerful and scalable.
 subtitle: We use the latest open source technologies.
 description:
@@ -97,3 +99,4 @@ technologies:
     - url: /img/uploads/techno_react.png
       alt: React
       description: Improving User eXperience using React and Bootstrap
+---

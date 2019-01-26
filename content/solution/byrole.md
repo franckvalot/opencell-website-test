@@ -1,3 +1,5 @@
+---
+layout: byrole
 title: Play as a team.
 subtitle: >-
   Our monetization platform keeps your entire organization
@@ -29,3 +31,4 @@ roles:
       - benefit: Iterate your offers using our marketing manager.
       - benefit: Analyze retention strategies.
       - benefit: Segment your pricing.
+---

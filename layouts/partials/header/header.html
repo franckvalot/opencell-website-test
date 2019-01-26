@@ -2,12 +2,12 @@
       <div class="header-content-inner">
         <div id="carouselHeader" class="carousel slide row align-items-center" data-ride="carousel">
           <ol class="carousel-indicators">
-            {{ range $index, $element := .Site.Data.indexpage.header.carousel }}
+            {{ range $index, $element := .carousel }}
             <li data-target="#carouselHeader" data-slide-to="{{$index}}" {{if eq $index 0}}class="active"{{end}}></li>
             {{end}}
           </ol>
           <div class="carousel-inner">
-            {{ range $index, $element := .Site.Data.indexpage.header.carousel }}
+            {{ range $index, $element := .carousel }}
             <div class="carousel-item {{if eq $index 0}}active{{end}}">
                 <h1>{{ $element.title | safeHTML }}</h1>
                 <p>{{ $element.subtitle }}</p>

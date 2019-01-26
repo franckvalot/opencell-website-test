@@ -1,23 +1,23 @@
     <section class="hero">
       <div class="container">
         <div class="row justify-content-center">
-          <h1 class="col-12 text-center">Our main industries.</h1>
+          <h1 class="col-12 text-center">{{ .title }}</h1>
           <div class="w-100"></div>
-          <h2 class="col-12 col-md-8 col-lg-6">{{ .Site.Data.indexpage.mainindustries.subtitle }}</h2>
+          <h2 class="col-12 col-md-8 col-lg-6">{{ .subtitle }}</h2>
         </div>
         <div class="row justify-content-center text-center">
           <div class="col-8 col-md-5 col-lg-4 indus-telco">
-            {{ .Site.Data.indexpage.mainindustries.block1 | safeHTML}}
+            {{ .block1 | safeHTML}}
           </div>
           <div class="col-8 col-md-5 col-lg-4 indus-energy">
-            {{ .Site.Data.indexpage.mainindustries.block2 | safeHTML }}
+            {{ .block2 | safeHTML }}
           </div>
           <div class="w-100"></div>
           <div class="col-8 col-md-5 col-lg-4 indus-mobility">
-            {{ .Site.Data.indexpage.mainindustries.block3 | safeHTML }}
+            {{ .block3 | safeHTML }}
           </div>
           <div class="col-8 col-md-5 col-lg-4 indus-retail">
-            {{ .Site.Data.indexpage.mainindustries.block4 | safeHTML }}
+            {{ .block4 | safeHTML }}
           </div>
         </div>
       </div>

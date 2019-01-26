@@ -1,3 +1,5 @@
+---
+layout: workplaceandjobs
 title: We want to do things differently.
 subtitle: Bringing agility and simplicity to enterprise B2B software.
 introduction:
@@ -9,3 +11,4 @@ introduction:
   img:
     url: /img/uploads/img_workplace.jpg
     alt: Workplace
+---

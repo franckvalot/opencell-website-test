@@ -231,7 +231,6 @@ span.h2 {
 
 .ourstory-box {
   background-color: #EB5048;
-  border: 10px solid white;
   height: 140px;
   margin: 10px 0;
   font-size: 18px;
@@ -258,20 +257,20 @@ span.h2 {
   padding: 60px 20px;
   background-color: #F9F9F8;
 }
-.businessmodel-box > img{
+.businessmodel-box img{
   height: 50px;
   margin: 20px;
 }
-.businessmodel-box > p, {
+.businessmodel-box p {
   color: #BBB5B5;
 }
-.platformtechnology-box > p{
+.platformtechnology-box > div > p{
   color: #5A5A5A;
 }
-.platformtechnology-box > h1 {
+.platformtechnology-box > div > h1 {
   margin: inherit;
 }
-.platformtechnology-box > hr {
+.platformtechnology-box > div > hr {
   border-top: 2px solid black;
   margin: 25px 0;
 }
@@ -371,6 +370,9 @@ section.contact .content{
   z-index: 0;
   padding: 5% calc(9% + 20px) 5% 5%;
 }
+section.contact .info > div{
+  height: 100%;
+}
 section.contact .info{
   position: relative;
   color: white;
@@ -420,6 +422,7 @@ input, textarea{
   color: white;
   width: 100%;
   padding: 0;
+  margin: 0;
   font-size: 40px;
   line-height: 40px;
 }
@@ -442,13 +445,16 @@ input, textarea{
   max-width: 80%;
 }
 .customers-logos {
-  margin-left: -30px;
+  margin-left: -9%;
   background-color:#F9F9F8;
-  padding: 8%;
+  padding: 6% 6% 6% calc(6% + 9%);
   z-index: 0;
 }
+.customers-logos > div {
+  height: 100%;
+}
 .customers-logos img {
-  padding: 30px;
+  padding: 8%;
 }
 @media(min-width:768px) {
   .customers-box {
@@ -530,7 +536,6 @@ input, textarea{
 }
 
 .blog .tags {
-  height: 100%;
   background-color: #F9F9F8;
   padding: 20px;
 }
@@ -540,7 +545,11 @@ input, textarea{
 .blog .list {
   margin-top: 30px;
 }
-
+.blog .list .thumbnail,
+.blog .list a {
+  height: 100%;
+  width: 100%;
+}
 .blog .list button {
   margin-top: 20px;
 }

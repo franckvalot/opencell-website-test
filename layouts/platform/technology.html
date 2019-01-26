@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-{{ $Data := .Site.Data.platform.technology }}
+{{ $Data := .Params }}
 <html>
   {{ partial "head.html" . }}
   <body>
@@ -15,10 +15,12 @@
       <div class="container">
         <div class="row justify-content-center">
           {{ range $Data.boxes }}
-          <div class="col-8 col-md-5 row justify-content-center text-center platformtechnology-box">
-            <h1 class="col-12">{{ .title }}</h1>
-            <hr class="col-2">
-            <p class="col-12">{{ .description }}</p>
+          <div class="col-8 col-md-5 text-center platformtechnology-box">
+            <div class="row justify-content-center">
+              <h1 class="col-12">{{ .title }}</h1>
+              <hr class="col-2">
+              <p class="col-12">{{ .description }}</p>
+            </div>
           </div>
           {{ end }}
         </div>

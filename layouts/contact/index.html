@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+{{ $Data := .Params }}
+<html>
+  {{ partial "head.html" }}
+  <body>
+    {{ partial "header/navBar.html" . }}
+    {{ partial "header/smallheader.html" (dict "Data" $Data )}}
+
+    <section class="hero-1 contact">
+      <div class="container">
+        <div class="row justify-content-center">
+          <form class="col-12 col-md-9 content" action="#" method="POST">
+            <div class="row">
+              {{ with $Data.form }}
+              <h1 class="col-12">{{ .title }}</h1>
+              <div class="col-12">
+                <div>{{ .firstname }} :</div>
+                <input type="text" name="firstname" value="">
+              </div>
+              <div class="col-12">
+                <div>{{ .lastname }} :</div>
+                <input type="text" name="lastname" value="">
+              </div>
+              <div class="col-12">
+                <div>{{ .email }} :</div>
+                <input type="email" name="email" value="">
+              </div>
+              <div class="col-12">
+                <div>{{ .message }} :</div>
+                <textarea type="text" name="message" value=""></textarea>
+              </div>
+              <div class="col-12 text-right">
+                <button type="submit" name="button" class="opencell-btn">SEND</button>
+              </div>
+            </div>
+          </form>
+          <div class="col-12 col-md-4 text-center info">
+            <div class="row align-items-center justify-content-center">
+              {{ range .infoBox }}
+              <p class="col-12">{{ .paragraph | safeHTML }}</p>
+              {{ end }}
+            </div>
+          </div>
+        {{ end }}
+        </div>
+      </div>
+    </section>
+
+
+    {{ partial "sections/getdemo.html" . }}
+    {{ partial "sections/mentions.html" . }}
+    {{ partial "script.html" }}
+  </body>
+</html>

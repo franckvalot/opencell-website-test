@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-{{ $Data := .Site.Data.aboutus.partners }}
+{{ $Data := .Params }}
 
 <html>
   {{ partial "head.html" . }}
@@ -24,7 +24,7 @@
       </div>
     </section>
 
-    {{ partial "sections/worktogether.html" . }}
+    {{ partial "sections/worktogether.html" (.Site.GetPage "_index.md").Params.worktogether }}
     {{ partial "sections/getdemo.html" . }}
     {{ partial "sections/mentions.html" . }}
 

@@ -1,8 +1,8 @@
   <head>
     <meta charset="UTF-8">
     {{ range .Site.Data.metadatas.allpages.metadatas }}
-      <meta name="{{ .name }}" content="{{ .content }}">
-    {{ end }}
+    <meta name="{{ .name }}" content="{{ .content }}">{{ end }}
+
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <link rel="preconnect" href="https://opencellsoft.com/">

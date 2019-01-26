@@ -1,3 +1,5 @@
+---
+layout: businessmodel
 title: We want to do things differently.
 subtitle: Bringing agility and simplicity to enterprise B2B software.
 description:
@@ -56,3 +58,4 @@ boxes:
       We guarantee 99.95% availability and manage version upgrades.
     title: HOSTING SERVICES
     url: /img/uploads/bm_hostingservices.svg
+---

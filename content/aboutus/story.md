@@ -1,3 +1,5 @@
+---
+layout: story
 title: We want to do things differently.
 subtitle: Bringing agility and simplicity to enterprise B2B software.
 description:
@@ -51,3 +53,4 @@ leadership:
   - name: EMMANUEL PIERRE
     position: Product Manager
     url: /img/uploads/portrait6.jpg
+---

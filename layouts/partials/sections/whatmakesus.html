@@ -1,12 +1,10 @@
     <section class="hero-1">
       <div class="container">
-        {{if .Title }}
         <div class="row justify-content-center">
-          <h1 class="col-12 text-center">{{.Title}}</h1>
+          <h1 class="col-12 text-center">{{ .title }}</h1>
         </div>
-        {{end}}
         <div class="row justify-content-center whatmakesus-box text-center">
-          {{ range .Data.columns}}
+          {{ range .columns}}
           <div class="col-12 col-md-4">
             <div class="title-box text-center">{{ .title | safeHTML }}</div>
             {{ range .content }}

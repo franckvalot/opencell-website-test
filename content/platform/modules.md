@@ -1,3 +1,5 @@
+---
+layout: modules
 title: No business is the same.
 subtitle: Our monetization platform adapts to your needs.
 description:
@@ -24,3 +26,4 @@ modules:
       such as activation and termination charges,
       subscription events and usage charges.
       Charging can be done to postpaid and prepaid wallets.
+---

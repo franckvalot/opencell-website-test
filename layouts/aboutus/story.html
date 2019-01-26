@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-{{ $Data := .Site.Data.aboutus.story }}
+{{ $Data := .Params }}
 <html>
   {{ partial "head.html" . }}
   <body>
@@ -9,10 +9,12 @@
     <section class="hero-1">
       <div class="container">
         {{ partial "titleanddescription.html" (dict "Data" $Data.ourstory) }}
-        <div class="row justify-content-center">
+        <div class="row align-items-center justify-content-center">
           {{ range $index, $element :=  $Data.ourstory.boxes }}
-          <div class="col-5 col-md-3 col-lg ourstory-box row align-items-center">
-            <div class="col">{{ .content }}</div>
+          <div class="col-5 col-md-3 col-lg">
+            <div class="row align-items-center justify-content-center ourstory-box">
+              <div class="col-11">{{ .content }}</div>
+            </div>
           </div>
           {{ if eq $index 2 }}
           <div class="col-12 d-none d-md-block d-lg-none"></div>

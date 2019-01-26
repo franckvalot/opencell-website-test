@@ -9,10 +9,10 @@
         <img src="{{ .url }}" class="img-fluid" alt="{{ .alt }}">
       </div>
       {{ end }}
-    {{ if .IsHome }}
+    {{ if .Data.button }}
     <div class="row align-items-center justify-content-center text-center">
       <div class="col">
-        <button type="button" name="button" class="opencell-btn">DISCOVER OUR CUSTOMERS</button>
+        <button type="button" name="button" class="opencell-btn">{{ .Data.button }}</button>
       </div>
     </div>
     {{ end }}

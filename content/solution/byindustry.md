@@ -1,3 +1,5 @@
+---
+layout: byindustry
 title: We have the right solution for your industry.
 subtitle: >-
   We provide the rich functionality and configurability
@@ -39,3 +41,4 @@ industries:
       - title: ADDITIONAL RESOURCES
         content: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
           Efficitur facilisis est et lacinia.
+---

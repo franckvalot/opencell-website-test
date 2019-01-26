@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-{{ $Data := .Site.Data.aboutus.customers }}
-
+{{ $Data := .Params }}
 <html>
   {{ partial "head.html" . }}
   <body>
@@ -17,8 +16,8 @@
     <section class="hero-1">
       <div class="container">
         <div class="row justify-content-center">
-          <div class="col-12 col-md-4 col-lg-3">
-            <div class="customers-box row align-items-center text-center">
+          <div class="col-12 col-md-5 col-lg-4">
+            <div class="row align-items-center text-center customers-box">
               <h1>{{ .title }}</h1>
             </div>
             <ul class="customers-list">
@@ -27,12 +26,14 @@
               {{ end }}
             </ul>
           </div>
-          <div class="col-12 col-md-8 col-lg-9 row align-items-center customers-logos">
-            {{ range .logos }}
-            <div class="col-6 col-md-6 col-lg-4">
-              <img src="{{ .url }}" class="img-fluid" alt="{{ .alt }}">
+          <div class="col-12 col-md-8 col-lg-9 customers-logos">
+            <div class="row align-items-center align-items-center">
+              {{ range .logos }}
+              <div class="col-6 col-md-6 col-lg-4">
+                <img src="{{ .url }}" class="img-fluid" alt="{{ .alt }}">
+              </div>
+              {{ end }}
             </div>
-            {{ end }}
           </div>
         </div>
       </div>

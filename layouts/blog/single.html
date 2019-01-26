@@ -32,24 +32,28 @@
           <h1 class="col-12">Also read</h1>
           {{ end }}
           {{ if le ($Scratch.Get "nb") 3 }}
-            <div class="col-7 col-md-4 row justify-content-center">
-              <div class="col-11 thumbnail" style="background-image: url('{{.Params.thumbnail}}');"></div>
-              <div class="w-100"></div>
-              <div class="col-11 row justify-content-center description">
-                <h2 class="col">{{ .Title | upper }}</h2>
+            <div class="col-7 col-md-4">
+              <div class="row justify-content-center">
+                <div class="col-11 thumbnail" style="background-image: url('{{.Params.thumbnail}}');"></div>
                 <div class="w-100"></div>
-                <div class="col">
-                  {{ truncate 50 (index (split (index (split .Content "<p>") 1 ) "</p>") 0) }}
+                <div class="col-11 description">
+                  <div class="row justify-content-center">
+                    <h2 class="col">{{ .Title | upper }}</h2>
+                    <div class="w-100"></div>
+                    <div class="col">
+                      {{ truncate 55 (index (split (index (split .Content "<p>") 1 ) "</p>") 0) }}
+                    </div>
+                    <div class="w-100"></div>
+                    <h2 class="col">
+                      <span class="author">BY {{ index (split .Params.author " ") 0 | upper }}</span>
+                      <span class="date">- {{ dateFormat "02/06" .Date}}</span>
+                    </h2>
+                    <div class="w-100"></div>
+                    <form class="col" action="{{ .URL }}" method="get">
+                      <button type="submit" name="button" class="opencell-btn">READ</button>
+                    </form>
+                  </div>
                 </div>
-                <div class="w-100"></div>
-                <h2 class="col">
-                  <span class="author">BY {{ index (split .Params.author " ") 0 | upper }}</span>
-                  <span class="date">- {{ dateFormat "02/06" .Date}}</span>
-                </h2>
-                <div class="w-100"></div>
-                <form class="col" action="{{ .URL }}" method="get">
-                  <button type="submit" name="button" class="opencell-btn">READ</button>
-                </form>
               </div>
             </div>
           {{ end }}

@@ -1,4 +1,6 @@
-title: Contact
+---
+layout: contact
+itle: Contact
 subtitle: >-
   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ut ultrices ipsum.
   Duis eu lorem eget nunc varius porta non at lorem.
@@ -22,3 +24,4 @@ form:
         LBA Centre d’affaires<br>
         10 avenue Maréchal Foch<br>
         21 000 Dijon
+---
