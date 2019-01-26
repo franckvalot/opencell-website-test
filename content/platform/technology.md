@@ -44,26 +44,26 @@ text2:
     in your ecosystem very easily with the possibility to extend
     it by implementing your specific requirements using stateless services
 columns:
-  - title: SERVICE<br>AND DATA MAPPER
-    content:
+  - content:
       - text: >-
           Flexibility to choose required services from your Opencell platform
           as wel as the way they will communicate with each other: device/sensor
           usage data, user interfaces, core application, messaging and APIs,
           SSO …
-  - title: BUSINESS<br>LOGIC MODELER
-    content:
+    title: SERVICE<br>AND DATA MAPPER      
+  - content:
       - text: >-
           Possibility to define specific business rules,
           processing logic for each chosen service using Opencell
           available components such as Object modelisation,
           Event mapping, transactions aggregation, workflows and custom scripts
-  - title: USER<br>INTERFACE BUILDER
-    content:
+    title: BUSINESS<br>LOGIC MODELER
+  - content:
       - text: >-
           Creation and maintenance of user friendly screens using
           Opencell Flexible Portal. With multitenant feature,
           you can extend your business model to include B2B as well as B2C streams.
+    title: USER<br>INTERFACE BUILDER            
 businesslogic:
   url: /img/uploads/platform_technology.svg
   alt: Business Logic

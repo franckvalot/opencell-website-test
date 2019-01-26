@@ -109,6 +109,94 @@ collections:
               fields:
                 - {label: "Video Id", name: "videoId", widget: string}
         - {label: Markdown, name: body, widget: hidden}
+  - label: Platform
+    name: platform
+    files:
+      - label: Modules
+        name: platformmodules
+        file: content/platform/modules.md
+        fields:
+          - {label: Layout, name: layout, widget: hidden, default: modules}
+          - {label: Title, name: title, widget: string}
+          - {label: Subtitle, name: subtitle, widget: string}
+          - {label: Description, name: description, widget: text}
+          - label: Modules
+            name: modules
+            widget: list
+            fields:
+              - {label: Title, name: title, widget: string}
+              - {label: Content, name: content, widget: text}
+          - {label: Markdown, name: body, widget: hidden}
+      - label: Technology
+        name: platformtechnology
+        file: content/platform/technology.md
+        fields:
+          - {label: Layout, name: layout, widget: hidden, default: technology}
+          - {label: Title, name: title, widget: string}
+          - {label: Subtitle, name: subtitle, widget: string}
+          - {label: Description, name: description, widget: text}
+          - label: Text 1
+            name: text1
+            widget: object
+            fields:
+              - {label: Title, name: title, widget: string}
+              - {label: Content, name: content, widget: text}
+          - label: Boxes
+            name: boxes
+            widget: list
+            fields:
+              - {label: Title, name: title, widget: string}
+              - {label: Description, name: description, widget: text}
+          - label: Text 2
+            name: text2
+            widget: object
+            fields:
+              - {label: Title, name: title, widget: string}
+              - {label: Content, name: content, widget: text}
+          - label: Columns
+            name: columns
+            widget: list
+            fields:
+              - {label: Title, name: title, widget: string}
+              - label: Content
+                name: content
+                widget: list
+                fields:
+                  - {label: Text, name: text, widget: text}
+          - label: Business Logic
+            name: businesslogic
+            widget: object
+            fields:
+              - {label: Image, name: url, widget: image}
+              - {label: Alternative, name: alt, widget: string}
+              - label: Sections
+                name: sections
+                widget: list
+                fields:
+                  - {label: Title, name: title, widget: string}
+                  - label: Subtitles
+                    name: subtitles
+                    widget: list
+                    fields:
+                      - {label: Subtitle, name: subtitle, widget: string}
+          - label: Technologies
+            name: technologies
+            widget: object
+            fields:
+              - label: Introduction
+                name: introduction
+                widget: object
+                fields:
+                  - {label: Title, name: title, widget: string}
+                  - {label: Content, name: content, widget: text}
+              - label: Technologies
+                name: technologies
+                widget: list
+                fields:
+                  - {label: Icon, name: url, widget: image}
+                  - {label: Alternative, name: alt, widget: string}
+                  - {label: Description, name: description, widget: text}
+          - {label: Markdown, name: body, widget: hidden}
   - label: About Us
     name: aboutus
     files:
@@ -119,13 +207,13 @@ collections:
           - {label: Layout, name: layout, widget: hidden, default: pressreleases}
           - {label: Title, name: title, widget: string}
           - {label: Subtitle, name: subtitle, widget: string}
-          - {label: Description, name: description, widget: string}
+          - {label: Description, name: description, widget: text}
           - label: Articles
             name: articles
             widget: list
             fields:
               - {label: Date of release, name: date, widget: date}
-              - {label: Description, name: description, widget: string}
+              - {label: Description, name: description, widget: text}
               - {label: Article Link, name: url, widget: string}
               - {label: Button, name: button, widget: string, default: READ}
           - {label: Markdown, name: body, widget: hidden}
@@ -202,7 +290,7 @@ collections:
             widget: list
             fields:
               - {label: Title, name: title, widget: string}
-              - {label: Description, name: description, widget: string}
+              - {label: Description, name: description, widget: text}
               - {label: Icon, name: url, widget: image}
           - {label: Markdown, name: body, widget: hidden}
       - label: Customers

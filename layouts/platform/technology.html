@@ -33,8 +33,23 @@
       </div>
     </section>
 
-
-    {{ partial "sections/whatmakesus.html" (dict "Data" $Data ) }}
+    <section class="hero-1">
+      <div class="container">
+        <div class="row justify-content-center whatmakesus-box text-center">
+          {{ range $Data.columns}}
+          <div class="col-12 col-md-4">
+            <div class="title-box text-center">{{ .title | safeHTML }}</div>
+            {{ range .content }}
+            <div>
+              {{if .title }}<h2>{{ .title }}</h2>{{end}}
+              {{if .text }}<p>{{ .text }}</p>{{end}}
+            </div>
+            {{ end }}
+          </div>
+          {{ end }}
+        </div>
+      </div>
+    </section>
 
     <section class="hero-2">
       <div class="container">
