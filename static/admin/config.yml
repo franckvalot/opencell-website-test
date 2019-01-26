@@ -119,7 +119,7 @@ collections:
           - {label: Layout, name: layout, widget: hidden, default: modules}
           - {label: Title, name: title, widget: string}
           - {label: Subtitle, name: subtitle, widget: string}
-          - {label: Description, name: description, widget: text}
+          - {label: Description, name: description, widget: text, required: false}
           - label: Modules
             name: modules
             widget: list
@@ -134,7 +134,7 @@ collections:
           - {label: Layout, name: layout, widget: hidden, default: technology}
           - {label: Title, name: title, widget: string}
           - {label: Subtitle, name: subtitle, widget: string}
-          - {label: Description, name: description, widget: text}
+          - {label: Description, name: description, widget: text, required: false}
           - label: Text 1
             name: text1
             widget: object
@@ -464,7 +464,7 @@ collections:
     fields:
       - {label: Title, name: title, widget: string}
       - {label: Subtitle, name: subtitle, widget: string}
-      - {label: Description, name: description, widget: text}
+      - {label: Description, name: description, widget: text, required: false}
       - {label: Author, name: author, widget: string}
       - {label: Date, name: date, widget: date}
       - label: Tags
@@ -484,7 +484,7 @@ collections:
       - {label: Description, name: description, widget: text}
       - {label: Date, name: date, widget: date}
       - {label: Button, name: button, widget: string}
-      - {label: Thumbnail, name: thumbnail, widget: image}
+      - {label: Thumbnail, name: thumbnail, widget: image, required: false}
       - {label: Body, name: body, widget: markdown}
   - label: "Metadatas"
     name: "metadatas"
