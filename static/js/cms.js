@@ -137,10 +137,12 @@ var AboutUsBusinessModelPreview = createClass({
       var entry = this.props.entry;
       var introductiondata = entry.getIn(['data', 'introduction']);
       var boxes = function(item){
-        return h('div', {className:'col-8 col-md-5 row justify-content-center text-center businessmodel-box'},
-          h('img', {src:item.get('url'), alt:'icon'}),
-          h('h2', {className:'col-12'}, item.get('title')),
-          h('p', {className:'col-12'}, item.get('description'))
+        return h('div', {className:'col-8 col-md-5 text-center businessmodel-box'},
+          h('div', {className:'row justify-content-center'},
+            h('img', {src:item.get('url'), alt:'icon'}),
+            h('h2', {className:'col-12'}, item.get('title')),
+            h('p', {className:'col-12'}, item.get('description'))
+          )
         )
       }
 
