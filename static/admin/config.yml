@@ -13,11 +13,11 @@ display_url: https://opencell-test.netlify.com/
 logo_url: /img/logo-opencell.svg
 
 collections:
-  - label: Pages
-    name: pages
+  - label: Index
+    name: index
     files:
-      - label: Index
-        name: index
+      - label: Index Data
+        name: indexdata
         file: content/_index.md
         fields:
         - label: Header
