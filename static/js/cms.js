@@ -81,7 +81,7 @@ var AboutUSStoryPreview = createClass({
     var leadershipdata = entry.getIn(['data', 'leadership']);
 
     var boxes = function(item, index){
-      if(index%3==0){
+      if(index%3==0 && index>0){
         return [h('div', {className:'col-5 col-md-3 col-lg'},
           h('div', {className:'row align-items-center justify-content-center ourstory-box'},
             h('div', {className:'col-11'}, item.get('content'))
@@ -91,8 +91,10 @@ var AboutUSStoryPreview = createClass({
         ];
       }
       else{
-        return h('div', {className:'col-5 col-md-3 col-lg ourstory-box row align-items-center'},
-          h('div', {className:'col'}, item.get('content'))
+        return h('div', {className:'col-5 col-md-3 col-lg'},
+          h('div', {className:'row align-items-center justify-content-center ourstory-box'},
+            h('div', {className:'col-11'}, item.get('content'))
+          )
         );
       }
     }
