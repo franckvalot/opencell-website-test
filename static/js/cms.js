@@ -345,6 +345,7 @@ var AboutUsWorkplaceAndJobs = createClass({
 
 
 
+CMS.registerPreviewTemplate("platformtechnology", PlatformTechnologyPreview)
 CMS.registerPreviewTemplate("platformmodules", PlatformModulesPreview)
 CMS.registerPreviewTemplate("aboutusstory", AboutUSStoryPreview);
 CMS.registerPreviewTemplate("aboutusbusinessmodel", AboutUsBusinessModelPreview);
