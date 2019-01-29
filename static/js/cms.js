@@ -20,8 +20,8 @@ function smallHeader(item){
         h('div', {className:'container'},
           h('div', {className:'row align-items-center justify-content-center'},
             h('div', {className:'col col-md-10 col-lg-8'},
-              h('h1', {}, item.get('title')),
-              h('p', {}, item.get('subtitle'))
+              h('h1', {}, item.getIn(['data', 'title'])),
+              h('p', {}, item.getIn(['data', 'subtitle']))
             )
           )
         )
@@ -169,7 +169,7 @@ var AboutUsCustomersPreview = createClass({
       var introductiondata = entry.getIn(['data', 'introduction']);
 
       var logos = function(item){
-        return h('div', {className:'col-6 col-md-6 col-lg-4'},
+        return h('div', {className:'col-6 col-lg-4'},
           h('img', {className:'img-fluid', src: item.get('url'), alt: item.get('alt')})
         );
       }
@@ -182,16 +182,18 @@ var AboutUsCustomersPreview = createClass({
         return h('section', {className:'hero-1'},
           h('div', {className:'container'},
             h('div', {className:'row justify-content-center'},
-              h('div', {className:'col-12 col-md-4 col-lg-3'},
-                h('div', {className:'customers-box row align-items-center text-center'},
-                  h('h1', {}, item.get('name'))
+              h('div', {className:'col-12 col-md-5 col-lg-4'},
+                h('div', {className:'row align-items-center text-center customers-box'},
+                  h('h1', {}, item.get('title'))
                 ),
                 h('ul', {className:'customers-list'},
                   item.get('logos').map(logoslist)
                 )
               ),
-              h('div', {className:'col-12 col-md-8 col-lg-9 row align-items-center customers-logos'},
-                item.get('logos').map(logos)
+              h('div', {className:'col-12 col-md-8 col-lg-9 customers-logos'},
+                h('div', {className:'row align-items-center align-items-center'},
+                  item.get('logos').map(logos)
+                )
               )
             )
           )
