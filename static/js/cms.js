@@ -135,6 +135,17 @@ var PlatformTechnologyPreview = createClass({
   render: function(){
       var entry = this.props.entry;
       var technologiesdata = entry.getIn(['data', 'technologies']);
+      var boxesdata = entry.getIn(['data', 'boxes']);
+
+      var boxes = function(item){
+        return h('div', {className:'col-8 col-md-5 text-center platformtechnology-box'},
+          h('div', {className:'row justify-content-center'},
+            h('div', {className:'col-12'}, item.get('title')),
+            h('hr', {className:'col-12'},),
+            h('p', {className:'col-12'}, item.get('description'))
+          )
+        )
+      }
 
       return [smallHeader(entry),
       h('section', {className:'hero-1'},
@@ -144,7 +155,9 @@ var PlatformTechnologyPreview = createClass({
       ),
       h('section', {className:'hero-1'},
         h('div', {className:'container'},
-          "Boxes"
+          h('div', {className:'row justify-content-center'}
+            boxesdata.map(boxes)
+          )
         )
       ),
       h('section', {className:'hero-1'},
