@@ -71,13 +71,13 @@ var PlatformModulesPreview = createClass({
       var entry = this.props.entry;
 
       var moduleslist = function(item, index){
-        return h('li', {className:(index == 0 ? 'active' : null), data-target:'#carouselModules', data-slide-to:index},
+        return h('li', {className:(index == 0 ? 'active' : null), 'data-target':'#carouselModules', 'data-slide-to':index},
           h('h2', {}, item.get('title')toUpperCase())
         );
       }
 
       var indicators = function(item, index){
-        return h('li', {className:(index == 0 ? 'active' : null), data-target:'#carouselModules', data-slide-to:index},'');
+        return h('li', {className:(index == 0 ? 'active' : null), 'data-target':'#carouselModules', 'data-slide-to':index},'');
       }
 
       var inner = function(item, index){
@@ -100,25 +100,25 @@ var PlatformModulesPreview = createClass({
               h('div', {className:'col-12 col-md-4 text-center list'},
                 h('div', {className:'row justify-content-center'},
                   h('h1', {className:'col-12'}, 'Modules'),
-                  h('ul', {className:'col-12', data-ride:'carousel'},
+                  h('ul', {className:'col-12', 'data-ride':'carousel'},
                     entry.getIn(['data', 'modules']).map(moduleslist)
                   )
                 )
               ),
               h('div', {className:'col-12 col-md-9 text-left content'},
                 h('div', {className:'row'},
-                  h('div', {className:'carousel slide col', id:'carouselModules', data-ride:'carousel'},
+                  h('div', {className:'carousel slide col', id:'carouselModules', 'data-ride':'carousel'},
                     h('ol', {className:'carousel-indicators'},
                       entry.getIn(['data', 'modules']).map(indicators)
                     ),
                     h('div', {className:'carousel-inner'},
                       entry.getIn(['data', 'modules']).map(inner)
                     ),
-                    h('a', {className:'carousel-control-prev', href:'#carouselModules', role:'button', data-slide:'prev'},
+                    h('a', {className:'carousel-control-prev', href:'#carouselModules', role:'button', 'data-slide':'prev'},
                       h('span', {className:'carousel-control-prev-icon', area-hidden:'true'}, ''),
                       h('span', {className:'sr-only'}, 'Previous')
                     ),
-                    h('a', {className:'carousel-control-next', href:'#carouselModules', role:'button', data-slide:'next'},
+                    h('a', {className:'carousel-control-next', href:'#carouselModules', role:'button', 'data-slide':'next'},
                       h('span', {className:'carousel-control-next-icon', area-hidden:'true'}, ''),
                       h('span', {className:'sr-only'}, 'Next')
                     )
@@ -299,21 +299,6 @@ var AboutUsWorkplaceAndJobs = createClass({
   }
 })
 
-/*
-CMS.registerPreviewTemplate("header", HeaderPreview);
-CMS.registerPreviewTemplate("paradigm", ParadigmPreview);
-CMS.registerPreviewTemplate("whatweprovide", WhatWeProvideView);
-CMS.registerPreviewTemplate("whatmakesus", WhatMakesUsView);
-CMS.registerPreviewTemplate("mainindustries", MainIndustriesPreview);
-CMS.registerPreviewTemplate("ourcustomers", OurCustomersPreview);
-CMS.registerPreviewTemplate("worktogether", WorkTogetherPreview);
-CMS.registerPreviewTemplate("learnmore", LearnMorePreview);
-CMS.registerPreviewTemplate("allpagesmetadatas", AllPagesMetadatas)
-
-CMS.registerPreviewTemplate("businessmodel", BusinessModelPreview);
-CMS.registerPreviewTemplate("customers", CustomersPreview);
-CMS.registerPreviewTemplate("pressreleases", PressReleasesPreview);
-*/
 
 
 CMS.registerPreviewTemplate("platformmodules", PlatformModulesPreview)
