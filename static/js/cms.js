@@ -70,8 +70,7 @@ function HTML(item){
     return {__html: item};
 }
 function innerHTML(item){
-  return dangerouslySetInnerHTML={HTML(item);
-
+  return dangerouslySetInnerHTML={HTML(item)};
 }
 
 var PlatformModulesPreview = createClass({
