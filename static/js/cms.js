@@ -93,7 +93,7 @@ var PlatformModulesPreview = createClass({
         )
       }
       return [smallHeader(entry),
-        h('section', {className:'hero-1'},
+        h('section', {className:'hero-1 modules'},
           h('div', {className:'container'},
             h('div', {className:'row justify-content-center'},
               h('div', {className:'col-12 col-md-4 text-center list'},
