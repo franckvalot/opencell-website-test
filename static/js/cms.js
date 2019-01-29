@@ -131,6 +131,51 @@ var PlatformModulesPreview = createClass({
     }
 })
 
+var PlatformTechnologyPreview = createClass({
+  render: function(){
+      var entry = this.props.entry;
+      var technologiesdata = entry.getIn(['data', 'technologies']);
+
+      return [smallHeader(entry),
+      h('section', {className:'hero-1'},
+        h('div', {className:'container'},
+          titleanddescription(entry.getIn(['data', 'text1']))
+        )
+      ),
+      h('section', {className:'hero-1'},
+        h('div', {className:'container'},
+          "Boxes"
+        )
+      ),
+      h('section', {className:'hero-1'},
+        h('div', {className:'container'},
+          titleanddescription(entry.getIn(['data', 'text2']))
+        )
+      ),
+      h('section', {className:'hero-1'},
+        h('div', {className:'container'},
+          "What makes us"
+        )
+      ),
+      h('section', {className:'hero-1'},
+        h('div', {className:'container'},
+          "Business Logic"
+        )
+      ),
+      h('section', {className:'hero-1'},
+        h('div', {className:'container'},
+          titleanddescription(technologiesdata.get('introduction'))
+        )
+      ),
+      h('section', {className:'hero-1'},
+        h('div', {className:'container'},
+          "Technologies"
+        )
+      )
+      ];
+  }
+})
+
 var AboutUSStoryPreview = createClass({
   render: function(){
     var entry = this.props.entry;
