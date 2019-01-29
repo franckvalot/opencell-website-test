@@ -225,9 +225,16 @@ var AboutUsParnersPreview = createClass({
   }
 })
 
-// var JobsOffersPreview = createClass(){
-//
-// }
+var JobsOffersPreview = createClass(){
+  render: function(){
+      var entry = this.props.entry;
+  
+      return [smallHeader(entry),
+      entry.getIn(['data', 'sections']).map(sections)
+      ];
+  }
+}
+
 /*
 CMS.registerPreviewTemplate("header", HeaderPreview);
 CMS.registerPreviewTemplate("paradigm", ParadigmPreview);
@@ -247,7 +254,7 @@ CMS.registerPreviewTemplate("aboutusstory", AboutUSStoryPreview);
 CMS.registerPreviewTemplate("aboutusbusinessmodel", AboutUsBusinessModelPreview);
 CMS.registerPreviewTemplate("aboutuscustomers", AboutUsCustomersPreview);
 CMS.registerPreviewTemplate("aboutuspartners", AboutUsParnersPreview);
-//CMS.registerPreviewTemplate("jobsoffers", JobsOffersPreview);
+CMS.registerPreviewTemplate("jobsoffers", JobsOffersPreview);
 
 
 CMS.registerPreviewStyle("https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css");
