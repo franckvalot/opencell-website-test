@@ -228,9 +228,13 @@ var AboutUsParnersPreview = createClass({
 var JobsOffersPreview = createClass(){
   render: function(){
       var entry = this.props.entry;
-  
+
       return [smallHeader(entry),
-      entry.getIn(['data', 'sections']).map(sections)
+      h('section', {className:'hero-1'},
+        h('div', {className:'container'},
+          titleanddescription(introductiondata)
+        )
+      )
       ];
   }
 }
