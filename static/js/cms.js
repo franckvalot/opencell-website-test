@@ -226,6 +226,7 @@ var AboutUsParnersPreview = createClass({
 })
 
 var JobsOffersPreview = createClass(){
+var JobsOffersPreview = createClass({
   render: function(){
       var entry = this.props.entry;
 
@@ -237,7 +238,6 @@ var JobsOffersPreview = createClass(){
       )
       ];
   }
-}
 
 /*
 CMS.registerPreviewTemplate("header", HeaderPreview);
