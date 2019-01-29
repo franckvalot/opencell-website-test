@@ -158,11 +158,9 @@ var PlatformTechnologyPreview = createClass({
 
       var columns = function(item){
         return h('div', {className:'col-12 col-md-4'},
-          h('div', {className:'row justify-content-center'},
-            h('div', {className:'title-box text-center', dangerouslySetInnerHTML: {__html: item.get('title')}}),
-            h('div', {className:'col-12'},
-              item.get('content').map(content)
-            )
+          h('div', {className:'title-box text-center', dangerouslySetInnerHTML: {__html: item.get('title')}}),
+          h('div', {className:'col-12'},
+            item.get('content').map(content)
           )
         )
       }
@@ -174,7 +172,7 @@ var PlatformTechnologyPreview = createClass({
       var businesslogic = function(item){
         return h('div', {className:'col-10 col-md-4'},
           h('div', {className:'row'},
-            h('div', {className:'col-12 text-center text-md-left'},
+            h('h1', {className:'col-12 text-center text-md-left'},
               item.get('title')
             ),
             item.get('subtitles').map(subtitles)
