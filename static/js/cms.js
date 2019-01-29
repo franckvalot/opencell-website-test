@@ -115,11 +115,11 @@ var PlatformModulesPreview = createClass({
                       entry.getIn(['data', 'modules']).map(inner)
                     ),
                     h('a', {className:'carousel-control-prev', href:'#carouselModules', role:'button', 'data-slide':'prev'},
-                      h('span', {className:'carousel-control-prev-icon', area-hidden:'true'}, ''),
+                      h('span', {className:'carousel-control-prev-icon', 'area-hidden':'true'}, ''),
                       h('span', {className:'sr-only'}, 'Previous')
                     ),
                     h('a', {className:'carousel-control-next', href:'#carouselModules', role:'button', 'data-slide':'next'},
-                      h('span', {className:'carousel-control-next-icon', area-hidden:'true'}, ''),
+                      h('span', {className:'carousel-control-next-icon', 'area-hidden':'true'}, ''),
                       h('span', {className:'sr-only'}, 'Next')
                     )
                   )
