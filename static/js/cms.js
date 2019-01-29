@@ -185,7 +185,7 @@ var PlatformTechnologyPreview = createClass({
         )
       ),
       h('section', {className:'hero-1'},
-        h('div', {className:'row justify-content-center'}
+        h('div', {className:'row justify-content-center'},
           columsdata.map(columns)
         )
       ),
