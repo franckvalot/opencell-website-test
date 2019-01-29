@@ -202,14 +202,19 @@ var PlatformTechnologyPreview = createClass({
       ),
       h('section', {className:'hero-1'},
         h('div', {className:'container'},
-          h('div', {className:'row justify-content-center'},
+          h('div', {className:'row justify-content-center whatmakesus-box text-center'},
             columsdata.map(columns)
           )
         )
       ),
-      h('section', {className:'hero-1'},
+      h('section', {className:'hero-2'},
         h('div', {className:'container'},
-          businesslogicdata.get('sections').map(businesslogic)
+          h('div', {className:'row align-items-center justify-content-center businesslogic'},
+            h('div', {className:'col-8 col-md-4 order-md-last'},
+              h('img', {className:'img-fluid', src: businesslogicdata.get('url'), alt: businesslogicdata.get('alt')})
+            ),
+            businesslogicdata.get('sections').map(businesslogic)
+          )
         )
       ),
       h('section', {className:'hero-1'},
