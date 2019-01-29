@@ -92,7 +92,6 @@ var PlatformModulesPreview = createClass({
           )
         )
       }
-
       return [smallHeader(entry),
         h('section', {className:'hero-1'},
           h('div', {className:'container'},
@@ -129,7 +128,7 @@ var PlatformModulesPreview = createClass({
           )
         )
       ];
-
+    }
 })
 
 var AboutUSStoryPreview = createClass({
