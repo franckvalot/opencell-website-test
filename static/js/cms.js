@@ -136,13 +136,32 @@ var PlatformTechnologyPreview = createClass({
       var entry = this.props.entry;
       var technologiesdata = entry.getIn(['data', 'technologies']);
       var boxesdata = entry.getIn(['data', 'boxes']);
+      var columsdata = entry.getIn(['data', 'columns']);
 
       var boxes = function(item){
         return h('div', {className:'col-8 col-md-5 text-center platformtechnology-box'},
           h('div', {className:'row justify-content-center'},
             h('div', {className:'col-12'}, item.get('title')),
-            h('hr', {className:'col-12'},),
+            h('hr', {className:'col-2'},),
             h('p', {className:'col-12'}, item.get('description'))
+          )
+        )
+      }
+
+      var content = function(item){
+          return h('div', {},
+            (item.get('title') ? h('h2', {}, item.get('title')) : null),
+            (item.get('text') ? h('p', {}, item.get('text')) : null)
+          )
+      }
+
+      var columns = function(item){
+        return h('div', {className:'col-12 col-md-4'},
+          h('div', {className:'row justify-content-center'},
+            h('div', {className:'title-box text-center'}, item.get('title')),
+            h('div', {className:'col-12'},
+              item.get('content').map(content)
+            )
           )
         )
       }
@@ -166,8 +185,8 @@ var PlatformTechnologyPreview = createClass({
         )
       ),
       h('section', {className:'hero-1'},
-        h('div', {className:'container'},
-          "What makes us"
+        h('div', {className:'row justify-content-center'}
+          columsdata.map(columns)
         )
       ),
       h('section', {className:'hero-1'},
