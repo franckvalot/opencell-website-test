@@ -221,7 +221,6 @@ var AboutUsParnersPreview = createClass({
 
       return [smallHeader(entry),
       entry.getIn(['data', 'sections']).map(sections)
-        entry.getIn(['data', 'sections']).map(sections)
       ];
   }
 })
