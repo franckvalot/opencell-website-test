@@ -158,7 +158,7 @@ var PlatformTechnologyPreview = createClass({
       var columns = function(item){
         return h('div', {className:'col-12 col-md-4'},
           h('div', {className:'row justify-content-center'},
-            h('div', {className:'title-box text-center'}, item.get('title')),
+            h('div', {className:'title-box text-center', dangerouslySetInnerHTML:item.get('title')}, ),
             h('div', {className:'col-12'},
               item.get('content').map(content)
             )
