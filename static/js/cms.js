@@ -71,13 +71,13 @@ var PlatformModulesPreview = createClass({
       var entry = this.props.entry;
 
       var moduleslist = function(item, index){
-        return h('li', {className:(index == 0 ? 'active' : null), 'data-target':'#carouselModules', 'data-slide-to':index},
-          h('h2', {}, item.get('title')toUpperCase())
+        return h('li', {className:(index == 0 ? 'active' : null), 'data-target':'#carouselModules', 'data-slide-to':'index'},
+          h('h2', {}, item.get('title'))
         );
       }
 
       var indicators = function(item, index){
-        return h('li', {className:(index == 0 ? 'active' : null), 'data-target':'#carouselModules', 'data-slide-to':index},'');
+        return h('li', {className:(index == 0 ? 'active' : null), 'data-target':'#carouselModules', 'data-slide-to':'index'},'');
       }
 
       var inner = function(item, index){
