@@ -142,7 +142,7 @@ var PlatformTechnologyPreview = createClass({
       var boxes = function(item){
         return h('div', {className:'col-8 col-md-5 text-center platformtechnology-box'},
           h('div', {className:'row justify-content-center'},
-            h('div', {className:'col-12'}, item.get('title')),
+            h('h1', {className:'col-12'}, item.get('title')),
             h('hr', {className:'col-2'},),
             h('p', {className:'col-12'}, item.get('description'))
           )
@@ -178,6 +178,18 @@ var PlatformTechnologyPreview = createClass({
             item.get('subtitles').map(subtitles)
           ),
         )
+      }
+
+      var technologies = function(item){
+          return h('div', {className:'col-10 col-md row align-items-center justify-content-center technologies'},
+            h('div', {className:'col text-center img'},
+              h('img', {className:'img-fluid', src: item.get('url'), alt: item.get('alt')})
+            ),
+            h('div', {className:'w-100'},''),
+            h('div', {className:'col text-center description'},
+              item.get('description')
+            )
+          );
       }
 
       return [smallHeader(entry),
@@ -222,7 +234,9 @@ var PlatformTechnologyPreview = createClass({
       ),
       h('section', {className:'hero-1'},
         h('div', {className:'container'},
-          "Technologies"
+          h('div', {className:'row align-items-center justify-content-center'},
+            technologiesdata.map(technologies)
+          )
         )
       )
       ];
