@@ -58,12 +58,13 @@
             <img src="{{ $Data.businesslogic.url }}" class="img-fluid" alt="{{ $Data.businesslogic.alt }}">
           </div>
           {{ range $Data.businesslogic.sections }}
-          <div class="col-10 col-md-4 row">
-            <h1 class="col-12 text-center text-md-left">{{ .title }}</h1>
-            {{ range .subtitles }}
-            <h2 class="col-12 text-center text-md-left"> {{ .subtitle }}</h2>
-
-            {{ end }}
+          <div class="col-10 col-md-4">
+            <div class="row">
+              <h1 class="col-12 text-center text-md-left">{{ .title }}</h1>
+              {{ range .subtitles }}
+              <h2 class="col-12 text-center text-md-left"> {{ .subtitle }}</h2>
+              {{ end }}
+            </div>
           </div>
           {{ end }}
         </div>
