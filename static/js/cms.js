@@ -221,6 +221,7 @@ var AboutUsParnersPreview = createClass({
 
       return [smallHeader(entry),
       entry.getIn(['data', 'sections']).map(sections)
+        entry.getIn(['data', 'sections']).map(sections)
       ];
   }
 })
@@ -232,7 +233,7 @@ var JobsOffersPreview = createClass({
       return [smallHeader(entry),
       h('section', {className:'hero-1'},
         h('div', {className:'container'},
-          titleanddescription(introductiondata)
+          titleanddescription(entry.getIn(['data', 'introduction']))
         )
       )
       ];
