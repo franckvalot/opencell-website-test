@@ -137,7 +137,7 @@ var PlatformTechnologyPreview = createClass({
       var technologiesdata = entry.getIn(['data', 'technologies']);
       var boxesdata = entry.getIn(['data', 'boxes']);
       var columsdata = entry.getIn(['data', 'columns']);
-      var businesslogicdata = entry.getIn(['data', 'sections']);
+      var businesslogicdata = entry.getIn(['data', 'businesslogic']);
 
       var boxes = function(item){
         return h('div', {className:'col-8 col-md-5 text-center platformtechnology-box'},
@@ -209,7 +209,7 @@ var PlatformTechnologyPreview = createClass({
       ),
       h('section', {className:'hero-1'},
         h('div', {className:'container'},
-          businesslogicdata.map(businesslogic)
+          businesslogicdata.get('sections').map(businesslogic)
         )
       ),
       h('section', {className:'hero-1'},
