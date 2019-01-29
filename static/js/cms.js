@@ -235,7 +235,7 @@ var PlatformTechnologyPreview = createClass({
       h('section', {className:'hero-1'},
         h('div', {className:'container'},
           h('div', {className:'row align-items-center justify-content-center'},
-            technologiesdata.map(technologies)
+            technologiesdata.get('technologies').map(technologies)
           )
         )
       )
