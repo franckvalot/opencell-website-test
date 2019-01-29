@@ -518,16 +518,3 @@ collections:
         fields:
         - {label: 'Name', name: 'name', widget: string}
         - {label: 'Content', name: 'content', widget: string}
-
-  - label: Job offers
-    name: joboffers
-    folder: content/jobs
-    create: true
-    fields:
-      - { label: "Publish Date", name: "date", widget: "datetime" }
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Subtitle", name: "subtitle", widget: "string" }
-      - { label: "Featured Image", name: "thumbnail", widget: "image" }
-      - { label: Short description, name: description, widget: string }
-      - { label: Button Name, name: button, widget: string, default: APPLY }
-      - { label: "Body", name: "body", widget: "markdown" }
