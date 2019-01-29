@@ -225,7 +225,7 @@ var AboutUsParnersPreview = createClass({
   }
 })
 
-var JobsOffersPreview = createClass({
+var AboutUsWorkplaceAndJobs = createClass({
   render: function(){
       var entry = this.props.entry;
 
@@ -258,7 +258,7 @@ CMS.registerPreviewTemplate("aboutusstory", AboutUSStoryPreview);
 CMS.registerPreviewTemplate("aboutusbusinessmodel", AboutUsBusinessModelPreview);
 CMS.registerPreviewTemplate("aboutuscustomers", AboutUsCustomersPreview);
 CMS.registerPreviewTemplate("aboutuspartners", AboutUsParnersPreview);
-CMS.registerPreviewTemplate("jobsoffers", JobsOffersPreview);
+CMS.registerPreviewTemplate("aboutusworkplaceandjobs", AboutUsWorkplaceAndJobs);
 
 
 CMS.registerPreviewStyle("https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css");
