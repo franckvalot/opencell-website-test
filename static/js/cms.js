@@ -66,6 +66,35 @@ function logos(item){
   );
 }
 
+var IndexPreview = createClass({
+  render: function(){
+      var entry = this.props.entry;
+      var headerdata = entry.getIn(['data', 'header']);
+
+      var carouselindicator = function(item, index){
+        return h('li', {className:(index == 0 ? 'active', null), 'data-target':'#carouselHeader', 'data-slide-to':index}, '');
+      }
+      var carouselinner = function(item, index){
+
+      }
+      var header = function(item){
+        return h('header', {className:'hero text-center'},
+          h('div', {className:'header-content-inner'},
+            h('div', {className:'carousel slide row align-items-center', id:'carouselHeader', 'data-ride':'carousel'},
+              h('ol', {className:'carousel-indicators'},
+                (item.get('carousel') ? item.get('carousel').map(carouselindicator):null)
+              )
+            )
+          )
+        );
+      }
+
+      return [header(headerdata)
+
+      ];
+  }
+})
+
 var PlatformModulesPreview = createClass({
   render: function(){
       var entry = this.props.entry;
