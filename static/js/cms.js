@@ -271,7 +271,7 @@ var SolutionByIndustryPreview = createClass({
                 h('iframe', {className:'youtube', src:'https://www.youtube.com/embed/' + item.get('videoId') + '?controls=0', frameborder:'0', allow:'accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture', allowfullscreen:'true'}, '')
               ),
               h('div', {className:'col-10 row justify-content-center content'},
-                item.get('contents').map(contents)
+                (item.get('contents') ? item.get('contents').map(contents) : null)
               ),
               h('div', {className:'w-100'}, ''),
               h('form',{},
