@@ -247,11 +247,17 @@ var SolutionByIndustryPreview = createClass({
   render: function(){
     var entry = this.props.entry;
     var industriesdata = entry.getIn(['data', 'industries']);
-    var contentsdata = entry.getIn(['data', 'contents']);
 
     var industriesmenu = function(item){
       return h('h2', {className:'navigation'},
         h('a', {href:'#'}, item.get('nav'))
+      );
+    }
+
+    var contents = function(item){
+      return h('div', {className:'col-10 col-md'},
+        h('h2', {className:''}, item.get('title')),
+        h('p', {className:''}, item.get('content'))
       );
     }
 
@@ -265,7 +271,7 @@ var SolutionByIndustryPreview = createClass({
                 h('iframe', {className:'youtube', src:'https://www.youtube.com/embed/' + item.get('videoId') + '?controls=0', frameborder:'0', allow:'accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture', allowfullscreen:'true'}, '')
               ),
               h('div', {className:'col-10 row justify-content-center content'},
-                contentsdata.map(contents)
+                item.get('contents').map(contents)
               ),
               h('div', {className:'w-100'}, ''),
               h('form',{},
@@ -274,13 +280,6 @@ var SolutionByIndustryPreview = createClass({
             )
           )
         );
-    }
-
-    var contents = function(item){
-      return h('div', {className:'col-10 col-md'},
-        h('h2', {className:''}, item.get('title')),
-        h('p', {className:''}, item.get('content'))
-      );
     }
 
     return [smallHeader(entry),
