@@ -72,7 +72,7 @@ var IndexPreview = createClass({
       var headerdata = entry.getIn(['data', 'header']);
 
       var carouselindicator = function(item, index){
-        return h('li', {className:(index == 0 ? 'active', null), 'data-target':'#carouselHeader', 'data-slide-to':index}, '');
+        return h('li', {className:(index == 0 ? 'active':null), 'data-target':'#carouselHeader', 'data-slide-to':index}, '');
       }
       var carouselinner = function(item, index){
 
