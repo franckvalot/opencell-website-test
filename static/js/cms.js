@@ -243,6 +243,73 @@ var PlatformTechnologyPreview = createClass({
   }
 })
 
+var SolutionByIndustryPreview = createClass({
+  render: function(){
+    var entry = this.props.entry;
+    var industriesdata = entry.getIn(['data', 'industries']);
+    var contentsdata = entry.getIn(['data', 'contents']);
+
+    var industriesmenu = function(item){
+      return h('h2', {className:'navigation'},
+        h('a', {href:'#'}, item.get('nav'))
+      );
+    }
+
+    var industries = function(item){
+        return h('section', {className:'hero-1 industries-box'},
+          h('div', {className:'container'},
+            h('div', {className:'row justify-content-center'},
+              h('div', {className:'col text-center'}, item.get('title')),
+              h('div', {className:'w-100'}, ),
+              h('div', {className:'col-10 col-md-8 col-lg-6 embed-responsive embed-responsive-16by9 video'},
+                h('iframe', {className:'youtube', src:'https://www.youtube.com/embed/' + item.get('videoId') + '?controls=0', frameborder:'0', allow:'accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture', allowfullscreen:'true'}, '')
+              ),
+              h('div', {className:'col-10 row justify-content-center content'},
+                contentsdata.map(contents)
+              ),
+              h('div', {className:'w-100'}, ''),
+              h('form',{},
+                h('button', {className:'opencell-btn'}, 'DISCOVER')
+              )
+            )
+          )
+        );
+    }
+
+    var contents = function(item){
+      return h('div', {className:'col-10 col-md'},
+        h('h2', {className:''}, item.get('title')),
+        h('p', {className:''}, item.get('content'))
+      );
+    }
+
+    return [smallHeader(entry),
+    h('section', {className:'hero-1'},
+      h('div', {className:'container'},
+        h('div', {className:'text-center'},
+          industriesdata.map(industriesmenu)
+        )
+      ),
+    ),
+    industriesdata.map(industries)
+    ];
+  }
+})
+
+var SolutionByRolePreview = createClass({
+  render: function(){
+    var entry = this.props.entry;
+
+    return [smallHeader(entry),
+    h('section', {className:'hero-1'},
+      h('div', {className:'container'},
+        'ByRole'
+      )
+    )
+    ];
+  }
+})
+
 var AboutUSStoryPreview = createClass({
   render: function(){
     var entry = this.props.entry;
