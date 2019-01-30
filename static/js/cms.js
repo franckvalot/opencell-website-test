@@ -545,6 +545,7 @@ var AboutUsWorkplaceAndJobs = createClass({
 })
 
 
+CMS.registerPreviewTemplate("indexdata", IndexPreview);
 
 CMS.registerPreviewTemplate("platformtechnology", PlatformTechnologyPreview);
 CMS.registerPreviewTemplate("platformmodules", PlatformModulesPreview);
