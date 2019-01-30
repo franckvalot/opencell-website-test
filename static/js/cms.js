@@ -299,16 +299,56 @@ var SolutionByIndustryPreview = createClass({
 var SolutionByRolePreview = createClass({
   render: function(){
     var entry = this.props.entry;
+    var rolesdata = entry.getIn(['data', 'roles']);
+
+    var rolesmenu = function(item){
+      return h('h2', {className:'navigation'},
+        h('a', {href:'#'}, item.get('nav'))
+      );
+    }
+
+    var benefits = function(item){
+      return h('li', {}, item.get('benefit'));
+    }
+
+    var roles = function(item){
+        return h('section', {className:'hero-1 roles-box alternate'},
+          h('div', {className:'container'},
+            h('div', {className:'row justify-content-center'},
+              h('div', {className:'col text-center'}, item.get('title')),
+              h('div', {className:'col-6 col-md-5 img'},
+                h('img', {className:'img-fluid', src: item.get('url'), alt: item.get('title')})
+              ),
+              h('div', {className:'col-10 col-md-10 content'},
+                h('h1', {}, item.get('title')),
+                h('h2', {}, 'Background'),
+                h('p', {}, item.get('background')),
+                h('h2', {}, 'Benefits'),
+                h('ul', {},
+                  item.get('benefits').map(benefits)
+                ),
+                h('form',{},
+                  h('button', {className:'opencell-btn'}, 'DISCOVER')
+                )
+              ),
+            )
+          )
+        );
+    }
 
     return [smallHeader(entry),
     h('section', {className:'hero-1'},
       h('div', {className:'container'},
-        'ByRole'
-      )
-    )
+        h('div', {className:'text-center'},
+          rolesdata.map(rolesmenu)
+        )
+      ),
+    ),
+    rolesdata.map(roles)
     ];
   }
 })
+
 
 var AboutUSStoryPreview = createClass({
   render: function(){
@@ -479,8 +519,12 @@ var AboutUsWorkplaceAndJobs = createClass({
 
 
 
-CMS.registerPreviewTemplate("platformtechnology", PlatformTechnologyPreview)
-CMS.registerPreviewTemplate("platformmodules", PlatformModulesPreview)
+CMS.registerPreviewTemplate("platformtechnology", PlatformTechnologyPreview);
+CMS.registerPreviewTemplate("platformmodules", PlatformModulesPreview);
+
+CMS.registerPreviewTemplate("solutionbyindustry", SolutionByIndustryPreview);
+CMS.registerPreviewTemplate("solutionbyrole", SolutionByRolePreview);
+
 CMS.registerPreviewTemplate("aboutusstory", AboutUSStoryPreview);
 CMS.registerPreviewTemplate("aboutusbusinessmodel", AboutUsBusinessModelPreview);
 CMS.registerPreviewTemplate("aboutuscustomers", AboutUsCustomersPreview);
