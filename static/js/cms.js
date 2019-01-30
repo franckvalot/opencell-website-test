@@ -283,7 +283,7 @@ var SolutionByIndustryPreview = createClass({
     }
 
     return [smallHeader(entry),
-    h('section', {className:'hero-1'},
+    h('section', {className:'hero-1 industries-box'},
       h('div', {className:'container'},
         h('div', {className:'text-center'},
           industriesdata.map(industriesmenu)
@@ -314,7 +314,6 @@ var SolutionByRolePreview = createClass({
         return h('section', {className:'hero-1 roles-box alternate'},
           h('div', {className:'container'},
             h('div', {className:'row justify-content-center'},
-              h('div', {className:'col text-center'}, item.get('title')),
               h('div', {className:'col-6 col-md-5 img'},
                 h('img', {className:'img-fluid', src: item.get('url'), alt: item.get('title')})
               ),
@@ -336,7 +335,7 @@ var SolutionByRolePreview = createClass({
     }
 
     return [smallHeader(entry),
-    h('section', {className:'hero-1'},
+    h('section', {className:'hero-1 roles-box'},
       h('div', {className:'container'},
         h('div', {className:'text-center'},
           rolesdata.map(rolesmenu)
