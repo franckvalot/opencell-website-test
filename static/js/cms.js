@@ -323,7 +323,7 @@ var SolutionByRolePreview = createClass({
                 h('p', {}, item.get('background')),
                 h('h2', {}, 'Benefits'),
                 h('ul', {},
-                  item.get('benefits').map(benefits)
+                  (item.get('benefits') ? item.get('benefits').map(benefits) : null )
                 ),
                 h('form',{},
                   h('button', {className:'opencell-btn'}, 'DISCOVER')
