@@ -70,6 +70,12 @@ var IndexPreview = createClass({
   render: function(){
       var entry = this.props.entry;
       var headerdata = entry.getIn(['data', 'header']);
+      var paradigmdata = entry.getIn(['data', 'paradigm']);
+      var whatweprovidedata = entry.getIn(['data', 'whatweprovide']);
+      var whatmakesusdata = entry.getIn(['data', 'whatmakesus']);
+      var mainindustriesdata = entry.getIn(['data', 'mainindustries']);
+      var logosdata = entry.getIn(['data', 'ourcustomers']);
+      var worktogetherdata = entry.getIn(['data', 'worktogether']);
 
       var carouselindicator = function(item, index){
         return h('li', {className:(index == 0 ? 'active':null), 'data-target':'#carouselHeader', 'data-slide-to':index}, '');
@@ -89,7 +95,19 @@ var IndexPreview = createClass({
         );
       }
 
-      return [header(headerdata)
+      return [header(headerdata),
+      h('section', {className:'hero-1'},
+        h('div', {className:'container'},
+          h('div', {className:'row justify-content-center'},
+            h('div', {className:'col-12 text-center'}, paradigmdata.get('title'))
+          ),
+          h('div', {className:'row justify-content-center'},
+            h('div', {className:'col-sm-12 col-md-10 col-lg-8 embed-responsive embed-responsive-16by9'},
+              h('div', {className:'youtube', src:'https://www.youtube.com/embed/' + paradigmdata.get('videoId') + '?controls=0', frameborder:'0', allow:'accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture', allowfullscreen:'true'}, '')
+            )
+          )
+        )
+      )
 
       ];
   }
