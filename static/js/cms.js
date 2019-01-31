@@ -77,24 +77,27 @@ var IndexPreview = createClass({
       var logosdata = entry.getIn(['data', 'ourcustomers']);
       var worktogetherdata = entry.getIn(['data', 'worktogether']);
 
-      var carouselindicator = function(item, index){
-        return h('li', {className:(index == 0 ? 'active':null), 'data-target':'#carouselHeader', 'data-slide-to':index}, '');
-      }
-      var carouselinner = function(item, index){
-        return h('div', {className:(index == 0 ? 'carousel-item active':'carousel-item')},
-          h('h1', {dangerouslySetInnerHTML: {__html: item.get('title')}}),
-          h('p', {},  item.get('subtitle'))
-        );
-      }
-
       return [h('header', {className:'hero text-center'},
         h('div', {className:'header-content-inner'},
           h('div', {className:'carousel slide row align-items-center', id:'carouselHeader', 'data-ride':'carousel'},
             h('ol', {className:'carousel-indicators'},
-              (headerdata.get('carousel') ? headerdata.get('carousel').map(carouselindicator):null)
+              (headerdata.get('carousel') ?
+              headerdata.get('carousel').map(function(item, index){
+                return h('li', {className:(index == 0 ? 'active':null), 'data-target':'#carouselHeader', 'data-slide-to':index}, '');
+              })
+              :
+              null)
             ),
             h('div', {className:'carousel-inner'},
-              (headerdata.get('carousel') ? headerdata.get('carousel').map(carouselinner):null)
+              (headerdata.get('carousel') ?
+              headerdata.get('carousel').map(function(item, index){
+                return h('div', {className:(index == 0 ? 'carousel-item active':'carousel-item')},
+                  h('h1', {dangerouslySetInnerHTML: {__html: item.get('title')}}),
+                  h('p', {},  item.get('subtitle'))
+                );
+              })
+              :
+              null)
             )
           )
         )
