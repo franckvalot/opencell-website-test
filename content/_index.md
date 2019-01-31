@@ -96,6 +96,7 @@ worktogether:
       testimonial: >-
         Testimonial 3 - Mauris id ligula odio. Nulla lacinia lacus nec ligula
         eleifend, sed gravida lectus mattis.
+  subtitle: TESTIMONIALS
   title: We work together
 learnmore:
   videoIds:

@@ -98,6 +98,14 @@ var IndexPreview = createClass({
               })
               :
               null)
+            ),
+            h('a', {className:'carousel-control-prev', href:'#'},
+              h('span', {className:'carousel-control-prev-icon'},''),
+              h('span', {className:'sr-only'}, 'Previous')
+            ),
+            h('a', {className:'carousel-control-next', href:'#'},
+              h('span', {className:'carousel-control-next-icon'},''),
+              h('span', {className:'sr-only'}, 'Next')
             )
           )
         )
@@ -164,7 +172,54 @@ var IndexPreview = createClass({
           )
         )
       ),
-      logos(ourcustomersdata)
+      logos(ourcustomersdata),
+      h('section', {className:'hero-1'},
+        h('div', {className:'container'},
+          h('div', {className:'row justify-content-center text-center'},
+            h('h1', {className:'col-12'}, worktogetherdata.get('title')),
+            h('div', {className:'w-100'}, ''),
+            h('h2', {className:'col-12 col-md-8 col-lg-6'}, worktogetherdata.get('subtitle'))
+          ),
+          h('div', {className:'carousel slide', id:'carouselTestimonials', 'data-ride':'carousel'},
+            h('ol', {className:'carousel-indicators'},
+              (worktogetherdata.get('testimonials') ?
+              worktogetherdata.get('testimonials').map(function(item, index){
+                return h('li', {className:(index == 0 ? 'active':null), 'data-target':'#carouselTestimonials', 'data-slide-to':index}, '');
+              })
+              :
+              null)
+            ),
+            h('div', {className:'carousel-inner testimonials'},
+              (worktogetherdata.get('testimonials') ?
+              worktogetherdata.get('testimonials').map(function(item, index){
+                return h('div', {className:(index == 0 ? 'carousel-item active':'carousel-item')},
+                  h('div', {className:'row justify-content-center align-items-center'},
+                    h('div', {className:'col-10 col-md-8 col-lg-6'},
+                      h('div', {className:'row justify-content-center'},
+                        h('div', {className:'quote text-center'}, item.get('testimonial')),
+                        h('div', {className:'w-100'}, ''),
+                        h('hr', {}),
+                        h('div', {className:'w-100'}, ''),
+                        h('div', {className:'author'}, item.get('author'))
+                      )
+                    )
+                  )
+                );
+              })
+              :
+              null)
+            ),
+            h('a', {className:'carousel-control-prev', href:'#'},
+              h('span', {className:'carousel-control-prev-icon'},''),
+              h('span', {className:'sr-only'}, 'Previous')
+            ),
+            h('a', {className:'carousel-control-next', href:'#'},
+              h('span', {className:'carousel-control-next-icon'},''),
+              h('span', {className:'sr-only'}, 'Next')
+            )
+          )
+        )
+      )
 
       ];
   }
