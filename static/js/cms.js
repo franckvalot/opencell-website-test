@@ -148,6 +148,21 @@ var IndexPreview = createClass({
             })
           )
         )
+      ),
+      h('section', {className:'hero-1'},
+        h('div', {className:'container'},
+          h('div', {className:'row justify-content-center'},
+            h('h1', {className:'col-12 text-center'}, mainindustriesdata.get('title')),
+            h('div', {className:'w-100'}, ''),
+            h('h2', {className:'col-12 col-md-8 col-lg-6'}, mainindustriesdata.get('subtitle'))
+          ),
+          h('div', {className:'row justify-content-center text-center'},
+            h('div', {className:'col-8 col-md-5 col-lg-4 indus-telco', dangerouslySetInnerHTML: {__html: mainindustriesdata.get('block1')}}),
+            h('div', {className:'col-8 col-md-5 col-lg-4 indus-energy', dangerouslySetInnerHTML: {__html: mainindustriesdata.get('block2')}}),
+            h('div', {className:'col-8 col-md-5 col-lg-4 indus-mobility', dangerouslySetInnerHTML: {__html: mainindustriesdata.get('block3')}}),
+            h('div', {className:'col-8 col-md-5 col-lg-4 indus-retail', dangerouslySetInnerHTML: {__html: mainindustriesdata.get('block4')}})
+          )
+        )
       )
       ];
   }
