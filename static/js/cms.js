@@ -121,7 +121,7 @@ var IndexPreview = createClass({
           ),
           h('div', {className:'row align-items-center justify-content-center'},
             h('div', {className:'col-12 col-md-8 col-lg-6'},
-              h('img', {className:'img-fluid', src: whatweprovide.get('image'), alt:''})
+              h('img', {className:'img-fluid', src: whatweprovidedata.get('image'), alt:''})
             ),
             h('div', {className:'col-12 col-md-4 col-lg-6'},
               whatweprovide.widgetFor('content'),
