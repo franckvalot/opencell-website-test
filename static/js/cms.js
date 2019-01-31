@@ -140,8 +140,8 @@ var IndexPreview = createClass({
               return h('div', {className:'col-12 col-md-4'},
                 h('div', {className:'title-box text-center', dangerouslySetInnerHTML: {__html: item.get('title')}}),
                 item.get('content').map(function(item){
-                  return [(item.get('title') ? h('h2', {},item.get('title'):null)),
-                  (item.get('text') ? h('h2', {},item.get('text'):null)
+                  return [(item.get('title') ? h('h2', {},item.get('title')):null),
+                  (item.get('text') ? h('h2', {},item.get('text')):null)
                   ];
                 })
               );
