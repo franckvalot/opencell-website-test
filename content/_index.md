@@ -62,6 +62,7 @@ mainindustries:
   subtitle: >-
     OUR PLATFORM IS ADAPTED FOR ALL INDUSTRIES AND ALL BUSINESS SIZES. IT WORKS
     IN B2C, B2B AND B2BC
+  title: Our main industries.
 ourcustomers:
   logos:
     - alt: Adidas
@@ -99,7 +100,9 @@ worktogether:
   subtitle: TESTIMONIALS
   title: We work together
 learnmore:
-  videoIds:
+  videoids:
     - videoId: RUML7IH2JnM
     - videoId: NvCVdZyY9fI
+  subtitle: FEATURED VIDEOS
+  title: Learn More
 ---

@@ -70,6 +70,7 @@ collections:
           name: mainindustries
           widget: object
           fields:
+            - {label: Title, name: title, widget: string}
             - {label: Subtitle, name: subtitle, widget: string}
             - {label: Block 1, name: block1, widget: string}
             - {label: Block 2, name: block2, widget: string}
@@ -92,6 +93,7 @@ collections:
           widget: object
           fields:
             - {label: Title, name: title, widget: string}
+            - {label: Subtitle, name: subtitle, widget: string}
             - label: Testimonials
               name: testimonials
               widget: list
@@ -103,6 +105,8 @@ collections:
           name: learnmore
           widget: object
           fields:
+            - {label: Title, name: title, widget: string}
+            - {label: Subtitle, name: subtitle, widget: string}
             - label: Videos
               name: videoIds
               widget: list
