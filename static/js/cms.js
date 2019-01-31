@@ -81,7 +81,10 @@ var IndexPreview = createClass({
         return h('li', {className:(index == 0 ? 'active':null), 'data-target':'#carouselHeader', 'data-slide-to':index}, '');
       }
       var carouselinner = function(item, index){
-
+        return h('div', {className:(index == 0 ? 'carousel-item active':'carousel-item')},
+          h('h1', {dangerouslySetInnerHTML: {__html: item.get('title')}}),
+          h('p', {},  item.get('subtitle'))
+        );
       }
       var header = function(item){
         return h('header', {className:'hero text-center'},
@@ -89,6 +92,9 @@ var IndexPreview = createClass({
             h('div', {className:'carousel slide row align-items-center', id:'carouselHeader', 'data-ride':'carousel'},
               h('ol', {className:'carousel-indicators'},
                 (item.get('carousel') ? item.get('carousel').map(carouselindicator):null)
+              ),
+              h('div', {className:'carousel-inner'},
+                (item.get('carousel') ? item.get('carousel').map(carouselinner):null)
               )
             )
           )
@@ -99,11 +105,11 @@ var IndexPreview = createClass({
       h('section', {className:'hero-1'},
         h('div', {className:'container'},
           h('div', {className:'row justify-content-center'},
-            h('div', {className:'col-12 text-center'}, paradigmdata.get('title'))
+            h('h1', {className:'col-12 text-center'}, paradigmdata.get('title'))
           ),
           h('div', {className:'row justify-content-center'},
             h('div', {className:'col-sm-12 col-md-10 col-lg-8 embed-responsive embed-responsive-16by9'},
-              h('div', {className:'youtube', src:'https://www.youtube.com/embed/' + paradigmdata.get('videoId') + '?controls=0', frameborder:'0', allow:'accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture', allowfullscreen:'true'}, '')
+              h('iframe', {className:'youtube', src:'https://www.youtube.com/embed/' + paradigmdata.get('videoId') + '?controls=0', frameborder:'0', allow:'accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture', allowfullscreen:'true'}, '')
             )
           )
         )
