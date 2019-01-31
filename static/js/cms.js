@@ -229,11 +229,11 @@ var IndexPreview = createClass({
             h('h2', {className:'col-12 col-md-8 col-lg-6'}, learnmoredata.get('subtitle'))
           ),
           h('div', {className:'row justify-content-center'},
-            learnmoredata.get('videoids').map(function(item){
+            (learnmoredata.get('videoids') ? learnmoredata.get('videoids').map(function(item){
               return h('div', {className:'col-sm-12 col-md-8 col-lg-6 embed-responsive embed-responsive-16by9'},
                 h('iframe', {className:'youtube', src:'https://www.youtube.com/embed/' + item.get('videoId') + '?controls=0', frameborder:'0', allow:'accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture', allowfullscreen:'true'}, '')
               );
-            })
+            }):null)
           )
         )
       )
