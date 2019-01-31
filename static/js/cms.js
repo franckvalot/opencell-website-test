@@ -86,22 +86,19 @@ var IndexPreview = createClass({
           h('p', {},  item.get('subtitle'))
         );
       }
-      var header = function(item){
-        return h('header', {className:'hero text-center'},
-          h('div', {className:'header-content-inner'},
-            h('div', {className:'carousel slide row align-items-center', id:'carouselHeader', 'data-ride':'carousel'},
-              h('ol', {className:'carousel-indicators'},
-                (item.get('carousel') ? item.get('carousel').map(carouselindicator):null)
-              ),
-              h('div', {className:'carousel-inner'},
-                (item.get('carousel') ? item.get('carousel').map(carouselinner):null)
-              )
+
+      return [h('header', {className:'hero text-center'},
+        h('div', {className:'header-content-inner'},
+          h('div', {className:'carousel slide row align-items-center', id:'carouselHeader', 'data-ride':'carousel'},
+            h('ol', {className:'carousel-indicators'},
+              (headerdata.get('carousel') ? headerdata.get('carousel').map(carouselindicator):null)
+            ),
+            h('div', {className:'carousel-inner'},
+              (headerdata.get('carousel') ? headerdata.get('carousel').map(carouselinner):null)
             )
           )
-        );
-      }
-
-      return [header(headerdata),
+        )
+      ),
       h('section', {className:'hero-1'},
         h('div', {className:'container'},
           h('div', {className:'row justify-content-center'},
@@ -141,7 +138,7 @@ var IndexPreview = createClass({
                 h('div', {className:'title-box text-center', dangerouslySetInnerHTML: {__html: item.get('title')}}),
                 item.get('content').map(function(item){
                   return [(item.get('title') ? h('h2', {},item.get('title')):null),
-                  (item.get('text') ? h('h2', {},item.get('text')):null)
+                  (item.get('text') ? h('p', {},item.get('text')):null)
                   ];
                 })
               );
