@@ -81,6 +81,7 @@ ourcustomers:
     - alt: Florida Chamber of Commerce
       url: /img/uploads/logo-fl-chamber.svg
   title: Our customers
+  button: DISCOVER OUR CUSTOMERS
 worktogether:
   testimonials:
     - author: Author 1
@@ -101,4 +102,3 @@ learnmore:
     - videoId: RUML7IH2JnM
     - videoId: NvCVdZyY9fI
 ---
-

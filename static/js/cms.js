@@ -74,7 +74,7 @@ var IndexPreview = createClass({
       var whatweprovidedata = entry.getIn(['data', 'whatweprovide']);
       var whatmakesusdata = entry.getIn(['data', 'whatmakesus']);
       var mainindustriesdata = entry.getIn(['data', 'mainindustries']);
-      var logosdata = entry.getIn(['data', 'ourcustomers']);
+      var ourcustomersdata = entry.getIn(['data', 'ourcustomers']);
       var worktogetherdata = entry.getIn(['data', 'worktogether']);
 
       return [h('header', {className:'hero text-center'},
@@ -163,7 +163,9 @@ var IndexPreview = createClass({
             h('div', {className:'col-8 col-md-5 col-lg-4 indus-retail', dangerouslySetInnerHTML: {__html: mainindustriesdata.get('block4')}})
           )
         )
-      )
+      ),
+      logos(ourcustomersdata)
+
       ];
   }
 })

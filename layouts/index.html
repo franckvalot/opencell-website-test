@@ -9,7 +9,7 @@
     {{ partial "sections/provide.html" $Data.whatweprovide }}
     {{ partial "sections/whatmakesus.html" $Data.whatmakesus }}
     {{ partial "sections/mainindustries.html" $Data.mainindustries }}
-    {{ partial "logos.html" (dict "Data" $Data.ourcustomers "IsHome" .IsHome) }}
+    {{ partial "logos.html" (dict "Data" $Data.ourcustomers) }}
     {{ partial "sections/worktogether.html" $Data.worktogether }}
     {{ partial "sections/learnmore.html" $Data.learnmore }}
     {{ partial "sections/getdemo.html" . }}
