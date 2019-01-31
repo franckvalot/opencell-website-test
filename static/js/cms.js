@@ -124,7 +124,7 @@ var IndexPreview = createClass({
               h('img', {className:'img-fluid', src: whatweprovidedata.get('image'), alt:''})
             ),
             h('div', {className:'col-12 col-md-4 col-lg-6'},
-              this.props.getIn(['widgets', 'whatweprovide']).get('content'),
+            entry.getIn(['widgets', 'whatweprovide']).get('content'),
               h('button', {className:'opencell-btn'}, 'DISCOVER')
             )
           )
