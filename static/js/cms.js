@@ -129,6 +129,25 @@ var IndexPreview = createClass({
             )
           )
         )
+      ),
+      h('section', {className:'hero-1'},
+        h('div', {className:'container'},
+          h('div', {className:'row justify-content-center'},
+            h('h1', {className:'col-12 text-center'}, whatmakesusdata.get('title'))
+          ),
+          h('div', {className:'row justify-content-center whatmakesus-box text-center'},
+            whatmakesusdata.get('columns').map(function(item){
+              return h('div', {className:'col-12 col-md-4'},
+                h('div', {className:'title-box text-center', dangerouslySetInnerHTML: {__html: item.get('title')}}),
+                item.get('content').map(function(item){
+                  return [(item.get('title') ? h('h2', {},item.get('title'):null)),
+                  (item.get('text') ? h('h2', {},item.get('text'):null)
+                  ];
+                })
+              );
+            })
+          )
+        )
       )
       ];
   }
