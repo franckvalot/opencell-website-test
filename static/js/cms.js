@@ -113,8 +113,23 @@ var IndexPreview = createClass({
             )
           )
         )
+      ),
+      h('section', {className:'hero-1'},
+        h('div', {className:'container'},
+          h('div', {className:'row align-items-center justify-content-center'},
+            h('h1', {className:'col-12 text-center'}, whatweprovidedata.get('title'))
+          ),
+          h('div', {className:'row align-items-center justify-content-center'},
+            h('div', {className:'col-12 col-md-8 col-lg-6'},
+              h('img', {className:'img-fluid', src: whatweprovide.get('image'), alt:''})
+            ),
+            h('div', {className:'col-12 col-md-4 col-lg-6'},
+              whatweprovide.widgetFor('content'),
+              h('button', {className:'opencell-btn'}, 'DISCOVER')
+            )
+          )
+        )
       )
-
       ];
   }
 })
