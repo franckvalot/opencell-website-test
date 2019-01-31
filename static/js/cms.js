@@ -124,7 +124,7 @@ var IndexPreview = createClass({
               h('img', {className:'img-fluid', src: whatweprovidedata.get('image'), alt:''})
             ),
             h('div', {className:'col-12 col-md-4 col-lg-6'},
-              entry.getIn(['widgets', 'whatweprovide']),
+              alert(entry.getIn(['widgets', 'whatweprovide'])),
               h('button', {className:'opencell-btn'}, 'DISCOVER')
             )
           )
