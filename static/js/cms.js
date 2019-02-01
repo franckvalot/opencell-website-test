@@ -66,6 +66,37 @@ function logos(item){
   );
 }
 
+function article(item){
+  var date = new Date(item.get('date'));
+  var months = {"Jan", "Feb", "Mar", "Apr", "May", "June", "July", "Aug", "Sept", "Oct", "Nov", "Dec"};
+  return h('div', {className:'col-7 col-md-6 col-lg-4'},
+    h('div', {className:'row align-items-center justify-content-center'},
+      h('div', {className:'col-11 article-box'},
+        h('div', {className:'row align-items-center justify-content-center'},
+          h('div', {className:'date'},
+            h('h2', }, months[date.getMonth()]),
+            h('p', {}, date.getFullYear())
+          ),
+          h('div', {className:'col-12 description'},
+            h('div', {className:'row align-items-center justify-content-center'},
+              h('div', {className:'col-10'},
+                h('div', {className:'row justify-content-center text-center'},
+                  item.get('description')
+                ),
+                h('div', {className:'w-100'},''),
+                h('form', {},
+                  h('button', {className:'opencell-btn'}, item.get('button'))
+                )
+              )
+            )
+          )
+        )
+      )
+    )
+  );
+}
+
+
 var IndexPreview = createClass({
   render: function(){
       var entry = this.props.entry;
@@ -522,6 +553,22 @@ var SolutionByRolePreview = createClass({
   }
 })
 
+var AboutUsPressReleasesPreview = createClass({
+  render: function(){
+      var entry = this.props.entry;
+      var articlesdata = entry.getIn(['data', 'articles']);
+
+      return [smallHeader(entry),
+      h('section', {className:'hero-1'},
+        h('div', {className:'container'},
+          h('div', {className:'row justify-content-center'},
+            articlesdata.map(article)
+          )
+        )
+      )
+      ];
+  }
+})
 
 var AboutUSStoryPreview = createClass({
   render: function(){
@@ -699,6 +746,8 @@ CMS.registerPreviewTemplate("platformmodules", PlatformModulesPreview);
 CMS.registerPreviewTemplate("solutionbyindustry", SolutionByIndustryPreview);
 CMS.registerPreviewTemplate("solutionbyrole", SolutionByRolePreview);
 
+
+CMS.registerPreviewTemplate("aboutuspressreleases", AboutUsPressReleasesPreview);
 CMS.registerPreviewTemplate("aboutusstory", AboutUSStoryPreview);
 CMS.registerPreviewTemplate("aboutusbusinessmodel", AboutUsBusinessModelPreview);
 CMS.registerPreviewTemplate("aboutuscustomers", AboutUsCustomersPreview);
