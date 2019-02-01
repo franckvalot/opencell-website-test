@@ -71,7 +71,7 @@ function logos(item){
 
 function article(item){
   var date = new Date(item.get('date'));
-  
+
   return h('div', {className:'col-7 col-md-6 col-lg-4'},
     h('div', {className:'row align-items-center justify-content-center'},
       h('div', {className:'col-11 article-box'},
@@ -84,11 +84,11 @@ function article(item){
             h('div', {className:'row align-items-center justify-content-center'},
               h('div', {className:'col-10'},
                 h('div', {className:'row justify-content-center text-center'},
-                  item.get('description')
-                ),
-                h('div', {className:'w-100'},''),
-                h('form', {},
-                  h('button', {className:'opencell-btn'}, item.get('button'))
+                  item.get('description'),
+                  h('div', {className:'w-100'},''),
+                  h('form', {},
+                    h('button', {className:'opencell-btn'}, item.get('button'))
+                  )
                 )
               )
             )
