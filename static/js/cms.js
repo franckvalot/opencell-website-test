@@ -71,6 +71,7 @@ function logos(item){
 
 function article(item){
   var date = new Date(item.get('date'));
+  
   return h('div', {className:'col-7 col-md-6 col-lg-4'},
     h('div', {className:'row align-items-center justify-content-center'},
       h('div', {className:'col-11 article-box'},
@@ -725,7 +726,7 @@ var AboutUsParnersPreview = createClass({
   }
 })
 
-var AboutUsWorkplaceAndJobs = createClass({
+var AboutUsWorkplaceAndJobsPreview = createClass({
   render: function(){
       var entry = this.props.entry;
 
@@ -754,7 +755,7 @@ CMS.registerPreviewTemplate("aboutusstory", AboutUSStoryPreview);
 CMS.registerPreviewTemplate("aboutusbusinessmodel", AboutUsBusinessModelPreview);
 CMS.registerPreviewTemplate("aboutuscustomers", AboutUsCustomersPreview);
 CMS.registerPreviewTemplate("aboutuspartners", AboutUsParnersPreview);
-CMS.registerPreviewTemplate("aboutusworkplaceandjobs", AboutUsWorkplaceAndJobs);
+CMS.registerPreviewTemplate("aboutusworkplaceandjobs", AboutUsWorkplaceAndJobsPreview);
 
 
 CMS.registerPreviewStyle("https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css");

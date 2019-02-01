@@ -252,7 +252,7 @@ collections:
     name: aboutus
     files:
       - label: Press Releases (Main About us page)
-        name: pressreleases
+        name: aboutuspressreleases
         file: content/aboutus/pressreleases.md
         fields:
           - {label: Layout, name: layout, widget: hidden, default: pressreleases}
