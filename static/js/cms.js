@@ -763,7 +763,7 @@ var BlogPreview = createClass({
             ),
             h('div', {className:'w-100'}, ),
             h('div', {className:'col col-md-10 col-lg-8'},
-              this.props.widgetsFor('body').getIn(['widgets', 'body'])
+              this.props.widgetFor('body')
             )
           )
         )
