@@ -12,7 +12,7 @@ var months = ["Jan", "Feb", "Mar", "Apr", "May", "June", "July", "Aug", "Sept", 
 var days = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
 
 function smallHeader(item){
-    return h('header', {className:'small-header text-center text-md-left', style:(item.get('thumbnail') != null ? null : null)},
+    return h('header', {className:'small-header text-center text-md-left', style:(item.get('thumbnail') != null ? {backgroundImage: item.get('thumbnail')} : null)},
       h('div', {className:'header-content-inner'},
         h('div', {className:'container'},
           h('div', {className:'row align-items-center justify-content-center'},
