@@ -740,6 +740,38 @@ var AboutUsWorkplaceAndJobsPreview = createClass({
   }
 })
 
+var BlogPreview = createClass({
+  render: function(){
+      var entry = this.props.entry;
+      var date = new Date(entry.getIn(['data', 'date']));
+      var day = date.getDay();
+      var month = months[date.getMonth()];
+      var year = date.getFullYear();
+      var dateString = day + ' ' + month + ' ' + year;
+
+      return [smallHeader(entry),
+      h('section', {className:'blog'},
+        h('div', {className:'container'},
+          h('div', {className:'row justify-content-center text-left'},
+            h('h1', {className:'col col-md-10 col-lg-8'}, entry.getIn(['data', 'title'])),
+            h('div', {className:'w-100'},''),
+            h('p', {className:'col col-md-10 col-lg-8'},
+              h('span', {}, 'Published on: '),
+              h('span', {}, dateString),
+              h('span', {}, ', by: '),
+              h('span', {className:'author'}, entry.getIn(['data', 'author']))
+            ),
+            h('div', {className:'w-100'}, ),
+            h('div', {className:'col col-md-10 col-lg-8'},
+              this.props.widgetsFor('body').getIn(['widgets', 'body'])
+            )
+          )
+        )
+      )
+      ];
+  }
+})
+
 
 CMS.registerPreviewTemplate("indexdata", IndexPreview);
 
@@ -756,6 +788,8 @@ CMS.registerPreviewTemplate("aboutusbusinessmodel", AboutUsBusinessModelPreview)
 CMS.registerPreviewTemplate("aboutuscustomers", AboutUsCustomersPreview);
 CMS.registerPreviewTemplate("aboutuspartners", AboutUsParnersPreview);
 CMS.registerPreviewTemplate("aboutusworkplaceandjobs", AboutUsWorkplaceAndJobsPreview);
+
+CMS.registerPreviewTemplate("blog", BlogPreview);
 
 
 CMS.registerPreviewStyle("https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css");
