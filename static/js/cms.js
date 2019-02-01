@@ -8,6 +8,9 @@ var Template = createClass({
   }
 })
 
+var months = ["Jan", "Feb", "Mar", "Apr", "May", "June", "July", "Aug", "Sept", "Oct", "Nov", "Dec"];
+var days = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
+
 function smallHeader(item){
     return h('header', {className:'small-header text-center text-md-left'},
       h('div', {className:'header-content-inner'},
@@ -68,13 +71,12 @@ function logos(item){
 
 function article(item){
   var date = new Date(item.get('date'));
-  var months = ["Jan", "Feb", "Mar", "Apr", "May", "June", "July", "Aug", "Sept", "Oct", "Nov", "Dec"];
   return h('div', {className:'col-7 col-md-6 col-lg-4'},
     h('div', {className:'row align-items-center justify-content-center'},
       h('div', {className:'col-11 article-box'},
         h('div', {className:'row align-items-center justify-content-center'},
           h('div', {className:'date'},
-            h('h2', }, months[date.getMonth()]),
+            h('h2', {}, months[date.getMonth()]),
             h('p', {}, date.getFullYear())
           ),
           h('div', {className:'col-12 description'},
