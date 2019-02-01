@@ -68,7 +68,7 @@ function logos(item){
 
 function article(item){
   var date = new Date(item.get('date'));
-  var months = {"Jan", "Feb", "Mar", "Apr", "May", "June", "July", "Aug", "Sept", "Oct", "Nov", "Dec"};
+  var months = ["Jan", "Feb", "Mar", "Apr", "May", "June", "July", "Aug", "Sept", "Oct", "Nov", "Dec"];
   return h('div', {className:'col-7 col-md-6 col-lg-4'},
     h('div', {className:'row align-items-center justify-content-center'},
       h('div', {className:'col-11 article-box'},
