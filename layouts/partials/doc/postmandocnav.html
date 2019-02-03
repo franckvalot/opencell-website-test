@@ -1,0 +1,26 @@
+{{ if or (.item) (._postman_isSubFolder)}}
+<li class="docs-nav__item docs-nav__item--folder">
+  <div class="docs-nav__head">
+    <div class="docs-nav__icon docs-nav__icon--folder">
+      <a class="docs-nav__icon--folder"><i class="pm-icon pm-icon-xs pm-icon-secondary rotate-90"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 12"> <g fill="none" fill-rule="evenodd" transform="translate(-23 -27)"> <rect width="64" height="64" rx="5"></rect> <path fill="#535353" d="M32 38.4l-8.533-10.667h17.066"></path> </g></svg></i></a>
+    </div>
+    <div class="docs-nav__name docs-nav__name--folder">
+      <a class="docs-nav__link no-select" href="#{{ md5 .name}}" title="{{ .name}}">{{ .name}}</a></div>
+  </div>
+  <ul class="docs-nav__content hidden">
+    {{ range .item }}
+      {{ partial "doc/postmandocnav.html" . }}
+    {{ end }}
+  </ul>
+</li>
+{{ else }}
+  <li class="docs-nav__item docs-nav__item--request">
+    <div class="docs-nav__head">
+      <div class="docs-nav__icon docs-nav__icon--request">
+        <span class="docs-nav__method pm-method-color-{{ .request.method | lower}}">{{ .request.method | upper}}</span>
+      </div>
+      <div class="docs-nav__name docs-nav__name--request">
+        <a class="docs-nav__link no-select" href="#{{ md5 .name}}" title="{{ .name}}">{{ .name}}</a></div>
+    </div>
+  </li>
+{{ end }}

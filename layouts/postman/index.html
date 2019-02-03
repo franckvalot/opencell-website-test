@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+{{ $Data := .Site.Data.postman.data }}
+<html>
+  {{ partial "head.html" . }}
+  <body>
+    {{ partial "header/navBar.html" . }}
+    {{ with $Data }}
+    <div class="postmandoc">
+      <div class="docs-nav">
+        <ul class="docs-nav__items">
+          <li class="docs-nav__item docs-nav__item--tocItem">
+            <div class="docs-nav__head">
+              <div class="docs-nav__icon docs-nav__icon--tocItem">
+              </div><div class="docs-nav__name docs-nav__name--tocItem">
+                <a class="docs-nav__link no-select" href="#introduction" title="{{ .info.name }}">{{ .info.name }}</a>
+              </div>
+            </div>
+          </li>
+          {{ range .item }}
+            {{ partial "doc/postmandocnav.html" . }}
+          {{ end }}
+        </ul>
+      </div>
+      <div class="docs-body docs-body--double-col">
+        <div class="docs-item">
+          <a class="anchor" id="introduction"></a>
+          <div class="docs-desc">
+            <h1 class="pm-h1 docs-desc-title docs-desc-title--head">{{ .info.name }}</h1>
+            <div class="docs-desc-body pm-markdown">{{ .info.description | markdownify }}</div>
+          </div>
+        </div>
+        {{ range .item }}
+          {{ partial "doc/postmandocitem.html" . }}
+        {{ end }}
+      </div>
+    </div>
+    {{ end }}
+    {{ partial "sections/getdemo.html" . }}
+    {{ partial "sections/mentions.html" . }}
+
+    {{ partial "script.html" }}
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script>$('.docs-nav__link').click(function(){
+      $(this).parent().parent().siblings(".docs-nav__content").toggleClass('hidden');
+      $(this).parent().siblings(".docs-nav__icon").children("a").children("i").toggleClass('rotate-90');
+    });
+
+    $('.docs-nav__icon--folder').click(function(){
+            $(this).parent().parent().siblings(".docs-nav__content").toggleClass('hidden');
+            $(this).children("a").children("i").toggleClass('rotate-90');
+    });
+
+    $('button.pm-snippet-expand').click(function(){
+      $('div.ReactModalPortal').html('');
+      $('body').toggleClass('ReactModal__Body--open');
+      var txt = "<div class=\"ReactModal__Overlay ReactModal__Overlay--after-open pm-modal-background\" aria-modal=\"true\"><div class=\"ReactModal__Content ReactModal__Content--after-open pm-modal\" tabindex=\"-1\" aria-label=\"pm-modal\"><div class=\"pm-snippet-modal\"><div class=\"pm-snippet-modal-header\"><div class=\"pm-snippet-modal-title\">" + $(this).parent().parent().parent().siblings(".docs-example__snippet-header").children("span.docs-example__response-title").text() + "</div><button class=\"pm-btn pm-btn-alternate pm-btn-sm pm-btn-icon pm-snippet-modal-close\"><i class=\"pm-icon pm-icon-sm pm-icon-secondary\"><svg width=\"26\" height=\"26\" viewBox=\"0 0 26 26\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M16.064 13l9.098-9.097A2.169 2.169 0 0 0 25.16.84a2.16 2.16 0 0 0-3.063-.002L13 9.936 3.903.838A2.169 2.169 0 0 0 .84.84a2.16 2.16 0 0 0-.002 3.063L9.936 13 .838 22.097A2.169 2.169 0 0 0 .84 25.16a2.16 2.16 0 0 0 3.063.002L13 16.064l9.097 9.098a2.169 2.169 0 0 0 3.063-.002 2.16 2.16 0 0 0 .002-3.063L16.064 13z\" fill=\"#535353\" fill-rule=\"evenodd\"></path></svg></i></button></div><div class=\"pm-snippet-modal-body\"><div class=\"pm-snippet pm-snippet-wrap\"><pre class=\"pm-snippet-body\"></pre></div></div></div></div></div>";
+      $('div.ReactModalPortal').append(txt);
+      $(this).parent().siblings("pre.pm-snippet-body").children("code").clone().appendTo("div.ReactModalPortal pre.pm-snippet-body");
+    });
+
+    $(document).on('click', 'button.pm-snippet-modal-close', function(){$('body').toggleClass('ReactModal__Body--open');
+    $('div.ReactModalPortal').html('');
+    });
+  </script>
+  </body>
+</html>
