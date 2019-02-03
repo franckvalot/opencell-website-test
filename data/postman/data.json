@@ -1,0 +1,1476 @@
+{
+	"info": {
+		"_postman_id": "bda8f9c0-40bc-48c3-817f-5d20e8e34e22",
+		"name": "ticket-3148",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Contact",
+			"item": [
+				{
+					"name": "Contact / Create",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{opencell.password}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{opencell.username}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Basic b3BlbmNlbGwuYWRtaW46b3BlbmNlbGwuYWRtaW4="
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"email\" : \"EMAIL\",\n\t\"code\" : \"CODE\",\n\t\"company\" : \"Opencell\",\n\t\"name\" : {\n\t  \t\"title\" : \"MR\",\n\t    \"firstName\" : \"Franck\",\n\t    \"lastName\" : \"Valot\"\n\t}\n}"
+						},
+						"url": {
+							"raw": "{{opencell.url}}/contact",
+							"host": [
+								"{{opencell.url}}"
+							],
+							"path": [
+								"contact"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Contact / Create Copy",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{opencell.password}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{opencell.username}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Basic b3BlbmNlbGwuYWRtaW46b3BlbmNlbGwuYWRtaW4="
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"email\" : \"franckvalot@gmail.com\",\n\t\"code\" : \"franckvalot@gmail.com\",\n\t\"assistantName\" : \"Lan\",\n\t\"position\" : \"Stagiaire\",\n\t\"company\" : \"Opencell\",\n\t\"websiteUrl\" : \"http://franckvalot.com\",\n\t\"isVip\" : \"false\",\n\t\"agreedToUA\" : \"true\",\n\t\"isProspect\" : \"false\",\n\t\"name\" : {\n\t  \t\"title\" : \"MR\",\n\t    \"firstName\" : \"Franck\",\n\t    \"lastName\" : \"Valot\"\n\t},\n\t\"description\" : \"Ceci est une description\",\n\t\"phone\" : \"0123456789\",\n\t\"mobile\" : \"0612345789\"\n}"
+						},
+						"url": {
+							"raw": "{{opencell.url}}/contact",
+							"host": [
+								"{{opencell.url}}"
+							],
+							"path": [
+								"contact"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Contact / Update",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{opencell.password}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{opencell.username}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Basic b3BlbmNlbGwuYWRtaW46b3BlbmNlbGwuYWRtaW4="
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"email\" : \"franckvalot@gmail.com\",\n\t\"code\" : \"franckvalot@gmail.com\",\n\t\"assistantName\" : \"Lan\",\n\t\"position\" : \"Stagiaire\",\n\t\"websiteUrl\" : \"http://franckvalot.com\",\n\t\"isVip\" : \"false\",\n\t\"agreedToUA\" : \"true\",\n\t\"isProspect\" : \"false\",\n\t\"name\" : {\n\t  \t\"title\" : \"MR\",\n\t    \"firstName\" : \"Franck\",\n\t    \"lastName\" : \"Valot\"\n\t},\n\t\"description\" : \"Ceci est une description\",\n\t\"phone\" : \"0123456789\",\n\t\"mobile\" : \"0612345789\"\n}"
+						},
+						"url": {
+							"raw": "{{opencell.url}}/contact",
+							"host": [
+								"{{opencell.url}}"
+							],
+							"path": [
+								"contact"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Contact / Find",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{opencell.password}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{opencell.username}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Basic b3BlbmNlbGwuYWRtaW46b3BlbmNlbGwuYWRtaW4="
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"email\" : \"franckvalot@gmail.com\",\n\t\"code\" : \"franckvalot@gmail.com\",\n\t\"assistantName\" : \"Lan\",\n\t\"position\" : \"Stagiaire\",\n\t\"websiteUrl\" : \"http://franckvalot.com\",\n\t\"isVip\" : \"false\",\n\t\"agreedToUA\" : \"true\",\n\t\"isSuspect\" : \"false\",\n\t\"name\" : {\n\t  \t\"title\" : \"Mr.\",\n\t    \"firstName\" : \"Franck\",\n\t    \"lastName\" : \"Valot\"\n\t}\n}"
+						},
+						"url": {
+							"raw": "{{opencell.url}}/contact?code=franckvalot@gmail.com",
+							"host": [
+								"{{opencell.url}}"
+							],
+							"path": [
+								"contact"
+							],
+							"query": [
+								{
+									"key": "code",
+									"value": "franckvalot@gmail.com"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Contact / Find Copy",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{opencell.password}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{opencell.username}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Basic b3BlbmNlbGwuYWRtaW46b3BlbmNlbGwuYWRtaW4="
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"email\" : \"franckvalot@gmail.com\",\n\t\"code\" : \"franckvalot@gmail.com\",\n\t\"assistantName\" : \"Lan\",\n\t\"position\" : \"Stagiaire\",\n\t\"websiteUrl\" : \"http://franckvalot.com\",\n\t\"isVip\" : \"false\",\n\t\"agreedToUA\" : \"true\",\n\t\"isSuspect\" : \"false\",\n\t\"name\" : {\n\t  \t\"title\" : \"Mr.\",\n\t    \"firstName\" : \"Franck\",\n\t    \"lastName\" : \"Valot\"\n\t}\n}"
+						},
+						"url": {
+							"raw": "{{opencell.url}}/contact?code=franckvalot@gmail.com",
+							"host": [
+								"{{opencell.url}}"
+							],
+							"path": [
+								"contact"
+							],
+							"query": [
+								{
+									"key": "code",
+									"value": "franckvalot@gmail.com"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Contact / CreateOrUpdate",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{opencell.password}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{opencell.username}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Basic b3BlbmNlbGwuYWRtaW46b3BlbmNlbGwuYWRtaW4="
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"email\" : \"franckvalot@gmail.com\",\n\t\"code\" : \"franckvalot@gmail.com\",\n\t\"assistantName\" : \"Lan\",\n\t\"position\" : \"Stagiaire\",\n\t\"company\" : \"Opencell\",\n\t\"websiteUrl\" : \"http://franckvalot.com\",\n\t\"isVip\" : \"false\",\n\t\"agreedToUA\" : \"true\",\n\t\"isProspect\" : \"false\",\n\t\"name\" : {\n\t  \t\"title\" : \"MR\",\n\t    \"firstName\" : \"Franck\",\n\t    \"lastName\" : \"Valot\"\n\t},\n\t\"description\" : \"Ceci est une description\",\n\t\"phone\" : \"0123456789\",\n\t\"mobile\" : \"0612345789\"\n}"
+						},
+						"url": {
+							"raw": "{{opencell.url}}/contact/createOrUpdate",
+							"host": [
+								"{{opencell.url}}"
+							],
+							"path": [
+								"contact",
+								"createOrUpdate"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Contact / Import Text",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{opencell.password}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{opencell.username}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic b3BlbmNlbGwuYWRtaW46b3BlbmNlbGwuYWRtaW4="
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "First Name,Last Name,Address,Email Address,Company,Position,Connected On,Websites,Instant Messengers\r\nArnaud,UHLRICH,,arnaud.uhlrich@free.Fr,Magellan Partners - ASAPpro,Senior Manager - Director,\"10/20/13, 9:34 AM\",,SKYPE:uhlricha\r\nThomas,Conté,,thomas@conte.com,Microsoft,Cloud Engineer,\"4/11/15, 5:32 AM\",\"PERSONAL:http://blogatom.tumblr.com/, BLOG:http://blogs.msdn.com/thomasconte/, BLOG:http://blogs.msdn.com/tconte/\",SKYPE:tomconte\r\nHassan,Ghellab,,hassan.ghellab@gmail.com,LTI TELECOM,Marketing Director,\"12/22/11, 8:35 AM\",,\r\nPatrick,Consorti,,patrick.consorti@gmail.com,EIT Digital,EU-US Industry Relations,\"5/29/12, 12:54 PM\",,SKYPE:patrickconsorti\r\nXavier,Monmarché,,xavier@monmarche.net,DOCAPOST,VP of Sales,\"6/26/10, 1:52 AM\",\"COMPANY:docapost.com, PERSONAL:etreentrepreneur.com, BLOG:fairluxe.com\",\r\nLionel,Pelamourgues,,lionel@pelamourgues.org,Chanchu Partners,Managing Director,\"1/15/17, 4:21 AM\",PORTFOLIO:http://www.intuitivlab.com,\r\nEnguerran,LOOS,,eloos-pa@innersquare.co.uk,InnerSquare,Founder & CEO,\"9/27/06, 1:35 AM\",COMPANY:http://www.innersquare.co.uk,\r\nAndrew,Clyne,,andrew@clyne-partners.com,Clyne Partners,Director,\"3/24/12, 7:55 AM\",\"COMPANY:clyne-partners.com, BLOG:wordpress.com/stats/insights/londonrecruiter.wordpress.com\",SKYPE:andrewclyne\r\nPaul,CORBEL,,pcorbel@heliant.fr,PRESCOM SAS,Member of the Board - In charge of Business Development,\"3/5/12, 2:36 AM\",COMPANY:http://www.heliant.fr,\r\nAdam,Krim,,adamkrim@delphivillage.com,SymbioNet,Chief Executive Officer,\"11/12/07, 10:53 PM\",\"COMPANY:http://www.affnet.com, PORTFOLIO:http://www.hanasianvodka.com, PORTFOLIO:http://www.blvdsource.com\",\r\nLoic,Le Meur,,loiclemeur@gmail.com,Leade.rs,Founder & CEO,\"9/12/16, 4:17 AM\",\"BLOG:http://www.loiclemeur.com, RSS:http://feeds.loiclemeur.com/loiclemeur, COMPANY:http://www.seesmic.com\",SKYPE:loiclemeur\r\nChristophe,Chausson,,cc@chaussonfinance.com,Chausson Finance (fund raising & venture capital),CEO,\"9/5/16, 7:32 AM\",COMPANY:http://chaussonfinance.com,\r\nOlivier,Attia,,olivier@attia.com,Gershon Consulting,Managing Director,\"7/7/12, 4:46 AM\",,\r\nBruno,Paolini,,behv.paolini@gmail.com,Rahi Systems,\"Director, Southern-Europe at RAHI Systems\",\"9/25/17, 2:12 AM\",COMPANY:http://www.ipex.fr,\r\nBruno,Brottier,PA4-Pantin ,bruno.brottier@eu.equinix.com,Equinix,Senior Sales Manager,\"1/20/16, 10:17 AM\",,\r\nPatrick,RICHARD,,patrick@prichard.fr,PRICHARD Conseil,President,\"1/25/16, 1:28 PM\",OTHER:http://www.prichard.fr,\r\nPatrick,Rouvillois,,rouvillois@gmail.com,BCG Digital Ventures,Partner & Managing Director,\"1/26/16, 2:41 PM\",,\r\nIsabelle,Roussin,,isabelle.roussin@sap.com,SAP,\"SAP Global VP Market Development, Hybris Billing & Revenue Cloud\",\"7/29/10, 10:47 PM\",,\r\nLaurent,Lafite,,laurent.lafite@gmail.com,DATACAO,Founder & Senior Consultant,\"1/26/18, 3:56 AM\",,\r\nsamir,koleilat,,samir@koleilat.com,OCTAVE-UCME,CFO,\"6/17/17, 4:28 AM\",COMPANY:http://www.youseeme.pro,\r\nDylan,Thuillier,,dylan.thuillier@gmail.com,Compagnie Royale des Indes Orientales,CEO Compagnie des Indes,\"6/17/17, 3:12 AM\",COMPANY:http://www.becitizen.com,SKYPE:dylan.thuillier\r\nEric,FELIX-FAURE,,e.felixfaure@fr.oaklins.com,Oaklins Aelios,Founder & Managing Partner,\"2/7/18, 5:18 AM\",COMPANY:http://www.oaklins.fr,SKYPE:efelixfaure\r\nRichard,Menneveux,,richard@adsvark.media,AdsVark Media,Founder & CEO,\"1/26/18, 1:28 AM\",\"COMPANY:http://www.adsvark.com, OTHER:http://www.frenchweb.fr, OTHER:http://www.we-love-entrepreneurs.com\",SKYPE:rmenneveux\r\nLaurent,VERMOT-GAUCHY,,laurent@vermot-gauchy.com,v11y,Entrepreneur in Residence,\"10/26/17, 12:37 AM\",\"OTHER:http://about.me/laurentvg, OTHER:http://www.v11y.com, OTHER:https://plus.google.com/u/0/b/116650727002051062549/116650727002051062549\",\r\nLuc,DOMISSY ✅,,ldomissy@gmail.com,Oracle,Strategic Account Executive,\"2/8/16, 12:59 AM\",\"OTHER:https://www.oracle.com/fr/industries/retail/index.html, OTHER:http://www.escpeuropealumni.org/gene/main.php, OTHER:https://www.g9plus.org/\",SKYPE:lucdomissy\r\nMichel,de Guilhermier,,michel@laccelerateur.fr,Auchan Retail France,Membre du Conseil de Surveillance,\"6/2/11, 9:48 PM\",,\r\nPhilippe,Coup-Jambet,,philippecoupjambet@gmail.com,isahit,Co-founder and COO,\"5/7/14, 12:13 AM\",\"PERSONAL:http://coup-jambet.com, COMPANY:http://www.tekora.com, BLOG:http://pcj.mobitype.com\",\r\nJean-Michel,Billaut,,jmbillaut@yahoo.fr,Streetco,Development Advisor,\"6/9/13, 12:02 AM\",\"BLOG:http://billaut.typepad.com, BLOG:http://billaut.typepad.com/revolution3point0\",\r\nAxel,Dreyfus,,axel.dreyfus@gmail.com,Finamatic,Cofounder,\"6/23/17, 11:14 PM\",COMPANY:Finamatic.fr,\r\nTanguy,Briand,,briand.tanguy@gmail.com,Worldline Global,Head of Global Solution Sales,\"3/3/17, 4:31 AM\",\"COMPANY:http://www.atosworldline.com, OTHER:http://www.hec.fr/Start-up/Accueil\",\r\nMathieu,Isaia,,mai@fenixe.biz,Atlays,Managing Director,\"10/23/14, 11:21 PM\",,SKYPE:misaia\r\nNick,MacShane,,nmacshane@progresspartners.com,Progress Partners,Senior Managing Director,\"2/22/17, 11:16 PM\",\"COMPANY:http://www.progresspartners.com, RSS:http://www.nextmediaupdate.com, OTHER:http://vizibility.com/nick\",\r\nBenoît,Vallet,,bv@sohosimple.com,OulalaGames,\"CTO, Partner\",\"1/31/17, 10:42 AM\",,\r\nMARCEL,DRIDJE,,mdridje@yahoo.com,Sophia Business Angels,President / Board Member,\"7/23/17, 2:47 PM\",,\r\nStéphane,Distinguin,,stephane.distinguin@fabernovel.com,FABERNOVEL,Founder and CEO,\"7/21/10, 2:04 AM\",\"COMPANY:http://www.FABERNOVEL.com, COMPANY:http://www.PARISOMA.com, OTHER:http://www.capdigital.com\",\r\nThomas LEFORT,tlefort@gmail.com,,tlefort@gmail.com,Contrebreak,Fondateur,\"10/7/14, 1:40 PM\",\"COMPANY:http://www.ipercom.com, COMPANY:http://www.ipergeo.com\",\r\nJean-David,BENICHOU,,jdb@via.io,Via.io,\"Founder, Owner & President\",\"4/28/15, 2:29 AM\",\"COMPANY:http://www.via.io, PERSONAL:http://www.facebook.com/jdbenichou\",SKYPE:jdbenichou\r\nJacques,FROISSANT ✅,,j.froissant@altaide.com,ALTAIDE,\"CEO ALTAÏDE Head Hunter, Recruitment, HR 2.0, Formation (LinkedIn Certified) / e-Commerce, Digital\",\"1/31/18, 11:10 PM\",\"OTHER:http://www.altaide.com, OTHER:http://altaide.typepad.com/, OTHER:http://www.altaide.com/offres-emploi/\",\r\nGuillaume,Meulle,,guillaume.meulle@xange.fr,XAnge,Managing Partner,\"2/10/15, 11:37 PM\",,\r\nThomas,DELALANDE thomasdelalande[at]gmail.com,,delalande.thomas@gmail.com,IMPACT partenaires,Directeur Associé,\"1/7/17, 5:07 AM\",,\r\nPhilippe,Rodriguez,,philrodv2@gmail.com,Avolta Partners,Managing Partner,\"9/24/16, 9:08 AM\",\"BLOG:http://philipperodriguez.com, COMPANY:http://www.avoltapartners.com\",SKYPE:philrodv2\r\nSylvain,Fievet,,s.fievet@pouraction.com,Le Cercle des Transformateurs,Initiateur,\"10/8/17, 1:52 AM\",\"COMPANY:http://www.alliancy.fr, COMPANY:http://www.pouraction.fr, PERSONAL:http://www.lorrainetalents.com\",\r\nHugues,Meili,Rennes,hugues.meili@niji.fr,Delta Dore,Membre du Conseil de Surveillance,\"2/15/12, 9:22 AM\",COMPANY:www.niji.fr,\r\nCarlos,Gaviola,,Carlosgaviola@aol.com,C&L G SAS,CEO and Founder,\"10/9/07, 1:55 AM\",,\r\nRobert,Wang,,rwang5688@outlook.com,Huawei Technologie (Futurewei Technologies),\"VP Engineering, Digital Telecom Architecture\",\"3/8/16, 7:16 AM\",\"COMPANY:http://www.mychrm.com, COMPANY:http://www.broadvision.com\",\r\nChristophe,Dimicoli,,cdimicoli@gmail.com,Software AG,Sales Team Leader,\"3/16/16, 8:00 AM\",,\r\nDavid,Jouarisse,\"25, rue de Ponthieu 75008 Paris\",david.jouarisse@gmail.com,Akka Venture,Partner,\"9/28/16, 9:52 AM\",OTHER:http://www.akkaventure.com,\"SKYPE:david.jouarisse, WEIXIN:DavidAkka\"\r\nEric,Lavenir,,eric.lavenir@sap.com,SAP,VP Global Business Development- SAP Convergent Charging & Billing solutions,\"7/16/07, 6:41 AM\",,\r\nLuc,Terral,,luc.terral@homepulse.fr,Homepulse,CEO and co founder,\"1/28/13, 12:30 AM\",\"COMPANY:http://www.homepulse.fr, COMPANY:http://www.timelab.io, COMPANY:http://www.powermetrix.fr\",\r\nFrançois,Paulus,,francois.paulus@hotmail.fr,Breega Capital,Founding Partner,\"7/9/10, 3:04 AM\",PERSONAL:http://www.tikimee.com/francoispaulus,\r\nZeev,Lerner,,zeev.lerner@audiocodes.com,AudioCodes,VP Mobility,\"5/26/16, 5:20 AM\",,\r\nObaid,Rahman,,obaid_r@hotmail.com,Ooredoo Global Services,Chief Commercial Officer (A),\"4/28/15, 2:39 AM\",,SKYPE:obaid1972\r\nPierre,Schaller,,psr@smart-lane.fr,Smart Lane,Associé fondateur,\"3/4/17, 2:03 AM\",COMPANY:http://smart-lane.fr,\r\nSophie,Bramly,,sophie.bramly@gmail.com,SOONSTORIES,co-founder,\"4/29/15, 11:34 AM\",COMPANY:http://www.secondsexe.com,\r\nNicolas,Gaume,,nicolas.gaume@gmail.com,Microsoft,Windows & Devices Group - Strategic partner relationships,\"2/15/16, 1:19 AM\",,SKYPE:nicolas_gaume\r\nLaurent,Azieres,,laz@adelanto.fr,Adelanto,Owner_Partner_General Manager,\"5/25/16, 8:47 AM\",COMPANY:http://WWW.ADELANTO.FR,\r\nBoris,AUCHE,,boris.auche@gmail.com,Atos,Business Technology Innovation Centers (BTIC) Network Lead,\"1/7/16, 6:11 AM\",\"OTHER:http://www.sghc.org, COMPANY:http://www.atos.net\",\r\nPhilippe,Nieto,,philippe.nieto@gmail.com,Lycamobile Group,Director International Business  Development,\"11/11/07, 4:48 PM\",COMPANY:http://www.lycamobile.com,SKYPE:philippenieto\r\nThierry,Grimaux VALTUS,,tg@grimaux.fr,VALTUS,Associé,\"6/29/14, 7:48 AM\",,\r\nFABRICE,PANCRAZI,,fabrice.pancrazi@fr.ibm.com,IBM France,\"Responsable Relation Cabinets de Conseil, IBM Cloud France\",\"3/14/18, 1:44 AM\",,\r\nSébastien,de Lafond,,sdelafond@me.com,MeilleursAgents.com,Co-Founder & CEO,\"10/21/17, 10:38 AM\",COMPANY:http://www.meilleursagents.com,\r\nOlivier,Bourhis,,olivier.bourhis@gmail.com,Open Business Consulting,Founder,\"12/9/16, 10:31 AM\",,SKYPE:olivierbourhis\r\nJean-Charles,Cointot,,jchcointot@gmail.com,IBM,\"Cognitive Cloud Business Development Executive, IBM Global\",\"8/2/10, 1:01 AM\",,\r\nThierry,Verrecchia,,thierryv@gmail.com,POCMAKER,CEO,\"6/23/17, 9:50 AM\",\"COMPANY:http://www.pocmaker.net, OTHER:http://twitter.com/thierry2r2c\",\r\nPaulo,Baptista,,paulobaptista@hotmail.fr,SAP,SVP Hana Cloud Platform & Mobile EMEA-MEE & Interim General Manager Telco Industry EMEA-MEE,\"2/9/17, 2:51 AM\",,\r\nRichard,Murbeck,,richardmurbeck@gmail.com,Eferio,CEO,\"5/28/17, 12:53 AM\",\"COMPANY:http://www.efer.io, OTHER:http://www.soc.io, COMPANY:http://www.seavus.com\",\r\nFrederic,Beauvais,,beauvais@phoracapital.com,ERCOM,Board member,\"3/5/18, 2:40 AM\",,\r\nMarc,WOLFF,,wolff@aerow.fr,STRATOW #contentservices #api #saas,Head of biz dev,\"3/3/14, 11:08 PM\",,\r\nFrederic,Offner,,foffner@hotmail.com,Weave,Partner - Insurance Practice,\"9/25/17, 11:13 AM\",,\r\nOllivier,Courtel,,ollivier.courtel@orange.com,Orange,responsable du département marketing livebox et décodeurs TV,\"1/21/13, 12:46 AM\",,\r\nCyrille,Ferrachat,,ferrachat@gmail.com,Air Liquide,Managing Director Home Healthcare Italy,\"3/30/13, 2:29 AM\",,\r\nPascal,Vitoux,,pascal@vitoux.com,ASG,Senior Vice President of Development & CTO,\"4/8/15, 8:04 AM\",COMPANY:http://www.asg.com,\r\nJerome,LECAT,,jlecat@scality.com,Scality,CEO,\"3/7/17, 9:59 AM\",COMPANY:http://www.scality.com,\r\nJacques,Velot,,velot@icloud.com,IMPRIMERIE NATIONALE S.A.,Vice President e-Solutions,\"9/14/15, 12:26 AM\",,\r\nAmitava,Dutta,,ad0312@gmail.com,ADAPT SOLUTIONS,Advisor,\"11/1/15, 8:07 PM\",COMPANY:http://www.adaptsolutions.in,\r\nAntoine,RIOLLET,,antoine@gris-metal.com,ANTINÉO,Cofondateur,\"6/15/16, 10:20 AM\",\"COMPANY:http://www.gris-metal.com, BLOG:http://gris-metal.tumblr.com/\",\r\nEric,Pradel Lepage,,eric.pradel-lepage@exxing.consulting,EXXING STRATEGY CONSULTANTS,Founder and Managing Partner,\"1/9/12, 2:00 AM\",\"COMPANY:http://www.exxing.com, COMPANY:http://www.exxing.consulting\",SKYPE:eric.pradel\r\nPhilippe,Besseyre des Horts,,philippe@pbdh.net,Italtel,Vice President Sales Northern Europe,\"7/9/14, 8:57 AM\",PERSONAL:http://www.pbdh.net,SKYPE:phbdh2\r\nCyril,Bertrand,,Cyril.bertrand@xange.fr,XAnge / SPI,Managing Partner,\"4/20/15, 1:19 AM\",,\r\nDamien,Guermonprez,,d.guermonprez@gmail.com,Lemon Way,Chairman,\"6/22/17, 3:28 AM\",\"OTHER:http://www.buyway.be, OTHER:http://www.lemonway.fr, OTHER:http://www.but.fr\",\r\nSylvain,LAGARDE,,Sylvain.LAGARDE@ples.net,PLES Convergence,CEO and Owner,\"3/29/05, 4:27 AM\",\"PERSONAL:http://www.ples.net/index.php?lang=en, COMPANY:http://www.ples.net/index.php?lang=en\",\r\nMartin,Kaiser,,martin.kaiser@hager.fr,Hager Group,Directeur Business Group Services,\"9/23/11, 8:53 AM\",\"COMPANY:http://www.hagergroup.net, OTHER:http://www.sciences-po.fr, OTHER:http://www.club-economique-franco-allemand.org\",\r\nBénédicte,Javelot,,benedicte.javelot@orange.com,Orange,Chief Strategy Officer,\"11/25/07, 9:41 PM\",,\r\nDidier,LOUVET,,didier.louvet@bsconvergence.com,Le Groupe La Poste,Directeur,\"8/15/13, 6:16 AM\",\"PERSONAL:http://www.adminium.fr, PORTFOLIO:http://www.wishbox.fr, PORTFOLIO:http://www.avantageshopping.com\",\r\nWestley,Koenen,,wkoenen@gmail.com,\"Charter School Capital, Inc.\",Executive Vice President,\"11/20/06, 10:16 AM\",COMPANY:http://www.greenscreenanimals.com,\r\nCédric,Curtil,,cedric@curtil.org,Société Générale,\"Directeur de la Stratégie et de l'Innovation, Retail France\",\"1/31/11, 11:27 PM\",,\r\nYves,de Montcheuil,,yves@montcheuil.com,Axeleo,Senior Partner,\"11/23/16, 10:50 PM\",OTHER:http://www.infoworld.com/blog/data-insights/,\r\nHatem,MESTIRI,,hatem.mestiri@ooredoo.tn,Ooredoo Tunisie,Chief Technology Officer,\"4/5/11, 7:12 AM\",,\r\nHervé,Simonin,,herve.simonin@none.net,linkfluence,CEO,\"6/16/17, 12:52 AM\",,\r\nFranck,Moine,,fmoine@gmail.com,Winnovation,CEO,\"8/22/10, 5:43 PM\",,\r\nMaurice,ZEMBRA,,mze2008@gmail.com,VERTICAL M2M,General Manager and co-founder,\"9/24/06, 9:24 PM\",\"COMPANY:http://www.vertical-m2m.com, COMPANY:http://www.u-shine.net, COMPANY:http://www.onesen.se\",\r\nOlivier,Hua,,olivierhua@yahoo.com,AT&T,Senior Procurement Specialist,\"4/30/15, 10:08 AM\",,\r\nWilfried,Yver,,wilfried@yver.nom.fr,Orange,Big Data Leader OMEA / Orange Big Data Group Program,\"3/20/15, 7:03 AM\",PERSONAL:http://www.yver.nom.fr,\r\nThierry,WELLHOFF,,tw@wellcom.fr,Syntec Conseil en Relations Publics,Administrateur ,\"1/22/18, 8:21 AM\",COMPANY:http://www.wellcom.fr,\r\nThomas,Gubler,,thomas@66nth.com,66 NTH,Partner,\"9/2/13, 12:31 AM\",,\r\nEric,d'Andigné,,edandigne@icloud.com,ORONE,CEO,\"5/23/12, 5:02 AM\",COMPANY:http://www.orone.com,\r\nBoris,\"Kontsevoi, COP\",,boris@intetics.com,Intetics Inc.,President & CEO,\"10/27/16, 6:19 AM\",COMPANY:http://www.intetics.com,SKYPE:boris.kont\r\nFrancois,Nuyts,,francois@nuyts.org,Amazon,\"President & Managing Director, Amazon Italy & Amazon Spain\",\"11/9/11, 9:50 AM\",PORTFOLIO:http://www.amazon.es,\r\nOlivier,Grootenboer,,ojg@alcandre.com,ALCANDRE,CEO,\"2/16/13, 11:06 AM\",COMPANY:http://www.alcandre.com/alcandre-home.htm,\r\nJosep A.,Aliagas,,jaaliagas@gmail.com,Kompyte,VP of Corporate Development,\"6/22/08, 5:16 PM\",,\r\nMichel,KOCHANSKI,,michel.kochanski@gmail.com,Déadia,Business Development Manager,\"9/7/14, 11:10 AM\",,\r\nJan,Louwes,,jlouwes@planet.nl,Interoute,Executive Vice President,\"5/4/15, 3:30 AM\",COMPANY:http://www.interoute.com,\r\nBertrand,Collongy,,bcollongy@gmail.com,Honeywell Safety & Productivity Solutions ,\"Region Sales director South & East Europe, META & CIS Countries\",\"2/14/16, 3:47 PM\",,\r\nJean-Pascal,Dragon,,jpascaldragon@yahoo.fr,Elior,Head of International Business Development & Strategic Studies,\"1/10/14, 6:39 AM\",,\r\nLilian,Morinon,,lilian_morinon@yahoo.fr,Sopra Steria,Director - Lyon I2S Agency,\"5/23/10, 7:17 PM\",OTHER:http://www.utagawavtt.com,\r\nEric,Pillevesse,,eric.pillevesse@sap.com,SAP Labs France,Managing Director ,\"10/31/07, 5:36 PM\",COMPANY:http://www.sap.com,\r\nAlan,Quayle,,alan@alanquayle.com,Alan Quayle Business & Service Development,Owner,\"10/21/15, 5:35 PM\",\"PERSONAL:http://www.alanquayle.com, BLOG:http://www.alanquayle.com/blog/, RSS:http://www.alanquayle.com/blog/atom.xml\",SKYPE:alanquayle\r\nDaniel,Jacobson,,daniel.jacobson@live.com,ActSeed Corporation,Co-Founder and Chief Technology Officer,\"10/11/06, 11:30 AM\",COMPANY:http://www.actseed.com,\r\nFederico,Ermacora,,I017049@yahoo.com,Ivalua,Sales Director Italy,\"4/29/15, 6:36 AM\",,\r\nJean-David,Chamboredon,,jdc@roundfield.net,France Digitale,Co-President,\"8/25/16, 5:58 AM\",COMPANY:http://www.isai.fr,\r\nVernon,Keenan,\"2809 Telegraph Ave., Suite 202 Berkeley, CA 94705\",vern@telnexus.com,Telnexus LLC,CEO,\"9/8/15, 1:51 PM\",\"COMPANY:http://www.berkeleylogic.com, OTHER:http://www.facebook.com/berkeleylogic\",\r\nPatrick,Amiel,,patamiel@gmail.com,Honey Lab,Fondateur,\"12/28/12, 7:45 PM\",,\r\nStéphane,Riche,,stephane.riche@crossknowledge.com,CrossKnowledge,Global Account Director,\"6/4/07, 3:24 AM\",COMPANY:http://www.crossknowledge.com,\r\nLaurent,Chivallier,,laurent.chivallier@apilinx.com,AirTies Wireless Networks,Consultant - VP Sales & Business Development APAC,\"3/6/12, 2:41 AM\",\"OTHER:http://www.triumemba.org/, OTHER:http://www.apilinx.com\",SKYPE:lchivall\r\nWilliam,Barrar,,william_barrar@hotmail.com,Freelance,Management Consultant,\"6/17/08, 6:48 PM\",,\r\nEmmanuel,PIERRE,,emmanuel.pierre@gmail.com,Opencell Software,CPO,\"10/31/07, 12:52 AM\",\"PERSONAL:http://www.emmanueletsophie.com, COMPANY:http://www.dartybox.com\",GTALK:emmanuel.pierre@gmail.com\r\nNicolas,Levi,,nicolas.levi@orange.com,Orange,VP Strategy and Development Mobile Financial Service MEA,\"5/23/11, 12:37 AM\",,\r\nNathalie,BARBERIS,,nbarberis@hotmail.com,cadeaux.com,Directrice,\"4/23/12, 2:03 PM\",\"COMPANY:http://www.transatel-mobile.com, COMPANY:http://www.videofutur.com, COMPANY:http://www.numericable.be\",MSN:nbarberis@hotmail.com\r\nLaurent,Thoumine,Paris,laurent.thoumine@gmail.com,Accenture,Managing Director,\"1/15/15, 1:23 AM\",COMPANY:http://www.accenture.com,\r\nSerge,Miranda,,serge.miranda@unice.fr,mbds,founder and director of Mbds ( ICT master and innovation lab.),\"10/2/11, 6:19 AM\",COMPANY:http://www.mbds-fr.org,SKYPE:Gascon06\r\nJean,Garnier,,jgarnier@colmont.com,BlockTravel,Directeur des programmes de recherche et d'innovation,\"2/28/18, 2:17 PM\",\"COMPANY:http://www.cybersas.com, COMPANY:http://www.colmont.com\",\r\nDenis,Rabate,,dr@enginee-ring.com,zappik.com,CEO,\"7/20/16, 6:07 AM\",COMPANY:zappik.com,\r\nLaurent,Gaquiere,,laurentgaquiere@hotmail.com,VISEO,Operators and Services Director,\"5/19/16, 11:00 AM\",,MSN:laurentgaquiere@hotmail.com\r\nArnaud,Bourboulon,,arnaud.bourboulon@gmail.com,Worldline an Atos Company,Head of Bid Management and Sales,\"3/3/17, 4:14 AM\",COMPANY:http://www.mnc-services.com,\r\nDelphine,Pasquier,,Pasquier_Delphine@hotmail.com,Bouygues Telecom,Responsable activité Wholesale Fixe,\"8/25/10, 2:13 AM\",,\r\nJean-Luc,Cyrot,,jlcyrot@time-4g.com,Time for Growth (previously Time Equity Partners),Partner,\"7/1/10, 1:39 AM\",COMPANY:http://www.time-ep.com,\r\nYoussef,Faury,,yousseffaury@gmail.com,Microsoft,\"Director, Business Developement- Azure Mobile Dev Tools, Cloud Application platform\",\"1/25/11, 6:16 AM\",,\r\nSandra,Taborin,,sandra.taborin@mac.com,Cisco,Client Executive,\"11/1/07, 7:41 PM\",,\r\nNicolas,d'Hueppe,,nicolasdhueppe@hotmail.com,Alchimie,CEO & founder,\"8/18/16, 10:38 AM\",,\r\nDavid,GANEM,,jmganem@advanciacallcenter.com,ADVANCIA,CEO,\"5/17/15, 7:34 AM\",,\r\nL.J.,Brock,,brock@citadel.com,Citadel LLC,Chief People Officer,\"6/24/07, 11:26 PM\",COMPANY:https://www.citadel.com/,\r\nLaurent,SAFAR,,laurent.safar@adaptive-channel.com,Adaptive / Connecting the traveller,CEO,\"9/5/17, 7:48 AM\",,\r\nPierre,SCHULER,,pierre.schuler@outlook.com,AVENCALL,President,\"11/4/15, 7:40 AM\",COMPANY:http://www.linkcareservices.com/,\r\nRégis,Castagné,,regis.castagne@eu.equinix.com,Equinix,Regional Managing Director Southern Europe,\"6/11/15, 1:34 AM\",\"PERSONAL:http://www.theuran.com, PERSONAL:http://www.lesallay.com\",SKYPE:regis.castagne\r\nLaurent,Herbillon,,laurent.herbillon@outlook.com,BNP Paribas,Open Innovation and Startups Cooperation,\"3/3/17, 8:38 AM\",,\r\nPierre,Antonio,,pantonio@trustdesigner.com,Trust Designer,CEO,\"6/26/12, 8:07 AM\",COMPANY:www.trustdesigner.com,SKYPE:pan_jware\r\nEd,den Ouden,,docrecruit@xs4all.nl,DOCRecruit,Owner/Recruitment Consultant,\"10/1/08, 7:04 AM\",PERSONAL:http://www.docrecruit.nl,SKYPE:edjurij\r\nDon,Lavoie,,donlavoie@cox.net,Developmetrics,President & CEO,\"1/29/07, 7:21 AM\",COMPANY:http://www.sekurus.com,\r\nDidier,Le Jolie,,dlejolie@gmail.com,YSATIA,\"Expert Telecom, Chargé d'affaires\",\"5/2/15, 8:44 PM\",,\r\nRaphael,GOUMOT,,raphael.goumot@gmail.com,CREAgile - Mobilisons l'intelligence collective,\"President, co-founder\",\"11/28/11, 1:21 PM\",COMPANY:http://www.creagile.fr,SKYPE:raphael.goumot\r\nAndrew,White,,andrew@whitesuk.com,Harberry & Company,Managing Partner,\"1/18/08, 3:06 AM\",,\r\nDavid,Setrouk,,david@setrouk.net,Angage,\"CEO, Co-Founder&Co-Owner\",\"11/1/07, 8:05 PM\",\"COMPANY:http://www.netvisio.com, BLOG:http://blog.netvisio.com\",\r\nTobias,Skog,,tobias@skog.ch,Skog Consulting Pty Ltd,Owner,\"4/28/15, 2:51 AM\",,\r\nClaudio,\"Toyama, MA, ACC, DTM\",,claudio@toyamaco.com,Toyama&Co.,CEO | Leadership Consultant | Thought Leader | Keynote Speaker,\"1/11/16, 3:30 PM\",COMPANY:http://www.toyamaco.com,SKYPE:ctoyama\r\nStéphane,Lebas,,stephane_lebas@me.com,Betclic Group,Chief Product & Customer Officer,\"9/13/17, 7:53 AM\",,GTALK:menelik06@gmail.com\r\nNicolas,Brogné,,nicolasbrogne@hotmail.com,Crédit Agricole CIB,Data & Analytics Product Manager,\"2/19/09, 2:30 AM\",COMPANY:http://www.jouve.com,\r\nJean Paul,Figer,,jfiger@figer.com,ARMOSC,Président,\"5/6/15, 6:47 AM\",\"PERSONAL:http://www.figer.com, PERSONAL:http://www.armosc.com\",\r\nJean-Philippe,Betoin,,jp.betoin@free.fr,Morpho,Head of Mobile Solutions,\"5/7/12, 7:22 AM\",,\r\nDarran,Peters,,darranpeters@hotmail.com,Ericsson Telekommunikation GmbH & Co.KG,Director Channel Sales,\"5/14/15, 11:27 PM\",,\r\nNajah,Naffah,,najah.naffah@gmail.com,Naffah Consulting,President,\"5/12/15, 12:35 PM\",,\r\nxavier,dupont,,xavier.dupont@gmail.com,Digitick,\"Director, Digitick agency & network : leader in ticketing e-commerce, advertising and media\",\"9/2/15, 12:32 AM\",\"COMPANY:http://www.digitick.com, COMPANY:http://www.infoconcert.com, COMPANY:http://www.zepass.com\",\r\nOlivier,LALLIER,,groupes@scibees.com,Le Lab RH,Strategic Board member & Development director,\"12/21/10, 12:44 AM\",,\r\nGérard,Dahan,,dahang1@yahoo.fr,Determine,CMO and EMEA SVP,\"5/29/13, 4:31 AM\",,\r\nEd,Maguire,,maguireede@gmail.com,Momenta,Insights Partner,\"5/21/17, 10:29 PM\",\"BLOG:https://deepfieldsblog.wordpress.com/, PERSONAL:https://soundcloud.com/ed-maguire-1, PORTFOLIO:https://www.slideshare.net/edmaguire\",\r\nThomas,Mitard,,tmitard@gmail.com,THM Capital Advisory,Managing Partner,\"4/16/14, 1:14 AM\",,\r\nAntoine,Guéville,,aguevill@outlook.com,Hager Group,Marketing & Customers Relationship Director - Hager Services,\"11/10/15, 5:56 AM\",,\r\nFrédéric,Leridon,,frederic.leridon@sap.com,SAP,VP Business Development,\"6/27/15, 1:53 AM\",,\r\nDavid,Chevenement,,chevenement_david@yahoo.fr,BeesApps,CEO - Founder,\"1/19/18, 1:22 PM\",COMPANY:http://www.beesapps.com,\r\nDickel,Sooriah,,dickel.sooriah@gmail.com,Actility,VP Business Development & IoT Product Strategy,\"3/6/17, 12:43 PM\",\"COMPANY:http://www.groupcamp.com, BLOG:http://www.groupcamp.com/blog/en, OTHER:http://www.groupcamp.com/project\",\r\nNicolas,Aube,,Nicolas.Aube@celeste.fr,CELESTE,Owner and CEO,\"4/28/15, 4:08 AM\",COMPANY:http://www.celeste.fr,\r\nThibaut,Raballand,\"131 rue de Rennes, Paris\",thibaut.raballand@gmail.com,Parkeon,Lead System Architect,\"9/27/17, 2:53 AM\",OTHER:http://thibautraballand.brandyourself.com/,\r\nDavid,Valcke,,david.valcke@atomiz.com,Prélys,Co Founder & CEO,\"5/8/12, 12:54 AM\",COMPANY:http://www.atomiz.com,\r\nFranck,Cherpin,,franck.cherpin@gmail.com,Performance Libérée ,\"Facilitateur & Coach Libération de la Performance,des Talents et de l'Entreprise\",\"3/20/18, 9:52 AM\",,\r\nGeorges-Pierre,Selmer,,selmerge@nrjmobile.fr,Euro-Information Telecom,Digital Project Manager,\"9/20/10, 12:19 AM\",,\r\nPascal,Prot,,pprot@legos.fr,Legos,CEO,\"3/3/17, 5:17 AM\",COMPANY:http://www.legos.fr,SKYPE:pascal\r\nDidier,Delhaye,1331 Rosieres,ddelhaye.conseil@gmail.com,Tikibuzz,Associé,\"11/25/14, 3:05 AM\",,SKYPE:Didier.delhaye_3\r\nPascal,Fischer,,p.fischer.perso@wanadoo.fr,Eptica,Customer Success Director,\"10/5/15, 8:39 AM\",,\r\nSebastien,Gioria,,seb@gioria.org,AppSecFR,Owner & Principal Senior Expert,\"9/26/11, 11:46 PM\",\"COMPANY:http://www.advens.fr, BLOG:http://blog.gioria.org, OTHER:https://www.owasp.org\",GTALK:seb@gioria.org\r\nStephane,Dine,,sdine.pro@gmail.com,Opencell Software,Directeur Avant-Vente & Delivery,\"10/31/07, 8:24 PM\",,\r\nMarie,Horrein,,marie.horrein@gmail.com,Intersec Group,Orange Global Sales Director,\"11/6/07, 6:06 AM\",,\r\nOlivier,BALEIX,,olivier@baleix.eu,ACCORD Investment Business Consulting,Partner & General Manager,\"5/2/14, 9:03 AM\",\"COMPANY:http://www.impacct.fr, COMPANY:http://www.ccifc.org, COMPANY:http://www.cerclefrancophone-qingdao.com\",\r\nPierre,Françon,,pierre.francon@quaelys.com,Quaelys,CEO,\"11/5/07, 4:51 AM\",\"COMPANY:http://www.quaelys.com/, OTHER:http://www.eestel.com/\",\r\nYvan,GRAVIER,,ygravier@eliocity.com,Xee,CEO,\"3/26/16, 4:39 AM\",\"PORTFOLIO:http://www.neotilus.com, COMPANY:http://www.neosesame.com, PORTFOLIO:http://www.degetel.com\",\r\nDidier,Hingant,,dihingant@gmail.com,ERDF,Directeur Pôle Télécom,\"5/12/16, 12:33 PM\",,\r\nLionel,Deparis,,lionel.deparis@neuf.fr,DOCAPOST,Senior Account Executive,\"3/28/14, 3:41 AM\",\"OTHER:http://www.ex-BO.org, OTHER:http://www.viadeo.com/public/profil/?memberId=002430hyk01pmcz, COMPANY:http://www.docapost-bpo.com\",\r\nBertrand,DUPUIS,,bertrand.dup8@gmail.com,HMD Global,\"General Manager, France\",\"12/28/12, 10:21 AM\",,\r\nCédric,Bassaget,,cbassaget@yahoo.com,Opencell Software,Sales Director,\"10/31/07, 11:26 PM\",COMPANY:http://www.mobile-devices.com,\r\nAndrew,Dailey,,adailey@mgiresearch.com,\"MGI Research, LLC\",Managing Director,\"6/11/17, 10:28 PM\",\"BLOG:http://mgiresearch.typepad.com/tech_industry_analysis/, COMPANY:http://www.mgiresearch.com\",\r\nPascale,Paris Gonzalez,,parispascale@yahoo.fr,LBL - DEVELOPPEMENT ET PRODUCTION,Co-Founder,\"11/18/07, 11:00 PM\",,\r\nChandan,Ghosh,,chandan.1004@gmail.com,Mañana Innovtions Pvt Ltd,\"Mentor, Chief Strategy & Belief Officer, Evangalist\",\"2/2/07, 2:12 AM\",\"COMPANY:http://www.mananadigital.com, COMPANY:www.mananainnovations.com\",SKYPE:Chandan.1004\r\nJean-David,Fogiel,157 boulevard Mac Donald 75019 paris,jdfogiel@ipercast.net,ipercast,Owner CEO,\"2/27/11, 2:46 PM\",,\r\nfogiel,jd,,jd.fogiel@ipercast.net,ipercast,Owner,\"8/27/08, 10:02 PM\",,\r\nJérémie,Wainstain,,jwa@thegreendata.com,TheGreenData,Founder & CEO - Directeur fondateur,\"9/25/10, 9:51 PM\",COMPANY:http://www.thegreendata.com,\r\nAnne,DEL SARTO,,annedels@microsoft.com,Microsoft,Enterprise Channel Manager,\"2/6/17, 10:14 AM\",,\r\nOlivier,Urcel,,olivier.urcel@gmail.com,Groupe PSA,\"VP, Chief Data Officer\",\"10/31/07, 1:20 AM\",,\r\nLaurent-Cyril,VEDEL,,laurent-cyril@vedel.org,Gfi Informatique,Senior Consultant,\"4/7/16, 9:52 AM\",\"COMPANY:http://www.gfi.fr/, OTHER:https://www.mae.fr/\",\r\nDenis,Lafont-Trevisan,,denis.lafont@gmail.com,Talao (formerly eMindHub),All things Growth,\"1/16/16, 10:05 AM\",COMPANY:http://www.DesignedforWork.com,\r\nSteven,Wolfe Pereira,,wolfepereira@mac.com,Quantcast,Chief Marketing and Communications Officer,\"11/16/06, 11:47 PM\",OTHER:http://www.seo-usa.org/index.aspx,\r\nBenoit,ANDRADE,11bis Avenue Mac Mahon - 75017 -  Paris France,bandrade@arrowman.eu,Arrowman Executive Search,Associate Partner,\"2/3/16, 1:32 AM\",COMPANY:http://www.arrowman.eu,\r\nChristophe,Dumoulin,,christophe.dumoulin@businessdecision.com,Inforte,president,\"11/24/16, 1:34 AM\",\"COMPANY:http://www.businessdecision.com, COMPANY:http://www.inforte.com\",\r\nHervé,Lemaitre,,hlemaitr@redhat.com,Red Hat,Senior Business Strategist,\"11/25/16, 10:22 PM\",\"COMPANY:http://www.redhat.com, OTHER:http://opensource.com, OTHER:https://enterprisersproject.com/\",\r\nCedric,Monnier,,cedric.monnier@gmail.com,FlameFy (we are hiring!),CEO,\"1/16/16, 5:29 AM\",\"BLOG:http://www.opendigitalalliance.com, COMPANY:http://flamefy.com\",\r\nJD,Sillion,,jd.sillion@flatironssolutions.com,Flatirons Solutions®,CEO,\"9/27/16, 2:41 AM\",,\r\nYury,Kabrits,,kabrits@dataart.com,DataArt,Senior Vice President of Engineering,\"10/27/15, 7:10 AM\",,\r\nStéphane,ALLAIRE,,sallaire@bouyguestelecom.fr,Objenious by Bouygues Telecom,CEO,\"1/18/16, 12:28 PM\",,\r\nBaley,OUATTARA,,baleyouattara@gmail.com,Groupement  Orange Services ,Strategy and Development  Director ,\"8/11/17, 10:54 AM\",,SKYPE:Baleyo\r\nSerge,DAUTRIF,,serge.dautrif@mailhec.com,SYNAPSCORE,CEO,\"9/10/17, 2:17 AM\",COMPANY:http://www.synapscore.com,\r\nRemi,Gas,,remi@famillegas.fr,Louis Dreyfus Company,CIO for EMEA & Global CTO,\"9/23/09, 5:06 PM\",,\r\nOlivier,Gerhardt,,olivier_gerhardt@hotmail.com,WAVECELL,\"Co-Founder, CEO\",\"7/10/15, 4:01 AM\",OTHER:http://www.wavecell.com,"
+						},
+						"url": {
+							"raw": "{{opencell.url}}/contact/importLinkedInFromText",
+							"host": [
+								"{{opencell.url}}"
+							],
+							"path": [
+								"contact",
+								"importLinkedInFromText"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Contact / Import Text 2",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{opencell.password}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{opencell.username}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic b3BlbmNlbGwuYWRtaW46b3BlbmNlbGwuYWRtaW4="
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "\tName,Given Name,Additional Name,Family Name,Yomi Name,Given Name Yomi,Additional Name Yomi,Family Name Yomi,Name Prefix,Name Suffix,Initials,Nickname,Short Name,Maiden Name,Birthday,Gender,Location,Billing Information,Directory Server,Mileage,Occupation,Hobby,Sensitivity,Priority,Subject,Notes,Language,Photo,Group Membership,E-mail 1 - Type,E-mail 1 - Value,E-mail 2 - Type,E-mail 2 - Value,E-mail 3 - Type,E-mail 3 - Value,IM 1 - Type,IM 1 - Service,IM 1 - Value,Phone 1 - Type,Phone 1 - Value,Phone 2 - Type,Phone 2 - Value,Address 1 - Type,Address 1 - Formatted,Address 1 - Street,Address 1 - City,Address 1 - PO Box,Address 1 - Region,Address 1 - Postal Code,Address 1 - Country,Address 1 - Extended Address,Organization 1 - Type,Organization 1 - Name,Organization 1 - Yomi Name,Organization 1 - Title,Organization 1 - Department,Organization 1 - Symbol,Organization 1 - Location,Organization 1 - Job Description,Website 1 - Type,Website 1 - Value\r\n\tAbby Hert,Abby,,Hert,,,,,,,,,,,,,,,,,,,,,,,,,* myContacts,* Home,wizard.girl.45@gmail.com,,,,,,,,,,,,,,,,,,,,,,,,,,,,,homePage,fb://profile/100000322720031\r\n\tAchille Gaborit,Achille,,Gaborit,,,,,,,,,,,,,,,,,,,,,,,,,* myContacts,,,,,,,,,,Mobile,+33 6 33 87 96 70,,,,,,,,,,,,,,,,,,,,,\r\n\tAdrián Ordóñez,Adrián,,Ordóñez,,,,,,,,,,,,,,,,,,,,,,,,https://lh3.googleusercontent.com/-PVMK55MlrWM/Ux36vI09P_I/AAAAAAAAAAA/j_0GfrfuTAgK1p7Ewa8TB9hvPy6NzG_JgCOQCEAE/photo.jpg,* myContacts,* Home,caju_adri@hotmail.com,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,\r\n\tAdrien Lalanne,Adrien,,Lalanne,,,,,,,,,,,,,,,,,,,,,,,,https://lh3.googleusercontent.com/-FUobS6M1Uaw/Ux36iE09OqI/AAAAAAAAAAA/LcACOkMwxiUQin606JzmJ5Z74meB2OGHACOQCEAE/photo.jpg,* myContacts,,,,,,,,,,Mobile,+33 6 67 58 40 02,,,,,,,,,,,,,,,,,,,,,\r\n\tAhmed Seifelnasser,Ahmed,,Seifelnasser,,,,,,,,,,,,,,,,,,,,,,,,,* myContacts,,,,,,,,,,Mobile,+33626470045,,,,,,,,,,,,,,,,,,,,,\r\n\tAlbert Domenech,Albert,,Domenech,,,,,,,,,,,,,,,,,,,,,,,,,* myContacts,* Home,albertodomenech@me.com,,,,,Home,Aim,Albert@me.com,Mobile,+34 630 233 288,Work,+1 (425) 463-6630,,,,,,,,,,,,,,,,,,,\r\n\tAlexander Pardo,Alexander,,Pardo,,,,,,,,,,,,,,,,,,,,,,,,,* myContacts,,,,,,,,,,Mobile,06 34 61 19 76,Home,01 42 28 18 68,,,,,,,,,,,,,,,,,,homePage,fb://profile/1273187083\r\n\tAlexandra Blanc,Alexandra,,Blanc,,,,,,,,,,,,,,,,,,,,,,Ajouté par Bump le 29 sept. 2009  à 11:09:12 (GMT+0200).,,https://lh3.googleusercontent.com/-tWmH0hhg8JA/Ux35lVFccVI/AAAAAAAAAAA/gVQPr8eOv0EwU-X-mbLi0yEN6rKADikpgCOQCEAE/photo.jpg,* myContacts,* Home,alex_white_14@hotmail.com,Home,ablanc14@aol.fr,,,,,,Mobile,06 21 25 08 90,,,,,,,,,,,,,,,,,,,,homePage,fb://profile/511300152\r\n\tAlexandra Stefanos,Alexandra,,Stefanos,,,,,,,,,,,,,,,,,,,,,,,,,* myContacts,,,,,,,,,,Mobile,06 22 96 22 02,,,,,,,,,,,,,,,,,,,,,\r\n\tAlexandre Dumont,Alexandre,,Dumont,,,,,,,,,,,,,,,,,,,,,,,,https://lh5.googleusercontent.com/-YRQJByonk8I/Ux35t9nI3XI/AAAAAAAAAAA/ybuS1Pt3xM0kVYTSf9t10ihwILPbPjBXgCOQCEAE/photo.jpg,* myContacts,,,,,,,,,,Mobile,+33 6 59 85 13 39,,,,,,,,,,,,,,,,,,,,,\r\n\tAlexandre Lefaillet,Alexandre,,Lefaillet,,,,,,,,,,,,,,,,,,,,,,,,https://lh4.googleusercontent.com/-lfCdk6DeVa8/Ux36kyL7zEI/AAAAAAAAAAA/QOXYAedsg3A20W-F7e7fZ-ZH-PuQXYFkACOQCEAE/photo.jpg,* myContacts,,,,,,,,,,Mobile,+33 6 31 19 81 06,,,,,,,,,,,,,,,,,,,,,\r\n\tAlexia Brard,Alexia,,Brard,,,,,,,,,,,,,,,,,,,,,,,,https://lh6.googleusercontent.com/-RnxBEhnSy1M/Ux35pTsPXUI/AAAAAAAAAAA/hL046JstBqsStF-cUE_hdWrCz5780bDVgCOQCEAE/photo.jpg,* myContacts,* Home,c-alex-du-44@hotmail.fr,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,\r\n\tAlice Dupas,Alice,,Dupas,,,,,,,,,,,,,,,,,,,,,,,,,* myContacts,,,,,,,,,,Mobile,+33 6 77 59 42 86,,,,,,,,,,,,,,,,,,,,,\r\n\tAlina Valnet,Alina,,Valnet,,,,,,,,,,,,,,,,,,,,,,,,,* myContacts,,,,,,,,,,Mobile,+33652703409,,,,,,,,,,,,,,,,,,,,,\r\n\tAline Hayoun,Aline,,Hayoun,,,,,,,,,,,,,,,,,,,,,,,,,* myContacts,* Home,ahayoun@eab.fr,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,\r\n\tAnaïs Addad,Anaïs,,Addad,,,,,,,,,,,,,,,,,,,,,,,,https://lh5.googleusercontent.com/-C-OKc2dX6s8/Ux312RiuMTI/AAAAAAAAAAA/NQry3HNAFMsf9A68ZforGBflrSctqjgNwCOQCEAE/photo.jpg,* myContacts,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,\r\n\tAnais Ferreira,Anais,,Ferreira,,,,,,,,,,,,,,,,,,,,,,,,https://lh4.googleusercontent.com/-v9Reqo38eV4/Ux35vvcI8zI/AAAAAAAAAAA/FKb_b1Iehr8FjtTYjkKxB4iAFtm8GXhpACOQCEAE/photo.jpg,* myContacts,* Home,la-tite-chiieuse-du-77@hotmail.fr,Work,anaistrampo93@hotmail.fr,,,,,,Mobile,06 25 89 33 25,,,Home,France,,,,,,France,,,,,,,,,,,\r\n\tAnnabelle Aurouet,Annabelle,,Aurouet,,,,,,,,,,,,,,,,,,,,,,,,https://lh3.googleusercontent.com/-2TOzE9UfECc/Ux32sv1fwHI/AAAAAAAAAAA/OdgxwI50X-8zKAwmOlbwQn75agnNz5I1gCOQCEAE/photo.jpg,* myContacts,* Home,nanabelle-estdanslaplace-jvd@hotmail.fr,,,,,,,,Mobile,06 67 25 35 42,,,,,,,,,,,,,,,,,,,,,\r\n\tAnnaïc Leroux,Annaïc,,Leroux,,,,,,,,,,,,,,,,,,,,,,,,https://lh5.googleusercontent.com/-tc_lJMBVmXE/Ux36ncvGYMI/AAAAAAAAAAA/3Tfoxsfbu3QZNkRuRooaHYUIRMhOurrXACOQCEAE/photo.jpg,* myContacts,* Home,styleblue@hotmail.fr,,,,,,,,Mobile,06 73 08 65 48,,,Home,4 chemin de la Briantière La Paquelais 44360 France,4 chemin de la Briantière,La Paquelais,,,44360,France,,,,,,,,,,,\r\n\tAntoine Durand,Antoine,,Durand,,,,,,,,,,,,,,,,,,,,,,PSTE ING1,,,* myContacts,* INTERNET,durand@ece.fr,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,\r\n\tApple,Apple,,,,,,,,,,,,,,,,,,,,,,,,,,https://lh6.googleusercontent.com/-giYnsPy0ehM/Ux32NKjsYiI/AAAAAAAAAAA/lQPHP8dXPY4CWcVjfSfVp8n6epWICjrIwCOQCEAE/photo.jpg,* myContacts,,,,,,,,,,Work,+33 (0)1 56 52 96 00 ::: 0825 88 80 24,,,Work,\"12, av. d'Océanie ZA de Courtabœuf Les Ulis Cedex 91956 France ::: CS 81626 7, place d’Iéna Paris cedex 16 75773 France\",\"ZA de Courtabœuf 12, av. d'Océanie ::: 7, place d’Iéna CS 81626\",Les Ulis Cedex ::: Paris cedex 16, ::: , ::: ,91956 ::: 75773,France ::: France, ::: ,Work,Apple,,,,,,,homePage,http://www.apple.com/fr/\r\n\tBaptist,Baptist,,,,,,,,,,,,,,,,,,,,,,,,,,,* myContacts,,,,,,,,,,Mobile,0670858590,,,,,,,,,,,,,,,,,,,,,\r\n\tBastien Thieux,Bastien,,Thieux,,,,,,,,,,,,,,,,,,,,,,,,,* myContacts,,,,,,,,,,Mobile,+33 6 28 98 88 23,,,,,,,,,,,,,,,,,,,,,\r\n\tBen Gelbart,Ben,,Gelbart,,,,,,,,,,,,,,,,,,,,,,,,https://lh5.googleusercontent.com/-NDJBeSX-mDw/Ux35y2AUO3I/AAAAAAAAAAA/tGtgUrt3-Esj-sYIkpYBbROuDg3Yw9T3wCOQCEAE/photo.jpg,* myContacts,* Home,justben@hotmail.co.uk,,,,,,,,,,,,,,,,,,,,,,,,,,,,,homePage,fb://profile/742540235\r\n\tBenjamin Brabant,Benjamin,,Brabant,,,,,,,,,,,,,,,,,,,,,,,,https://lh5.googleusercontent.com/-jl_CrwY-G2Y/Ux35o56QEEI/AAAAAAAAAAA/8aGfZJZihWYF00DDl5ggT8RtUmIae-AbACOQCEAE/photo.jpg,* myContacts,,,,,,,,,,Mobile,+33 6 37 21 04 01,,,,,,,,,,,,,,,,,,,,,\r\n\tBenoit Caillot,Benoit,,Caillot,,,,,,,,,,,,,,,,,,,,,,,,https://lh3.googleusercontent.com/-6txkYPHI7mY/Ux35p1xCpoI/AAAAAAAAAAA/LZlIcDn-CjA1m69fN_zdEiy4CmFoBfE0gCOQCEAE/photo.jpg,* myContacts,* Home,benoit.c95@hotmail.fr,,,,,,,,,,,,,,,,,,,,,,,,,,,,,homePage,fb://profile/1033493386\r\n\tBrian,Brian,,,,,,,,,,,,,,,,,,,,,,,,,,,* myContacts,,,,,,,,,,Mobile,+33689268440,,,,,,,,,,,,,,,,,,,,,\r\n\tBella Burris,Bella,,Burris,,,,Burrisse,,,,,,,1998-04-26,,,,,,,,,,,,,,* myContacts,* Home,bubblepops2013@gmail.com,,,,,,,,Mobile,+1 (206) 910-7663,Home,+1 (425) 961-0312,Work,2184 Newport Way NW Issaquah 98027 WA États-Unis,2184 Newport Way NW,Issaquah,,,98027 WA,États-Unis,,,,,,,,,,,\r\n\tCassandre Valot,Cassandre,,Valot,,,,,,,,,,,,,,,,,,,,,,,,https://lh6.googleusercontent.com/-0Rpm9iNoV3Q/Ux36zezTITI/AAAAAAAAAAA/PiwvJr7tulEUetnFvxNi1M-NgbAQ9VQgQCOQCEAE/photo.jpg,* myContacts,* Home,cassandre.valot@gmail.com,,,,,,,,Mobile,06 29 85 97 82,,,,,,,,,,,,,,,,,,,,homePage,fb://profile/1385004268\r\n\tCharles Wickham,Charles,,Wickham,,,,,,,,,,,,,,,,,,,,,,,,https://lh6.googleusercontent.com/-jCIRUUgKulQ/Ux367yr1XRI/AAAAAAAAAAA/Oswb4z_Xcbo4TTqZq73Ms1YcjglPxdUkQCOQCEAE/photo.jpg,* myContacts ::: * starred,INTERNET,charles.wickham@ece.fr,* Home,charles.wickham@free.fr,,,,,,Mobile,+33 6 65 15 05 66,,,,,,,,,,,,,,,,,,,,,\r\n\tClarisse,Clarisse,,,,,,,,,,,,,,,,,,,,,,,,,,,* myContacts,,,,,,,,,,Mobile,+33 6 79 54 20 26,,,,,,,,,,,,Work,ECE Event,,,,,,,,\r\n\tClement Raibaud,Clement,,Raibaud,,,,,,,,,,,,,,,,,,,,,,,,,* myContacts,,,,,,,,,,Mobile,+33 6 48 73 37 19,,,,,,,,,,,,,,,,,,,,,\r\n\tCome Raskin,Come,,Raskin,,,,,,,,,,,,,,,,,,,,,,,,,* myContacts,,,,,,,,,,Mobile,06 83 46 04 82,,,,,,,,,,,,,,,,,,,,,\r\n\tCopine A Elsa,Copine,A,Elsa,,,,,,,,,,,,,,,,,,,,,,#blonde,,,* myContacts,,,,,,,,,,Mobile,+33650962834,,,,,,,,,,,,,,,,,,,,,\r\n\tCorinne Brun,Corinne,,Brun,,,,,,,,,,,,,,,,,,,,,,,,,* myContacts,* Home,corinebrun@free.fr,,,,,,,,Mobile,06 68 28 29 52 ::: 06 68 28 29 52,,,,,,,,,,,,,,,,,,,,,\r\n\tCorinne Lecorre,Corinne,,Lecorre,,,,,,,,,,,,,,,,,,,,,,,,,* myContacts,* Home,corinnr.lecorre@yahoo.fr,,,,,,,,Mobile,+33 6 49 74 66 17,,,,,,,,,,,,,,,,,,,,,\r\n\tCyril Osdoit,Cyril,,Osdoit,,,,,,,,,,,,,,,,,,,,,,,,https://lh6.googleusercontent.com/-FvhjayjQdeM/Ux36wMYEhUI/AAAAAAAAAAA/3Qwb-txeZJ8SNj8ATAEdFvEv9C6WvMNGACOQCEAE/photo.jpg,* myContacts,,,,,,,,,,Mobile,+33 6 19 30 90 31,,,,,,,,,,,,,,,,,,,,,\r\n\tDaniel Harrar,Daniel,,Harrar,,,,,,,,,,,,,,,,,,,,,,,,,* myContacts,* INTERNET,harrar@ece.fr,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,\r\n\tDanielle Levy-Duplat,Danielle,,Levy-Duplat,,,,,,,,,,,,,,,,,,,,,,≤,,https://lh3.googleusercontent.com/-4Q7Ay00DO4Y/Ux36pM1V23I/AAAAAAAAAAA/5W5YPxiY2Oscz3-6Lc2GXM0lhSFtcKfIwCOQCEAE/photo.jpg,* myContacts,,,,,,,,,,Mobile,06 70 96 49 16,Home,01 64 07 20 34,Home,Boulevard Romain Roland 42 Gretz Armeinvillier 77220 France,42 Boulevard Romain Roland,Gretz Armeinvillier,,,77220,France,,,,,,,,,,,\r\n\tDenis Schilling,Denis,,Schilling,,,,,,,,,,,,,,,,,,,,,,,,https://lh5.googleusercontent.com/-qcn3qyFVJkI/Ux36w1Z480I/AAAAAAAAAAA/BF44y0In21gl2InE3GUpCL4znIVHmMO4QCOQCEAE/photo.jpg,* myContacts,* Home,ds1186@hotmail.com,Home,ds1187@hotmail.com,,,,,,Home,+1 (206) 236-1817,Main,+1 (206) 236-0386,Home,4150 85th Avenue S.E. Mercer ISL WA 98040 États-Unis,4150 85th Avenue S.E.,Mercer ISL,,,WA 98040,États-Unis,,,,,,,,,,,\r\n\tECE Paris,ECE,,Paris,,,,,,,,,,,,,,,,,,,,,,,,,* myContacts,,,,,,,,,,workFax,01 42 22 59 02,Work,01 44 39 10 37,Work,37 Quai de Grenelle - CS 71520 PARIS Cedex 15 75725,37 Quai de Grenelle - CS 71520,PARIS Cedex 15,,,75725,,,Work,Ecole d'ingénieurs,,,,,,,,\r\n\tEliane Boccara,Eliane,,Boccara,,,,,,,,,,,,,,,,,,,,,,\"Code porte = 71428\r\n\tCATEGORIES: card\",,https://lh4.googleusercontent.com/-SPdXg8SzoP8/Ux35mznnKjI/AAAAAAAAAAA/ryH4HDhelT4UmSy1PTVNxsFMBSDH0TyZgCOQCEAE/photo.jpg,* myContacts,* Home,0142557803,,,,,,,,Mobile,0672773470,,,Home,1 Rue Duhesme Paris 75018 France,1 Rue Duhesme,Paris,,,75018,France,,,,,,,,,,,\r\n\tEmeric Deniau,Emeric,,Deniau,,,,,,,,,,,,,,,,,,,,,,PSTE ING1,,,* myContacts,* INTERNET,deniau@ece.fr,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,\r\n\tEmma Aurouet,Emma,,Aurouet,,,,,,,,,,,,,,,,,,,,,,,,https://lh3.googleusercontent.com/-sXm8mkXRp8c/Ux35ZSysy8I/AAAAAAAAAAA/tqE_Ye_y4yUAykn3lkFU4qi2I89z5cRMACOQCEAE/photo.jpg,* myContacts,* Home,disturbia_bum@hotmail.fr,,,,,,,,Mobile,06 66 08 43 80,,,,,,,,,,,,,,,,,,,,,\r\n\tEmma Bobola,Emma,,Bobola,,,,,,,,,,,,,,,,,,,,,,,,https://lh5.googleusercontent.com/-3Aj3YBEIfjA/Ux35mSPSX2I/AAAAAAAAAAA/363Ofb0zQCUzLkS18rNh5K8Qw9J1A-I0QCOQCEAE/photo.jpg,* myContacts,,,,,,,,,,Mobile,+1 (425) 765-4855,,,Home,Juanita dr NE 12723 Kirkland WA 98034 États-Unis,12723 Juanita dr NE,Kirkland,,WA,98034,États-Unis,,,,,,,,,,,\r\n\tEmma Lucille Marshall,Emma,Lucille,Marshall,,,,,,,,,,,,,,,,,,,,,,,,https://lh3.googleusercontent.com/-9r3wLklaPkQ/Ux36qKGVkhI/AAAAAAAAAAA/XXo1oORmINYGVgI33jwlO2JvjZbXII6EgCOQCEAE/photo.jpg,* myContacts,,,,,,,,,,Mobile,+1 (206) 913-7763,,,Home,Pleasant Beach Dr. NE 4205 Bainbridge Island Wa 98110 États-Unis,4205 Pleasant Beach Dr. NE,Bainbridge Island,,Wa,98110,États-Unis,,,,,,,,,,,\r\n\tEtienne Ormezzano,Etienne,,Ormezzano,,,,,,,,,,,,,,,,,,,,,,,,https://lh4.googleusercontent.com/-8D-w0FpfqrE/Ux36vvyEWgI/AAAAAAAAAAA/YJW4m3Epk0gbLpdabiFkmuUCTEDc0LU-wCOQCEAE/photo.jpg,* myContacts,,,,,,,,,,Mobile,+33 6 68 28 48 23,,,,,,,,,,,,,,,,,,,,,\r\n\tFacebook,Facebook,,,,,,,,,,,,,,,,,,,,,,,,,,,* myContacts,,,,,,,,,,Mobile,3 26 65,,,,,,,,,,,,,,,,,,,,,\r\n\tFaycal,Faycal,,,,,,,,,,,,,,,,,,,,,,,,,,,* myContacts,,,,,,,,,,Mobile,+33778260905,,,,,,,,,,,,,,,,,,,,,\r\n\tFloflo,Floflo,,,,,,,,,,,,,,,,,,,,,,,,,,https://lh4.googleusercontent.com/-CNcX7OAJS9Q/Ux35w2afFPI/AAAAAAAAAAA/DqoCe5HPaJQIzABZqJY0j9xeIqhIuvKFQCOQCEAE/photo.jpg,* myContacts,,,,,,,,,,Home,06 83 25 40 59,,,,,,,,,,,,,,,,,,,,,\r\n\tFlorian Franco,Florian,,Franco,,,,,,,,,,,,,,,,,,,,,,PSTE ING1,,https://lh3.googleusercontent.com/-qWJFpBhQfFQ/Ux35x8HWG7I/AAAAAAAAAAA/IC5jpTdPPM0U711gKq9SQFOO4EGRVPNzQCOQCEAE/photo.jpg,* myContacts,* INTERNET,franco@ece.fr,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,\r\n\tFlorian Grillet,Florian,,Grillet,,,,,,,,,,,,,,,,,,,,,,PSTE ING1,,,* myContacts,* INTERNET,grillet@ece.fr,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,\r\n\tFlorian Pourchayre,Florian,,Pourchayre,,,,,,,,,,,,,,,,,,,,,,,,,* myContacts,,,,,,,,,,Mobile,+33647730981,,,,,,,,,,,,,,,,,,,,,\r\n\tFlorian Verbeke,Florian,,Verbeke,,,,,,,,,,,,,,,,,,,,,,,,https://lh5.googleusercontent.com/-_pzy9yX0-2w/Ux366Z7uMkI/AAAAAAAAAAA/HrGcSHzTISYX83Ncr01TJd4__zGiMRsEQCOQCEAE/photo.jpg,* myContacts ::: * starred,,,,,,,,,,Mobile,+33 6 63 11 88 89,,,,,,,,,,,,,,,,,,,,,\r\n\tFranck Valot,Franck,,Valot,,,,,,,,,,,1994-01-19,,,,,,,,,,,,,,* myContacts,* Home,franckvalot@gmail.com,Work,ifranck@me.com,,,,,,Mobile,06 43 87 95 94,Home,01 40 72 62 67,Home,Avenue Victor Hugo 18 Paris 75116 France,18 Avenue Victor Hugo,Paris,,,75116,France,,Work,(fiche),,,,,,,,\r\n\tFranck Valot,Franck,,Valot,,,,,,,,,,,,,,,,,,,,,,,,,* myContacts,INTERNET,franck-valot@wanadoo.fr,* Home,ifranck@me.com,Work,franck@valot.fr,,,,Mobile,06 43 87 95 94,Home,01 40 72 62 67,Home,18 Avenue Victor Hugo Paris 75116 France,Victor Hugo 18 Avenue,Paris,,,75116,France,,,,,,,,,,,\r\n\tFrancoise Valot,Francoise,,Valot,,,,,,,,,,,,,,,,,,,,,,,,https://lh4.googleusercontent.com/-1ZRdIEqACvw/Ux3609u7VwI/AAAAAAAAAAA/N5dizMqMNSsh5T05cvdZN-20KCz-1SkggCOQCEAE/photo.jpg,* myContacts ::: * starred,* Home,francoise-valot@orange.fr,,,,,,,,Mobile,+33 6 61 02 75 80,Work,+33 1 40 72 62 67,,,,,,,,,,,,,,,,,,,\r\n\tGabin Valot,Gabin,,Valot,,,,,,,,,,,,,,,,,,,,,,,,https://lh4.googleusercontent.com/-WlBrYvyoqGQ/Ux361jbYnnI/AAAAAAAAAAA/agQN1sAH-rgO6DZKl899Iecs_ljkJJs1ACOQCEAE/photo.jpg,* myContacts,,,,,,,,,,Mobile,+33 7 70 18 61 94,,,,,,,,,,,,,,,,,,,,,\r\n\tGaetan Pradines,Gaetan,,Pradines,,,,,,,,,,,,,,,,,,,,,,,,,* myContacts,,,,,,,,,,Mobile,+33 6 35 15 89 74,,,,,,,,,,,,,,,,,,,,,\r\n\tGrégoire Levy-Duplat,Grégoire,,Levy-Duplat,,,,,,,,,,,,,,,,,,,,,,,,https://lh5.googleusercontent.com/-KN4U19dLhVU/Ux36pmctOSI/AAAAAAAAAAA/H5e8MGlgwwciau1UvWd9yP3QHhMdSda3ACOQCEAE/photo.jpg,* myContacts,* Home,greg@mizenpage.com,,,,,,,,Mobile,06 79 64 39 44,Home,01 43 70 47 87,Home,\"3, rue Bretonneau PARIS 75020\",\"3, rue Bretonneau\",PARIS,,,75020,,,,,,,,,,,,\r\n\tGros Con Ne Pas Repondre,Gros Con,,Ne Pas Repondre,,,,,,,,,,,,,,,,,,,,,,,,,* myContacts,,,,,,,,,,Mobile,+33 6 49 39 89 59,,,,,,,,,,,,,,,,,,,,,\r\n\tGuillaume Gueroc,Guillaume,,Gueroc,,,,,,,,,,,,,,,,,,,,,,,,https://lh4.googleusercontent.com/-K8WrBx_glb8/Ux350mZ40qI/AAAAAAAAAAA/J-24pWVto-w5UUoa4v8GzVjIabBv5EMJgCOQCEAE/photo.jpg,* myContacts,* Home,christophegueroc@neuf.fr,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,\r\n\tHelene,Helene,,,,,,,,,,,,,,,,,,,,,,,,,,,* myContacts,,,,,,,,,,Mobile,0684999473,,,,,,,,,,,,,,,,,,,,,\r\n\tIeswarya Sukumar,Ieswarya,,Sukumar,,,,,,,,,,,,,,,,,,,,,,,,,* myContacts,,,,,,,,,,Mobile,+33 6 68 67 41 45,,,,,,,,,,,,,,,,,,,,,\r\n\tImprimante HP6510,Imprimante,,HP6510,,,,,,,,,,,,,,,,,,,,,,,,,* myContacts,* Home,hp6510-valot@hpeprint.com,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,\r\n\tJacques Valot,Jacques,,Valot,,,,,,,,,,,1940-05-26,,,,,,,,,,,,,https://lh3.googleusercontent.com/--P_scngK7m0/Ux363i2bWQI/AAAAAAAAAAA/HVVTV2AMYJYfQ16b6NZo0JFAxhvsFTu4QCOQCEAE/photo.jpg,* myContacts,* Home,jacques@valot.fr,Work,jacques-valot@wanadoo.fr,Home,jacques.valot@icloud.com,,,,Mobile,06 43 58 97 63,Home,01 40 72 62 67 ::: +66 53818659 ::: +668-6913-4833,,,,,,,,,,,,,,,,,,homePage,http://cadeaux-gravure-bijoux.com\r\n\tJérémy Ditière,Jérémy,,Ditière,,,,,,,,,,,,,,,,,,,,,,,,https://lh5.googleusercontent.com/-xW96_Xyb1R4/Ux35tb5aZVI/AAAAAAAAAAA/K0G1YgguCF4xZnF27Qjt3vQg8jdOZB05QCOQCEAE/photo.jpg,* myContacts,* Home,jeremy-hardy-44@hotmail.fr,,,,,,,,Mobile,06 50 31 34 73,,,Home,8 rue des Rubis Saint Herblain 44800 France,8 rue des Rubis,Saint Herblain,,,44800,France,,,,,,,,,,,\r\n\tJiezie Chen,Jiezie,,Chen,,,,,,,,,,,,,,,,,,,,,,CodePorte: BA729,,,* myContacts,,,,,,,,,,Mobile,06 71 39 27 66,Home,01 42 15 24 87 ::: 09 52 38 58 56 ::: 01 48 87 02 69,Home,Quai President Kenedi 24 Paris 75016,24 Quai President Kenedi,Paris,,,75016,,,,,,,,,,,,\r\n\tJoel Skavdahl,Joel,,Skavdahl,,,,,,,,,,,,,,,,,,,,,,,,,* myContacts,* Home,cowerinthetallgrass@gmail.com,,,,,,,,,,,,,,,,,,,,,,,,,,,,,homePage,http://myspace.com/seagullinvasion\r\n\tJudi Ying,Judi,,Ying,,,,,,,,,,,,,,,,,,,,,,,,,* myContacts,,,,,,,,,,Mobile,+14252334972,,,,,,,,,,,,,,,,,,,,,\r\n\tJules André,Jules,,André,,,,,,,,,,,,,,,,,,,,,,2537e,,https://lh6.googleusercontent.com/-tKV5o2hFVkM/Ux32GMjg0GI/AAAAAAAAAAA/s1pu_8E6VvEttIlJWryjnHGJXd_MPbn-QCOQCEAE/photo.jpg,* myContacts,,,,,,,,,,Mobile,+33 6 60 90 71 92,Home,01 44 90 02 42 ::: 09 51 77 77 29,,,,,,,,,,,,,,,,,,homePage,fb://profile/1065130961\r\n\tKarim Malak,Karim,,Malak,,,,,,,,,,,,,,,,,,,,,,,,,* myContacts,,,,,,,,,,Mobile,+33 6 95 66 27 92,,,,,,,,,,,,,,,,,,,,,\r\n\tLandry,Landry,,,,,,,,,,,,,,,,,,,,,,,,,,,* myContacts,,,,,,,,,,Mobile,+33787121513,,,,,,,,,,,,,,,,,,,,,\r\n\tLaurine Thueux,Laurine,,Thueux,,,,,,,,,,,,,,,,,,,,,,COUZZZZ,,https://lh4.googleusercontent.com/-MMGe-VAsCf8/Ux36y9L_JPI/AAAAAAAAAAA/z3CxhvEYc7gA2Lf_OLu_NWaXCFEC2of_ACOQCEAE/photo.jpg,* myContacts,,,,,,,Home,MSN,laurine77680@hotmail.Fr,Mobile,+33 6 46 57 80 53,,,Home,8 allée des paquerettes Roissy-en-Brie 77680 France,8 allée des paquerettes,Roissy-en-Brie,,,77680,France,,,,,,,,,,homePage,http://vampires-duels-offres.skyrock.com/\r\n\tLedru,,,Ledru,,,,,,,,,,,,,,,,,,,,,,A2539,,,* myContacts,,,,,,,,,,Mobile,+33 6 51 02 14 45,,,,,,,,,,,,,,,,,,,,,\r\n\tLouis Bastien,Louis,,Bastien,,,,,,,,,,,,,,,,,,,,,,,,,* myContacts,,,,,,,,,,Mobile,06 26 32 07 14,,,,,,,,,,,,,,,,,,,,,\r\n\tLucas,Lucas,,,,,,,,,,,,,,,,,,,,,,,,,,,* myContacts,,,,,,,,,,Mobile,+33635259097,,,,,,,,,,,,,,,,,,,,,\r\n\tLuna Benavent Narvaez,Luna,,Benavent Narvaez,,,,,,,,,,,,,,,,,,,,,,,,https://lh5.googleusercontent.com/-IbPrsmX2mQE/Ux35kKejGbI/AAAAAAAAAAA/HSk1llY0x1otU6VuBmE0d89_vgxx9Zj8QCOQCEAE/photo.jpg,* myContacts,* Home,lunabn@msn.com,,,,,,,,Mobile,+34 676 288 011,,,Home,Calle La PaZ 25 Valencia 46003 España,Calle La PaZ 25,Valencia,,,46003,España,,,,,,,,,,homePage,fb://profile/691913132\r\n\tM. Chiriaco,M.,,Chiriaco,,,,,,,,,,,,,,,,,,,,,,,,,* myContacts,* Home,lchiriaco@eab.fr,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,\r\n\tMaman Dumont,Maman,,Dumont,,,,,,,,,,,,,,,,,,,,,,,,,* myContacts,,,,,,,,,,Mobile,06 60 57 75 73,,,,,,,,,,,,Work,Porn,,,,,,,,\r\n\tManon Fenou,Manon,,Fenou,,,,,,,,,,,,,,,,,,,,,,,,,* myContacts,,,,,,,,,,Mobile,06 76 27 95 38,,,,,,,,,,,,,,,,,,,,,\r\n\tMareen Katt,Mareen,,Katt,,,,,,,,,,,,,,,,,,,,,,,,https://lh4.googleusercontent.com/-Y2sy4hAlzZA/Ux36hn3kPJI/AAAAAAAAAAA/GqHVGGkFEZQwnYtkX4Pj5srZVAkxZV3iQCOQCEAE/photo.jpg,* myContacts,* Home,mareen.katt@web.de,,,,,,,,,,,,,,,,,,,,,,,,,,,,,homePage,fb://profile/1422744384\r\n\tMargaux Bonnefont,Margaux,,Bonnefont,,,,,,,,,,,,,,,,,,,,,,,,,* myContacts,,,,,,,,,,Mobile,+33 6 78 08 70 56,,,,,,,,,,,,,,,,,,,,,\r\n\tMatt Schilling,Matt,,Schilling,,,,,,,,,,,,,,,,,,,,,,,,,* myContacts,,,,,,,,,,Mobile,+1 (206) 251-8894,,,,,,,,,,,,,,,,,,,,,\r\n\tMatthias,Matthias,,,,,,,,,,,,,,,,,,,,,,,,,,,* myContacts,,,,,,,,,,Mobile,+33610305028,,,,,,,,,,,,,,,,,,,,,\r\n\tMaud Valot,Maud,,Valot,,,,,,,,,,,,,,,,,,,,,,,,,* myContacts,,,,,,,,,,Mobile,+33 7 81 41 71 75,,,,,,,,,,,,,,,,,,,,,\r\n\tMelanie Mersovski,Melanie,,Mersovski,,,,,,,,,,,,,,,,,,,,,,,,https://lh6.googleusercontent.com/-Si8HmrtRGUY/Ux36syO9qII/AAAAAAAAAAA/3azkzH4LpAsVumHjaPr0Xg7aeO5DEYz1ACOQCEAE/photo.jpg,* myContacts,,,,,,,,,,Home,+33 6 01 77 85 65,,,,,,,,,,,,,,,,,,,,,\r\n\tMelissa Artis,Melissa,,Artis,,,,,,,,,,,,,,,,,,,,,,50€,,https://lh6.googleusercontent.com/-aPjeQ7UUSDc/Ux32VJzUs5I/AAAAAAAAAAA/JDoCccrbTDY-qY2lczJ57ZlB2pAxleMKgCOQCEAE/photo.jpg,* myContacts,,,,,,,,,,Mobile,06 48 13 22 29,,,,,,,,,,,,,,,,,,,,,\r\n\tNadine Legroux,Nadine,,Legroux,,,,,,,,,,,,,,,,,,,,,,,,,* myContacts,,,,,,,,,,Mobile,+33 6 79 06 63 09,,,,,,,,,,,,,,,,,,,,,\r\n\tNathalie Valot,Nathalie,,Valot,,,,,,,,,,,,,,,,,,,,,,,,https://lh4.googleusercontent.com/-7n0aCObL6zc/Ux364D62c4I/AAAAAAAAAAA/qHY-t67zlw4NBl7QMsZ3OxdPjL1logj5ACOQCEAE/photo.jpg,* myContacts,* Home,nathaliecerdan@aol.com,,,,,,,,Mobile,06 16 50 61 37,,,,,,,,,,,,,,,,,,,,,\r\n\tNicolas Christou,Nicolas,,Christou,,,,,,,,,,,,,,,,,,,,,,,,,* myContacts,,,,,,,,,,Mobile,+33689817234,,,,,,,,,,,,,,,,,,,,,\r\n\tNicolas Daoud,Nicolas,,Daoud,,,,,,,,,,,,,,,,,,,,,,,,,* myContacts,,,,,,,,,,Mobile,+33 6 69 12 29 68,,,,,,,,,,,,,,,,,,,,,\r\n\tNili Banai,Nili,,Banai,,,,,,,,,,,,,,,,,,,,,,,,,* myContacts,,,,,,,,,,Mobile,+1 (425) 591-8222,,,,,,,,,,,,,,,,,,,,,\r\n\tOlivia Mize,Olivia,,Mize,,,,,,,,,,,,,,,,,,,,,,Hvc,,,* myContacts,* INTERNET,missfloridakat@yahoo.com,,,,,,,,,,,,,,,,,,,,,,,,,,,,,homePage,fb://profile/1585148435\r\n\tOlivier Valot,Olivier,,Valot,,,,,,,,,,,,,,,,,,,,,,,,https://lh4.googleusercontent.com/-0uRvYuRD4Qc/Ux364tgE9II/AAAAAAAAAAA/rE_OLCDkIa0APV8IAsmDmce_DKj9Qz-lgCOQCEAE/photo.jpg,* myContacts,* Home,olivier@valot.fr,,,,,,,,Mobile,06 63 73 04 42,Home,01 34 80 66 89,Home,52 Rue des baunes Chatou 78400,52 Rue des baunes,Chatou,,,78400,,,,,,,,,,,,\r\n\tOphélie André,Ophélie,,André,,,,,,,,,,,,,,,,,,,,,,,,https://lh6.googleusercontent.com/-lmvXroKsa7g/Ux32KWNTBFI/AAAAAAAAAAA/ggkjSU0SgnYRgqGe0Jz_ilnl8ec8ClGgQCOQCEAE/photo.jpg,* myContacts,* INTERNET,oandre@ece.fr,,,,,,,,Mobile,+33 6 74 16 94 84,,,,,,,,,,,,,,,,,,,,,\r\n\tOriane Fovet,Oriane,,Fovet,,,,,,,,,,,,,,,,,,,,,,,,https://lh3.googleusercontent.com/-hYgfUIynU7k/Ux35xWCsJlI/AAAAAAAAAAA/IuHtlzRCQcoLSYLqbM5Awl_WzTiKCdFJQCOQCEAE/photo.jpg,* myContacts,* INTERNET,oriane.fovet@hotmail.fr,,,,,,,,Mobile,+33667284162,,,,,,,,,,,,,,,,,,,,,\r\n\tPaul Ben Kiran,Paul,,Ben Kiran,,,,,,,,,,,,,,,,,,,,,,,,https://lh3.googleusercontent.com/-MI1RApj2Qqg/Ux35jdI8dBI/AAAAAAAAAAA/GeUW3Y5vb_EjN_eiLeiYsXH9wPjGnW7IwCOQCEAE/photo.jpg,* myContacts,,,,,,,,,,Mobile,+33 6 10 36 23 94,,,,,,,,,,,,,,,,,,,,,\r\n\tPierre Vigouroux,Pierre,,Vigouroux,,,,,,,,,,,,,,,,,,,,,,,,https://lh6.googleusercontent.com/-51Ri7DkCGg8/Ux3669IduLI/AAAAAAAAAAA/0zSkQtlnXy4Dk-vSvU2bx8-QwI9R_YJYACOQCEAE/photo.jpg,* myContacts,* Home,caillou_du_29@hotmail.fr,Work,pierrevigouroux1@free.fr,,,,,,Mobile,+33 6 37 85 14 96,,,,,,,,,,,,,,,,,,,,,\r\n\tPierre-Yves Cousin,Pierre-Yves,,Cousin,,,,,,,,,,,,,,,,,,,,,,,,,* myContacts,,,,,,,,,,Mobile,+33 6 05 01 73 63,,,,,,,,,,,,,,,,,,,,,\r\n\tRobin Cuvigny,Robin,,Cuvigny,,,,,,,,,,,,,,,,,,,,,,Telligo,,,* myContacts,* Home,air_147@hotmail.fr,Work,thenightwolf94500@hotmail.fr,Home,air_147@hotmail.fr,,,,Mobile,06 59 92 31 07,,,,,,,,,,,,,,,,,,,,homePage,fb://profile/1541054734\r\n\tSandra Chochod,Sandra,,Chochod,,,,,,,,,,,,,,,,,,,,,,,,https://lh4.googleusercontent.com/-XBoM7QYH-jc/Ux35q6UbEUI/AAAAAAAAAAA/NVNrfq-jj0oRtkc6BrMwwCRxWwFBGPklwCOQCEAE/photo.jpg,* myContacts,,,,,,,,,,Mobile,06 34 67 14 41,,,,,,,,,,,,,,,,,,,,,\r\n\tSven Faust,Sven,,Faust,,,,,,,,,,,,,,,,,,,,,,,,https://lh4.googleusercontent.com/-92lLRwOqTro/Ux35uyCTDaI/AAAAAAAAAAA/01VZm2j723c1D2wbvvSI3Szjc3QMRXhqQCOQCEAE/photo.jpg,* myContacts,* Home,sven@faust-brm.de,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,\r\n\tSylvain,Sylvain,,,,,,,,,,,,,,,,,,,,,,,,,,,* myContacts,,,,,,,,,,Mobile,+33678681496,,,,,,,,,,,,,,,,,,,,,\r\n\tTam Le,Tam,,Le,,,,,,,,,,,,,,,,,,,,,,,,https://lh5.googleusercontent.com/-thjwDebBhPQ/Ux36kti54KI/AAAAAAAAAAA/X9xrgvGpB7A39vekYX27uWZ01LH0tXQwwCOQCEAE/photo.jpg,* myContacts ::: * starred,,,,,,,,,,Mobile,06 29 21 05 19,,,,,,,,,,,,,,,,,,,,,\r\n\tTessa Ryan,Tessa,,Ryan,,,,,,,,,,,,,,,,,,,,,,,,,* myContacts,,,,,,,,,,Mobile,+1 (206) 818-1611,,,Home,1717 SE 24 av Portland OR 97214 Etats Unis,1717 SE 24 av,Portland,,,OR 97214,Etats Unis,,,,,,,,,,,\r\n\tThomas,Thomas,,,,,,,,,,,,,,,,,,,,,,,,,,,* myContacts,,,,,,,,,,Mobile,+33760420351,,,,,,,,,,,,,,,,,,,,,\r\n\tThomas Biton,Thomas,,Biton,,,,,,,,,,,,,,,,,,,,,,,,,* myContacts,,,,,,,,,,Mobile,+33 6 34 11 01 94,,,,,,,,,,,,,,,,,,,,,\r\n\tThomas Louis,Thomas,,Louis,,,,,,,,,,,1604-11-07,,,,,,,,,,,,,,* myContacts,,,,,,,,,,Mobile,06 43 57 53 73,,,,,,,,,,,,,,,,,,,,,\r\n\tThomas Reny,Thomas,,Reny,,,,,,,,,,,,,,,,,,,,,,,,,* myContacts,,,,,,,,,,Mobile,+33 7 77 30 69 24,,,,,,,,,,,,,,,,,,,,,\r\n\tTimothée Gignac,Timothée,,Gignac,,,,,,,,,,,,,,,,,,,,,,81b4 le code,,https://lh6.googleusercontent.com/-mjFbc6xInYg/Ux35zyiZkOI/AAAAAAAAAAA/jXs-RR0po6M7Ykli2We2fE-wyfB-pHP7QCOQCEAE/photo.jpg,* myContacts,* Home,tim.gignac@hotmail.fr,,,,,,,,Mobile,06 15 42 22 45,,,,,,,,,,,,,,,,,,,,,\r\n\tValentin Lemercier,Valentin,,Lemercier,,,,,,,,,,,,,,,,,,,,,,,,https://lh3.googleusercontent.com/-kly1Zb06sjo/Ux36m6Oq8vI/AAAAAAAAAAA/UIja6_I3YAUevpwLZPO2W9BmaroafTc_wCOQCEAE/photo.jpg,* myContacts,,,,,,,,,,Mobile,+33 7 81 16 63 40,,,,,,,,,,,,,,,,,,,,,\r\n\tValentin Mercier,Valentin,,Mercier,,,,,,,,,,,,,,,,,,,,,,PSTE ING1,,https://lh3.googleusercontent.com/-hes3l0TUCeI/Ux36sde8asI/AAAAAAAAAAA/d4OTl0s4SXw8XWwJA7302dMFcm_srLjpwCOQCEAE/photo.jpg,* myContacts,* INTERNET,vmercier@ece.fr,,,,,,,,Mobile,+33 7 81 16 63 40,,,,,,,,,,,,,,,,,,,,,\r\n\tVanessa Ng,Vanessa,,Ng,,,,,,,,,,,,,,,,,,,,,,,,,* myContacts,,,,,,,,,,Mobile,+1 (425) 681-6856,,,,,,,,,,,,,,,,,,,,,\r\n\tVictor Bernard,Victor,,Bernard,,,,,,,,,,,,,,,,,,,,,,,,https://lh4.googleusercontent.com/-lbzmrrcO_WQ/Ux35k1W3s3I/AAAAAAAAAAA/U1LddPWc20ofjm3xtJ6MHWXc72TR0-76QCOQCEAE/photo.jpg,* myContacts,,,,,,,,,,Mobile,+33 6 82 58 04 55,,,,,,,,,,,,,,,,,,,,,\r\n\tVincent Leroux,Vincent,,Leroux,,,,,,,,,,,,,,,,,,,,,,,,,* myContacts,,,,,,,,,,Mobile,+33 6 86 24 92 91,,,,,,,,,,,,,,,,,,,,,\r\n\tWarren Hussein,Warren,,Hussein,,,,,,,,Wawa,,,,,,,,,,,,,,EAB,,,* myContacts,* INTERNET,warrenmarchand@hotmail.fr,,,,,,,,Mobile,06 09 26 64 24,,,Home,143 Avenue De Wagram Paris 75017 France,143 Avenue De Wagram,Paris,,,75017,France,,,,,,,,,,,\r\n\tWicked Lasers,Wicked,,Lasers,,,,,,,,,,,,,,,,,,,,,,,,https://lh3.googleusercontent.com/-bVtXZ1Z5oSw/Ux36icl8mBI/AAAAAAAAAAA/l01pcP8poGkMMNJwH9JShBvfX569wcmdwCOQCEAE/photo.jpg,* myContacts,* Home,b2b@wickedlasers.com,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,\r\n\tYann Oziel,Yann,,Oziel,,,,,,,,,,,,,,,,,,,,,,Telligo,,,* myContacts,* Home,redeyes6@hotmail.fr,,,,,,,,Mobile,06 75 73 41 62,,,,,,,,,,,,,,,,,,,,homePage,fb://profile/1479794180\r\n\tYousef Khallouk,Yousef,,Khallouk,,,,,,,,,,,,,,,,,,,,,,,,,* myContacts,,,,,,,,,,Mobile,+33642371392,,,,,,,,,,,,,,,,,,,,,\r\n\tYu,Yu,,,,,,,,,,,,,,,,,,,,,,,,,,,* myContacts,* Other,+33788267302,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,\r\n\tZaleski,Zaleski,,,,,,,,,,,,,,,,,,,,,,,,,,,* myContacts,,,,,,,,,,Mobile,+33616904764,,,,,,,,,,,,,,,,,,,,,\r\n\tZan McPherson,Zan,,McPherson,,,,,,,,,,,,,,,,,,,,,,,,https://lh5.googleusercontent.com/-g9i7nLP8wEg/Ux36sFU7FGI/AAAAAAAAAAA/amvr7u5N3eIxMKfJM3iZN-AgWxmtzxodwCOQCEAE/photo.jpg,* myContacts,* Home,zanamcp@hotmail.com,,,,,,,,Mobile,+1 (206) 323-3377 ::: +1 (206) 393-7651,,,,,,,,,,,,,,,,,,,,homePage,fb://profile/1543902601\r\n"
+						},
+						"url": {
+							"raw": "{{opencell.url}}/contact/importCSVText",
+							"host": [
+								"{{opencell.url}}"
+							],
+							"path": [
+								"contact",
+								"importCSVText"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Contact / Import Text Copy",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{opencell.password}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{opencell.username}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic b3BlbmNlbGwuYWRtaW46b3BlbmNlbGwuYWRtaW4="
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "First Name,Last Name,Address,Email Address,Company,Position,Connected On,Websites,Instant Messengers\r\nArnaud,UHLRICH,,arnaud.uhlrich@free.Fr,Magellan Partners - ASAPpro,Senior Manager - Director,\"10/20/13, 9:34 AM\",,SKYPE:uhlricha\r\nThomas,Conté,,thomas@conte.com,Microsoft,Cloud Engineer,\"4/11/15, 5:32 AM\",\"PERSONAL:http://blogatom.tumblr.com/, BLOG:http://blogs.msdn.com/thomasconte/, BLOG:http://blogs.msdn.com/tconte/\",SKYPE:tomconte\r\nHassan,Ghellab,,hassan.ghellab@gmail.com,LTI TELECOM,Marketing Director,\"12/22/11, 8:35 AM\",,\r\nPatrick,Consorti,,patrick.consorti@gmail.com,EIT Digital,EU-US Industry Relations,\"5/29/12, 12:54 PM\",,SKYPE:patrickconsorti\r\nXavier,Monmarché,,xavier@monmarche.net,DOCAPOST,VP of Sales,\"6/26/10, 1:52 AM\",\"COMPANY:docapost.com, PERSONAL:etreentrepreneur.com, BLOG:fairluxe.com\",\r\nLionel,Pelamourgues,,lionel@pelamourgues.org,Chanchu Partners,Managing Director,\"1/15/17, 4:21 AM\",PORTFOLIO:http://www.intuitivlab.com,\r\nEnguerran,LOOS,,eloos-pa@innersquare.co.uk,InnerSquare,Founder & CEO,\"9/27/06, 1:35 AM\",COMPANY:http://www.innersquare.co.uk,\r\nAndrew,Clyne,,andrew@clyne-partners.com,Clyne Partners,Director,\"3/24/12, 7:55 AM\",\"COMPANY:clyne-partners.com, BLOG:wordpress.com/stats/insights/londonrecruiter.wordpress.com\",SKYPE:andrewclyne\r\nPaul,CORBEL,,pcorbel@heliant.fr,PRESCOM SAS,Member of the Board - In charge of Business Development,\"3/5/12, 2:36 AM\",COMPANY:http://www.heliant.fr,\r\nAdam,Krim,,adamkrim@delphivillage.com,SymbioNet,Chief Executive Officer,\"11/12/07, 10:53 PM\",\"COMPANY:http://www.affnet.com, PORTFOLIO:http://www.hanasianvodka.com, PORTFOLIO:http://www.blvdsource.com\",\r\nLoic,Le Meur,,loiclemeur@gmail.com,Leade.rs,Founder & CEO,\"9/12/16, 4:17 AM\",\"BLOG:http://www.loiclemeur.com, RSS:http://feeds.loiclemeur.com/loiclemeur, COMPANY:http://www.seesmic.com\",SKYPE:loiclemeur\r\nChristophe,Chausson,,cc@chaussonfinance.com,Chausson Finance (fund raising & venture capital),CEO,\"9/5/16, 7:32 AM\",COMPANY:http://chaussonfinance.com,\r\nOlivier,Attia,,olivier@attia.com,Gershon Consulting,Managing Director,\"7/7/12, 4:46 AM\",,\r\nBruno,Paolini,,behv.paolini@gmail.com,Rahi Systems,\"Director, Southern-Europe at RAHI Systems\",\"9/25/17, 2:12 AM\",COMPANY:http://www.ipex.fr,\r\nBruno,Brottier,PA4-Pantin ,bruno.brottier@eu.equinix.com,Equinix,Senior Sales Manager,\"1/20/16, 10:17 AM\",,\r\nPatrick,RICHARD,,patrick@prichard.fr,PRICHARD Conseil,President,\"1/25/16, 1:28 PM\",OTHER:http://www.prichard.fr,\r\nPatrick,Rouvillois,,rouvillois@gmail.com,BCG Digital Ventures,Partner & Managing Director,\"1/26/16, 2:41 PM\",,\r\nIsabelle,Roussin,,isabelle.roussin@sap.com,SAP,\"SAP Global VP Market Development, Hybris Billing & Revenue Cloud\",\"7/29/10, 10:47 PM\",,\r\nLaurent,Lafite,,laurent.lafite@gmail.com,DATACAO,Founder & Senior Consultant,\"1/26/18, 3:56 AM\",,\r\nsamir,koleilat,,samir@koleilat.com,OCTAVE-UCME,CFO,\"6/17/17, 4:28 AM\",COMPANY:http://www.youseeme.pro,\r\nDylan,Thuillier,,dylan.thuillier@gmail.com,Compagnie Royale des Indes Orientales,CEO Compagnie des Indes,\"6/17/17, 3:12 AM\",COMPANY:http://www.becitizen.com,SKYPE:dylan.thuillier\r\nEric,FELIX-FAURE,,e.felixfaure@fr.oaklins.com,Oaklins Aelios,Founder & Managing Partner,\"2/7/18, 5:18 AM\",COMPANY:http://www.oaklins.fr,SKYPE:efelixfaure\r\nRichard,Menneveux,,richard@adsvark.media,AdsVark Media,Founder & CEO,\"1/26/18, 1:28 AM\",\"COMPANY:http://www.adsvark.com, OTHER:http://www.frenchweb.fr, OTHER:http://www.we-love-entrepreneurs.com\",SKYPE:rmenneveux\r\nLaurent,VERMOT-GAUCHY,,laurent@vermot-gauchy.com,v11y,Entrepreneur in Residence,\"10/26/17, 12:37 AM\",\"OTHER:http://about.me/laurentvg, OTHER:http://www.v11y.com, OTHER:https://plus.google.com/u/0/b/116650727002051062549/116650727002051062549\",\r\nLuc,DOMISSY ✅,,ldomissy@gmail.com,Oracle,Strategic Account Executive,\"2/8/16, 12:59 AM\",\"OTHER:https://www.oracle.com/fr/industries/retail/index.html, OTHER:http://www.escpeuropealumni.org/gene/main.php, OTHER:https://www.g9plus.org/\",SKYPE:lucdomissy\r\nMichel,de Guilhermier,,michel@laccelerateur.fr,Auchan Retail France,Membre du Conseil de Surveillance,\"6/2/11, 9:48 PM\",,\r\nPhilippe,Coup-Jambet,,philippecoupjambet@gmail.com,isahit,Co-founder and COO,\"5/7/14, 12:13 AM\",\"PERSONAL:http://coup-jambet.com, COMPANY:http://www.tekora.com, BLOG:http://pcj.mobitype.com\",\r\nJean-Michel,Billaut,,jmbillaut@yahoo.fr,Streetco,Development Advisor,\"6/9/13, 12:02 AM\",\"BLOG:http://billaut.typepad.com, BLOG:http://billaut.typepad.com/revolution3point0\",\r\nAxel,Dreyfus,,axel.dreyfus@gmail.com,Finamatic,Cofounder,\"6/23/17, 11:14 PM\",COMPANY:Finamatic.fr,\r\nTanguy,Briand,,briand.tanguy@gmail.com,Worldline Global,Head of Global Solution Sales,\"3/3/17, 4:31 AM\",\"COMPANY:http://www.atosworldline.com, OTHER:http://www.hec.fr/Start-up/Accueil\",\r\nMathieu,Isaia,,mai@fenixe.biz,Atlays,Managing Director,\"10/23/14, 11:21 PM\",,SKYPE:misaia\r\nNick,MacShane,,nmacshane@progresspartners.com,Progress Partners,Senior Managing Director,\"2/22/17, 11:16 PM\",\"COMPANY:http://www.progresspartners.com, RSS:http://www.nextmediaupdate.com, OTHER:http://vizibility.com/nick\",\r\nBenoît,Vallet,,bv@sohosimple.com,OulalaGames,\"CTO, Partner\",\"1/31/17, 10:42 AM\",,\r\nMARCEL,DRIDJE,,mdridje@yahoo.com,Sophia Business Angels,President / Board Member,\"7/23/17, 2:47 PM\",,\r\nStéphane,Distinguin,,stephane.distinguin@fabernovel.com,FABERNOVEL,Founder and CEO,\"7/21/10, 2:04 AM\",\"COMPANY:http://www.FABERNOVEL.com, COMPANY:http://www.PARISOMA.com, OTHER:http://www.capdigital.com\",\r\nThomas LEFORT,tlefort@gmail.com,,tlefort@gmail.com,Contrebreak,Fondateur,\"10/7/14, 1:40 PM\",\"COMPANY:http://www.ipercom.com, COMPANY:http://www.ipergeo.com\",\r\nJean-David,BENICHOU,,jdb@via.io,Via.io,\"Founder, Owner & President\",\"4/28/15, 2:29 AM\",\"COMPANY:http://www.via.io, PERSONAL:http://www.facebook.com/jdbenichou\",SKYPE:jdbenichou\r\nJacques,FROISSANT ✅,,j.froissant@altaide.com,ALTAIDE,\"CEO ALTAÏDE Head Hunter, Recruitment, HR 2.0, Formation (LinkedIn Certified) / e-Commerce, Digital\",\"1/31/18, 11:10 PM\",\"OTHER:http://www.altaide.com, OTHER:http://altaide.typepad.com/, OTHER:http://www.altaide.com/offres-emploi/\",\r\nGuillaume,Meulle,,guillaume.meulle@xange.fr,XAnge,Managing Partner,\"2/10/15, 11:37 PM\",,\r\nThomas,DELALANDE thomasdelalande[at]gmail.com,,delalande.thomas@gmail.com,IMPACT partenaires,Directeur Associé,\"1/7/17, 5:07 AM\",,\r\nPhilippe,Rodriguez,,philrodv2@gmail.com,Avolta Partners,Managing Partner,\"9/24/16, 9:08 AM\",\"BLOG:http://philipperodriguez.com, COMPANY:http://www.avoltapartners.com\",SKYPE:philrodv2\r\nSylvain,Fievet,,s.fievet@pouraction.com,Le Cercle des Transformateurs,Initiateur,\"10/8/17, 1:52 AM\",\"COMPANY:http://www.alliancy.fr, COMPANY:http://www.pouraction.fr, PERSONAL:http://www.lorrainetalents.com\",\r\nHugues,Meili,Rennes,hugues.meili@niji.fr,Delta Dore,Membre du Conseil de Surveillance,\"2/15/12, 9:22 AM\",COMPANY:www.niji.fr,\r\nCarlos,Gaviola,,Carlosgaviola@aol.com,C&L G SAS,CEO and Founder,\"10/9/07, 1:55 AM\",,\r\nRobert,Wang,,rwang5688@outlook.com,Huawei Technologie (Futurewei Technologies),\"VP Engineering, Digital Telecom Architecture\",\"3/8/16, 7:16 AM\",\"COMPANY:http://www.mychrm.com, COMPANY:http://www.broadvision.com\",\r\nChristophe,Dimicoli,,cdimicoli@gmail.com,Software AG,Sales Team Leader,\"3/16/16, 8:00 AM\",,\r\nDavid,Jouarisse,\"25, rue de Ponthieu 75008 Paris\",david.jouarisse@gmail.com,Akka Venture,Partner,\"9/28/16, 9:52 AM\",OTHER:http://www.akkaventure.com,\"SKYPE:david.jouarisse, WEIXIN:DavidAkka\"\r\nEric,Lavenir,,eric.lavenir@sap.com,SAP,VP Global Business Development- SAP Convergent Charging & Billing solutions,\"7/16/07, 6:41 AM\",,\r\nLuc,Terral,,luc.terral@homepulse.fr,Homepulse,CEO and co founder,\"1/28/13, 12:30 AM\",\"COMPANY:http://www.homepulse.fr, COMPANY:http://www.timelab.io, COMPANY:http://www.powermetrix.fr\",\r\nFrançois,Paulus,,francois.paulus@hotmail.fr,Breega Capital,Founding Partner,\"7/9/10, 3:04 AM\",PERSONAL:http://www.tikimee.com/francoispaulus,\r\nZeev,Lerner,,zeev.lerner@audiocodes.com,AudioCodes,VP Mobility,\"5/26/16, 5:20 AM\",,\r\nObaid,Rahman,,obaid_r@hotmail.com,Ooredoo Global Services,Chief Commercial Officer (A),\"4/28/15, 2:39 AM\",,SKYPE:obaid1972\r\nPierre,Schaller,,psr@smart-lane.fr,Smart Lane,Associé fondateur,\"3/4/17, 2:03 AM\",COMPANY:http://smart-lane.fr,\r\nSophie,Bramly,,sophie.bramly@gmail.com,SOONSTORIES,co-founder,\"4/29/15, 11:34 AM\",COMPANY:http://www.secondsexe.com,\r\nNicolas,Gaume,,nicolas.gaume@gmail.com,Microsoft,Windows & Devices Group - Strategic partner relationships,\"2/15/16, 1:19 AM\",,SKYPE:nicolas_gaume\r\nLaurent,Azieres,,laz@adelanto.fr,Adelanto,Owner_Partner_General Manager,\"5/25/16, 8:47 AM\",COMPANY:http://WWW.ADELANTO.FR,\r\nBoris,AUCHE,,boris.auche@gmail.com,Atos,Business Technology Innovation Centers (BTIC) Network Lead,\"1/7/16, 6:11 AM\",\"OTHER:http://www.sghc.org, COMPANY:http://www.atos.net\",\r\nPhilippe,Nieto,,philippe.nieto@gmail.com,Lycamobile Group,Director International Business  Development,\"11/11/07, 4:48 PM\",COMPANY:http://www.lycamobile.com,SKYPE:philippenieto\r\nThierry,Grimaux VALTUS,,tg@grimaux.fr,VALTUS,Associé,\"6/29/14, 7:48 AM\",,\r\nFABRICE,PANCRAZI,,fabrice.pancrazi@fr.ibm.com,IBM France,\"Responsable Relation Cabinets de Conseil, IBM Cloud France\",\"3/14/18, 1:44 AM\",,\r\nSébastien,de Lafond,,sdelafond@me.com,MeilleursAgents.com,Co-Founder & CEO,\"10/21/17, 10:38 AM\",COMPANY:http://www.meilleursagents.com,\r\nOlivier,Bourhis,,olivier.bourhis@gmail.com,Open Business Consulting,Founder,\"12/9/16, 10:31 AM\",,SKYPE:olivierbourhis\r\nJean-Charles,Cointot,,jchcointot@gmail.com,IBM,\"Cognitive Cloud Business Development Executive, IBM Global\",\"8/2/10, 1:01 AM\",,\r\nThierry,Verrecchia,,thierryv@gmail.com,POCMAKER,CEO,\"6/23/17, 9:50 AM\",\"COMPANY:http://www.pocmaker.net, OTHER:http://twitter.com/thierry2r2c\",\r\nPaulo,Baptista,,paulobaptista@hotmail.fr,SAP,SVP Hana Cloud Platform & Mobile EMEA-MEE & Interim General Manager Telco Industry EMEA-MEE,\"2/9/17, 2:51 AM\",,\r\nRichard,Murbeck,,richardmurbeck@gmail.com,Eferio,CEO,\"5/28/17, 12:53 AM\",\"COMPANY:http://www.efer.io, OTHER:http://www.soc.io, COMPANY:http://www.seavus.com\",\r\nFrederic,Beauvais,,beauvais@phoracapital.com,ERCOM,Board member,\"3/5/18, 2:40 AM\",,\r\nMarc,WOLFF,,wolff@aerow.fr,STRATOW #contentservices #api #saas,Head of biz dev,\"3/3/14, 11:08 PM\",,\r\nFrederic,Offner,,foffner@hotmail.com,Weave,Partner - Insurance Practice,\"9/25/17, 11:13 AM\",,\r\nOllivier,Courtel,,ollivier.courtel@orange.com,Orange,responsable du département marketing livebox et décodeurs TV,\"1/21/13, 12:46 AM\",,\r\nCyrille,Ferrachat,,ferrachat@gmail.com,Air Liquide,Managing Director Home Healthcare Italy,\"3/30/13, 2:29 AM\",,\r\nPascal,Vitoux,,pascal@vitoux.com,ASG,Senior Vice President of Development & CTO,\"4/8/15, 8:04 AM\",COMPANY:http://www.asg.com,\r\nJerome,LECAT,,jlecat@scality.com,Scality,CEO,\"3/7/17, 9:59 AM\",COMPANY:http://www.scality.com,\r\nJacques,Velot,,velot@icloud.com,IMPRIMERIE NATIONALE S.A.,Vice President e-Solutions,\"9/14/15, 12:26 AM\",,\r\nAmitava,Dutta,,ad0312@gmail.com,ADAPT SOLUTIONS,Advisor,\"11/1/15, 8:07 PM\",COMPANY:http://www.adaptsolutions.in,\r\nAntoine,RIOLLET,,antoine@gris-metal.com,ANTINÉO,Cofondateur,\"6/15/16, 10:20 AM\",\"COMPANY:http://www.gris-metal.com, BLOG:http://gris-metal.tumblr.com/\",\r\nEric,Pradel Lepage,,eric.pradel-lepage@exxing.consulting,EXXING STRATEGY CONSULTANTS,Founder and Managing Partner,\"1/9/12, 2:00 AM\",\"COMPANY:http://www.exxing.com, COMPANY:http://www.exxing.consulting\",SKYPE:eric.pradel\r\nPhilippe,Besseyre des Horts,,philippe@pbdh.net,Italtel,Vice President Sales Northern Europe,\"7/9/14, 8:57 AM\",PERSONAL:http://www.pbdh.net,SKYPE:phbdh2\r\nCyril,Bertrand,,Cyril.bertrand@xange.fr,XAnge / SPI,Managing Partner,\"4/20/15, 1:19 AM\",,\r\nDamien,Guermonprez,,d.guermonprez@gmail.com,Lemon Way,Chairman,\"6/22/17, 3:28 AM\",\"OTHER:http://www.buyway.be, OTHER:http://www.lemonway.fr, OTHER:http://www.but.fr\",\r\nSylvain,LAGARDE,,Sylvain.LAGARDE@ples.net,PLES Convergence,CEO and Owner,\"3/29/05, 4:27 AM\",\"PERSONAL:http://www.ples.net/index.php?lang=en, COMPANY:http://www.ples.net/index.php?lang=en\",\r\nMartin,Kaiser,,martin.kaiser@hager.fr,Hager Group,Directeur Business Group Services,\"9/23/11, 8:53 AM\",\"COMPANY:http://www.hagergroup.net, OTHER:http://www.sciences-po.fr, OTHER:http://www.club-economique-franco-allemand.org\",\r\nBénédicte,Javelot,,benedicte.javelot@orange.com,Orange,Chief Strategy Officer,\"11/25/07, 9:41 PM\",,\r\nDidier,LOUVET,,didier.louvet@bsconvergence.com,Le Groupe La Poste,Directeur,\"8/15/13, 6:16 AM\",\"PERSONAL:http://www.adminium.fr, PORTFOLIO:http://www.wishbox.fr, PORTFOLIO:http://www.avantageshopping.com\",\r\nWestley,Koenen,,wkoenen@gmail.com,\"Charter School Capital, Inc.\",Executive Vice President,\"11/20/06, 10:16 AM\",COMPANY:http://www.greenscreenanimals.com,\r\nCédric,Curtil,,cedric@curtil.org,Société Générale,\"Directeur de la Stratégie et de l'Innovation, Retail France\",\"1/31/11, 11:27 PM\",,\r\nYves,de Montcheuil,,yves@montcheuil.com,Axeleo,Senior Partner,\"11/23/16, 10:50 PM\",OTHER:http://www.infoworld.com/blog/data-insights/,\r\nHatem,MESTIRI,,hatem.mestiri@ooredoo.tn,Ooredoo Tunisie,Chief Technology Officer,\"4/5/11, 7:12 AM\",,\r\nHervé,Simonin,,herve.simonin@none.net,linkfluence,CEO,\"6/16/17, 12:52 AM\",,\r\nFranck,Moine,,fmoine@gmail.com,Winnovation,CEO,\"8/22/10, 5:43 PM\",,\r\nMaurice,ZEMBRA,,mze2008@gmail.com,VERTICAL M2M,General Manager and co-founder,\"9/24/06, 9:24 PM\",\"COMPANY:http://www.vertical-m2m.com, COMPANY:http://www.u-shine.net, COMPANY:http://www.onesen.se\",\r\nOlivier,Hua,,olivierhua@yahoo.com,AT&T,Senior Procurement Specialist,\"4/30/15, 10:08 AM\",,\r\nWilfried,Yver,,wilfried@yver.nom.fr,Orange,Big Data Leader OMEA / Orange Big Data Group Program,\"3/20/15, 7:03 AM\",PERSONAL:http://www.yver.nom.fr,\r\nThierry,WELLHOFF,,tw@wellcom.fr,Syntec Conseil en Relations Publics,Administrateur ,\"1/22/18, 8:21 AM\",COMPANY:http://www.wellcom.fr,\r\nThomas,Gubler,,thomas@66nth.com,66 NTH,Partner,\"9/2/13, 12:31 AM\",,\r\nEric,d'Andigné,,edandigne@icloud.com,ORONE,CEO,\"5/23/12, 5:02 AM\",COMPANY:http://www.orone.com,\r\nBoris,\"Kontsevoi, COP\",,boris@intetics.com,Intetics Inc.,President & CEO,\"10/27/16, 6:19 AM\",COMPANY:http://www.intetics.com,SKYPE:boris.kont\r\nFrancois,Nuyts,,francois@nuyts.org,Amazon,\"President & Managing Director, Amazon Italy & Amazon Spain\",\"11/9/11, 9:50 AM\",PORTFOLIO:http://www.amazon.es,\r\nOlivier,Grootenboer,,ojg@alcandre.com,ALCANDRE,CEO,\"2/16/13, 11:06 AM\",COMPANY:http://www.alcandre.com/alcandre-home.htm,\r\nJosep A.,Aliagas,,jaaliagas@gmail.com,Kompyte,VP of Corporate Development,\"6/22/08, 5:16 PM\",,\r\nMichel,KOCHANSKI,,michel.kochanski@gmail.com,Déadia,Business Development Manager,\"9/7/14, 11:10 AM\",,\r\nJan,Louwes,,jlouwes@planet.nl,Interoute,Executive Vice President,\"5/4/15, 3:30 AM\",COMPANY:http://www.interoute.com,\r\nBertrand,Collongy,,bcollongy@gmail.com,Honeywell Safety & Productivity Solutions ,\"Region Sales director South & East Europe, META & CIS Countries\",\"2/14/16, 3:47 PM\",,\r\nJean-Pascal,Dragon,,jpascaldragon@yahoo.fr,Elior,Head of International Business Development & Strategic Studies,\"1/10/14, 6:39 AM\",,\r\nLilian,Morinon,,lilian_morinon@yahoo.fr,Sopra Steria,Director - Lyon I2S Agency,\"5/23/10, 7:17 PM\",OTHER:http://www.utagawavtt.com,\r\nEric,Pillevesse,,eric.pillevesse@sap.com,SAP Labs France,Managing Director ,\"10/31/07, 5:36 PM\",COMPANY:http://www.sap.com,\r\nAlan,Quayle,,alan@alanquayle.com,Alan Quayle Business & Service Development,Owner,\"10/21/15, 5:35 PM\",\"PERSONAL:http://www.alanquayle.com, BLOG:http://www.alanquayle.com/blog/, RSS:http://www.alanquayle.com/blog/atom.xml\",SKYPE:alanquayle\r\nDaniel,Jacobson,,daniel.jacobson@live.com,ActSeed Corporation,Co-Founder and Chief Technology Officer,\"10/11/06, 11:30 AM\",COMPANY:http://www.actseed.com,\r\nFederico,Ermacora,,I017049@yahoo.com,Ivalua,Sales Director Italy,\"4/29/15, 6:36 AM\",,\r\nJean-David,Chamboredon,,jdc@roundfield.net,France Digitale,Co-President,\"8/25/16, 5:58 AM\",COMPANY:http://www.isai.fr,\r\nVernon,Keenan,\"2809 Telegraph Ave., Suite 202 Berkeley, CA 94705\",vern@telnexus.com,Telnexus LLC,CEO,\"9/8/15, 1:51 PM\",\"COMPANY:http://www.berkeleylogic.com, OTHER:http://www.facebook.com/berkeleylogic\",\r\nPatrick,Amiel,,patamiel@gmail.com,Honey Lab,Fondateur,\"12/28/12, 7:45 PM\",,\r\nStéphane,Riche,,stephane.riche@crossknowledge.com,CrossKnowledge,Global Account Director,\"6/4/07, 3:24 AM\",COMPANY:http://www.crossknowledge.com,\r\nLaurent,Chivallier,,laurent.chivallier@apilinx.com,AirTies Wireless Networks,Consultant - VP Sales & Business Development APAC,\"3/6/12, 2:41 AM\",\"OTHER:http://www.triumemba.org/, OTHER:http://www.apilinx.com\",SKYPE:lchivall\r\nWilliam,Barrar,,william_barrar@hotmail.com,Freelance,Management Consultant,\"6/17/08, 6:48 PM\",,\r\nEmmanuel,PIERRE,,emmanuel.pierre@gmail.com,Opencell Software,CPO,\"10/31/07, 12:52 AM\",\"PERSONAL:http://www.emmanueletsophie.com, COMPANY:http://www.dartybox.com\",GTALK:emmanuel.pierre@gmail.com\r\nNicolas,Levi,,nicolas.levi@orange.com,Orange,VP Strategy and Development Mobile Financial Service MEA,\"5/23/11, 12:37 AM\",,\r\nNathalie,BARBERIS,,nbarberis@hotmail.com,cadeaux.com,Directrice,\"4/23/12, 2:03 PM\",\"COMPANY:http://www.transatel-mobile.com, COMPANY:http://www.videofutur.com, COMPANY:http://www.numericable.be\",MSN:nbarberis@hotmail.com\r\nLaurent,Thoumine,Paris,laurent.thoumine@gmail.com,Accenture,Managing Director,\"1/15/15, 1:23 AM\",COMPANY:http://www.accenture.com,\r\nSerge,Miranda,,serge.miranda@unice.fr,mbds,founder and director of Mbds ( ICT master and innovation lab.),\"10/2/11, 6:19 AM\",COMPANY:http://www.mbds-fr.org,SKYPE:Gascon06\r\nJean,Garnier,,jgarnier@colmont.com,BlockTravel,Directeur des programmes de recherche et d'innovation,\"2/28/18, 2:17 PM\",\"COMPANY:http://www.cybersas.com, COMPANY:http://www.colmont.com\",\r\nDenis,Rabate,,dr@enginee-ring.com,zappik.com,CEO,\"7/20/16, 6:07 AM\",COMPANY:zappik.com,\r\nLaurent,Gaquiere,,laurentgaquiere@hotmail.com,VISEO,Operators and Services Director,\"5/19/16, 11:00 AM\",,MSN:laurentgaquiere@hotmail.com\r\nArnaud,Bourboulon,,arnaud.bourboulon@gmail.com,Worldline an Atos Company,Head of Bid Management and Sales,\"3/3/17, 4:14 AM\",COMPANY:http://www.mnc-services.com,\r\nDelphine,Pasquier,,Pasquier_Delphine@hotmail.com,Bouygues Telecom,Responsable activité Wholesale Fixe,\"8/25/10, 2:13 AM\",,\r\nJean-Luc,Cyrot,,jlcyrot@time-4g.com,Time for Growth (previously Time Equity Partners),Partner,\"7/1/10, 1:39 AM\",COMPANY:http://www.time-ep.com,\r\nYoussef,Faury,,yousseffaury@gmail.com,Microsoft,\"Director, Business Developement- Azure Mobile Dev Tools, Cloud Application platform\",\"1/25/11, 6:16 AM\",,\r\nSandra,Taborin,,sandra.taborin@mac.com,Cisco,Client Executive,\"11/1/07, 7:41 PM\",,\r\nNicolas,d'Hueppe,,nicolasdhueppe@hotmail.com,Alchimie,CEO & founder,\"8/18/16, 10:38 AM\",,\r\nDavid,GANEM,,jmganem@advanciacallcenter.com,ADVANCIA,CEO,\"5/17/15, 7:34 AM\",,\r\nL.J.,Brock,,brock@citadel.com,Citadel LLC,Chief People Officer,\"6/24/07, 11:26 PM\",COMPANY:https://www.citadel.com/,\r\nLaurent,SAFAR,,laurent.safar@adaptive-channel.com,Adaptive / Connecting the traveller,CEO,\"9/5/17, 7:48 AM\",,\r\nPierre,SCHULER,,pierre.schuler@outlook.com,AVENCALL,President,\"11/4/15, 7:40 AM\",COMPANY:http://www.linkcareservices.com/,\r\nRégis,Castagné,,regis.castagne@eu.equinix.com,Equinix,Regional Managing Director Southern Europe,\"6/11/15, 1:34 AM\",\"PERSONAL:http://www.theuran.com, PERSONAL:http://www.lesallay.com\",SKYPE:regis.castagne\r\nLaurent,Herbillon,,laurent.herbillon@outlook.com,BNP Paribas,Open Innovation and Startups Cooperation,\"3/3/17, 8:38 AM\",,\r\nPierre,Antonio,,pantonio@trustdesigner.com,Trust Designer,CEO,\"6/26/12, 8:07 AM\",COMPANY:www.trustdesigner.com,SKYPE:pan_jware\r\nEd,den Ouden,,docrecruit@xs4all.nl,DOCRecruit,Owner/Recruitment Consultant,\"10/1/08, 7:04 AM\",PERSONAL:http://www.docrecruit.nl,SKYPE:edjurij\r\nDon,Lavoie,,donlavoie@cox.net,Developmetrics,President & CEO,\"1/29/07, 7:21 AM\",COMPANY:http://www.sekurus.com,\r\nDidier,Le Jolie,,dlejolie@gmail.com,YSATIA,\"Expert Telecom, Chargé d'affaires\",\"5/2/15, 8:44 PM\",,\r\nRaphael,GOUMOT,,raphael.goumot@gmail.com,CREAgile - Mobilisons l'intelligence collective,\"President, co-founder\",\"11/28/11, 1:21 PM\",COMPANY:http://www.creagile.fr,SKYPE:raphael.goumot\r\nAndrew,White,,andrew@whitesuk.com,Harberry & Company,Managing Partner,\"1/18/08, 3:06 AM\",,\r\nDavid,Setrouk,,david@setrouk.net,Angage,\"CEO, Co-Founder&Co-Owner\",\"11/1/07, 8:05 PM\",\"COMPANY:http://www.netvisio.com, BLOG:http://blog.netvisio.com\",\r\nTobias,Skog,,tobias@skog.ch,Skog Consulting Pty Ltd,Owner,\"4/28/15, 2:51 AM\",,\r\nClaudio,\"Toyama, MA, ACC, DTM\",,claudio@toyamaco.com,Toyama&Co.,CEO | Leadership Consultant | Thought Leader | Keynote Speaker,\"1/11/16, 3:30 PM\",COMPANY:http://www.toyamaco.com,SKYPE:ctoyama\r\nStéphane,Lebas,,stephane_lebas@me.com,Betclic Group,Chief Product & Customer Officer,\"9/13/17, 7:53 AM\",,GTALK:menelik06@gmail.com\r\nNicolas,Brogné,,nicolasbrogne@hotmail.com,Crédit Agricole CIB,Data & Analytics Product Manager,\"2/19/09, 2:30 AM\",COMPANY:http://www.jouve.com,\r\nJean Paul,Figer,,jfiger@figer.com,ARMOSC,Président,\"5/6/15, 6:47 AM\",\"PERSONAL:http://www.figer.com, PERSONAL:http://www.armosc.com\",\r\nJean-Philippe,Betoin,,jp.betoin@free.fr,Morpho,Head of Mobile Solutions,\"5/7/12, 7:22 AM\",,\r\nDarran,Peters,,darranpeters@hotmail.com,Ericsson Telekommunikation GmbH & Co.KG,Director Channel Sales,\"5/14/15, 11:27 PM\",,\r\nNajah,Naffah,,najah.naffah@gmail.com,Naffah Consulting,President,\"5/12/15, 12:35 PM\",,\r\nxavier,dupont,,xavier.dupont@gmail.com,Digitick,\"Director, Digitick agency & network : leader in ticketing e-commerce, advertising and media\",\"9/2/15, 12:32 AM\",\"COMPANY:http://www.digitick.com, COMPANY:http://www.infoconcert.com, COMPANY:http://www.zepass.com\",\r\nOlivier,LALLIER,,groupes@scibees.com,Le Lab RH,Strategic Board member & Development director,\"12/21/10, 12:44 AM\",,\r\nGérard,Dahan,,dahang1@yahoo.fr,Determine,CMO and EMEA SVP,\"5/29/13, 4:31 AM\",,\r\nEd,Maguire,,maguireede@gmail.com,Momenta,Insights Partner,\"5/21/17, 10:29 PM\",\"BLOG:https://deepfieldsblog.wordpress.com/, PERSONAL:https://soundcloud.com/ed-maguire-1, PORTFOLIO:https://www.slideshare.net/edmaguire\",\r\nThomas,Mitard,,tmitard@gmail.com,THM Capital Advisory,Managing Partner,\"4/16/14, 1:14 AM\",,\r\nAntoine,Guéville,,aguevill@outlook.com,Hager Group,Marketing & Customers Relationship Director - Hager Services,\"11/10/15, 5:56 AM\",,\r\nFrédéric,Leridon,,frederic.leridon@sap.com,SAP,VP Business Development,\"6/27/15, 1:53 AM\",,\r\nDavid,Chevenement,,chevenement_david@yahoo.fr,BeesApps,CEO - Founder,\"1/19/18, 1:22 PM\",COMPANY:http://www.beesapps.com,\r\nDickel,Sooriah,,dickel.sooriah@gmail.com,Actility,VP Business Development & IoT Product Strategy,\"3/6/17, 12:43 PM\",\"COMPANY:http://www.groupcamp.com, BLOG:http://www.groupcamp.com/blog/en, OTHER:http://www.groupcamp.com/project\",\r\nNicolas,Aube,,Nicolas.Aube@celeste.fr,CELESTE,Owner and CEO,\"4/28/15, 4:08 AM\",COMPANY:http://www.celeste.fr,\r\nThibaut,Raballand,\"131 rue de Rennes, Paris\",thibaut.raballand@gmail.com,Parkeon,Lead System Architect,\"9/27/17, 2:53 AM\",OTHER:http://thibautraballand.brandyourself.com/,\r\nDavid,Valcke,,david.valcke@atomiz.com,Prélys,Co Founder & CEO,\"5/8/12, 12:54 AM\",COMPANY:http://www.atomiz.com,\r\nFranck,Cherpin,,franck.cherpin@gmail.com,Performance Libérée ,\"Facilitateur & Coach Libération de la Performance,des Talents et de l'Entreprise\",\"3/20/18, 9:52 AM\",,\r\nGeorges-Pierre,Selmer,,selmerge@nrjmobile.fr,Euro-Information Telecom,Digital Project Manager,\"9/20/10, 12:19 AM\",,\r\nPascal,Prot,,pprot@legos.fr,Legos,CEO,\"3/3/17, 5:17 AM\",COMPANY:http://www.legos.fr,SKYPE:pascal\r\nDidier,Delhaye,1331 Rosieres,ddelhaye.conseil@gmail.com,Tikibuzz,Associé,\"11/25/14, 3:05 AM\",,SKYPE:Didier.delhaye_3\r\nPascal,Fischer,,p.fischer.perso@wanadoo.fr,Eptica,Customer Success Director,\"10/5/15, 8:39 AM\",,\r\nSebastien,Gioria,,seb@gioria.org,AppSecFR,Owner & Principal Senior Expert,\"9/26/11, 11:46 PM\",\"COMPANY:http://www.advens.fr, BLOG:http://blog.gioria.org, OTHER:https://www.owasp.org\",GTALK:seb@gioria.org\r\nStephane,Dine,,sdine.pro@gmail.com,Opencell Software,Directeur Avant-Vente & Delivery,\"10/31/07, 8:24 PM\",,\r\nMarie,Horrein,,marie.horrein@gmail.com,Intersec Group,Orange Global Sales Director,\"11/6/07, 6:06 AM\",,\r\nOlivier,BALEIX,,olivier@baleix.eu,ACCORD Investment Business Consulting,Partner & General Manager,\"5/2/14, 9:03 AM\",\"COMPANY:http://www.impacct.fr, COMPANY:http://www.ccifc.org, COMPANY:http://www.cerclefrancophone-qingdao.com\",\r\nPierre,Françon,,pierre.francon@quaelys.com,Quaelys,CEO,\"11/5/07, 4:51 AM\",\"COMPANY:http://www.quaelys.com/, OTHER:http://www.eestel.com/\",\r\nYvan,GRAVIER,,ygravier@eliocity.com,Xee,CEO,\"3/26/16, 4:39 AM\",\"PORTFOLIO:http://www.neotilus.com, COMPANY:http://www.neosesame.com, PORTFOLIO:http://www.degetel.com\",\r\nDidier,Hingant,,dihingant@gmail.com,ERDF,Directeur Pôle Télécom,\"5/12/16, 12:33 PM\",,\r\nLionel,Deparis,,lionel.deparis@neuf.fr,DOCAPOST,Senior Account Executive,\"3/28/14, 3:41 AM\",\"OTHER:http://www.ex-BO.org, OTHER:http://www.viadeo.com/public/profil/?memberId=002430hyk01pmcz, COMPANY:http://www.docapost-bpo.com\",\r\nBertrand,DUPUIS,,bertrand.dup8@gmail.com,HMD Global,\"General Manager, France\",\"12/28/12, 10:21 AM\",,\r\nCédric,Bassaget,,cbassaget@yahoo.com,Opencell Software,Sales Director,\"10/31/07, 11:26 PM\",COMPANY:http://www.mobile-devices.com,\r\nAndrew,Dailey,,adailey@mgiresearch.com,\"MGI Research, LLC\",Managing Director,\"6/11/17, 10:28 PM\",\"BLOG:http://mgiresearch.typepad.com/tech_industry_analysis/, COMPANY:http://www.mgiresearch.com\",\r\nPascale,Paris Gonzalez,,parispascale@yahoo.fr,LBL - DEVELOPPEMENT ET PRODUCTION,Co-Founder,\"11/18/07, 11:00 PM\",,\r\nChandan,Ghosh,,chandan.1004@gmail.com,Mañana Innovtions Pvt Ltd,\"Mentor, Chief Strategy & Belief Officer, Evangalist\",\"2/2/07, 2:12 AM\",\"COMPANY:http://www.mananadigital.com, COMPANY:www.mananainnovations.com\",SKYPE:Chandan.1004\r\nJean-David,Fogiel,157 boulevard Mac Donald 75019 paris,jdfogiel@ipercast.net,ipercast,Owner CEO,\"2/27/11, 2:46 PM\",,\r\nfogiel,jd,,jd.fogiel@ipercast.net,ipercast,Owner,\"8/27/08, 10:02 PM\",,\r\nJérémie,Wainstain,,jwa@thegreendata.com,TheGreenData,Founder & CEO - Directeur fondateur,\"9/25/10, 9:51 PM\",COMPANY:http://www.thegreendata.com,\r\nAnne,DEL SARTO,,annedels@microsoft.com,Microsoft,Enterprise Channel Manager,\"2/6/17, 10:14 AM\",,\r\nOlivier,Urcel,,olivier.urcel@gmail.com,Groupe PSA,\"VP, Chief Data Officer\",\"10/31/07, 1:20 AM\",,\r\nLaurent-Cyril,VEDEL,,laurent-cyril@vedel.org,Gfi Informatique,Senior Consultant,\"4/7/16, 9:52 AM\",\"COMPANY:http://www.gfi.fr/, OTHER:https://www.mae.fr/\",\r\nDenis,Lafont-Trevisan,,denis.lafont@gmail.com,Talao (formerly eMindHub),All things Growth,\"1/16/16, 10:05 AM\",COMPANY:http://www.DesignedforWork.com,\r\nSteven,Wolfe Pereira,,wolfepereira@mac.com,Quantcast,Chief Marketing and Communications Officer,\"11/16/06, 11:47 PM\",OTHER:http://www.seo-usa.org/index.aspx,\r\nBenoit,ANDRADE,11bis Avenue Mac Mahon - 75017 -  Paris France,bandrade@arrowman.eu,Arrowman Executive Search,Associate Partner,\"2/3/16, 1:32 AM\",COMPANY:http://www.arrowman.eu,\r\nChristophe,Dumoulin,,christophe.dumoulin@businessdecision.com,Inforte,president,\"11/24/16, 1:34 AM\",\"COMPANY:http://www.businessdecision.com, COMPANY:http://www.inforte.com\",\r\nHervé,Lemaitre,,hlemaitr@redhat.com,Red Hat,Senior Business Strategist,\"11/25/16, 10:22 PM\",\"COMPANY:http://www.redhat.com, OTHER:http://opensource.com, OTHER:https://enterprisersproject.com/\",\r\nCedric,Monnier,,cedric.monnier@gmail.com,FlameFy (we are hiring!),CEO,\"1/16/16, 5:29 AM\",\"BLOG:http://www.opendigitalalliance.com, COMPANY:http://flamefy.com\",\r\nJD,Sillion,,jd.sillion@flatironssolutions.com,Flatirons Solutions®,CEO,\"9/27/16, 2:41 AM\",,\r\nYury,Kabrits,,kabrits@dataart.com,DataArt,Senior Vice President of Engineering,\"10/27/15, 7:10 AM\",,\r\nStéphane,ALLAIRE,,sallaire@bouyguestelecom.fr,Objenious by Bouygues Telecom,CEO,\"1/18/16, 12:28 PM\",,\r\nBaley,OUATTARA,,baleyouattara@gmail.com,Groupement  Orange Services ,Strategy and Development  Director ,\"8/11/17, 10:54 AM\",,SKYPE:Baleyo\r\nSerge,DAUTRIF,,serge.dautrif@mailhec.com,SYNAPSCORE,CEO,\"9/10/17, 2:17 AM\",COMPANY:http://www.synapscore.com,\r\nRemi,Gas,,remi@famillegas.fr,Louis Dreyfus Company,CIO for EMEA & Global CTO,\"9/23/09, 5:06 PM\",,\r\nOlivier,Gerhardt,,olivier_gerhardt@hotmail.com,WAVECELL,\"Co-Founder, CEO\",\"7/10/15, 4:01 AM\",OTHER:http://www.wavecell.com,"
+						},
+						"url": {
+							"raw": "{{opencell.url}}/contact/importLinkedInFromText",
+							"host": [
+								"{{opencell.url}}"
+							],
+							"path": [
+								"contact",
+								"importLinkedInFromText"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Contact / Import Text 2 Copy",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{opencell.password}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{opencell.username}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic b3BlbmNlbGwuYWRtaW46b3BlbmNlbGwuYWRtaW4="
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "\tName,Given Name,Additional Name,Family Name,Yomi Name,Given Name Yomi,Additional Name Yomi,Family Name Yomi,Name Prefix,Name Suffix,Initials,Nickname,Short Name,Maiden Name,Birthday,Gender,Location,Billing Information,Directory Server,Mileage,Occupation,Hobby,Sensitivity,Priority,Subject,Notes,Language,Photo,Group Membership,E-mail 1 - Type,E-mail 1 - Value,E-mail 2 - Type,E-mail 2 - Value,E-mail 3 - Type,E-mail 3 - Value,IM 1 - Type,IM 1 - Service,IM 1 - Value,Phone 1 - Type,Phone 1 - Value,Phone 2 - Type,Phone 2 - Value,Address 1 - Type,Address 1 - Formatted,Address 1 - Street,Address 1 - City,Address 1 - PO Box,Address 1 - Region,Address 1 - Postal Code,Address 1 - Country,Address 1 - Extended Address,Organization 1 - Type,Organization 1 - Name,Organization 1 - Yomi Name,Organization 1 - Title,Organization 1 - Department,Organization 1 - Symbol,Organization 1 - Location,Organization 1 - Job Description,Website 1 - Type,Website 1 - Value\r\n\tAbby Hert,Abby,,Hert,,,,,,,,,,,,,,,,,,,,,,,,,* myContacts,* Home,wizard.girl.45@gmail.com,,,,,,,,,,,,,,,,,,,,,,,,,,,,,homePage,fb://profile/100000322720031\r\n\tAchille Gaborit,Achille,,Gaborit,,,,,,,,,,,,,,,,,,,,,,,,,* myContacts,,,,,,,,,,Mobile,+33 6 33 87 96 70,,,,,,,,,,,,,,,,,,,,,\r\n\tAdrián Ordóñez,Adrián,,Ordóñez,,,,,,,,,,,,,,,,,,,,,,,,https://lh3.googleusercontent.com/-PVMK55MlrWM/Ux36vI09P_I/AAAAAAAAAAA/j_0GfrfuTAgK1p7Ewa8TB9hvPy6NzG_JgCOQCEAE/photo.jpg,* myContacts,* Home,caju_adri@hotmail.com,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,\r\n\tAdrien Lalanne,Adrien,,Lalanne,,,,,,,,,,,,,,,,,,,,,,,,https://lh3.googleusercontent.com/-FUobS6M1Uaw/Ux36iE09OqI/AAAAAAAAAAA/LcACOkMwxiUQin606JzmJ5Z74meB2OGHACOQCEAE/photo.jpg,* myContacts,,,,,,,,,,Mobile,+33 6 67 58 40 02,,,,,,,,,,,,,,,,,,,,,\r\n\tAhmed Seifelnasser,Ahmed,,Seifelnasser,,,,,,,,,,,,,,,,,,,,,,,,,* myContacts,,,,,,,,,,Mobile,+33626470045,,,,,,,,,,,,,,,,,,,,,\r\n\tAlbert Domenech,Albert,,Domenech,,,,,,,,,,,,,,,,,,,,,,,,,* myContacts,* Home,albertodomenech@me.com,,,,,Home,Aim,Albert@me.com,Mobile,+34 630 233 288,Work,+1 (425) 463-6630,,,,,,,,,,,,,,,,,,,\r\n\tAlexander Pardo,Alexander,,Pardo,,,,,,,,,,,,,,,,,,,,,,,,,* myContacts,,,,,,,,,,Mobile,06 34 61 19 76,Home,01 42 28 18 68,,,,,,,,,,,,,,,,,,homePage,fb://profile/1273187083\r\n\tAlexandra Blanc,Alexandra,,Blanc,,,,,,,,,,,,,,,,,,,,,,Ajouté par Bump le 29 sept. 2009  à 11:09:12 (GMT+0200).,,https://lh3.googleusercontent.com/-tWmH0hhg8JA/Ux35lVFccVI/AAAAAAAAAAA/gVQPr8eOv0EwU-X-mbLi0yEN6rKADikpgCOQCEAE/photo.jpg,* myContacts,* Home,alex_white_14@hotmail.com,Home,ablanc14@aol.fr,,,,,,Mobile,06 21 25 08 90,,,,,,,,,,,,,,,,,,,,homePage,fb://profile/511300152\r\n\tAlexandra Stefanos,Alexandra,,Stefanos,,,,,,,,,,,,,,,,,,,,,,,,,* myContacts,,,,,,,,,,Mobile,06 22 96 22 02,,,,,,,,,,,,,,,,,,,,,\r\n\tAlexandre Dumont,Alexandre,,Dumont,,,,,,,,,,,,,,,,,,,,,,,,https://lh5.googleusercontent.com/-YRQJByonk8I/Ux35t9nI3XI/AAAAAAAAAAA/ybuS1Pt3xM0kVYTSf9t10ihwILPbPjBXgCOQCEAE/photo.jpg,* myContacts,,,,,,,,,,Mobile,+33 6 59 85 13 39,,,,,,,,,,,,,,,,,,,,,\r\n\tAlexandre Lefaillet,Alexandre,,Lefaillet,,,,,,,,,,,,,,,,,,,,,,,,https://lh4.googleusercontent.com/-lfCdk6DeVa8/Ux36kyL7zEI/AAAAAAAAAAA/QOXYAedsg3A20W-F7e7fZ-ZH-PuQXYFkACOQCEAE/photo.jpg,* myContacts,,,,,,,,,,Mobile,+33 6 31 19 81 06,,,,,,,,,,,,,,,,,,,,,\r\n\tAlexia Brard,Alexia,,Brard,,,,,,,,,,,,,,,,,,,,,,,,https://lh6.googleusercontent.com/-RnxBEhnSy1M/Ux35pTsPXUI/AAAAAAAAAAA/hL046JstBqsStF-cUE_hdWrCz5780bDVgCOQCEAE/photo.jpg,* myContacts,* Home,c-alex-du-44@hotmail.fr,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,\r\n\tAlice Dupas,Alice,,Dupas,,,,,,,,,,,,,,,,,,,,,,,,,* myContacts,,,,,,,,,,Mobile,+33 6 77 59 42 86,,,,,,,,,,,,,,,,,,,,,\r\n\tAlina Valnet,Alina,,Valnet,,,,,,,,,,,,,,,,,,,,,,,,,* myContacts,,,,,,,,,,Mobile,+33652703409,,,,,,,,,,,,,,,,,,,,,\r\n\tAline Hayoun,Aline,,Hayoun,,,,,,,,,,,,,,,,,,,,,,,,,* myContacts,* Home,ahayoun@eab.fr,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,\r\n\tAnaïs Addad,Anaïs,,Addad,,,,,,,,,,,,,,,,,,,,,,,,https://lh5.googleusercontent.com/-C-OKc2dX6s8/Ux312RiuMTI/AAAAAAAAAAA/NQry3HNAFMsf9A68ZforGBflrSctqjgNwCOQCEAE/photo.jpg,* myContacts,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,\r\n\tAnais Ferreira,Anais,,Ferreira,,,,,,,,,,,,,,,,,,,,,,,,https://lh4.googleusercontent.com/-v9Reqo38eV4/Ux35vvcI8zI/AAAAAAAAAAA/FKb_b1Iehr8FjtTYjkKxB4iAFtm8GXhpACOQCEAE/photo.jpg,* myContacts,* Home,la-tite-chiieuse-du-77@hotmail.fr,Work,anaistrampo93@hotmail.fr,,,,,,Mobile,06 25 89 33 25,,,Home,France,,,,,,France,,,,,,,,,,,\r\n\tAnnabelle Aurouet,Annabelle,,Aurouet,,,,,,,,,,,,,,,,,,,,,,,,https://lh3.googleusercontent.com/-2TOzE9UfECc/Ux32sv1fwHI/AAAAAAAAAAA/OdgxwI50X-8zKAwmOlbwQn75agnNz5I1gCOQCEAE/photo.jpg,* myContacts,* Home,nanabelle-estdanslaplace-jvd@hotmail.fr,,,,,,,,Mobile,06 67 25 35 42,,,,,,,,,,,,,,,,,,,,,\r\n\tAnnaïc Leroux,Annaïc,,Leroux,,,,,,,,,,,,,,,,,,,,,,,,https://lh5.googleusercontent.com/-tc_lJMBVmXE/Ux36ncvGYMI/AAAAAAAAAAA/3Tfoxsfbu3QZNkRuRooaHYUIRMhOurrXACOQCEAE/photo.jpg,* myContacts,* Home,styleblue@hotmail.fr,,,,,,,,Mobile,06 73 08 65 48,,,Home,4 chemin de la Briantière La Paquelais 44360 France,4 chemin de la Briantière,La Paquelais,,,44360,France,,,,,,,,,,,\r\n\tAntoine Durand,Antoine,,Durand,,,,,,,,,,,,,,,,,,,,,,PSTE ING1,,,* myContacts,* INTERNET,durand@ece.fr,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,\r\n\tApple,Apple,,,,,,,,,,,,,,,,,,,,,,,,,,https://lh6.googleusercontent.com/-giYnsPy0ehM/Ux32NKjsYiI/AAAAAAAAAAA/lQPHP8dXPY4CWcVjfSfVp8n6epWICjrIwCOQCEAE/photo.jpg,* myContacts,,,,,,,,,,Work,+33 (0)1 56 52 96 00 ::: 0825 88 80 24,,,Work,\"12, av. d'Océanie ZA de Courtabœuf Les Ulis Cedex 91956 France ::: CS 81626 7, place d’Iéna Paris cedex 16 75773 France\",\"ZA de Courtabœuf 12, av. d'Océanie ::: 7, place d’Iéna CS 81626\",Les Ulis Cedex ::: Paris cedex 16, ::: , ::: ,91956 ::: 75773,France ::: France, ::: ,Work,Apple,,,,,,,homePage,http://www.apple.com/fr/\r\n\tBaptist,Baptist,,,,,,,,,,,,,,,,,,,,,,,,,,,* myContacts,,,,,,,,,,Mobile,0670858590,,,,,,,,,,,,,,,,,,,,,\r\n\tBastien Thieux,Bastien,,Thieux,,,,,,,,,,,,,,,,,,,,,,,,,* myContacts,,,,,,,,,,Mobile,+33 6 28 98 88 23,,,,,,,,,,,,,,,,,,,,,\r\n\tBen Gelbart,Ben,,Gelbart,,,,,,,,,,,,,,,,,,,,,,,,https://lh5.googleusercontent.com/-NDJBeSX-mDw/Ux35y2AUO3I/AAAAAAAAAAA/tGtgUrt3-Esj-sYIkpYBbROuDg3Yw9T3wCOQCEAE/photo.jpg,* myContacts,* Home,justben@hotmail.co.uk,,,,,,,,,,,,,,,,,,,,,,,,,,,,,homePage,fb://profile/742540235\r\n\tBenjamin Brabant,Benjamin,,Brabant,,,,,,,,,,,,,,,,,,,,,,,,https://lh5.googleusercontent.com/-jl_CrwY-G2Y/Ux35o56QEEI/AAAAAAAAAAA/8aGfZJZihWYF00DDl5ggT8RtUmIae-AbACOQCEAE/photo.jpg,* myContacts,,,,,,,,,,Mobile,+33 6 37 21 04 01,,,,,,,,,,,,,,,,,,,,,\r\n\tBenoit Caillot,Benoit,,Caillot,,,,,,,,,,,,,,,,,,,,,,,,https://lh3.googleusercontent.com/-6txkYPHI7mY/Ux35p1xCpoI/AAAAAAAAAAA/LZlIcDn-CjA1m69fN_zdEiy4CmFoBfE0gCOQCEAE/photo.jpg,* myContacts,* Home,benoit.c95@hotmail.fr,,,,,,,,,,,,,,,,,,,,,,,,,,,,,homePage,fb://profile/1033493386\r\n\tBrian,Brian,,,,,,,,,,,,,,,,,,,,,,,,,,,* myContacts,,,,,,,,,,Mobile,+33689268440,,,,,,,,,,,,,,,,,,,,,\r\n\tBella Burris,Bella,,Burris,,,,Burrisse,,,,,,,1998-04-26,,,,,,,,,,,,,,* myContacts,* Home,bubblepops2013@gmail.com,,,,,,,,Mobile,+1 (206) 910-7663,Home,+1 (425) 961-0312,Work,2184 Newport Way NW Issaquah 98027 WA États-Unis,2184 Newport Way NW,Issaquah,,,98027 WA,États-Unis,,,,,,,,,,,\r\n\tCassandre Valot,Cassandre,,Valot,,,,,,,,,,,,,,,,,,,,,,,,https://lh6.googleusercontent.com/-0Rpm9iNoV3Q/Ux36zezTITI/AAAAAAAAAAA/PiwvJr7tulEUetnFvxNi1M-NgbAQ9VQgQCOQCEAE/photo.jpg,* myContacts,* Home,cassandre.valot@gmail.com,,,,,,,,Mobile,06 29 85 97 82,,,,,,,,,,,,,,,,,,,,homePage,fb://profile/1385004268\r\n\tCharles Wickham,Charles,,Wickham,,,,,,,,,,,,,,,,,,,,,,,,https://lh6.googleusercontent.com/-jCIRUUgKulQ/Ux367yr1XRI/AAAAAAAAAAA/Oswb4z_Xcbo4TTqZq73Ms1YcjglPxdUkQCOQCEAE/photo.jpg,* myContacts ::: * starred,INTERNET,charles.wickham@ece.fr,* Home,charles.wickham@free.fr,,,,,,Mobile,+33 6 65 15 05 66,,,,,,,,,,,,,,,,,,,,,\r\n\tClarisse,Clarisse,,,,,,,,,,,,,,,,,,,,,,,,,,,* myContacts,,,,,,,,,,Mobile,+33 6 79 54 20 26,,,,,,,,,,,,Work,ECE Event,,,,,,,,\r\n\tClement Raibaud,Clement,,Raibaud,,,,,,,,,,,,,,,,,,,,,,,,,* myContacts,,,,,,,,,,Mobile,+33 6 48 73 37 19,,,,,,,,,,,,,,,,,,,,,\r\n\tCome Raskin,Come,,Raskin,,,,,,,,,,,,,,,,,,,,,,,,,* myContacts,,,,,,,,,,Mobile,06 83 46 04 82,,,,,,,,,,,,,,,,,,,,,\r\n\tCopine A Elsa,Copine,A,Elsa,,,,,,,,,,,,,,,,,,,,,,#blonde,,,* myContacts,,,,,,,,,,Mobile,+33650962834,,,,,,,,,,,,,,,,,,,,,\r\n\tCorinne Brun,Corinne,,Brun,,,,,,,,,,,,,,,,,,,,,,,,,* myContacts,* Home,corinebrun@free.fr,,,,,,,,Mobile,06 68 28 29 52 ::: 06 68 28 29 52,,,,,,,,,,,,,,,,,,,,,\r\n\tCorinne Lecorre,Corinne,,Lecorre,,,,,,,,,,,,,,,,,,,,,,,,,* myContacts,* Home,corinnr.lecorre@yahoo.fr,,,,,,,,Mobile,+33 6 49 74 66 17,,,,,,,,,,,,,,,,,,,,,\r\n\tCyril Osdoit,Cyril,,Osdoit,,,,,,,,,,,,,,,,,,,,,,,,https://lh6.googleusercontent.com/-FvhjayjQdeM/Ux36wMYEhUI/AAAAAAAAAAA/3Qwb-txeZJ8SNj8ATAEdFvEv9C6WvMNGACOQCEAE/photo.jpg,* myContacts,,,,,,,,,,Mobile,+33 6 19 30 90 31,,,,,,,,,,,,,,,,,,,,,\r\n\tDaniel Harrar,Daniel,,Harrar,,,,,,,,,,,,,,,,,,,,,,,,,* myContacts,* INTERNET,harrar@ece.fr,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,\r\n\tDanielle Levy-Duplat,Danielle,,Levy-Duplat,,,,,,,,,,,,,,,,,,,,,,≤,,https://lh3.googleusercontent.com/-4Q7Ay00DO4Y/Ux36pM1V23I/AAAAAAAAAAA/5W5YPxiY2Oscz3-6Lc2GXM0lhSFtcKfIwCOQCEAE/photo.jpg,* myContacts,,,,,,,,,,Mobile,06 70 96 49 16,Home,01 64 07 20 34,Home,Boulevard Romain Roland 42 Gretz Armeinvillier 77220 France,42 Boulevard Romain Roland,Gretz Armeinvillier,,,77220,France,,,,,,,,,,,\r\n\tDenis Schilling,Denis,,Schilling,,,,,,,,,,,,,,,,,,,,,,,,https://lh5.googleusercontent.com/-qcn3qyFVJkI/Ux36w1Z480I/AAAAAAAAAAA/BF44y0In21gl2InE3GUpCL4znIVHmMO4QCOQCEAE/photo.jpg,* myContacts,* Home,ds1186@hotmail.com,Home,ds1187@hotmail.com,,,,,,Home,+1 (206) 236-1817,Main,+1 (206) 236-0386,Home,4150 85th Avenue S.E. Mercer ISL WA 98040 États-Unis,4150 85th Avenue S.E.,Mercer ISL,,,WA 98040,États-Unis,,,,,,,,,,,\r\n\tECE Paris,ECE,,Paris,,,,,,,,,,,,,,,,,,,,,,,,,* myContacts,,,,,,,,,,workFax,01 42 22 59 02,Work,01 44 39 10 37,Work,37 Quai de Grenelle - CS 71520 PARIS Cedex 15 75725,37 Quai de Grenelle - CS 71520,PARIS Cedex 15,,,75725,,,Work,Ecole d'ingénieurs,,,,,,,,\r\n\tEliane Boccara,Eliane,,Boccara,,,,,,,,,,,,,,,,,,,,,,\"Code porte = 71428\r\n\tCATEGORIES: card\",,https://lh4.googleusercontent.com/-SPdXg8SzoP8/Ux35mznnKjI/AAAAAAAAAAA/ryH4HDhelT4UmSy1PTVNxsFMBSDH0TyZgCOQCEAE/photo.jpg,* myContacts,* Home,0142557803,,,,,,,,Mobile,0672773470,,,Home,1 Rue Duhesme Paris 75018 France,1 Rue Duhesme,Paris,,,75018,France,,,,,,,,,,,\r\n\tEmeric Deniau,Emeric,,Deniau,,,,,,,,,,,,,,,,,,,,,,PSTE ING1,,,* myContacts,* INTERNET,deniau@ece.fr,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,\r\n\tEmma Aurouet,Emma,,Aurouet,,,,,,,,,,,,,,,,,,,,,,,,https://lh3.googleusercontent.com/-sXm8mkXRp8c/Ux35ZSysy8I/AAAAAAAAAAA/tqE_Ye_y4yUAykn3lkFU4qi2I89z5cRMACOQCEAE/photo.jpg,* myContacts,* Home,disturbia_bum@hotmail.fr,,,,,,,,Mobile,06 66 08 43 80,,,,,,,,,,,,,,,,,,,,,\r\n\tEmma Bobola,Emma,,Bobola,,,,,,,,,,,,,,,,,,,,,,,,https://lh5.googleusercontent.com/-3Aj3YBEIfjA/Ux35mSPSX2I/AAAAAAAAAAA/363Ofb0zQCUzLkS18rNh5K8Qw9J1A-I0QCOQCEAE/photo.jpg,* myContacts,,,,,,,,,,Mobile,+1 (425) 765-4855,,,Home,Juanita dr NE 12723 Kirkland WA 98034 États-Unis,12723 Juanita dr NE,Kirkland,,WA,98034,États-Unis,,,,,,,,,,,\r\n\tEmma Lucille Marshall,Emma,Lucille,Marshall,,,,,,,,,,,,,,,,,,,,,,,,https://lh3.googleusercontent.com/-9r3wLklaPkQ/Ux36qKGVkhI/AAAAAAAAAAA/XXo1oORmINYGVgI33jwlO2JvjZbXII6EgCOQCEAE/photo.jpg,* myContacts,,,,,,,,,,Mobile,+1 (206) 913-7763,,,Home,Pleasant Beach Dr. NE 4205 Bainbridge Island Wa 98110 États-Unis,4205 Pleasant Beach Dr. NE,Bainbridge Island,,Wa,98110,États-Unis,,,,,,,,,,,\r\n\tEtienne Ormezzano,Etienne,,Ormezzano,,,,,,,,,,,,,,,,,,,,,,,,https://lh4.googleusercontent.com/-8D-w0FpfqrE/Ux36vvyEWgI/AAAAAAAAAAA/YJW4m3Epk0gbLpdabiFkmuUCTEDc0LU-wCOQCEAE/photo.jpg,* myContacts,,,,,,,,,,Mobile,+33 6 68 28 48 23,,,,,,,,,,,,,,,,,,,,,\r\n\tFacebook,Facebook,,,,,,,,,,,,,,,,,,,,,,,,,,,* myContacts,,,,,,,,,,Mobile,3 26 65,,,,,,,,,,,,,,,,,,,,,\r\n\tFaycal,Faycal,,,,,,,,,,,,,,,,,,,,,,,,,,,* myContacts,,,,,,,,,,Mobile,+33778260905,,,,,,,,,,,,,,,,,,,,,\r\n\tFloflo,Floflo,,,,,,,,,,,,,,,,,,,,,,,,,,https://lh4.googleusercontent.com/-CNcX7OAJS9Q/Ux35w2afFPI/AAAAAAAAAAA/DqoCe5HPaJQIzABZqJY0j9xeIqhIuvKFQCOQCEAE/photo.jpg,* myContacts,,,,,,,,,,Home,06 83 25 40 59,,,,,,,,,,,,,,,,,,,,,\r\n\tFlorian Franco,Florian,,Franco,,,,,,,,,,,,,,,,,,,,,,PSTE ING1,,https://lh3.googleusercontent.com/-qWJFpBhQfFQ/Ux35x8HWG7I/AAAAAAAAAAA/IC5jpTdPPM0U711gKq9SQFOO4EGRVPNzQCOQCEAE/photo.jpg,* myContacts,* INTERNET,franco@ece.fr,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,\r\n\tFlorian Grillet,Florian,,Grillet,,,,,,,,,,,,,,,,,,,,,,PSTE ING1,,,* myContacts,* INTERNET,grillet@ece.fr,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,\r\n\tFlorian Pourchayre,Florian,,Pourchayre,,,,,,,,,,,,,,,,,,,,,,,,,* myContacts,,,,,,,,,,Mobile,+33647730981,,,,,,,,,,,,,,,,,,,,,\r\n\tFlorian Verbeke,Florian,,Verbeke,,,,,,,,,,,,,,,,,,,,,,,,https://lh5.googleusercontent.com/-_pzy9yX0-2w/Ux366Z7uMkI/AAAAAAAAAAA/HrGcSHzTISYX83Ncr01TJd4__zGiMRsEQCOQCEAE/photo.jpg,* myContacts ::: * starred,,,,,,,,,,Mobile,+33 6 63 11 88 89,,,,,,,,,,,,,,,,,,,,,\r\n\tFranck Valot,Franck,,Valot,,,,,,,,,,,1994-01-19,,,,,,,,,,,,,,* myContacts,* Home,franckvalot@gmail.com,Work,ifranck@me.com,,,,,,Mobile,06 43 87 95 94,Home,01 40 72 62 67,Home,Avenue Victor Hugo 18 Paris 75116 France,18 Avenue Victor Hugo,Paris,,,75116,France,,Work,(fiche),,,,,,,,\r\n\tFranck Valot,Franck,,Valot,,,,,,,,,,,,,,,,,,,,,,,,,* myContacts,INTERNET,franck-valot@wanadoo.fr,* Home,ifranck@me.com,Work,franck@valot.fr,,,,Mobile,06 43 87 95 94,Home,01 40 72 62 67,Home,18 Avenue Victor Hugo Paris 75116 France,Victor Hugo 18 Avenue,Paris,,,75116,France,,,,,,,,,,,\r\n\tFrancoise Valot,Francoise,,Valot,,,,,,,,,,,,,,,,,,,,,,,,https://lh4.googleusercontent.com/-1ZRdIEqACvw/Ux3609u7VwI/AAAAAAAAAAA/N5dizMqMNSsh5T05cvdZN-20KCz-1SkggCOQCEAE/photo.jpg,* myContacts ::: * starred,* Home,francoise-valot@orange.fr,,,,,,,,Mobile,+33 6 61 02 75 80,Work,+33 1 40 72 62 67,,,,,,,,,,,,,,,,,,,\r\n\tGabin Valot,Gabin,,Valot,,,,,,,,,,,,,,,,,,,,,,,,https://lh4.googleusercontent.com/-WlBrYvyoqGQ/Ux361jbYnnI/AAAAAAAAAAA/agQN1sAH-rgO6DZKl899Iecs_ljkJJs1ACOQCEAE/photo.jpg,* myContacts,,,,,,,,,,Mobile,+33 7 70 18 61 94,,,,,,,,,,,,,,,,,,,,,\r\n\tGaetan Pradines,Gaetan,,Pradines,,,,,,,,,,,,,,,,,,,,,,,,,* myContacts,,,,,,,,,,Mobile,+33 6 35 15 89 74,,,,,,,,,,,,,,,,,,,,,\r\n\tGrégoire Levy-Duplat,Grégoire,,Levy-Duplat,,,,,,,,,,,,,,,,,,,,,,,,https://lh5.googleusercontent.com/-KN4U19dLhVU/Ux36pmctOSI/AAAAAAAAAAA/H5e8MGlgwwciau1UvWd9yP3QHhMdSda3ACOQCEAE/photo.jpg,* myContacts,* Home,greg@mizenpage.com,,,,,,,,Mobile,06 79 64 39 44,Home,01 43 70 47 87,Home,\"3, rue Bretonneau PARIS 75020\",\"3, rue Bretonneau\",PARIS,,,75020,,,,,,,,,,,,\r\n\tGros Con Ne Pas Repondre,Gros Con,,Ne Pas Repondre,,,,,,,,,,,,,,,,,,,,,,,,,* myContacts,,,,,,,,,,Mobile,+33 6 49 39 89 59,,,,,,,,,,,,,,,,,,,,,\r\n\tGuillaume Gueroc,Guillaume,,Gueroc,,,,,,,,,,,,,,,,,,,,,,,,https://lh4.googleusercontent.com/-K8WrBx_glb8/Ux350mZ40qI/AAAAAAAAAAA/J-24pWVto-w5UUoa4v8GzVjIabBv5EMJgCOQCEAE/photo.jpg,* myContacts,* Home,christophegueroc@neuf.fr,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,\r\n\tHelene,Helene,,,,,,,,,,,,,,,,,,,,,,,,,,,* myContacts,,,,,,,,,,Mobile,0684999473,,,,,,,,,,,,,,,,,,,,,\r\n\tIeswarya Sukumar,Ieswarya,,Sukumar,,,,,,,,,,,,,,,,,,,,,,,,,* myContacts,,,,,,,,,,Mobile,+33 6 68 67 41 45,,,,,,,,,,,,,,,,,,,,,\r\n\tImprimante HP6510,Imprimante,,HP6510,,,,,,,,,,,,,,,,,,,,,,,,,* myContacts,* Home,hp6510-valot@hpeprint.com,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,\r\n\tJacques Valot,Jacques,,Valot,,,,,,,,,,,1940-05-26,,,,,,,,,,,,,https://lh3.googleusercontent.com/--P_scngK7m0/Ux363i2bWQI/AAAAAAAAAAA/HVVTV2AMYJYfQ16b6NZo0JFAxhvsFTu4QCOQCEAE/photo.jpg,* myContacts,* Home,jacques@valot.fr,Work,jacques-valot@wanadoo.fr,Home,jacques.valot@icloud.com,,,,Mobile,06 43 58 97 63,Home,01 40 72 62 67 ::: +66 53818659 ::: +668-6913-4833,,,,,,,,,,,,,,,,,,homePage,http://cadeaux-gravure-bijoux.com\r\n\tJérémy Ditière,Jérémy,,Ditière,,,,,,,,,,,,,,,,,,,,,,,,https://lh5.googleusercontent.com/-xW96_Xyb1R4/Ux35tb5aZVI/AAAAAAAAAAA/K0G1YgguCF4xZnF27Qjt3vQg8jdOZB05QCOQCEAE/photo.jpg,* myContacts,* Home,jeremy-hardy-44@hotmail.fr,,,,,,,,Mobile,06 50 31 34 73,,,Home,8 rue des Rubis Saint Herblain 44800 France,8 rue des Rubis,Saint Herblain,,,44800,France,,,,,,,,,,,\r\n\tJiezie Chen,Jiezie,,Chen,,,,,,,,,,,,,,,,,,,,,,CodePorte: BA729,,,* myContacts,,,,,,,,,,Mobile,06 71 39 27 66,Home,01 42 15 24 87 ::: 09 52 38 58 56 ::: 01 48 87 02 69,Home,Quai President Kenedi 24 Paris 75016,24 Quai President Kenedi,Paris,,,75016,,,,,,,,,,,,\r\n\tJoel Skavdahl,Joel,,Skavdahl,,,,,,,,,,,,,,,,,,,,,,,,,* myContacts,* Home,cowerinthetallgrass@gmail.com,,,,,,,,,,,,,,,,,,,,,,,,,,,,,homePage,http://myspace.com/seagullinvasion\r\n\tJudi Ying,Judi,,Ying,,,,,,,,,,,,,,,,,,,,,,,,,* myContacts,,,,,,,,,,Mobile,+14252334972,,,,,,,,,,,,,,,,,,,,,\r\n\tJules André,Jules,,André,,,,,,,,,,,,,,,,,,,,,,2537e,,https://lh6.googleusercontent.com/-tKV5o2hFVkM/Ux32GMjg0GI/AAAAAAAAAAA/s1pu_8E6VvEttIlJWryjnHGJXd_MPbn-QCOQCEAE/photo.jpg,* myContacts,,,,,,,,,,Mobile,+33 6 60 90 71 92,Home,01 44 90 02 42 ::: 09 51 77 77 29,,,,,,,,,,,,,,,,,,homePage,fb://profile/1065130961\r\n\tKarim Malak,Karim,,Malak,,,,,,,,,,,,,,,,,,,,,,,,,* myContacts,,,,,,,,,,Mobile,+33 6 95 66 27 92,,,,,,,,,,,,,,,,,,,,,\r\n\tLandry,Landry,,,,,,,,,,,,,,,,,,,,,,,,,,,* myContacts,,,,,,,,,,Mobile,+33787121513,,,,,,,,,,,,,,,,,,,,,\r\n\tLaurine Thueux,Laurine,,Thueux,,,,,,,,,,,,,,,,,,,,,,COUZZZZ,,https://lh4.googleusercontent.com/-MMGe-VAsCf8/Ux36y9L_JPI/AAAAAAAAAAA/z3CxhvEYc7gA2Lf_OLu_NWaXCFEC2of_ACOQCEAE/photo.jpg,* myContacts,,,,,,,Home,MSN,laurine77680@hotmail.Fr,Mobile,+33 6 46 57 80 53,,,Home,8 allée des paquerettes Roissy-en-Brie 77680 France,8 allée des paquerettes,Roissy-en-Brie,,,77680,France,,,,,,,,,,homePage,http://vampires-duels-offres.skyrock.com/\r\n\tLedru,,,Ledru,,,,,,,,,,,,,,,,,,,,,,A2539,,,* myContacts,,,,,,,,,,Mobile,+33 6 51 02 14 45,,,,,,,,,,,,,,,,,,,,,\r\n\tLouis Bastien,Louis,,Bastien,,,,,,,,,,,,,,,,,,,,,,,,,* myContacts,,,,,,,,,,Mobile,06 26 32 07 14,,,,,,,,,,,,,,,,,,,,,\r\n\tLucas,Lucas,,,,,,,,,,,,,,,,,,,,,,,,,,,* myContacts,,,,,,,,,,Mobile,+33635259097,,,,,,,,,,,,,,,,,,,,,\r\n\tLuna Benavent Narvaez,Luna,,Benavent Narvaez,,,,,,,,,,,,,,,,,,,,,,,,https://lh5.googleusercontent.com/-IbPrsmX2mQE/Ux35kKejGbI/AAAAAAAAAAA/HSk1llY0x1otU6VuBmE0d89_vgxx9Zj8QCOQCEAE/photo.jpg,* myContacts,* Home,lunabn@msn.com,,,,,,,,Mobile,+34 676 288 011,,,Home,Calle La PaZ 25 Valencia 46003 España,Calle La PaZ 25,Valencia,,,46003,España,,,,,,,,,,homePage,fb://profile/691913132\r\n\tM. Chiriaco,M.,,Chiriaco,,,,,,,,,,,,,,,,,,,,,,,,,* myContacts,* Home,lchiriaco@eab.fr,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,\r\n\tMaman Dumont,Maman,,Dumont,,,,,,,,,,,,,,,,,,,,,,,,,* myContacts,,,,,,,,,,Mobile,06 60 57 75 73,,,,,,,,,,,,Work,Porn,,,,,,,,\r\n\tManon Fenou,Manon,,Fenou,,,,,,,,,,,,,,,,,,,,,,,,,* myContacts,,,,,,,,,,Mobile,06 76 27 95 38,,,,,,,,,,,,,,,,,,,,,\r\n\tMareen Katt,Mareen,,Katt,,,,,,,,,,,,,,,,,,,,,,,,https://lh4.googleusercontent.com/-Y2sy4hAlzZA/Ux36hn3kPJI/AAAAAAAAAAA/GqHVGGkFEZQwnYtkX4Pj5srZVAkxZV3iQCOQCEAE/photo.jpg,* myContacts,* Home,mareen.katt@web.de,,,,,,,,,,,,,,,,,,,,,,,,,,,,,homePage,fb://profile/1422744384\r\n\tMargaux Bonnefont,Margaux,,Bonnefont,,,,,,,,,,,,,,,,,,,,,,,,,* myContacts,,,,,,,,,,Mobile,+33 6 78 08 70 56,,,,,,,,,,,,,,,,,,,,,\r\n\tMatt Schilling,Matt,,Schilling,,,,,,,,,,,,,,,,,,,,,,,,,* myContacts,,,,,,,,,,Mobile,+1 (206) 251-8894,,,,,,,,,,,,,,,,,,,,,\r\n\tMatthias,Matthias,,,,,,,,,,,,,,,,,,,,,,,,,,,* myContacts,,,,,,,,,,Mobile,+33610305028,,,,,,,,,,,,,,,,,,,,,\r\n\tMaud Valot,Maud,,Valot,,,,,,,,,,,,,,,,,,,,,,,,,* myContacts,,,,,,,,,,Mobile,+33 7 81 41 71 75,,,,,,,,,,,,,,,,,,,,,\r\n\tMelanie Mersovski,Melanie,,Mersovski,,,,,,,,,,,,,,,,,,,,,,,,https://lh6.googleusercontent.com/-Si8HmrtRGUY/Ux36syO9qII/AAAAAAAAAAA/3azkzH4LpAsVumHjaPr0Xg7aeO5DEYz1ACOQCEAE/photo.jpg,* myContacts,,,,,,,,,,Home,+33 6 01 77 85 65,,,,,,,,,,,,,,,,,,,,,\r\n\tMelissa Artis,Melissa,,Artis,,,,,,,,,,,,,,,,,,,,,,50€,,https://lh6.googleusercontent.com/-aPjeQ7UUSDc/Ux32VJzUs5I/AAAAAAAAAAA/JDoCccrbTDY-qY2lczJ57ZlB2pAxleMKgCOQCEAE/photo.jpg,* myContacts,,,,,,,,,,Mobile,06 48 13 22 29,,,,,,,,,,,,,,,,,,,,,\r\n\tNadine Legroux,Nadine,,Legroux,,,,,,,,,,,,,,,,,,,,,,,,,* myContacts,,,,,,,,,,Mobile,+33 6 79 06 63 09,,,,,,,,,,,,,,,,,,,,,\r\n\tNathalie Valot,Nathalie,,Valot,,,,,,,,,,,,,,,,,,,,,,,,https://lh4.googleusercontent.com/-7n0aCObL6zc/Ux364D62c4I/AAAAAAAAAAA/qHY-t67zlw4NBl7QMsZ3OxdPjL1logj5ACOQCEAE/photo.jpg,* myContacts,* Home,nathaliecerdan@aol.com,,,,,,,,Mobile,06 16 50 61 37,,,,,,,,,,,,,,,,,,,,,\r\n\tNicolas Christou,Nicolas,,Christou,,,,,,,,,,,,,,,,,,,,,,,,,* myContacts,,,,,,,,,,Mobile,+33689817234,,,,,,,,,,,,,,,,,,,,,\r\n\tNicolas Daoud,Nicolas,,Daoud,,,,,,,,,,,,,,,,,,,,,,,,,* myContacts,,,,,,,,,,Mobile,+33 6 69 12 29 68,,,,,,,,,,,,,,,,,,,,,\r\n\tNili Banai,Nili,,Banai,,,,,,,,,,,,,,,,,,,,,,,,,* myContacts,,,,,,,,,,Mobile,+1 (425) 591-8222,,,,,,,,,,,,,,,,,,,,,\r\n\tOlivia Mize,Olivia,,Mize,,,,,,,,,,,,,,,,,,,,,,Hvc,,,* myContacts,* INTERNET,missfloridakat@yahoo.com,,,,,,,,,,,,,,,,,,,,,,,,,,,,,homePage,fb://profile/1585148435\r\n\tOlivier Valot,Olivier,,Valot,,,,,,,,,,,,,,,,,,,,,,,,https://lh4.googleusercontent.com/-0uRvYuRD4Qc/Ux364tgE9II/AAAAAAAAAAA/rE_OLCDkIa0APV8IAsmDmce_DKj9Qz-lgCOQCEAE/photo.jpg,* myContacts,* Home,olivier@valot.fr,,,,,,,,Mobile,06 63 73 04 42,Home,01 34 80 66 89,Home,52 Rue des baunes Chatou 78400,52 Rue des baunes,Chatou,,,78400,,,,,,,,,,,,\r\n\tOphélie André,Ophélie,,André,,,,,,,,,,,,,,,,,,,,,,,,https://lh6.googleusercontent.com/-lmvXroKsa7g/Ux32KWNTBFI/AAAAAAAAAAA/ggkjSU0SgnYRgqGe0Jz_ilnl8ec8ClGgQCOQCEAE/photo.jpg,* myContacts,* INTERNET,oandre@ece.fr,,,,,,,,Mobile,+33 6 74 16 94 84,,,,,,,,,,,,,,,,,,,,,\r\n\tOriane Fovet,Oriane,,Fovet,,,,,,,,,,,,,,,,,,,,,,,,https://lh3.googleusercontent.com/-hYgfUIynU7k/Ux35xWCsJlI/AAAAAAAAAAA/IuHtlzRCQcoLSYLqbM5Awl_WzTiKCdFJQCOQCEAE/photo.jpg,* myContacts,* INTERNET,oriane.fovet@hotmail.fr,,,,,,,,Mobile,+33667284162,,,,,,,,,,,,,,,,,,,,,\r\n\tPaul Ben Kiran,Paul,,Ben Kiran,,,,,,,,,,,,,,,,,,,,,,,,https://lh3.googleusercontent.com/-MI1RApj2Qqg/Ux35jdI8dBI/AAAAAAAAAAA/GeUW3Y5vb_EjN_eiLeiYsXH9wPjGnW7IwCOQCEAE/photo.jpg,* myContacts,,,,,,,,,,Mobile,+33 6 10 36 23 94,,,,,,,,,,,,,,,,,,,,,\r\n\tPierre Vigouroux,Pierre,,Vigouroux,,,,,,,,,,,,,,,,,,,,,,,,https://lh6.googleusercontent.com/-51Ri7DkCGg8/Ux3669IduLI/AAAAAAAAAAA/0zSkQtlnXy4Dk-vSvU2bx8-QwI9R_YJYACOQCEAE/photo.jpg,* myContacts,* Home,caillou_du_29@hotmail.fr,Work,pierrevigouroux1@free.fr,,,,,,Mobile,+33 6 37 85 14 96,,,,,,,,,,,,,,,,,,,,,\r\n\tPierre-Yves Cousin,Pierre-Yves,,Cousin,,,,,,,,,,,,,,,,,,,,,,,,,* myContacts,,,,,,,,,,Mobile,+33 6 05 01 73 63,,,,,,,,,,,,,,,,,,,,,\r\n\tRobin Cuvigny,Robin,,Cuvigny,,,,,,,,,,,,,,,,,,,,,,Telligo,,,* myContacts,* Home,air_147@hotmail.fr,Work,thenightwolf94500@hotmail.fr,Home,air_147@hotmail.fr,,,,Mobile,06 59 92 31 07,,,,,,,,,,,,,,,,,,,,homePage,fb://profile/1541054734\r\n\tSandra Chochod,Sandra,,Chochod,,,,,,,,,,,,,,,,,,,,,,,,https://lh4.googleusercontent.com/-XBoM7QYH-jc/Ux35q6UbEUI/AAAAAAAAAAA/NVNrfq-jj0oRtkc6BrMwwCRxWwFBGPklwCOQCEAE/photo.jpg,* myContacts,,,,,,,,,,Mobile,06 34 67 14 41,,,,,,,,,,,,,,,,,,,,,\r\n\tSven Faust,Sven,,Faust,,,,,,,,,,,,,,,,,,,,,,,,https://lh4.googleusercontent.com/-92lLRwOqTro/Ux35uyCTDaI/AAAAAAAAAAA/01VZm2j723c1D2wbvvSI3Szjc3QMRXhqQCOQCEAE/photo.jpg,* myContacts,* Home,sven@faust-brm.de,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,\r\n\tSylvain,Sylvain,,,,,,,,,,,,,,,,,,,,,,,,,,,* myContacts,,,,,,,,,,Mobile,+33678681496,,,,,,,,,,,,,,,,,,,,,\r\n\tTam Le,Tam,,Le,,,,,,,,,,,,,,,,,,,,,,,,https://lh5.googleusercontent.com/-thjwDebBhPQ/Ux36kti54KI/AAAAAAAAAAA/X9xrgvGpB7A39vekYX27uWZ01LH0tXQwwCOQCEAE/photo.jpg,* myContacts ::: * starred,,,,,,,,,,Mobile,06 29 21 05 19,,,,,,,,,,,,,,,,,,,,,\r\n\tTessa Ryan,Tessa,,Ryan,,,,,,,,,,,,,,,,,,,,,,,,,* myContacts,,,,,,,,,,Mobile,+1 (206) 818-1611,,,Home,1717 SE 24 av Portland OR 97214 Etats Unis,1717 SE 24 av,Portland,,,OR 97214,Etats Unis,,,,,,,,,,,\r\n\tThomas,Thomas,,,,,,,,,,,,,,,,,,,,,,,,,,,* myContacts,,,,,,,,,,Mobile,+33760420351,,,,,,,,,,,,,,,,,,,,,\r\n\tThomas Biton,Thomas,,Biton,,,,,,,,,,,,,,,,,,,,,,,,,* myContacts,,,,,,,,,,Mobile,+33 6 34 11 01 94,,,,,,,,,,,,,,,,,,,,,\r\n\tThomas Louis,Thomas,,Louis,,,,,,,,,,,1604-11-07,,,,,,,,,,,,,,* myContacts,,,,,,,,,,Mobile,06 43 57 53 73,,,,,,,,,,,,,,,,,,,,,\r\n\tThomas Reny,Thomas,,Reny,,,,,,,,,,,,,,,,,,,,,,,,,* myContacts,,,,,,,,,,Mobile,+33 7 77 30 69 24,,,,,,,,,,,,,,,,,,,,,\r\n\tTimothée Gignac,Timothée,,Gignac,,,,,,,,,,,,,,,,,,,,,,81b4 le code,,https://lh6.googleusercontent.com/-mjFbc6xInYg/Ux35zyiZkOI/AAAAAAAAAAA/jXs-RR0po6M7Ykli2We2fE-wyfB-pHP7QCOQCEAE/photo.jpg,* myContacts,* Home,tim.gignac@hotmail.fr,,,,,,,,Mobile,06 15 42 22 45,,,,,,,,,,,,,,,,,,,,,\r\n\tValentin Lemercier,Valentin,,Lemercier,,,,,,,,,,,,,,,,,,,,,,,,https://lh3.googleusercontent.com/-kly1Zb06sjo/Ux36m6Oq8vI/AAAAAAAAAAA/UIja6_I3YAUevpwLZPO2W9BmaroafTc_wCOQCEAE/photo.jpg,* myContacts,,,,,,,,,,Mobile,+33 7 81 16 63 40,,,,,,,,,,,,,,,,,,,,,\r\n\tValentin Mercier,Valentin,,Mercier,,,,,,,,,,,,,,,,,,,,,,PSTE ING1,,https://lh3.googleusercontent.com/-hes3l0TUCeI/Ux36sde8asI/AAAAAAAAAAA/d4OTl0s4SXw8XWwJA7302dMFcm_srLjpwCOQCEAE/photo.jpg,* myContacts,* INTERNET,vmercier@ece.fr,,,,,,,,Mobile,+33 7 81 16 63 40,,,,,,,,,,,,,,,,,,,,,\r\n\tVanessa Ng,Vanessa,,Ng,,,,,,,,,,,,,,,,,,,,,,,,,* myContacts,,,,,,,,,,Mobile,+1 (425) 681-6856,,,,,,,,,,,,,,,,,,,,,\r\n\tVictor Bernard,Victor,,Bernard,,,,,,,,,,,,,,,,,,,,,,,,https://lh4.googleusercontent.com/-lbzmrrcO_WQ/Ux35k1W3s3I/AAAAAAAAAAA/U1LddPWc20ofjm3xtJ6MHWXc72TR0-76QCOQCEAE/photo.jpg,* myContacts,,,,,,,,,,Mobile,+33 6 82 58 04 55,,,,,,,,,,,,,,,,,,,,,\r\n\tVincent Leroux,Vincent,,Leroux,,,,,,,,,,,,,,,,,,,,,,,,,* myContacts,,,,,,,,,,Mobile,+33 6 86 24 92 91,,,,,,,,,,,,,,,,,,,,,\r\n\tWarren Hussein,Warren,,Hussein,,,,,,,,Wawa,,,,,,,,,,,,,,EAB,,,* myContacts,* INTERNET,warrenmarchand@hotmail.fr,,,,,,,,Mobile,06 09 26 64 24,,,Home,143 Avenue De Wagram Paris 75017 France,143 Avenue De Wagram,Paris,,,75017,France,,,,,,,,,,,\r\n\tWicked Lasers,Wicked,,Lasers,,,,,,,,,,,,,,,,,,,,,,,,https://lh3.googleusercontent.com/-bVtXZ1Z5oSw/Ux36icl8mBI/AAAAAAAAAAA/l01pcP8poGkMMNJwH9JShBvfX569wcmdwCOQCEAE/photo.jpg,* myContacts,* Home,b2b@wickedlasers.com,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,\r\n\tYann Oziel,Yann,,Oziel,,,,,,,,,,,,,,,,,,,,,,Telligo,,,* myContacts,* Home,redeyes6@hotmail.fr,,,,,,,,Mobile,06 75 73 41 62,,,,,,,,,,,,,,,,,,,,homePage,fb://profile/1479794180\r\n\tYousef Khallouk,Yousef,,Khallouk,,,,,,,,,,,,,,,,,,,,,,,,,* myContacts,,,,,,,,,,Mobile,+33642371392,,,,,,,,,,,,,,,,,,,,,\r\n\tYu,Yu,,,,,,,,,,,,,,,,,,,,,,,,,,,* myContacts,* Other,+33788267302,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,\r\n\tZaleski,Zaleski,,,,,,,,,,,,,,,,,,,,,,,,,,,* myContacts,,,,,,,,,,Mobile,+33616904764,,,,,,,,,,,,,,,,,,,,,\r\n\tZan McPherson,Zan,,McPherson,,,,,,,,,,,,,,,,,,,,,,,,https://lh5.googleusercontent.com/-g9i7nLP8wEg/Ux36sFU7FGI/AAAAAAAAAAA/amvr7u5N3eIxMKfJM3iZN-AgWxmtzxodwCOQCEAE/photo.jpg,* myContacts,* Home,zanamcp@hotmail.com,,,,,,,,Mobile,+1 (206) 323-3377 ::: +1 (206) 393-7651,,,,,,,,,,,,,,,,,,,,homePage,fb://profile/1543902601\r\n"
+						},
+						"url": {
+							"raw": "{{opencell.url}}/contact/importCSVText",
+							"host": [
+								"{{opencell.url}}"
+							],
+							"path": [
+								"contact",
+								"importCSVText"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Contact / ListGet",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{opencell.password}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{opencell.username}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Basic b3BlbmNlbGwuYWRtaW46b3BlbmNlbGwuYWRtaW4="
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"email\" : \"franckvalot@gmail.com\",\n\t\"code\" : \"franckvalot@gmail.com\",\n\t\"assistantName\" : \"Lan\",\n\t\"position\" : \"Stagiaire\",\n\t\"websiteUrl\" : \"http://franckvalot.com\",\n\t\"isVip\" : \"false\",\n\t\"agreedToUA\" : \"true\",\n\t\"isSuspect\" : \"false\",\n\t\"name\" : {\n\t  \t\"title\" : \"Mr.\",\n\t    \"firstName\" : \"Franck\",\n\t    \"lastName\" : \"Valot\"\n\t}\n}"
+						},
+						"url": {
+							"raw": "{{opencell.url}}/contact/list",
+							"host": [
+								"{{opencell.url}}"
+							],
+							"path": [
+								"contact",
+								"list"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Contact / ListGet Copy",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{opencell.password}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{opencell.username}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Basic b3BlbmNlbGwuYWRtaW46b3BlbmNlbGwuYWRtaW4="
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"email\" : \"franckvalot@gmail.com\",\n\t\"code\" : \"franckvalot@gmail.com\",\n\t\"assistantName\" : \"Lan\",\n\t\"position\" : \"Stagiaire\",\n\t\"websiteUrl\" : \"http://franckvalot.com\",\n\t\"isVip\" : \"false\",\n\t\"agreedToUA\" : \"true\",\n\t\"isSuspect\" : \"false\",\n\t\"name\" : {\n\t  \t\"title\" : \"Mr.\",\n\t    \"firstName\" : \"Franck\",\n\t    \"lastName\" : \"Valot\"\n\t}\n}"
+						},
+						"url": {
+							"raw": "{{opencell.url}}/contact/list",
+							"host": [
+								"{{opencell.url}}"
+							],
+							"path": [
+								"contact",
+								"list"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Contact / Add Tag",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{opencell.password}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{opencell.username}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Basic b3BlbmNlbGwuYWRtaW46b3BlbmNlbGwuYWRtaW4="
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"email\" : \"franckvalot@gmail.com\",\n\t\"code\" : \"franckvalot@gmail.com\",\n\t\"assistantName\" : \"Lan\",\n\t\"position\" : \"Stagiaire\",\n\t\"websiteUrl\" : \"http://franckvalot.com\",\n\t\"isVip\" : \"false\",\n\t\"agreedToUA\" : \"true\",\n\t\"isProspect\" : \"false\",\n\t\"name\" : {\n\t  \t\"title\" : \"MR\",\n\t    \"firstName\" : \"Franck\",\n\t    \"lastName\" : \"Valot\"\n\t},\n\t\"description\" : \"Ceci est une description\",\n\t\"phone\" : \"0123456789\",\n\t\"mobile\" : \"0612345789\"\n}"
+						},
+						"url": {
+							"raw": "{{opencell.url}}/contact/franckvalot@gmail.com/Stagiaire",
+							"host": [
+								"{{opencell.url}}"
+							],
+							"path": [
+								"contact",
+								"franckvalot@gmail.com",
+								"Stagiaire"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Contact / Remove Tag",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{opencell.password}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{opencell.username}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Basic b3BlbmNlbGwuYWRtaW46b3BlbmNlbGwuYWRtaW4="
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"email\" : \"franckvalot@gmail.com\",\n\t\"code\" : \"franckvalot@gmail.com\",\n\t\"assistantName\" : \"Lan\",\n\t\"position\" : \"Stagiaire\",\n\t\"websiteUrl\" : \"http://franckvalot.com\",\n\t\"isVip\" : \"false\",\n\t\"agreedToUA\" : \"true\",\n\t\"isSuspect\" : \"false\",\n\t\"name\" : {\n\t  \t\"title\" : \"Mr.\",\n\t    \"firstName\" : \"Franck\",\n\t    \"lastName\" : \"Valot\"\n\t}\n}"
+						},
+						"url": {
+							"raw": "{{opencell.url}}/contact/franckvalot@gmail.com/Stagiaire",
+							"host": [
+								"{{opencell.url}}"
+							],
+							"path": [
+								"contact",
+								"franckvalot@gmail.com",
+								"Stagiaire"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Contact / Find tags",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{opencell.password}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{opencell.username}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Basic b3BlbmNlbGwuYWRtaW46b3BlbmNlbGwuYWRtaW4="
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"email\" : \"franckvalot@gmail.com\",\n  \"code\" : \"franckvalot@gmail.com\",\n  \"assistantName\" : \"Lan\",\n  \"position\" : \"Stagiaire\",\n  \"websiteUrl\" : \"http://franckvalot.com\",\n  \"isVip\" : \"false\",\n  \"agreedToUA\" : \"true\",\n  \"isSuspect\" : \"false\",\n  \"name\" : {\n      \"title\" : \"Mr.\",\n      \"firstName\" : \"Franck\",\n      \"lastName\" : \"Valot\"\n  }\n}"
+						},
+						"url": {
+							"raw": "{{opencell.url}}/contact/list?query=tags.Stagiaire",
+							"host": [
+								"{{opencell.url}}"
+							],
+							"path": [
+								"contact",
+								"list"
+							],
+							"query": [
+								{
+									"key": "query",
+									"value": "tags.Stagiaire"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Contact / Remove",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{opencell.password}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{opencell.username}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Basic b3BlbmNlbGwuYWRtaW46b3BlbmNlbGwuYWRtaW4="
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"email\" : \"franckvalot@gmail.com\",\n\t\"code\" : \"franckvalot@gmail.com\",\n\t\"assistantName\" : \"Lan\",\n\t\"position\" : \"Stagiaire\",\n\t\"websiteUrl\" : \"http://franckvalot.com\",\n\t\"isVip\" : \"false\",\n\t\"agreedToUA\" : \"true\",\n\t\"isSuspect\" : \"false\",\n\t\"name\" : {\n\t  \t\"title\" : \"Mr.\",\n\t    \"firstName\" : \"Franck\",\n\t    \"lastName\" : \"Valot\"\n\t}\n}"
+						},
+						"url": {
+							"raw": "{{opencell.url}}/contact/franckvalot@gmail.com",
+							"host": [
+								"{{opencell.url}}"
+							],
+							"path": [
+								"contact",
+								"franckvalot@gmail.com"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Contact / Remove Copy",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{opencell.password}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{opencell.username}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Basic b3BlbmNlbGwuYWRtaW46b3BlbmNlbGwuYWRtaW4="
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"email\" : \"franckvalot@gmail.com\",\n\t\"code\" : \"franckvalot@gmail.com\",\n\t\"assistantName\" : \"Lan\",\n\t\"position\" : \"Stagiaire\",\n\t\"websiteUrl\" : \"http://franckvalot.com\",\n\t\"isVip\" : \"false\",\n\t\"agreedToUA\" : \"true\",\n\t\"isSuspect\" : \"false\",\n\t\"name\" : {\n\t  \t\"title\" : \"Mr.\",\n\t    \"firstName\" : \"Franck\",\n\t    \"lastName\" : \"Valot\"\n\t}\n}"
+						},
+						"url": {
+							"raw": "{{opencell.url}}/contact/franckvalot@gmail.com",
+							"host": [
+								"{{opencell.url}}"
+							],
+							"path": [
+								"contact",
+								"franckvalot@gmail.com"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "Description\n",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "c8fecb3d-812b-4a9c-8067-100330a7dc38",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "a00730ea-7a86-49ab-b6a1-1b94810aadfe",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "AddressBook",
+			"item": [
+				{
+					"name": "AddressBook / Find",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{opencell.password}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{opencell.username}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Basic b3BlbmNlbGwuYWRtaW46b3BlbmNlbGwuYWRtaW4="
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"email\" : \"franckvalot@gmail.com\",\n\t\"code\" : \"franckvalot@gmail.com\",\n\t\"assistantName\" : \"Lan\",\n\t\"position\" : \"Stagiaire\",\n\t\"websiteUrl\" : \"http://franckvalot.com\",\n\t\"isVip\" : \"false\",\n\t\"agreedToUA\" : \"true\",\n\t\"isSuspect\" : \"false\",\n\t\"name\" : {\n\t  \t\"title\" : \"Mr.\",\n\t    \"firstName\" : \"Franck\",\n\t    \"lastName\" : \"Valot\"\n\t}\n}"
+						},
+						"url": {
+							"raw": "{{opencell.url}}/addressbook?code=Opencell&from=company",
+							"host": [
+								"{{opencell.url}}"
+							],
+							"path": [
+								"addressbook"
+							],
+							"query": [
+								{
+									"key": "code",
+									"value": "Opencell"
+								},
+								{
+									"key": "from",
+									"value": "company"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AddressBook / Find Copy",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{opencell.password}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{opencell.username}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Basic b3BlbmNlbGwuYWRtaW46b3BlbmNlbGwuYWRtaW4="
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"email\" : \"franckvalot@gmail.com\",\n\t\"code\" : \"franckvalot@gmail.com\",\n\t\"assistantName\" : \"Lan\",\n\t\"position\" : \"Stagiaire\",\n\t\"websiteUrl\" : \"http://franckvalot.com\",\n\t\"isVip\" : \"false\",\n\t\"agreedToUA\" : \"true\",\n\t\"isSuspect\" : \"false\",\n\t\"name\" : {\n\t  \t\"title\" : \"Mr.\",\n\t    \"firstName\" : \"Franck\",\n\t    \"lastName\" : \"Valot\"\n\t}\n}"
+						},
+						"url": {
+							"raw": "http://tests-crm.opencell.work/opencell/api/rest/addressbook?code=UNASSIGNED&from=customer",
+							"protocol": "http",
+							"host": [
+								"tests-crm",
+								"opencell",
+								"work"
+							],
+							"path": [
+								"opencell",
+								"api",
+								"rest",
+								"addressbook"
+							],
+							"query": [
+								{
+									"key": "code",
+									"value": "UNASSIGNED"
+								},
+								{
+									"key": "from",
+									"value": "customer"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AddressBook / CreateAll",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{opencell.password}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{opencell.username}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Basic b3BlbmNlbGwuYWRtaW46b3BlbmNlbGwuYWRtaW4="
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"email\" : \"franckvalot@gmail.com\",\n\t\"code\" : \"franckvalot@gmail.com\",\n\t\"assistantName\" : \"Lan\",\n\t\"position\" : \"Stagiaire\",\n\t\"company\" : \"Opencell\",\n\t\"websiteUrl\" : \"http://franckvalot.com\",\n\t\"isVip\" : \"false\",\n\t\"agreedToUA\" : \"true\",\n\t\"isProspect\" : \"false\",\n\t\"name\" : {\n\t  \t\"title\" : \"Mr.\",\n\t    \"firstName\" : \"Franck\",\n\t    \"lastName\" : \"Valot\"\n\t},\n\t\"description\" : \"Ceci est une description\",\n\t\"phone\" : \"0123456789\",\n\t\"mobile\" : \"0612345789\"\n}"
+						},
+						"url": {
+							"raw": "{{opencell.url}}/addressbook",
+							"host": [
+								"{{opencell.url}}"
+							],
+							"path": [
+								"addressbook"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AddressBook / AddContact",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{opencell.password}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{opencell.username}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Basic b3BlbmNlbGwuYWRtaW46b3BlbmNlbGwuYWRtaW4="
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"email\" : \"franckvalot@gmail.com\",\n\t\"code\" : \"franckvalot@gmail.com\",\n\t\"assistantName\" : \"Lan\",\n\t\"position\" : \"Stagiaire\",\n\t\"company\" : \"Opencell\",\n\t\"websiteUrl\" : \"http://franckvalot.com\",\n\t\"isVip\" : \"false\",\n\t\"agreedToUA\" : \"true\",\n\t\"isProspect\" : \"false\",\n\t\"name\" : {\n\t  \t\"title\" : \"Mr.\",\n\t    \"firstName\" : \"Franck\",\n\t    \"lastName\" : \"Valot\"\n\t},\n\t\"description\" : \"Ceci est une description\",\n\t\"phone\" : \"0123456789\",\n\t\"mobile\" : \"0612345789\"\n}"
+						},
+						"url": {
+							"raw": "{{opencell.url}}/addressbook/addContact?addressbookCode=thomas@conte.com&contactCode=franckvalot@gmail.com",
+							"host": [
+								"{{opencell.url}}"
+							],
+							"path": [
+								"addressbook",
+								"addContact"
+							],
+							"query": [
+								{
+									"key": "addressbookCode",
+									"value": "thomas@conte.com"
+								},
+								{
+									"key": "contactCode",
+									"value": "franckvalot@gmail.com"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "AddressBook description\n",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "5f8a8a7e-620f-4059-b849-456f82486c1e",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "1d11d2c7-ba17-426b-953b-0f6f65be8c7b",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "User/ Find",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{opencell.password}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{opencell.username}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Basic b3BlbmNlbGwuYWRtaW46b3BlbmNlbGwuYWRtaW4="
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"email\" : \"franckvalot@gmail.com\",\n\t\"code\" : \"franckvalot@gmail.com\",\n\t\"assistantName\" : \"Lan\",\n\t\"position\" : \"Stagiaire\",\n\t\"websiteUrl\" : \"http://franckvalot.com\",\n\t\"isVip\" : \"false\",\n\t\"agreedToUA\" : \"true\",\n\t\"isSuspect\" : \"false\",\n\t\"name\" : {\n\t  \t\"title\" : \"Mr.\",\n\t    \"firstName\" : \"Franck\",\n\t    \"lastName\" : \"Valot\"\n\t}\n}"
+						},
+						"url": {
+							"raw": "{{opencell.url}}/user/find?username=opencell.admin",
+							"host": [
+								"{{opencell.url}}"
+							],
+							"path": [
+								"user",
+								"find"
+							],
+							"query": [
+								{
+									"key": "username",
+									"value": "opencell.admin"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "User description\n"
+		},
+		{
+			"name": "Customer",
+			"item": [
+				{
+					"name": "Test 1",
+					"item": [
+						{
+							"name": "Test 2",
+							"item": [],
+							"description": "test 2 description",
+							"_postman_isSubFolder": true
+						}
+					],
+					"description": "test 1 description",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "c69ce8aa-2760-4b92-9eb4-c8a1bebe8917",
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"id": "75c263a6-15ec-424d-a49a-58e7e617eb85",
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Customer / Find Copy",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{opencell.password}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{opencell.username}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Basic b3BlbmNlbGwuYWRtaW46b3BlbmNlbGwuYWRtaW4="
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"email\" : \"franckvalot@gmail.com\",\n\t\"code\" : \"franckvalot@gmail.com\",\n\t\"assistantName\" : \"Lan\",\n\t\"position\" : \"Stagiaire\",\n\t\"websiteUrl\" : \"http://franckvalot.com\",\n\t\"isVip\" : \"false\",\n\t\"agreedToUA\" : \"true\",\n\t\"isSuspect\" : \"false\",\n\t\"name\" : {\n\t  \t\"title\" : \"Mr.\",\n\t    \"firstName\" : \"Franck\",\n\t    \"lastName\" : \"Valot\"\n\t}\n}"
+						},
+						"url": {
+							"raw": "{{opencell.url}}/account/customer?customerCode=nicolas.gaume@gmail.com",
+							"host": [
+								"{{opencell.url}}"
+							],
+							"path": [
+								"account",
+								"customer"
+							],
+							"query": [
+								{
+									"key": "customerCode",
+									"value": "nicolas.gaume@gmail.com"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Customer/ CreateOrUpdate",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{opencell.password}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{opencell.username}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Basic b3BlbmNlbGwuYWRtaW46b3BlbmNlbGwuYWRtaW4="
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"additionalDetails\" : {\n\t\t\"companyName\" : \"Test\"\n\t},\n\t\"auditable\": {\n\t    \"created\": 1530088816127,\n\t    \"updated\": 1530088856073,\n\t    \"creator\": \"opencell.admin\",\n\t    \"updater\": \"opencell.admin\"\n\t},\n\t\"code\": \"ben.ohara2\",\n\t\"description\": \"Ben Ohara\",\n\t\"name\": {\n\t    \"title\": \"MR\",\n\t    \"firstName\": \"Ben\",\n\t    \"lastName\": \"Ohara\"\n\t},\n\t\"address\": {\n\t    \"address1\": \"14 rue Crespin du Gast\",\n\t    \"address2\": null,\n\t    \"address3\": null,\n\t    \"zipCode\": \"75011\",\n\t    \"city\": \"PARIS\",\n\t    \"country\": \"FR\",\n\t    \"state\": \"Paris Area\"\n\t},\n\t\"customerCategory\": \"CLIENT\",\n\t\"customerBrand\": \"CLASSIC\",\n\t\"seller\": \"CLASSIC\",\n\t\"mandateIdentification\": \"\",\n\t\"contactInformation\": {\n\t    \"email\": \"ben.ohara@opencellsoft.com\",\n\t    \"phone\": null,\n\t    \"mobile\": null,\n\t    \"fax\": null\n\t},\n\t\"customerAccounts\": {\n\t    \"customerAccount\": [\n\t        {\n\t            \"auditable\": {\n\t                \"created\": 1530088816133,\n\t                \"updated\": 1530088856132,\n\t                \"creator\": \"opencell.admin\",\n\t                \"updater\": \"opencell.admin\"\n\t            },\n\t            \"code\": \"ben.ohara\",\n\t            \"description\": \"Ben Ohara\",\n\t            \"name\": {\n\t                \"title\": \"MR\",\n\t                \"firstName\": \"Ben\",\n\t                \"lastName\": \"Ohara\"\n\t            },\n\t            \"address\": {\n\t                \"address1\": \"14 rue Crespin du Gast\",\n\t                \"address2\": null,\n\t                \"address3\": null,\n\t                \"zipCode\": \"75011\",\n\t                \"city\": \"PARIS\",\n\t                \"country\": \"FR\",\n\t                \"state\": \"Paris Area\"\n\t            },\n\t            \"customer\": \"ben.ohara\",\n\t            \"currency\": \"EUR\",\n\t            \"language\": \"FRA\",\n\t            \"status\": \"ACTIVE\",\n\t            \"dateStatus\": 1530088816131,\n\t            \"dateDunningLevel\": 1530088816132,\n\t            \"contactInformation\": {\n\t                \"email\": \"ben.ohara@opencellsoft.com\",\n\t                \"phone\": null,\n\t                \"mobile\": null,\n\t                \"fax\": null\n\t            },\n\t            \"dunningLevel\": \"R0\",\n\t            \"balance\": 0,\n\t            \"totalInvoiceBalance\": 0,\n\t            \"accountBalance\": 0,\n\t            \"creditBalance\": 0,\n\t            \"excludedFromPayment\": false,\n\t            \"paymentMethod\": \"CARD\",\n\t            \"billingAccounts\": {\n\t                \"billingAccount\": [\n\t                    {\n\t                        \"auditable\": {\n\t                            \"created\": 1530088816139,\n\t                            \"updated\": 1530088856145,\n\t                            \"creator\": \"opencell.admin\",\n\t                            \"updater\": \"opencell.admin\"\n\t                        },\n\t                        \"code\": \"ben.ohara\",\n\t                        \"description\": \"Ben Ohara\",\n\t                        \"name\": {\n\t                            \"title\": \"MR\",\n\t                            \"firstName\": \"Ben\",\n\t                            \"lastName\": \"Ohara\"\n\t                        },\n\t                        \"address\": {\n\t                            \"address1\": \"14 rue Crespin du Gast\",\n\t                            \"address2\": null,\n\t                            \"address3\": null,\n\t                            \"zipCode\": \"75011\",\n\t                            \"city\": \"PARIS\",\n\t                            \"country\": \"FR\",\n\t                            \"state\": \"Paris Area\"\n\t                        },\n\t                        \"customerAccount\": \"ben.ohara\",\n\t                        \"billingCycle\": \"BC_CLASSIC_MONTHLY_1ST\",\n\t                        \"country\": \"FR\",\n\t                        \"language\": \"FRA\",\n\t                        \"nextInvoiceDate\": 1530088816139,\n\t                        \"subscriptionDate\": 1530088816139,\n\t                        \"electronicBilling\": true,\n\t                        \"status\": \"ACTIVE\",\n\t                        \"statusDate\": 1530088816139,\n\t                        \"email\": \"ben.ohara@opencellsoft.com\",\n\t                        \"invoices\": [],\n\t                        \"paymentMethod\": \"CARD\",\n\t                        \"userAccounts\": {\n\t                            \"userAccount\": [\n\t                                {\n\t                                    \"auditable\": {\n\t                                        \"created\": 1530088816144,\n\t                                        \"updated\": 1530088856148,\n\t                                        \"creator\": \"opencell.admin\",\n\t                                        \"updater\": \"opencell.admin\"\n\t                                    },\n\t                                    \"code\": \"ben.ohara\",\n\t                                    \"description\": \"Ben Ohara\",\n\t                                    \"name\": {\n\t                                        \"title\": \"MR\",\n\t                                        \"firstName\": \"Ben\",\n\t                                        \"lastName\": \"Ohara\"\n\t                                    },\n\t                                    \"address\": {\n\t                                        \"address1\": \"14 rue Crespin du Gast\",\n\t                                        \"address2\": null,\n\t                                        \"address3\": null,\n\t                                        \"zipCode\": \"75011\",\n\t                                        \"city\": \"PARIS\",\n\t                                        \"country\": \"FR\",\n\t                                        \"state\": \"Paris Area\"\n\t                                    },\n\t                                    \"billingAccount\": \"ben.ohara\",\n\t                                    \"billingAccountDescription\": \"Ben Ohara\",\n\t                                    \"customerAccount\": \"ben.ohara\",\n\t                                    \"customerAccountDescription\": \"Ben Ohara\",\n\t                                    \"customer\": \"ben.ohara\",\n\t                                    \"customerDescription\": \"Ben Ohara\",\n\t                                    \"subscriptionDate\": 1530088816142,\n\t                                    \"status\": \"ACTIVE\",\n\t                                    \"statusDate\": 1530088816142,\n\t                                    \"subscriptions\": {\n\t                                        \"subscription\": null\n\t                                    },\n\t                                    \"businessAccountModel\": {\n\t                                        \"auditable\": {\n\t                                            \"created\": 1530088804673,\n\t                                            \"updated\": 1530088806065,\n\t                                            \"creator\": \"opencell.admin\",\n\t                                            \"updater\": \"opencell.admin\"\n\t                                        },\n\t                                        \"code\": \"Client\",\n\t                                        \"description\": \"Individual customer\"\n\t                                    }\n\t                                }\n\t                            ]\n\t                        },\n\t                        \"businessAccountModel\": {\n\t                            \"auditable\": {\n\t                                \"created\": 1530088804673,\n\t                                \"updated\": 1530088806065,\n\t                                \"creator\": \"opencell.admin\",\n\t                                \"updater\": \"opencell.admin\"\n\t                            },\n\t                            \"code\": \"Client\",\n\t                            \"description\": \"Individual customer\"\n\t                        }\n\t                    }\n\t                ]\n\t            },\n\t            \"businessAccountModel\": {\n\t                \"auditable\": {\n\t                    \"created\": 1530088804673,\n\t                    \"updated\": 1530088806065,\n\t                    \"creator\": \"opencell.admin\",\n\t                    \"updater\": \"opencell.admin\"\n\t                },\n\t                \"code\": \"Client\",\n\t                \"description\": \"Individual customer\"\n\t            },\n\t            \"methodOfPayment\": [\n\t                {\n\t                    \"paymentMethodType\": \"CARD\",\n\t                    \"id\": 23,\n\t                    \"disabled\": false,\n\t                    \"alias\": \"pro\",\n\t                    \"preferred\": true,\n\t                    \"customerAccountCode\": \"ben.ohara\",\n\t                    \"cardType\": \"VISA\",\n\t                    \"owner\": \"FirstName LastName\",\n\t                    \"monthExpiration\": 11,\n\t                    \"yearExpiration\": 22,\n\t                    \"tokenId\": \"7ced0000-3ab2-000d-6a50-08d4b8a6313\",\n\t                    \"cardNumber\": \"6789\",\n\t                    \"userId\": \"clientSide\"\n\t                },\n\t                {\n\t                    \"paymentMethodType\": \"CARD\",\n\t                    \"id\": 22,\n\t                    \"disabled\": false,\n\t                    \"alias\": \"travel\",\n\t                    \"preferred\": false,\n\t                    \"customerAccountCode\": \"ben.ohara\",\n\t                    \"cardType\": \"VISA\",\n\t                    \"owner\": \"FirstName LastName\",\n\t                    \"monthExpiration\": 11,\n\t                    \"yearExpiration\": 16,\n\t                    \"tokenId\": \"7ced0000-3ab2-000d-6a50-08d4b8a6906\",\n\t                    \"cardNumber\": \"1234\"\n\t                }\n\t            ]\n\t        }\n\t    ]\n\t},\n\t\"businessAccountModel\": {\n\t    \"auditable\": {\n\t        \"created\": 1530088804673,\n\t        \"updated\": 1530088806065,\n\t        \"creator\": \"opencell.admin\",\n\t        \"updater\": \"opencell.admin\"\n\t    },\n\t    \"code\": \"Client\",\n\t    \"description\": \"Individual customer\"\n\t}\n}"
+						},
+						"url": {
+							"raw": "{{opencell.url}}/account/customer/createOrUpdate",
+							"host": [
+								"{{opencell.url}}"
+							],
+							"path": [
+								"account",
+								"customer",
+								"createOrUpdate"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Customer / Find",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{opencell.password}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{opencell.username}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Basic b3BlbmNlbGwuYWRtaW46b3BlbmNlbGwuYWRtaW4="
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"email\" : \"franckvalot@gmail.com\",\n\t\"code\" : \"franckvalot@gmail.com\",\n\t\"assistantName\" : \"Lan\",\n\t\"position\" : \"Stagiaire\",\n\t\"websiteUrl\" : \"http://franckvalot.com\",\n\t\"isVip\" : \"false\",\n\t\"agreedToUA\" : \"true\",\n\t\"isSuspect\" : \"false\",\n\t\"name\" : {\n\t  \t\"title\" : \"Mr.\",\n\t    \"firstName\" : \"Franck\",\n\t    \"lastName\" : \"Valot\"\n\t}\n}"
+						},
+						"url": {
+							"raw": "{{opencell.url}}/account/customer?customerCode=nicolas.gaume@gmail.com",
+							"host": [
+								"{{opencell.url}}"
+							],
+							"path": [
+								"account",
+								"customer"
+							],
+							"query": [
+								{
+									"key": "customerCode",
+									"value": "nicolas.gaume@gmail.com"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Customer / Find Copy",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{opencell.password}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{opencell.username}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Basic b3BlbmNlbGwuYWRtaW46b3BlbmNlbGwuYWRtaW4="
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"email\" : \"franckvalot@gmail.com\",\n\t\"code\" : \"franckvalot@gmail.com\",\n\t\"assistantName\" : \"Lan\",\n\t\"position\" : \"Stagiaire\",\n\t\"websiteUrl\" : \"http://franckvalot.com\",\n\t\"isVip\" : \"false\",\n\t\"agreedToUA\" : \"true\",\n\t\"isSuspect\" : \"false\",\n\t\"name\" : {\n\t  \t\"title\" : \"Mr.\",\n\t    \"firstName\" : \"Franck\",\n\t    \"lastName\" : \"Valot\"\n\t}\n}"
+						},
+						"url": {
+							"raw": "{{opencell.url}}/account/customer/list?query=additionalDetails.companyName:Test",
+							"host": [
+								"{{opencell.url}}"
+							],
+							"path": [
+								"account",
+								"customer",
+								"list"
+							],
+							"query": [
+								{
+									"key": "query",
+									"value": "additionalDetails.companyName:Test"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Customer / List",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{opencell.password}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{opencell.username}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Basic b3BlbmNlbGwuYWRtaW46b3BlbmNlbGwuYWRtaW4="
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"email\" : \"franckvalot@gmail.com\",\n\t\"code\" : \"franckvalot@gmail.com\",\n\t\"assistantName\" : \"Lan\",\n\t\"position\" : \"Stagiaire\",\n\t\"company\" : \"Opencell\",\n\t\"websiteUrl\" : \"http://franckvalot.com\",\n\t\"isVip\" : \"false\",\n\t\"agreedToUA\" : \"true\",\n\t\"isProspect\" : \"false\",\n\t\"name\" : {\n\t  \t\"title\" : \"Mr.\",\n\t    \"firstName\" : \"Franck\",\n\t    \"lastName\" : \"Valot\"\n\t},\n\t\"description\" : \"Ceci est une description\",\n\t\"phone\" : \"0123456789\",\n\t\"mobile\" : \"0612345789\"\n}"
+						},
+						"url": {
+							"raw": "{{opencell.url}}/account/customer/list?",
+							"host": [
+								"{{opencell.url}}"
+							],
+							"path": [
+								"account",
+								"customer",
+								"list"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Customer / List Copy",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{opencell.password}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{opencell.username}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Basic b3BlbmNlbGwuYWRtaW46b3BlbmNlbGwuYWRtaW4="
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"email\" : \"franckvalot@gmail.com\",\n\t\"code\" : \"franckvalot@gmail.com\",\n\t\"assistantName\" : \"Lan\",\n\t\"position\" : \"Stagiaire\",\n\t\"company\" : \"Opencell\",\n\t\"websiteUrl\" : \"http://franckvalot.com\",\n\t\"isVip\" : \"false\",\n\t\"agreedToUA\" : \"true\",\n\t\"isProspect\" : \"false\",\n\t\"name\" : {\n\t  \t\"title\" : \"Mr.\",\n\t    \"firstName\" : \"Franck\",\n\t    \"lastName\" : \"Valot\"\n\t},\n\t\"description\" : \"Ceci est une description\",\n\t\"phone\" : \"0123456789\",\n\t\"mobile\" : \"0612345789\"\n}"
+						},
+						"url": {
+							"raw": "{{opencell.url}}/account/customer/list?",
+							"host": [
+								"{{opencell.url}}"
+							],
+							"path": [
+								"account",
+								"customer",
+								"list"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "Customer description"
+		}
+	]
+}
