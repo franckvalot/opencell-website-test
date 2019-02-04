@@ -477,9 +477,9 @@ collections:
       widget: select
       multiple: true
       field:
-        -  {label: Tag, name: tag, widget: string}
-      - {label: Video ID, name: videoId, widget: string}
-      - {label: Body, name: body, widget: markdown}
+        - {label: Tag, name: tag, widget: string}
+    - {label: Video ID, name: videoId, widget: string}
+    - {label: Body, name: body, widget: markdown}
   - label: "Jobs"
     name: "jobs"
     folder: "content/jobs"
@@ -505,3 +505,18 @@ collections:
         fields:
         - {label: 'Name', name: 'name', widget: string}
         - {label: 'Content', name: 'content', widget: string}
+  - label: Documents
+    name: documents
+    folder: content/documents
+    create: true
+    fields:
+      - {label: Type of documents, name: type, widget: string}
+      - {label: Section of documents, name: section, widget: string}
+      - {label: Title, name: title, widget: string}
+      - {label: Subtitle, name: subtitle, widget: string}
+      - {label: Description, name: description, widget: text, required: false}
+      - {label: Author, name: author, widget: string}
+      - {label: Date, name: date, widget: date}
+      - {label: Thumbnail, name: thumbnail, widget: image, required: false}
+      - {label: Video ID, name: videoId, widget: string, required: false}
+      - {label: Body, name: body, widget: markdown}
