@@ -231,7 +231,18 @@ span.h2 {
   letter-spacing: 5px;
 }
 
-
+.knowledgecenter-box{
+  padding: 20px;
+}
+.knowledgecenter-box button{
+  margin-bottom: 50px;
+}
+.knowledgecenter-box span+span:before{
+  content: " | ";
+  padding: 0;
+  position: relative;
+  top: -2px;
+}
 .ourstory-box {
   background-color: #EB5048;
   height: 140px;
@@ -248,17 +259,21 @@ span.h2 {
   width: inherit;
   padding: 0 20px;
 }
-.leadership-box > h2{
+.leadership-box > h2,
+.knowledgecenter-box h2 {
   min-height: 0;
 }
 .leadership-box > p{
   font-size: 16px;
 }
-
+.businessmodel-box,
+.platformtechnology-box,
+.knowledgecenter-box{
+  background-color: #F9F9F8;
+}
 .businessmodel-box, .platformtechnology-box {
   margin: 10px;
   padding: 60px 20px;
-  background-color: #F9F9F8;
 }
 .businessmodel-box img{
   height: 50px;
@@ -303,15 +318,10 @@ a:hover
   color: #EF6155;
   text-decoration: none;
 }
-.roles-box .navigation:after,
-.industries-box .navigation:after {
+.roles-box h2.navigation+h2.navigation:before,
+.industries-box h2.navigation+h2.navigation:before {
   content: "/";
   margin: 0 20px;
-}
-.roles-box .navigation:last-child:after,
-.industries-box .navigation:last-child:after {
-  content: "";
-  margin: 0;
 }
 
 
@@ -538,22 +548,28 @@ input, textarea{
     background-color: #EC6156;
 }
 
-.blog .tags {
+.blog .tags,
+.video .tags{
   background-color: #F9F9F8;
   padding: 20px;
 }
-.blog .tags .active{
+.blog .tags .active,
+.video .tags .active {
   color: #EF6155;
 }
-.blog .list {
+.blog .list ,
+.video .list {
   margin-top: 30px;
 }
 .blog .list .thumbnail,
-.blog .list a {
+.blog .list a,
+.video .list .thumbnail,
+.video .list a {
   height: 100%;
   width: 100%;
 }
-.blog .list button {
+.blog .list button,
+.video .list button {
   margin-top: 20px;
 }
 
@@ -581,7 +597,10 @@ input, textarea{
   padding: 80px 0 30px 0;
   margin-top: -50px;
 }
-.article-box .opencell-btn {
+.article-box .opencell-btn,
+.read-more .opencell-btn,
+.knowledgecenter-box .opencell-btn
+{
   margin-top: 20px;
 }
 
@@ -597,9 +616,6 @@ input, textarea{
 }
 .read-more .date{
   color: #EB5048;
-}
-.read-more .opencell-btn{
-  margin-top: 20px;
 }
 
 .hero-1 {

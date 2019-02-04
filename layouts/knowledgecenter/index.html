@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+{{ $Data := .Params }}
+<html>
+  {{ partial "head.html" . }}
+  <body>
+    {{ partial "header/navBar.html" . }}
+    {{ partial "header/smallheader.html" }}
+    <section class="hero-1 knowledgecenter">
+      <div class="container">
+        <div class="row justify-content-center text-center">
+          <h1 class="col-12 text-center">{{ $Data.title }}<br></h1>
+          <div class="w-100"></div>
+          <h2 class="col-12 col-md-8 col-lg-6">{{ $Data.subtitle }}</h2>
+        </div>
+        <div class="row justify-content-center text-center">
+          {{ range $Data.sections}}
+          <div class="col-12 col-md-4">
+            <div class="row align-items-center justify-content-center h-100">
+              <div class="col-11 knowledgecenter-box h-100">
+                <div><h2>{{ .title }}</h2>{{ if .icon}}<img src="{{.icon}}">{{end}}</div>
+                <p>{{ .description }}</p>
+                <form action="{{ .url }}" method="get">
+                  <button class="opencell-btn" type="submit" name="button">{{ .button }}</button>
+                </form>
+                {{ range .subsections }}
+                  <div>
+                    <h2>{{ .title }}</h2>
+                    {{ range .elements }}
+                    <span><a href="{{.url}}">{{.name}}</a></span>
+                    {{ end }}
+                  </div>
+                  {{ end }}
+              </div>
+            </div>
+          </div>
+          {{ end }}
+        </div>
+      </div>
+    </section>
+
+    {{ partial "sections/getdemo.html" . }}
+    {{ partial "sections/mentions.html" . }}
+    {{ partial "script.html" }}
+  </body>
+</html>

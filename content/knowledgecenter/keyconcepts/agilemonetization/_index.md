@@ -1,11 +1,11 @@
 ---
-title: Article C
+type: portal
+title: Order ipsum dolor sit
+knowledgecentertitle: Order
 subtitle: Subtitle
-description: Blablabla
-author: Franck Valot
-thumbnail: /img/uploads/img_blog.jpg
+description: Praesent sed ornare nisi
+thumbnail: /img/uploads/portrait3.jpg
 date: 2019-01-17T08:05:55.197Z
-tags: [four, five]
 ---
 
 ## LOREM IPSUM DOLOR SIT AMET CONSECTUR ADIPISCING ELIT.

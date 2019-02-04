@@ -1,11 +1,12 @@
 ---
-title: Article D
+type: blog
+title: Article C
 subtitle: Subtitle
 description: Blablabla
 author: Franck Valot
 thumbnail: /img/uploads/img_blog.jpg
 date: 2019-01-17T08:05:55.197Z
-tags: [five, six]
+tags: [four, five]
 ---
 
 ## LOREM IPSUM DOLOR SIT AMET CONSECTUR ADIPISCING ELIT.
