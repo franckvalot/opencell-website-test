@@ -1,5 +1,5 @@
 ---
-type: blog
+type: blogarticle
 title: Article A
 subtitle: Subtitle
 description: Blablabla

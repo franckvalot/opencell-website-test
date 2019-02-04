@@ -23,9 +23,9 @@ title = "Opencellsoft"
       ecosystem = "/platform/ecosystem/"
   [params.resources]
     [params.resources.url]
-      video = "/video/"
+      video = "/knowledgecenter/product/ourblog/videos/"
       webinar = "/webinar/"
-      blog = "/blog/"
+      blog = "/knowledgecenter/product/ourblog/articles/"
 
   [params.url]
     getInTouch  = "#"

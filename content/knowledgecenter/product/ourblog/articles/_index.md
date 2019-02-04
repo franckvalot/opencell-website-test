@@ -1,5 +1,5 @@
 ---
-type: blog
+type: blogarticle
 title: Insérer ici le titre de l'article
 subtitle: Subtitle
 description: Blablabla
