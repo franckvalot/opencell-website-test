@@ -1,6 +1,6 @@
 ---
 
-title: Markdown example file
+title: Markdown doc file
 subtitle:
 
 ---
