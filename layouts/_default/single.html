@@ -8,7 +8,9 @@
 
     <section class="hero-1">
       <div class="container">
-        {{ .Content | markdownify }}
+        <div class="markdown">
+          {{ .Content | markdownify }}
+        </div>
       </div>
     </section>
 
