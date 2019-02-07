@@ -33,3 +33,8 @@ enableEmoji = "true"
     getInTouch  = "#"
     getDemo  = "#"
     contact = "/contact/"
+
+[taxonomies]
+  releasestags = "releasestags"
+  videostags = "videostags"
+  articlestags = "articlestags"

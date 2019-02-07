@@ -5,17 +5,17 @@
     {{ partial "header/navBar.html" . }}
     {{ partial "header/smallheader.html" }}
 
-    <section class="blog">
+    <section class="releases">
       <div class="container">
         <div class="row justify-content-center">
-          <a class="anchor" id="blog"></a>
-          <h1 class="col-12">Our blog</h1>
+          <a class="anchor" id="releases"></a>
+          <h1 class="col-12">Releases</h1>
           <div class="col-12 col-md-5 col-lg-3 order-lg-last">
             <div class="row justify-content-center text-center tags">
-              <h2>Theme</h2>
-              <div class="col-12"><a href="#blog" class="tag active">All</a></div>
-              {{ range $name, $taxonomy := .Site.Taxonomies.articlestags }}
-                {{ with $.Site.GetPage (printf "/articlestags/%s" $name) }}
+              <h2>Releases Version</h2>
+              <div class="col-12"><a href="#releases" class="tag active">All</a></div>
+              {{ range $name, $taxonomy := .Site.Taxonomies.releasestags }}
+                {{ with $.Site.GetPage (printf "/releasestags/%s" $name) }}
                     <div class="col-12"><a href="#blog" class="tag">{{ $name }}</a></div>
                 {{ end }}
                 {{ end }}
@@ -25,21 +25,14 @@
           <div class="col-12 col-lg-9">
             <div class="row">
               {{ range .Pages }}
-              <div class="col-12 list" data-tags="{{ range .Params.articlestags }}{{ . }} {{end}}">
-                <div class="row">
-                  <div class="col-5">
-                      <a href="{{.URL}}">
-                        <div class="thumbnail" style="background-image: url('{{.Params.thumbnail}}');"></div>
-                      </a>
-                  </div>
-                  <div class="col-7">
-                    <div class="row">
-                      <h2 class="col-12" href="{{ .URL }}">{{ .Title | upper }}</h2>
-                      <p class="col-12">{{ truncate 100 (index (split (index (split .Content "<p>") 1 ) "</p>") 0) }}</p>
-                      <form class="col-12" action="{{ .URL }}" method="get">
-                        <button type="submit" name="button" class="opencell-btn">READ</button>
-                      </form>
-                    </div>
+              <div class="col-12 list" data-tags="{{ range .Params.releasestags }}{{ . }} {{end}}">
+                <div class="col-12">
+                  <div class="row">
+                    <h2 class="col-12" href="{{ .URL }}">{{ .Title | upper }}</h2>
+                    <p class="col-12">{{ truncate 100 (index (split (index (split .Content "<p>") 1 ) "</p>") 0) }}</p>
+                    <form class="col-12" action="{{ .URL }}" method="get">
+                      <button type="submit" name="button" class="opencell-btn">READ</button>
+                    </form>
                   </div>
                 </div>
               </div>

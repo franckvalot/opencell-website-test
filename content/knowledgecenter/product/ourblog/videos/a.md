@@ -6,7 +6,7 @@ description: Blablabla
 author: Franck Valot
 videoId: RUML7IH2JnM
 date: 2019-01-17T08:05:55.197Z
-tags: [one, two, three]
+videostags: [one, two, three]
 ---
 Loremu ipsum dolores sit amet, consectetur adipiscing elit.
 

@@ -6,7 +6,7 @@ description: Blablabla
 author: Franck Valot
 videoId: 4MJvDNp7xsk
 date: 2019-01-17T08:05:55.197Z
-tags: [one, four, five]
+videostags: [one, four, five]
 ---
 
 ## Customer stories | Episode 2 | CGI

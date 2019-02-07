@@ -6,7 +6,7 @@ description: Blablabla
 author: Franck Valot
 thumbnail: /img/uploads/img_blog.jpg
 date: 2019-01-17T08:05:55.197Z
-tags: [four, five]
+articlestags: [four, five]
 ---
 
 ## LOREM IPSUM DOLOR SIT AMET CONSECTUR ADIPISCING ELIT.

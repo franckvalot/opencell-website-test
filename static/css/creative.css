@@ -633,27 +633,33 @@ input, textarea{
 }
 
 .blog .tags,
-.video .tags{
+.video .tags,
+.releases .tags{
   background-color: #F9F9F8;
   padding: 20px;
 }
 .blog .tags .active,
-.video .tags .active {
+.video .tags .active ,
+.releases .tags .active {
   color: #EF6155;
 }
-.blog .list ,
-.video .list {
+.blog .list,
+.video .list,
+.releases .list {
   margin-top: 30px;
 }
 .blog .list .thumbnail,
 .blog .list a,
 .video .list .thumbnail,
-.video .list a {
+.video .list a,
+.releases .list .thumbnail,
+.releases .list a {
   height: 100%;
   width: 100%;
 }
 .blog .list button,
-.video .list button {
+.video .list button,
+.releases .list button {
   margin-top: 20px;
 }
 

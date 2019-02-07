@@ -6,7 +6,7 @@ description: Blablabla
 author: Franck Valot
 videoId: NvCVdZyY9fI
 date: 2019-01-17T08:05:55.197Z
-tags: [four, five]
+videostags: [four, five]
 ---
 
 ## Customer stories | Episode 3 | Sofrecom

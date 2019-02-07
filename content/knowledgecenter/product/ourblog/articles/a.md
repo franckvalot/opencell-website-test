@@ -6,7 +6,7 @@ description: Blablabla
 author: Franck Valot
 thumbnail: /img/uploads/img_blog.jpg
 date: 2019-01-17T08:05:55.197Z
-tags: [one, two, three]
+articlestags: [one, two, three]
 ---
 Loremu ipsum dolores sit amet, consectetur adipiscing elit.
 

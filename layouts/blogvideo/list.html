@@ -8,14 +8,14 @@
     <section class="video">
       <div class="container">
         <div class="row justify-content-center">
-          <a class="anchor" id="blog"></a>
+          <a class="anchor" id="videos"></a>
           <h1 class="col-12">Our videos</h1>
           <div class="col-12 col-md-5 col-lg-3 order-lg-last">
             <div class="row justify-content-center text-center tags">
               <h2>Theme</h2>
-              <div class="col-12"><a href="#blog" class="tag active">All</a></div>
-              {{ range $name, $taxonomy := .Site.Taxonomies.tags }}
-                {{ with $.Site.GetPage (printf "/tags/%s" $name) }}
+              <div class="col-12"><a href="#videos" class="tag active">All</a></div>
+              {{ range $name, $taxonomy := .Site.Taxonomies.videostags }}
+                {{ with $.Site.GetPage (printf "/videostags/%s" $name) }}
                     <div class="col-12"><a href="#blog" class="tag">{{ $name }}</a></div>
                 {{ end }}
                 {{ end }}
@@ -25,7 +25,7 @@
           <div class="col-12 col-lg-9">
             <div class="row">
               {{ range .Pages }}
-              <div class="col-12 list" data-tags="{{ range .Params.tags }}{{ . }} {{end}}">
+              <div class="col-12 list" data-tags="{{ range .Params.videostags }}{{ . }} {{end}}">
                 <div class="row">
                   <div class="col-5">
                       <a href="{{.URL}}">

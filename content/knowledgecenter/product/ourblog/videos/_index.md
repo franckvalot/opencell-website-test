@@ -5,7 +5,7 @@ subtitle: Subtitle
 description: Blablabla
 videoId:
 date: 2019-01-17T08:05:55.197Z
-tags:
+videostags:
 ---
 
 ## LOREM IPSUM DOLOR SIT AMET CONSECTUR ADIPISCING ELIT.
