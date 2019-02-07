@@ -5,35 +5,34 @@ subtitle:
 description:
 sections:
   - title: KEY CONCEPTS
-
     description: text text text
     button: READ
     url:
     subsections:
       - title: Agile Monetization
-        icon:
+        privacy: public
       - title: TECHNICAL FRAMEWORK
-        icon:
+        privacy: public
   - title: DEVELOPER
     description: text text text
     button: READ
     url:
     subsections:
       - title: RELEASES
-        icon:
+        privacy: registered
       - title: HOW TO CONTRIBUTE
-        icon:
+        privacy: registered
       - title: INTEGRATION
-        icon:
+        privacy: private
   - title: PRODUCT
     description: text text text
     button: READ
     url:
     subsections:
       - title: DOCUMENTATION
-        icon:
+        privacy: registered
       - title: OUR BLOG
-        icon:
+        privacy: public
       - title: LEARNING
-        icon:
+        privacy: private
 ---

@@ -25,7 +25,14 @@
                 </form>
                 {{ range $subsections := .subsections }}
                   <div>
-                    <h2>{{ .title | upper }}</h2>
+                    <h2>{{ .title | upper }}
+                    {{ if eq .privacy "public"}}
+                    <span class="glyphicon glyphicon-globe gray-font"  aria-hidden="true"></span>
+                    {{ else if eq .privacy "registered"}}
+                   <span class="glyphicon glyphicon-ok-sign gray-font"  aria-hidden="true"></span>
+                    {{ else if eq .privacy "private"}}
+                   <span class="glyphicon glyphicon-lock gray-font"  aria-hidden="true"></span>
+                    {{ end }}</h2>
                     {{ if eq (.title | lower) "releases"}}
 
                     {{ else if eq (.title | lower) "our blog"}}

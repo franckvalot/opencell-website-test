@@ -962,7 +962,10 @@ section.footer li {
   width: 23px;
 }
 
-
 code {
   font-family: Consolas,Menlo,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier New,monospace,sans-serif;
+}
+
+.gray-font{
+  color: gray;
 }
