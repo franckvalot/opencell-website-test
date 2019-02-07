@@ -34,7 +34,10 @@
                    <span class="glyphicon glyphicon-lock gray-font"  aria-hidden="true"></span>
                     {{ end }}</h2>
                     {{ if eq (.title | lower) "releases"}}
-
+                      <span><a href="{{$Site.Params.resources.url.releaseschedule}}">Release schedule</a></span>
+                        <br>
+                      <span><a href="{{$Site.Params.resources.url.releases}}">Next release</a></span>
+                      <span><a href="{{$Site.Params.resources.url.releases}}">Past releases</a></span>
                     {{ else if eq (.title | lower) "our blog"}}
                       <span><a href="{{$Site.Params.resources.url.video}}">Videos</a></span>
                       <span><a href="{{$Site.Params.resources.url.blog}}">Articles</a></span>

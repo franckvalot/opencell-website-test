@@ -28,6 +28,8 @@ enableEmoji = "true"
       video = "/knowledgecenter/product/ourblog/videos/"
       webinar = "/webinar/"
       blog = "/knowledgecenter/product/ourblog/articles/"
+      releaseschedule = "/knowledgecenter/developer/releaseschedule/"
+      releases = "/knowledgecenter/developer/releases/"
 
   [params.url]
     getInTouch  = "#"
