@@ -19,13 +19,15 @@ subtitle:
     *   [Code Blocks](#precode)
     *   [Horizontal Rules](#hr)
 *   [Span Elements](#span)
-    *   [Links](#link)
+    *   [Links](#links)
     *   [Emphasis](#em)
     *   [Code](#code)
     *   [Images](#img)
 *   [Miscellaneous](#misc)
     *   [Backslash Escapes](#backslash)
     *   [Automatic Links](#autolink)
+*   [Hugo Shortcodes](#hugo-shortcodes)
+    *   [highlights](#highlights)
 
 
 **Note:** This document is itself written using Markdown; you
@@ -315,3 +317,29 @@ Unlike a pre-formatted code block, a code span indicates code within a
 normal paragraph. For example:
 
 Use the `printf()` function.
+
+## Hugo shortcodes
+
+See the following [link] (https://gohugo.io/content-management/shortcodes/)
+
+### Highlights
+Surrounding your code wit:
+
+    {{</* highlight html */>}}
+      <section>
+        <div>
+         <h1 id="title">My Title</h1>
+        </div>
+      </section>  
+    {{</* /highlight */>}}
+
+will result in the following format
+
+{{< highlight html >}}
+<section>
+  <div>
+   <h1 id="title">My Title</h1>
+  </div>
+</section>
+
+{{< /highlight >}}

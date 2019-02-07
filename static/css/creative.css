@@ -212,33 +212,87 @@ span.h2 {
   margin-top: -20px;
 }
 
+
 .markdown{
   font-size: 20px;
   color: #4B4B4B;
 }
-.markdown h1{
-  font-family: 'Noe-Display-Black';
-  text-transform: none;
-  font-size: 30px;
-  line-height: 40px;
-  margin: 30px 0 20px 0;
-}
+.markdown h1,
 .markdown h2,
 .markdown h3,
 .markdown h4,
-.markdown h5{
-  font-family: "GT-Walsheim-Thin";
+.markdown h5,
+.markdown h6{
+  font-family: 'Noe-Display-Black';
   min-height: 0;
-  font-weight: bold;
+  font-size: 20px;
   text-transform: none;
+  font-weight: bold;
+  line-height: normal;
+  text-transform: none;
+  letter-spacing: normal;
+  padding-top: 120px;
+  margin-top: -120px;
+}
+.markdown h1{
+  font-size: 30px;
+  margin: -90px 0 20px 0;
 }
 .markdown h2{
   font-size: 30px;
-  margin: 30px 0 15px 0;
+  margin: -90px 0 15px 0;
 }
 .markdown h3{
   font-size: 25px;
-  margin: 25px 0 15px 0;
+  margin: -95px 0 15px 0;
+}
+.markdown sup{
+    padding-top: 120px;
+  margin-top: -120px;
+}
+.markdown blockquote{
+  border-left: 1px solid #ccc;
+  margin-left: 1em;
+  padding-left: 1em;
+}
+.markdown blockquote h1,
+.markdown blockquote h2,
+.markdown blockquote h3,
+.markdown blockquote h4,
+.markdown blockquote h5,
+.markdown blockquote h6 {
+  padding-top: 0;
+  margin-top: 0;
+}
+.markdown .highlight pre{
+  padding: 10px;
+}
+.markdown pre {
+  padding: 0.14286rem 0.35714rem 0.07143rem;
+  border: 1px solid #cacaca;
+  background-color: #e6e6e6;
+  font-family: Consolas,"Liberation Mono",Courier,monospace;
+  font-weight: normal;
+  color: #0a0a0a;
+}
+.markdown table{
+  margin: 20px 0;
+  border-collapse: collapse;
+  width: 100%;
+}
+.markdown table thead{
+  background: #DD594E;
+  color: white;
+}
+.markdown table thead tr{
+  border: 1px solid #aaa;
+}
+.markdown th, td {
+  text-align: left;
+  padding: 8px;
+}
+.markdown tr:nth-child(even){
+  background-color: #F9F9F8;
 }
 
 

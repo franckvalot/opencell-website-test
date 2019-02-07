@@ -1,11 +1,11 @@
 ---
-type: portal
-title: Order ipsum dolor sit
-knowledgecentertitle: Order
-subtitle: Subtitle
+layout: portal
+title: Tutorials
+subtitle:
 description: Praesent sed ornare nisi
-thumbnail: /img/uploads/portrait3.jpg
 date: 2019-01-17T08:05:55.197Z
+author: Franck Valot
+weight: 8
 ---
 
 ## LOREM IPSUM DOLOR SIT AMET CONSECTUR ADIPISCING ELIT.

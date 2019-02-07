@@ -2,6 +2,8 @@ baseURL = ""
 languageCode = "en-us"
 title = "Opencellsoft"
 
+enableEmoji = "true"
+
 [params]
   [params.navbar]
     [params.navbar.url]

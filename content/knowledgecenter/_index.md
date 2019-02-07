@@ -9,38 +9,31 @@ sections:
     description: text text text
     button: READ
     url:
-    icon:
     subsections:
-      - title: AGILE MONETIZATION
-        elements:
-          - name: Order
-            url:
-          - name: Subscription
-            url:
-          - name: Mediation-Rating
-            url:
-          - name: Customer Care and Selfcare
-            url:
+      - title: Agile Monetization
+        icon:
+      - title: TECHNICAL FRAMEWORK
+        icon:
   - title: DEVELOPER
     description: text text text
     button: READ
     url:
-    icon:
     subsections:
       - title: RELEASES
-        elements:
-          - name: Release schedule
-            url:
+        icon:
+      - title: HOW TO CONTRIBUTE
+        icon:
+      - title: INTEGRATION
+        icon:
   - title: PRODUCT
     description: text text text
     button: READ
     url:
-    icon:
     subsections:
       - title: DOCUMENTATION
-        elements:
-          - name: Quick start
-            url:
-          - name: Tutorials
-            url:
+        icon:
+      - title: OUR BLOG
+        icon:
+      - title: LEARNING
+        icon:
 ---

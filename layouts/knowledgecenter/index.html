@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 {{ $Data := .Params }}
+{{ $Site := .Site }}
 <html>
   {{ partial "head.html" . }}
   <body>
@@ -22,12 +23,24 @@
                 <form action="{{ .url }}" method="get">
                   <button class="opencell-btn" type="submit" name="button">{{ .button }}</button>
                 </form>
-                {{ range .subsections }}
+                {{ range $subsections := .subsections }}
                   <div>
-                    <h2>{{ .title }}</h2>
-                    {{ range .elements }}
-                    <span><a href="{{.url}}">{{.name}}</a></span>
-                    {{ end }}
+                    <h2>{{ .title | upper }}</h2>
+                    {{ if eq (.title | lower) "releases"}}
+
+                    {{ else if eq (.title | lower) "our blog"}}
+                      <span><a href="{{$Site.Params.resources.url.video}}">Videos</a></span>
+                      <span><a href="{{$Site.Params.resources.url.blog}}">Articles</a></span>
+                      <span><a href="{{$Site.Params.resources.url.faq}}">FAQ</a></span>
+                    {{ else if eq (.title | lower) "learning"}}
+
+                    {{ else }}
+                      {{ range (where $Site.Pages "Section" "knowledgecenter") }}
+                        {{if eq ((path.Base (path.Dir .Dir)) | lower) ((replace $subsections.title " " "") | lower)}}
+                      <span><a href="{{.URL}}">{{.Title}}</a></span>
+                        {{end}}
+                      {{ end }}
+                    {{end}}
                   </div>
                   {{ end }}
               </div>

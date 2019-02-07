@@ -52,7 +52,9 @@ _This is italic text_
 
 
 > Blockquotes can also be nested...
->> ...by using additional greater-than signs right next to each other...
+
+> > ...by using additional greater-than signs right next to each other...
+
 > > > ...or with spaces between arrows.
 
 
@@ -238,3 +240,30 @@ It converts "HTML", but keep intact partial entries like "xxxHTMLyyy" and so on.
 ::: warning
 *here be dragons*
 :::
+
+## Hugo Shortcodes
+
+### highlights
+
+{{< highlight html >}}
+<section id="main">
+  <div>
+   <h1 id="title">{{ .Title }}</h1>
+    {{ range .Pages }}
+        {{ .Render "summary"}}
+    {{ end }}
+  </div>
+</section>
+{{< /highlight >}}
+
+
+{{< highlight js >}}
+var person = {
+  firstName: "John",
+  lastName : "Doe",
+  id       : 5566,
+  fullName : function() {
+    return this.firstName + " " + this.lastName;
+  }
+};
+{{< /highlight >}}
