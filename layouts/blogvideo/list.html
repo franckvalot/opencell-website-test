@@ -3,7 +3,6 @@
   {{ partial "head.html" . }}
   <body>
     {{ partial "header/navBar.html" . }}
-    {{ partial "header/smallheader.html" }}
 
     <section class="video">
       <div class="container">
@@ -15,9 +14,7 @@
               <h2>Theme</h2>
               <div class="col-12"><a href="#videos" class="tag active">All</a></div>
               {{ range $name, $taxonomy := .Site.Taxonomies.videostags }}
-                {{ with $.Site.GetPage (printf "/videostags/%s" $name) }}
                     <div class="col-12"><a href="#blog" class="tag">{{ $name }}</a></div>
-                {{ end }}
                 {{ end }}
             </div>
           </div>

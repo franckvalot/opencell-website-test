@@ -14,10 +14,8 @@
               <h2>Theme</h2>
               <div class="col-12"><a href="#blog" class="tag active">All</a></div>
               {{ range $name, $taxonomy := .Site.Taxonomies.articlestags }}
-                {{ with $.Site.GetPage (printf "/articlestags/%s" $name) }}
-                    <div class="col-12"><a href="#blog" class="tag">{{ $name }}</a></div>
-                {{ end }}
-                {{ end }}
+                  <div class="col-12"><a href="#blog" class="tag">{{ $name }}</a></div>
+              {{ end }}
             </div>
           </div>
           <div class="w-100"></div>
