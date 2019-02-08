@@ -7,9 +7,9 @@
     <section class="blog">
       <div class="container">
         <div class="row justify-content-center text-left">
-          <h1 class="col col-md-10 col-lg-8">{{ .Title }}</h1>
-          <div class="w-100"></div>
           <p class="col col-md-10 col-lg-8"><span>Published on: </span><span>{{ dateFormat "02 Jan 2006" .Date }}</span><span>, by: </span><span class="author">{{ .Params.author }}</span></p>
+          <hr class="w-100"></hr>
+          <h1 class="col col-md-10 col-lg-8">{{ .Title }}</h1>
           <div class="w-100"></div>
           <div class="col col-md-10 col-lg-8">
             {{ .Content | markdownify }}

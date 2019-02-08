@@ -8,8 +8,15 @@
     <section class="hero-1 knowledgecenter">
       <div class="container">
         <div class="row justify-content-center text-left">
-          <p class="col col-md-10 col-lg-8"><span>Published on: </span><span>{{ dateFormat "02 Jan 2006" .Date }}</span><span>, by: </span><span class="author">{{ .Params.author }}</span></p>
-          <div class="w-100"></div>
+          <div class="col col-md-10 col-lg-8">
+            <div>
+              <span>Published on: </span><span>{{ dateFormat "02 Jan 2006" .Date }}</span><span>, by: </span><span class="author">{{ .Params.author }}</span>
+            </div>
+            <div>
+              <span>Last modified on: </span><span>{{ dateFormat "02 Jan 2006" .Lastmod  }}</span>
+            </div>
+          </div>
+          <hr class="w-100"></hr>
           <div class="col col-md-10 col-lg-8">
             {{ .Content | markdownify }}
           </div>

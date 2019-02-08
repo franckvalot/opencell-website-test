@@ -25,9 +25,10 @@ enableEmoji = "true"
       ecosystem = "/platform/ecosystem/"
   [params.resources]
     [params.resources.url]
+      knowledgecenter = "/knowledgecenter/"
+      blog = "/knowledgecenter/product/ourblog/articles/"
       video = "/knowledgecenter/product/ourblog/videos/"
       webinar = "/webinar/"
-      blog = "/knowledgecenter/product/ourblog/articles/"
       releaseschedule = "/knowledgecenter/developer/releaseschedule/"
       releases = "/knowledgecenter/developer/releases/"
 

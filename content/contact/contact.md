@@ -1,6 +1,6 @@
 ---
 layout: contact
-itle: Contact
+title: Contact
 subtitle: >-
   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ut ultrices ipsum.
   Duis eu lorem eget nunc varius porta non at lorem.
@@ -10,8 +10,8 @@ form:
   lastname: Last name
   email: Email adress
   message: Message
-  butten: SEND
-  infoBox:
+  button: SEND
+  infobox:
     - paragraph: >-
         + 33 1 00 00 00 00<br>
         hello@opencellsoft.fr
