@@ -35,5 +35,23 @@ modules:
       data. We’ve already developed specific mediation processes to handle the
       specificities of these businesses. 
     title: Mediation manager
+  - content: >
+      Because Opencell is built for complex billing, we provide flexible
+      features for structuring thousands of products—from simple to complex—so
+      you’ll be able to successfully manage every single product, bundle,
+      package and plan in your catalog.
+
+
+      Using a simplified business offer model, our catalog manager lets users
+      create a new offer with its services, charges, counters, price plans,
+      custom fields, mediation scripts, webhooks etc. in just a few clicks.
+
+
+      In the event that more complex offers need to be created, advanced
+      functionalities can be used to build an offer from scratch. Our rich
+      configuration possibilities mean that we can practically guarantee that
+      we’ll be able to model whatever offer your product or marketing teams
+      dreams up. 
+    title: Catalog manager
 ---
 
