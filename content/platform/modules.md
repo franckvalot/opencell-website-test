@@ -187,5 +187,47 @@ modules:
       parameters, deactivate offers and set role-specific customer care
       management and self-service portal parameters. 
     title: Marketing manager
+  - content: >
+      Our customer care provides the 360° view that your customer service and
+      contract administration teams need to give quick responses to customers
+      when they need to change their address, cancel or renew their contracts or
+      apply a refund or credit. Workflow processes can be used to create or
+      validate customer offers, manage or validate creation of customer
+      accounts.
+
+
+      Our elegant, intuitive and customizable customer care interface lets you
+      provide quick and appropriate responses to customer demands. 
+
+
+      If you don’t have a need for a full-fledged CRM system, our customer care
+      provides a great alternative to traditional CRM systems and can avoid the
+      need for additional third-party licensing feeds. 
+    title: Customer care portal
+  - content: >
+      Our partner care portal lets your partners manager their day-to-day
+      activities directly within a personalized view within Opencell. It
+      provides the 360° view that their customer service and contract
+      administration teams will need to give quick responses to customers when
+      they need to change their address, cancel or renew their contracts or
+      apply a refund or credit. Workflow processes can be used to create or
+      validate customer offers, manage or validate creation of customer
+      accounts.
+    title: Partner care portal
+  - content: >
+      Modern subscription businesses emphasize multi-channel service options.
+      Customers expect to be able to access and modify their information
+      anytime, anywhere. 
+
+
+      To facilitate this process, Opencell provides a customizable selfcare
+      portal where customers can directly change; upgrade or downgrade
+      subscriptions, subscribe to new offers, check payment status etc. 
+
+
+      Using our selfcare portal functionality for your recurring revenue
+      business means you can probably avoid the hassle of using a third-party
+      e-commerce system such as Magento or Drupal. 
+    title: Self care portal
 ---
 
