@@ -53,5 +53,29 @@ modules:
       we’ll be able to model whatever offer your product or marketing teams
       dreams up. 
     title: Catalog manager
+  - content: >+
+      Our order manager keeps customer data in sync, executes both simple and
+      complex workflows and drive processes at-scale. Event notifications that
+      push data-rich messages across system boundaries with APIs allow access to
+      Opencell data from anywhere. 
+
+
+      Workflows manage business processes with automated rules, flows, and
+      forms. 
+
+      You can measure time, disk space, bandwidth, downloads and notify a
+      customer when they cross a usage threshold and offer them an upgrade. It’s
+      easy to configure which services are available in a plan and implement
+      automatic enablement and provisioning.
+
+
+      We make it easy for business users to make changes without going through
+      IT. You can trigger automated provisioning and a wide variety of other
+      business functions in real time. You can alert customers about
+      time-sensitive discounts, expired credit cards, or impending usage
+      thresholds without building complex logic yourself.  You can schedule any
+      service, process, or activity to occur at any time, based on any trigger. 
+
+    title: Order manager
 ---
 
