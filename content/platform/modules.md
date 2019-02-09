@@ -88,5 +88,48 @@ modules:
       party data analytics or business intelligence package such as Qlikview or
       PowerBI. 
     title: Reporting manager
+  - content: >
+      Revenue recognition in subscription businesses is tricky. You bill in
+      advance and need to recognize revenue over time. You bill in arrears and
+      need to make sure you accrue for revenue that you will bill at a later
+      date.
+
+
+      Opencell provides you with the forward-looking tools you need to manage
+      your subscription business including possibility to apply customized
+      revenue recognition rules to invoice line items.
+
+
+      We also give you the ability to manage your chart of accounts and
+      financial periods so you can keep your transactions in synch with your
+      downstream ledgers. 
+
+
+      Mapping to downstream accounting systems is easily performed on a summary
+      or detailed basis using flat file exports or our rich APIs. 
+    title: Finance manager
+  - content: >
+      Our accounts receivable module manages cash applications, payment methods,
+      open balances and automatic dunning actions.
+
+
+      Payments can be matched manually via GUI to corresponding payments
+      operations or automatically by payment job. Connectors to main payment
+      gateways are available. If your payment gateway isn’t available, our rich
+      APIs make it easy for you integrate your platform of choice. 
+
+
+      In the event of late payment, automatic dunning actions such as sending
+      email or adding a fee can be configured. You can send notifications and
+      reminders to customers through their preferred communications channels
+      (including mobile devices), configure escalations in multiple stages, and
+      differentiate escalation procedures based on product line, account group,
+      or other factors of your choice. You can use workflows service activation
+      to suspend service automatically at any stage in the escalation process,
+      or continue to deliver service as long as you’d like. 
+
+
+      Configurable aging reports are also provided. 
+    title: AR manager
 ---
 
