@@ -77,5 +77,16 @@ modules:
       service, process, or activity to occur at any time, based on any trigger. 
 
     title: Order manager
+  - content: >
+      Opencell integrates a data warehouse that pre calculates data and standard
+      metrics used to manage a subscription business including monthly recurring
+      revenue (MRR), annual recurring revenue (ARR), churn and total contract
+      value. 
+
+
+      Our data warehouse can be easily connected with practically any third
+      party data analytics or business intelligence package such as Qlikview or
+      PowerBI. 
+    title: Reporting manager
 ---
 
