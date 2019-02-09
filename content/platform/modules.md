@@ -131,5 +131,61 @@ modules:
 
       Configurable aging reports are also provided. 
     title: AR manager
+  - content: >
+      Recurring revenue comes with recurring payments that you can schedule and
+      process automatically. 
+
+
+      Our payment manager lets you handle multiple payment processors. It
+      manages credit card and ACH (direct debit) for one-time and recurring
+      payments. It helps you lower your costs by routing payments to the
+      processor that provides the best terms based on location, payment method,
+      or other criteria that you choose. 
+
+
+      Customers can pre-pay for products and services pay upon receipt, or use a
+      combination of both. In situations where a payment fails, Opencell gives
+      you complete control over when and how often to retry. You can make it a
+      requirement that your customers pre-pay for products and services, allow
+      them to pay upon receipt, or use a combination of both.
+
+
+      When payments fail, they are automatically retried. Failed payments can
+      set off automatic dunning processes.
+    title: Payment manager
+  - content: >+
+      Your customers want to know for what they’re being billed and want to be
+      able to break down and allocate their costs. 
+
+
+      Accurate, easy to understand invoices mean fewer support calls and happier
+      customers. Our wide range of invoice templates provide grouping,
+      subtotals, and conditional logic based on payment methods and other
+      criteria to design and configure invoice templates just the way you want
+      them. Standard templates can also be customized to include client-specific
+      marketing messages. 
+
+
+      Invoices can be output as PDF files that can be printed or sent by email,
+      displayed in GUI or accessed via API in order to be exposed in third-party
+      CRMs or in dedicated self-service portals. 
+
+    title: Invoice composer
+  - content: >
+      In the fast-moving world of digital services, you need to be able to test
+      and modify your offers constantly. You can’t afford to wait for weeks or
+      months for IT to implement the special bundle or promotion you need to
+      respond to market conditions. 
+
+
+      To respond to this requirement, Opencell provides marketing teams
+      configure, provision and deploy new services and bundles or price changes 
+      from a single, simplified interface. 
+
+
+      Based on your role, you can create offers from templates, modify offer
+      parameters, deactivate offers and set role-specific customer care
+      management and self-service portal parameters. 
+    title: Marketing manager
 ---
 
