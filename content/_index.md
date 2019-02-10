@@ -6,9 +6,7 @@ header:
     - subtitle: Mobile World Congress. Barcelona. February 25 - 28 2019
       title: 'Let''s talk about the future of telecoms<br> '
     - subtitle: Webinar. March 15 2019.
-      title: >-
-        Agile utilities: how Opencell can help you adapt to deregulation and
-        technological change
+      title: 'Agile utilities: how to adapt to deregulation and technological change'
 paradigm:
   title: A new paradigm.
   videoId: 4MJvDNp7xsk
