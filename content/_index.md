@@ -3,8 +3,8 @@ header:
   carousel:
     - subtitle: Subscription and usage monetization platform.
       title: Stop selling product. <br> Start selling recurring services.
-    - subtitle: 'Quisque massa justo, sollicitudin a congue congue.'
-      title: 'Duis ut dui elit. Maecenas est sapien,<br> tincidunt a ex id.'
+    - subtitle: Come and meet us in Barcelona February 25 - 28 2019
+      title: Let's talk about the future of telecoms<br> Mobile World Congress.
     - subtitle: Pellentesque habitant morbi tristique senectus.
       title: 'Pellentesque maximus rhoncus sem,<br>ut accumsan dui auctor nec.'
 paradigm:
@@ -82,8 +82,8 @@ ourcustomers:
     - alt: Florida Chamber of Commerce
       url: /img/uploads/logo-fl-chamber.svg
   title: Our customers
-  button: DISCOVER OUR CUSTOMERS
 worktogether:
+  subtitle: TESTIMONIALS
   testimonials:
     - author: Author 1
       testimonial: >-
@@ -97,12 +97,12 @@ worktogether:
       testimonial: >-
         Testimonial 3 - Mauris id ligula odio. Nulla lacinia lacus nec ligula
         eleifend, sed gravida lectus mattis.
-  subtitle: TESTIMONIALS
   title: We work together
 learnmore:
+  subtitle: FEATURED VIDEOS
+  title: Learn More
   videoids:
     - videoId: RUML7IH2JnM
     - videoId: NvCVdZyY9fI
-  subtitle: FEATURED VIDEOS
-  title: Learn More
 ---
+
