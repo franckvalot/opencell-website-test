@@ -118,7 +118,7 @@ worktogether:
   title: We work together.
 learnmore:
   subtitle: FEATURED VIDEOS
-  title: Learn More
+  title: Learn more.
   videoids:
     - videoId: RUML7IH2JnM
     - videoId: NvCVdZyY9fI
