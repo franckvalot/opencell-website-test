@@ -21,41 +21,41 @@ whatmakesus:
   columns:
     - content:
         - text: >-
-            Our modular platform can totally or partially replace your existing
+            Modular platform for total or partial replacement of your existing
             solution.
           title: FULL ORDER-TO-CASH CAPABILITY
-        - text: Role-based customized experiences using our flexible portal.
+        - text: Role-based customized interfaces using our flexible portal.
           title: USER EXPERIENCE
         - text: Multi-level customer hierarchy and commissioning capability.
           title: 'B2C, B2B OR B2B2C'
-        - text: Big data technology providing exceptional scalability at low cost.
+        - text: Exceptional scalability at low cost due to our big data technology.
           title: SCALABILITY
       title: POWERFUL
     - content:
         - text: Over 400 rich APIs for quick configuration and easy integration.
-          title: BEST CLASS IN APIs
+          title: BEST IN-CLASS APIs
         - text: Pre-configured templates for your industry.
           title: BUSINESS FIT
-        - text: Meet your requirements without custom developments.
-          title: FLEXIBAL DATA MODEL
-        - text: Complex projects go-live in less than three months.
+        - text: Easily add the custom data you need for your business.
+          title: FLEXIBLE DATA MODEL
+        - text: Even complex projects go live in less than three months.
           title: QUICK TIME-TO-MARKET
       title: AGILE
     - content:
-        - text: Easy to understand pricing adapted to customer business model.
+        - text: Easy to understand pricing adapted to your business model.
           title: SIMPLE PRICING MODEL
-        - text: No vendor lock-in means we work extra hard to keep customers happy.
+        - text: No vendor lock-in means we work extra hard to keep you happy.
           title: OPEN SOURCE
         - text: >-
-            Quick user adoption means you don’t need to rely on third-party
-            services.
-          title: AUTONOMY
+            Quick user adoption means you avoid long-term reliance on
+            third-party services.
+          title: USER AUTONOMY
         - text: >-
             Deploy on private or public cloud or use our SaaS or managed hosting
             services.
-          title: CLOUD READY
+          title: CLOUD-READY
       title: SIMPLE
-  title: What makes us.
+  title: What makes us different.
 mainindustries:
   block1: 'TELCO, IOT & <br> CLOUD INFRASTRUCTURE'
   block2: ENERGY & UTILITIES
