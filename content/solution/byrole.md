@@ -68,5 +68,35 @@ roles:
     nav: Finance
     title: 'Get your numbers right. '
     url: /img/uploads/portrait3.jpg
+  - background: >
+      Daphne is a customer service manager who’s handling frequent requests from
+      customers that need to renew their contracts or obtain billing
+      information. She currently uses several systems to manage tickets, get
+      information about subscriptions and process credit notes and
+      reimbursements. 
+    benefits:
+      - benefit: |
+          Access 360° customisable view of all customer activity.
+      - benefit: Perform adjustments (including upsells and credit notes) directly.
+      - benefit: >-
+          Give customers and partners access to their own information directly
+          through their self-service portal. 
+    nav: Customer service
+    title: Keep your customers happy.
+    url: /img/uploads/portrait2.jpg
+  - background: >
+      Michelle is the CTO of Opencorp. She’s fed up with the complexity and cost
+      of her current solution and needs a recurring billing platform that can
+      quickly adapt to the business needs and that can seamlessly integrate with
+      the rest of her IT infrastructure. 
+    benefits:
+      - benefit: Integrate easily using 400+ rich APIs.
+      - benefit: |
+          Easily customize screens, workflows and data models.
+      - benefit: Host on private or public cloud.
+      - benefit: Avoid vendor lock-in with open source licensing model
+    nav: IT
+    title: Make IT happen.
+    url: /img/uploads/portrait2.jpg
 ---
 
