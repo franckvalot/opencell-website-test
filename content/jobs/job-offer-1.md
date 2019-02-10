@@ -1,10 +1,12 @@
 ---
-date: 2019-01-17T08:05:55.197Z
-thumbnail: /img/uploads/portrait3.jpg
-title: Job Offer 1
-subtitle: Subtitle
+title: Software engineer (intern)
+subtitle: >-
+  Part of our back-end team, you will contribute to building core platform
+  capabilities using the latest open source technologies. 
 description: Blablabla
+date: 2019-01-17T08:05:55.197Z
 button: APPLY
+thumbnail: /img/uploads/portrait3.jpg
 ---
 # **About us**
 
