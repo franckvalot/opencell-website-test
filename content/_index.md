@@ -1,12 +1,14 @@
 ---
 header:
   carousel:
-    - subtitle: Subscription and usage monetization platform.
+    - subtitle: Agile monetization platform.
       title: Stop selling product. <br> Start selling recurring services.
-    - subtitle: Come and meet us in Barcelona February 25 - 28 2019
-      title: Let's talk about the future of telecoms<br> Mobile World Congress.
-    - subtitle: Pellentesque habitant morbi tristique senectus.
-      title: 'Pellentesque maximus rhoncus sem,<br>ut accumsan dui auctor nec.'
+    - subtitle: Mobile World Congress. Barcelona. February 25 - 28 2019
+      title: 'Let''s talk about the future of telecoms<br> '
+    - subtitle: Webinar. March 15 2019.
+      title: >-
+        Agile utilities: how Opencell can help you adapt to deregulation and
+        technological change
 paradigm:
   title: A new paradigm.
   videoId: 4MJvDNp7xsk
