@@ -45,8 +45,8 @@ whatmakesus:
         - text: No vendor lock-in means we work extra hard to keep you happy.
           title: OPEN SOURCE
         - text: >-
-            Quick user adoption means you avoid long-term reliance on
-            third-party services.
+            Quick user adoption avoids long-term reliance on third-party
+            services.
           title: USER AUTONOMY
         - text: >-
             Deploy on private or public cloud or use our SaaS or managed hosting
