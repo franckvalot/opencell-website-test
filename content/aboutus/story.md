@@ -25,11 +25,13 @@ ourstory:
   title: Story
 investors:
   logos:
-    - alt: Adidas
-      url: /img/uploads/logo-adidas.svg
-    - alt: Mosaic
-      url: /img/uploads/logo-mosaic.svg
-  title: Investors
+    - alt: Cap InnovEst
+      url: /img/uploads/cie-logo.jpg
+    - alt: Kima Ventures
+      url: /img/uploads/logo-kima.png
+    - alt: BPI France
+      url: /img/uploads/bpifrance.jpg
+  title: Investors & financial partners
 partners:
   logos:
     - alt: Gunster
@@ -38,7 +40,7 @@ partners:
       url: /img/uploads/logo-fsu.svg
     - alt: Eckerd
       url: /img/uploads/logo-eckerd.svg
-  title: Parners
+  title: Partners
 leadership:
   leaders:
     - name: DAVID MEYER
@@ -47,9 +49,6 @@ leadership:
     - name: ETHAN BEARDSLEY
       position: CMO/CFO
       url: /img/uploads/portrait2.jpg
-    - name: BRUCE WAYNE
-      position: CTO
-      url: /img/uploads/portrait3.jpg
     - name: STEPHANE DINE
       position: COO
       url: /img/uploads/portrait4.jpg
@@ -59,6 +58,9 @@ leadership:
     - name: EMMANUEL PIERRE
       position: Product Manager
       url: /img/uploads/portrait6.jpg
+    - name: WASSIM DRIRA
+      position: CTO
+      url: /img/uploads/portrait3.jpg
   title: Leadership
 ---
 
