@@ -32,21 +32,25 @@ sections:
         url: /img/uploads/logo-mosaic.svg
     title: Integration partners
   - logos:
-      - alt: Adidas
+      - alt: Bearing Point
         url: /img/uploads/logo-adidas.svg
-      - alt: Dona International
-        url: /img/uploads/logo-dona.svg
-      - alt: Eckerd
-        url: /img/uploads/logo-eckerd.svg
-    title: Company consulting
-  - logos:
-      - alt: Gunster
-        url: /img/uploads/logo-gunster.svg
-      - alt: Mosaic
-        url: /img/uploads/logo-mosaic.svg
-      - alt: Rayonier
+      - alt: Davidson Consulting
         url: /img/uploads/logo-rayonier.svg
-      - alt: Florida Chamber of Commerce
+      - alt: One Point / Weave
+        url: /img/uploads/logo-eckerd.svg
+      - alt: Suricats
+        url: /img/uploads/logo-eckerd.svg
+      - alt: Twelve Consulting
+        url: /img/uploads/logo-dona.svg
+    title: Consulting
+  - logos:
+      - alt: Microsoft
+        url: /img/uploads/logo-gunster.svg
+      - alt: Salesforce
+        url: /img/uploads/logo-mosaic.svg
+      - alt: Red Hat
+        url: /img/uploads/logo-rayonier.svg
+      - alt: IBM
         url: /img/uploads/logo-fl-chamber.svg
     title: Technology partners
 ---
