@@ -34,32 +34,34 @@ sections:
         url: /img/uploads/logo-rayonier.svg
     title: 'Telco, cloud & IoT'
   - logos:
-      - alt: Gunster
+      - alt: Engie
         url: /img/uploads/logo-gunster.svg
-      - alt: Mosaic
+      - alt: Plüm Energie
         url: /img/uploads/logo-mosaic.svg
-      - alt: Rayonier
+      - alt: Rensource
         url: /img/uploads/logo-rayonier.svg
-      - alt: Florida Chamber of Commerce
+      - alt: Total Spring
         url: /img/uploads/logo-fl-chamber.svg
+      - alt: SEIC Teledis
+        url: /img/uploads/logo-gunster.svg
     title: Utilities
   - logos:
-      - alt: Adidas
+      - alt: A-To-Be (Brisa Group)
         url: /img/uploads/logo-adidas.svg
-      - alt: Dona International
+      - alt: Ile de France Mobilités
         url: /img/uploads/logo-dona.svg
-      - alt: Eckerd
+      - alt: Smoove
         url: /img/uploads/logo-eckerd.svg
-    title: Transport & Mobility
+      - alt: PSA
+        url: /img/uploads/logo-mosaic.svg
+    title: Mobility & transport
   - logos:
-      - alt: Eckerd
+      - alt: Fnac Darty
         url: /img/uploads/logo-eckerd.svg
-      - alt: Florida State University
-        url: /img/uploads/logo-fsu.svg
-      - alt: Rayonier
+      - alt: Etiam
+        url: /img/uploads/logo-eckerd.svg
+      - alt: Hubicus (groupe BVA)
         url: /img/uploads/logo-rayonier.svg
-      - alt: Florida Chamber of Commerce
-        url: /img/uploads/logo-fl-chamber.svg
-    title: Retail
+    title: Retail & other
 ---
 
