@@ -5,11 +5,8 @@ subtitle: >-
   We partner with our customers to build the vertical solutions they need for
   their industry.
 introduction:
-  content: >-
-    We work closely with our customers and partners to include the features they
-    need. Our team of industry experts brings the expertise needed to quickly
-    address the most complext requirements. 
-  title: Our unique philosophy
+  content: '*** A enlever ***'
+  title: '*** A enlever ***'
 sections:
   - logos:
       - alt: Actility
