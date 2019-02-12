@@ -11,17 +11,18 @@ ourstory:
     - content: 55 FTEs based primarily in France and Morocco.
   content: >-
     Opencell was created in 2015 to leverage an open source telco billing
-    project initiated in 2007 by David Meyer, its current CEO. The company
-    wanted to provide the first agile monetization platform capable of filling
-    the gap between costly and cumbersome vertical billing solutions used in the
-    telco and utility industries and the simpler "one size fits all" SaaS
-    solutions that only cover the most basic requirements.
+    project initiated in 2007 by David Meyer, its current CEO. 
+
+
+    Our mission was to provide the first agile monetization platform capable of
+    filling the gap between costly and complex vertical billing solutions used
+    in the telco and utility industries and the rigid "one size fits all" SaaS
+    solutions that cover only  the most basic requirements.
 
 
     Four years later, Opencell is now the leading open source monetization
-    platform and has over 40 successful implementations with major players in
-    the telco, utility, mobility and retail sectors. It implements its platform
-    either directly or through its extensive partner network. 
+    platform with over 40 successful implementations with major players in the
+    telco, utility, mobility and retail sectors.
   title: Story
 investors:
   logos:
