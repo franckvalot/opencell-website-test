@@ -20,9 +20,9 @@ ourstory:
     solutions that cover only  the most basic requirements.
 
 
-    Four years later, Opencell is now the leading open source monetization
-    platform with over 40 successful implementations with major players in the
-    telco, utility, mobility and retail sectors.
+    Opencell is now the leading open source monetization platform with over 40
+    successful implementations with major players in the telco, utility,
+    mobility and retail sectors.
   title: Story
 investors:
   logos:
