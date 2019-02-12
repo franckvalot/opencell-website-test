@@ -48,16 +48,16 @@ leadership:
       position: CEO
       url: /img/uploads/portrait1.jpg
     - name: ETHAN BEARDSLEY
-      position: CMO/CFO
+      position: CMO & CFO
       url: /img/uploads/portrait2.jpg
     - name: STEPHANE DINE
       position: COO
       url: /img/uploads/portrait4.jpg
     - name: CEDRIC BASSAGET
-      position: Sales director
+      position: VP Sales
       url: /img/uploads/portrait5.jpg
     - name: EMMANUEL PIERRE
-      position: Product Manager
+      position: CPO / Head of Product
       url: /img/uploads/portrait6.jpg
     - name: WASSIM DRIRA
       position: CTO
