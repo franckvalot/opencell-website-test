@@ -9,28 +9,6 @@ introduction:
   title: '*** A enlever ***'
 sections:
   - logos:
-      - alt: Actility
-        url: /img/uploads/logo-adidas.svg
-      - alt: Alphalink
-        url: /img/uploads/logo-dona.svg
-      - alt: Axione
-        url: /img/uploads/logo-gunster.svg
-      - alt: Diabolocom
-        url: /img/uploads/logo-mosaic.svg
-      - alt: Matooma
-        url: /img/uploads/logo-fl-chamber.svg
-      - alt: Objenious
-        url: /img/uploads/logo-rayonier.svg
-      - alt: Odigo (Prosodie)
-        url: /img/uploads/logo-adidas.svg
-      - alt: Orange
-        url: /img/uploads/logo-eckerd.svg
-      - alt: Salt
-        url: /img/uploads/logo-mosaic.svg
-      - alt: Som Connexio
-        url: /img/uploads/logo-rayonier.svg
-    title: 'Telco, cloud & IoT'
-  - logos:
       - alt: Engie
         url: /img/uploads/logo-gunster.svg
       - alt: Plüm Energie
@@ -47,10 +25,12 @@ sections:
         url: /img/uploads/logo-adidas.svg
       - alt: Ile de France Mobilités
         url: /img/uploads/logo-dona.svg
-      - alt: Smoove
-        url: /img/uploads/logo-eckerd.svg
+      - alt: Parkeon
+        url: /img/uploads/logo-adidas.svg
       - alt: PSA
         url: /img/uploads/logo-mosaic.svg
+      - alt: Smoove
+        url: /img/uploads/logo-eckerd.svg
     title: Mobility & transport
   - logos:
       - alt: Fnac Darty
