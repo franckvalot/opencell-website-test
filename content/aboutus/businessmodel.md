@@ -1,14 +1,14 @@
 ---
 layout: businessmodel
-title: We want to do things differently.
-subtitle: Bringing agility and simplicity to enterprise B2B software.
+title: No strings attached.
+subtitle: Start a different relationship with your software provider.
 introduction:
   content: >-
-    Our business model is simple. No upfront payments or maintenance.<br> You
-    just subscribe to a service that gives you access to our full software
-    platform, to support and hosting services as well to our professional
-    services team. There are no hidden costs beyond the annual subscription that
-    includes premium functionalities and support.
+    Our open source business model is simple. No upfront payments or
+    maintenance.<br> You just subscribe to a service that gives you access to
+    support and hosting services as well to our professional services team.
+    There are no hidden costs beyond the annual subscription that includes
+    premium functionalities and support.
   title: How our model works.
 boxes:
   - title: PREMIUM FUNCTIONALITIES
