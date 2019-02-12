@@ -42,7 +42,7 @@ sections:
         url: /img/uploads/logo-eckerd.svg
       - alt: Twelve Consulting
         url: /img/uploads/logo-dona.svg
-    title: Consulting
+    title: Consulting partners
   - logos:
       - alt: Microsoft
         url: /img/uploads/logo-gunster.svg
