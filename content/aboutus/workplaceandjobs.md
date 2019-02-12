@@ -6,8 +6,7 @@ introduction:
   content: >-
     We're interested in full-stack engineers that are passionate about
     technology and understand the disruptive power of open source software and
-    are also  always looking for functional consultants that are experts in our
-    industry verticals. 
+    functional consultants that are experts in our industry verticals. 
   img:
     alt: Workplace
     url: /img/uploads/img_workplace.jpg
