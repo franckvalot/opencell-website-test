@@ -616,10 +616,9 @@ section.contact .info{
   }
 
   section.worktogether .testimonials .quote {
-    font-family: 'Noe-Display-Bold';
+    font-family: 'Noe-Display-Regular';
     font-weight: bold;
-    font-size: 30px;
-    line-height: 40px;
+    font-size: 22px;
     letter-spacing: 0.010em;
   }
 
