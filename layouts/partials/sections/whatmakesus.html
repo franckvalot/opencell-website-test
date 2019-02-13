@@ -1,16 +1,16 @@
-    <section class="hero-1">
+    <section class="hero-1 whatmakesus">
       <div class="container">
         <div class="row justify-content-center">
           <h1 class="col-12 text-center">{{ .title }}</h1>
         </div>
-        <div class="row justify-content-center whatmakesus-box text-center">
+        <div class="row justify-content-center text-center">
           {{ range .columns}}
           <div class="col-12 col-md-4">
-            <div class="title-box text-center">{{ .title | safeHTML }}</div>
+            <div class="row justify-content-center align-items-center title">{{ .title | safeHTML }}</div>
             {{ range .content }}
             <div>
-              {{if .title }}<h2>{{ .title }}</h2>{{end}}
-              {{if .text }}<p>{{ .text }}</p>{{end}}
+              {{if .title }}<h2 class="row justify-content-center align-items-center">{{ .title }}</h2>{{end}}
+              {{if .text }}<p class="row justify-content-center">{{ .text }}</p>{{end}}
             </div>
             {{ end }}
           </div>

@@ -7,19 +7,20 @@
     {{ partial "header/smallheader.html" (dict "Data" $Data) }}
 
 
-    <section class="hero-1 roles-box">
-      <div class="container">
-        <div class="text-center">
+    <section class="hero-1 reduce-margin byrole">
+      <div class="navigation text-center">
+        <div class="container">
           {{ range $Data.roles }}
             <h2 class="navigation">
-              <a href="#{{ anchorize .nav }}">{{ .nav }}</a>
+              <a href="#{{ anchorize .nav }}">{{ .nav | upper}}</a>
             </h2>
           {{ end }}
+        </div>
       </div>
     </section>
 
     {{ range $Data.roles }}
-    <section class="hero-1 roles-box alternate" >
+    <section class="hero-1 reduce-margin byrole alternate" >
       <div class="container">
         <a class="anchor" id="{{ anchorize .nav }}"></a>
         <div class="row justify-content-center">

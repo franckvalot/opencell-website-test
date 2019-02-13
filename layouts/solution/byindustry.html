@@ -7,38 +7,41 @@
     {{ partial "header/smallheader.html" (dict "Data" $Data) }}
 
 
-    <section class="hero-1 industries-box">
-      <div class="container">
-        <div class="text-center">
+    <section class="hero-1 reduce-margin byindustry">
+      <div class="navigation text-center">
+        <div class="container">
           {{ range $Data.industries }}
             <h2 class="navigation">
-              <a href="#{{ anchorize .nav }}">{{ .nav }}</a>
+              <a href="#{{ anchorize .nav }}">{{ .nav | upper}}</a>
             </h2>
           {{ end }}
+        </div>
       </div>
     </section>
 
     {{ range $Data.industries }}
-    <section class="hero-1 industries-box" >
+    <section class="hero-1 reduce-margin byindustry" >
       <div class="container">
         <a class="anchor" id="{{ anchorize .nav }}"></a>
         <div class="row justify-content-center">
           <h1 class="col text-center">{{ .title }}</h1>
           <div class="w-100"></div>
-          <div class="col-10 col-md-8 col-lg-6 embed-responsive embed-responsive-16by9 video">
-            <iframe class="youtube" src="https://www.youtube.com/embed/{{ .videoId }}?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <div class="col-12 col-md-10  embed-responsive embed-responsive-16by9 video">
+            <iframe src="https://www.youtube.com/embed/{{ .videoId }}?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
-          <div class="col-10 row justify-content-center content">
-            {{ range .contents }}
-            <div class="col-10 col-md">
-              <h2>{{ .title }}</h2>
-              <p>{{ .content }}</p>
+          <div class="col-12 content">
+            <div class="row justify-content-center">
+              {{ range .contents }}
+              <div class="col-10 col-md">
+                <h2>{{ .title }}</h2>
+                <p>{{ .content }}</p>
+              </div>
+              {{ end }}
+              <div class="w-100"></div>
+              <form action="{{ .Site.Params.url.getInTouch }}" method="get">
+                <button type="submit" name="button" class="opencell-btn">TRY NOW</button>
+              </form>
             </div>
-            {{ end }}
-            <div class="w-100"></div>
-            <form action="{{ .Site.Params.url.getInTouch }}" method="get">
-              <button type="submit" name="button" class="opencell-btn">DISCOVER</button>
-            </form>
           </div>
         </div>
       </div>

@@ -55,10 +55,11 @@ whatmakesus:
       title: SIMPLE
   title: What makes us.
 mainindustries:
-  block1: 'TELCO, IOT & <br> CLOUD INFRASTRUCTURE'
-  block2: ENERGY & UTILITIES
-  block3: MOBILITY & TRANSPORT
-  block4: RETAIL
+  blocks:
+    - block: 'TELCO, IOT & <br> CLOUD INFRASTRUCTURE'
+    - block: ENERGY & UTILITIES
+    - block: MOBILITY & TRANSPORT
+    - block: RETAIL
   subtitle: >-
     OUR PLATFORM IS ADAPTED FOR ALL INDUSTRIES AND ALL BUSINESS SIZES. IT WORKS
     IN B2C, B2B AND B2BC

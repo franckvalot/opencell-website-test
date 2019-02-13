@@ -5,25 +5,34 @@
   <body>
     {{ partial "header/navBar.html" . }}
     {{ partial "header/smallheader.html" (dict "Data" $Data) }}
-
-    <section class="hero-1 ecosystem">
-      <div class="navigation text-center">
-      {{ range $name, $taxonomy := .Site.Taxonomies.ecosysindustags }}
-        <h2 class="navigation">
-          <a href="#{{ anchorize $name }}">{{ $name | upper}}</a>
-        </h2>
-      {{ end }}
-      </div>
-      <div class="navigation text-center">
-      {{ range $name, $taxonomy := .Site.Taxonomies.ecosysroletags }}
-        <h2 class="navigation">
-          <a href="#{{ anchorize $name }}">{{ $name | upper}}</a>
-        </h2>
-      {{ end }}
+    <section class="hero-1">
+      <div class="container">
+        {{ partial "titleanddescription.html" (dict "Data" $Data.introduction) }}
       </div>
     </section>
 
-    <section class="hero-1">
+    <section class="hero-1 reduce-margin ecosystem">
+      <div class="navigation text-center">
+        <div class="container">
+        {{ range $name, $taxonomy := .Site.Taxonomies.ecosysindustags }}
+          <h2 class="navigation">
+            <a href="#{{ anchorize $name }}">{{ $name | upper}}</a>
+          </h2>
+        {{ end }}
+        </div>
+      </div>
+      <div class="navigation text-center">
+        <div class="container">
+        {{ range $name, $taxonomy := .Site.Taxonomies.ecosysroletags }}
+          <h2 class="navigation">
+            <a href="#{{ anchorize $name }}">{{ $name | upper}}</a>
+          </h2>
+        {{ end }}
+        </div>
+      </div>
+    </section>
+
+    <section class="hero-1 reduce-margin">
       <div class="container">
         <div class="row align-items-center justify-content-center customer-logo">
           {{ $scratch := newScratch }}
@@ -73,8 +82,8 @@
         // var industag = $('div.navigation:nth-child(1)').children('h2').children('a.active').attr('href');
         // var roletag = $('div.navigation:nth-child(2)').children('h2').children('a.active').attr('href');
 
-        var industag = $('div.navigation:nth-child(1)').children('h2').children('a.active').map(function(){return $(this).attr('href').replace('#', '')});
-        var roletag = $('div.navigation:nth-child(2)').children('h2').children('a.active').map(function(){return $(this).attr('href').replace('#', '')});
+        var industag = $('div.navigation>div:nth-child(1)').children('h2').children('a.active').map(function(){return $(this).attr('href').replace('#', '')});
+        var roletag = $('div.navigation>div:nth-child(2)').children('h2').children('a.active').map(function(){return $(this).attr('href').replace('#', '')});
 
         $('.logo').hide();
 

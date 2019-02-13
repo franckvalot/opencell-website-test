@@ -6,27 +6,21 @@
     {{ partial "header/navBar.html" . }}
     {{ partial "header/smallheader.html" (dict "Data" $Data) }}
 
-    <section class="hero-1">
-      <div class="container">
-        {{ partial "titleanddescription.html" (dict "Data" $Data.introduction) }}
-      </div>
-    </section>
-
     {{ range $Data.sections }}
-    <section class="hero-1">
+    <section class="hero-1 customers">
       <div class="container">
         <div class="row justify-content-center">
-          <div class="col-12 col-md-5 col-lg-4">
-            <div class="row align-items-center text-center customers-box">
+          <div class="col list">
+            <div class="row align-items-center text-center box">
               <h1>{{ .title }}</h1>
             </div>
-            <ul class="customers-list">
+            <ul>
               {{ range .logos }}
-              <li><h2>{{ .alt }}</h2></li>
+              <li><h2>{{ .alt | upper }}</h2></li>
               {{ end }}
             </ul>
           </div>
-          <div class="col-12 col-md-8 col-lg-9 customers-logos">
+          <div class="col-12 col-md-8 col-lg-10 logos">
             <div class="row align-items-center align-items-center">
               {{ range .logos }}
               <div class="col-6 col-lg-4">

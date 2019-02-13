@@ -3,6 +3,10 @@ layout: ecosystem
 title: Let’s connect.
 subtitle: Meet our growing Partner ecosystem.
 description:
+introduction:
+  title: Our growing ecosystem.
+  content: >-
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam et dictum turpis. Vivamus fringilla, massa porta suscipit suscipit, sapien lorem egestas velit, sit amet semper nibh orci eget ante.
 ecosysindustags: [CRM, ERM, Bank & PSP, PUBLISHING, OSS/ESB, ECOMMERCE, BI]
 ecosysroletags: [FINANCE, AR MANAGER, PAYMENT, REPORTING, ORDER, INVOICE]
 logos:

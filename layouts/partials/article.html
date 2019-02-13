@@ -3,20 +3,8 @@
     <div class="col-11 article-box">
       <div class="row align-items-center justify-content-center">
         <div class="date">
-          <h2>
-            {{if .IsPage }}
-              {{  dateFormat "Jan" .Params.date }}
-            {{else}}
-              {{ dateFormat "Jan" .date }}
-            {{end}}
-          </h2>
-          <p>
-            {{if .IsPage }}
-              {{  dateFormat "2006" .Params.date }}
-            {{else}}
-              {{ dateFormat "2006" .date }}
-            {{end}}
-          </p>
+          <h2>{{if .IsPage }}{{  dateFormat "Jan" .Params.date }}{{else}}{{ dateFormat "Jan" .date }}{{end}}</h2>
+          <p>{{if .IsPage }}{{  dateFormat "2006" .Params.date }}{{else}}{{ dateFormat "2006" .date }}{{end}}</p>
         </div>
         <div class="col-12 description">
           <div class="row align-items-center justify-content-center">

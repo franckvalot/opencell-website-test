@@ -1,4 +1,4 @@
-    <section class="hero-1">
+    <section class="hero-1 worktogether">
       <div class="container">
         <div class="row justify-content-center text-center">
           <h1 class="col-12">{{ .title }}</h1>
@@ -14,8 +14,8 @@
           <div class="carousel-inner testimonials">
             {{ range $index, $element := .testimonials }}
             <div class="carousel-item {{if eq $index 0}}active{{end}}">
-              <div class="row justify-content-center align-items-center">
-                <div class="col-10 col-md-8 col-lg-6">
+              <div class="row justify-content-center align-items-center h-100">
+                <div class="col-12">
                   <div class="row justify-content-center">
                     <div class="quote text-center">
                       {{ $element.testimonial }}

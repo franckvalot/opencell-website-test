@@ -15,9 +15,9 @@
         </div>
         <div class="row justify-content-center text-center">
           {{ range $Data.sections}}
-          <div class="col-12 col-md-4">
+          <div class="col-12 col-md-4 margin">
             <div class="row align-items-center justify-content-center h-100">
-              <div class="col-11 knowledgecenter-box h-100">
+              <div class="col-11 box h-100">
                 <div><h2>{{ .title }}</h2>{{ if .icon}}<img src="{{.icon}}">{{end}}</div>
                 <p>{{ .description }}</p>
                 <form action="{{ .url }}" method="get">
