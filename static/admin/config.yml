@@ -441,11 +441,8 @@ collections:
       - {label: Author, name: author, widget: string}
       - {label: Date, name: date, widget: date}
       - label: Tags
-        name: tags
-        widget: select
-        multiple: true
-        field:
-          -  {label: Tag, name: tag, widget: string}
+        name: articlestags
+        widget: list
       - {label: Thumbnail, name: thumbnail, widget: image}
       - {label: Body, name: body, widget: markdown}
   - label: Our Blog - Videos
@@ -460,11 +457,8 @@ collections:
     - {label: Author, name: author, widget: string}
     - {label: Date, name: date, widget: date}
     - label: Tags
-      name: tags
-      widget: select
-      multiple: true
-      field:
-        - {label: Tag, name: tag, widget: string}
+      name: videostags
+      widget: list
     - {label: Video ID, name: videoId, widget: string}
     - {label: Body, name: body, widget: markdown}
   - label: "Jobs"
@@ -507,3 +501,6 @@ collections:
       - {label: Thumbnail, name: thumbnail, widget: image, required: false}
       - {label: Video ID, name: videoId, widget: string, required: false}
       - {label: Body, name: body, widget: markdown}
+      - label: Tags
+        name: tags
+        widget: list
