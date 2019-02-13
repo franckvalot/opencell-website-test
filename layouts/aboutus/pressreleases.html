@@ -5,8 +5,12 @@
   <body>
     {{ partial "header/navBar.html" . }}
     {{ partial "header/smallheader.html" (dict "Data" $Data ) }}
-
-    {{ partial "articles.html" (dict "Data" $Data) }}
+    <section class="hero-1 reduce-margin">
+      <div class="container text-center">
+        <h1>Press releases</h1>
+      </div>
+    </section>
+    {{ partial "articles.html" (dict "Data" $Data "Reducemargin" true) }}
 
     {{ partial "sections/getdemo.html" . }}
     {{ partial "sections/mentions.html" . }}
