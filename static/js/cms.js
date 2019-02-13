@@ -405,13 +405,6 @@ var PlatformTechnologyPreview = createClass({
               businesslogicdata.get('carousel').map(function(item){
                 return h('img', {className:'img-fluid', src: item.get('url'), alt: item.get('alt')})
               }),
-              h('ul', {},
-                h('li', {style:{top: 0; left: 0; width: 50%; height: 70%;}, "data-target":"#carouselBusinesslogic", "data-slide-to":"1"}, ''),
-                h('li', {style:{top: 0; left: 50%; width: 50%; height: 70%;}, "data-target":"#carouselBusinesslogic", "data-slide-to":"1"}, ''),
-                h('li', {style:{top: 70%; left: 0; width: 100%; height: 30%;}, "data-target":"#carouselBusinesslogic", "data-slide-to":"1"}, ''),
-                h('li', {style:{top: 30%; left: 30%; width: 40%; height: 40%; z-index: 10;}, "data-target":"#carouselBusinesslogic", "data-slide-to":"1"}, ''),
-              )
-            ),
             h('div', {className:'col-12 col-md-8'},
               h('div', {className:'carousel slide row align-items-center', id:'carouselBusinesslogic', "data-ride":"carousel"},
                 h('ol', {className:'carousel-indicators'},
