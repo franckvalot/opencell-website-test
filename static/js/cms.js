@@ -426,30 +426,31 @@ var PlatformTechnologyPreview = createClass({
             )
           )
         )
-      ),
-      h('section', {className:'hero-1 reduce-margin'},
-        h('div', {className:'container'},
-          titleanddescription(technologiesdata.get('introduction'))
-        )
-      ),
-      h('section', {className:'hero-1 reduce-margin platformtechnology technologies'},
-        h('div', {className:'container'},
-          h('div', {className:'row align-items-center justify-content-center'},
-            technologiesdata.get('technologies').map(function(item){
-                return h('div', {className:'col-10 col-md row align-items-center justify-content-center'},
-                  h('div', {className:'col text-center description'},
-                    item.get('description')
-                  ),
-                  h('div', {className:'w-100'},''),
-                  h('div', {className:'col text-center img'},
-                    h('img', {className:'img-fluid', src: item.get('url'), alt: item.get('alt')})
-                  )
-                );
-            })
-          )
+      )
+    ),
+    h('section', {className:'hero-1 reduce-margin'},
+      h('div', {className:'container'},
+        titleanddescription(technologiesdata.get('introduction'))
+      )
+    ),
+    h('section', {className:'hero-1 reduce-margin platformtechnology technologies'},
+      h('div', {className:'container'},
+        h('div', {className:'row align-items-center justify-content-center'},
+          technologiesdata.get('technologies').map(function(item){
+              return h('div', {className:'col-10 col-md row align-items-center justify-content-center'},
+                h('div', {className:'col text-center description'},
+                  item.get('description')
+                ),
+                h('div', {className:'w-100'},''),
+                h('div', {className:'col text-center img'},
+                  h('img', {className:'img-fluid', src: item.get('url'), alt: item.get('alt')})
+                )
+              );
+          })
         )
       )
-      ];
+    )
+    ];
   }
 })
 
