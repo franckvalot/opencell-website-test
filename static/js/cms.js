@@ -203,7 +203,7 @@ var IndexPreview = createClass({
             mainindustriesdata.get('blocks').map(function(item){
               return h('div', {className:'col-12 col-md-6 box'},
                 h('div', {className:'row align-items-center justify-content-center', dangerouslySetInnerHTML: {__html: item.get('block')}})
-              )
+              );
             })
           )
         )
@@ -374,7 +374,7 @@ var PlatformTechnologyPreview = createClass({
                   h('hr', {},),
                   h('p', {className:'col-12'}, item.get('description'))
                 )
-              )
+              );
             })
           )
         )
@@ -393,7 +393,7 @@ var PlatformTechnologyPreview = createClass({
                 h('div', {className:'col-12'},
                   item.get('content').map(content)
                 )
-              )
+              );
             })
           )
         )
@@ -403,13 +403,13 @@ var PlatformTechnologyPreview = createClass({
           h('div', {className:'row align-items-center justify-content-center'},
             h('div', {className:'col-8 col-md-4'},
               businesslogicdata.get('carousel').map(function(item){
-                return h('img', {className:'img-fluid', src: item.get('url'), alt: item.get('alt')})
+                return h('img', {className:'img-fluid', src: item.get('url'), alt: item.get('alt')});
               }),
             h('div', {className:'col-12 col-md-8'},
               h('div', {className:'carousel slide row align-items-center', id:'carouselBusinesslogic', "data-ride":"carousel"},
                 h('ol', {className:'carousel-indicators'},
                   businesslogicdata.get('carousel').map(function(item, index){
-                    h('li', {"data-target":"#carouselBusinesslogic", "data-slide-to":index, className:(index == 0 ? 'active':null)}, '')
+                    h('li', {"data-target":"#carouselBusinesslogic", "data-slide-to":index, className:(index == 0 ? 'active':null)}, '');
                   })
                 ),
                 h('div', {className:'carousel-inner'},
@@ -419,7 +419,7 @@ var PlatformTechnologyPreview = createClass({
                         h('h1', {className:'text-center text-md-left'}, item.get('title')),
                         h('p', {}, item.get('content'))
                       )
-                    )
+                    );
                   })
                 )
               )
@@ -520,7 +520,7 @@ var SolutionByRolePreview = createClass({
           rolesdata.map(function(item){
             return h('h2', {className:'navigation'},
               h('a', {href:'#'}, item.get('nav').toUpperCase())
-            );
+            )
           })
         )
       ),
