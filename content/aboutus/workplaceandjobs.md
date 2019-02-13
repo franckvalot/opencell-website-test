@@ -1,15 +1,16 @@
 ---
 layout: workplaceandjobs
-title: We want to do things differently.
-subtitle: Bringing agility and simplicity to enterprise B2B software.
-description:
+title: We're hiring.
+subtitle: Come and help us change the world of enterprise software.
 introduction:
-  title: Introduction
-  content: >-
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-    Etiam et dictum turpis. Vivamus fringilla, massa porta suscipit suscipit,
-    sapien lorem egestas velit, sit amet semper nibh orci eget ante.
+  content: >+
+    We're interested in full-stack engineers that are passionate about
+    technology and understand the disruptive power of open source software and
+    functional consultants that are experts in our industry verticals. 
+
   img:
-    url: /img/uploads/img_workplace.jpg
     alt: Workplace
+    url: /img/uploads/img_workplace.jpg
+  title: No bullshit.
 ---
+

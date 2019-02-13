@@ -1,35 +1,57 @@
 ---
 layout: partners
-title: We want to do things differently.
-subtitle: Bringing agility and simplicity to enterprise B2B software.
-description:
+title: Let's work together.
+subtitle: >-
+  We implement 80% of our projects through our network of integration and
+  consulting partners. 
 sections:
-  - title: Integration partners
-    logos:
-      - url: /img/uploads/logo-adidas.svg
-        alt: Adidas
-      - url: /img/uploads/logo-dona.svg
-        alt: Dona International
-      - url: /img/uploads/logo-gunster.svg
-        alt: Gunster
-      - url: /img/uploads/logo-mosaic.svg
-        alt: Mosaic
-  - title: Technology partners
-    logos:
-      - url: /img/uploads/logo-gunster.svg
-        alt: Gunster
-      - url: /img/uploads/logo-mosaic.svg
-        alt: Mosaic
-      - url: /img/uploads/logo-rayonier.svg
-        alt: Rayonier
-      - url: /img/uploads/logo-fl-chamber.svg
-        alt: Florida Chamber of Commerce
-  - title: Company consulting
-    logos:
-      - url: /img/uploads/logo-adidas.svg
-        alt: Adidas
-      - url: /img/uploads/logo-dona.svg
-        alt: Dona International
-      - url: /img/uploads/logo-eckerd.svg
-        alt: Eckerd
+  - logos:
+      - alt: Cap Gemini
+        url: /img/uploads/logo-adidas.svg
+      - alt: Atos
+        url: /img/uploads/logo-dona.svg
+      - alt: Worldline
+        url: /img/uploads/logo-gunster.svg
+      - alt: Gfi
+        url: /img/uploads/logo-mosaic.svg
+      - alt: Sopra Steria
+        url: /img/uploads/logo-adidas.svg
+      - alt: EI Technologies
+        url: /img/uploads/logo-eckerd.svg
+      - alt: IT New Vision
+        url: /img/uploads/logo-fl-chamber.svg
+      - alt: Sofrecom
+        url: /img/uploads/logo-fsu.svg
+      - alt: Niji
+        url: /img/uploads/logo-dona.svg
+      - alt: Oxelar
+        url: /img/uploads/logo-fsu.svg
+      - alt: Innowave
+        url: /img/uploads/logo-gunster.svg
+      - alt: Biz Direct
+        url: /img/uploads/logo-mosaic.svg
+    title: Integration partners
+  - logos:
+      - alt: Bearing Point
+        url: /img/uploads/logo-adidas.svg
+      - alt: Davidson Consulting
+        url: /img/uploads/logo-rayonier.svg
+      - alt: One Point / Weave
+        url: /img/uploads/logo-eckerd.svg
+      - alt: Suricats
+        url: /img/uploads/logo-eckerd.svg
+      - alt: Twelve Consulting
+        url: /img/uploads/logo-dona.svg
+    title: Consulting partners
+  - logos:
+      - alt: Microsoft
+        url: /img/uploads/logo-gunster.svg
+      - alt: Salesforce
+        url: /img/uploads/logo-mosaic.svg
+      - alt: Red Hat
+        url: /img/uploads/logo-rayonier.svg
+      - alt: IBM
+        url: /img/uploads/logo-fl-chamber.svg
+    title: Technology partners
 ---
+

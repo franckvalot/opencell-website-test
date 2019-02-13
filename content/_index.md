@@ -1,12 +1,12 @@
 ---
 header:
   carousel:
-    - subtitle: Subscription and usage monetization platform.
+    - subtitle: Agile monetization platform.
       title: Stop selling product. <br> Start selling recurring services.
-    - subtitle: 'Quisque massa justo, sollicitudin a congue congue.'
-      title: 'Duis ut dui elit. Maecenas est sapien,<br> tincidunt a ex id.'
-    - subtitle: Pellentesque habitant morbi tristique senectus.
-      title: 'Pellentesque maximus rhoncus sem,<br>ut accumsan dui auctor nec.'
+    - subtitle: Mobile World Congress. Barcelona. February 25 - 28 2019
+      title: 'Let''s talk about the future of telecoms<br> '
+    - subtitle: Webinar. March 15 2019.
+      title: 'Agile utilities: how to adapt to deregulation and technological change'
 paradigm:
   title: A new paradigm.
   videoId: 4MJvDNp7xsk
@@ -19,41 +19,41 @@ whatmakesus:
   columns:
     - content:
         - text: >-
-            Our modular platform can totally or partially replace your existing
+            Modular platform for total or partial replacement of your existing
             solution.
           title: FULL ORDER-TO-CASH CAPABILITY
-        - text: Role-based customized experiences using our flexible portal.
+        - text: Role-based customized interfaces using our flexible portal.
           title: USER EXPERIENCE
         - text: Multi-level customer hierarchy and commissioning capability.
           title: 'B2C, B2B OR B2B2C'
-        - text: Big data technology providing exceptional scalability at low cost.
+        - text: Exceptional scalability at low cost due to our big data technology.
           title: SCALABILITY
       title: POWERFUL
     - content:
         - text: Over 400 rich APIs for quick configuration and easy integration.
-          title: BEST CLASS IN APIs
+          title: BEST IN-CLASS APIs
         - text: Pre-configured templates for your industry.
           title: BUSINESS FIT
-        - text: Meet your requirements without custom developments.
-          title: FLEXIBAL DATA MODEL
-        - text: Complex projects go-live in less than three months.
+        - text: Easily add the custom data you need for your business.
+          title: FLEXIBLE DATA MODEL
+        - text: Even complex projects go live in less than three months.
           title: QUICK TIME-TO-MARKET
       title: AGILE
     - content:
-        - text: Easy to understand pricing adapted to customer business model.
+        - text: Easy to understand pricing adapted to your business model.
           title: SIMPLE PRICING MODEL
-        - text: No vendor lock-in means we work extra hard to keep customers happy.
+        - text: No vendor lock-in means we work extra hard to keep you happy.
           title: OPEN SOURCE
         - text: >-
-            Quick user adoption means you don’t need to rely on third-party
+            Quick user adoption avoids long-term reliance on third-party
             services.
-          title: AUTONOMY
+          title: USER AUTONOMY
         - text: >-
             Deploy on private or public cloud or use our SaaS or managed hosting
             services.
-          title: CLOUD READY
+          title: CLOUD-READY
       title: SIMPLE
-  title: What makes us.
+  title: What makes us different.
 mainindustries:
   blocks:
     - block: 'TELCO, IOT & <br> CLOUD INFRASTRUCTURE'
@@ -83,27 +83,45 @@ ourcustomers:
     - alt: Florida Chamber of Commerce
       url: /img/uploads/logo-fl-chamber.svg
   title: Our customers
-  button: DISCOVER OUR CUSTOMERS
 worktogether:
-  testimonials:
-    - author: Author 1
-      testimonial: >-
-        Testimonial 1 - Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-        Proin   fringilla feugiat nisi.
-    - author: Author 2
-      testimonial: >-
-        Testimonial 2 - Vivamus auctor enim vitae sem auctor sodales. Proin
-        fringilla   varius lectus.
-    - author: Author 3
-      testimonial: >-
-        Testimonial 3 - Mauris id ligula odio. Nulla lacinia lacus nec ligula
-        eleifend, sed gravida lectus mattis.
   subtitle: TESTIMONIALS
-  title: We work together
+  testimonials:
+    - author: Olivier Hersent - CEO @ Actility
+      testimonial: >-
+        Opencell provided the flexibility we needed to adapt the product billing
+        features to the complex and evolving needs of a marketplace for Devices,
+        Applications and Connectivity, and the related settlement
+        requirements.   We intend to integrate it completely in our IaaS cloud
+        to manage the complex financial flows matrix of ThingPark marketplace,
+        and also make it available to our network operator partners for their
+        own IoT billing & settlement needs.
+    - author: Eric Le Bihan - CEO @ Etiam
+      testimonial: >-
+        Opencell provided a flexible billing solution that was able to respond
+        to our complex multi-party billing and commissioning needs. Training
+        took place in less than a week and our team was able to manage the
+        implementation project internally.   Opencell has given us the ability
+        to scale our business and quickly create new offers. Our cash-flow has
+        improved since we’re now able to bill on a monthly instead of quarterly
+        basis. We’ve also improved our revenue assurance and been able to
+        reallocate the FTE saved on billing tasks to new more value-added tasks.
+    - author: Jean-Luc Raingeval - Project Manager @ Orange
+      testimonial: >-
+        For the launch of the new Orange Cloud For Business platform, we were
+        primarily interested in finding an open source solution that could be
+        configured to model standard as well as completely customized
+        subscription models. The product needed to be able to be administered by
+        business analysts.   Opencell fulfilled our requirements. Missing
+        functionalities identified during the proof of concept workshop were
+        quickly developed and integrated into the core open source model. The
+        support team was very proactive and quickly helped us to resolve all
+        technical issues encountered during the implementation phase.
+  title: We work together.
 learnmore:
+  subtitle: FEATURED VIDEOS
+  title: Learn more.
   videoids:
     - videoId: RUML7IH2JnM
     - videoId: NvCVdZyY9fI
-  subtitle: FEATURED VIDEOS
-  title: Learn More
 ---
+
