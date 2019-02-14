@@ -11,6 +11,13 @@ var Template = createClass({
 var months = ["Jan", "Feb", "Mar", "Apr", "May", "June", "July", "Aug", "Sept", "Oct", "Nov", "Dec"];
 var days = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
 
+function scripts(){
+  return [h('script', {src:'https://code.jquery.com/jquery-3.3.1.min.js'}, ''),
+          h('script', {src:'https://code.jquery.com/jquery-3.3.1.slim.min.js', integrity: 'sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo', crossorigin:'anonymous'}, ''),
+          h('script', {src:'https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js', integrity: 'sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49', crossorigin:'anonymous'}, ''),
+          h('script', {src:'https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js', integrity: 'sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy', crossorigin:'anonymous'}, '')
+          ]
+}
 function smallHeader(item){
     return h('header', {className:'small-header', style:{backgroundImage: 'url(' + item.getIn(['data', 'thumbnail']) +')'}},
       h('div', {className:'header-content-inner'},
@@ -271,7 +278,8 @@ var IndexPreview = createClass({
             }):null)
           )
         )
-      )
+      ),
+      script()
       ];
   }
 })
@@ -336,7 +344,8 @@ var PlatformModulesPreview = createClass({
               )
             )
           )
-        )
+        ),
+        script()
       ];
     }
 })
@@ -449,7 +458,8 @@ var PlatformTechnologyPreview = createClass({
           })
         )
       )
-    )
+    ),
+    script()
     ];
   }
 })
@@ -501,7 +511,8 @@ var SolutionByIndustryPreview = createClass({
         )
       ),
     ),
-    industriesdata.map(industries)
+    industriesdata.map(industries),
+    script()
     ];
   }
 })
@@ -548,7 +559,8 @@ var SolutionByRolePreview = createClass({
             )
           )
         );
-    })
+    }),
+    script()
     ];
   }
 })
@@ -565,7 +577,8 @@ var AboutUsPressReleasesPreview = createClass({
             articlesdata.map(article)
           )
         )
-      )
+      ),
+      script()
       ];
   }
 })
@@ -619,7 +632,8 @@ var AboutUSStoryPreview = createClass({
           })
         )
       )
-    )
+    ),
+    script()
     ];
   }
 })
@@ -650,7 +664,8 @@ var AboutUsBusinessModelPreview = createClass({
               entry.getIn(['data', 'boxes']).map(boxes)
           )
         )
-      )
+      ),
+      script()
       ];
   }
 })
@@ -693,7 +708,8 @@ var AboutUsCustomersPreview = createClass({
       }
 
       return [smallHeader(entry),
-      entry.getIn(['data', 'sections']).map(sections)
+      entry.getIn(['data', 'sections']).map(sections),
+      script()
       ];
   }
 })
@@ -721,7 +737,8 @@ var AboutUsWorkplaceAndJobsPreview = createClass({
         h('div', {className:'container'},
           titleanddescription(entry.getIn(['data', 'introduction']))
         )
-      )
+      ),
+      script()
       ];
   }
 })
@@ -753,7 +770,8 @@ var BlogPreview = createClass({
             )
           )
         )
-      )
+      ),
+      script()
       ];
   }
 })
@@ -778,7 +796,8 @@ CMS.registerPreviewTemplate("aboutusworkplaceandjobs", AboutUsWorkplaceAndJobsPr
 CMS.registerPreviewTemplate("blog", BlogPreview);
 
 
-CMS.registerPreviewStyle("https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css");
+CMS.registerPreviewStyle("https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css");
 CMS.registerPreviewStyle("/css/cms.css");
 CMS.registerPreviewStyle("/css/fonts.css");
 CMS.registerPreviewStyle("/css/creative.css");
+CMS.registerPreviewStyle("/css/glyphicons.css");
