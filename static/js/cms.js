@@ -562,7 +562,7 @@ var SolutionByIndustryPreview = createClass({
                     );
                   }) : null)
                 )
-              )
+              ),
               h('div', {className:'w-100'}, ''),
               h('form',{},
                 h('button', {className:'opencell-btn'}, 'TRY NOW')
@@ -596,7 +596,7 @@ var SolutionByRolePreview = createClass({
           )
         ),
       ),
-    rolesdata.map(function(item){
+      rolesdata.map(function(item){
         return h('section', {className:'hero-1 reduce-margin byrole alternate'},
           h('div', {className:'container'},
             h('div', {className:'row justify-content-center'},
@@ -618,8 +618,8 @@ var SolutionByRolePreview = createClass({
             )
           )
         );
-    }),
-    scripts()
+      }),
+      scripts()
     ];
   }
 })
