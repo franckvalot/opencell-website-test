@@ -183,7 +183,7 @@ collections:
                 widget: object
                 fields:
                   - {label: Title, name: title, widget: string}
-                  - {label: Content, name: content, widget: text}
+                  - {label: Content, name: content, widget: markdown}
               - label: Technologies
                 name: technologies
                 widget: list
@@ -192,6 +192,41 @@ collections:
                   - {label: Alternative, name: alt, widget: string}
                   - {label: Description, name: description, widget: text}
           - {label: Markdown, name: body, widget: hidden}
+      - label: Ecosystem
+        name: platformecosystem
+        file: content/platform/ecosystem.md
+        fields:
+          - {label: Layout, name: layout, widget: hidden, default: ecosystem}
+          - {label: Title, name: title, widget: string}
+          - {label: Subtitle, name: subtitle, widget: string}
+          - {label: Description, name: description, widget: text, required: false}
+          - label: Introduction
+            name: introduction
+            widget: object
+            fields:
+              - {label: Title, name: title, widget: string}
+              - {label: Content, name: content, widget: markdown}
+          - label: Industry tags
+            name: ecosysindustags
+            widget: list
+          - label: Role tags
+            name: ecosysroletags
+            widget: list
+          - label: Logos
+            name: logos
+            widget: list
+            fields:
+              - {label: Logo, name: layout, widget: image}
+              - {label: Alternative text, name: alt, widget: string}
+              - label: Industry tags
+                name: ecosysindustags
+                widget: list
+              - label: Role tags
+                name: ecosysroletags
+                widget: list
+
+
+
   - label: Solution
     name: solution
     files:
