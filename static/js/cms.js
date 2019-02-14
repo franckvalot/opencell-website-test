@@ -19,7 +19,7 @@ function scripts(){
         ];
 }
 function smallHeader(item){
-    return h('header', {className:'small-header', style:{backgroundImage: 'url(' + item.getIn(['data', 'thumbnail']) +')'}},
+    return h('header', {className:'small-header', (item.getIn(['data', 'thumbnail']) =! null ? style:{backgroundImage: 'url(' + item.getIn(['data', 'thumbnail']) +')':null)}},
       h('div', {className:'header-content-inner'},
         h('div', {className:'container'},
           h('div', {className:'row align-items-center justify-content-center'},
