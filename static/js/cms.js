@@ -548,7 +548,7 @@ var SolutionByIndustryPreview = createClass({
         return h('section', {className:'hero-1 reduce-margin byindustry'},
           h('div', {className:'container'},
             h('div', {className:'row justify-content-center'},
-              h('div', {className:'col text-center'}, item.get('title')),
+              h('h1', {className:'col text-center'}, item.get('title')),
               h('div', {className:'w-100'}, ),
               h('div', {className:'col-12 col-md-10  embed-responsive embed-responsive-16by9 video'},
                 h('iframe', {src:'https://www.youtube.com/embed/' + item.get('videoId') + '?controls=0', frameborder:'0', allow:'accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture', allowfullscreen:'true'}, '')
