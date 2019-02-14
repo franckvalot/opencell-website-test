@@ -190,8 +190,8 @@ var IndexPreview = createClass({
               return h('div', {className:'col-12 col-md-4'},
                 h('div', {className:'row justify-content-center align-items-center title', dangerouslySetInnerHTML: {__html: item.get('title')}}),
                 item.get('content').map(function(item){
-                  return [(item.get('title') ? h('h2', {},item.get('title')):null),
-                  (item.get('text') ? h('p', {},item.get('text')):null)
+                  return [(item.get('title') ? h('h2', {className:'row justify-content-center align-items-center'},item.get('title')):null),
+                  (item.get('text') ? h('p', {className:'row justify-content-center'},item.get('text')):null)
                   ];
                 })
               );
@@ -279,7 +279,7 @@ var IndexPreview = createClass({
           )
         )
       ),
-      script()
+      scripts()
       ];
   }
 })
@@ -345,7 +345,7 @@ var PlatformModulesPreview = createClass({
             )
           )
         ),
-        script()
+        scripts()
       ];
     }
 })
@@ -459,7 +459,7 @@ var PlatformTechnologyPreview = createClass({
         )
       )
     ),
-    script()
+    scripts()
     ];
   }
 })
@@ -512,7 +512,7 @@ var SolutionByIndustryPreview = createClass({
       ),
     ),
     industriesdata.map(industries),
-    script()
+    scripts()
     ];
   }
 })
@@ -560,7 +560,7 @@ var SolutionByRolePreview = createClass({
           )
         );
     }),
-    script()
+    scripts()
     ];
   }
 })
@@ -578,7 +578,7 @@ var AboutUsPressReleasesPreview = createClass({
           )
         )
       ),
-      script()
+      scripts()
       ];
   }
 })
@@ -633,7 +633,7 @@ var AboutUSStoryPreview = createClass({
         )
       )
     ),
-    script()
+    scripts()
     ];
   }
 })
@@ -665,7 +665,7 @@ var AboutUsBusinessModelPreview = createClass({
           )
         )
       ),
-      script()
+      scripts()
       ];
   }
 })
@@ -709,7 +709,7 @@ var AboutUsCustomersPreview = createClass({
 
       return [smallHeader(entry),
       entry.getIn(['data', 'sections']).map(sections),
-      script()
+      scripts()
       ];
   }
 })
@@ -738,7 +738,7 @@ var AboutUsWorkplaceAndJobsPreview = createClass({
           titleanddescription(entry.getIn(['data', 'introduction']))
         )
       ),
-      script()
+      scripts()
       ];
   }
 })
@@ -771,7 +771,7 @@ var BlogPreview = createClass({
           )
         )
       ),
-      script()
+      scripts()
       ];
   }
 })
