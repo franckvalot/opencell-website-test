@@ -202,7 +202,7 @@ var IndexPreview = createClass({
           h('div', {className:'row justify-content-center text-center'},
             mainindustriesdata.get('blocks').map(function(item){
               return h('div', {className:'col-12 col-md-6 box'},
-                h('div', {className:'row align-items-center justify-content-center', dangerouslySetInnerHTML: {__html: item.get('block')}})
+                h('div', {className:'row align-items-center justify-content-center', dangerouslySetInnerHTML: {__html: item}})
               );
             })
           )
