@@ -59,7 +59,7 @@ function titleanddescription(item){
     (item.get('img') != null ?
     [h('div', {className:'w-100'},''),
     h('div', {className:'col'},
-      h('img', {className:'img-fluid', src: item.get('img').get('url'), alt:item.get('img').get('alt')})
+      h('img', {className:'img-fluid', src: item.get('img').get('url'), alt:item.get('img').get('alt'), style{marginTop:'50px';}})
     )]
     :
     null)
@@ -771,12 +771,10 @@ var AboutUsParnersPreview = createClass({
   render: function(){
       var entry = this.props.entry;
 
-      var sections = function(item){
-          return logos(item);
-      }
-
       return [smallHeader(entry),
-      entry.getIn(['data', 'sections']).map(sections)
+        (entry.getIn(['data', 'sections']) ? entry.getIn(['data', 'sections']).map(function(item){
+            return logos(item);
+        }):null)
       ];
   }
 })
