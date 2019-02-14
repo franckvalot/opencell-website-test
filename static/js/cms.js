@@ -413,7 +413,8 @@ var PlatformTechnologyPreview = createClass({
             h('div', {className:'col-8 col-md-4'},
               businesslogicdata.get('carousel').map(function(item){
                 return h('img', {className:'img-fluid', src: item.get('url'), alt: item.get('alt')});
-              }),
+              })
+            ),
             h('div', {className:'col-12 col-md-8'},
               h('div', {className:'carousel slide row align-items-center', id:'carouselBusinesslogic', "data-ride":"carousel"},
                 h('ol', {className:'carousel-indicators'},
