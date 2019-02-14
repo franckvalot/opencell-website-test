@@ -62,80 +62,78 @@ columns:
           business model to include B2B as well as B2C streams.
     title: USER<br>INTERFACE BUILDER
 businesslogic:
-  carousel:
-    - title: MODEL YOUR BUSINESS LOGIC
-      url: /img/uploads/business-logic.svg
-      alt: Business Logic
-      content: >-
-        Our platform lets you define specific, granular business rules and  processing logic for each service you need to run your business.
+  - title: MODEL YOUR BUSINESS LOGIC
+    url: /img/uploads/business-logic.svg
+    alt: Business Logic
+    content: >-
+      Our platform lets you define specific, granular business rules and  processing logic for each service you need to run your business.
 
-        Our toolbox has everything you need to quickly model the most complex business requirements:
-
-
-        + Workflow and business process management rules
-
-        + Object modeling
-
-        + Notifications
-
-        + Scripting
-
-        + Job scheduling
-
-        + Enterprise grade security and SSO
-
-        + Database management
-
-        + Integrated analytics
-    - title: CUSTOMIZE YOUR USER EXPERIENCE
-      url: /img/uploads/flexible-user-portal.svg
-      alt: Flexible user portal
-      content: >-
-        Our React-based UX studio lets you quickly create unique, adapted experiences for your internal users, business partners and customers without needing to  integrate third-party apps.
-
-        We provide out-of-the box :
+      Our toolbox has everything you need to quickly model the most complex business requirements:
 
 
-        + Fully responsive UI lay-out
+      + Workflow and business process management rules
 
-        + Role-based access management
+      + Object modeling
 
-        + Contextual search
+      + Notifications
 
-    - title: CONSUME YOUR (BIG) DATA
-      url: /img/uploads/integration-services.svg
-      alt: Integration services
-      content: >-
-        Monetization is all about being able to process a growing load of data coming from sensors & devices as well as other apps and services.
+      + Scripting
 
-        With our integrate mediation capability and big data architecture, we provide the tools you need to handle data at scale  including :
+      + Job scheduling
 
+      + Enterprise grade security and SSO
 
-        + Filtering & transformation
+      + Database management
 
-        + Smart ETLs ™
+      + Integrated analytics
+  - title: CUSTOMIZE YOUR USER EXPERIENCE
+    url: /img/uploads/flexible-user-portal.svg
+    alt: Flexible user portal
+    content: >-
+      Our React-based UX studio lets you quickly create unique, adapted experiences for your internal users, business partners and customers without needing to  integrate third-party apps.
 
-        + Real-time aggregation
-
-    - title: INTEGRATE WITH OTHER SYSTEMS
-      url: /img/uploads/data-collection.svg
-      alt: Data collection
-      content: >-
-        Our modular platform is designed to fit in as easily as possible with the rest of your IT ecosystem including ERP/CRM/eCommerce applications, cloud services, authentication services etc.
-
-        We provide :
+      We provide out-of-the box :
 
 
-        + Connectors to leading third-party CRM solutions such as Salesforce or Dynamics 365.
+      + Fully responsive UI lay-out
 
-        + Access to all core functionalities through our 450 RESTful  APIs
+      + Role-based access management
 
-        + Advanced identity brokering including Active Directory, LDAP and social logins
+      + Contextual search
 
-        + Messaging and webhooks
+  - title: CONSUME YOUR (BIG) DATA
+    url: /img/uploads/integration-services.svg
+    alt: Integration services
+    content: >-
+      Monetization is all about being able to process a growing load of data coming from sensors & devices as well as other apps and services.
 
-        + Extension library
+      With our integrate mediation capability and big data architecture, we provide the tools you need to handle data at scale  including :
 
+
+      + Filtering & transformation
+
+      + Smart ETLs ™
+
+      + Real-time aggregation
+
+  - title: INTEGRATE WITH OTHER SYSTEMS
+    url: /img/uploads/data-collection.svg
+    alt: Data collection
+    content: >-
+      Our modular platform is designed to fit in as easily as possible with the rest of your IT ecosystem including ERP/CRM/eCommerce applications, cloud services, authentication services etc.
+
+      We provide :
+
+
+      + Connectors to leading third-party CRM solutions such as Salesforce or Dynamics 365.
+
+      + Access to all core functionalities through our 450 RESTful  APIs
+
+      + Advanced identity brokering including Active Directory, LDAP and social logins
+
+      + Messaging and webhooks
+
+      + Extension library
 technologies:
   introduction:
     content: >-

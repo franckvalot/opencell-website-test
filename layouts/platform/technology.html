@@ -56,7 +56,7 @@
         <div class="row align-items-center justify-content-center">
           <div class="col-8 col-md-4">
             <div class="img" data-ride="carousel">
-              {{ range $index, $element := $Data.businesslogic.carousel }}
+              {{ range $index, $element := $Data.businesslogic }}
               <img src="{{ .url }}" class="img-fluid{{if eq $index 0}} active{{end}}" alt="{{ .alt }}">
               {{end}}
               <ul >
@@ -70,12 +70,12 @@
           <div class="col-12 col-md-8">
             <div id="carouselBusinesslogic" class="carousel slide row align-items-center" data-ride="carousel">
               <ol class="carousel-indicators">
-                {{ range $index, $element := $Data.businesslogic.carousel }}
+                {{ range $index, $element := $Data.businesslogic }}
                 <li data-target="#carouselBusinesslogic" data-slide-to="{{$index}}" {{if eq $index 0}}class="active"{{end}}></li>
                 {{end}}
               </ol>
               <div class="carousel-inner">
-                {{ range $index, $element := $Data.businesslogic.carousel }}
+                {{ range $index, $element := $Data.businesslogic }}
                   <div class="carousel-item {{if eq $index 0}}active{{end}} col-12">
                     <div class="row align-items-center h-100">
                       <div class="col">
