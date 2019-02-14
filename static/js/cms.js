@@ -733,7 +733,6 @@ var AboutUsCustomersPreview = createClass({
       var entry = this.props.entry;
       var introductiondata = entry.getIn(['data', 'introduction']);
 
-
       return [smallHeader(entry),
         (entry.getIn(['data', 'sections']) ?
           entry.getIn(['data', 'sections']).map(function(item){
@@ -745,26 +744,24 @@ var AboutUsCustomersPreview = createClass({
                       h('h1', {}, item.get('title'))
                     ),
                     h('ul', {},
-                      item.get('logos').map(function(item){
+                      (item.get('logos') ? item.get('logos').map(function(item){
                           return h('li',{}, h('h2', {}, (item.get('alt') ? item.get('alt').toUpperCase():null)));
-                      })
+                      }):null)
                     )
                   ),
                   h('div', {className:'col-12 col-md-8 col-lg-10 logos'},
                     h('div', {className:'row align-items-center align-items-center'},
                       (item.get('logos') ? item.get('logos').map(function(item){
-                          return h('div', {className:'col-6 col-lg-4'},
-                            h('img', {className:'img-fluid', src: item.get('url'), alt: item.get('alt')})
-                          );
-                        })
-                      :null)
+                        return h('div', {className:'col-6 col-lg-4'},
+                          h('img', {className:'img-fluid', src: item.get('url'), alt: item.get('alt')})
+                        );
+                      }):null)
                     )
                   )
                 )
               )
             )
-        })
-      :null),
+          }):null),
       scripts()
       ];
   }
