@@ -478,14 +478,14 @@ var PlatformEcosystemPreview = createClass({
         h('div', {className:'navigation text-center'},
           h('div', {className:'container'},
             entry.getIn(['data', 'ecosysindustags']).map(function(item){
-              return h('h2', {className:'navigation'}, h('a', {}, item.get('name').toUpperCase()));
+              return h('h2', {className:'navigation'}, h('a', {}, item.toUpperCase()));
             })
           )
         ),
         h('div', {className:'navigation text-center'},
           h('div', {className:'container'},
             entry.getIn(['data', 'ecosysroletags']).map(function(item){
-              return h('h2', {className:'navigation'}, h('a', {}, item.get('name').toUpperCase()));
+              return h('h2', {className:'navigation'}, h('a', {}, item.toUpperCase()));
             })
           )
         )
