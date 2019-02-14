@@ -822,6 +822,7 @@ CMS.registerPreviewTemplate("indexdata", IndexPreview);
 
 CMS.registerPreviewTemplate("platformtechnology", PlatformTechnologyPreview);
 CMS.registerPreviewTemplate("platformmodules", PlatformModulesPreview);
+CMS.registerPreviewTemplate("platformecosystem", PlatformEcosystemPreview);
 
 CMS.registerPreviewTemplate("solutionbyindustry", SolutionByIndustryPreview);
 CMS.registerPreviewTemplate("solutionbyrole", SolutionByRolePreview);
