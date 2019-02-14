@@ -471,7 +471,7 @@ var PlatformEcosystemPreview = createClass({
     return [smallHeader(entry),
       h('section', {className:'hero-1'},
         h('div', {className:'container'},
-          titleanddescription(entry.getIn(['data', 'text1']))
+          titleanddescription(entry.getIn(['data', 'introduction']))
         )
       ),
       h('section', {className:'hero-1 reduce-margin ecosystem'},
