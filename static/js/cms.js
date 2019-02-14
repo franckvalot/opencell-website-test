@@ -19,18 +19,34 @@ function scripts(){
         ];
 }
 function smallHeader(item){
-    return h('header', {className:'small-header', style:{(item.getIn(['data', 'thumbnail']) =! null ? backgroundImage: 'url(' + item.getIn(['data', 'thumbnail']) +')' : null)}},
-      h('div', {className:'header-content-inner'},
-        h('div', {className:'container'},
-          h('div', {className:'row align-items-center justify-content-center'},
-            h('div', {className:'col col-md-10'},
-              h('h1', {}, item.getIn(['data', 'title'])),
-              h('p', {}, item.getIn(['data', 'subtitle']))
+    if(item.getIn(['data', 'thumbnail'] != null){
+      return h('header', {className:'small-header', style:{backgroundImage: 'url(' + item.getIn(['data', 'thumbnail']) +')':null)}},
+        h('div', {className:'header-content-inner'},
+          h('div', {className:'container'},
+            h('div', {className:'row align-items-center justify-content-center'},
+              h('div', {className:'col col-md-10'},
+                h('h1', {}, item.getIn(['data', 'title'])),
+                h('p', {}, item.getIn(['data', 'subtitle']))
+              )
             )
           )
         )
-      )
-    );
+      );
+    }
+    else{
+      return h('header', {className:'small-header'},
+        h('div', {className:'header-content-inner'},
+          h('div', {className:'container'},
+            h('div', {className:'row align-items-center justify-content-center'},
+              h('div', {className:'col col-md-10'},
+                h('h1', {}, item.getIn(['data', 'title'])),
+                h('p', {}, item.getIn(['data', 'subtitle']))
+              )
+            )
+          )
+        )
+      );
+    }
 }
 
 function titleanddescription(item){
