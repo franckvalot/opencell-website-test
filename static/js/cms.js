@@ -20,7 +20,7 @@ function scripts(){
 }
 function smallHeader(item){
     if(item.getIn(['data', 'thumbnail']) != null){
-      return h('header', {className:'small-header', style:{backgroundImage: 'url(' + item.getIn(['data', 'thumbnail']) +')':null)}},
+      return h('header', {className:'small-header', style:{backgroundImage: 'url(' + item.getIn(['data', 'thumbnail']) +')'}},
         h('div', {className:'header-content-inner'},
           h('div', {className:'container'},
             h('div', {className:'row align-items-center justify-content-center'},
