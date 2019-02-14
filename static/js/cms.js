@@ -59,7 +59,7 @@ function titleanddescription(item){
     (item.get('img') != null ?
     [h('div', {className:'w-100'},''),
     h('div', {className:'col'},
-      h('img', {className:'img-fluid', src: item.get('img').get('url'), alt:item.get('img').get('alt'), style{marginTop:'50px';}})
+      h('img', {className:'img-fluid', src: item.get('img').get('url'), alt:item.get('img').get('alt'), style:{marginTop:'50px'}})
     )]
     :
     null)
