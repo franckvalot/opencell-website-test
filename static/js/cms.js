@@ -532,49 +532,45 @@ var SolutionByIndustryPreview = createClass({
     var entry = this.props.entry;
     var industriesdata = entry.getIn(['data', 'industries']);
 
-    var industriesmenu = function(item){
-      return h('h2', {className:'navigation'},
-        h('a', {href:'#'}, item.get('nav'))
-      );
-    }
-
-    var contents = function(item){
-      return h('div', {className:'col-10 col-md'},
-        h('h2', {className:''}, item.get('title')),
-        h('p', {className:''}, item.get('content'))
-      );
-    }
-
-    var industries = function(item){
-        return h('section', {className:'hero-1 industries-box'},
+    return [smallHeader(entry),
+    h('section', {className:'hero-1 reduce-margin byindustry'},
+      h('div', {className:'navigation text-center'},
+        h('div', {className:'container'},
+          industriesdata.map(function(item){
+            return h('h2', {className:'navigation'},
+              h('a', {}, item.get('nav').toUpperCase())
+            );
+          })
+        )
+      ),
+    ),
+    industriesdata.map(function(item){
+        return h('section', {className:'hero-1 reduce-margin byindustry'},
           h('div', {className:'container'},
             h('div', {className:'row justify-content-center'},
               h('div', {className:'col text-center'}, item.get('title')),
               h('div', {className:'w-100'}, ),
-              h('div', {className:'col-10 col-md-8 col-lg-6 embed-responsive embed-responsive-16by9 video'},
-                h('iframe', {className:'youtube', src:'https://www.youtube.com/embed/' + item.get('videoId') + '?controls=0', frameborder:'0', allow:'accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture', allowfullscreen:'true'}, '')
+              h('div', {className:'col-12 col-md-10  embed-responsive embed-responsive-16by9 video'},
+                h('iframe', {src:'https://www.youtube.com/embed/' + item.get('videoId') + '?controls=0', frameborder:'0', allow:'accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture', allowfullscreen:'true'}, '')
               ),
-              h('div', {className:'col-10 row justify-content-center content'},
-                (item.get('contents') ? item.get('contents').map(contents) : null)
-              ),
+              h('div', {className:'col-12 content'},
+                h('div', {className:'row justify-content-center'},
+                  (item.get('contents') ? item.get('contents').map(function(item){
+                    return h('div', {className:'col-10 col-md'},
+                      h('h2', {className:''}, item.get('title')),
+                      h('p', {className:''}, item.get('content'))
+                    );
+                  }) : null)
+                )
+              )
               h('div', {className:'w-100'}, ''),
               h('form',{},
-                h('button', {className:'opencell-btn'}, 'DISCOVER')
+                h('button', {className:'opencell-btn'}, 'TRY NOW')
               )
             )
           )
         );
-    }
-
-    return [smallHeader(entry),
-    h('section', {className:'hero-1 industries-box'},
-      h('div', {className:'container'},
-        h('div', {className:'text-center'},
-          industriesdata.map(industriesmenu)
-        )
-      ),
-    ),
-    industriesdata.map(industries),
+    }),
     scripts()
     ];
   }
