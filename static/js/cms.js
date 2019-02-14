@@ -702,30 +702,28 @@ var AboutUsBusinessModelPreview = createClass({
   render: function(){
       var entry = this.props.entry;
       var introductiondata = entry.getIn(['data', 'introduction']);
-      var boxes = function(item){
-        return h('div', {className:'col-8 col-md-5 text-center businessmodel-box'},
-          h('div', {className:'row justify-content-center'},
-            h('img', {src:item.get('url'), alt:'icon'}),
-            h('h2', {className:'col-12'}, item.get('title')),
-            h('p', {className:'col-12'}, item.get('description'))
-          )
-        )
-      }
-
       return [smallHeader(entry),
-      h('section', {className:'hero-1'},
-        h('div', {className:'container'},
-          titleanddescription(introductiondata)
-        )
-      ),
-      h('section', {className:'hero-1'},
-        h('div', {className:'container'},
-          h('div', {className:'row justify-content-center'},
-              entry.getIn(['data', 'boxes']).map(boxes)
+        h('section', {className:'hero-1 reduce-margin'},
+          h('div', {className:'container'},
+            titleanddescription(introductiondata)
           )
-        )
-      ),
-      scripts()
+        ),
+        h('section', {className:'hero-1 businessmodel reduce-margin'},
+          h('div', {className:'container'},
+            h('div', {className:'row justify-content-center'},
+                entry.getIn(['data', 'boxes']).map(function(item){
+                  return h('div', {className:'col-11 col-md-5 text-center box'},
+                    h('div', {className:'row justify-content-center'},
+                      h('img', {src:item.get('url'), alt:'icon'}),
+                      h('h2', {className:'col-12'}, item.get('title')),
+                      h('p', {className:'col-12'}, item.get('description'))
+                    )
+                  )
+                })
+            )
+          )
+        ),
+        scripts()
       ];
   }
 })
