@@ -56,10 +56,10 @@ whatmakesus:
   title: What makes us different.
 mainindustries:
   blocks:
-    - block: 'TELCO, IOT & <br> CLOUD INFRASTRUCTURE'
-    - block: ENERGY & UTILITIES
-    - block: MOBILITY & TRANSPORT
-    - block: RETAIL
+    - 'TELCO, IOT & <br> CLOUD INFRASTRUCTURE'
+    - ENERGY & UTILITIES
+    - MOBILITY & TRANSPORT
+    - RETAIL
   subtitle: >-
     OUR PLATFORM IS ADAPTED FOR ALL INDUSTRIES AND ALL BUSINESS SIZES. IT WORKS
     IN B2C, B2B AND B2BC
@@ -124,4 +124,3 @@ learnmore:
     - videoId: RUML7IH2JnM
     - videoId: NvCVdZyY9fI
 ---
-
