@@ -23,7 +23,7 @@ function smallHeader(item){
       return h('header', {className:'small-header', style:{backgroundImage: 'url(' + item.getIn(['data', 'thumbnail']) +')'}},
         h('div', {className:'header-content-inner'},
           h('div', {className:'container'},
-            h('div', {className:'row align-items-center justify-content-center'},
+            h('div', {className:'row align-items-center'},
               h('div', {className:'col col-md-10'},
                 h('h1', {}, item.getIn(['data', 'title'])),
                 h('p', {}, item.getIn(['data', 'subtitle']))
@@ -37,7 +37,7 @@ function smallHeader(item){
       return h('header', {className:'small-header'},
         h('div', {className:'header-content-inner'},
           h('div', {className:'container'},
-            h('div', {className:'row align-items-center justify-content-center'},
+            h('div', {className:'row align-items-center'},
               h('div', {className:'col col-md-10'},
                 h('h1', {}, item.getIn(['data', 'title'])),
                 h('p', {}, item.getIn(['data', 'subtitle']))
@@ -500,14 +500,14 @@ var PlatformEcosystemPreview = createClass({
         h('div', {className:'navigation text-center'},
           h('div', {className:'container'},
             entry.getIn(['data', 'ecosysindustags']).map(function(item){
-              return h('h2', {className:'navigation'}, h('a', {}, item.toUpperCase()));
+              return h('h2', {className:'navigation'}, h('a', {}, (item  ? item.toUpperCase():null)));
             })
           )
         ),
         h('div', {className:'navigation text-center'},
           h('div', {className:'container'},
             entry.getIn(['data', 'ecosysroletags']).map(function(item){
-              return h('h2', {className:'navigation'}, h('a', {}, item.toUpperCase()));
+              return h('h2', {className:'navigation'}, h('a', {}, (item ? item.toUpperCase():null)));
             })
           )
         )
@@ -538,7 +538,7 @@ var SolutionByIndustryPreview = createClass({
         h('div', {className:'container'},
           industriesdata.map(function(item){
             return h('h2', {className:'navigation'},
-              h('a', {}, item.get('nav').toUpperCase())
+              h('a', {}, (item.get('nav') ? item.get('nav').toUpperCase():null))
             );
           })
         )
@@ -590,7 +590,7 @@ var SolutionByRolePreview = createClass({
           h('div', {className:'container'},
             rolesdata.map(function(item){
               return h('h2', {className:'navigation'},
-                h('a', {}, item.get('nav').toUpperCase())
+                h('a', {}, (item.get('nav') ? item.get('nav').toUpperCase():null))
               );
             })
           )
@@ -685,7 +685,7 @@ var AboutUSStoryPreview = createClass({
               return h('div', {className:'col-8 col-md-6 col-lg-4 box text-center'},
                 h('img', {src: item.get('url'), alt: item.get('alt')}),
                 h('div', {},
-                  h('h2', {}, item.get('name').toUpperCase()),
+                  h('h2', {}, (item.get('name') ?  item.get('name').toUpperCase():null)),
                   h('p', {}, item.get('position'))
                 )
               );
@@ -733,16 +733,6 @@ var AboutUsCustomersPreview = createClass({
       var entry = this.props.entry;
       var introductiondata = entry.getIn(['data', 'introduction']);
 
-      var logos = function(item){
-        return h('div', {className:'col-6 col-lg-4'},
-          h('img', {className:'img-fluid', src: item.get('url'), alt: item.get('alt')})
-        );
-      }
-
-      var logoslist = function(item){
-          return h('li',{}, h('h2', {}, item.get('alt').toUpperCase()));
-      }
-
       var sections = function(item){
         return h('section', {className:'hero-1 customers'},
           h('div', {className:'container'},
@@ -752,12 +742,19 @@ var AboutUsCustomersPreview = createClass({
                   h('h1', {}, item.get('title'))
                 ),
                 h('ul', {},
-                  item.get('logos').map(logoslist)
+                  item.get('logos').map(function(item){
+                      return h('li',{}, h('h2', {}, (item.get('alt') ? item.get('alt').toUpperCase():null)));
+                  })
                 )
               ),
               h('div', {className:'col-12 col-md-8 col-lg-10 logos'},
                 h('div', {className:'row align-items-center align-items-center'},
-                  item.get('logos').map(logos)
+                  (item.get('logos') =! null ? item.get('logos').map(function(item){
+                      return h('div', {className:'col-6 col-lg-4'},
+                        h('img', {className:'img-fluid', src: item.get('url'), alt: item.get('alt')})
+                      );
+                    })
+                  :null)
                 )
               )
             )
