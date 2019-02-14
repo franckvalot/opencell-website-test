@@ -585,17 +585,17 @@ var SolutionByRolePreview = createClass({
       return h('li', {}, item.get('benefit'));
     }
     return [smallHeader(entry),
-    h('section', {className:'hero-1 reduce-margin byrole'},
-      h('div', {className:'container'},
-        h('div', {className:'text-center'},
-          rolesdata.map(function(item){
-            return h('h2', {className:'navigation'},
-              h('a', {href:'#'}, item.get('nav').toUpperCase())
-            )
-          })
-        )
+      h('section', {className:'hero-1 reduce-margin byindustry'},
+        h('div', {className:'navigation text-center'},
+          h('div', {className:'container'},
+            rolesdata.map(function(item){
+              return h('h2', {className:'navigation'},
+                h('a', {}, item.get('nav').toUpperCase())
+              );
+            })
+          )
+        ),
       ),
-    ),
     rolesdata.map(function(item){
         return h('section', {className:'hero-1 reduce-margin byrole alternate'},
           h('div', {className:'container'},
