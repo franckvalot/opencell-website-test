@@ -464,6 +464,47 @@ var PlatformTechnologyPreview = createClass({
   }
 })
 
+var PlatformEcosystemPreview = createClass({
+  render: function(){
+    var entry = this.props.entry;
+
+    return [smallHeader(entry),
+      h('section', {className:'hero-1'},
+        h('div', {className:'container'},
+          titleanddescription(entry.getIn(['data', 'text1']))
+        )
+      ),
+      h('section', {className:'hero-1 reduce-margin ecosystem'},
+        h('div', {className:'navigation text-center'},
+          h('div', {className:'container'},
+            entry.getIn(['data', 'ecosysindustags']).map(function(item){
+              return h('h2', {className:'navigation'}, h('a', {}, item.get('name').toUpperCase()));
+            })
+          )
+        ),
+        h('div', {className:'navigation text-center'},
+          h('div', {className:'container'},
+            entry.getIn(['data', 'ecosysroletags']).map(function(item){
+              return h('h2', {className:'navigation'}, h('a', {}, item.get('name').toUpperCase()));
+            })
+          )
+        )
+      ),
+      h('section', {className:'hero-1 reduce-margin'},
+        h('div', {className:'container'},
+          h('div', {className:'row align-items-center justify-content-center customer-logo'},
+            entry.getIn(['data', 'logos']).map(function(item){
+              return h('div', {className:'col-6 col-md-4 col-lg-3 logo'},
+                h('img', {className:'img-fluid', src:item.get('url'), alt:item.get('alt')})
+              );
+            })
+          )
+        )
+      )
+    ];
+  }
+})
+
 var SolutionByIndustryPreview = createClass({
   render: function(){
     var entry = this.props.entry;

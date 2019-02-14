@@ -216,7 +216,7 @@ collections:
             name: logos
             widget: list
             fields:
-              - {label: Logo, name: layout, widget: image}
+              - {label: Logo, name: url, widget: image}
               - {label: Alternative text, name: alt, widget: string}
               - label: Industry tags
                 name: ecosysindustags
