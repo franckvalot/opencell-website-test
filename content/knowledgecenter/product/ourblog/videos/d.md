@@ -4,7 +4,7 @@ title: Customer stories | Episode 4 | Gfi
 subtitle: Subtitle
 description: Blablabla
 author: Franck Valot
-videoId: FDl6-lBslr8
+videoid: FDl6-lBslr8
 date: 2019-01-17T08:05:55.197Z
 videostags: [five, six]
 ---

@@ -3,7 +3,7 @@ type: blogvideo
 title: Insérer ici le titre de la video
 subtitle: Subtitle
 description: Blablabla
-videoId:
+videoid:
 date: 2019-01-17T08:05:55.197Z
 videostags:
 ---

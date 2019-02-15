@@ -9,7 +9,7 @@ header:
       title: 'Agile utilities: how to adapt to deregulation and technological change'
 paradigm:
   title: A new paradigm.
-  videoId: 4MJvDNp7xsk
+  videoid: 4MJvDNp7xsk
 whatweprovide:
   button: DISCOVER
   content: "Opencell is an end-to-end platform for monetizing subscription and usage-based revenue businesses.\r\n\n\r\n\nWe enable recurring revenue businesses to quickly launch new services, to monetize new revenue streams and deliver improved customer experiences."
@@ -121,6 +121,6 @@ learnmore:
   subtitle: FEATURED VIDEOS
   title: Learn more.
   videoids:
-    - videoId: RUML7IH2JnM
-    - videoId: NvCVdZyY9fI
+    - videoid: RUML7IH2JnM
+    - videoid: NvCVdZyY9fI
 ---

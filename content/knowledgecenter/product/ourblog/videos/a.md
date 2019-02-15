@@ -4,7 +4,7 @@ title: Customer stories | Episode 1 | Actility
 subtitle: Subtitle
 description: Blablabla
 author: Franck Valot
-videoId: RUML7IH2JnM
+videoid: RUML7IH2JnM
 date: 2019-01-17T08:05:55.197Z
 videostags: [one, two, three]
 ---

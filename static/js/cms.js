@@ -170,7 +170,7 @@ var IndexPreview = createClass({
           ),
           h('div', {className:'row justify-content-center'},
             h('div', {className:'col-sm-12 col-md-10 col-lg-8 embed-responsive embed-responsive-16by9'},
-              h('iframe', {className:'youtube', src:'https://www.youtube.com/embed/' + paradigmdata.get('videoId') + '?controls=0', frameborder:'0', allow:'accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture', allowfullscreen:'true'}, '')
+              h('iframe', {className:'youtube', src:'https://www.youtube.com/embed/' + paradigmdata.get('videoid') + '?controls=0', frameborder:'0', allow:'accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture', allowfullscreen:'true'}, '')
             )
           )
         )
@@ -284,7 +284,7 @@ var IndexPreview = createClass({
           h('div', {className:'row justify-content-center'},
             (learnmoredata.get('videoids') ? learnmoredata.get('videoids').map(function(item){
               return h('div', {className:'col-sm-12 col-md-8 col-lg-6 embed-responsive embed-responsive-16by9'},
-                h('iframe', {className:'youtube', src:'https://www.youtube.com/embed/' + item.get('videoId') + '?controls=0', frameborder:'0', allow:'accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture', allowfullscreen:'true'}, '')
+                h('iframe', {className:'youtube', src:'https://www.youtube.com/embed/' + item.get('videoid') + '?controls=0', frameborder:'0', allow:'accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture', allowfullscreen:'true'}, '')
               );
             }):null)
           )
@@ -540,7 +540,7 @@ var SolutionByIndustryPreview = createClass({
               h('h1', {className:'col text-center'}, item.get('title')),
               h('div', {className:'w-100'}, ),
               h('div', {className:'col-12 col-md-10  embed-responsive embed-responsive-16by9 video'},
-                h('iframe', {src:'https://www.youtube.com/embed/' + item.get('videoId') + '?controls=0', frameborder:'0', allow:'accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture', allowfullscreen:'true'}, '')
+                h('iframe', {src:'https://www.youtube.com/embed/' + item.get('videoid') + '?controls=0', frameborder:'0', allow:'accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture', allowfullscreen:'true'}, '')
               ),
               h('div', {className:'col-12 content'},
                 h('div', {className:'row justify-content-center'},
@@ -794,7 +794,7 @@ var BlogPreview = createClass({
       var dateString = day + ' ' + month + ' ' + year;
       var classSection = null;
       switch (type) {
-        case 'blocarticle':
+        case 'blogarticle':
           classSection = 'blog';
           break;
         case 'blogvideo':
@@ -806,7 +806,7 @@ var BlogPreview = createClass({
       }
 
       return [(entry.getIn(['data', 'thumbnail']) ? smallHeader(entry) : null),
-      h('section', {className:classSection + 'reduce-margin'},
+      h('section', {className: classSection + ' reduce-margin'},
         h('div', {className:'container'},
           (entry.getIn(['data', 'videoid']) ?
             h('div', {className:'row justify-content-center'},
@@ -815,7 +815,7 @@ var BlogPreview = createClass({
               )
           ):null),
           h('div', {className:'row justify-content-center text-left'},
-            h('p', {className:'col col-md-10 col-lg-8'},
+            h('p', {className:'col col-md-10 col-lg-8 publication-date'},
               h('span', {}, 'Published on: '),
               h('span', {}, dateString),
               h('span', {}, ', by: '),

@@ -4,7 +4,7 @@ title: Customer stories | Episode 2 | CGI
 subtitle: Subtitle
 description: Blablabla
 author: Franck Valot
-videoId: 4MJvDNp7xsk
+videoid: 4MJvDNp7xsk
 date: 2019-01-17T08:05:55.197Z
 videostags: [one, four, five]
 ---

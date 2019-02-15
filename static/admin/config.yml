@@ -39,7 +39,7 @@ collections:
           widget: object
           fields:
             - {label: Title, name: title, widget: string}
-            - {label: Youtube Id, name: videoId, widget: string}
+            - {label: Youtube Id, name: videoid, widget: string}
         - label: What we provide
           name: whatweprovide
           widget: object
@@ -110,7 +110,7 @@ collections:
               name: videoids
               widget: list
               fields:
-                - {label: "Video Id", name: "videoId", widget: string}
+                - {label: "Video Id", name: "videoid", widget: string}
         - {label: Markdown, name: body, widget: hidden}
   - label: Platform
     name: platform
@@ -241,7 +241,7 @@ collections:
             fields:
               - {label: Title, name: title, widget: string}
               - {label: Navigation title, name: nav, widget: string}
-              - {label: Video Id, name: videoId, widget: string}
+              - {label: Video Id, name: videoid, widget: string}
               - label: Contents
                 name: contents
                 widget: list
@@ -529,7 +529,7 @@ collections:
       - {label: Author, name: author, widget: string}
       - {label: Date, name: date, widget: date}
       - {label: Thumbnail, name: thumbnail, widget: image, required: false}
-      - {label: Video ID, name: videoId, widget: string, required: false}
+      - {label: Video ID, name: videoid, widget: string, required: false}
       - {label: Body, name: body, widget: markdown}
       - label: Tags
         name: tags

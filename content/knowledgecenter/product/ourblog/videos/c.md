@@ -4,7 +4,7 @@ title: Customer stories | Episode 3 | Sofrecom
 subtitle: Subtitle
 description: Blablabla
 author: Franck Valot
-videoId: NvCVdZyY9fI
+videoid: NvCVdZyY9fI
 date: 2019-01-17T08:05:55.197Z
 videostags: [four, five]
 ---

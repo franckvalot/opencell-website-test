@@ -8,7 +8,7 @@
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-sm-12 col-md-10 col-lg-8 embed-responsive embed-responsive-16by9">
-            <iframe class="youtube" src="https://www.youtube.com/embed/{{ .Params.videoId }}?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe class="youtube" src="https://www.youtube.com/embed/{{ .Params.videoid }}?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
         </div>
         <div class="row justify-content-center text-left">
@@ -38,7 +38,7 @@
           {{ if le ($Scratch.Get "nb") 3 }}
             <div class="col-7 col-md-4">
               <div class="row justify-content-center">
-                <div class="col-11 thumbnail" style="background-image: url('https://img.youtube.com/vi/{{.Params.videoId}}/mqdefault.jpg');"></div>
+                <div class="col-11 thumbnail" style="background-image: url('https://img.youtube.com/vi/{{.Params.videoid}}/mqdefault.jpg');"></div>
                 <div class="w-100"></div>
                 <div class="col-11 description">
                   <div class="row justify-content-center">

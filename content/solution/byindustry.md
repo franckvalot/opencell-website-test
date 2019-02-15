@@ -21,7 +21,7 @@ industries:
         title: CUSTOMERS
     nav: TELCO
     title: 'Telco, Cloud & Internet of Things'
-    videoId: Bey4XXJAqS8
+    videoid: Bey4XXJAqS8
   - contents:
       - content: >-
           Industry deregulation and technological change are changing the
@@ -39,7 +39,7 @@ industries:
         title: CUSTOMERS
     nav: 'UTILITIES '
     title: Utilities & Energy
-    videoId: xcJtL7QggTI
+    videoid: xcJtL7QggTI
   - contents:
       - content: >-
           Mobility services are changing the way transportation is consumed.
@@ -54,7 +54,7 @@ industries:
         title: CUSTOMERS
     nav: MOBILITY
     title: Mobility & Transport
-    videoId: xcJtL7QggTI
+    videoid: xcJtL7QggTI
   - contents:
       - content: >-
           Retailers are increasingly adopting recurring revenue models in order
@@ -66,6 +66,6 @@ industries:
         title: CUSTOMERS
     nav: RETAIL
     title: 'Retail & Consumer '
-    videoId: xcJtL7QggTI
+    videoid: xcJtL7QggTI
 ---
 
