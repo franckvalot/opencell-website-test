@@ -374,12 +374,6 @@ var PlatformTechnologyPreview = createClass({
       var columsdata = entry.getIn(['data', 'columns']);
       var businesslogicdata = entry.getIn(['data', 'businesslogic']);
 
-      var content = function(item){
-          return h('div', {},
-            (item.get('title') ? h('h2', {}, item.get('title')) : null),
-            (item.get('text') ? h('p', {}, item.get('text')) : null)
-          )
-      }
       var subtitles = function(item){
         return h('h2', {className:'col-12 text-center text-md-left'}, item.get('subtitle'));
       }
@@ -416,7 +410,12 @@ var PlatformTechnologyPreview = createClass({
               return h('div', {className:'col-12 col-md-4'},
                 h('div', {className:'row justify-content-center align-items-center title', dangerouslySetInnerHTML: {__html: item.get('title')}}),
                 h('div', {className:'col-12'},
-                  item.get('content').map(content)
+                  (item.get('content') ? item.get('content').map(function(item){
+                      return h('div', {},
+                        (item.get('title') ? h('h2', {}, item.get('title')) : null),
+                        (item.get('text') ? h('p', {}, item.get('text')) : null)
+                      )
+                  }):null)
                 )
               );
             })
@@ -427,32 +426,26 @@ var PlatformTechnologyPreview = createClass({
         h('div', {className:'container'},
           h('div', {className:'row align-items-center justify-content-center'},
             h('div', {className:'col-8 col-md-4'},
-              (businesslogicdata != null ?
-                businesslogicdata.map(function(item){
+              (entry.getIn(['data', 'businesslogic']) ? entry.getIn(['data', 'businesslogic']).map(function(item){
                   return h('img', {className:'img-fluid', src: item.get('url'), alt: item.get('alt')});
-                })
-              :null)
+                }):null)
             ),
             h('div', {className:'col-12 col-md-8'},
               h('div', {className:'carousel slide row align-items-center', id:'carouselBusinesslogic', "data-ride":"carousel"},
                 h('ol', {className:'carousel-indicators'},
-                  (businesslogicdata != null ?
-                    businesslogicdata.map(function(item, index){
-                      h('li', {"data-target":"#carouselBusinesslogic", "data-slide-to":index, className:(index == 0 ? 'active':null)}, '');
-                    })
-                  :null)
+                  (entry.getIn(['data', 'businesslogic']) ? entry.getIn(['data', 'businesslogic']).map(function(item, index){
+                    h('li', {"data-target":"#carouselBusinesslogic", "data-slide-to":index, className:(index == 0 ? 'active':null)}, '');
+                  }):null)
                 ),
                 h('div', {className:'carousel-inner'},
-                  (businesslogicdata != null ?
-                    businesslogicdata.map(function(item, index){
-                      h('div', {className:'carousel-item col-12' + (index == 0 ? 'active':null)},
-                        h('div', {className:'row align-items-center h-100'},
-                          h('h1', {className:'text-center text-md-left'}, item.get('title')),
-                          h('p', {}, item.get('content'))
-                        )
-                      );
-                    })
-                  :null)
+                  (entry.getIn(['data', 'businesslogic']) ? entry.getIn(['data', 'businesslogic']).map(function(item, index){
+                    h('div', {className:'carousel-item col-12' + (index == 0 ? 'active':null)},
+                      h('div', {className:'row align-items-center h-100'},
+                        h('h1', {className:'text-center text-md-left'}, item.get('title')),
+                        h('p', {}, item.get('content'))
+                      )
+                    );
+                  }):null)
                 )
               )
             )

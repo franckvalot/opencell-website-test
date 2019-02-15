@@ -398,7 +398,10 @@ section.footer li {
 /* SECTIONS
 ===========*/
   section.hero-1,
-  section.hero-2{
+  section.hero-2,
+  section.video,
+  section.article,
+  section.pressreleases{
     padding: 20px 0;
     margin-top: 20px;
   }
@@ -410,13 +413,19 @@ section.footer li {
   }
   @media (min-width:768px){
     section.hero-1,
-    section.hero-2{
+    section.hero-2,
+    section.video,
+    section.article,
+    section.pressreleases{
       padding: 40px 0;
     }
   }
   @media (min-width:992px){
     section.hero-1,
-    section.hero-2{
+    section.hero-2,
+    section.video,
+    section.article,
+    section.pressreleases{
       margin-top: 140px;
       margin-bottom: 60px;
     }
@@ -1249,12 +1258,37 @@ section.contact .info{
     height: 100%;
     width: 100%;
   }
-  .blog .list button,
-  .video .list button,
-  .releases .list button {
-    margin-top: 20px;
+  .blog .list .thumbnail,
+  .video .list .thumbnail,
+  .releases .list .thumbnail{
+    -webkit-background-size: cover !important;
+    -moz-background-size: cover !important;
+    background-size: cover !important;
+    -o-background-size: cover !important;
+    background-position: center !important;
+    background-color: #DD594E;
+    background-repeat: no-repeat !important;
   }
-
+  .blog .list h2,
+  .video .list h2,
+  .releases .list h2{
+    margin: 0;
+  }
+  .blog .list p,
+  .video .list p,
+  .releases .list p{
+    margin: 18px 0 27px 0;
+  }
+  .blog .list .opencell-btn,
+  .video .list .opencell-btn,
+  .releases .list .opencell-btn {
+    width: 150px;
+    height: 45px;
+    padding:0;
+  }
+  .publication-date{
+    margin-top: 1rem;
+  }
 
 /*=========
   KNOWLEDGE CENTER */
