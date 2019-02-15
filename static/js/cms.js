@@ -820,6 +820,20 @@ var KnowledgeCenterPreview = createClass({
                               :null)},''
                             )]
                           ),
+                          (item.get('title') ?
+                            (item.get('title').toLowerCase() == 'releases' ?
+                              [h('span', {}, h('a', {}, 'Release schedule')),
+                              h('br', {}),
+                              h('span', {}, h('a', {}, 'Next release')),
+                              h('span', {}, h('a', {}, 'Past releases'))]
+                            : (item.get('title').toLowerCase() == 'our blog' ?
+                              [h('span', {}, h('a', {}, 'Videos')),
+                              h('span', {}, h('a', {}, 'Articles')),
+                              h('span', {}, h('a', {}, 'FAQ'))]
+                            : (item.get('learning') ?
+                              null
+                            :   h('span', {}, h('a', {}, (item.get('title') || null))))))
+                          :null)
                         );
                       }):null)
                     )
