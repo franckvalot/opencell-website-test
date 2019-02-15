@@ -806,17 +806,19 @@ var KnowledgeCenterPreview = createClass({
                       h('form', {}, h('button', {className:'opencell-btn'}, (item.get('button') || null))),
                       (item.get('subsections') ? item.get('subsections').map(function(item){
                         return h('div', {},
-                          h('h2', {}, (item.get('title') ? item.get('title').toUpperCase() : null)),
-                          h('span', {className:'glyphicon gray-font ' +
-                            (item.get('privacy') ?
-                              (item.get('privacy') == 'public' ?
-                                'glyphicon-globe'
-                              : (item.get('privacy') == 'registered' ?
-                                'glyphicon-ok-sign'
-                              : (item.get('privacy') == 'private' ?
-                                'glyphicon-lock'
-                              :null)))
-                            :null)}, )
+                          h('h2', {}, (item.get('title') ? item.get('title').toUpperCase() : null) +
+                            h('span', {className:'glyphicon gray-font ' +
+                              (item.get('privacy') ?
+                                (item.get('privacy') == 'public' ?
+                                  'glyphicon-globe'
+                                : (item.get('privacy') == 'registered' ?
+                                  'glyphicon-ok-sign'
+                                : (item.get('privacy') == 'private' ?
+                                  'glyphicon-lock'
+                                :null)))
+                              :null)},''
+                            )
+                          ),
                         );
                       }):null)
                     )
