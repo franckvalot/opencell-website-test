@@ -882,6 +882,8 @@ CMS.registerPreviewTemplate("aboutuscustomers", AboutUsCustomersPreview);
 CMS.registerPreviewTemplate("aboutuspartners", AboutUsParnersPreview);
 CMS.registerPreviewTemplate("aboutusworkplaceandjobs", AboutUsWorkplaceAndJobsPreview);
 
+CMS.registerPreviewTemplate("knowledgecenterindex", KnowledgeCenterPreview);
+
 CMS.registerPreviewTemplate("blogarticle", BlogPreview);
 CMS.registerPreviewTemplate("blogvideo", BlogPreview);
 CMS.registerPreviewTemplate("releases", BlogPreview);
