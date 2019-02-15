@@ -436,7 +436,7 @@ collections:
         fields:
           - {label: Layout, name: layout, widget: hidden, default: index}
           - {label: Title, name: title, widget: string}
-          - {label: Subtitle, name: subtitle, widget: string}
+          - {label: Subtitle, name: subtitle, widget: string, required: false}
           - {label: Description, name: description, widget: text, required: false}
           - label: Sections
             name: section
@@ -446,18 +446,15 @@ collections:
               - {label: Description, name: description, widget: text}
               - {label: Button, name: button, widget: string, default: READ}
               - {label: Url, name: url, widget: string, default: \#}
-              - {label: Icon, name: icon, widget: image, required: false}
               - label: Subsections
                 name: subsections
                 widget: list
                 fields:
                   - {label: Title, name: title, widget: string}
-                  - label: Elements
-                    name: elements
-                    widget: list
-                    fields:
-                      - {label: Name, name: name, widget: string}
-                      - {label: Url, name: url, widget: string, default: \#}
+                  - label: Privacy
+                    name: privacy
+                    widget: "select"
+                    options: ["public", "registered", "private"]
           - {label: Markdown, name: body, widget: hidden}
   - label: Our Blog - Articles
     name: "blogarticle"
