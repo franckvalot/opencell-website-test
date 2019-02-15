@@ -855,6 +855,7 @@ CMS.registerPreviewTemplate("aboutusworkplaceandjobs", AboutUsWorkplaceAndJobsPr
 
 CMS.registerPreviewTemplate("blogarticle", BlogPreview);
 CMS.registerPreviewTemplate("blogvideo", BlogPreview);
+CMS.registerPreviewTemplate("releases", BlogPreview);
 
 
 CMS.registerPreviewStyle("https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css");
