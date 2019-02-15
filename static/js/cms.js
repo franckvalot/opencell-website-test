@@ -372,7 +372,7 @@ var PlatformTechnologyPreview = createClass({
       var technologiesdata = entry.getIn(['data', 'technologies']);
       var boxesdata = entry.getIn(['data', 'boxes']);
       var columsdata = entry.getIn(['data', 'columns']);
-      var businesslogicdata = entry.getIn(['data', 'businesslogic']);
+      var businesslogicdata = entry.getIn(['widget', 'businesslogic']);
 
       var subtitles = function(item){
         return h('h2', {className:'col-12 text-center text-md-left'}, item.get('subtitle'));
@@ -442,7 +442,7 @@ var PlatformTechnologyPreview = createClass({
                     return h('div', {className:'carousel-item col-12' + (index == 0 ? ' active':'')},
                       h('div', {className:'row align-items-center h-100'},
                         h('h1', {className:'text-center text-md-left'}, item.get('title')),
-                        h('p', {}, item.getIn(['widget', 'content']))
+                        h('p', {}, item.getIn('content'))
                       )
                     );
                   }):null)
