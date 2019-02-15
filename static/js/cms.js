@@ -39,8 +39,8 @@ function smallHeader(item){
           h('div', {className:'container'},
             h('div', {className:'row align-items-center'},
               h('div', {className:'col col-md-10'},
-                h('h1', {}, (item.getIn(['data', 'title'])) || null),
-                h('p', {}, (item.getIn(['data', 'subtitle']) || null))
+                h('h1', {}, item.getIn(['data', 'title'])),
+                h('p', {}, item.getIn(['data', 'subtitle']))
               )
             )
           )
@@ -787,7 +787,9 @@ var KnowledgeCenterPreview = createClass({
   render: function(){
       var entry = this.props.entry;
 
-      return [smallHeader(null),
+      return [h('header', {className:'small-header'},
+          h('div', {className:'header-content-inner'},)
+        ),
         h('section', {className:'hero-1 knowledgecenter'},
           h('div', {className:'container'},
             h('div', {className:'row justify-content-center text-center'},
