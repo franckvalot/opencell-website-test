@@ -800,9 +800,8 @@ var BlogPreview = createClass({
         case 'blogvideo':
           classSection = 'video';
           break;
-        case 'releases':
-          classSection = 'releases';
-        break;
+        default:
+          classSection = type;
       }
 
       return [(entry.getIn(['data', 'thumbnail']) ? smallHeader(entry) : null),
@@ -856,6 +855,7 @@ CMS.registerPreviewTemplate("aboutusworkplaceandjobs", AboutUsWorkplaceAndJobsPr
 CMS.registerPreviewTemplate("blogarticle", BlogPreview);
 CMS.registerPreviewTemplate("blogvideo", BlogPreview);
 CMS.registerPreviewTemplate("releases", BlogPreview);
+CMS.registerPreviewTemplate("releaseschedule", BlogPreview);
 
 
 CMS.registerPreviewStyle("https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css");

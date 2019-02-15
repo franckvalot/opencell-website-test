@@ -492,7 +492,7 @@ collections:
     - {label: Video ID, name: videoid, widget: string}
     - {label: Body, name: body, widget: markdown}
   - label: Releases
-    name: "blogvideo"
+    name: "releases"
     folder: "content/knowledgecenter/developer/releases"
     create: true
     fields:
@@ -505,6 +505,18 @@ collections:
     - label: Tags
       name: releasestags
       widget: list
+    - {label: Body, name: body, widget: markdown}
+  - label: Releases Schedule
+    name: "releaseschedule"
+    folder: "content/knowledgecenter/developer/releaseschedule"
+    create: true
+    fields:
+    - {label: Type, name: type, widget: hidden, default: releaseschedule}
+    - {label: Title, name: title, widget: string}
+    - {label: Subtitle, name: subtitle, widget: string}
+    - {label: Description, name: description, widget: text, required: false}
+    - {label: Author, name: author, widget: string}
+    - {label: Date, name: date, widget: date}
     - {label: Body, name: body, widget: markdown}
   - label: "Jobs"
     name: "jobs"
