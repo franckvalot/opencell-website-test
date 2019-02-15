@@ -28,9 +28,9 @@
                     {{ if eq .privacy "public"}}
                     <span class="glyphicon glyphicon-globe gray-font"  aria-hidden="true"></span>
                     {{ else if eq .privacy "registered"}}
-                   <span class="glyphicon glyphicon-ok-sign gray-font"  aria-hidden="true"></span>
+                    <span class="glyphicon glyphicon-ok-sign gray-font"  aria-hidden="true"></span>
                     {{ else if eq .privacy "private"}}
-                   <span class="glyphicon glyphicon-lock gray-font"  aria-hidden="true"></span>
+                    <span class="glyphicon glyphicon-lock gray-font"  aria-hidden="true"></span>
                     {{ end }}</h2>
                     {{ if eq (.title | lower) "releases"}}
                       <span><a href="{{$Site.Params.resources.url.releaseschedule}}">Release schedule</a></span>
