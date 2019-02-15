@@ -426,20 +426,20 @@ var PlatformTechnologyPreview = createClass({
         h('div', {className:'container'},
           h('div', {className:'row align-items-center justify-content-center'},
             h('div', {className:'col-8 col-md-4'},
-              (businesslogicdata ? businesslogicdata.map(function(item){
-                  return h('img', {className:'img-fluid', src: item.get('url'), alt: item.get('alt')});
+              (businesslogicdata ? businesslogicdata.map(function(item, index){
+                  return h('img', {className:'img-fluid' + (index == 0 ? ' active':''), src: item.get('url'), alt: item.get('alt')});
                 }):null)
             ),
             h('div', {className:'col-12 col-md-8'},
               h('div', {className:'carousel slide row align-items-center', id:'carouselBusinesslogic', "data-ride":"carousel"},
                 h('ol', {className:'carousel-indicators'},
                   (businesslogicdata ? businesslogicdata.map(function(item, index){
-                    return h('li', {"data-target":"#carouselBusinesslogic", "data-slide-to":index, className:(index == 0 ? 'active':null)}, '');
+                    return h('li', {"data-target":"#carouselBusinesslogic", "data-slide-to":index, className:(index == 0 ? 'active':'')}, '');
                   }):null)
                 ),
                 h('div', {className:'carousel-inner'},
                   (businesslogicdata ? businesslogicdata.map(function(item, index){
-                    return h('div', {className:'carousel-item col-12' + (index == 0 ? 'active':null)},
+                    return h('div', {className:'carousel-item col-12' + (index == 0 ? ' active':'')},
                       h('div', {className:'row align-items-center h-100'},
                         h('h1', {className:'text-center text-md-left'}, item.get('title')),
                         h('p', {}, item.get('content'))
