@@ -1,11 +1,13 @@
 ---
 type: blogarticle
 title: Insérer ici le titre de l'article
-subtitle: Subtitle
-description: Blablabla
-thumbnail: /img/uploads/portrait3.jpg
-date: 2019-01-17T08:05:55.197Z
+subtitle: ' '
+description: This is a description of the article
+author: Franck
+date: 2019-01-27T17:00:00.000Z
 articlestags:
+  - ''
+thumbnail: /img/uploads/portrait3.jpg
 ---
 
 ## LOREM IPSUM DOLOR SIT AMET CONSECTUR ADIPISCING ELIT.
