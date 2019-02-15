@@ -807,7 +807,7 @@ var KnowledgeCenterPreview = createClass({
                       (item.get('subsections') ? item.get('subsections').map(function(item){
                         return h('div', {},
                           h('h2', {},
-                            [(item.get('title') ? item.get('title').toUpperCase() : null),
+                            [(item.get('title') ? item.get('title').toUpperCase() + ' ' : null),
                             h('span', {className:'glyphicon gray-font ' +
                               (item.get('privacy') ?
                                 (item.get('privacy') == 'public' ?
@@ -832,7 +832,7 @@ var KnowledgeCenterPreview = createClass({
                               h('span', {}, h('a', {}, 'FAQ'))]
                             : (item.get('learning') ?
                               null
-                            :   h('span', {}, h('a', {}, (item.get('title') || null))))))
+                            :   h('span', {}, h('a', {}, "[[pages from the section]]")))))
                           :null)
                         );
                       }):null)
