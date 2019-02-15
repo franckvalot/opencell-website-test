@@ -824,7 +824,7 @@ var BlogPreview = createClass({
             h('hr', {className:'w-100'}),
             h('h1', {className:'col col-md-10 col-lg-8'}, entry.getIn(['data', 'title'])),
             h('div', {className:'w-100'}, ),
-            h('div', {className:'col col-md-10 col-lg-8'},
+            h('div', {className:'col col-md-10 col-lg-8 markdown'},
                 this.props.widgetFor('body')
             )
           )
