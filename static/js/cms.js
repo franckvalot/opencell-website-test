@@ -372,7 +372,8 @@ var PlatformTechnologyPreview = createClass({
       var technologiesdata = entry.getIn(['data', 'technologies']);
       var boxesdata = entry.getIn(['data', 'boxes']);
       var columsdata = entry.getIn(['data', 'columns']);
-      var businesslogicdata = entry.getIn(['widget', 'businesslogic']);
+      var businesslogicdata = this.props.widgetsFor('businesslogic');
+
 
       var subtitles = function(item){
         return h('h2', {className:'col-12 text-center text-md-left'}, item.get('subtitle'));
@@ -427,7 +428,7 @@ var PlatformTechnologyPreview = createClass({
           h('div', {className:'row align-items-center justify-content-center'},
             h('div', {className:'col-8 col-md-4'},
               (businesslogicdata ? businesslogicdata.map(function(item, index){
-                  return h('img', {className:'img-fluid' + (index == 0 ? ' active':''), src: item.get('url'), alt: item.get('alt')});
+                  return h('img', {className:'img-fluid' + (index == 0 ? ' active':''), src: item.getIn(['data', 'url']), alt: item.getIn(['data', 'alt'])});
                 }):null)
             ),
             h('div', {className:'col-12 col-md-8'},
@@ -441,8 +442,8 @@ var PlatformTechnologyPreview = createClass({
                   (businesslogicdata ? businesslogicdata.map(function(item, index){
                     return h('div', {className:'carousel-item col-12' + (index == 0 ? ' active':'')},
                       h('div', {className:'row align-items-center h-100'},
-                        h('h1', {className:'text-center text-md-left'}, item.get('title')),
-                        h('p', {}, item.getIn('content'))
+                        h('h1', {className:'text-center text-md-left'}, item.getIn(['data', 'title'])),
+                        h('p', {}, item.getIn(['widgets', 'content']))
                       )
                     );
                   }):null)
