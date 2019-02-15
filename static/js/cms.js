@@ -442,7 +442,7 @@ var PlatformTechnologyPreview = createClass({
                     return h('div', {className:'carousel-item col-12' + (index == 0 ? ' active':'')},
                       h('div', {className:'row align-items-center h-100'},
                         h('h1', {className:'text-center text-md-left'}, item.get('title')),
-                        h('p', {}, item.get('content'))
+                        h('p', {}, item.getIn(['widget', 'content']))
                       )
                     );
                   }):null)
