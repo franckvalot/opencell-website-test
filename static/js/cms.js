@@ -48,7 +48,6 @@ function smallHeader(item){
       );
     }
 }
-
 function titleanddescription(item){
   return [h('div', {className:'row justify-content-center'},
       h('h1', {className:'col-12 text-center'}, item.get('title'))
@@ -65,13 +64,11 @@ function titleanddescription(item){
     null)
   ];
 }
-
 function logo(item){
   return h('div', {className:'col-6 col-md-4 col-lg-3'},
     h('img', {className:'img-fluid', src: item.get('url'), alt:item.get('alt')})
   );
 }
-
 function logos(item){
   return h('section',{className:'hero-1 logos'},
     h('div', {className:'container'},
@@ -91,7 +88,6 @@ function logos(item){
     )
   );
 }
-
 function article(item){
   var date = new Date(item.get('date'));
 
@@ -121,7 +117,6 @@ function article(item){
     )
   );
 }
-
 
 var IndexPreview = createClass({
   render: function(){
@@ -791,27 +786,46 @@ var AboutUsWorkplaceAndJobsPreview = createClass({
 var BlogPreview = createClass({
   render: function(){
       var entry = this.props.entry;
+      var type = entry.getIn(['data', 'type']);
       var date = new Date(entry.getIn(['data', 'date']));
       var day = date.getDay();
       var month = months[date.getMonth()];
       var year = date.getFullYear();
       var dateString = day + ' ' + month + ' ' + year;
+      var classSection = null;
+      switch (type) {
+        case 'blocarticle':
+          classSection = 'blog';
+          break;
+        case 'blogvideo':
+          classSection = 'video';
+          break;
+        case 'releases':
+          classSection = 'releases';
+        break;
+      }
 
-      return [smallHeader(entry),
-      h('section', {className:'blog'},
+      return [(entry.getIn('data', 'thumbnail']) ? smallHeader(entry):null),
+      h('section', {className:classSection + 'reduce-margin'},
         h('div', {className:'container'},
+          (entry.getIn(['data', 'videoid']) ?
+            h('div', {className:'row justify-content-center'},
+              h('div', {className:'col-sm-12 col-md-10 col-lg-8 embed-responsive embed-responsive-16by9'},
+                h('iframe', {className:'youtube', src:'https://www.youtube.com/embed/' + entry.getIn(['data', 'videoid']) + '?controls=0', frameborder:'0', allow:'accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture', allowfullscreen:'true'}, '')
+              )
+          ):null),
           h('div', {className:'row justify-content-center text-left'},
-            h('h1', {className:'col col-md-10 col-lg-8'}, entry.getIn(['data', 'title'])),
-            h('div', {className:'w-100'},''),
             h('p', {className:'col col-md-10 col-lg-8'},
               h('span', {}, 'Published on: '),
               h('span', {}, dateString),
               h('span', {}, ', by: '),
-              h('span', {className:'author'}, entry.getIn(['data', 'author']))
+              h('span', {className:'author'}, (entry.getIn(['data', 'author']) || 'None'))
             ),
+            h('hr', {className:'w-100'},''),
+            h('h1', {className:'col col-md-10 col-lg-8'}, entry.getIn(['data', 'title'])),
             h('div', {className:'w-100'}, ),
             h('div', {className:'col col-md-10 col-lg-8'},
-              this.props.widgetFor('body')
+                this.props.widgetFor('body')
             )
           )
         )
@@ -839,7 +853,8 @@ CMS.registerPreviewTemplate("aboutuscustomers", AboutUsCustomersPreview);
 CMS.registerPreviewTemplate("aboutuspartners", AboutUsParnersPreview);
 CMS.registerPreviewTemplate("aboutusworkplaceandjobs", AboutUsWorkplaceAndJobsPreview);
 
-CMS.registerPreviewTemplate("blog", BlogPreview);
+CMS.registerPreviewTemplate("blogarticle", BlogPreview);
+CMS.registerPreviewTemplate("blogvideo", BlogPreview);
 
 
 CMS.registerPreviewStyle("https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css");
