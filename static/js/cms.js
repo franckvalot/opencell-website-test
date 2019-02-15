@@ -822,17 +822,17 @@ var KnowledgeCenterPreview = createClass({
                           ),
                           (item.get('title') ?
                             (item.get('title').toLowerCase() == 'releases' ?
-                              [h('span', {}, h('a', {}, 'Release schedule')),
+                              [h('span', {}, h('a', {href:'#'}, 'Release schedule')),
                               h('br', {}),
-                              h('span', {}, h('a', {}, 'Next release')),
-                              h('span', {}, h('a', {}, 'Past releases'))]
+                              h('span', {}, h('a', {href:'#'}, 'Next release')),
+                              h('span', {}, h('a', {href:'#'}, 'Past releases'))]
                             : (item.get('title').toLowerCase() == 'our blog' ?
-                              [h('span', {}, h('a', {}, 'Videos')),
-                              h('span', {}, h('a', {}, 'Articles')),
-                              h('span', {}, h('a', {}, 'FAQ'))]
+                              [h('span', {}, h('a', {href:'#'}, 'Videos')),
+                              h('span', {}, h('a', {href:'#'}, 'Articles')),
+                              h('span', {}, h('a', {href:'#'}, 'FAQ'))]
                             : (item.get('learning') ?
                               null
-                            :   h('span', {}, h('a', {}, "[[pages from the section]]")))))
+                            :   h('span', {}, h('a', {href:'#'}, "[[pages from the section]]")))))
                           :null)
                         );
                       }):null)
