@@ -821,7 +821,7 @@ var BlogPreview = createClass({
               h('span', {}, ', by: '),
               h('span', {className:'author'}, (entry.getIn(['data', 'author']) || 'None'))
             ),
-            h('hr', {className:'w-100'},''),
+            h('hr', {className:'w-100'}),
             h('h1', {className:'col col-md-10 col-lg-8'}, entry.getIn(['data', 'title'])),
             h('div', {className:'w-100'}, ),
             h('div', {className:'col col-md-10 col-lg-8'},
