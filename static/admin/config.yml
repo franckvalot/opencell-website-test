@@ -439,13 +439,13 @@ collections:
           - {label: Subtitle, name: subtitle, widget: string, required: false}
           - {label: Description, name: description, widget: text, required: false}
           - label: Sections
-            name: section
+            name: sections
             widget: list
             fields:
               - {label: Title, name: title, widget: string}
               - {label: Description, name: description, widget: text}
               - {label: Button, name: button, widget: string, default: READ}
-              - {label: Url, name: url, widget: string, default: \#}
+              - {label: URL, name: url, widget: string, default: \#}
               - label: Subsections
                 name: subsections
                 widget: list
