@@ -805,7 +805,7 @@ var BlogPreview = createClass({
         break;
       }
 
-      return [(entry.getIn('data', 'thumbnail']) ? smallHeader(entry):null),
+      return [(entry.getIn(['data', 'thumbnail']) ? smallHeader(entry) : null),
       h('section', {className:classSection + 'reduce-margin'},
         h('div', {className:'container'},
           (entry.getIn(['data', 'videoid']) ?
