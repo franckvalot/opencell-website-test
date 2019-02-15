@@ -787,7 +787,7 @@ var KnowledgeCenterPreview = createClass({
   render: function(){
       var entry = this.props.entry;
 
-      return [smallHeader(entry),
+      return [smallHeader(null),
         h('section', {className:'hero-1 knowledgecenter'},
           h('div', {className:'container'},
             h('div', {className:'row justify-content-center text-center'},
@@ -796,7 +796,7 @@ var KnowledgeCenterPreview = createClass({
             ),
             h('div', {className:'row justify-content-center text-center'},
               ( entry.getIn(['data', 'sections']) ? entry.getIn(['data', 'sections']).map(function(item){
-                h('div', {className:'col-12 col-md-4 margin'},
+                return h('div', {className:'col-12 col-md-4 margin'},
                   h('div', {className:'row align-items-center justify-content-center h-100'},
                     h('div', {className:'col-11 box h-100'},
                       h('div', {}, h('h2', {}, (item.get('title') || null))),
@@ -804,7 +804,7 @@ var KnowledgeCenterPreview = createClass({
                       h('form', {}, h('button', {className:'opencell-btn'}, (item.get('button') || null)))
                     )
                   )
-                )
+                );
               }):null)
             )
           )
