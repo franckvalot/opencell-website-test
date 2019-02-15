@@ -39,8 +39,8 @@ function smallHeader(item){
           h('div', {className:'container'},
             h('div', {className:'row align-items-center'},
               h('div', {className:'col col-md-10'},
-                h('h1', {}, item.getIn(['data', 'title'])),
-                h('p', {}, item.getIn(['data', 'subtitle']))
+                h('h1', {}, (item.getIn(['data', 'title'])) || null),
+                h('p', {}, (item.getIn(['data', 'subtitle']) || null))
               )
             )
           )
@@ -779,6 +779,36 @@ var AboutUsWorkplaceAndJobsPreview = createClass({
         )
       ),
       scripts()
+      ];
+  }
+})
+
+var KnowledgeCenterPreview = createClass({
+  render: function(){
+      var entry = this.props.entry;
+
+      return [smallHeader(entry),
+        h('section', {className:'hero-1 knowledgecenter'},
+          h('div', {className:'container'},
+            h('div', {className:'row justify-content-center text-center'},
+              h('h1', {className:'col-12 text-center'}, entry.getIn(['data', 'title'])),
+              h('div', {className:'w-100'}, '')
+            ),
+            h('div', {className:'row justify-content-center text-center'},
+              ( entry.getIn(['data', 'sections']) ? entry.getIn(['data', 'sections']).map(function(item){
+                h('div', {className:'col-12 col-md-4 margin'},
+                  h('div', {className:'row align-items-center justify-content-center h-100'},
+                    h('div', {className:'col-11 box h-100'},
+                      h('div', {}, h('h2', {}, (item.get('title') || null))),
+                      h('p', {}, (item.get('description') || null)),
+                      h('form', {}, h('button', {className:'opencell-btn'}, (item.get('button') || null)))
+                    )
+                  )
+                )
+              }):null)
+            )
+          )
+        )
       ];
   }
 })
