@@ -1,5 +1,6 @@
 ---
 type: blogvideo
+draft: false
 title: Customer stories | Episode 4 | Gfi
 subtitle: Subtitle
 description: Blablabla

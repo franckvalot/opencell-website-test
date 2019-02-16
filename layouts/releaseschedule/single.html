@@ -18,66 +18,6 @@
         </div>
     </section>
 
-
-    {{ $Scratch := newScratch }}
-    {{ $Scratch.Set "nb" 0 }}
-    {{ range .Parent.Pages }}
-      {{ if intersect .Params.tags $currentPage.Params.tags }}
-        {{ if ne . $currentPage }}
-          {{ $Scratch.Add "nb" 1 }}
-          {{ if eq ($Scratch.Get "nb") 1 }}
-    <section class="hero-1 read-more">
-      <div class="container">
-        <div class="row justify-content-center text-center">
-          <h1 class="col-12">Also read</h1>
-          {{ end }}
-          {{ if le ($Scratch.Get "nb") 3 }}
-            <div class="col-7 col-md-4">
-              <div class="row justify-content-center">
-                <div class="col-11 thumbnail" style="background-image: url('{{.Params.thumbnail}}');"></div>
-                <div class="w-100"></div>
-                <div class="col-11 description">
-                  <div class="row justify-content-center">
-                    <h2 class="col">{{ .Title | upper }}</h2>
-                    <div class="w-100"></div>
-                    <div class="col">
-                      {{ truncate 55 (index (split (index (split .Content "<p>") 1 ) "</p>") 0) }}
-                    </div>
-                    <div class="w-100"></div>
-                    <h2 class="col">
-                      <span class="author">BY {{ index (split .Params.author " ") 0 | upper }}</span>
-                      <span class="date">- {{ dateFormat "02/06" .Date}}</span>
-                    </h2>
-                    <div class="w-100"></div>
-                    <form class="col" action="{{ .URL }}" method="get">
-                      <button type="submit" name="button" class="opencell-btn">READ</button>
-                    </form>
-                  </div>
-                </div>
-              </div>
-            </div>
-          {{ end }}
-        {{ end}}
-      {{ end }}
-    {{ end }}
-    {{ if le 1 ($Scratch.Get "nb") }}
-        </div>
-      </div>
-    </section>
-    {{ end }}
-    <section id="menu">
-        <ul>
-            {{ range $key, $taxonomy := .Site.Taxonomies.featured }}
-            <li>{{ $key }}</li>
-            <ul>
-                {{ range $taxonomy.Pages }}
-                <li hugo-nav="{{ .RelPermalink}}"><a href="{{ .Permalink}}">{{ .LinkTitle }}</a></li>
-                {{ end }}
-            </ul>
-            {{ end }}
-        </ul>
-    </section>
-
     {{ partial "sections/getdemo.html" . }}
     {{ partial "sections/mentions.html" . }}
 

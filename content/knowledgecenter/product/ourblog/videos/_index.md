@@ -1,5 +1,6 @@
 ---
 type: blogvideo
+draft: false
 title: Insérer ici le titre de la video
 subtitle: Subtitle
 description: Blablabla

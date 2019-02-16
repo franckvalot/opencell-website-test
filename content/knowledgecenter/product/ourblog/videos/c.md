@@ -1,5 +1,6 @@
 ---
 type: blogvideo
+draft: false
 title: Customer stories | Episode 3 | Sofrecom
 subtitle: Subtitle
 description: Blablabla

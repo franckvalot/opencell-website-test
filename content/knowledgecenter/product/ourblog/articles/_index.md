@@ -1,5 +1,6 @@
 ---
 type: blogarticle
+draft: false
 title: Insérer ici le titre de l'article
 subtitle: ' '
 description: This is a description of the article

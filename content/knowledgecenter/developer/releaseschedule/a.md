@@ -1,5 +1,6 @@
 ---
 type: releaseschedule
+draft: false
 title: Week 5
 subtitle: Subtitle
 description: Blablabla

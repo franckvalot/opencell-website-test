@@ -1,5 +1,6 @@
 ---
 type: releases
+draft: false
 title: Insérer ici le titre de la release
 subtitle: Subtitle
 description: Blablabla

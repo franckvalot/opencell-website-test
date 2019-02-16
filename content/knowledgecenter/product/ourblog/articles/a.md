@@ -1,5 +1,6 @@
 ---
 type: blogarticle
+draft: false
 title: Article A
 subtitle: Subtitle
 description: Blablabla

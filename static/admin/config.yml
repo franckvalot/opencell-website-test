@@ -274,7 +274,7 @@ collections:
   - label: About Us
     name: aboutus
     files:
-      - label: Story Page ()
+      - label: Story Page (Main)
         name: aboutusstory
         file: content/aboutus/story.md
         fields:
@@ -462,7 +462,7 @@ collections:
     create: true
     fields:
       - {label: Type, name: type, widget: hidden, default: blogarticle}
-      - {label: Draft,  name: draft,widget: select, options: ['true', 'false'], default: 'true'}
+      - {label: Draft,  name: draft, widget: select, options: ['true', 'false'], default: 'true'}
       - {label: Title, name: title, widget: string}
       - {label: Subtitle, name: subtitle, widget: string}
       - {label: Description, name: description, widget: text, required: false}
@@ -480,6 +480,7 @@ collections:
     create: true
     fields:
     - {label: Type, name: type, widget: hidden, default: blogvideo}
+    - {label: Draft,  name: draft, widget: select, options: ['true', 'false'], default: 'true'}
     - {label: Title, name: title, widget: string}
     - {label: Subtitle, name: subtitle, widget: string}
     - {label: Description, name: description, widget: text, required: false}
@@ -497,6 +498,7 @@ collections:
     create: true
     fields:
     - {label: Type, name: type, widget: hidden, default: releases}
+    - {label: Draft,  name: draft, widget: select, options: ['true', 'false'], default: 'true'}
     - {label: Title, name: title, widget: string}
     - {label: Subtitle, name: subtitle, widget: string}
     - {label: Description, name: description, widget: text, required: false}
@@ -513,6 +515,7 @@ collections:
     create: true
     fields:
     - {label: Type, name: type, widget: hidden, default: releaseschedule}
+    - {label: Draft,  name: draft, widget: select, options: ['true', 'false'], default: 'true'}
     - {label: Title, name: title, widget: string}
     - {label: Subtitle, name: subtitle, widget: string}
     - {label: Description, name: description, widget: text, required: false}
@@ -524,6 +527,7 @@ collections:
     folder: "content/jobs"
     create: true
     fields:
+      - {label: Draft,  name: draft, widget: select, options: ['true', 'false'], default: 'true'}
       - {label: Title, name: title, widget: string}
       - {label: Subtitle, name: subtitle, widget: string}
       - {label: Description, name: description, widget: text}
@@ -549,6 +553,7 @@ collections:
     folder: content/documents
     create: true
     fields:
+      - {label: Draft,  name: draft, widget: select, options: ['true', 'false'], default: 'true'}
       - {label: Type of documents, name: type, widget: string}
       - {label: Section of documents, name: section, widget: string}
       - {label: Title, name: title, widget: string}

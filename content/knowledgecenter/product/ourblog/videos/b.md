@@ -1,5 +1,6 @@
 ---
 type: blogvideo
+draft: false
 title: Customer stories | Episode 2 | CGI
 subtitle: Subtitle
 description: Blablabla

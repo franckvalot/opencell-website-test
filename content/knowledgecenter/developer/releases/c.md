@@ -1,5 +1,6 @@
 ---
 type: releases
+draft: false
 title: Release 3
 subtitle: Subtitle
 description: Blablabla

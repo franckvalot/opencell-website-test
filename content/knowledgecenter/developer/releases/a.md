@@ -1,11 +1,12 @@
 ---
 type: releases
+draft: false
 title: Release 1
 subtitle: Subtitle
 description: Blablabla
 author: Franck Valot
 date: 2019-01-17T08:05:55.197Z
-releasestags: [1]
+releasestags: [1, 2]
 ---
 Loremu ipsum dolores sit amet, consectetur adipiscing elit.
 
