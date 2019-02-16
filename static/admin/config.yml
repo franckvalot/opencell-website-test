@@ -453,8 +453,8 @@ collections:
                   - {label: Title, name: title, widget: string}
                   - label: Privacy
                     name: privacy
-                    widget: "select"
-                    options: ["public", "registered", "private"]
+                    widget: select
+                    options: ['public', 'registered', 'private']
           - {label: Markdown, name: body, widget: hidden}
   - label: Our Blog - Articles
     name: "blogarticle"
@@ -462,6 +462,7 @@ collections:
     create: true
     fields:
       - {label: Type, name: type, widget: hidden, default: blogarticle}
+      - {label: Draft,  name: draft,widget: select, options: ['true', 'false'], default: 'true'}
       - {label: Title, name: title, widget: string}
       - {label: Subtitle, name: subtitle, widget: string}
       - {label: Description, name: description, widget: text, required: false}
