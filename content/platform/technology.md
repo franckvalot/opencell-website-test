@@ -4,33 +4,34 @@ title: Powerful and scalable.
 subtitle: We use the latest open source technologies.
 text1:
   content: >-
-    With billions of connected users and objects, usage based services face a
-    massive scalability and reliability challenge.
+    With billions of connected users and objects, usage-based services face a
+    massive scalability and reliability challenge that our enterprise-grade
+    architecture has the capacity to handle. 
   title: Entreprise-grade-architecture
 boxes:
-  - title: Multicloud deployment
+  - title: Multi-cloud deployment
     description: >-
-      Opencell is “Cloud Ready” and can be instantly deployed in a private or a
-      public Cloud using Docker containers orchestrated by Kubernetes. But you
-      can also chose to run Opencell on VMs to deploy on-premises or in a
-      managed hosting environment
+      Opencell is “cloud-ready” and can be instantly deployed in a private or a
+      public Cloud using Docker containers orchestrated by Kubernetes. If you
+      prefer, you can also chose to run Opencell on virtual machines for
+      on-premises deployment or in a managed hosting environment
   - title: Scalability and high availability
     description: >-
-      Clustering allows to run Opencell on several parallel servers. This
-      insures load balancing across different servers and High Availability of
-      the service. Clustering is crucial for scalable enterprise applications as
-      you can improve performance by simply adding more nodes to the cluster.
+      Clustering allows Opencell to run on several parallel servers. This
+      insures load balancing across different servers and high availability of
+      the service. It also gives you the possibility to improve performance by
+      simply adding more nodes to the cluster.
   - title: Monitoring and alerting
     description: >-
       Our microservice architecture based on Spark can achieve horizontal
-      scalability to efficiently process large-scale of usage records. For
-      example, with a simple cluster of 3 nodes, our architecture can process up
-      to 3’000 usage records per second.
+      scalability to efficiently process large-scale of usage records. With a
+      simple 3-node cluster, our architecture can process up to 3 000 usage
+      records per second.
   - title: Performance efficiency
     description: >-
       Opencell provides built-in monitoring and alerting tools that allow
       detecting system errors, components’ status and performance. All relevant
-      events are logged and accessible on Opencell Portal.
+      events are logged and accessible on the Opencell Portal.
 text2:
   content: >-
     Opencell Framework provides a rich set of components to quickly build
@@ -62,13 +63,13 @@ columns:
           business model to include B2B as well as B2C streams.
     title: USER<br>INTERFACE BUILDER
 businesslogic:
-  - title: MODEL YOUR BUSINESS LOGIC
-    url: /img/uploads/business-logic.svg
-    alt: Business Logic
+  - alt: Business Logic
     content: >-
-      Our platform lets you define specific, granular business rules and  processing logic for each service you need to run your business.
+      Our platform lets you define specific, granular business rules and 
+      processing logic for each service you need to run your business.
 
-      Our toolbox has everything you need to quickly model the most complex business requirements:
+      Our toolbox has everything you need to quickly model the most complex
+      business requirements:
 
 
       + Workflow and business process management rules
@@ -86,11 +87,13 @@ businesslogic:
       + Database management
 
       + Integrated analytics
-  - title: CUSTOMIZE YOUR USER EXPERIENCE
-    url: /img/uploads/flexible-user-portal.svg
-    alt: Flexible user portal
+    title: MODEL YOUR BUSINESS LOGIC
+    url: /img/uploads/business-logic.svg
+  - alt: Flexible user portal
     content: >-
-      Our React-based UX studio lets you quickly create unique, adapted experiences for your internal users, business partners and customers without needing to  integrate third-party apps.
+      Our React-based UX studio lets you quickly create unique, adapted
+      experiences for your internal users, business partners and customers
+      without needing to  integrate third-party apps.
 
       We provide out-of-the box :
 
@@ -100,14 +103,15 @@ businesslogic:
       + Role-based access management
 
       + Contextual search
-
-  - title: CONSUME YOUR (BIG) DATA
-    url: /img/uploads/integration-services.svg
-    alt: Integration services
+    title: CUSTOMIZE YOUR USER EXPERIENCE
+    url: /img/uploads/flexible-user-portal.svg
+  - alt: Integration services
     content: >-
-      Monetization is all about being able to process a growing load of data coming from sensors & devices as well as other apps and services.
+      Monetization is all about being able to process a growing load of data
+      coming from sensors & devices as well as other apps and services.
 
-      With our integrate mediation capability and big data architecture, we provide the tools you need to handle data at scale  including :
+      With our integrate mediation capability and big data architecture, we
+      provide the tools you need to handle data at scale  including :
 
 
       + Filtering & transformation
@@ -115,25 +119,30 @@ businesslogic:
       + Smart ETLs ™
 
       + Real-time aggregation
-
-  - title: INTEGRATE WITH OTHER SYSTEMS
-    url: /img/uploads/data-collection.svg
-    alt: Data collection
+    title: CONSUME YOUR (BIG) DATA
+    url: /img/uploads/integration-services.svg
+  - alt: Data collection
     content: >-
-      Our modular platform is designed to fit in as easily as possible with the rest of your IT ecosystem including ERP/CRM/eCommerce applications, cloud services, authentication services etc.
+      Our modular platform is designed to fit in as easily as possible with the
+      rest of your IT ecosystem including ERP/CRM/eCommerce applications, cloud
+      services, authentication services etc.
 
       We provide :
 
 
-      + Connectors to leading third-party CRM solutions such as Salesforce or Dynamics 365.
+      + Connectors to leading third-party CRM solutions such as Salesforce or
+      Dynamics 365.
 
       + Access to all core functionalities through our 450 RESTful  APIs
 
-      + Advanced identity brokering including Active Directory, LDAP and social logins
+      + Advanced identity brokering including Active Directory, LDAP and social
+      logins
 
       + Messaging and webhooks
 
       + Extension library
+    title: INTEGRATE WITH OTHER SYSTEMS
+    url: /img/uploads/data-collection.svg
 technologies:
   introduction:
     content: >-
@@ -154,3 +163,4 @@ technologies:
       description: Improving User eXperience using React and Bootstrap
       url: /img/uploads/techno_react.png
 ---
+
