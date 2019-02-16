@@ -65,29 +65,29 @@ columns:
 businesslogic:
   - alt: Business Logic
     content: >-
-      Our platform lets you define specific, granular business rules and 
+      Our platform lets you define specific, granular business rules and
       processing logic for each service you need to run your business.
 
       Our toolbox has everything you need to quickly model the most complex
       business requirements:
 
 
-      + Workflow and business process management rules
+      * Workflow and business process management rules
 
-      + Object modeling
+      * Object modeling
 
-      + Notifications
+      * Notifications
 
-      + Scripting
+      * Scripting
 
-      + Job scheduling
+      * Job scheduling
 
-      + Enterprise grade security and SSO
+      * Enterprise grade security and SSO
 
-      + Database management
+      * Database management
 
-      + Integrated analytics
-    title: MODEL YOUR BUSINESS LOGIC
+      * Integrated analytics
+    title: Model your business logic
     url: /img/uploads/business-logic.svg
   - alt: Flexible user portal
     content: >-
@@ -103,7 +103,7 @@ businesslogic:
       + Role-based access management
 
       + Contextual search
-    title: CUSTOMIZE YOUR USER EXPERIENCE
+    title: Customize your user experience
     url: /img/uploads/flexible-user-portal.svg
   - alt: Integration services
     content: >-
@@ -114,40 +114,40 @@ businesslogic:
       provide the tools you need to handle data at scale  including :
 
 
-      + Filtering & transformation
+      * Filtering & transformation
 
-      + Smart ETLs ™
+      * Smart ETLs
 
-      + Real-time aggregation
-    title: CONSUME YOUR (BIG) DATA
+      * Real-time aggregation
+    title: Consume your (big) data
     url: /img/uploads/integration-services.svg
   - alt: Data collection
     content: >-
       Our modular platform is designed to fit in as easily as possible with the
       rest of your IT ecosystem including ERP/CRM/eCommerce applications, cloud
-      services, authentication services etc.
+      services, authentification services etc.
 
       We provide :
 
 
-      + Connectors to leading third-party CRM solutions such as Salesforce or
+      * Connectors to leading third-party CRM solutions such as Salesforce or
       Dynamics 365.
 
-      + Access to all core functionalities through our 450 RESTful  APIs
+      * Access to all core functionalities through our 700 rich  APIs
 
-      + Advanced identity brokering including Active Directory, LDAP and social
+      * Advanced identity brokering including Active Directory, LDAP and social
       logins
 
-      + Messaging and webhooks
+      * Messaging and webhooks
 
-      + Extension library
-    title: INTEGRATE WITH OTHER SYSTEMS
+      * Extension library
+    title: Integrate with other systems
     url: /img/uploads/data-collection.svg
 technologies:
   introduction:
     content: >-
       Opencell is an open source platform that allows you to take advantage of
-      open standards and ensures no vendor lock-in…
+      open standards and ensures no vendor lock-in.
     title: Open source and open standards
   technologies:
     - alt: Java
