@@ -24,24 +24,6 @@ ourstory:
     successful implementations with major players in the telco, utility,
     mobility and retail sectors.
   title: Story
-investors:
-  logos:
-    - alt: Cap InnovEst
-      url: /img/uploads/cie-logo.jpg
-    - alt: Kima Ventures
-      url: /img/uploads/logo-kima.png
-    - alt: BPI France
-      url: /img/uploads/bpifrance.jpg
-  title: Investors & financial partners
-partners:
-  logos:
-    - alt: Gunster
-      url: /img/uploads/logo-gunster.svg
-    - alt: Florida State University
-      url: /img/uploads/logo-fsu.svg
-    - alt: Eckerd
-      url: /img/uploads/logo-eckerd.svg
-  title: Partners
 leadership:
   leaders:
     - name: DAVID MEYER
@@ -63,5 +45,13 @@ leadership:
       position: CTO
       url: /img/uploads/portrait3.jpg
   title: Leadership
+investors:
+  logos:
+    - alt: Cap InnovEst
+      url: /img/uploads/cie-logo.jpg
+    - alt: Kima Ventures
+      url: /img/uploads/logo-kima.png
+    - alt: BPI France
+      url: /img/uploads/bpifrance.jpg
+  title: Investors & financial partners
 ---
-

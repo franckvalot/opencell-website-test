@@ -317,18 +317,6 @@ var PlatformModulesPreview = createClass({
         return h('li', {className:(index == 0 ? 'active' : null), 'data-target':'#carouselModules', 'data-slide-to':'index'},'');
       }
 
-      var inner = function(item, index){
-        return h('div', {className:'carousel-item '+ (index == 0 ? 'active' : null)},
-          h('div', {className:'row justify-content-center align-items-center'},
-            h('div', {className:'col-10 col-md-8 col-lg-6'},
-              h('div', {className:'row justify-content-center'},
-                h('h1', {className:'col-12'}, item.get('title')),
-                h('div', {className:'col-12'}, item.get('content'))
-              )
-            )
-          )
-        )
-      }
       return [smallHeader(entry),
         h('section', {className:'hero-1 modules'},
           h('div', {className:'container'},
@@ -342,13 +330,24 @@ var PlatformModulesPreview = createClass({
                 )
               ),
               h('div', {className:'col-12 col-md-9 text-left content'},
-                h('div', {className:'row'},
-                  h('div', {className:'carousel slide col', id:'carouselModules', 'data-ride':'carousel'},
+                h('div', {className:'row h-100'},
+                  h('div', {className:'carousel slide col h-100', id:'carouselModules', 'data-ride':'carousel'},
                     h('ol', {className:'carousel-indicators'},
                       entry.getIn(['data', 'modules']).map(indicators)
                     ),
-                    h('div', {className:'carousel-inner'},
-                      entry.getIn(['data', 'modules']).map(inner)
+                    h('div', {className:'carousel-inner h-100'},
+                      entry.getIn(['data', 'modules']).map(function(item, index){
+                        return h('div', {className:'carousel-item '+ (index == 0 ? 'active' : null)},
+                          h('div', {className:'row justify-content-center align-items-center h-100'},
+                            h('div', {className:'col-10'},
+                              h('div', {className:'row justify-content-center'},
+                                h('h1', {className:'col-12'}, item.get('title')),
+                                h('div', {className:'col-12'}, item.get('content'))
+                              )
+                            )
+                          )
+                        );
+                      })
                     ),
                     h('a', {className:'carousel-control-prev', href:'#carouselModules', role:'button', 'data-slide':'prev'},
                       h('span', {className:'carousel-control-prev-icon', 'area-hidden':'true'}, ''),
@@ -374,17 +373,17 @@ var PlatformTechnologyPreview = createClass({
       var entry = this.props.entry;
       var technologiesdata = entry.getIn(['data', 'technologies']);
       var boxesdata = entry.getIn(['data', 'boxes']);
-      var columsdata = entry.getIn(['data', 'columns']);
       var businesslogicdata = this.props.widgetsFor('businesslogic');
 
 
       var subtitles = function(item){
         return h('h2', {className:'col-12 text-center text-md-left'}, item.get('subtitle'));
       }
+
       return [smallHeader(entry),
       h('section', {className:'hero-1'},
         h('div', {className:'container'},
-          titleanddescription(entry.getIn(['data', 'text1']))
+          titleanddescription(entry.getIn(['data', 'introduction']))
         )
       ),
       h('section', {className:'hero-1 platformtechnology'},
@@ -396,30 +395,6 @@ var PlatformTechnologyPreview = createClass({
                   h('h1', {className:'col-12'}, item.get('title')),
                   h('hr', {},),
                   h('p', {className:'col-12'}, item.get('description'))
-                )
-              );
-            })
-          )
-        )
-      ),
-      h('section', {className:'hero-1 reduce-margin'},
-        h('div', {className:'container'},
-          titleanddescription(entry.getIn(['data', 'text2']))
-        )
-      ),
-      h('section', {className:'hero-1 platformtechnology whatmakesus'},
-        h('div', {className:'container'},
-          h('div', {className:'row justify-content-center text-center'},
-            columsdata.map(function(item){
-              return h('div', {className:'col-12 col-md-4'},
-                h('div', {className:'row justify-content-center align-items-center title', dangerouslySetInnerHTML: {__html: item.get('title')}}),
-                h('div', {className:'col-12'},
-                  (item.get('content') ? item.get('content').map(function(item){
-                      return h('div', {},
-                        (item.get('title') ? h('h2', {}, item.get('title')) : null),
-                        (item.get('text') ? h('p', {}, item.get('text')) : null)
-                      )
-                  }):null)
                 )
               );
             })
@@ -608,7 +583,7 @@ var SolutionByRolePreview = createClass({
                 h('ul', {},
                   (item.get('benefits') ? item.get('benefits').map(benefits) : null )
                 ),
-                h('form',{},
+                h('form',{className:'text-right'},
                   h('button', {className:'opencell-btn'}, 'DISCOVER')
                 )
               ),
@@ -643,12 +618,11 @@ var AboutUSStoryPreview = createClass({
   render: function(){
     var entry = this.props.entry;
     var ourstorydata = entry.getIn(['data', 'ourstory']);
-    var investorsdata = entry.getIn(['data', 'investors']);
-    var partnersdata = entry.getIn(['data', 'partners']);
     var leadershipdata = entry.getIn(['data', 'leadership']);
+    var investorsdata = entry.getIn(['data', 'investors']);
 
     return [smallHeader(entry),
-    h('section', {className:'hero-1 ourstory'},
+    h('section', {className:'hero-1 reduce-margin ourstory'},
       h('div', {className:'container'},
         titleanddescription(ourstorydata),
         h('div', {className:'row margin text-center'},
@@ -669,9 +643,7 @@ var AboutUSStoryPreview = createClass({
         )
       )
     ),
-    logos(investorsdata),
-    logos(partnersdata),
-    h('section', {className:'hero-1 leadership'},
+    h('section', {className:'hero-1 reduce-margin leadership'},
       h('div', {className:'container'},
         h('div', {className:'row justify-content-center'},
           h('h1', {className:'col-12 text-center'}, leadershipdata.get('title'))
@@ -690,6 +662,7 @@ var AboutUSStoryPreview = createClass({
         )
       )
     ),
+    logos(investorsdata),
     scripts()
     ];
   }

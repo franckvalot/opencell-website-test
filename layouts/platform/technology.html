@@ -7,7 +7,7 @@
     {{ partial "header/smallheader.html" (dict "Data" $Data) }}
     <section class="hero-1">
       <div class="container">
-        {{ partial "titleanddescription.html" (dict "Data" $Data.text1) }}
+        {{ partial "titleanddescription.html" (dict "Data" $Data.introduction) }}
       </div>
     </section>
 
@@ -21,30 +21,6 @@
               <hr>
               <p class="col-12">{{ .description }}</p>
             </div>
-          </div>
-          {{ end }}
-        </div>
-      </div>
-    </section>
-
-    <section class="hero-1 reduce-margin">
-      <div class="container">
-        {{ partial "titleanddescription.html" (dict "Data" $Data.text2) }}
-      </div>
-    </section>
-
-    <section class="hero-1 platformtechnology whatmakesus">
-      <div class="container">
-        <div class="row justify-content-center text-center">
-          {{ range $Data.columns}}
-          <div class="col-12 col-md-4">
-            <div class="row justify-content-center align-items-center title">{{ .title | safeHTML }}</div>
-            {{ range .content }}
-            <div>
-              {{if .title }}<h2>{{ .title }}</h2>{{end}}
-              {{if .text }}<p>{{ .text }}</p>{{end}}
-            </div>
-            {{ end }}
           </div>
           {{ end }}
         </div>
