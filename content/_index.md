@@ -1,28 +1,31 @@
 ---
 header:
-  background:
   carousel:
-    - subtitle: Agile monetization platform.
-      title: Stop selling product. <br> Start selling recurring services.
-      button:
+    - button:
         name: Click here
         url: '#'
-    - subtitle: Mobile World Congress. Barcelona. February 25 - 28 2019
+      subtitle: Agile monetization platform.
+      title: Stop selling product. <br> Start selling recurring services.
+    - button: {}
+      subtitle: Mobile World Congress. Barcelona. February 25 - 28 2019
       title: 'Let''s talk about the future of telecoms<br> '
-      button:
-        name:
-        url:
-    - subtitle: Webinar. March 15 2019.
-      title: 'Agile utilities: how to adapt to deregulation and technological change'
-      button:
+    - button:
         name: Button
         url: '#'
+      subtitle: Webinar. March 15 2019.
+      title: 'Agile utilities: how to adapt to deregulation and technological change'
 paradigm:
   title: A new paradigm.
   videoid: 4MJvDNp7xsk
 whatweprovide:
   button: DISCOVER
-  content: "Opencell is an end-to-end platform for monetizing subscription and usage-based revenue businesses.\r\n\n\r\n\nWe enable recurring revenue businesses to quickly launch new services, to monetize new revenue streams and deliver improved customer experiences."
+  content: >-
+    Opencell is an end-to-end platform for monetizing subscription and
+    usage-based revenue businesses.
+
+
+    We enable recurring revenue businesses to quickly launch new services, to
+    monetize new revenue streams and deliver improved customer experiences.
   image: /img/uploads/hp_schema.png
   title: What we provide.
 whatmakesus:
@@ -134,3 +137,4 @@ learnmore:
     - videoid: RUML7IH2JnM
     - videoid: NvCVdZyY9fI
 ---
+
