@@ -143,14 +143,22 @@ var IndexPreview = createClass({
             ),
             h('div', {className:'carousel-inner'},
               (headerdata.get('carousel') ?
-              headerdata.get('carousel').map(function(item, index){
+                headerdata.get('carousel').map(function(item, index){
                 return h('div', {className:(index == 0 ? 'carousel-item active':'carousel-item')},
-                  h('h1', {dangerouslySetInnerHTML: {__html: item.get('title')}}),
-                  h('p', {},  item.get('subtitle'))
+                  h('div', {className:'row align-items-center h-100'},
+                    h('div', {className:'col'},
+                      h('h1', {dangerouslySetInnerHTML: {__html: item.get('title')}}),
+                      h('p', {},  item.get('subtitle')),
+                      (item.get('button') ?
+                        (item.get('button').get('name') && item.get('button').get('url') ?
+                          h('form', {}, h('button', {className:'opencell-btn'}, item.get('button').get('name')))
+                        :null)
+                      :null)
+                    )
+                  )
                 );
               })
-              :
-              null)
+              :null)
             ),
             h('a', {className:'carousel-control-prev', href:'#'},
               h('span', {className:'carousel-control-prev-icon'},''),

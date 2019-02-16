@@ -34,6 +34,12 @@ collections:
                 - label: Subtitle
                   name: subtitle
                   widget: string
+                - label: Button
+                  name: button
+                  widget: object
+                  fields:
+                    - {label: Name, name: name, widget: string, required: false}
+                    - {label: Url, name: url, widget: string, required: false}
         - label: Paradigm
           name: paradigm
           widget: object

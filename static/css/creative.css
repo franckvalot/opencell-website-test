@@ -285,12 +285,14 @@ h2{
 /* carousel */
   header .carousel{
     position: absolute;
+    height: 100%;
     top: 0%;
     bottom: 0%;
     width: 100%;
     margin: 0;
   }
   header .carousel-inner{
+    height: inherit;
     padding: 0;
   }
   header .carousel-item{

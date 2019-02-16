@@ -9,8 +9,20 @@
           <div class="carousel-inner">
             {{ range $index, $element := .carousel }}
             <div class="carousel-item {{if eq $index 0}}active{{end}}">
-                <h1>{{ $element.title | safeHTML }}</h1>
-                <p>{{ $element.subtitle }}</p>
+              <div class="row align-items-center h-100">
+                <div class="col">
+                  <h1>{{ $element.title | safeHTML }}</h1>
+                  <p>{{ $element.subtitle }}</p>
+                  {{ with $element.button }}
+                  {{ if (and .name .url)}}
+                  <form action="{{.url}}" method="get">
+                    <button class="opencell-btn" type="button" name="button">{{ .name}}</button>
+                  </form>
+                  {{ end }}
+                  {{ end }}
+                </div>
+
+              </div>
             </div>
             {{end}}
           </div>
