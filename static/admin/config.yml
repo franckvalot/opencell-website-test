@@ -24,6 +24,10 @@ collections:
           name: header
           widget: object
           fields:
+            - label: Background Image
+              name: background
+              widget: image
+              required: false
             - label: Carousel
               name: carousel
               widget: list

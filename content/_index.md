@@ -1,5 +1,6 @@
 ---
 header:
+  background:
   carousel:
     - subtitle: Agile monetization platform.
       title: Stop selling product. <br> Start selling recurring services.
