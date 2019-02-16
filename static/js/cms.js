@@ -130,7 +130,7 @@ var IndexPreview = createClass({
       var worktogetherdata = entry.getIn(['data', 'worktogether']);
       var learnmoredata = entry.getIn(['data', 'learnmore']);
 
-      return [h('header', {className:'hero', [(headerdata.get('background') ? backgroundImage: 'url(' + headerdata.get('background') +')'}:null)]},
+      return [h('header', {className:'hero', [(headerdata.get('background') ? (style:{backgroundImage: 'url(' + headerdata.get('background') +')'}):null)]},
         h('div', {className:'header-content-inner'},
           h('div', {className:'carousel slide row align-items-center', id:'carouselHeader', 'data-ride':'carousel'},
             h('ol', {className:'carousel-indicators'},
