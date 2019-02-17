@@ -14,9 +14,9 @@ date: 2019-01-17T08:05:55.197Z
 articlestags:
   - billing
   - cloud
-  - IaaS
-  - Paas
-  - SaaS
+  - iaas
+  - paas
+  - saas
 thumbnail: /img/uploads/img_blog.jpg
 ---
 Cloud computing promises IT on demand—perfectly adapted to enterprise needs and quick to react to changing business circumstances. To deliver on this promise, cloud providers require sophisticated monetization and billing go-to-market strategies that will serve as strategic differentiators in a crowded, hyper-competitive market.
