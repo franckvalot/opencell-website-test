@@ -6,11 +6,10 @@ subtitle: >-
   needs.
 introduction:
   content: >-
-    Our growing marketplace of connectors to market-leading apps makes it easy
-    to connect Opencell with the rest of your IT ecosystem. From CRM to payments
-    to downstream integration with your business intelligence and general ledger
-    system, we have the capacity to integrate quickly with your core
-    applications.
+    Our connectors to market-leading apps makes it easy to connect Opencell with
+    the rest of your IT ecosystem. From CRM to payments to downstream
+    integration with your business intelligence and general ledger system, we
+    have the capacity to integrate quickly with your core applications.
   title: Our growing ecosystem.
 ecosysindustags:
   - CRM
