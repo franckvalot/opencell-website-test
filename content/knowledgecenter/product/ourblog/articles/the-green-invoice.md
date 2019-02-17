@@ -1,6 +1,6 @@
 ---
 type: blogarticle
-draft: 'true'
+draft: 'false'
 title: The green invoice
 subtitle: How smart billing can help create a greener economy
 author: Ethan
