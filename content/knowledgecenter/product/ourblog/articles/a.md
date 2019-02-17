@@ -1,6 +1,6 @@
 ---
 type: blogarticle
-draft: 'true'
+draft: 'false'
 title: Billing for the cloud
 subtitle: >-
   Don't let your billing system limit your capacity to create a unique value
