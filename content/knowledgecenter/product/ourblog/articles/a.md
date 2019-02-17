@@ -12,7 +12,7 @@ description: >-
 author: Ethan Beardsley
 date: 2019-01-17T08:05:55.197Z
 articlestags:
-  - Billing
+  - billing
   - cloud
   - IaaS
   - Paas
