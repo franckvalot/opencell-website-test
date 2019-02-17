@@ -128,6 +128,8 @@ It is particularly important that the cloud provider understand all of these cos
 
 ## Multi-channel and self-service
 
-Customers expect to take care of themselves. They need to be able to access their subscriptions and cloud usage data. They need to be able to simulate the impact of changes in their plan and modify their subscriptions online. In evaluating your billing software, you should look at how easy it will be to integrate your billing solution with your customer
+Customers expect to take care of themselves. They need to be able to access their subscriptions and cloud usage data. They need to be able to simulate the impact of changes in their plan and modify their subscriptions online. In evaluating your billing software, you should look at how easy it will be to integrate your billing solution with your customer.
+
+# Conclusion
 
 Competition is heating up in the cloud market. As hyperscale players like AWS, Azure and Amazon continue to capture battle for market share, significant opportunities still exist for smaller players to create differentiated, relevant offers in their market segments. One of the key differentiators for small and mid-size cloud providers will be their ability to rely on agile monetization and billing systems to create tailored, relevant offers for their respective markets and to efficiently manage relationships with third-party partners.
