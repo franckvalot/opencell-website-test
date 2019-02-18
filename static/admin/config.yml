@@ -372,6 +372,19 @@ collections:
                 fields:
                   - {label: Alternative, name: alt, widget: string}
                   - {label: Logo, name: url, widget: image}
+          - label: We work together
+            name: worktogether
+            widget: object
+            fields:
+              - {label: Title, name: title, widget: string}
+              - {label: Subtitle, name: subtitle, widget: string}
+              - label: Testimonials
+                name: testimonials
+                widget: list
+                allow_add: true
+                fields:
+                - {label: Testimonial, name: testimonial, widget: string}
+                - {label: Author, name: author, widget: string}
       - label: Workplace & jobs
         name: aboutusworkplaceandjobs
         file: content/aboutus/workplaceandjobs.md

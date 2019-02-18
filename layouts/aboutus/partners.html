@@ -12,7 +12,8 @@
     {{ end }}
 
 
-    {{ partial "sections/worktogether.html" (.Site.GetPage "_index.md").Params.worktogether }}
+    {{ partial "testimonials.html" $Data.worktogether }}
+
 
     <section class="hero-1">
       <div class="container">
