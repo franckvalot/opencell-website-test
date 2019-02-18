@@ -736,8 +736,8 @@ section.contact .info{
     width: 32px;
     height: 32px;
   }
-  section.leadership .box .socialnetworks a img +
-  section.leadership .box .socialnetworks a img{
+  section.leadership .box .socialnetworks a  +
+  section.leadership .box .socialnetworks a {
     margin-left: 10px;
   }
 
