@@ -284,7 +284,7 @@ var IndexPreview = createClass({
         )
       ),
       logos(ourcustomersdata),
-      worktogether(worktogetherdata),
+      testimonials(worktogetherdata),
       h('section', {className:'hero-1'},
         h('div', {className:'container'},
           h('div', {className:'row justify-content-center text-center'},
@@ -746,10 +746,12 @@ var AboutUsParnersPreview = createClass({
       var entry = this.props.entry;
 
       return [smallHeader(entry),
-        (entry.getIn(['data', 'sections']) ? entry.getIn(['data', 'sections']).map(function(item){
+        (entry.getIn(['data', 'sections']) ?
+          entry.getIn(['data', 'sections']).map(function(item){
             return logos(item);
-        }):null),
-        worktogether(entry.getIn(['data', 'worktogether'])),
+          })
+        :null),
+        testimonials(entry.getIn(['data', 'worktogether']))
       ];
   }
 })
