@@ -662,7 +662,9 @@ var AboutUSStoryPreview = createClass({
                   (item.get('socialnetworks') ?
                     h('div', {className:'socialnetworks'},
                       item.get('socialnetworks').map(function(item){
-                        return h('a', {href:(item.get('url') || '#')}, h('img', {src:item.get('icon'), alt:item.get('name')});
+                        return h('a', {href:(item.get('url') || '#')},
+                          h('img', {src:item.get('icon'), alt:item.get('name')})
+                        );
                       })
                     )
                   :null)
