@@ -1,9 +1,10 @@
 ---
+draft: 'false'
 title: Software engineer (intern)
 subtitle: >-
   Part of our back-end team, you will contribute to building core platform
   capabilities using the latest open source technologies. 
-description: Blablabla
+description: Sofware engineer (intern) based in Paris office
 date: 2019-01-17T08:05:55.197Z
 button: APPLY
 thumbnail: /img/uploads/portrait3.jpg
