@@ -658,7 +658,14 @@ var AboutUSStoryPreview = createClass({
                 h('img', {src: item.get('url'), alt: item.get('alt')}),
                 h('div', {},
                   h('h2', {}, (item.get('name') ?  item.get('name').toUpperCase():null)),
-                  h('p', {}, item.get('position'))
+                  h('p', {}, item.get('position')),
+                  (item.get('socialnetworks') ?
+                    h('div', {className:'socialnetworks'},
+                      item.get('socialnetworks').map(function(item){
+                        return h('a', {href:(item.get('url') || '#')}, h('img', {src:item.get('icon'), alt:item.get('name')});
+                      })
+                    )
+                  :null)
                 )
               );
             })
