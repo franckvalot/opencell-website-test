@@ -1,6 +1,7 @@
 baseURL = ""
 languageCode = "en-us"
 title = "Opencellsoft"
+disqusShortname = "opencell"
 
 enableEmoji = "true"
 

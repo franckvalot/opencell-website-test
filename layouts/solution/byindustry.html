@@ -32,12 +32,9 @@
           </div>
           <div class="col-12 content">
             <div class="row justify-content-center">
-              {{ range .contents }}
               <div class="col-10 col-md">
-                <h2>{{ .title }}</h2>
-                <p>{{ .content }}</p>
+                <div class="col">{{ .content | markdownify }}</div>
               </div>
-              {{ end }}
               <div class="w-100"></div>
               <form action="{{ $Site.Params.url.getInTouch }}" method="get">
                 <button type="submit" name="button" class="opencell-btn">TRY NOW</button>

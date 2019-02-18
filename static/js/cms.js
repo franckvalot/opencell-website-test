@@ -530,12 +530,7 @@ var SolutionByIndustryPreview = createClass({
               ),
               h('div', {className:'col-12 content'},
                 h('div', {className:'row justify-content-center'},
-                  (item.get('contents') ? item.get('contents').map(function(item){
-                    return h('div', {className:'col-10 col-md'},
-                      h('h2', {className:''}, item.get('title')),
-                      h('p', {className:''}, item.get('content'))
-                    );
-                  }) : null)
+                  h('div', {className:'col'}, item.get('content'))
                 )
               ),
               h('div', {className:'w-100'}, ''),
