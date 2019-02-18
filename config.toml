@@ -35,7 +35,7 @@ enableEmoji = "true"
       releases = "/knowledgecenter/developer/releases/"
 
   [params.url]
-    getInTouch  = "#"
+    getInTouch  = "/contact/"
     getDemo  = "#"
     contact = "/contact/"
 

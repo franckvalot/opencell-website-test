@@ -11,7 +11,7 @@ ourstory:
     - content: 55 FTEs based primarily in France and Morocco.
   content: >-
     Opencell was created in 2015 to leverage an open source telco billing
-    project initiated in 2007 by David Meyer, its current CEO. 
+    project initiated in 2007 by David Meyer, its current CEO.
 
 
     Our mission was to provide the first agile monetization platform capable of
@@ -29,21 +29,45 @@ leadership:
     - name: DAVID MEYER
       position: CEO
       url: /img/uploads/portrait1.jpg
+      socialnetworks:
+        - name: LinkedIn
+          url: \#
+          icon:
     - name: ETHAN BEARDSLEY
       position: CMO & CFO
       url: /img/uploads/portrait2.jpg
+      socialnetworks:
+        - name: LinkedIn
+          url: \#
+          icon:
     - name: STEPHANE DINE
       position: COO
       url: /img/uploads/portrait4.jpg
+      socialnetworks:
+        - name: LinkedIn
+          url: \#
+          icon:
     - name: CEDRIC BASSAGET
       position: VP Sales
       url: /img/uploads/portrait5.jpg
+      socialnetworks:
+        - name: LinkedIn
+          url: \#
+          icon:
     - name: EMMANUEL PIERRE
       position: CPO / Head of Product
       url: /img/uploads/portrait6.jpg
+      socialnetworks:
+        - name: LinkedIn
+          url: \#
+          icon: 
     - name: WASSIM DRIRA
       position: CTO
       url: /img/uploads/portrait3.jpg
+      socialnetworks:
+        - name: LinkedIn
+          url: \#
+          icon:
   title: Leadership
 investors:
   logos:

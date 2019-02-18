@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 {{ $Data := .Params }}
+{{ $Site := .Site }}
 <html>
   {{ partial "head.html" . }}
   <body>
@@ -38,7 +39,7 @@
               </div>
               {{ end }}
               <div class="w-100"></div>
-              <form action="{{ .Site.Params.url.getInTouch }}" method="get">
+              <form action="{{ $Site.Params.url.getInTouch }}" method="get">
                 <button type="submit" name="button" class="opencell-btn">TRY NOW</button>
               </form>
             </div>
