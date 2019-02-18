@@ -519,18 +519,18 @@ var SolutionByIndustryPreview = createClass({
         )
       ),
     ),
-    industriesdata.map(function(item){
+    this.props.widgetsFor('industries').map(function(item){
         return h('section', {className:'hero-1 reduce-margin byindustry'},
           h('div', {className:'container'},
             h('div', {className:'row justify-content-center'},
-              h('h1', {className:'col text-center'}, item.get('title')),
+              h('h1', {className:'col text-center'}, item.getIn(['data', 'title'])),
               h('div', {className:'w-100'}, ),
               h('div', {className:'col-12 col-md-10  embed-responsive embed-responsive-16by9 video'},
-                h('iframe', {src:'https://www.youtube.com/embed/' + item.get('videoid') + '?controls=0', frameborder:'0', allow:'accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture', allowfullscreen:'true'}, '')
+                h('iframe', {src:'https://www.youtube.com/embed/' + item.getIn(['data', 'videoid']) + '?controls=0', frameborder:'0', allow:'accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture', allowfullscreen:'true'}, '')
               ),
               h('div', {className:'col-12 content'},
                 h('div', {className:'row justify-content-center'},
-                  h('div', {className:'col'}, item.get('content'))
+                  h('div', {className:'col'}, item.getIn(['widgets', 'content']))
                 )
               ),
               h('div', {className:'w-100'}, ''),
