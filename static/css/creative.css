@@ -732,6 +732,15 @@ section.contact .info{
     }
   }
 
+  section.leadership .box .socialnetworks a img{
+    width: 32px;
+    height: 32px;
+  }
+  section.leadership .box .socialnetworks a img +
+  section.leadership .box .socialnetworks a img{
+    margin-left: 10px;
+  }
+
 /* businessmodel */
   section.businessmodel .box {
     background-color: #F9F9F8;

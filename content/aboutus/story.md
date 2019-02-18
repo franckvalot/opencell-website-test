@@ -31,43 +31,46 @@ leadership:
       url: /img/uploads/portrait1.jpg
       socialnetworks:
         - name: LinkedIn
-          url: \#
-          icon:
+          url: '#'
+          icon: /img/uploads/icon-square-linkedin.svg
     - name: ETHAN BEARDSLEY
       position: CMO & CFO
       url: /img/uploads/portrait2.jpg
       socialnetworks:
         - name: LinkedIn
-          url: \#
-          icon:
+          url: '#'
+          icon: /img/uploads/icon-square-linkedin.svg
     - name: STEPHANE DINE
       position: COO
       url: /img/uploads/portrait4.jpg
       socialnetworks:
         - name: LinkedIn
-          url: \#
-          icon:
+          url: '#'
+          icon: /img/uploads/icon-square-linkedin.svg
     - name: CEDRIC BASSAGET
       position: VP Sales
       url: /img/uploads/portrait5.jpg
       socialnetworks:
         - name: LinkedIn
-          url: \#
-          icon:
+          url: '#'
+          icon: /img/uploads/icon-square-linkedin.svg
+        - name: Twitter
+          url: '#'
+          icon: /img/uploads/icon-square-twitter.svg
     - name: EMMANUEL PIERRE
       position: CPO / Head of Product
       url: /img/uploads/portrait6.jpg
       socialnetworks:
         - name: LinkedIn
-          url: \#
-          icon: 
+          url: '#'
+          icon: /img/uploads/icon-square-linkedin.svg
     - name: WASSIM DRIRA
       position: CTO
       url: /img/uploads/portrait3.jpg
       socialnetworks:
         - name: LinkedIn
-          url: \#
-          icon:
+          url: '#'
+          icon: /img/uploads/icon-square-linkedin.svg
   title: Leadership
 investors:
   logos:
