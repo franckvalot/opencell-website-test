@@ -652,7 +652,7 @@ var AboutUSStoryPreview = createClass({
           h('h1', {className:'col-12 text-center'}, leadershipdata.get('title'))
         ),
         h('div', {className:'row justify-content-center'},
-          (leadershipdata.get('leaders') =! null ?
+          (leadershipdata.get('leaders') ?
             leadershipdata.get('leaders').map(function(item){
               return h('div', {className:'col-8 col-md-6 col-lg-4 box text-center'},
                 h('img', {src: item.get('url'), alt: item.get('alt')}),
@@ -661,7 +661,8 @@ var AboutUSStoryPreview = createClass({
                   h('p', {}, item.get('position'))
                 )
               );
-          }):null)
+            })
+          :null)
         )
       )
     ),
