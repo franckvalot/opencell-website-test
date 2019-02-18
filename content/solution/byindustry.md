@@ -5,7 +5,10 @@ subtitle: >-
   We provide the rich functionality and configurability that can cover any
   industry requirement.
 industries:
-  - content: >-
+  - nav: TELCO
+    title: 'Telco, Cloud & Internet of Things'
+    videoid: Bey4XXJAqS8
+    content: >-
       ## CRITICAL FEATURES
 
       With its robust usage-based rating capability and scalable technology,
@@ -26,9 +29,9 @@ industries:
       * Orange
 
       * Salt Mobile
-    nav: TELCO
-    title: 'Telco, Cloud & Internet of Things'
-    videoid: Bey4XXJAqS8
+  - nav: 'UTILITIES '
+    title: Utilities & Energy
+    videoid: xcJtL7QggTI
     content: >-
       ## CRITICAL FEATURES
 
@@ -48,10 +51,10 @@ industries:
       * Rensource
 
       * Total Spring
-    nav: 'UTILITIES '
-    title: Utilities & Energy
+  - nav: MOBILITY
+    title: Mobility & Transport
     videoid: xcJtL7QggTI
-  - content: >-
+    content: >-
       ## CRITICAL FEATURES
 
       Mobility services are changing the way transportation is consumed.
@@ -67,10 +70,10 @@ industries:
       * PSA
 
       * Velib 2
-    nav: MOBILITY
-    title: Mobility & Transport
+  - nav: RETAIL
+    title: 'Retail & Consumer '
     videoid: xcJtL7QggTI
-  - content: >-
+    content: >-
       ## CRITICAL FEATURES
 
       Retailers are increasingly adopting recurring revenue models in order
@@ -83,7 +86,5 @@ industries:
       * Fnac
 
       * Darty
-    nav: RETAIL
-    title: 'Retail & Consumer '
-    videoid: xcJtL7QggTI
+
 ---

@@ -66,9 +66,11 @@
     </section>
     {{ end }}
 
-    <aside id="comments">
-      <div><h3>Comments</h3></div>
-      {{ template "_internal/disqus.html" . }}
+    <aside id="comments" class="hero-1">
+      <div class="container">
+        <div><h3>Comments</h3></div>
+        {{ template "_internal/disqus.html" . }}
+      </div>
     </aside>
 
     {{ partial "sections/getdemo.html" . }}
