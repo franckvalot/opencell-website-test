@@ -400,11 +400,7 @@ section.footer li {
 /* SECTIONS
 ===========*/
   section.hero-1,
-  section.hero-2,
-  section.video,
-  section.article,
-  section.releases,
-  section.releaseschedule{
+  section.hero-2{
     padding: 20px 0;
     margin-top: 20px;
   }
@@ -416,21 +412,13 @@ section.footer li {
   }
   @media (min-width:768px){
     section.hero-1,
-    section.hero-2,
-    section.video,
-    section.article,
-    section.releases,
-    section.releaseschedule{
+    section.hero-2{
       padding: 40px 0;
     }
   }
   @media (min-width:992px){
     section.hero-1,
-    section.hero-2,
-    section.video,
-    section.article,
-    section.releases,
-    section.releaseschedule{
+    section.hero-2{
       margin-top: 140px;
       margin-bottom: 60px;
     }

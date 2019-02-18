@@ -5,7 +5,7 @@
   <body>
     {{ partial "header/navBar.html" . }}
 
-    <section class="releaseschedule">
+    <section class="hero-1 releaseschedule">
       <div class="container">
         <div class="row justify-content-center text-left">
           <p class="col col-md-10 col-lg-8 publication-date"><span>Published on: </span><span>{{ dateFormat "02 Jan 2006" .Date }}</span><span>, by: </span><span class="author">{{ .Params.author }}</span></p>
