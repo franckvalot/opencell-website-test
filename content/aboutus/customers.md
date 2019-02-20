@@ -7,34 +7,34 @@ subtitle: >-
 sections:
   - logos:
       - alt: Engie
-        url: /img/uploads/logo-gunster.svg
+        url: /img/uploads/customer-logo-engie.png
       - alt: Plüm Energie
-        url: /img/uploads/logo-mosaic.svg
+        url: /img/uploads/customer-logo-plum.svg
       - alt: Rensource
-        url: /img/uploads/logo-rayonier.svg
+        url: /img/uploads/customer-logo-rensource.png
       - alt: Total Spring
-        url: /img/uploads/logo-fl-chamber.svg
+        url: /img/uploads/customer-logo-total.png
       - alt: SEIC Teledis
-        url: /img/uploads/logo-gunster.svg
+        url: /img/uploads/customer-logo-seic_teledis.png
     title: Utilities
   - logos:
       - alt: A-To-Be (Brisa Group)
-        url: /img/uploads/logo-adidas.svg
+        url: /img/uploads/customer-logo-a_to_be.png
       - alt: Ile de France Mobilités
-        url: /img/uploads/logo-dona.svg
+        url: /img/uploads/customer-logo-idf.png
       - alt: Parkeon
-        url: /img/uploads/logo-adidas.svg
+        url: /img/uploads/customer-logo-parkeon.png
       - alt: PSA
-        url: /img/uploads/logo-mosaic.svg
+        url: /img/uploads/customer-logo-psa.png
       - alt: Smoove
-        url: /img/uploads/logo-eckerd.svg
+        url: /img/uploads/customer-logo-smoove.png
     title: Mobility & transport
   - logos:
       - alt: Fnac Darty
-        url: /img/uploads/logo-eckerd.svg
+        url: /img/uploads/customer-logo-fnac_darty.png
       - alt: Etiam
         url: /img/uploads/logo-eckerd.svg
       - alt: Hubicus (groupe BVA)
-        url: /img/uploads/logo-rayonier.svg
+        url: /img/uploads/customer-logo-hubicus.png
     title: Retail & other
 ---

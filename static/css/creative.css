@@ -810,7 +810,7 @@ section.contact .info{
     z-index: 0;
   }
   .customers .logos img {
-    padding: 45px;
+    padding: 45px 15px;
   }
   @media(min-width:768px) {
     .customers .box {
@@ -837,7 +837,7 @@ section.contact .info{
       padding: 45px 25px 45px calc(25px + 42px);
     }
     .customers .logos img {
-      padding: 35px;
+      padding: 35px 15px;
     }
   }
   @media (min-width:1200px){
