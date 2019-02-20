@@ -110,6 +110,7 @@ collections:
               fields:
               - {label: Testimonial, name: testimonial, widget: string}
               - {label: Author, name: author, widget: string}
+              - {label: Portrait, name: portrait, widget: image, required: false}
         - label: Learn more
           name: learnmore
           widget: object
@@ -387,6 +388,7 @@ collections:
                 fields:
                 - {label: Testimonial, name: testimonial, widget: string}
                 - {label: Author, name: author, widget: string}
+                - {label: Portrait, name: portrait, widget: image, required: false}
       - label: Workplace & jobs
         name: aboutusworkplaceandjobs
         file: content/aboutus/workplaceandjobs.md

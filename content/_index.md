@@ -131,7 +131,6 @@ worktogether:
         quickly developed and integrated into the core open source model. The
         support team was very proactive and quickly helped us to resolve all
         technical issues encountered during the implementation phase.
-      portrait: /img/uploads/portrait1.jpg
   title: We work together.
 learnmore:
   subtitle: FEATURED VIDEOS
