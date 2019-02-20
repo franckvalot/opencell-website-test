@@ -15,10 +15,13 @@
             {{ range $index, $element := .testimonials }}
             <div class="carousel-item {{if eq $index 0}}active{{end}}">
               <div class="row justify-content-center align-items-center h-100">
-                <div class="col-12">
+                <div class="col">
                   <div class="row justify-content-center">
-                    <div class="quote text-center">
+                    <div class="col-12 col-lg-10 quote text-center">
                       {{ $element.testimonial }}
+                    </div>
+                    <div class="d-md-none d-lg-block col-lg-2">
+                      <img class="img-fluid" src="{{ $element.portrait}}" alt="{{$element.author}}">
                     </div>
                     <div class="w-100"></div>
                     <hr>

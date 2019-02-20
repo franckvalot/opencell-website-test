@@ -297,7 +297,7 @@ h2{
   }
   header .carousel-item{
     height: inherit;
-    padding: 0 15%;
+    padding: 0 40px;
     margin: auto;
   }
   header .carousel-indicators{
@@ -657,6 +657,11 @@ section.contact .info{
     font-size: 15px;
     line-height: 19px;
     letter-spacing: 0.010em;
+  }
+
+  section.worktogether .testimonials img{
+    max-height: 300px;
+    margin-top: 20px;
   }
 /* getdemo */
   section.getdemo {

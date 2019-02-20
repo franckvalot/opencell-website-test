@@ -108,6 +108,7 @@ worktogether:
         to manage the complex financial flows matrix of ThingPark marketplace,
         and also make it available to our network operator partners for their
         own IoT billing & settlement needs.
+      portrait: /img/uploads/portrait1.jpg
     - author: Eric Le Bihan - CEO @ Etiam
       testimonial: >-
         Opencell provided a flexible billing solution that was able to respond
@@ -118,6 +119,7 @@ worktogether:
         improved since we’re now able to bill on a monthly instead of quarterly
         basis. We’ve also improved our revenue assurance and been able to
         reallocate the FTE saved on billing tasks to new more value-added tasks.
+      portrait: /img/uploads/portrait1.jpg
     - author: Jean-Luc Raingeval - Project Manager @ Orange
       testimonial: >-
         For the launch of the new Orange Cloud For Business platform, we were
@@ -129,6 +131,7 @@ worktogether:
         quickly developed and integrated into the core open source model. The
         support team was very proactive and quickly helped us to resolve all
         technical issues encountered during the implementation phase.
+      portrait: /img/uploads/portrait1.jpg
   title: We work together.
 learnmore:
   subtitle: FEATURED VIDEOS
@@ -137,4 +140,3 @@ learnmore:
     - videoid: RUML7IH2JnM
     - videoid: NvCVdZyY9fI
 ---
-
