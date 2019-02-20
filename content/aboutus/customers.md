@@ -22,8 +22,8 @@ sections:
         url: /img/uploads/customer-logo-a_to_be.png
       - alt: Ile de France Mobilités
         url: /img/uploads/customer-logo-idf.png
-      - alt: Parkeon
-        url: /img/uploads/customer-logo-parkeon.png
+      - alt: Flowbird
+        url: /img/uploads/customer-logo-flowbird.png
       - alt: PSA
         url: /img/uploads/customer-logo-psa.png
       - alt: Smoove

@@ -488,6 +488,8 @@ section.contact .info{
 /* logos */
 .customer-logo img {
   padding: 10% 20%;
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
 }
 
 /* provide */
@@ -816,6 +818,8 @@ section.contact .info{
   }
   .customers .logos img {
     padding: 45px 15px;
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
   }
   @media(min-width:768px) {
     .customers .box {
