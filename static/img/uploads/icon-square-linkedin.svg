@@ -1,1 +1,8 @@
-<?xml version="1.0" ?><!DOCTYPE svg  PUBLIC '-//W3C//DTD SVG 1.0//EN'  'http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd'><svg enable-background="new 0 0 32 32" height="32px" id="Layer_1" version="1.0" viewBox="0 0 32 32" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g><path d="M32,30c0,1.104-0.896,2-2,2H2c-1.104,0-2-0.896-2-2V2c0-1.104,0.896-2,2-2h28c1.104,0,2,0.896,2,2V30z" fill="#007BB5"/><g><rect fill="#FFFFFF" height="14" width="4" x="7" y="11"/><path d="M20.499,11c-2.791,0-3.271,1.018-3.499,2v-2h-4v14h4v-8c0-1.297,0.703-2,2-2c1.266,0,2,0.688,2,2v8h4v-7    C25,14,24.479,11,20.499,11z" fill="#FFFFFF"/><circle cx="9" cy="8" fill="#FFFFFF" r="2"/></g></g><g/><g/><g/><g/><g/><g/></svg>
+<svg id="icon-square-linkedin" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+  <rect id="square" data-name="square" width="32" height="32" fill="#007bb5"/>
+  <g id="Groupe_1" data-name="Groupe 1">
+    <rect id="Rectangle_1" data-name="Rectangle 1" width="4" height="14" transform="translate(7 11)" fill="#fff"/>
+    <path id="Tracé_5" data-name="Tracé 5" d="M20.5,11c-2.791,0-3.271,1.018-3.5,2V11H13V25h4V17a1.8,1.8,0,0,1,2-2,1.8,1.8,0,0,1,2,2v8h4V18C25,14,24.479,11,20.5,11Z" fill="#fff"/>
+    <circle id="Ellipse_1" data-name="Ellipse 1" cx="2" cy="2" r="2" transform="translate(7 6)" fill="#fff"/>
+  </g>
+</svg>
