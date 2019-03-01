@@ -25,8 +25,8 @@ function smallHeader(item){
           h('div', {className:'container'},
             h('div', {className:'row align-items-center'},
               h('div', {className:'col col-md-10'},
-                h('h1', {dangerouslySetInnerHTML: {__html: item.getIn(['data', 'title'])}}, ""),
-                h('p', {dangerouslySetInnerHTML: {__html: item.getIn(['data', 'subtitle'])}}, "")
+                h('h1', {dangerouslySetInnerHTML: {__html: item.getIn(['data', 'title'])}}),
+                h('p', {dangerouslySetInnerHTML: {__html: item.getIn(['data', 'subtitle'])}})
               )
             )
           )
@@ -56,7 +56,7 @@ function sectiondescription(number, description){
               h('div', {className:'col d-none d-md-block'},
                 h('span', {}, number),
                 h('hr', {}),
-                h('span', {dangerouslySetInnerHTML: {__html:description}}, "")
+                h('span', {dangerouslySetInnerHTML: {__html:description}})
               )
             )
           )
@@ -65,7 +65,7 @@ function sectiondescription(number, description){
 
 function titleanddescription(item){
   return [h('div', {className:'row justify-content-center'},
-      h('h1', {className:'col-12 text-center', dangerouslySetInnerHTML: {__html: item.get('title')}}, "")
+      h('h1', {className:'col-12 text-center', dangerouslySetInnerHTML: {__html: item.get('title')}})
     ),
     h('div', {className:'row justify-content-center text-center'},
       h('div', {className:'col-10 col-md-8'}, item.get('content'))
