@@ -1149,37 +1149,8 @@ section.contact .info{
   section.platformtechnology.businesslogic .carousel-indicators li{
     border: 2px solid #EC6156;
   }
-  section.platformtechnology.businesslogic .carousel-indicators li + li{
-    margin-top: 10px;
-  }
   section.platformtechnology.businesslogic .carousel-indicators li.active{
     background-color: #EC6156;
-  }
-
-  section.platformtechnology.businesslogic .carousel-indicators{
-    display: table;
-    position:absolute;
-    top:0;
-    bottom:0;
-    margin:auto 0;
-    height: auto;
-    right:0;
-    left:auto;
-    width:auto;
-  }
-
-  section.platformtechnology.businesslogic .carousel-inner> .carousel-item.carousel-item-next ,
-  section.platformtechnology.businesslogic .carousel-inner > .carousel-item.active.carousel-item-right{
-      transform: translate3d(0, 100%, 0); -webkit-transform: translate3d(0, 100%, 0); -ms-transform: translate3d(0, 100%, 0); -moz-transform: translate3d(0, 100%, 0); -o-transform: translate3d(0, 100%, 0);  top: 0;
-  }
-  section.platformtechnology.businesslogic .carousel-inner > .carousel-item.carousel-item-prev ,
-  section.platformtechnology.businesslogic .carousel-inner > .carousel-item.active.carousel-item-left{
-      transform: translate3d(0,-100%, 0); -webkit-transform: translate3d(0,-100%, 0);  -moz-transform: translate3d(0,-100%, 0);-ms-transform: translate3d(0,-100%, 0); -o-transform: translate3d(0,-100%, 0); top: 0;
-  }
-  section.platformtechnology.businesslogic .carousel-inner > .carousel-item.carousel-item-prev.carousel-item-right ,
-  section.platformtechnology.businesslogic .carousel-inner > .carousel-item.carousel-item-next.carousel-item-left ,
-  section.platformtechnology.businesslogic .carousel-inner > .carousel-item.active{
-      transform:translate3d(0,0,0); -webkit-transform:translate3d(0,0,0);-ms-transform:translate3d(0,0,0);; -moz-transform:translate3d(0,0,0); -o-transform:translate3d(0,0,0); top:0;
   }
 
   section.platformtechnology.businesslogic .img{
