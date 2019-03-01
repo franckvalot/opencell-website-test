@@ -1204,6 +1204,10 @@ section.contact .info{
     display: block;
     margin: 0;
   }
+  section.byindustry  div.navigation,
+  section.byrole  div.navigation{
+    margin: 71px 0;
+  }
   @media (min-width:768px){
     section.ecosystem  div.navigation {
       height: 114px;
