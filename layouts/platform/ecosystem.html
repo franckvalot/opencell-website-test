@@ -32,7 +32,6 @@
       </div>
     </section>
 
-
     <section class="hero-1 reduce-margin text-center">
       <div class="container">
         <div class="row justify-content-center">
@@ -43,18 +42,15 @@
                   .innactive [id^='box']{
                     fill: #EBEAEA;
                   }
-
                   .innactive [id^='txt'] path{
                     fill: #8297a3;
                   }
-
-
-                  [id^='box']:hover,
-                  .hover [id^='box'] {
+                  .rosace > g:not(.active) [id^='box']:hover,
+                  .hover:not(.active) [id^='box'] {
                     fill: #FF847E;
                   }
-                  [id^='box']:hover + [id^='txt'] path,
-                  .hover [id^='txt'] path{
+                  .rosace > g:not(.active) [id^='box']:hover + [id^='txt'] path,
+                  .hover:not(.active) [id^='txt'] path{
                     fill: white;
                   }
                 </style>
@@ -428,12 +424,18 @@
           {{range .ecosysroletags}}{{ $scratch.Add "roletagdata" (slice (anchorize .))}}{{end}}
 
           <div class="col-6 col-md-4 col-lg-3 logo">
-            <img src="{{ .url }}" class="img-fluid" alt="{{ .alt }}" data-industag="{{ jsonify ($scratch.Get "industagdata" )}}" data-roletag="{{ jsonify ($scratch.Get "roletagdata" )}}">
+            <div class="row align-items-center h-100">
+              <div class="col">
+                <img src="{{ .url }}" class="img-fluid" alt="{{ .alt }}" data-industag="{{ jsonify ($scratch.Get "industagdata" )}}" data-roletag="{{ jsonify ($scratch.Get "roletagdata" )}}">
+              </div>
+            </div>
           </div>
 
           {{ $scratch.Delete "industagdata"}}
           {{ $scratch.Delete "roletagdata"}}
           {{ end }}
+
+          <div class="col-12 logo"></div>
       </div>
     </section>
 
@@ -556,7 +558,7 @@
         hoverParents(item);
       }
 
-      function setActiveModulee(item){
+      function setActiveModule(item){
         item.siblings().removeClass("active");
         item.addClass("active");
       }
@@ -565,7 +567,7 @@
         console.log($("#rosace").text());
         $("svg#rosace .rosace > *").click(
           function(){
-            setActiveModulee($(this));
+            setActiveModule($(this));
             updateRosace($(this));
           }
         )

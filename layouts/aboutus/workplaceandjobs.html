@@ -6,14 +6,19 @@
     {{ partial "header/navBar.html" . }}
     {{ partial "header/smallheader.html" (dict "Data" $Data) }}
 
-    <section class="hero-1 reduce-margin">
+    {{ partial "sectiondescription.html" (dict "number" "01" "description" "Workplace")}}
+    <section class="hero-1">
       <div class="container">
         {{ partial "titleanddescription.html" (dict "Data" $Data.introduction) }}
       </div>
     </section>
 
-    <section class="hero-1">
+    {{ partial "sectiondescription.html" (dict "number" "02" "description" "Career")}}
+    <section class="hero-1 jobs">
       <div class="container">
+        <div class="row justify-content-center">
+          <h1 class="col-12 text-center">Jobs</h1>
+        </div>
         <div class="row justify-content-center">
           {{ range (where .Site.Pages "Type" "=" "jobs") }}
           {{ if .IsPage }}

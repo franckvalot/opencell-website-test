@@ -2,6 +2,7 @@
 layout: story
 title: We want to do things differently.
 subtitle: Bringing agility and simplicity to enterprise B2B software.
+background: /img/uploads/header-about.jpg
 ourstory:
   boxes:
     - content: 280% revenue growth in 2018

@@ -90,6 +90,8 @@ collections:
           widget: object
           fields:
             - {label: Title, name: title, widget: string}
+            - {label: Button, name: button, widget: string}
+            - {label: Button URL, name: url, widget: string}
             - label: Logos
               name: logos
               widget: list
@@ -110,6 +112,7 @@ collections:
               fields:
               - {label: Testimonial, name: testimonial, widget: string}
               - {label: Author, name: author, widget: string}
+              - {label: Position, name: position, widget: string}
               - {label: Portrait, name: portrait, widget: image, required: false}
         - label: Learn more
           name: learnmore
@@ -133,6 +136,7 @@ collections:
           - {label: Layout, name: layout, widget: hidden, default: modules}
           - {label: Title, name: title, widget: string}
           - {label: Subtitle, name: subtitle, widget: string}
+          - {label: Background Image, name: background, widget: image}
           - {label: Description, name: description, widget: text, required: false}
           - label: Modules
             name: modules
@@ -148,6 +152,7 @@ collections:
           - {label: Layout, name: layout, widget: hidden, default: technology}
           - {label: Title, name: title, widget: string}
           - {label: Subtitle, name: subtitle, widget: string}
+          - {label: Background Image, name: background, widget: image}
           - {label: Description, name: description, widget: text, required: false}
           - label: Introduction
             name: introduction
@@ -194,6 +199,7 @@ collections:
           - {label: Layout, name: layout, widget: hidden, default: ecosystem}
           - {label: Title, name: title, widget: string}
           - {label: Subtitle, name: subtitle, widget: string}
+          - {label: Background Image, name: background, widget: image}
           - {label: Description, name: description, widget: text, required: false}
           - label: Introduction
             name: introduction
@@ -229,6 +235,7 @@ collections:
           - {label: Layout, name: layout, widget: hidden, default: byindustry}
           - {label: Title, name: title, widget: string}
           - {label: Subtitle, name: subtitle, widget: string}
+          - {label: Background Image, name: background, widget: image}
           - {label: Description, name: description, widget: text, required: false}
           - label: Industries
             name: industries
@@ -246,6 +253,7 @@ collections:
           - {label: Layout, name: layout, widget: hidden, default: byrole}
           - {label: Title, name: title, widget: string}
           - {label: Subtitle, name: subtitle, widget: string}
+          - {label: Background Image, name: background, widget: image}
           - {label: Description, name: description, widget: text, required: false}
           - label: Roles
             name: roles
@@ -271,6 +279,7 @@ collections:
           - {label: Layout, name: layout, widget: hidden, default: story}
           - {label: Title, name: title, widget: string}
           - {label: Subtitle, name: subtitle, widget: string}
+          - {label: Background Image, name: background, widget: image}
           - {label: Description, name: description, widget: text, required: false}
           - label: Our Story Section
             name: ourstory
@@ -321,6 +330,7 @@ collections:
           - {label: Layout, name: layout, widget: hidden, default: businessmodel}
           - {label: Title, name: title, widget: string}
           - {label: Subtitle, name: subtitle, widget: string}
+          - {label: Background Image, name: background, widget: image}
           - {label: Description, name: description, widget: text, required: false}
           - label: Introduction paragraph
             name: introduction
@@ -343,6 +353,7 @@ collections:
           - {label: Layout, name: layout, widget: hidden, default: customers}
           - {label: Title, name: title, widget: string}
           - {label: Subtitle, name: subtitle, widget: string}
+          - {label: Background Image, name: background, widget: image}
           - {label: Description, name: description, widget: text, required: false}
           - label: Sections
             name: sections
@@ -363,6 +374,7 @@ collections:
           - {label: Layout, name: layout, widget: hidden, default: partners}
           - {label: Title, name: title, widget: string}
           - {label: Subtitle, name: subtitle, widget: string}
+          - {label: Background Image, name: background, widget: image}
           - {label: Description, name: description, widget: text, required: false}
           - label: Sections
             name: sections
@@ -388,6 +400,7 @@ collections:
                 fields:
                 - {label: Testimonial, name: testimonial, widget: string}
                 - {label: Author, name: author, widget: string}
+                - {label: Position, name: position, widget: string}
                 - {label: Portrait, name: portrait, widget: image, required: false}
       - label: Workplace & jobs
         name: aboutusworkplaceandjobs
@@ -396,6 +409,7 @@ collections:
           - {label: Layout, name: layout, widget: hidden, default: workplaceandjobs}
           - {label: Title, name: title, widget: string}
           - {label: Subtitle, name: subtitle, widget: string}
+          - {label: Background Image, name: background, widget: image}
           - {label: Description, name: description, widget: text, required: false}
           - label: Introduction paragraph
             name: introduction
@@ -417,6 +431,7 @@ collections:
           - {label: Layout, name: layout, widget: hidden, default: pressreleases}
           - {label: Title, name: title, widget: string}
           - {label: Subtitle, name: subtitle, widget: string}
+          - {label: Background Image, name: background, widget: image}
           - {label: Description, name: description, widget: text}
           - label: Articles
             name: articles

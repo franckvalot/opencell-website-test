@@ -4,6 +4,7 @@ title: Let’s connect.
 subtitle: >-
   Our multiple partner solutions make it easy to extend Opencell to fit your
   needs.
+background: /img/uploads/header-platform.jpg
 introduction:
   content: >-
     Our connectors to market-leading apps makes it easy to connect Opencell with
@@ -83,4 +84,3 @@ logos:
       - INVOICE
     url: /img/uploads/logo-mosaic.svg
 ---
-

@@ -1,5 +1,6 @@
 ---
 header:
+  background: /img/uploads/header-home.jpg
   carousel:
     - button:
         name: Click here
@@ -95,11 +96,14 @@ ourcustomers:
       url: /img/uploads/logo-rayonier.svg
     - alt: Florida Chamber of Commerce
       url: /img/uploads/logo-fl-chamber.svg
-  title: Our customers
+  title: Our customers.
+  button: Discover our customers
+  url: '#'
 worktogether:
   subtitle: TESTIMONIALS
   testimonials:
-    - author: Olivier Hersent - CEO @ Actility
+    - author: Olivier Hersent
+      position: CEO @ Actility
       testimonial: >-
         Opencell provided the flexibility we needed to adapt the product billing
         features to the complex and evolving needs of a marketplace for Devices,
@@ -109,7 +113,8 @@ worktogether:
         and also make it available to our network operator partners for their
         own IoT billing & settlement needs.
       portrait: /img/uploads/portrait1.jpg
-    - author: Eric Le Bihan - CEO @ Etiam
+    - author: Eric Le Bihan
+      position: CEO @ Etiam
       testimonial: >-
         Opencell provided a flexible billing solution that was able to respond
         to our complex multi-party billing and commissioning needs. Training
@@ -120,7 +125,8 @@ worktogether:
         basis. We’ve also improved our revenue assurance and been able to
         reallocate the FTE saved on billing tasks to new more value-added tasks.
       portrait: /img/uploads/portrait1.jpg
-    - author: Jean-Luc Raingeval - Project Manager @ Orange
+    - author: Jean-Luc Raingeval
+      position: Project Manager @ Orange
       testimonial: >-
         For the launch of the new Orange Cloud For Business platform, we were
         primarily interested in finding an open source solution that could be

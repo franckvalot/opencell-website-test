@@ -4,7 +4,30 @@ title: Team spirit
 subtitle: >-
   We partner with our customers to build the vertical solutions they need for
   their industry.
+background: /img/uploads/header-about.jpg
 sections:
+  - logos:
+      - alt: Actility
+        url: /img/uploads/logo-adidas.svg
+      - alt: Alphalink
+        url: /img/uploads/logo-dona.svg
+      - alt: Axione
+        url: /img/uploads/logo-gunster.svg
+      - alt: Diabolocom
+        url: /img/uploads/logo-mosaic.svg
+      - alt: Matooma
+        url: /img/uploads/logo-fl-chamber.svg
+      - alt: Objenious
+        url: /img/uploads/logo-rayonier.svg
+      - alt: Odigo (Prosodie)
+        url: /img/uploads/logo-adidas.svg
+      - alt: Orange
+        url: /img/uploads/logo-eckerd.svg
+      - alt: Salt
+        url: /img/uploads/logo-mosaic.svg
+      - alt: Som Connexio
+        url: /img/uploads/logo-rayonier.svg
+    title: 'Telco, cloud & IoT'
   - logos:
       - alt: Engie
         url: /img/uploads/customer-logo-engie.png
@@ -37,4 +60,5 @@ sections:
       - alt: Hubicus (groupe BVA)
         url: /img/uploads/customer-logo-hubicus.png
     title: Retail & other
+
 ---

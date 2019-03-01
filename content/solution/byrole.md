@@ -2,8 +2,9 @@
 layout: byrole
 title: Play as a team.
 subtitle: >-
-  Our monetization platform keeps your entire organization running smoothly
+  Our monetization platform keeps your entire<br> organization running smoothly
   under one roof.
+background: /img/uploads/header-solution-role.jpg
 roles:
   - background: >-
       Maria is the marketing VP of Opencorp. She’s managing a lot of offers and
@@ -19,26 +20,26 @@ roles:
       - benefit: Segment your pricing.
     nav: Marketing
     title: Iterate your model.
-    url: /img/uploads/portrait1.jpg
+    url: /img/uploads/iterate-your-model.jpg
   - background: >
       Jeff is a regional sales manager at Opencorp. He’s been struggling to
       produce quotes and manage the subscription process for an increasing
       number of subscribers. He also wants to develop an automated sales
-      strategy for his smaller customers. 
+      strategy for his smaller customers.
     benefits:
       - benefit: >
           Quote and sell B2B subscriptions directly from your favorite CRM
-          solution. 
+          solution.
       - benefit: Automate B2C subscriptions through our selfcare portal.
       - benefit: Manage upsells easily.
       - benefit: 'Track critical sales metrics (MRR, bookings etc) instantly. '
     nav: Sales
     title: Scale your sales.
-    url: /img/uploads/portrait5.jpg
+    url: /img/uploads/get-new-customers.jpg
   - background: >
       Bill (no pun intended), the operations manager at Opencorp is struggling
       with increased volume on his current system as the data load and
-      complexity of invoices has increased. 
+      complexity of invoices has increased.
     benefits:
       - benefit: >
           Integrate usage-based data through our integrated telco-grade
@@ -54,12 +55,12 @@ roles:
           segmentation rules.
     nav: Operations
     title: Easy billing.
-    url: /img/uploads/portrait4.jpg
+    url: /img/uploads/bill-efficiently.jpg
   - background: >-
       Marie is the CFO of Opencorp. She loves the predictability of the
       company's business model but she needs the right tool to automate revenue
       recognition and needs to be able to efficiently manage her financial
-      reporting processes. 
+      reporting processes.
     benefits:
       - benefit: Automated revenue recognition for deferred and accrued revenue.
       - benefit: Integrated chart of accounts and segment management.
@@ -67,28 +68,28 @@ roles:
       - benefit: 'Dashboards with key non-GAAP metrics including MRR, churn and orders.'
     nav: Finance
     title: 'Get your numbers right. '
-    url: /img/uploads/portrait3.jpg
+    url: /img/uploads/get-your-numbers-right.jpg
   - background: >
       Daphne is a customer service manager who’s handling frequent requests from
       customers that need to renew their contracts or obtain billing
       information. She currently uses several systems to manage tickets, get
       information about subscriptions and process credit notes and
-      reimbursements. 
+      reimbursements.
     benefits:
       - benefit: |
           Access 360° customisable view of all customer activity.
       - benefit: Perform adjustments (including upsells and credit notes) directly.
       - benefit: >-
           Give customers and partners access to their own information directly
-          through their self-service portal. 
+          through their self-service portal.
     nav: Customer service
     title: Keep your customers happy.
-    url: /img/uploads/portrait2.jpg
+    url: /img/uploads/keep-your-customers-smiling.jpg
   - background: >
       Michelle is the CTO of Opencorp. She’s fed up with the complexity and cost
       of her current solution and needs a recurring billing platform that can
       quickly adapt to the business needs and that can seamlessly integrate with
-      the rest of her IT infrastructure. 
+      the rest of her IT infrastructure.
     benefits:
       - benefit: Integrate easily using 400+ rich APIs.
       - benefit: |
@@ -97,6 +98,5 @@ roles:
       - benefit: Avoid vendor lock-in with open source licensing model
     nav: IT
     title: Make IT happen.
-    url: /img/uploads/portrait2.jpg
+    url: /img/uploads/make-it-happen.jpg
 ---
-

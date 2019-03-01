@@ -6,11 +6,6 @@
           <h2 class="col-12 col-md-8 col-lg-6">{{ .subtitle }}</h2>
         </div>
         <div id="carouselTestimonials" class="carousel slide" data-ride="carousel">
-          <ol class="carousel-indicators">
-            {{ range $index, $element := .testimonials }}
-            <li data-target="#carouselTestimonials" data-slide-to="{{$index}}" {{if eq $index 0}}class="active"{{end}}></li>
-            {{end}}
-          </ol>
           <div class="carousel-inner testimonials">
             {{ range $index, $element := .testimonials }}
             <div class="carousel-item {{if eq $index 0}}active{{end}}">
@@ -21,7 +16,7 @@
                       {{ $element.testimonial }}
                     </div>
                     {{ with $element.portrait }}
-                    <div class="d-md-none d-lg-block col-lg-2">
+                    <div class="d-none d-lg-block col-lg-2">
                       <img class="img-fluid" src="{{ $element.portrait}}" alt="{{$element.author}}">
                     </div>
                     {{ end }}
@@ -30,6 +25,10 @@
                     <div class="w-100"></div>
                     <div class="author">
                       {{ $element.author }}
+                    </div>
+                    <div class="w-100"></div>
+                    <div class="position">
+                      {{ $element.position }}
                     </div>
                   </div>
                 </div>

@@ -10,7 +10,7 @@
     font-size: 16px;
     line-height: 25px;
     letter-spacing: 0.010em;
-    color: #4B4B4B;
+    color: #5A5A5A;
   }
   @media (min-width: 992px){
     body {
@@ -31,7 +31,7 @@
     background-color: #EB5048;
     font-family: "GT-Walsheim-Bold";
     color: white;
-    padding: 7px 20PX;
+    padding: 16px 28px;
     border: 0;
   }
   .opencell-btn:hover{
@@ -42,7 +42,7 @@
     font-size: 14px;
     line-height: 30px;
     letter-spacing: 0.200em;
-    padding: 26px 30px;
+    padding: 16px 28px;
   }
 
   a {
@@ -58,11 +58,17 @@
 
   input, textarea{
     padding: 0 5px;
+    margin-top: 10px;
     background-color: transparent;
     border: 0;
-    border-top: 2px solid rgba(239,97,85, 0.3);
     -webkit-background-clip: padding-box; /* for Safari */
     background-clip: padding-box; /* for IE9+, Firefox 4+, Opera, Chrome */
+  }
+  input{
+    border-top: 2px solid rgba(239,97,85, 0.3);
+  }
+  textarea{
+    border: 2px solid rgba(239,97,85, 0.3);
   }
 
   .anchor{
@@ -78,11 +84,38 @@
 
 /* NAVIGATION BAR
 =================*/
-  .navbar {
+  .navbar{
     font-family: 'GT-Walsheim-Regular';
+    padding-left: 0;
+    padding-right: 0;
     font-size: 14px;
     letter-spacing: 0.200em;
     line-height: 14px;
+  }
+  .navbar button{
+    letter-spacing: 0.200em;
+  }
+  @media (min-width:992px){
+    .navbar{
+      letter-spacing: 0.100em;
+    }
+    .navbar button{
+      letter-spacing: 0.100em;
+    }
+    .navbar .nav-item a{
+      margin: 0;
+    }
+  }
+  @media (min-width:1200px){
+    .navbar{
+      letter-spacing: 0.200em;
+    }
+    .navbar button{
+      letter-spacing: 0.200em;
+    }
+    .navbar .nav-item a{
+      margin: 0 8px;
+    }
   }
 
   .navbar-brand{
@@ -93,6 +126,11 @@
     margin: auto;
   }
 
+  .dropdown-menu{
+    border: 1px solid #EF6155;
+    border-radius: 0;
+    margin-top: 0;
+  }
 
   .navbar-light .navbar-nav .nav-link:focus,
   .navbar-light .navbar-nav .nav-link:hover,
@@ -208,7 +246,7 @@ h1{
   font-size: 40px;
   line-height: 45px;
   padding: 10px 0;
-  margin-bottom: 40px;
+  margin-bottom: 25px;
 }
 h2{
   font-family: 'GT-Walsheim-Bold';
@@ -251,7 +289,17 @@ h2{
   header.small-header{
     height: 400px;
   }
+  header.small-header h1{
+    line-height: 63px;
+    padding: 0;
+    margin-bottom: 15px;
+  }
 
+  header.small-header p{
+    font-size: 25px;
+    line-height: 35px;
+    letter-spacing: 0.050em;
+  }
   header h1{
     margin-bottom: 15px;
   }
@@ -293,7 +341,7 @@ h2{
   }
   header .carousel-inner{
     height: inherit;
-    padding: 0;
+    padding: 0 15%;
   }
   header .carousel-item{
     height: inherit;
@@ -399,11 +447,28 @@ section.footer li {
 
 /* SECTIONS
 ===========*/
+  section.description{
+    color: #6B6B6B;
+    margin: 20px 0  ;
+  }
+  section.description span{
+    display: inline-block;
+  }
+  section.description hr{
+    display: inline-block;
+    width: 112px;
+    height: 1em;
+    border: none;
+    border-bottom: 1px solid #707070;
+    margin: 0 23px;
+  }
+
+
   section.hero-1,
   section.hero-2,
   aside.hero-1,
   aside.hero-2{
-    padding: 20px 0;
+    padding: 20px;
     margin-top: 20px;
   }
   .hero-1 {
@@ -415,25 +480,32 @@ section.footer li {
   @media (min-width:768px){
     section.hero-1,
     section.hero-2{
-      padding: 40px 0;
+      padding-bottom: 25px;
+      margin: 32px 0;
+    }
+    section.hero-2{
+      margin-bottom: 50px;
+    }
+    section.description{
+      margin: 40px 0 0 0;
     }
   }
   @media (min-width:992px){
     section.hero-1,
     section.hero-2{
-      margin-top: 140px;
-      margin-bottom: 60px;
+      padding: 25px 0 50px 0;
+      margin: 75px 0;
     }
-  }
-  section.reduce-margin{
-    margin-top: 0;
-  }
-  @media (min-width:768px){
+    section.hero-2{
+      margin-bottom: 100px;
+    }
+    section.description{
+      margin: 80px 0 -25px 0;
+    }
     section.reduce-margin{
-      margin-top: -60px;
+      margin-top: -25px;
     }
   }
-
 
 /*===========
   SECTIONS */
@@ -441,11 +513,18 @@ section.footer li {
 
 /* UNIQUE SECTION
 =================*/
-/* contact */
 
+/* contact */
 section.contact input, section.contact textarea{
   width: 100%;
   margin-bottom: 10px;
+}
+section.contact textarea{
+  min-height: 170px;
+}
+section.contact button{
+  padding-left: 50px;
+  padding-right: 50px;
 }
 section.contact .content{
   position: relative;
@@ -468,29 +547,67 @@ section.contact .info{
 }
 @media(min-width:768px) {
   section.contact .content{
-    position: relative;
-    background-color: #F9F9F8;
-    margin: 0;
-    z-index: 0;
-    padding: 5% calc(9% + 20px) 5% 5%;
+    min-height: 843px;
+    padding: 50px calc(9% + 40px) 50px 40px;
   }
   section.contact .info{
-    position: relative;
     color: white;
-    margin: inherit;
-    background-color: #EF6155;
-    z-index: 10;
-    margin: 50px 0 50px -9%;
-    padding: 5%;
+    margin: auto 0 auto -9%;
+    height: 543px;
+  }
+}
+@media(min-width:992px) {
+  section.contact .content{
+    padding: 70px calc(9% + 80px) 70px 80px;
   }
 }
 
 /* logos */
-.customer-logo img {
-  padding: 10% 20%;
-  -webkit-filter: grayscale(100%);
-  filter: grayscale(100%);
-}
+  .customer-logo img {
+    padding-left: 15%;
+    padding-right: 15%;
+    max-height: 135px;
+    margin: auto 0;
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+  }
+  .customer-logo .logo {
+    border-bottom: 1px solid #E6DCDC;
+    border-right: 1px solid #E6DCDC;
+    height: 240px;
+  }
+
+  .customer-logo .logo:nth-child(2n+0){
+    border-right: none;
+  }
+  @media(min-width: 768px){
+    .customer-logo .logo:nth-child(2n+0){
+      border-bottom: 1px solid #E6DCDC;
+      border-right: 1px solid #E6DCDC;
+    }
+    .customer-logo .logo:nth-child(3n+0){
+      border-right: none;
+    }
+  }
+  @media(min-width: 992px){
+    .customer-logo .logo:nth-child(3n+0){
+      border-bottom: 1px solid #E6DCDC;
+      border-right: 1px solid #E6DCDC;
+    }
+    .customer-logo .logo:nth-child(4n+0){
+      border-right: none;
+    }
+  }
+
+  .customer-logo .logo:nth-last-child(2){
+    border-right: none;
+  }
+  .customer-logo .logo:nth-last-child(1){
+    border: none;
+    height: 1px;
+    margin-top: -1px;
+    background-color: white;
+  }
 
 /* provide */
   section.whatweprovide .img{
@@ -500,7 +617,8 @@ section.contact .info{
     text-align: center;
   }
   section.whatweprovide button{
-    margin-top: 35px;
+    margin-top: 32px;
+    padding: 17px 28px;
   }
 
   @media(min-width:992px){
@@ -512,7 +630,7 @@ section.contact .info{
       padding-left: 40px;
     }
     section.whatweprovide button{
-      margin-top: 100px;
+      margin-top: 96px;
     }
 
   }
@@ -532,12 +650,15 @@ section.contact .info{
 
   section.whatmakesus h2{
     background-color: #F9F9F8;
+    color: #4E4D4D;
     height: 71px;
-    line-height: 21px;
+    line-height: 18px;
+    font-size: 14px;
     margin: 23px 0 0 0;
     padding: 0 10px;
   }
   section.whatmakesus p{
+    color: #474747;
     height: 48px;
     margin: 0;
     padding: 0 10px;
@@ -550,8 +671,8 @@ section.contact .info{
 
     section.whatmakesus h2{
       height: 71px;
-      font-size: 14px;
-      line-height: 18px;
+      font-size: 16px;
+      line-height: 21px;
     }
     section.whatmakesus p{
       height: 91px;
@@ -594,9 +715,15 @@ section.contact .info{
   section.logos .opencell-btn{
     margin-top: 40px;
   }
+  section.logos h1{
+    margin-bottom: 80px;
+  }
   @media (min-width:992px){
     section.logos .opencell-btn{
       margin-top: 60px;
+    }
+    section.logos h1{
+
     }
   }
 
@@ -630,20 +757,23 @@ section.contact .info{
 
   section.worktogether .testimonials .quote::before,
   section.worktogether .testimonials .quote::after {
+    position: absolute;
+    top: auto;
+    right: auto;
+    bottom: auto;
+    left: calc(0% - 35px);
     background-image: url("../img/icon/quote.svg");
     background-size: 35px 35px;
     display: inline-block;
-    position: relative;
-    bottom: -7.5px;
     width: 35px;
     height: 35px;
     content: "";
-    margin-right: 30px;
   }
   section.worktogether .testimonials .quote::after {
+    left: 100%;
+    bottom: -7.5px;
     -webkit-transform: rotate(180deg);
     transform: rotate(180deg);
-    margin-left: 30px;
   }
 
 
@@ -654,7 +784,8 @@ section.contact .info{
     border: 2px solid white;
   }
 
-  section.worktogether .testimonials .author {
+  section.worktogether .testimonials .author,
+  section.worktogether .testimonials .position {
     font-family: 'GT-Walsheim-Bold';
     font-size: 15px;
     line-height: 19px;
@@ -717,10 +848,15 @@ section.contact .info{
     }
   }
 /* leadership */
+  section.leadership .box{
+    margin-top: 40px;
+  }
+  section.leadership h1{
+    margin-bottom: -20px;
+  }
   section.leadership  .box > div {
     background-color: #F9F9F8;
     padding: calc(50px + 40px) 10px 40px 10px;
-    margin-bottom: 40px;
   }
   section.leadership .box > img{
     width: inherit;
@@ -729,12 +865,17 @@ section.contact .info{
   }
   section.leadership .box  h2{
     line-height: 20px;
+    margin-bottom: 28px;
   }
-
+  section.leadership p{
+    margin-bottom: 10px;
+  }
   @media (min-width: 768px){
+    section.leadership .box{
+      margin-top: 65px;
+    }
     section.leadership  .box > div {
       padding: calc(90px + 50px) 10px 50px 10px;
-      margin-bottom: 65px;
     }
     section.leadership .box > img{
       margin-bottom: -90px;
@@ -806,6 +947,7 @@ section.contact .info{
     padding: 0;
     margin: 0;
     line-height: 25px;
+    font-size: 14px;
   }
   .customers .logos > div {
     height: 100%;
@@ -833,12 +975,13 @@ section.contact .info{
     .customers .list ul {
       text-align: left;
       list-style-type: disc;
-      padding-left: 5px;
+      padding-left: 3px;
     }
     .customers .list  li  h2{
       width: calc(100% - 42px);
-      padding-left: 30px;
+      padding-left: 10px;
       line-height: 30px;
+      letter-spacing: 0.10em;
     }
     .customers .logos {
       max-width: calc(calc(100% - 300px) + 42px);
@@ -856,8 +999,11 @@ section.contact .info{
   }
 
 /* workplaceandjobs */
+  section.jobs h1{
+    margin-bottom: 75px;
+  }
   .article-box{
-    margin: 20px 0;
+    margin: 25px 0;
   }
   .article-box .date {
     position: relative;
@@ -891,6 +1037,11 @@ section.contact .info{
   .article-box .opencell-btn{
     margin-top: 32px;
   }
+
+/* articles */
+  section.articles h1{
+    margin-bottom: 75px;
+  }
 /* platformmodules */
   .modules .list{
     background-color: #E26050;
@@ -905,8 +1056,13 @@ section.contact .info{
     color: inherit;
   }
   .modules .list h2 {
+    font-family:  "GT-Walsheim-Regular";
+    font-size: 14px;
+    line-height: 45px;
+    letter-spacing: 0.200em;
     list-style-type: none;
     color: inherit;
+    margin: 0;
   }
   .modules .list li{
     list-style-type: none;
@@ -945,8 +1101,8 @@ section.contact .info{
   }
   @media(min-width:768px) {
     .modules .content {
-      padding: 50px 20px 50px calc(9% + 20px);
-      margin: 50px -9% 50px 0;
+      padding: 50px 20px;
+      margin: 50px 0;
     }
   }
 
@@ -1044,6 +1200,9 @@ section.contact .info{
     position: absolute;
   }
 
+  section.platformtechnology.technologies{
+    margin-top: -75px;
+  }
   section.platformtechnology.technologies .img img {
     height: 80px;
     margin-bottom: 60px;
@@ -1065,12 +1224,6 @@ section.contact .info{
 /* platformecosystem */
 /* solutionbyindustry */
 /* solutionbyrole */
-  section.ecosystem > div,
-  section.byindustry > div,
-  section.byrole > div  {
-    height: auto;
-    padding: 33px;
-  }
   section.ecosystem h2.navigation,
   section.byindustry h2.navigation,
   section.byrole h2.navigation{
@@ -1081,11 +1234,13 @@ section.contact .info{
     margin: 0;
   }
   @media (min-width:768px){
-    section.ecosystem  div.navigation,
-    section.byindustry  div.navigation,
-    section.byrole  div.navigation {
+    section.ecosystem  div.navigation {
       height: 114px;
-      padding: 41px;
+      padding: 41px 0;
+    }
+    section.byindustry  div.navigation,
+    section.byrole  div.navigation{
+      margin: 83px 0;
     }
     section.ecosystem h2.navigation,
     section.byindustry h2.navigation,
@@ -1124,6 +1279,10 @@ section.contact .info{
 
 
 /* solutionbyindustry */
+  section.byindustry{
+    margin: 0 0 91px 0;
+    padding: 0;
+  }
   section.byindustry h1 {
     line-height: 48px;
     letter-spacing: normal;
@@ -1150,6 +1309,10 @@ section.contact .info{
   }
 
 /* solutionbyrole */
+  section.byrole{
+    margin: 0 0 130px 0;
+    padding: 0;
+  }
   section.byrole .content {
     position: relative;
     background-color: #F9F9F8;
@@ -1165,6 +1328,12 @@ section.contact .info{
     margin: inherit;
     z-index: 10;
   }
+  section.byrole ul{
+    padding-left: 1em;
+  }
+  section.byrole li{
+    padding-left: 1em;
+  }
   @media(min-width:992px) {
     section.byrole .content{
       z-index: 0;
@@ -1179,7 +1348,8 @@ section.contact .info{
       margin-bottom: 30px;
     }
     section.byrole .img{
-      margin-top: 90px;
+      margin-top: auto;
+      margin-bottom: auto;
       z-index: 10;
     }
     section.byrole:nth-child(odd) .content {
@@ -1196,11 +1366,6 @@ section.contact .info{
   }
 
   /* readmore */
-  .read-more .opencell-btn,
-  .knowledgecenter-box .opencell-btn{
-    margin-top: 20px;
-  }
-
   .read-more .thumbnail{
     height: 150px;
     margin: 20px 0 0 0;
@@ -1208,10 +1373,25 @@ section.contact .info{
   .read-more .description{
     background-color: #F9F9F8;
     margin: auto;
-    padding: 20px;
+    padding: 0 46px;
+  }
+  .read-more .description h2{
+    background-color: #F9F9F8;
+    margin: auto;
+    padding: 0 20px;
+  }
+  .read-more .description h2.author {
+    margin-top: 28px;
+  }
+  .read-more .description h2.title {
+    margin: 45px 0 18px 0;
+  }
+  .read-more .description form {
+    margin: 43px 0 48px 0;
   }
   .read-more .date{
     color: #EB5048;
+    opacity: 0.5;
   }
 /*================
   UNIQUE SECTION*/
@@ -1246,11 +1426,19 @@ section.contact .info{
     top: -2px;
   }
 
+  section.blog,
+  section.video{
+    padding-bottom: 0;
+  }
+
   .blog .tags,
   .video .tags,
   .releases .tags{
+    position: -webkit-sticky;
+    position: sticky;
+    top: 120px;
     background-color: #F9F9F8;
-    padding: 20px;
+    padding: 55px 20px;
   }
   .blog .tags .active,
   .video .tags .active ,
@@ -1260,7 +1448,7 @@ section.contact .info{
   .blog .list,
   .video .list,
   .releases .list {
-    margin-top: 30px;
+    margin-bottom: 85px;
   }
   .blog .list .thumbnail,
   .blog .list a,
@@ -1282,16 +1470,31 @@ section.contact .info{
     background-color: #DD594E;
     background-repeat: no-repeat !important;
   }
+
+
+  .blog .list h2,
+  .video .list h2,
+  .releases .list h2,
+  .blog .list p,
+  .video .list p,
+  .releases .list p,
+  .blog .list form,
+  .video .list form,
+  .releases .list form{
+    padding: 0 70px 0 50px;
+  }
+  .blog .list p,
+  .video .list p,
+  .releases .list p
+  {
+    margin: 18px 0 27px 0;
+  }
   .blog .list h2,
   .video .list h2,
   .releases .list h2{
     margin: 0;
   }
-  .blog .list p,
-  .video .list p,
-  .releases .list p{
-    margin: 18px 0 27px 0;
-  }
+
   .blog .list .opencell-btn,
   .video .list .opencell-btn,
   .releases .list .opencell-btn {
@@ -1303,6 +1506,11 @@ section.contact .info{
     margin-top: 1rem;
   }
 
+  .blog h1,
+  .video h1,
+  .releases h1{
+    margin-bottom: 70px;
+  }
 /*=========
   KNOWLEDGE CENTER */
 
@@ -1337,6 +1545,7 @@ JOB OFFERS */
   }
   .markdown p{
     text-align: justify;
+    margin-bottom: 50px;
   }
   .markdown h1,
   .markdown h2,
@@ -1344,7 +1553,7 @@ JOB OFFERS */
   .markdown h4,
   .markdown h5,
   .markdown h6{
-    font-family: 'Noe-Display-Black';
+    font-family: 'GT-Walsheim-Regular';
     min-height: 0;
     font-size: 20px;
     text-transform: none;
@@ -1354,21 +1563,22 @@ JOB OFFERS */
     letter-spacing: normal;
     padding-top: 120px;
     margin-top: -120px;
+    margin-bottom: 50px;
   }
   .markdown h1{
     font-size: 30px;
-    margin: -90px 0 20px 0;
+    margin-top: -90px;
   }
   .markdown h2{
     font-size: 30px;
-    margin: -90px 0 15px 0;
+    margin-top: -90px;
   }
   .markdown h3{
     font-size: 25px;
-    margin: -95px 0 15px 0;
+    margin-top: -95px;
   }
   .markdown sup{
-      padding-top: 120px;
+    padding-top: 120px;
     margin-top: -120px;
   }
   .markdown blockquote{

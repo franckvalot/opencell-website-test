@@ -6,7 +6,8 @@
     {{ partial "header/navBar.html" . }}
     {{ partial "header/smallheader.html" (dict "Data" $Data) }}
 
-    <section class="hero-1 reduce-margin ourstory">
+    {{ partial "sectiondescription.html" (dict "number" "01" "description" "Our story")}}
+    <section class="hero-1 ourstory">
       <div class="container">
         {{ partial "titleanddescription.html" (dict "Data" $Data.ourstory) }}
         <div class="row margin text-center">
@@ -22,7 +23,9 @@
       </div>
     </section>
 
-    <section class="hero-1 reduce-margin leadership">
+    {{ partial "sectiondescription.html" (dict "number" "02" "description" "Our team")}}
+
+    <section class="hero-1 leadership">
       <div class="container">
         <div class="row justify-content-center">
           <h1 class="col-12 text-center">{{ $Data.leadership.title}}</h1>
@@ -48,7 +51,9 @@
       </div>
     </section>
 
-    {{ partial "logos.html" (dict "Data" $Data.investors "Reducemargin" true) }}
+    {{ partial "sectiondescription.html" (dict "number" "03" "description" "Our investors")}}
+
+    {{ partial "logos.html" (dict "Data" $Data.investors) }}
 
     {{ partial "sections/getdemo.html" . }}
     {{ partial "sections/mentions.html" . }}

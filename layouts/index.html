@@ -5,12 +5,18 @@
   <body>
     {{ partial "header/navBar.html" . }}
     {{ partial "header/header.html" $Data.header }}
+    {{ partial "sectiondescription.html" (dict "number" "01" "description" "what is Opencell")}}
     {{ partial "sections/paradigm.html" $Data.paradigm }}
-    {{ partial "sections/provide.html" $Data.whatweprovide }}
+    {{ partial "sectiondescription.html" (dict "number" "02" "description" "what we do")}}
+    {{ partial "sections/provide.html" (dict "Data" $Data.whatweprovide "showTitle" true) }}
+    {{ partial "sectiondescription.html" (dict "number" "03" "description" "what kind of client<br>we work with")}}
     {{ partial "sections/whatmakesus.html" $Data.whatmakesus }}
+    {{ partial "sectiondescription.html" (dict "number" "04" "description" "what kind of client<br>we work with")}}
     {{ partial "sections/mainindustries.html" $Data.mainindustries }}
-    {{ partial "logos.html" (dict "Data" $Data.ourcustomers "Reducemargin" true) }}
+    {{ partial "logos.html" (dict "Data" $Data.ourcustomers) }}
+    {{ partial "sectiondescription.html" (dict "number" "05" "description" "Discover our videos")}}
     {{ partial "testimonials.html" $Data.worktogether }}
+    {{ partial "sectiondescription.html" (dict "number" "06" "description" "Discover our videos")}}
     {{ partial "sections/learnmore.html" $Data.learnmore }}
     {{ partial "sections/getdemo.html" . }}
     {{ partial "sections/mentions.html" . }}

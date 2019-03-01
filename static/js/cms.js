@@ -3,7 +3,7 @@ var Template = createClass({
       var entry = this.props.entry;
 
       return [smallHeader(entry),
-
+        // dangerouslySetInnerHTML: {__html: item.get('title')}
       ];
   }
 })
@@ -19,14 +19,14 @@ function scripts(){
         ];
 }
 function smallHeader(item){
-    if(item.getIn(['data', 'thumbnail']) != null){
-      return h('header', {className:'small-header', style:{backgroundImage: 'url(' + item.getIn(['data', 'thumbnail']) +')'}},
+    if(item.getIn(['data', 'thumbnail']) != null || item.getIn(['data', 'background']) != null ){
+      return h('header', {className:'small-header', style:{backgroundImage: 'url(' + (item.getIn(['data', 'thumbnail']) || item.getIn(['data', 'background'])) +')'}},
         h('div', {className:'header-content-inner'},
           h('div', {className:'container'},
             h('div', {className:'row align-items-center'},
               h('div', {className:'col col-md-10'},
-                h('h1', {}, item.getIn(['data', 'title'])),
-                h('p', {}, item.getIn(['data', 'subtitle']))
+                h('h1', {dangerouslySetInnerHTML: {__html: item.getIn(['data', 'title'])}}, ""),
+                h('p', {dangerouslySetInnerHTML: {__html: item.getIn(['data', 'subtitle'])}}, "")
               )
             )
           )
@@ -48,9 +48,24 @@ function smallHeader(item){
       );
     }
 }
+
+function sectiondescription(number, description){
+  return h('section', {className:'description'},
+          h('div', {className:'container'},
+            h('div', {className:'row align-items-top'},
+              h('div', {className:'col d-none d-md-block'},
+                h('span', {}, number),
+                h('hr', {}),
+                h('span', {dangerouslySetInnerHTML: {__html:description}}, "")
+              )
+            )
+          )
+        );
+}
+
 function titleanddescription(item){
   return [h('div', {className:'row justify-content-center'},
-      h('h1', {className:'col-12 text-center'}, item.get('title'))
+      h('h1', {className:'col-12 text-center', dangerouslySetInnerHTML: {__html: item.get('title')}}, "")
     ),
     h('div', {className:'row justify-content-center text-center'},
       h('div', {className:'col-10 col-md-8'}, item.get('content'))
@@ -64,11 +79,7 @@ function titleanddescription(item){
     null)
   ];
 }
-function logo(item){
-  return h('div', {className:'col-6 col-md-4 col-lg-3'},
-    h('img', {className:'img-fluid', src: item.get('url'), alt:item.get('alt')})
-  );
-}
+
 function logos(item){
   return h('section',{className:'hero-1 logos'},
     h('div', {className:'container'},
@@ -76,12 +87,23 @@ function logos(item){
         h('h1', {className:'col-12 text-center'}, item.get('title'))
       ),
       h('div', {className:'row align-items-center justify-content-center customer-logo'},
-        item.get('logos').map(logo)
+        item.get('logos').map(function(item){
+          return h('div', {className:'col-6 col-md-4 col-lg-3 logo'},
+            h('div', {className:'row align-items-center h-100'},
+              h('div', {className:'col'},
+                h('img', {className:'img-fluid', src: item.get('url'), alt:item.get('alt')})
+              )
+            )
+          );
+        }),
+        h('div', {className:'col-12 logo'}, "")
       ),
       (item.get('button') ?
       h('div', {className:'row align-items-center justify-content-center text-center'},
         h('div', {className:'col'},
-          h('button', {className:'opencell-btn', type:'button', name:'button'}, item.get('button'))
+          h('form', {className:''},
+            h('button', {className:'opencell-btn', type:'button', name:'button'}, item.get('button'))
+          )
         )
       ):
       null),
@@ -96,7 +118,7 @@ function article(item){
       h('div', {className:'col-11 article-box'},
         h('div', {className:'row align-items-center justify-content-center'},
           h('div', {className:'date'},
-            h('h2', {}, months[date.getMonth()]),
+            h('h2', {}, months[date.getMonth()].toUpperCase()),
             h('p', {}, date.getFullYear())
           ),
           h('div', {className:'col-12 description'},
@@ -127,26 +149,20 @@ function testimonials(item){
         h('h2', {className:'col-12 col-md-8 col-lg-6'}, item.get('subtitle'))
       ),
       h('div', {className:'carousel slide', id:'carouselTestimonials', 'data-ride':'carousel'},
-        h('ol', {className:'carousel-indicators'},
-          (item.get('testimonials') ?
-          item.get('testimonials').map(function(item, index){
-            return h('li', {className:(index == 0 ? 'active':null), 'data-target':'#carouselTestimonials', 'data-slide-to':index}, '');
-          })
-          :
-          null)
-        ),
         h('div', {className:'carousel-inner testimonials'},
           (item.get('testimonials') ?
           item.get('testimonials').map(function(item, index){
             return h('div', {className:(index == 0 ? 'carousel-item active':'carousel-item')},
               h('div', {className:'row justify-content-center align-items-center h-100'},
-                h('div', {className:'col-12'},
+                h('div', {className:'col'},
                   h('div', {className:'row justify-content-center'},
-                    h('div', {className:'quote text-center'}, item.get('testimonial')),
+                    h('div', {className:'col-12 col-lg quote text-center'}, item.get('testimonial')),
                     h('div', {className:'w-100'}, ''),
                     h('hr', {}),
                     h('div', {className:'w-100'}, ''),
-                    h('div', {className:'author'}, item.get('author'))
+                    h('div', {className:'author'}, item.get('author')),
+                    h('div', {className:'w-100'}, ''),
+                    h('div', {className:'position'}, item.get('position'))
                   )
                 )
               )
@@ -220,6 +236,7 @@ var IndexPreview = createClass({
           )
         )
       ),
+      sectiondescription("01", "what is Opencell"),
       h('section', {className:'hero-1'},
         h('div', {className:'container'},
           h('div', {className:'row justify-content-center'},
@@ -232,6 +249,7 @@ var IndexPreview = createClass({
           )
         )
       ),
+      sectiondescription("02", "what we do"),
       h('section', {className:'hero-1 whatweprovide'},
         h('div', {className:'container'},
           h('div', {className:'row align-items-center justify-content-center'},
@@ -248,6 +266,7 @@ var IndexPreview = createClass({
           )
         )
       ),
+      sectiondescription("03", "what kind of client<br>we work with"),
       h('section', {className:'hero-1 whatmakesus'},
         h('div', {className:'container'},
           h('div', {className:'row justify-content-center'},
@@ -267,6 +286,7 @@ var IndexPreview = createClass({
           )
         )
       ),
+      sectiondescription("04", "what kind of client<br>we work with"),
       h('section', {className:'hero-1 mainindustries'},
         h('div', {className:'container'},
           h('div', {className:'row justify-content-center'},
@@ -284,7 +304,9 @@ var IndexPreview = createClass({
         )
       ),
       logos(ourcustomersdata),
+      sectiondescription("05", "Discover our videos"),
       testimonials(worktogetherdata),
+      sectiondescription("06", "Discover our videos"),
       h('section', {className:'hero-1'},
         h('div', {className:'container'},
           h('div', {className:'row justify-content-center text-center'},
@@ -321,10 +343,12 @@ var PlatformModulesPreview = createClass({
       }
 
       return [smallHeader(entry),
+      sectiondescription("01", "Our solution"),
+      sectiondescription("01", "Capabilities"),
         h('section', {className:'hero-1 modules'},
           h('div', {className:'container'},
             h('div', {className:'row justify-content-center'},
-              h('div', {className:'col-12 col-md-4 text-center list'},
+              h('div', {className:'col-12 col-md-5 col-lg-5 text-center list'},
                 h('div', {className:'row justify-content-center'},
                   h('h1', {className:'col-12'}, 'Modules'),
                   h('ul', {className:'col-12', 'data-ride':'carousel'},
@@ -332,7 +356,7 @@ var PlatformModulesPreview = createClass({
                   )
                 )
               ),
-              h('div', {className:'col-12 col-md-9 text-left content'},
+              h('div', {className:'col-12 col-md-8 col-lg-7 text-left content'},
                 h('div', {className:'row h-100'},
                   h('div', {className:'carousel slide col h-100', id:'carouselModules', 'data-ride':'carousel'},
                     h('ol', {className:'carousel-indicators'},
@@ -389,7 +413,7 @@ var PlatformTechnologyPreview = createClass({
           titleanddescription(entry.getIn(['data', 'introduction']))
         )
       ),
-      h('section', {className:'hero-1 platformtechnology'},
+      h('section', {className:'hero-1 reduce-margin platformtechnology'},
         h('div', {className:'container'},
           h('div', {className:'row justify-content-center'},
             boxesdata.map(function(item){
@@ -439,7 +463,7 @@ var PlatformTechnologyPreview = createClass({
           titleanddescription(technologiesdata.get('introduction'))
         )
       ),
-      h('section', {className:'hero-1 reduce-margin platformtechnology technologies'},
+      h('section', {className:'hero-1 platformtechnology technologies'},
         h('div', {className:'container'},
           h('div', {className:'row align-items-center justify-content-center'},
             technologiesdata.get('technologies').map(function(item){
@@ -508,7 +532,7 @@ var SolutionByIndustryPreview = createClass({
     var industriesdata = entry.getIn(['data', 'industries']);
 
     return [smallHeader(entry),
-    h('section', {className:'hero-1 reduce-margin byindustry'},
+    h('section', {className:'byindustry'},
       h('div', {className:'navigation text-center'},
         h('div', {className:'container'},
           industriesdata.map(function(item){
@@ -520,7 +544,7 @@ var SolutionByIndustryPreview = createClass({
       ),
     ),
     this.props.widgetsFor('industries').map(function(item){
-        return h('section', {className:'hero-1 reduce-margin byindustry'},
+        return h('section', {className:'hero-1 byindustry'},
           h('div', {className:'container'},
             h('div', {className:'row justify-content-center'},
               h('h1', {className:'col text-center'}, item.getIn(['data', 'title'])),
@@ -555,7 +579,7 @@ var SolutionByRolePreview = createClass({
       return h('li', {}, item.get('benefit'));
     }
     return [smallHeader(entry),
-      h('section', {className:'hero-1 reduce-margin byindustry'},
+      h('section', {className:'byindustry'},
         h('div', {className:'navigation text-center'},
           h('div', {className:'container'},
             rolesdata.map(function(item){
@@ -567,7 +591,7 @@ var SolutionByRolePreview = createClass({
         ),
       ),
       rolesdata.map(function(item){
-        return h('section', {className:'hero-1 reduce-margin byrole alternate'},
+        return h('section', {className:'hero-1 byrole alternate'},
           h('div', {className:'container'},
             h('div', {className:'row justify-content-center'},
               h('div', {className:'col-6 col-md-5 img'},
@@ -575,9 +599,9 @@ var SolutionByRolePreview = createClass({
               ),
               h('div', {className:'col-10 col-md-10 content'},
                 h('h1', {}, item.get('title')),
-                h('h2', {}, 'Background'),
+                h('h2', {}, 'BACKGROUND'),
                 h('p', {}, item.get('background')),
-                h('h2', {}, 'Benefits'),
+                h('h2', {}, 'BENEFITS'),
                 h('ul', {},
                   (item.get('benefits') ? item.get('benefits').map(benefits) : null )
                 ),
@@ -600,8 +624,11 @@ var AboutUsPressReleasesPreview = createClass({
       var articlesdata = entry.getIn(['data', 'articles']);
 
       return [smallHeader(entry),
-      h('section', {className:'hero-1'},
+      h('section', {className:'hero-1 articles'},
         h('div', {className:'container'},
+          h('div', {className:'row justify-content-center'},
+            h('div', {className:'col-12 text-center'}, 'Press releases')
+          ),
           h('div', {className:'row justify-content-center'},
             articlesdata.map(article)
           )
@@ -620,7 +647,8 @@ var AboutUSStoryPreview = createClass({
     var investorsdata = entry.getIn(['data', 'investors']);
 
     return [smallHeader(entry),
-    h('section', {className:'hero-1 reduce-margin ourstory'},
+    sectiondescription("01", "Our story"),
+    h('section', {className:'hero-1 ourstory'},
       h('div', {className:'container'},
         titleanddescription(ourstorydata),
         h('div', {className:'row margin text-center'},
@@ -641,7 +669,8 @@ var AboutUSStoryPreview = createClass({
         )
       )
     ),
-    h('section', {className:'hero-1 reduce-margin leadership'},
+    sectiondescription("02", "Our team"),
+    h('section', {className:'hero-1 leadership'},
       h('div', {className:'container'},
         h('div', {className:'row justify-content-center'},
           h('h1', {className:'col-12 text-center'}, leadershipdata.get('title'))
@@ -670,6 +699,7 @@ var AboutUSStoryPreview = createClass({
         )
       )
     ),
+    sectiondescription("03", "Our investors"),
     logos(investorsdata),
     scripts()
     ];
@@ -681,7 +711,7 @@ var AboutUsBusinessModelPreview = createClass({
       var entry = this.props.entry;
       var introductiondata = entry.getIn(['data', 'introduction']);
       return [smallHeader(entry),
-        h('section', {className:'hero-1 reduce-margin'},
+        h('section', {className:'hero-1'},
           h('div', {className:'container'},
             titleanddescription(introductiondata)
           )
@@ -765,11 +795,13 @@ var AboutUsWorkplaceAndJobsPreview = createClass({
       var entry = this.props.entry;
 
       return [smallHeader(entry),
-      h('section', {className:'hero-1 reduce-margin'},
+      sectiondescription("01", "Workplace"),
+      h('section', {className:'hero-1'},
         h('div', {className:'container'},
           titleanddescription(entry.getIn(['data', 'introduction']))
         )
       ),
+      sectiondescription("02", "Career"),
       scripts()
       ];
   }

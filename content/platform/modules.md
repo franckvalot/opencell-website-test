@@ -2,6 +2,7 @@
 layout: modules
 title: No business is the same.
 subtitle: Our monetization platform adapts to your needs.
+background: /img/uploads/header-platform.jpg
 modules:
   - content: >-
       Our core platform is built around a powerful billing engine that provides
@@ -28,12 +29,12 @@ modules:
       need to crunch a large number of events. Our mediation is compatible with
       Diameter, the main connectivity protocol used in telco operator networks.
       It has undergone strenuous testing and has the power to process hundreds
-      of record entries per second. 
+      of record entries per second.
 
 
       It’s also used by many of our energy and utility customers to crunch meter
       data. We’ve already developed specific mediation processes to handle the
-      specificities of these businesses. 
+      specificities of these businesses.
     title: Mediation manager
   - content: >
       Because Opencell is built for complex billing, we provide flexible
@@ -51,17 +52,17 @@ modules:
       functionalities can be used to build an offer from scratch. Our rich
       configuration possibilities mean that we can practically guarantee that
       we’ll be able to model whatever offer your product or marketing teams
-      dreams up. 
+      dreams up.
     title: Catalog manager
   - content: >+
       Our order manager keeps customer data in sync, executes both simple and
       complex workflows and drive processes at-scale. Event notifications that
       push data-rich messages across system boundaries with APIs allow access to
-      Opencell data from anywhere. 
+      Opencell data from anywhere.
 
 
       Workflows manage business processes with automated rules, flows, and
-      forms. 
+      forms.
 
       You can measure time, disk space, bandwidth, downloads and notify a
       customer when they cross a usage threshold and offer them an upgrade. It’s
@@ -74,19 +75,19 @@ modules:
       business functions in real time. You can alert customers about
       time-sensitive discounts, expired credit cards, or impending usage
       thresholds without building complex logic yourself.  You can schedule any
-      service, process, or activity to occur at any time, based on any trigger. 
+      service, process, or activity to occur at any time, based on any trigger.
 
     title: Order manager
   - content: >
       Opencell integrates a data warehouse that pre calculates data and standard
       metrics used to manage a subscription business including monthly recurring
       revenue (MRR), annual recurring revenue (ARR), churn and total contract
-      value. 
+      value.
 
 
       Our data warehouse can be easily connected with practically any third
       party data analytics or business intelligence package such as Qlikview or
-      PowerBI. 
+      PowerBI.
     title: Reporting manager
   - content: >
       Revenue recognition in subscription businesses is tricky. You bill in
@@ -102,11 +103,11 @@ modules:
 
       We also give you the ability to manage your chart of accounts and
       financial periods so you can keep your transactions in synch with your
-      downstream ledgers. 
+      downstream ledgers.
 
 
       Mapping to downstream accounting systems is easily performed on a summary
-      or detailed basis using flat file exports or our rich APIs. 
+      or detailed basis using flat file exports or our rich APIs.
     title: Finance manager
   - content: >
       Our accounts receivable module manages cash applications, payment methods,
@@ -116,7 +117,7 @@ modules:
       Payments can be matched manually via GUI to corresponding payments
       operations or automatically by payment job. Connectors to main payment
       gateways are available. If your payment gateway isn’t available, our rich
-      APIs make it easy for you integrate your platform of choice. 
+      APIs make it easy for you integrate your platform of choice.
 
 
       In the event of late payment, automatic dunning actions such as sending
@@ -126,21 +127,21 @@ modules:
       differentiate escalation procedures based on product line, account group,
       or other factors of your choice. You can use workflows service activation
       to suspend service automatically at any stage in the escalation process,
-      or continue to deliver service as long as you’d like. 
+      or continue to deliver service as long as you’d like.
 
 
-      Configurable aging reports are also provided. 
+      Configurable aging reports are also provided.
     title: AR manager
   - content: >
       Recurring revenue comes with recurring payments that you can schedule and
-      process automatically. 
+      process automatically.
 
 
       Our payment manager lets you handle multiple payment processors. It
       manages credit card and ACH (direct debit) for one-time and recurring
       payments. It helps you lower your costs by routing payments to the
       processor that provides the best terms based on location, payment method,
-      or other criteria that you choose. 
+      or other criteria that you choose.
 
 
       Customers can pre-pay for products and services pay upon receipt, or use a
@@ -155,7 +156,7 @@ modules:
     title: Payment manager
   - content: >+
       Your customers want to know for what they’re being billed and want to be
-      able to break down and allocate their costs. 
+      able to break down and allocate their costs.
 
 
       Accurate, easy to understand invoices mean fewer support calls and happier
@@ -163,29 +164,29 @@ modules:
       subtotals, and conditional logic based on payment methods and other
       criteria to design and configure invoice templates just the way you want
       them. Standard templates can also be customized to include client-specific
-      marketing messages. 
+      marketing messages.
 
 
       Invoices can be output as PDF files that can be printed or sent by email,
       displayed in GUI or accessed via API in order to be exposed in third-party
-      CRMs or in dedicated self-service portals. 
+      CRMs or in dedicated self-service portals.
 
     title: Invoice composer
   - content: >
       In the fast-moving world of digital services, you need to be able to test
       and modify your offers constantly. You can’t afford to wait for weeks or
       months for IT to implement the special bundle or promotion you need to
-      respond to market conditions. 
+      respond to market conditions.
 
 
       To respond to this requirement, Opencell provides marketing teams
-      configure, provision and deploy new services and bundles or price changes 
-      from a single, simplified interface. 
+      configure, provision and deploy new services and bundles or price changes
+      from a single, simplified interface.
 
 
       Based on your role, you can create offers from templates, modify offer
       parameters, deactivate offers and set role-specific customer care
-      management and self-service portal parameters. 
+      management and self-service portal parameters.
     title: Marketing manager
   - content: >
       Our customer care provides the 360° view that your customer service and
@@ -197,12 +198,12 @@ modules:
 
 
       Our elegant, intuitive and customizable customer care interface lets you
-      provide quick and appropriate responses to customer demands. 
+      provide quick and appropriate responses to customer demands.
 
 
       If you don’t have a need for a full-fledged CRM system, our customer care
       provides a great alternative to traditional CRM systems and can avoid the
-      need for additional third-party licensing feeds. 
+      need for additional third-party licensing feeds.
     title: Customer care portal
   - content: >
       Our partner care portal lets your partners manager their day-to-day
@@ -217,17 +218,16 @@ modules:
   - content: >
       Modern subscription businesses emphasize multi-channel service options.
       Customers expect to be able to access and modify their information
-      anytime, anywhere. 
+      anytime, anywhere.
 
 
       To facilitate this process, Opencell provides a customizable selfcare
       portal where customers can directly change; upgrade or downgrade
-      subscriptions, subscribe to new offers, check payment status etc. 
+      subscriptions, subscribe to new offers, check payment status etc.
 
 
       Using our selfcare portal functionality for your recurring revenue
       business means you can probably avoid the hassle of using a third-party
-      e-commerce system such as Magento or Drupal. 
+      e-commerce system such as Magento or Drupal.
     title: Self care portal
 ---
-

@@ -1,9 +1,9 @@
 ---
 layout: byindustry
-title: We have the right solution for your industry.
+title: We have the right solution<br>for your industry.
 subtitle: >-
-  We provide the rich functionality and configurability that can cover any
-  industry requirement.
+  We provide the rich functionality and configurability<br> that can cover any industry requirement.
+background: /img/uploads/header-solution-industry.jpg
 industries:
   - content: >-
       ## CRITICAL FEATURES
@@ -96,4 +96,3 @@ industries:
     title: 'Retail & Consumer '
     videoid: xcJtL7QggTI
 ---
-

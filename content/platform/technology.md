@@ -2,6 +2,7 @@
 layout: technology
 title: Powerful and scalable.
 subtitle: We use the latest open source technologies.
+background: /img/uploads/header-platform.jpg
 introduction:
   content: >-
     With billions of connected users and objects, usage-based services face a

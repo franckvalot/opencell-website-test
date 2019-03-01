@@ -4,6 +4,7 @@ title: Let's work together.
 subtitle: >-
   We implement 80% of our projects through our network of integration and
   consulting partners.
+background: /img/uploads/header-about.jpg
 sections:
   - logos:
       - alt: Cap Gemini
@@ -56,7 +57,8 @@ sections:
 worktogether:
   subtitle: TESTIMONIALS
   testimonials:
-    - author: Olivier Hersent - CEO @ Actility
+    - author: Olivier Hersent
+      position: CEO @ Actility
       testimonial: >-
         Opencell provided the flexibility we needed to adapt the product billing
         features to the complex and evolving needs of a marketplace for Devices,
@@ -65,7 +67,8 @@ worktogether:
         to manage the complex financial flows matrix of ThingPark marketplace,
         and also make it available to our network operator partners for their
         own IoT billing & settlement needs.
-    - author: Eric Le Bihan - CEO @ Etiam
+    - author: Eric Le Bihan
+      position: CEO @ Etiam
       testimonial: >-
         Opencell provided a flexible billing solution that was able to respond
         to our complex multi-party billing and commissioning needs. Training
@@ -75,7 +78,8 @@ worktogether:
         improved since we’re now able to bill on a monthly instead of quarterly
         basis. We’ve also improved our revenue assurance and been able to
         reallocate the FTE saved on billing tasks to new more value-added tasks.
-    - author: Jean-Luc Raingeval - Project Manager @ Orange
+    - author: Jean-Luc Raingeval
+      position: Project Manager @ Orange
       testimonial: >-
         For the launch of the new Orange Cloud For Business platform, we were
         primarily interested in finding an open source solution that could be

@@ -2,6 +2,7 @@
 layout: businessmodel
 title: No strings attached.
 subtitle: Start a different relationship with your software provider.
+background: /img/uploads/header-about.jpg
 introduction:
   content: >-
     Our open source business model is simple. No upfront payments or
@@ -20,7 +21,7 @@ boxes:
   - title: SERVICE LEVEL AGREEMENTS
     description: >-
       Our enterprise-grade SLAs for ticket response and resolution give you the
-      guarantees you need to run Opencell at scale. 
+      guarantees you need to run Opencell at scale.
     url: /img/uploads/bm_servicelevelagreements.svg
   - title: ROAD MAP PRIORITY
     description: >-
@@ -42,7 +43,7 @@ boxes:
     description: >-
       Our experts provide consulting and training exclusively to Enterprise
       Edition customers and their partners. We also provide upgrade scripts to
-      help you smoothly manage your upgrades. 
+      help you smoothly manage your upgrades.
     url: /img/uploads/bm_professionalservices.svg
   - title: ENTERPRISE DOCUMENTATION
     description: >-
@@ -57,4 +58,3 @@ boxes:
       availability and manage version upgrades.
     url: /img/uploads/bm_hostingservices.svg
 ---
-
