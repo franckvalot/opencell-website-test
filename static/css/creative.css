@@ -1089,12 +1089,24 @@ section.contact .info{
     padding: 0 30px;
     background-color: #F9F9F8;
   }
+  .modules .content > div > div{
+    display: none;
+  }
+  .modules .content > div > div.active{
+    display: block;
+  }
+  .modules .content h1,
+  .modules .carousel-item {
+    padding: 0 75px;
+  }
   .modules .content .carousel{
     padding: 30px 0 60px 0;
   }
   .modules .content .carousel-indicators li{
       border: 2px solid #EC6156;
-      margin: auto;
+  }
+  .modules .content .carousel-item{
+      height: inherit;
   }
   .modules .content .carousel-indicators li.active {
       background-color: #EC6156;
