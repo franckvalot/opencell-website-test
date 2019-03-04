@@ -341,11 +341,12 @@ h2{
   }
   header .carousel-inner{
     height: inherit;
-    padding: 0 15%;
+    width: 100%;
   }
   header .carousel-item{
     height: inherit;
-    padding: 0 40px;
+    width: inherit;
+    padding: 0 15%;
     margin: auto;
   }
   header .carousel-indicators{

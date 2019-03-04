@@ -3,16 +3,16 @@ header:
   background: /img/uploads/header-home.jpg
   carousel:
     - button:
-        name: Click here
-        url: '#'
+        name:
+        url:
       subtitle: Agile monetization platform.
       title: Stop selling product. <br> Start selling recurring services.
     - button: {}
       subtitle: Mobile World Congress. Barcelona. February 25 - 28 2019
       title: 'Let''s talk about the future of telecoms<br> '
     - button:
-        name: Button
-        url: '#'
+        name:
+        url:
       subtitle: Webinar. March 15 2019.
       title: 'Agile utilities: how to adapt to deregulation and technological change'
 paradigm:
