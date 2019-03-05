@@ -82,6 +82,14 @@ ourcustomers:
   logos:
     - alt: Adidas
       url: /img/uploads/logo-adidas.svg
+      description: >
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ac diam sit amet risus aliquam dictum. Maecenas eget varius purus, quis blandit quam.
+
+        Aliquam vehicula pulvinar purus eu dictum. Nullam pretium sagittis urna, ac sollicitudin arcu interdum at.
+
+        Nunc et imperdiet massa. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Quisque sit amet lectus et mauris consectetur scelerisque non id sapien.
+
+        Phasellus consequat leo vitae quam efficitur, ac cursus lectus malesuada. Cras ac ligula vel sem facilisis sollicitudin. Morbi nulla justo, scelerisque ullamcorper commodo eu, rhoncus ac diam. Aenean suscipit venenatis ipsum ullamcorper accumsan. Cras ultrices dignissim leo. Mauris tempus purus eu ipsum varius posuere. Phasellus quis neque vitae sem suscipit vulputate et nec augue. Donec nec diam ut mauris semper tristique sodales non tortor. In pharetra volutpat tellus, quis bibendum augue bibendum sagittis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Phasellus lacinia purus ac odio pulvinar mattis.
     - alt: Dona International
       url: /img/uploads/logo-dona.svg
     - alt: Gunster

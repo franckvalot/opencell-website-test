@@ -25,7 +25,9 @@
     }
   }
 
-
+  .cursor{
+    cursor: pointer;
+  }
   .opencell-btn {
     cursor: pointer;
     background-color: #EB5048;
@@ -609,6 +611,76 @@ section.contact .info{
     margin-top: -1px;
     background-color: white;
   }
+
+  /* lightbox */
+  .modal{
+    display: none;
+    position: fixed;
+    z-index: 20;
+    padding: 80px 0 20px 0;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: black;
+  }
+  .modal-content {
+    position: relative;
+    overflow-y: scroll;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px 80px;
+    width: 100%;
+    height: 100%;
+  }
+  .modal-content img{
+    position: sticky;
+    top: auto;
+    left: auto;
+    margin-bottom: 40px;
+  }
+
+  .close {
+    color: white;
+    position: sticky;
+    background-color: gray;
+    width: 35px;
+    height: 35px;
+    top: 0;
+    left: 100%;
+    margin-right: -35px;
+    font-size: 35px;
+    font-weight: bold;
+    border-radius: calc(35px / 2);
+  }
+  .close:hover,
+  .close:focus {
+    color: #999;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  @media(min-width: 768px){
+    .modal{
+      padding: 100px 0 40px 0;
+      left: 0;
+      top: 0;
+    }
+    .modal-content {
+      padding: 40px 80px;
+    }
+  }
+  @media(min-width: 992px){
+      .modal{
+        padding: 150px 50px 50px 50px;
+        left: 0;
+        top: 0;
+      }
+      .modal-content {
+        padding: 80px;
+      }
+    }
 
 /* provide */
   section.whatweprovide .img{

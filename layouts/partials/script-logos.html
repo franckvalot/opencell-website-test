@@ -1,0 +1,25 @@
+  <script type="text/javascript">
+    $(document).ready(function(){
+      $(".customer-logo .logo div.modal").show().hide();
+
+      $(".customer-logo .logo img").click(function(e){
+        if (e.target !== this)
+          return;
+        $(this).siblings(".modal").show();
+        $("body").css("overflow", "hidden");
+      });
+      $(".customer-logo .logo .modal").click(function(e){
+        if (e.target !== this)
+          return;
+        $(".modal").hide();
+        $("body").css("overflow", "auto");
+      });
+      $(".customer-logo .logo .modal .close").click(function(e){
+        if (e.target !== this)
+          return;
+        $(".modal").hide();
+        $("body").css("overflow", "auto");
+      });
+    });
+
+  </script>
