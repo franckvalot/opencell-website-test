@@ -8,12 +8,12 @@
     {{ partial "header/smallheader.html" (dict "Data" $Data) }}
 
 
-    <section class="byindustry">
+    <section class="byindustry navigation">
       <div class="navigation text-center">
         <div class="container">
           {{ range $Data.industries }}
             <h2 class="navigation">
-              <a href="#{{ anchorize .nav }}">{{ .nav | upper}}</a>
+              <a href="#{{ replace .title  "<br>" "" | safeHTML  | anchorize }}">{{ .nav | upper}}</a>
             </h2>
           {{ end }}
         </div>
@@ -23,7 +23,7 @@
     {{ range $Data.industries }}
     <section class="hero-1 byindustry" >
       <div class="container">
-        <a class="anchor" id="{{ anchorize .nav }}"></a>
+        <a class="anchor" id="{{ replace .title  "<br>" "" | safeHTML  | anchorize }}"></a>
         <div class="row justify-content-center">
           <h1 class="col text-center">{{ .title }}</h1>
           <div class="w-100"></div>

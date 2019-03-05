@@ -27,7 +27,7 @@ industries:
 
       * Salt Mobile
     nav: TELCO
-    title: 'Telco, Cloud & Internet of Things'
+    title: 'Telco, IoT & Cloud Infrastructure'
     videoid: Bey4XXJAqS8
   - content: >-
       ## CRITICAL FEATURES
@@ -52,7 +52,7 @@ industries:
 
       * Total Spring
     nav: 'UTILITIES '
-    title: Utilities & Energy
+    title: Energy & Utilities
     videoid: xcJtL7QggTI
   - content: >-
       ## CRITICAL FEATURES

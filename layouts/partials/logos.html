@@ -5,10 +5,10 @@
     </div>
     <div class="row align-items-center justify-content-center customer-logo">
       {{ range .Data.logos }}
-      <div class="col-6 col-md-4 col-lg-3 logo{{ if .description }} cursor{{end}}">
+      <div class="col-6 col-md-4 col-lg-3 logo">
         <div class="row align-items-center h-100">
           <div class="col">
-            <img src="{{ .url }}" class="img-fluid" alt="{{ .alt }}">
+            <img src="{{ .url }}" class="img-fluid {{ if .description }} cursor{{end}}" alt="{{ .alt }}">
             {{ if .description }}
             <div class="modal">
               <div class="modal-content container">

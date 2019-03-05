@@ -12,7 +12,7 @@
     {{ partial "sectiondescription.html" (dict "number" "03" "description" "what kind of client<br>we work with")}}
     {{ partial "sections/whatmakesus.html" $Data.whatmakesus }}
     {{ partial "sectiondescription.html" (dict "number" "04" "description" "what kind of client<br>we work with")}}
-    {{ partial "sections/mainindustries.html" $Data.mainindustries }}
+    {{ partial "sections/mainindustries.html" .  }}
     {{ partial "logos.html" (dict "Data" $Data.ourcustomers) }}
     {{ partial "sectiondescription.html" (dict "number" "05" "description" "Discover our videos")}}
     {{ partial "testimonials.html" $Data.worktogether }}
