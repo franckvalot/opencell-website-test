@@ -1260,6 +1260,8 @@ section.contact .info{
     margin-top: -75px;
   }
   section.platformtechnology.technologies .img img {
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
     height: 80px;
     margin-bottom: 60px;
   }
@@ -1301,6 +1303,13 @@ section.contact .info{
     section.byindustry  div.navigation,
     section.byrole  div.navigation{
       margin: 83px 0;
+    }
+    section.byindustry.navigation,
+    section.byrole.navigation{
+      position: sticky;
+      background-color: white;
+      top: 120px;
+      z-index: 100;
     }
     section.ecosystem h2.navigation,
     section.byindustry h2.navigation,
