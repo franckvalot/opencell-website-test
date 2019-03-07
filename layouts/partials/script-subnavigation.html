@@ -1,0 +1,29 @@
+    <script type="text/javascript" cookie-consent="tracking">
+      $(document).ready(function(){
+        var navLinks = $("section.navigation h2 a");
+        updateSubNav();
+        $(this).on('scroll', function() {
+           updateSubNav();
+           navLinks.each(function(){
+             var section =  $($(this).attr("href"));
+             var currentOffset = $(this).offset().top;
+             if(section.offset().top  <= currentOffset &&
+             section.offset().top + section.parent().parent().outerHeight() > currentOffset){
+               $(this).addClass("current");
+             }
+             else{
+               $(this).removeClass("current");
+             }
+           });
+         })
+      });
+
+      function updateSubNav(){
+        if($(this).scrollTop() - ($("header").innerHeight() + parseInt($("section.navigation div.navigation").css("margin-top"))) > 0) {
+          $("section.navigation").addClass("navigation-fixed");
+        }
+        else{
+         $("section.navigation").removeClass("navigation-fixed");
+        }
+      }
+    </script>

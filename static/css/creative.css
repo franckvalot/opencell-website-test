@@ -1,5 +1,8 @@
 /* body
 =======*/
+  html{
+    scroll-behavior: smooth;
+  }
   html, body {
       width: 100%;
       height: 100%;
@@ -50,7 +53,8 @@
   a {
     color: inherit ;
   }
-  a:hover{
+  a:hover,
+  a.current{
     color: #EF6155;
     text-decoration: none;
   }
@@ -76,7 +80,7 @@
   .anchor{
     display: block;
     position: relative;
-    top: -100px;
+    top: -132px;
     visibility: hidden;
   }
 
@@ -1295,6 +1299,7 @@ section.contact .info{
   section.byrole  div.navigation{
     margin: 71px 0;
   }
+
   @media (min-width:768px){
     section.ecosystem  div.navigation {
       height: 114px;
@@ -1304,12 +1309,18 @@ section.contact .info{
     section.byrole  div.navigation{
       margin: 83px 0;
     }
-    section.byindustry.navigation,
-    section.byrole.navigation{
-      position: sticky;
+    section.byindustry.navigation-fixed div.navigation,
+    section.byrole.navigation-fixed div.navigation{
+      position: fixed;
       background-color: white;
-      top: 120px;
+      top: calc(60px - 83px);
+      left: 0;
+      right: 0;
       z-index: 100;
+    }
+    section.byindustry.navigation-fixed.navigation,
+    section.byrole.navigation-fixed.navigation{
+      height: calc(32px + 83px);
     }
     section.ecosystem h2.navigation,
     section.byindustry h2.navigation,
@@ -1330,6 +1341,10 @@ section.contact .info{
     section.byindustry h2.navigation+h2.navigation:before,
     section.byrole h2.navigation+h2.navigation:before {
       margin: 0 20px;
+    }
+    section.byindustry.navigation-fixed div.navigation,
+    section.byrole.navigation-fixed div.navigation{
+      top: calc(100px - 83px);
     }
   }
 
