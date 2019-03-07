@@ -21,9 +21,11 @@
       function updateSubNav(){
         if($(this).scrollTop() - ($("header").innerHeight() + parseInt($("section.navigation div.navigation").css("margin-top"))) > 0) {
           $("section.navigation").addClass("navigation-fixed");
+          $('section.navigation').height($('section.navigation div.navigation').height() + parseInt($("section.navigation div.navigation").css("margin-top")));
         }
         else{
          $("section.navigation").removeClass("navigation-fixed");
+         $('section.navigation').height($('section.navigation div.navigation').height());
         }
       }
     </script>

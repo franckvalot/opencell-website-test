@@ -1299,7 +1299,15 @@ section.contact .info{
   section.byrole  div.navigation{
     margin: 71px 0;
   }
-
+  section.byindustry.navigation-fixed div.navigation,
+  section.byrole.navigation-fixed div.navigation{
+    position: fixed;
+    background-color: white;
+    top: calc(60px - 71px);
+    left: 0;
+    right: 0;
+    z-index: 100;
+  }
   @media (min-width:768px){
     section.ecosystem  div.navigation {
       height: 114px;
@@ -1311,16 +1319,7 @@ section.contact .info{
     }
     section.byindustry.navigation-fixed div.navigation,
     section.byrole.navigation-fixed div.navigation{
-      position: fixed;
-      background-color: white;
       top: calc(60px - 83px);
-      left: 0;
-      right: 0;
-      z-index: 100;
-    }
-    section.byindustry.navigation-fixed.navigation,
-    section.byrole.navigation-fixed.navigation{
-      height: calc(32px + 83px);
     }
     section.ecosystem h2.navigation,
     section.byindustry h2.navigation,
