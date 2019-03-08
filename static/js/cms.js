@@ -187,7 +187,7 @@ var IndexPreview = createClass({
   render: function(){
       var entry = this.props.entry;
       var headerdata = entry.getIn(['data', 'header']);
-      var paradigmdata = entry.getIn(['data', 'paradigm']);
+      var introductiondata = entry.getIn(['data', 'introduction']);
       var whatweprovidedata = entry.getIn(['data', 'whatweprovide']);
       var whatmakesusdata = entry.getIn(['data', 'whatmakesus']);
       var mainindustriesdata = entry.getIn(['data', 'mainindustries']);
@@ -239,14 +239,7 @@ var IndexPreview = createClass({
       sectiondescription("01", "what is Opencell"),
       h('section', {className:'hero-1'},
         h('div', {className:'container'},
-          h('div', {className:'row justify-content-center'},
-            h('h1', {className:'col-12 text-center'}, paradigmdata.get('title'))
-          ),
-          h('div', {className:'row justify-content-center'},
-            h('div', {className:'col-sm-12 col-md-10 col-lg-8 embed-responsive embed-responsive-16by9'},
-              h('iframe', {className:'youtube', src:'https://www.youtube.com/embed/' + paradigmdata.get('videoid') + '?controls=0', frameborder:'0', allow:'accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture', allowfullscreen:'true'}, '')
-            )
-          )
+          titleanddescription(introductiondata)
         )
       ),
       sectiondescription("02", "what we do"),
@@ -606,7 +599,7 @@ var SolutionByRolePreview = createClass({
                   (item.get('benefits') ? item.get('benefits').map(benefits) : null )
                 ),
                 h('form',{className:'text-right'},
-                  h('button', {className:'opencell-btn'}, 'DISCOVER')
+                  h('button', {className:'opencell-btn'}, 'TRY NOW')
                 )
               ),
             )

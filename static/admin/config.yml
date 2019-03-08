@@ -44,12 +44,12 @@ collections:
                   fields:
                     - {label: Name, name: name, widget: string, required: false}
                     - {label: Url, name: url, widget: string, required: false}
-        - label: Paradigm
-          name: paradigm
+        - label: Introduction
+          name: introduction
           widget: object
           fields:
             - {label: Title, name: title, widget: string}
-            - {label: Youtube Id, name: videoid, widget: string}
+            - {label: Content, name: content, widget: markdown}
         - label: What we provide
           name: whatweprovide
           widget: object
@@ -100,6 +100,13 @@ collections:
                 - {label: Alternative, name: alt, widget: string}
                 - {label: Logo, name: url, widget: image}
                 - {label: Description, name: description, widget: markdown, required: false}
+                - label: URL
+                  name: link
+                  widget: object
+                  required: false
+                  fields:
+                    - {label: Url, name: url, widget: string}
+                    - {label: Open in new page?, name: target, widget: select, options: ["internal", "external"], default: internal}
         - label: We work together
           name: worktogether
           widget: object
@@ -325,6 +332,13 @@ collections:
                   - {label: Alternative, name: alt, widget: string}
                   - {label: Logo, name: url, widget: image}
                   - {label: Description, name: description, widget: markdown, required: false}
+                  - label: URL
+                    name: link
+                    widget: object
+                    required: false
+                    fields:
+                      - {label: Url, name: url, widget: string}
+                      - {label: Open in new page?, name: target, widget: select, options: ["internal", "external"], default: internal}
           - {label: Markdown, name: body, widget: hidden}
       - label: Business Model
         name: aboutusbusinessmodel
@@ -363,13 +377,20 @@ collections:
             widget: list
             fields:
               - {label: Title, name: title, widget: string}
-              - logos: Logos
+              - label: Logos
                 name: logos
                 widget: list
                 fields:
                   - {label: Alternative, name: alt, widget: string}
                   - {label: Logo, name: url, widget: image}
                   - {label: Description, name: description, widget: markdown, required: false}
+                  - label: URL
+                    name: link
+                    widget: object
+                    required: false
+                    fields:
+                      - {label: Url, name: url, widget: string}
+                      - {label: Open in new page?, name: target, widget: select, options: ["internal", "external"], default: internal}
           - {label: Markdown, name: body, widget: hidden}
       - label: Partners
         name: aboutuspartners
@@ -392,6 +413,13 @@ collections:
                   - {label: Alternative, name: alt, widget: string}
                   - {label: Logo, name: url, widget: image}
                   - {label: Description, name: description, widget: markdown, required: false}
+                  - label: URL
+                    name: link
+                    widget: object
+                    required: false
+                    fields:
+                      - {label: Url, name: url, widget: string}
+                      - {label: Open in new page?, name: target, widget: select, options: ["internal", "external"], default: internal}
           - label: We work together
             name: worktogether
             widget: object
@@ -476,6 +504,32 @@ collections:
                     widget: select
                     options: ['public', 'registered', 'private']
           - {label: Markdown, name: body, widget: hidden}
+  - label: "Case studies"
+    name: "casestudies"
+    folder: "content/casestudies"
+    create: true
+    fields:
+      - {label: Draft,  name: draft, widget: select, options: ['true', 'false'], default: 'true'}
+      - {label: Title, name: title, widget: string}
+      - {label: Subtitle, name: subtitle, widget: string}
+      - {label: Description, name: description, widget: text, required: false}
+      - {label: Date, name: date, widget: date}
+      - label: Case study
+        name: casestudy
+        widget: object
+        fields:
+          - {label: Logo, name: logo, widget: image}
+          - {label: Alternative, name: alt, widget: string}
+          - {label: Who, name: who, widget: string}
+          - {label: Position, name: position, widget: string}
+          - {label: Where, name: where, widget: string}
+          - {label: Content, name: content, widget: markdown}
+          - label: Carousel
+            name: carousel
+            widget: list
+            fields:
+              - {label: Content, name: content, widget: markdown}
+      - {label: Body, name: body, widget: hidden}
   - label: Our Blog - Articles
     name: "blogarticle"
     folder: "content/knowledgecenter/product/ourblog/articles"
