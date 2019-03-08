@@ -4,7 +4,7 @@
       <h1>List of pages</h1>
       {{ .Page }}
       {{ range .Pages }}
-      <h2>{{ .Title }}</h2>
+      <a href="{{.URL}}"><h2>{{ .Title }}</h2></a>
       {{ end }}
     </div>
   </section>
