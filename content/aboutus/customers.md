@@ -55,7 +55,7 @@ sections:
   - logos:
       - alt: Fnac Darty
         url: /img/uploads/customer-logo-fnac_darty.png
-      - alt: Etiam
+      - alt: Acetiam
         url: /img/uploads/logo-eckerd.svg
       - alt: Hubicus (groupe BVA)
         url: /img/uploads/customer-logo-hubicus.png

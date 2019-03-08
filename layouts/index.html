@@ -6,7 +6,11 @@
     {{ partial "header/navBar.html" . }}
     {{ partial "header/header.html" $Data.header }}
     {{ partial "sectiondescription.html" (dict "number" "01" "description" "what is Opencell")}}
-    {{ partial "sections/paradigm.html" $Data.paradigm }}
+    <section class="hero-1">
+      <div class="container">
+    {{ partial "titleanddescription.html" (dict "Data" $Data.introduction) }}
+      </div>
+    </section>
     {{ partial "sectiondescription.html" (dict "number" "02" "description" "what we do")}}
     {{ partial "sections/provide.html" (dict "Data" $Data.whatweprovide "showTitle" true) }}
     {{ partial "sectiondescription.html" (dict "number" "03" "description" "what kind of client<br>we work with")}}

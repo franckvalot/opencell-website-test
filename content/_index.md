@@ -15,9 +15,14 @@ header:
         url:
       subtitle: Webinar. March 15 2019.
       title: 'Agile utilities: how to adapt to deregulation and technological change'
-paradigm:
-  title: A new paradigm.
-  videoid: 4MJvDNp7xsk
+introduction:
+  title: Recurring business need the right software
+  content: >
+      Companies move to recurring revenue models to accelerate predictable growth and higher financial valuations.
+
+      But it’s not easy to make the shift. In the world of recurring revenue, sales, customer management, and reporting get handled differently. Time-to-market as well as innovative pricing, packaging and customer management are critical. To succeed, businesses need to go beyond traditional ERP systems and implement new solutions adapted to managing subscription and usage revenue.
+
+      Our agile monetization platform provides everything you need to turn your recurring revenue business into a success.
 whatweprovide:
   button: DISCOVER
   content: >-
@@ -82,14 +87,9 @@ ourcustomers:
   logos:
     - alt: Adidas
       url: /img/uploads/logo-adidas.svg
-      description: >
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ac diam sit amet risus aliquam dictum. Maecenas eget varius purus, quis blandit quam.
-
-        Aliquam vehicula pulvinar purus eu dictum. Nullam pretium sagittis urna, ac sollicitudin arcu interdum at.
-
-        Nunc et imperdiet massa. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Quisque sit amet lectus et mauris consectetur scelerisque non id sapien.
-
-        Phasellus consequat leo vitae quam efficitur, ac cursus lectus malesuada. Cras ac ligula vel sem facilisis sollicitudin. Morbi nulla justo, scelerisque ullamcorper commodo eu, rhoncus ac diam. Aenean suscipit venenatis ipsum ullamcorper accumsan. Cras ultrices dignissim leo. Mauris tempus purus eu ipsum varius posuere. Phasellus quis neque vitae sem suscipit vulputate et nec augue. Donec nec diam ut mauris semper tristique sodales non tortor. In pharetra volutpat tellus, quis bibendum augue bibendum sagittis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Phasellus lacinia purus ac odio pulvinar mattis.
+      link:
+        url:
+        target:
     - alt: Dona International
       url: /img/uploads/logo-dona.svg
     - alt: Gunster

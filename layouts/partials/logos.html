@@ -8,22 +8,7 @@
       <div class="col-6 col-md-4 col-lg-3 logo">
         <div class="row align-items-center h-100">
           <div class="col">
-            <img src="{{ .url }}" class="img-fluid {{ if .description }} cursor{{end}}" alt="{{ .alt }}">
-            {{ if .description }}
-            <div class="modal">
-              <div class="modal-content container">
-                <span class="close text-center">&times;</span>
-                <div class="row  justify-content-center">
-                  <div class="col-7 col-md-4">
-                    <img src="{{ .url }}" class="img-fluid" alt="{{ .alt }}">
-                  </div>
-                  <div class="col-12 col-md-8 markdown">
-                    {{ .description | markdownify }}
-                  </div>
-                </div>
-              </div>
-            </div>
-            {{end}}
+            {{with .link}}{{if (and .url .target)}}<a href="{{.url}}" {{if eq .target "external"}}target="_blank"{{end}}>{{end}}{{end}}<img src="{{ .url }}" class="img-fluid {{ if .description }} cursor{{end}}" alt="{{ .alt }}">  {{with .link}}{{if (and .url .target)}}</a>{{end}}{{end}}
           </div>
         </div>
       </div>
@@ -34,7 +19,7 @@
   <div class="row align-items-center justify-content-center text-center">
     <div class="col">
       <form action="{{ .Data.url }}" method="get">
-        <button type="button" name="button" class="opencell-btn">{{ .Data.button }}</button>
+        <button type="button" name="button" class="opencell-btn">{{ .Data.button | upper }}</button>
       </form>
     </div>
   </div>

@@ -29,6 +29,7 @@ industries:
     nav: TELCO
     title: 'Telco, IoT & Cloud Infrastructure'
     videoid: Bey4XXJAqS8
+    image: /img/uploads/industry-telco-and-iot.jpg
   - content: >-
       ## CRITICAL FEATURES
 
@@ -54,6 +55,7 @@ industries:
     nav: 'UTILITIES '
     title: Energy & Utilities
     videoid: xcJtL7QggTI
+    image: /img/uploads/industry-utility.jpg
   - content: >-
       ## CRITICAL FEATURES
 
@@ -76,6 +78,7 @@ industries:
     nav: MOBILITY
     title: Mobility & Transport
     videoid: xcJtL7QggTI
+    image: /img/uploads/industry-mobility-and-transports.jpg
   - content: >-
       ## CRITICAL FEATURES
 
@@ -95,4 +98,5 @@ industries:
     nav: RETAIL
     title: 'Retail & Consumer '
     videoid: xcJtL7QggTI
+    image: /img/uploads/industry-retail.jpg
 ---
