@@ -64,7 +64,7 @@ function sectiondescription(number, description){
 }
 
 function titleanddescription(item){
-  console.log(item);
+  console.log(item.getIn(['widgets', 'img']));
   return [h('div', {className:'row justify-content-center'},
       h('h1', {className:'col-12 text-center', dangerouslySetInnerHTML: {__html: item.getIn(['data', 'title'])}})
     ),
