@@ -18,7 +18,7 @@ ecosysindustags:
   - Bank & PSP
   - PUBLISHING
   - OSS/ESB
-  - ECOMMERCE
+  - eCOMMERCE
   - BI
 ecosysroletags:
   - FINANCE
@@ -84,3 +84,4 @@ logos:
       - INVOICE
     url: /img/uploads/logo-mosaic.svg
 ---
+
