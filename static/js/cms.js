@@ -64,17 +64,12 @@ function sectiondescription(number, description){
 }
 
 function titleanddescription(item){
-  console.log(item.getIn(['widgets', 'img']));
   return [h('div', {className:'row justify-content-center'},
       h('h1', {className:'col-12 text-center', dangerouslySetInnerHTML: {__html: item.getIn(['data', 'title'])}})
     ),
     h('div', {className:'row justify-content-center text-center'},
       h('div', {className:'col-10 col-md-8'}, item.getIn(['widgets', 'content']))
-    ),
-    (item.getIn(['widgets', 'img']) != null ?
-      console.log("not null")
-    :
-    null)
+    )
   ];
 }
 
