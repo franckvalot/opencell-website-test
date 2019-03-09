@@ -5,42 +5,41 @@ subtitle: We use the latest open source technologies.
 background: /img/uploads/header-platform.jpg
 introduction:
   content: >-
-    With billions of connected users and objects, usage-based services face a
-    massive scalability and reliability challenge that our enterprise-grade
+    With billions of connected users and objects, usage-based services face
+    massive scalability and reliability challenges that our enterprise-grade
     architecture has the capacity to handle.
   title: Entreprise-grade-architecture
 boxes:
   - title: Multi-cloud deployment
     description: >-
       Opencell is “cloud-ready” and can be instantly deployed in a private or a
-      public Cloud using Docker containers orchestrated by Kubernetes. If you
-      prefer, you can also chose to run Opencell on virtual machines for
-      on-premises deployment or in a managed hosting environment
+      public Cloud using Docker containers orchestrated by Kubernetes. You can
+      also chose to run Opencell on virtual machines for on-premises deployment
+      or in a managed hosting environment
   - title: Scalability and high availability
     description: >-
-      Clustering allows Opencell to run on several parallel servers. This
-      insures load balancing across different servers and high availability of
-      the service. It also gives you the possibility to improve performance by
-      simply adding more nodes to the cluster.
+      Clustering allows Opencell to run on several parallel servers providing
+      load balancing and high availability of the service. It also makes it easy
+      to improve performance by simply adding more nodes to the cluster.
   - title: Monitoring and alerting
     description: >-
-      Our microservice architecture based on Spark can achieve horizontal
+      Our microservices architecture based on Spark can achieve horizontal
       scalability to efficiently process large-scale of usage records. With a
-      simple 3-node cluster, our architecture can process up to 3 000 usage
-      records per second.
+      simple 3-node cluster, we can currently process up to 3 000 usage records
+      per second.
   - title: Performance efficiency
     description: >-
-      Opencell provides built-in monitoring and alerting tools that allow
-      detecting system errors, components’ status and performance. All relevant
-      events are logged and accessible on the Opencell Portal.
+      Built-in monitoring and alerting tools detect system errors as well as
+      component status and performance. All relevant events are logged and
+      accessible on our portal.
 businesslogic:
-  - alt: Business Logic
+  - alt: Business logic
     content: >-
       Our platform lets you define specific, granular business rules and
-      processing logic for each service you need to run your business.
+      processing logic you need to run your business.
 
-      Our toolbox has everything you need to quickly model the most complex
-      business requirements:
+      Our toolbox lets you quickly model the most complex business requirements
+      including:
 
 
       * Workflow and business process management rules
@@ -64,16 +63,16 @@ businesslogic:
     content: >-
       Our React-based UX studio lets you quickly create unique, adapted
       experiences for your internal users, business partners and customers
-      without needing to  integrate third-party apps.
+      without requiring integration of third-party apps.
 
-      We provide out-of-the box :
+      Our platform includes:
 
 
-      + Fully responsive UI lay-out
+      * Fully responsive UI lay-out
 
-      + Role-based access management
+      * Role-based access management
 
-      + Contextual search
+      * Contextual search
     title: Customize your user experience
     url: /img/uploads/flexible-user-portal.svg
   - alt: Integration services
@@ -134,3 +133,4 @@ technologies:
       description: Improving User eXperience using React and Bootstrap
       url: /img/uploads/techno_react.png
 ---
+
