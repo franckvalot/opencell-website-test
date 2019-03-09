@@ -76,10 +76,10 @@ leadership:
 investors:
   logos:
     - alt: Cap InnovEst
-      url: /img/uploads/cie-logo.jpg
+      url: /img/uploads/logo-capinnovest.png
     - alt: Kima Ventures
       url: /img/uploads/logo-kima.png
     - alt: BPI France
-      url: /img/uploads/bpifrance.jpg
+      url: /img/uploads/logo-bpifrance.png
   title: Investors & financial partners
 ---

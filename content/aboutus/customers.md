@@ -8,31 +8,31 @@ background: /img/uploads/header-about.jpg
 sections:
   - logos:
       - alt: Actility
-        url: /img/uploads/logo-adidas.svg
+        url: /img/uploads/customer-logo-actility.png
       - alt: Alphalink
-        url: /img/uploads/logo-dona.svg
+        url: /img/uploads/customer-logo-alphalink.png
       - alt: Axione
-        url: /img/uploads/logo-gunster.svg
+        url: /img/uploads/customer-logo-axione.png
       - alt: Diabolocom
-        url: /img/uploads/logo-mosaic.svg
+        url: /img/uploads/customer-logo-diabolocom.png
       - alt: Matooma
-        url: /img/uploads/logo-fl-chamber.svg
+        url: /img/uploads/customer-logo-matooma.png
       - alt: Objenious
-        url: /img/uploads/logo-rayonier.svg
+        url: /img/uploads/customer-logo-objenious.png
       - alt: Odigo (Prosodie)
-        url: /img/uploads/logo-adidas.svg
+        url: /img/uploads/customer-logo-odigo.png
       - alt: Orange
-        url: /img/uploads/logo-eckerd.svg
+        url: /img/uploads/customer-logo-orange.png
       - alt: Salt
-        url: /img/uploads/logo-mosaic.svg
+        url: /img/uploads/customer-logo-salt.png
       - alt: Som Connexio
-        url: /img/uploads/logo-rayonier.svg
+        url: /img/uploads/customer-logo-somconnexio.png
     title: 'Telco, cloud & IoT'
   - logos:
       - alt: Engie
         url: /img/uploads/customer-logo-engie.png
       - alt: Plüm Energie
-        url: /img/uploads/customer-logo-plum.svg
+        url: /img/uploads/customer-logo-plum.png
       - alt: Rensource
         url: /img/uploads/customer-logo-rensource.png
       - alt: Total Spring
@@ -56,7 +56,7 @@ sections:
       - alt: Fnac Darty
         url: /img/uploads/customer-logo-fnac_darty.png
       - alt: Acetiam
-        url: /img/uploads/logo-eckerd.svg
+        url: /img/uploads/logo-acetiam.png
       - alt: Hubicus (groupe BVA)
         url: /img/uploads/customer-logo-hubicus.png
     title: Retail & other
