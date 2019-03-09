@@ -72,7 +72,7 @@ function titleanddescription(item){
       h('div', {className:'col-10 col-md-8'}, item.getIn(['widgets', 'content']))
     ),
     (item.getIn(['widgets', 'img']) != null ?
-      console.log("not null");
+      console.log("not null")
     :
     null)
   ];
