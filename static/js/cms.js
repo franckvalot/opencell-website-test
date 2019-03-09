@@ -68,7 +68,7 @@ function titleanddescription(item){
       h('h1', {className:'col-12 text-center', dangerouslySetInnerHTML: {__html: item.getIn(['data', 'title'])}})
     ),
     h('div', {className:'row justify-content-center text-center'},
-      h('div', {className:'col-10 col-md-8', {}, item.getIn(['widgets', 'content']))
+      h('div', {className:'col-10 col-md-8'}, item.getIn(['widgets', 'content']))
     ),
     (item.get('img') != null ?
     [h('div', {className:'w-100'},''),
