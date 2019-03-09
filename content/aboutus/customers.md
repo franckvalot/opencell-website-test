@@ -56,7 +56,7 @@ sections:
       - alt: Fnac Darty
         url: /img/uploads/customer-logo-fnac_darty.png
       - alt: Acetiam
-        url: /img/uploads/logo-acetiam.png
+        url: /img/uploads/customer-logo-acetiam.png
       - alt: Hubicus (groupe BVA)
         url: /img/uploads/customer-logo-hubicus.png
     title: Retail & other
