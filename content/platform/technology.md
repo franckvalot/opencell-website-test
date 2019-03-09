@@ -80,8 +80,8 @@ businesslogic:
       Monetization is all about being able to process a growing load of data
       coming from sensors & devices as well as other apps and services.
 
-      With our integrate mediation capability and big data architecture, we
-      provide the tools you need to handle data at scale  including :
+      With our integrate mediation capability and big data architecture, you
+      have the capacity to handle data at scale  including :
 
 
       * Filtering & transformation
@@ -94,8 +94,8 @@ businesslogic:
   - alt: Data collection
     content: >-
       Our modular platform is designed to fit in as easily as possible with the
-      rest of your IT ecosystem including ERP/CRM/eCommerce applications, cloud
-      services, authentification services etc.
+      rest of your IT ecosystem including ERP, CRM, eCommerce applications,
+      cloud services and authentification services.
 
       We provide :
 
@@ -117,7 +117,7 @@ technologies:
   introduction:
     content: >-
       Opencell is an open source platform that allows you to take advantage of
-      open standards and ensures no vendor lock-in.
+      open standards without the cost and inconvenience of vendor lock-in.
     title: Open source and open standards
   technologies:
     - alt: Java
