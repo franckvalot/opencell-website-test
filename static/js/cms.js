@@ -64,20 +64,7 @@ function sectiondescription(number, description){
 }
 
 function titleanddescription(item){
-  return [h('div', {className:'row justify-content-center'},
-      h('h1', {className:'col-12 text-center', dangerouslySetInnerHTML: {__html: item.get('title')}})
-    ),
-    h('div', {className:'row justify-content-center text-center'},
-      h('div', {className:'col-10 col-md-8', dangerouslySetInnerHTML: {__html: item.get('content')}})
-    ),
-    (item.get('img') != null ?
-    [h('div', {className:'w-100'},''),
-    h('div', {className:'col'},
-      h('img', {className:'img-fluid', src: item.get('img').get('url'), alt:item.get('img').get('alt'), style:{marginTop:'50px'}})
-    )]
-    :
-    null)
-  ];
+  return null;
 }
 
 function logos(item){
