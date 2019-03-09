@@ -65,10 +65,10 @@ function sectiondescription(number, description){
 
 function titleanddescription(item){
   return [h('div', {className:'row justify-content-center'},
-      h('h1', {className:'col-12 text-center', dangerouslySetInnerHTML: {__html: item.get('title')}})
+      h('h1', {className:'col-12 text-center', dangerouslySetInnerHTML: {__html: item.getIn(['data', 'title'])}})
     ),
     h('div', {className:'row justify-content-center text-center'},
-      h('div', {className:'col-10 col-md-8', dangerouslySetInnerHTML: {__html: item.get('content')}})
+      h('div', {className:'col-10 col-md-8', {}, item.getIn(['widgets', 'content']))
     ),
     (item.get('img') != null ?
     [h('div', {className:'w-100'},''),
@@ -239,7 +239,7 @@ var IndexPreview = createClass({
       sectiondescription("01", "what is Opencell"),
       h('section', {className:'hero-1'},
         h('div', {className:'container'},
-          titleanddescription(introductiondata)
+          titleanddescription(this.props.widgetsFor('introduction'))
         )
       ),
       sectiondescription("02", "what we do"),
@@ -403,7 +403,7 @@ var PlatformTechnologyPreview = createClass({
       return [smallHeader(entry),
       h('section', {className:'hero-1'},
         h('div', {className:'container'},
-          titleanddescription(entry.getIn(['data', 'introduction']))
+          titleanddescription(this.props.widgetsFor('introduction'))
         )
       ),
       h('section', {className:'hero-1 reduce-margin platformtechnology'},
@@ -453,7 +453,7 @@ var PlatformTechnologyPreview = createClass({
       ),
       h('section', {className:'hero-1 reduce-margin'},
         h('div', {className:'container'},
-          titleanddescription(technologiesdata.get('introduction'))
+          titleanddescription(this.props.widgetsFor('introduction'))
         )
       ),
       h('section', {className:'hero-1 platformtechnology technologies'},
@@ -485,7 +485,7 @@ var PlatformEcosystemPreview = createClass({
     return [smallHeader(entry),
       h('section', {className:'hero-1'},
         h('div', {className:'container'},
-          titleanddescription(entry.getIn(['data', 'introduction']))
+          titleanddescription(this.props.widgetsFor('introduction')))
         )
       ),
       h('section', {className:'hero-1 reduce-margin ecosystem'},
@@ -643,7 +643,7 @@ var AboutUSStoryPreview = createClass({
     sectiondescription("01", "Our story"),
     h('section', {className:'hero-1 ourstory'},
       h('div', {className:'container'},
-        titleanddescription(ourstorydata),
+        titleanddescription(this.props.widgetsFor('ourstory')),
         h('div', {className:'row margin text-center'},
           ourstorydata.get('boxes').map(function(item, index){
             if(index%3==0 && index>0){
@@ -706,7 +706,7 @@ var AboutUsBusinessModelPreview = createClass({
       return [smallHeader(entry),
         h('section', {className:'hero-1'},
           h('div', {className:'container'},
-            titleanddescription(introductiondata)
+            titleanddescription(this.props.widgetsFor('introduction'))
           )
         ),
         h('section', {className:'hero-1 businessmodel reduce-margin'},
@@ -791,7 +791,7 @@ var AboutUsWorkplaceAndJobsPreview = createClass({
       sectiondescription("01", "Workplace"),
       h('section', {className:'hero-1'},
         h('div', {className:'container'},
-          titleanddescription(entry.getIn(['data', 'introduction']))
+          titleanddescription(this.props.widgetsFor('introduction'))
         )
       ),
       sectiondescription("02", "Career"),
