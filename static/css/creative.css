@@ -1675,7 +1675,29 @@ JOB OFFERS */
       margin: 40px 0;
     }
   }
-
+  section.casestudy .quote{
+    padding: 0 50px;
+  }
+  section.casestudy .quote::before,
+  section.casestudy .quote::after {
+    position: absolute;
+    top: auto;
+    right: auto;
+    bottom: auto;
+    left: calc(0%);
+    background-image: url("../img/icon/quote-gray.svg");
+    background-size: 35px 35px;
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    content: "";
+  }
+  section.casestudy .quote::after {
+    left: calc(100% - 35px);
+    bottom: -7.5px;
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+  }
 
 /*===========
 CASE STUDY */
