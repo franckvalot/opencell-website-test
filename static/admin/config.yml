@@ -105,8 +105,8 @@ collections:
                   widget: object
                   required: false
                   fields:
-                    - {label: Url, name: url, widget: string}
-                    - {label: Open in new page?, name: target, widget: select, options: ["internal", "external"], default: internal}
+                    - {label: Url, name: url, widget: string, required: false}
+                    - {label: Open in new page?, name: target, widget: select, options: ["internal", "external"], default: internal, required: false}
         - label: We work together
           name: worktogether
           widget: object
@@ -337,8 +337,8 @@ collections:
                     widget: object
                     required: false
                     fields:
-                      - {label: Url, name: url, widget: string}
-                      - {label: Open in new page?, name: target, widget: select, options: ["internal", "external"], default: internal}
+                      - {label: Url, name: url, widget: string, required: false}
+                      - {label: Open in new page?, name: target, widget: select, options: ["internal", "external"], default: internal, required: false}
           - {label: Markdown, name: body, widget: hidden}
       - label: Business Model
         name: aboutusbusinessmodel
@@ -389,8 +389,8 @@ collections:
                     widget: object
                     required: false
                     fields:
-                      - {label: Url, name: url, widget: string}
-                      - {label: Open in new page?, name: target, widget: select, options: ["internal", "external"], default: internal}
+                      - {label: Url, name: url, widget: string, required: false}
+                      - {label: Open in new page?, name: target, widget: select, options: ["internal", "external"], default: internal, required: false}
           - {label: Markdown, name: body, widget: hidden}
       - label: Partners
         name: aboutuspartners
@@ -418,8 +418,8 @@ collections:
                     widget: object
                     required: false
                     fields:
-                      - {label: Url, name: url, widget: string}
-                      - {label: Open in new page?, name: target, widget: select, options: ["internal", "external"], default: internal}
+                      - {label: Url, name: url, widget: string, required: false}
+                      - {label: Open in new page?, name: target, widget: select, options: ["internal", "external"], default: internal, required: false}
           - label: We work together
             name: worktogether
             widget: object
