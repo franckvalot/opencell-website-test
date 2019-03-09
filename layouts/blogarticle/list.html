@@ -4,6 +4,7 @@
   <body>
     {{ partial "header/navBar.html" . }}
 
+    {{ partial "header/smallheader.html" (dict "Title" "Our Blog") }}
     <section class="hero-1 blog">
       <div class="container">
         <div class="row justify-content-center">
@@ -11,7 +12,7 @@
           <h1 class="col-12">Our blog</h1>
           <div class="col-12 col-md-5 col-lg-3 order-lg-last">
             <div class="row justify-content-center text-center tags">
-              <h2>Theme</h2>
+              <h2>THEME</h2>
               <div class="col-12"><a href="#blog" class="tag active">All</a></div>
               {{ range $name, $taxonomy := .Site.Taxonomies.articlestags }}
                   <div class="col-12"><a href="#blog" class="tag">{{ $name }}</a></div>
