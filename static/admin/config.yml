@@ -148,10 +148,14 @@ collections:
           - {label: Description, name: description, widget: text, required: false}
           - label: Modules
             name: modules
-            widget: list
+            widget: object
             fields:
               - {label: Title, name: title, widget: string}
-              - {label: Content, name: content, widget: text}
+              - label: Contents (Carousel)
+                name: contents
+                widget: list
+                fields:
+                  - {label: Content, name: content, widget: text}
           - {label: Markdown, name: body, widget: hidden}
       - label: Technology
         name: platformtechnology
