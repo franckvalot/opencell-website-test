@@ -1,9 +1,7 @@
 ---
 layout: byindustry
 title: We have the right solution<br>for your industry.
-subtitle: >-
-  We provide the rich functionality and configurability<br> that can cover any
-  industry requirement.
+subtitle: Our agile monetization platform<br> can adapt to your business need.
 background: /img/uploads/header-solution-industry.jpg
 industries:
   - content: >-
