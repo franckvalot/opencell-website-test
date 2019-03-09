@@ -70,10 +70,10 @@ function titleanddescription(item){
     h('div', {className:'row justify-content-center text-center'},
       h('div', {className:'col-10 col-md-8'}, item.getIn(['widgets', 'content']))
     ),
-    (item.get('img') != null ?
+    (item.getIn(['data', 'img']) != null ?
     [h('div', {className:'w-100'},''),
     h('div', {className:'col'},
-      h('img', {className:'img-fluid', src: item.get('img').get('url'), alt:item.get('img').get('alt'), style:{marginTop:'50px'}})
+      h('img', {className:'img-fluid', src: item.getIn(['data', 'img']).get('url'), alt:item.getIn(['data', 'img']).get('alt'), style:{marginTop:'50px'}})
     )]
     :
     null)
@@ -485,7 +485,7 @@ var PlatformEcosystemPreview = createClass({
     return [smallHeader(entry),
       h('section', {className:'hero-1'},
         h('div', {className:'container'},
-          titleanddescription(this.props.widgetsFor('introduction')))
+          titleanddescription(this.props.widgetsFor('introduction'))
         )
       ),
       h('section', {className:'hero-1 reduce-margin ecosystem'},
