@@ -39,7 +39,7 @@ sections:
         url: /img/uploads/customer-logo-total.png
       - alt: SEIC Teledis
         url: /img/uploads/customer-logo-seic_teledis.png
-    title: Utilities
+    title: Energy & utilities
   - logos:
       - alt: A-To-Be (Brisa Group)
         url: /img/uploads/customer-logo-a_to_be.png
@@ -60,5 +60,5 @@ sections:
       - alt: Hubicus (groupe BVA)
         url: /img/uploads/customer-logo-hubicus.png
     title: Retail & other
-
 ---
+
