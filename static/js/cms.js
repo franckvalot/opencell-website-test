@@ -72,10 +72,7 @@ function titleanddescription(item){
       h('div', {className:'col-10 col-md-8'}, item.getIn(['widgets', 'content']))
     ),
     (item.getIn(['widgets', 'img']) != null ?
-    [h('div', {className:'w-100'},''),
-    h('div', {className:'col'},
-      h('img', {className:'img-fluid', src: item.getIn(['data', 'img']).get('url'), alt:item.getIn(['data', 'img']).get('alt'), style:{marginTop:'50px'}})
-    )]
+      console.log("not null");
     :
     null)
   ];
