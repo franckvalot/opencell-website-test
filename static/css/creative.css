@@ -1154,7 +1154,7 @@ section.contact .info{
     background-color: transparent;
   }
   .modules .list li.active h2::before{
-    content: "\2192";
+    content: "\01F862";
     margin-right: 10px;
     margin-left: -35px;
     display: inline-block;
