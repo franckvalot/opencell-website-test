@@ -11,12 +11,12 @@
       </div>
     </section>
 
-    <section class="hero-1 reduce-margin ecosystem">
+    <section class="hero-1 d-none d-md-block reduce-margin ecosystem ">
       <div class="navigation text-center">
         <div class="container">
         {{ range $name, $taxonomy := .Site.Taxonomies.ecosysindustags }}
           <h2 class="navigation">
-            <a href="#{{ anchorize $name }}">{{ $name | upper}}</a>
+            <a class="cursor" data-target="{{ anchorize $name }}">{{ $name | upper}}</a>
           </h2>
         {{ end }}
         </div>
@@ -25,17 +25,17 @@
         <div class="container">
         {{ range $name, $taxonomy := .Site.Taxonomies.ecosysroletags }}
           <h2 class="navigation">
-            <a href="#{{ anchorize $name }}">{{ $name | upper}}</a>
+            <a class="cursor" data-target="{{ anchorize $name }}">{{ $name | upper}}</a>
           </h2>
         {{ end }}
         </div>
       </div>
     </section>
 
-    <section class="hero-1 reduce-margin text-center">
+    <section class="hero-1 d-none d-md-block reduce-margin text-center">
       <div class="container">
         <div class="row justify-content-center">
-          <div class="col-6">
+          <div class="col-8 col-lg-6">
             <svg id="rosace" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 792.292 926">
               <defs>
                 <style>
@@ -56,7 +56,7 @@
                 </style>
               </defs>
               <g class="rosace" transform="translate(-270.819 -121.982)">
-                <g id="customer-care" transform="translate(432.278 267.164)">
+                <g data-target="customer-care" id="customer-care" transform="translate(432.278 267.164)">
                   <path class="box" id="box-customer-care" d="M564.489,758.594l0,0a288.632,288.632,0,0,1-95.214-471.278l.079-.082q4.826-4.826,9.881-9.424a288.8,288.8,0,0,1,80.65-51.894l-20.518-47.966A341.326,341.326,0,0,0,332.569,491.3c0,117.636,59.91,221.539,150.819,282.815a340.393,340.393,0,0,0,62.055,33.064l19.591-48.368C564.853,758.734,564.671,758.665,564.489,758.594Z" transform="translate(-332.569 -177.948)" fill="#d73533" stroke="#fff" stroke-miterlimit="10" stroke-width="2"/>
                   <g id="txt-customer-care" transform="translate(88.05 24.91)">
                     <path id="Tracé_735" data-name="Tracé 735" d="M376.648,221.787a5.308,5.308,0,0,1-.283,6.992,5.833,5.833,0,1,1-8.978-7.448A5.218,5.218,0,0,1,374.482,220l-1.717,2.058a2.707,2.707,0,0,0-3.579.726,3.524,3.524,0,0,0,5.423,4.488,2.744,2.744,0,0,0,.29-3.394Z" transform="translate(-365.905 -135.245)" fill="#fff"/>
@@ -73,7 +73,7 @@
                     <path id="Tracé_746" data-name="Tracé 746" d="M409.376,191.079l1.115,2.258,3.759-1.859.89,1.8-3.759,1.857,1.08,2.184,3.759-1.857.911,1.846-6.056,2.993-4.91-9.929,6.059-3,.911,1.844Z" transform="translate(-299.827 -187.379)" fill="#fff"/>
                   </g>
                 </g>
-                <g id="self-care" transform="translate(379.056 220.208)">
+                <g data-target="self-care" id="self-care" transform="translate(379.056 220.208)">
                   <path class="box" id="box-self-care" d="M515.847,804.424c-90.906-61.276-150.816-165.179-150.816-282.815,0-115.591,57.852-217.91,146.109-279.566a340.558,340.558,0,0,1,60.684-33.782l-20.732-48.468a392.591,392.591,0,0,0-40.473,20.164c-118.412,67.816-198.2,195.414-198.2,341.653,0,148.589,82.38,277.921,203.948,344.862a391.719,391.719,0,0,0,41.746,19.868L577.9,837.488A340.48,340.48,0,0,1,515.847,804.424Z" transform="translate(-312.419 -159.792)" fill="#c1001c" stroke="#fff" stroke-miterlimit="10" stroke-width="2"/>
                   <g id="txt-self-care" transform="translate(158.355 25.827)">
                     <path id="Tracé_748" data-name="Tracé 748" d="M377.683,194.532a1.734,1.734,0,0,0,2.575.362,1.337,1.337,0,0,0,.309-1.939c-.555-.671-1.331-.441-2.319-.1-1.978.689-3.782,1.313-5.15-.346-1.4-1.7-.6-3.669.969-4.968,2-1.651,4.076-1.228,5.275.225l-1.978,1.632a1.377,1.377,0,0,0-2.092-.346,1.181,1.181,0,0,0-.309,1.712c.454.549,1.167.5,2.158.129,1.947-.724,3.88-1.416,5.322.33,1.368,1.661.885,3.785-.948,5.3-1.9,1.572-4.179,1.6-5.79-.354Z" transform="translate(-372.372 -141.822)" fill="#fff"/>
@@ -86,7 +86,7 @@
                     <path id="Tracé_755" data-name="Tracé 755" d="M401.293,173.265l1.1,2.266,3.78-1.836.88,1.812-3.78,1.836,1.067,2.2,3.782-1.838.9,1.854-6.094,2.961-4.852-9.987,6.091-2.961.9,1.857Z" transform="translate(-330.18 -169.57)" fill="#fff"/>
                   </g>
                 </g>
-                <g data-parents="reporting-manager order-manager catalog-manager" id="crm" transform="translate(324.495 171.262)">
+                <g data-target="crm" data-parents="reporting-manager order-manager catalog-manager" id="crm" transform="translate(324.495 171.262)">
                   <path class="box" id="box-crm" d="M550.013,896.453C428.444,829.509,346.062,700.177,346.062,551.588c0-146.238,79.789-273.837,198.2-341.65a391.251,391.251,0,0,1,40.473-20.164l-20.753-48.513q-10.242,4.37-20.217,9.231C394.58,223.128,291.762,376.187,291.762,553.278c0,179.751,105.943,334.735,258.777,405.995q9.992,4.655,20.24,8.833l20.98-51.788A392.222,392.222,0,0,1,550.013,896.453Z" transform="translate(-291.762 -141.261)" fill="#c1001c" stroke="#fff" stroke-linejoin="round" stroke-width="2"/>
                   <g id="txt-crm" transform="translate(232.302 27.863)">
                     <path id="Tracé_757" data-name="Tracé 757" d="M391.295,161.562a5.306,5.306,0,0,1-2.721,6.445,5.831,5.831,0,1,1-5.782-10.127,5.219,5.219,0,0,1,7.105,1.249l-2.33,1.323a2.706,2.706,0,0,0-3.608-.576,3.521,3.521,0,0,0,3.5,6.1,2.745,2.745,0,0,0,1.463-3.072Z" transform="translate(-379.712 -143.252)" fill="#fff"/>
@@ -94,7 +94,7 @@
                     <path id="Tracé_759" data-name="Tracé 759" d="M403.174,161.765l-2.25,1.1-3.024-6.175.877,7.229-1.706.835-5.246-5.087,3.027,6.175-2.248,1.1-4.881-9.958,2.66-1.307,6.057,5.626-.763-8.217,2.618-1.281Z" transform="translate(-366.564 -151.81)" fill="#fff"/>
                   </g>
                 </g>
-                <g data-parents="reporting-manager order-manager catalog-manager" id="ecommerce" transform="translate(271.819 122.982)">
+                <g data-target="ecommerce" data-parents="reporting-manager order-manager catalog-manager" id="ecommerce" transform="translate(271.819 122.982)">
                   <path class="box" id="box-ecommerce" d="M583.208,989.378c-152.837-71.26-258.777-226.244-258.777-406,0-177.092,102.818-330.153,252-402.786q9.976-4.857,20.219-9.231l-20.7-48.383,0,0c-178.8,76.3-304.136,253.708-304.136,460.4,0,209.651,128.962,389.157,311.87,463.6l0,0,19.757-48.772Q593.2,994.034,583.208,989.378Z" transform="translate(-271.819 -122.982)" fill="#c1001c" stroke="#fff" stroke-linejoin="round" stroke-width="2"/>
                   <g id="txt-ecommerce" transform="translate(195.042 27.668)">
                     <path id="Tracé_761" data-name="Tracé 761" d="M348.951,160.039l1.6,1.947,3.249-2.66,1.273,1.556-3.246,2.66,1.545,1.889,3.246-2.66,1.3,1.59-5.23,4.284-7.026-8.576,5.232-4.284,1.3,1.6Z" transform="translate(-345.662 -96.812)" fill="#fff"/>
@@ -109,7 +109,7 @@
                     <path id="Tracé_770" data-name="Tracé 770" d="M384.114,137.139l1.1,2.269,3.782-1.825.874,1.809-3.78,1.825,1.062,2.2,3.78-1.828.9,1.854-6.091,2.945-4.826-9.989L387,133.457l.9,1.854Z" transform="translate(-287.814 -133.457)" fill="#fff"/>
                   </g>
                 </g>
-                <g class="active" id="billing-engine" transform="translate(688.807 495.491)">
+                <g data-target="billing" class="active" id="billing-engine" transform="translate(688.807 495.491)">
                   <path id="box-billing-engine" d="M600.639,349.484a85.474,85.474,0,1,1-85.473-85.47,85.47,85.47,0,0,1,85.473,85.47" transform="translate(-429.691 -264.014)" fill="#fff"/>
                   <g id="txt-billing-engine" transform="translate(43.748 64.598)">
                     <path id="Tracé_772" data-name="Tracé 772" d="M446.254,288.608h5.869c3.885,0,4.593,2.509,4.593,3.928a3.026,3.026,0,0,1-2.248,3.074,3.083,3.083,0,0,1,2.369,3.135c0,1.458-.708,4.028-4.593,4.028h-5.99Zm5.222,5.769c1.6,0,1.962-.993,1.962-1.7,0-.626-.3-1.659-1.962-1.659h-1.962v3.36Zm-1.962,2.406v3.478h2.042a1.751,1.751,0,1,0,.021-3.478Z" transform="translate(-446.254 -288.246)" fill="#8297a3"/>
@@ -127,7 +127,7 @@
                     <path id="Tracé_784" data-name="Tracé 784" d="M476.992,300.429v3.217h5.362v2.567h-5.362v3.117h5.362v2.631h-8.64V297.8h8.64v2.631Z" transform="translate(-401.184 -273.163)" fill="#8297a3"/>
                   </g>
                 </g>
-                <g id="marketing-manager" transform="translate(484.838 376.518)">
+                <g data-target="marketing" id="marketing-manager" transform="translate(484.838 376.518)">
                   <path class="box" id="box-marketing-manager" d="M567.005,604.752a196.221,196.221,0,0,1-64.7-320.47L437,218.971l-.077.079a287.668,287.668,0,0,0-84.453,203.983c0,120.84,74.282,224.31,179.664,267.295l0,0Z" transform="translate(-352.468 -218.971)" fill="#850a18" stroke="#fff" stroke-miterlimit="10" stroke-width="2"/>
                   <g id="txt-marketing-manager" transform="translate(30.704 201.82)">
                     <g id="Groupe_365" data-name="Groupe 365">
@@ -152,7 +152,7 @@
                     </g>
                   </g>
                 </g>
-                <g data-parents="reporting-manager finance-manager" id="business-intelligence">
+                <g data-target="bi" data-parents="reporting-manager finance-manager" id="business-intelligence">
                   <path class="box" id="box-business-intelligence" d="M384.515,271.7l65.306,65.309a195.614,195.614,0,0,1,138.743-57.467V187.181A287.675,287.675,0,0,0,384.515,271.7Z" transform="translate(184.969 105.37)" fill="#850a18" stroke="#fff" stroke-miterlimit="10" stroke-width="2"/>
                   <g id="txt-business-intelligence" transform="translate(629.312 331.636)">
                     <g id="Groupe_369" data-name="Groupe 369" transform="translate(8.035)">
@@ -181,7 +181,7 @@
                     </g>
                   </g>
                 </g>
-                <g data-parents="mediation" id="oss">
+                <g data-target="oss-esb" data-parents="mediation" id="oss">
                   <path class="box" id="box-oss" d="M529.444,380.236a195.577,195.577,0,0,1-74.041-14.5l-34.868,85.578a289.4,289.4,0,0,0,220.81-1.223l-35.816-85.161A195.6,195.6,0,0,1,529.444,380.236Z" transform="translate(244.088 397.114)" fill="#850a18" stroke="#fff" stroke-miterlimit="10" stroke-width="2"/>
                   <g id="txt-oss" transform="translate(756.259 815.034)">
                     <g id="Groupe_372" data-name="Groupe 372">
@@ -191,7 +191,7 @@
                     </g>
                   </g>
                 </g>
-                <g data-parents="invoice-composer" id="publishing">
+                <g data-target="publishing" data-parents="invoice-composer" id="publishing">
                   <path class="box" id="box-publishing" d="M490.574,431.3l35.816,85.161A289.545,289.545,0,0,0,681.744,359.4l-85.56-34.9A196.855,196.855,0,0,1,490.574,431.3Z" transform="translate(359.044 330.748)" fill="#850a18" stroke="#fff" stroke-miterlimit="10" stroke-width="2"/>
                   <g id="txt-publishing" transform="translate(902.436 713.097)">
                     <g id="Groupe_374" data-name="Groupe 374">
@@ -208,7 +208,7 @@
                     </g>
                   </g>
                 </g>
-                <g data-parents="payment-manager ar-manager" id="bank-psp">
+                <g data-target="bank-psp" data-parents="payment-manager ar-manager" id="bank-psp" data-target="bank-psp">
                   <path class="box" id="box-bank-psp" d="M579.6,219.18l-65.3,65.309a196.261,196.261,0,0,1,42.95,212.865l85.56,34.9A288.814,288.814,0,0,0,579.6,219.18Z" transform="translate(397.98 157.89)" fill="#850a18" stroke="#fff" stroke-miterlimit="10" stroke-width="2"/>
                   <g id="txt-bank-psp" transform="translate(990.903 511.18)">
                     <g id="Groupe_376" data-name="Groupe 376" transform="translate(18.657)">
@@ -225,7 +225,7 @@
                     </g>
                   </g>
                 </g>
-                <g data-parents="finance-manager ar-manager" id="erp">
+                <g data-target="erp" data-parents="finance-manager ar-manager" id="erp">
                   <path class="box" id="box-erp" d="M461.771,187.181h0v92.361h0a195.6,195.6,0,0,1,138.745,57.467l65.3-65.309A287.663,287.663,0,0,0,461.771,187.181Z" transform="translate(311.764 105.37)" fill="#850a18" stroke="#fff" stroke-miterlimit="10" stroke-width="2"/>
                   <g id="txt-erp" transform="translate(849.845 344.64)">
                     <g id="Groupe_379" data-name="Groupe 379">
@@ -235,7 +235,7 @@
                     </g>
                   </g>
                 </g>
-                <g data-parents="billing-engine" id="order-manager">
+                <g data-target="order" data-parents="billing-engine" id="order-manager">
                   <path class="box" id="box-order-manager" d="M499.175,342.946a85.149,85.149,0,0,1,6.329-32.282L402.356,268.588a196.516,196.516,0,0,0,.637,150.755l102.85-43.254A85.193,85.193,0,0,1,499.175,342.946Z" transform="translate(190.099 238.984)" fill="#d73533" stroke="#fff" stroke-miterlimit="10" stroke-width="2"/>
                   <g id="txt-order-manager" transform="translate(613.271 545.999)">
                     <g id="Groupe_381" data-name="Groupe 381" transform="translate(0 11.579)">
@@ -256,7 +256,7 @@
                     </g>
                   </g>
                 </g>
-                <g data-parents="billing-engine" id="catalog-manager">
+                <g data-target="catalog" data-parents="billing-engine" id="catalog-manager">
                   <path class="box" id="box-catalog-manager" d="M496.3,309.288l-102.85,43.254A196.741,196.741,0,0,0,500.838,458.229l41.989-102.94A85.761,85.761,0,0,1,496.3,309.288Z" transform="translate(199.639 305.785)" fill="#d73533" stroke="#fff" stroke-miterlimit="10" stroke-width="2"/>
                   <g id="txt-catalog-manager" transform="translate(644.769 647.349)">
                     <g id="Groupe_384" data-name="Groupe 384" transform="translate(0 9.082)">
@@ -279,7 +279,7 @@
                     </g>
                   </g>
                 </g>
-                <g data-parents="billing-engine" id="mediation">
+                <g data-target="mediation" data-parents="billing-engine" id="mediation">
                   <path class="box" id="box-mediation" d="M508.382,333.24a85.212,85.212,0,0,1-32.285-6.326l-41.989,102.94a196.329,196.329,0,0,0,150.256-1.41L541.523,326.576A85.235,85.235,0,0,1,508.382,333.24Z" transform="translate(266.367 334.16)" fill="#d73533" stroke="#fff" stroke-miterlimit="10" stroke-width="2"/>
                   <g id="txt-mediation" transform="translate(735.226 710.044)">
                     <g id="Groupe_387" data-name="Groupe 387">
@@ -295,7 +295,7 @@
                     </g>
                   </g>
                 </g>
-                <g data-parents="billing-engine" id="invoice-composer">
+                <g data-target="invoice" data-parents="billing-engine" id="invoice-composer">
                   <path class="box" id="box-invoice-composer" d="M622.536,350.468,520.78,308.963a85.752,85.752,0,0,1-46,46.521l42.842,101.867A196.735,196.735,0,0,0,622.536,350.468Z" transform="translate(333.114 305.252)" fill="#d73533" stroke="#fff" stroke-miterlimit="10" stroke-width="2"/>
                   <g id="txt-invoice-composer" transform="translate(847.613 652.923)">
                     <g id="Groupe_389" data-name="Groupe 389" transform="translate(2.496 5.406)">
@@ -319,7 +319,7 @@
                     </g>
                   </g>
                 </g>
-                <g data-parents="billing-engine" id="payment-manager">
+                <g data-target="payment" data-parents="billing-engine" id="payment-manager">
                   <path class="box" id="box-payment-manager" d="M498.732,343.777a85.213,85.213,0,0,1-6.329,32.285l101.756,41.505a196.384,196.384,0,0,0-.919-149.485L492.065,310.633A85.194,85.194,0,0,1,498.732,343.777Z" transform="translate(361.491 238.153)" fill="#d73533" stroke="#fff" stroke-miterlimit="10" stroke-width="2"/>
                   <g id="txt-payment-manager" transform="translate(905.545 546.389)">
                     <g id="Groupe_392" data-name="Groupe 392" transform="translate(18.352 2.921)">
@@ -342,7 +342,7 @@
                     </g>
                   </g>
                 </g>
-                <g data-parents="billing-engine" id="ar-manager">
+                <g data-target="ar-manager" data-parents="billing-engine" id="ar-manager">
                   <path class="box" id="box-ar-manager" d="M520.977,376.14l101.175-42.551A196.768,196.768,0,0,0,516.043,228.171L474.45,330.139A85.758,85.758,0,0,1,520.977,376.14Z" transform="translate(332.579 172.647)" fill="#d73533" stroke="#fff" stroke-miterlimit="10" stroke-width="2"/>
                   <g id="txt-ar-manager" transform="translate(843.627 457.744)">
                     <g id="Groupe_395" data-name="Groupe 395" transform="translate(32.356 5.792)">
@@ -360,7 +360,7 @@
                     </g>
                   </g>
                 </g>
-                <g data-parents="billing-engine" id="finance-manager">
+                <g data-target="finance" data-parents="billing-engine" id="finance-manager">
                   <path class="box" id="box-finance-manager" d="M509.517,333A85.187,85.187,0,0,1,541.8,339.33l41.593-101.968a196.415,196.415,0,0,0-149.971.172l42.956,102.137A85.194,85.194,0,0,1,509.517,333Z" transform="translate(265.233 163.456)" fill="#d73533" stroke="#fff" stroke-miterlimit="10" stroke-width="2"/>
                   <g id="txt-finance-manager" transform="translate(739.206 420.488)">
                     <g id="Groupe_398" data-name="Groupe 398" transform="translate(4.208)">
@@ -383,7 +383,7 @@
                     </g>
                   </g>
                 </g>
-                <g data-parents="billing-engine" id="reporting-manager">
+                <g data-target="reporting" data-parents="billing-engine" id="reporting-manager">
                   <path class="box" id="box-reporting-manager" d="M542.364,330.373,499.408,228.236a196.755,196.755,0,0,0-106.2,106.582L496.36,376.894A85.753,85.753,0,0,1,542.364,330.373Z" transform="translate(199.243 172.754)" fill="#d73533" stroke="#fff" stroke-miterlimit="10" stroke-width="2"/>
                   <g id="txt-reporting-manager" transform="translate(634.882 443.626)">
                     <g id="Groupe_401" data-name="Groupe 401">
@@ -415,36 +415,14 @@
       </div>
     </section>
 
-    <section class="hero-1 reduce-margin">
-      <div class="container">
-        <div class="row align-items-center justify-content-center customer-logo">
-          {{ $scratch := newScratch }}
-          {{ range $Data.logos }}
-          {{range .ecosysindustags}}{{ $scratch.Add "industagdata" (slice (anchorize .))}}{{end}}
-          {{range .ecosysroletags}}{{ $scratch.Add "roletagdata" (slice (anchorize .))}}{{end}}
-
-          <div class="col-6 col-md-4 col-lg-3 logo">
-            <div class="row align-items-center h-100">
-              <div class="col">
-                <img src="{{ .url }}" class="img-fluid" alt="{{ .alt }}" data-industag="{{ jsonify ($scratch.Get "industagdata" )}}" data-roletag="{{ jsonify ($scratch.Get "roletagdata" )}}">
-              </div>
-            </div>
-          </div>
-
-          {{ $scratch.Delete "industagdata"}}
-          {{ $scratch.Delete "roletagdata"}}
-          {{ end }}
-
-          <div class="col-12 logo"></div>
-      </div>
-    </section>
-
+    {{ partial "logos.html" (dict "Data" $Data.customers "SectionClass" "d-none d-md-block")}}
 
     {{ partial "sections/getdemo.html" . }}
     {{ partial "sections/mentions.html" . }}
 
     {{ partial "script.html" }}
     <script type="text/javascript">
+      var logosdata = $('.customer-logo>div:not(:last-child)').clone();
       function hasCommonElement(arr1,arr2)
       {
          var bExists = false;
@@ -463,60 +441,23 @@
 
       $('h2.navigation').click(function () {
 
-        var select = ($(this).children('a').attr('href').replace('#', ''));
-        //$(this).parent('div').children('h2.navigation').not(this).children('a').removeClass('active');
+        $(this).siblings().children('a').removeClass('active');
         $(this).children('a').toggleClass('active');
 
+        var currentTag =  $(this).children('a.active').data('target');
+        $('.customer-logo>div:not(:last-child)').remove();
+        $('.customer-logo').prepend(logosdata);
 
-        // var industag = $('div.navigation:nth-child(1)').children('h2').children('a.active').attr('href');
-        // var roletag = $('div.navigation:nth-child(2)').children('h2').children('a.active').attr('href');
-
-        var industag = $('div.navigation>div:nth-child(1)').children('h2').children('a.active').map(function(){return $(this).attr('href').replace('#', '')});
-        var roletag = $('div.navigation>div:nth-child(2)').children('h2').children('a.active').map(function(){return $(this).attr('href').replace('#', '')});
-
-        $('.logo').hide();
-
-        if(industag.length > 0  && roletag.length > 0 )
-        $('.logo').filter(function(){
-          if(hasCommonElement(industag,$(this).children('img').data('industag'))){
-            return true;
-          }
-        }).filter(function(){
-          if(hasCommonElement(roletag,$(this).children('img').data('roletag'))){
-            return true;
-          }
-        }).show();
-        else if(industag.length > 0)
-          $('.logo').filter(function(){
-            if(hasCommonElement(industag,$(this).children('img').data('industag'))){
-              return true;
-            }
-          }).show();
-        else if(roletag.length > 0)
-        $('.logo').filter(function(){
-          if(hasCommonElement(roletag,$(this).children('img').data('roletag'))){
-            return true;
-          }
-        }).show();
-        else $('.logo').show();
-
-
-         /*
-
-        var tag = $(this).text();
-        $('.tag')
-          .removeClass('active');
-        $(this).addClass('active');
-
-        $('.list')
-          .hide();
-
-        $('.list').each(function(){
-        if($(this).data("tags").indexOf(tag) >= 0) $(this).show();
-        });
-
-        if(tag == "All") $('.list').show();
-        */
+        if(currentTag){
+          $('.customer-logo>div:not(:last-child)').filter(function(){
+            return !hasCommonElement([currentTag],$(this).find('img').data('tags'));
+          }).remove();
+          setActiveModule($("svg#rosace .rosace > *[data-target=\""+ currentTag +"\"]"));
+          updateRosace($("svg#rosace .rosace > *[data-target=\""+ currentTag+"\"]"));
+        }
+        else{
+          resetRosace();
+        }
       });
     </script>
     <script type="text/javascript">
@@ -544,11 +485,15 @@
         }
       }
 
-
       function updateRosace(item){
         item.siblings().addClass("innactive");
         item.removeClass("innactive");
         activeParents(item);
+      }
+
+      function resetRosace(){
+        $("svg#rosace .rosace > *").removeClass("active");
+        $("svg#rosace .rosace > *").removeClass("innactive");
       }
 
 
@@ -564,11 +509,29 @@
       }
 
       $( document ).ready(function() {
-        console.log($("#rosace").text());
         $("svg#rosace .rosace > *").click(
           function(){
-            setActiveModule($(this));
-            updateRosace($(this));
+            if($(this).hasClass("active")){
+              resetRosace();
+              $('h2.navigation').children("a").removeClass('active');
+              $('.customer-logo').prepend(logosdata);
+            }
+            else{
+              var currentTag =  $(this).data('target');
+
+              $('h2.navigation').children("a").removeClass('active');
+              $('h2.navigation').children("a[data-target=\""+ currentTag+"\"]").addClass('active');
+              $('.customer-logo>div:not(:last-child)').remove();
+              $('.customer-logo').prepend(logosdata);
+
+              if(currentTag){
+                $('.customer-logo>div:not(:last-child)').filter(function(){
+                  return !hasCommonElement([currentTag],$(this).find('img').data('tags'));
+                }).remove();
+              }
+              setActiveModule($(this));
+              updateRosace($(this));
+            }
           }
         )
         $("svg#rosace .rosace > *").hover(

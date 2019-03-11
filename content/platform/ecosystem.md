@@ -14,12 +14,15 @@ introduction:
   title: Our growing ecosystem.
 ecosysindustags:
   - CRM
-  - ERM
+  - SELF-CARE
+  - CUSTOMER-CARE
   - Bank & PSP
   - PUBLISHING
   - OSS/ESB
   - eCOMMERCE
   - BI
+  - MARKETING
+  - ERP
 ecosysroletags:
   - FINANCE
   - AR MANAGER
@@ -27,61 +30,35 @@ ecosysroletags:
   - REPORTING
   - ORDER
   - INVOICE
-logos:
-  - alt: Gunster
-    ecosysindustags:
-      - CRM
-      - PUBLISHING
-      - OSS/ESB
-      - BI
-    ecosysroletags:
-      - AR MANAGER
-      - ORDER
-      - INVOICE
-    url: /img/uploads/logo-gunster.svg
-  - alt: Adidas
-    ecosysindustags:
-      - ERM
-      - PUBLISHING
-      - ECOMMERCE
-      - BI
-    ecosysroletags:
-      - FINANCE
-      - PAYMENT
-      - INVOICE
-    url: /img/uploads/logo-adidas.svg
-  - alt: Dona International
-    ecosysindustags:
-      - ERM
-      - Bank & PSP
-      - OSS/ESB
-      - BI
-    ecosysroletags:
-      - AR MANAGER
-      - PAYMENT
-      - ORDER
-    url: /img/uploads/logo-dona.svg
-  - alt: Gunster
-    ecosysindustags:
-      - ERM
-      - PUBLISHING
-      - OSS/ESB
-      - ECOMMERCE
-    ecosysroletags:
-      - FINANCE
-      - REPORTING
-      - ORDER
-    url: /img/uploads/logo-gunster.svg
-  - alt: Mosaic
-    ecosysindustags:
-      - ERM
-      - PUBLISHING
-      - ECOMMERCE
-      - ECOMMERCE
-    ecosysroletags:
-      - AR MANAGER
-      - REPORTING
-      - INVOICE
-    url: /img/uploads/logo-mosaic.svg
+  - MEDIATION
+  - CATALOG
+  - BILLING
+customers:
+  logos:
+    - alt: Gunster
+      tags:
+        - AR MANAGER
+        - ORDER
+        - INVOICE
+      url: /img/uploads/logo-gunster.svg
+    - alt: Adidas
+      tags:
+        - PAYMENT
+        - INVOICE
+      url: /img/uploads/logo-adidas.svg
+    - alt: Dona International
+      tags:
+        - ERM
+        - Bank & PSP
+        - OSS/ESB
+      url: /img/uploads/logo-dona.svg
+    - alt: Gunster
+      tags:
+        - ECOMMERCE
+      url: /img/uploads/logo-gunster.svg
+    - alt: Mosaic
+      tags:
+        - ERM
+        - ECOMMERCE
+      url: /img/uploads/logo-mosaic.svg
 ---
-

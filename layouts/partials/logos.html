@@ -1,17 +1,22 @@
-<section class="hero-1 logos {{ if .Reducemargin }}reduce-margin{{end}}">
+<section class="hero-1 logos {{with .SectionClass }}{{.}}{{end}}{{ if .Reducemargin }}reduce-margin{{end}}">
   <div class="container">
+    {{with .Data.title }}
     <div class="row align-items-center justify-content-center">
-      <h1 class="col-12 text-center">{{ .Data.title }}</h1>
+      <h1 class="col-12 text-center">{{ . }}</h1>
     </div>
+    {{ end }}
     <div class="row align-items-center justify-content-center customer-logo">
+      {{ $scratch := newScratch }}
       {{ range .Data.logos }}
+      {{range .tags}}{{ $scratch.Add "tags" (slice (anchorize .))}}{{end}}
       <div class="col-6 col-md-4 col-lg-3 logo">
         <div class="row align-items-center h-100">
           <div class="col">
-            {{with .link}}{{if (and .url .target)}}<a href="{{.url}}" {{if eq .target "external"}}target="_blank"{{end}}>{{end}}{{end}}<img src="{{ .url }}" class="img-fluid {{ if .description }} cursor{{end}}" alt="{{ .alt }}">  {{with .link}}{{if (and .url .target)}}</a>{{end}}{{end}}
+            {{with .link}}{{if (and .url .target)}}<a href="{{.url}}" {{if eq .target "external"}}target="_blank"{{end}}>{{end}}{{end}}<img src="{{ .url }}" class="img-fluid {{ if .description }} cursor{{end}}" alt="{{ .alt }}" {{if .tags}} data-tags="{{ jsonify ($scratch.Get "tags" )}}"{{ end }}>  {{with .link}}{{if (and .url .target)}}</a>{{end}}{{end}}
           </div>
         </div>
       </div>
+      {{ $scratch.Delete "tags"}}
       {{ end }}
       <div class="col-12 logo"></div>
   </div>

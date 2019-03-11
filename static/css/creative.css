@@ -1299,6 +1299,9 @@ section.contact .info{
   section.byrole  div.navigation{
     margin: 71px 0;
   }
+  section.ecosystem  div.navigation{
+    padding: 41px 0;
+  }
   section.byindustry.navigation-fixed div.navigation,
   section.byrole.navigation-fixed div.navigation{
     position: fixed;
@@ -1310,8 +1313,7 @@ section.contact .info{
   }
   @media (min-width:768px){
     section.ecosystem  div.navigation {
-      height: 114px;
-      padding: 41px 0;
+      
     }
     section.byindustry  div.navigation,
     section.byrole  div.navigation{
