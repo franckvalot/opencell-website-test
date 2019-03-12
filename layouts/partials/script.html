@@ -3,6 +3,20 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
     <script src="/js/lity.js" class=""></script>
+
+    <script type="text/javascript">
+      $(document).ready(function(){
+        var path = window.location.pathname;
+        var target = $('nav a[href="'+path+'"]');
+        console.log(target);
+        target.addClass('active');
+        if(target.hasClass("dropdown-item")){
+          target.parents("li.dropdown").children("a.nav-link").addClass('active');
+        }
+      });
+    </script>
+
+
     <!-- Cookie Consent by https://TermsFeed.com -->
     <script type="text/javascript" src="//termsfeed.com/cookie-consent/releases/3.0.0/cookie-consent.js"></script>
     <script type="text/javascript" cookie-consent="tracking">

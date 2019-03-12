@@ -140,9 +140,11 @@
 
   .navbar-light .navbar-nav .nav-link:focus,
   .navbar-light .navbar-nav .nav-link:hover,
-  .dropdown-item:focus, .dropdown-item:hover{
+  .navbar-light .navbar-nav .nav-link.active,
+  .dropdown-item:focus, .dropdown-item:hover, .dropdown-item.active{
       color: #EF6155;
       text-decoration: none;
+      background-color: transparent;
   }
 /* Height of navbar (<medium) */
   .navbar .container {
@@ -171,12 +173,12 @@
       margin-top: 0;
       padding: calc(0.5rem + 2px) 20px ;
       margin-top: -1px;
-      margin-left: 15px;
+      margin-left: 18px;
     }
   }
   @media(min-width:1200px){
     .nav-item .opencell-btn {
-      margin-left: 30px;
+      margin-left: 40px;
     }
   }
 
@@ -464,10 +466,10 @@ section.footer li {
   section.description hr{
     display: inline-block;
     width: 112px;
-    height: 1em;
+    height: 1px;
     border: none;
     border-bottom: 1px solid #707070;
-    margin: 0 23px;
+    margin: 12px 23px;
   }
 
 
@@ -808,9 +810,16 @@ section.contact .info{
   section.worktogether .testimonials {
     color: white;
     background-image: url("../img/bg/bg_testimonials.jpg");
+    -webkit-background-size: cover !important;
+    -moz-background-size: cover !important;
+    background-size: cover !important;
+    -o-background-size: cover !important;
+    background-position: center !important;
+    background-color: #DD594E;
+    background-repeat: no-repeat !important;
   }
   section.worktogether .carousel-inner{
-    height: 480px;
+    height: 800px;
     padding: 0;
   }
   section.worktogether .carousel-item{
@@ -828,7 +837,8 @@ section.contact .info{
   section.worktogether .testimonials .quote {
     font-family: 'Noe-Display-Regular';
     font-weight: bold;
-    font-size: 22px;
+    font-size: 20px;
+    line-height: 35px;
     letter-spacing: 0.010em;
   }
 
@@ -852,7 +862,12 @@ section.contact .info{
     -webkit-transform: rotate(180deg);
     transform: rotate(180deg);
   }
-
+  @media (min-width:992px){
+    section.worktogether .testimonials .quote {
+      font-size: 22px;
+      line-height: 40px;
+    }
+  }
 
   section.worktogether .testimonials hr {
     width: 45px;
@@ -870,8 +885,13 @@ section.contact .info{
   }
 
   section.worktogether .testimonials img{
-    max-height: 300px;
-    margin-top: 20px;
+    object-fit: cover;
+    overflow:hidden;
+    width: 120px;
+    height: 120px;
+    margin-bottom: 55px;
+    border-radius: 50%;
+    border: 1px solid white;
   }
 /* getdemo */
   section.getdemo {
@@ -1146,7 +1166,8 @@ section.contact .info{
     background-color: transparent;
     color: rgba(255,255,255,0.5);
   }
-  .modules .list a:hover{
+  .modules .list li:hover{
+    cursor: pointer;
     color: white;
   }
   .modules .list li.active {

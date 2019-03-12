@@ -12,14 +12,15 @@
               <div class="row justify-content-center align-items-center h-100">
                 <div class="col">
                   <div class="row justify-content-center">
+                    {{ with $element.portrait }}
+                    <div class="col-6 col-lg-2 text-center">
+                      <img src="{{ $element.portrait}}" alt="{{$element.author}}">
+                    </div>
+                    <div class="w-100"></div>
+                    {{ end }}
                     <div class="col-12 col-lg quote text-center">
                       {{ $element.testimonial }}
                     </div>
-                    {{ with $element.portrait }}
-                    <div class="d-none d-lg-block col-lg-2">
-                      <img class="img-fluid" src="{{ $element.portrait}}" alt="{{$element.author}}">
-                    </div>
-                    {{ end }}
                     <div class="w-100"></div>
                     <hr>
                     <div class="w-100"></div>
