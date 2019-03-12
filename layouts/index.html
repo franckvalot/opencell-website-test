@@ -5,22 +5,23 @@
   <body>
     {{ partial "header/navBar.html" . }}
     {{ partial "header/header.html" $Data.header }}
-    {{ partial "sectiondescription.html" (dict "number" "01" "description" "what is Opencell")}}
+    {{ partial "sectiondescription.html" $Data.separator1}}
     <section class="hero-1">
       <div class="container">
     {{ partial "titleanddescription.html" (dict "Data" $Data.introduction) }}
       </div>
     </section>
-    {{ partial "sectiondescription.html" (dict "number" "02" "description" "what we do")}}
+    {{ partial "sectiondescription.html" $Data.separator2 }}
     {{ partial "sections/provide.html" (dict "Data" $Data.whatweprovide "showTitle" true) }}
-    {{ partial "sectiondescription.html" (dict "number" "03" "description" "what kind of client<br>we work with")}}
+    {{ partial "sectiondescription.html" $Data.separator3 }}
     {{ partial "sections/whatmakesus.html" $Data.whatmakesus }}
-    {{ partial "sectiondescription.html" (dict "number" "04" "description" "what kind of client<br>we work with")}}
+    {{ partial "sectiondescription.html" $Data.separator4 }}
     {{ partial "sections/mainindustries.html" .  }}
+    {{ partial "sectiondescription.html" $Data.separator5 }}
     {{ partial "logos.html" (dict "Data" $Data.ourcustomers) }}
-    {{ partial "sectiondescription.html" (dict "number" "05" "description" "Discover our videos")}}
+    {{ partial "sectiondescription.html" $Data.separator6 }}
     {{ partial "testimonials.html" $Data.worktogether }}
-    {{ partial "sectiondescription.html" (dict "number" "06" "description" "Discover our videos")}}
+    {{ partial "sectiondescription.html" $Data.separator7 }}
     {{ partial "sections/learnmore.html" $Data.learnmore }}
     {{ partial "sections/getdemo.html" . }}
     {{ partial "sections/mentions.html" . }}

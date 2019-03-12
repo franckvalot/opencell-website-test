@@ -44,12 +44,22 @@ collections:
                   fields:
                     - {label: Name, name: name, widget: string, required: false}
                     - {label: Url, name: url, widget: string, required: false}
+        - name: Separator1
+          widget: separator1
+          fields:
+            - {label: Number, name: number, widget: string}
+            - {label: Description, name: description, widget: string}
         - label: Introduction
           name: introduction
           widget: object
           fields:
             - {label: Title, name: title, widget: string}
             - {label: Content, name: content, widget: markdown}
+        - name: Separator2
+          widget: separator2
+          fields:
+            - {label: Number, name: number, widget: string}
+            - {label: Description, name: description, widget: string}
         - label: What we provide
           name: whatweprovide
           widget: object
@@ -58,6 +68,11 @@ collections:
             - {label: Content, name: content, widget: markdown}
             - {label: Image, name: image, widget: image}
             - {label: Button, name: button, widget: string, default: DISCOVER}
+        - name: Separator3
+          widget: separator3
+          fields:
+            - {label: Number, name: number, widget: string}
+            - {label: Description, name: description, widget: string}
         - label: What makes us
           name: whatmakesus
           widget: object
@@ -76,6 +91,11 @@ collections:
                   fields:
                     - {label: Title, name: title, widget: string}
                     - {label: Text, name: text, widget: string}
+        - name: Separator4
+          widget: separator4
+          fields:
+            - {label: Number, name: number, widget: string}
+            - {label: Description, name: description, widget: string}
         - label: Our main industries
           name: mainindustries
           widget: object
@@ -85,6 +105,11 @@ collections:
             - label: Blocks
               name: blocks
               widget: list
+        - name: Separator5
+          widget: separator5
+          fields:
+            - {label: Number, name: number, widget: string}
+            - {label: Description, name: description, widget: string}
         - label: Our customers
           name: ourcustomers
           widget: object
@@ -107,6 +132,11 @@ collections:
                   fields:
                     - {label: Url, name: url, widget: string, required: false}
                     - {label: Open in new page?, name: target, widget: select, options: ["internal", "external"], default: internal, required: false}
+        - name: Separator6
+          widget: separator6
+          fields:
+            - {label: Number, name: number, widget: string}
+            - {label: Description, name: description, widget: string}
         - label: We work together
           name: worktogether
           widget: object
@@ -122,6 +152,11 @@ collections:
               - {label: Author, name: author, widget: string}
               - {label: Position, name: position, widget: string}
               - {label: Portrait, name: portrait, widget: image, required: false}
+        - name: Separator7
+          widget: separator7
+          fields:
+            - {label: Number, name: number, widget: string}
+            - {label: Description, name: description, widget: string}
         - label: Learn more
           name: learnmore
           widget: object
@@ -517,7 +552,7 @@ collections:
       - {label: Title, name: title, widget: string}
       - {label: Subtitle, name: subtitle, widget: string}
       - {label: Description, name: description, widget: text, required: false}
-      - {label: Date, name: date, widget: date}
+      - {label: Date, name: date, widget: date}- label: Case study
       - label: Case study
         name: casestudy
         widget: object

@@ -15,6 +15,9 @@ header:
         url:
       subtitle: Webinar. March 15 2019.
       title: 'Agile utilities: how to adapt to deregulation and technological change'
+separator1:
+  number: '01'
+  description: what is Opencell
 introduction:
   title: Recurring business need the right software
   content: >
@@ -23,6 +26,9 @@ introduction:
       But it’s not easy to make the shift. In the world of recurring revenue, sales, customer management, and reporting get handled differently. Time-to-market as well as innovative pricing, packaging and customer management are critical. To succeed, businesses need to go beyond traditional ERP systems and implement new solutions adapted to managing subscription and usage revenue.
 
       Our agile monetization platform provides everything you need to turn your recurring revenue business into a success.
+separator2:
+  number: '02'
+  description: what we do
 whatweprovide:
   button: DISCOVER
   content: >-
@@ -34,6 +40,9 @@ whatweprovide:
     monetize new revenue streams and deliver improved customer experiences.
   image: /img/uploads/hp_schema.png
   title: What we provide.
+separator3:
+  number: '03'
+  description: what kind of client<br>we work with
 whatmakesus:
   columns:
     - content:
@@ -73,6 +82,9 @@ whatmakesus:
           title: CLOUD-READY
       title: SIMPLE
   title: What makes us different.
+separator4:
+  number: '04'
+  description: what kind of client<br>we work with
 mainindustries:
   blocks:
     - 'TELCO, IOT & <br> CLOUD INFRASTRUCTURE'
@@ -83,6 +95,9 @@ mainindustries:
     OUR PLATFORM IS ADAPTED FOR ALL INDUSTRIES AND ALL BUSINESS SIZES. IT WORKS
     IN B2C, B2B AND B2BC
   title: Our main industries.
+separator5:
+  number:
+  description:
 ourcustomers:
   logos:
     - alt: Adidas
@@ -107,6 +122,9 @@ ourcustomers:
   title: Our customers.
   button: Discover our customers
   url: '#'
+separator6:
+  number: '05'
+  description: Discover our videos
 worktogether:
   subtitle: TESTIMONIALS
   testimonials:
@@ -146,6 +164,9 @@ worktogether:
         support team was very proactive and quickly helped us to resolve all
         technical issues encountered during the implementation phase.
   title: We work together.
+separator7:
+  number: '06'
+  description: Testimonies
 learnmore:
   subtitle: FEATURED VIDEOS
   title: Learn more.
