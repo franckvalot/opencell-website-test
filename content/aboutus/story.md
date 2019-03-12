@@ -26,7 +26,7 @@ ourstory:
 
     Opencell is now the leading open source monetization platform with over 40
     successful implementations in multiple industries and countries.
-  title: Our open source roots
+  title: Open source roots
 separator2:
   description: Our people
   number: '02'
@@ -77,7 +77,7 @@ leadership:
           name: LinkedIn
           url: '#'
       url: /img/uploads/portrait3.jpg
-  title: 'We know B2B enterprise software. '
+  title: 'We know enterprise software. '
 separator3:
   description: Investors
   number: '03'
@@ -89,6 +89,6 @@ investors:
       url: /img/uploads/logo-kima.png
     - alt: BPI France
       url: /img/uploads/logo-bpifrance.png
-  title: Financed for growth
+  title: Financed for growth.
 ---
 
