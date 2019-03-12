@@ -83,7 +83,7 @@ whatmakesus:
             services.
           title: CLOUD-READY
       title: SIMPLE
-  title: Next-generation monetization that stands out from the crowd.
+  title: Stand out from the crowd.
 separator4:
   description: Our verticals
   number: '04'
@@ -120,7 +120,7 @@ ourcustomers:
       url: /img/uploads/logo-rayonier.svg
     - alt: Florida Chamber of Commerce
       url: /img/uploads/logo-fl-chamber.svg
-  title: '40+ customers use Opencell to monetize their customers. '
+  title: Working together.
   url: '#'
 separator6:
   description: Testimonials
@@ -163,13 +163,13 @@ worktogether:
         quickly developed and integrated into the core open source model. The
         support team was very proactive and quickly helped us to resolve all
         technical issues encountered during the implementation phase.
-  title: Hear it from our customers and partners.
+  title: Wall of fame.
 separator7:
   description: Additional resources
   number: '06'
 learnmore:
   subtitle: Featured videos
-  title: Learn more.
+  title: Breaking news.
   videoids:
     - videoid: RUML7IH2JnM
     - videoid: NvCVdZyY9fI
