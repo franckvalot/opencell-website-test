@@ -17,7 +17,6 @@ introduction:
     and higher financial valuations.
 
 
-
     But it’s not easy to make the shift. In the world of recurring revenue,
     sales, customer management, and reporting get handled differently.
     Time-to-market as well as innovative pricing, packaging and customer
@@ -26,11 +25,6 @@ introduction:
 
     To succeed, businesses need to go beyond traditional ERP systems and
     implement new solutions adapted to managing subscription and usage revenue.
-
-
-
-    Our agile monetization platform provides everything you need to turn your
-    recurring revenue business into a success.
   title: Recurring business need the right software.
 separator2:
   description: Our platform
