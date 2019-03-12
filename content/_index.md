@@ -12,9 +12,11 @@ separator1:
   description: Why Opencell
   number: '01'
 introduction:
-  content: >
+  content: >-
     Companies move to recurring revenue models to accelerate predictable growth
     and higher financial valuations.
+
+
 
     But it’s not easy to make the shift. In the world of recurring revenue,
     sales, customer management, and reporting get handled differently.
@@ -25,7 +27,7 @@ introduction:
 
     Our agile monetization platform provides everything you need to turn your
     recurring revenue business into a success.
-  title: Recurring business need the right software
+  title: Recurring business need the right software.
 separator2:
   description: Our platform
   number: '02'
@@ -81,7 +83,7 @@ whatmakesus:
             services.
           title: CLOUD-READY
       title: SIMPLE
-  title: Our next-generation platform stands out from the crowd.
+  title: Next-generation monetization that stands out from the crowd.
 separator4:
   description: Our verticals
   number: '04'
@@ -94,7 +96,7 @@ mainindustries:
   subtitle: >-
     OUR PLATFORM IS ADAPTED FOR ALL INDUSTRIES AND ALL BUSINESS SIZES. IT WORKS
     IN B2C, B2B AND B2BC
-  title: Our framework is tailored for multiple industries.
+  title: Don't start from scratch.
 separator5:
   description: Our customers
   number: '05'
@@ -118,7 +120,7 @@ ourcustomers:
       url: /img/uploads/logo-rayonier.svg
     - alt: Florida Chamber of Commerce
       url: /img/uploads/logo-fl-chamber.svg
-  title: 'We work with our customers to deliver the solutions they need. '
+  title: '40+ customers use Opencell to monetize their customers. '
   url: '#'
 separator6:
   description: Testimonials
@@ -161,12 +163,12 @@ worktogether:
         quickly developed and integrated into the core open source model. The
         support team was very proactive and quickly helped us to resolve all
         technical issues encountered during the implementation phase.
-  title: In the words of our customers and partners
+  title: Hear it from our customers and partners.
 separator7:
-  description: Featured videos
+  description: Additional resources
   number: '06'
 learnmore:
-  subtitle: FEATURED VIDEOS
+  subtitle: Featured videos
   title: Learn more.
   videoids:
     - videoid: RUML7IH2JnM
