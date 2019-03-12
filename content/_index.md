@@ -6,9 +6,6 @@ header:
       subtitle: Agile monetization platform.
       title: Stop selling product. <br> Start selling recurring services.
     - button: {}
-      subtitle: Mobile World Congress. Barcelona. February 25 - 28 2019
-      title: 'Let''s talk about the future of telecoms<br> '
-    - button: {}
       subtitle: Webinar. March 15 2019.
       title: 'Agile utilities: how to adapt to deregulation and technological change'
 separator1:
@@ -44,7 +41,7 @@ whatweprovide:
   image: /img/uploads/hp_schema.png
   title: Agile monetization. From quote to cash.
 separator3:
-  description: what kind of client<br>we work with
+  description: Our difference
   number: '03'
 whatmakesus:
   columns:
@@ -84,7 +81,7 @@ whatmakesus:
             services.
           title: CLOUD-READY
       title: SIMPLE
-  title: What makes us different.
+  title: Our next-generation platform stands out from the crowd.
 separator4:
   description: what kind of client<br>we work with
   number: '04'
