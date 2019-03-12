@@ -83,7 +83,7 @@ whatmakesus:
       title: SIMPLE
   title: Our next-generation platform stands out from the crowd.
 separator4:
-  description: what kind of client<br>we work with
+  description: Our verticals
   number: '04'
 mainindustries:
   blocks:
@@ -94,8 +94,10 @@ mainindustries:
   subtitle: >-
     OUR PLATFORM IS ADAPTED FOR ALL INDUSTRIES AND ALL BUSINESS SIZES. IT WORKS
     IN B2C, B2B AND B2BC
-  title: Our main industries.
-separator5: {}
+  title: Our framework is tailored for multiple industries.
+separator5:
+  description: Our customers
+  number: '05'
 ourcustomers:
   button: Discover our customers
   logos:
@@ -116,10 +118,10 @@ ourcustomers:
       url: /img/uploads/logo-rayonier.svg
     - alt: Florida Chamber of Commerce
       url: /img/uploads/logo-fl-chamber.svg
-  title: Our customers.
+  title: 'We work with our customers to deliver the solutions they need. '
   url: '#'
 separator6:
-  description: Discover our videos
+  description: Testimonials
   number: '05'
 worktogether:
   subtitle: TESTIMONIALS
@@ -159,9 +161,9 @@ worktogether:
         quickly developed and integrated into the core open source model. The
         support team was very proactive and quickly helped us to resolve all
         technical issues encountered during the implementation phase.
-  title: We work together.
+  title: In the words of our customers and partners
 separator7:
-  description: Testimonies
+  description: Featured videos
   number: '06'
 learnmore:
   subtitle: FEATURED VIDEOS
