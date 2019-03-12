@@ -21,9 +21,13 @@ introduction:
     But it’s not easy to make the shift. In the world of recurring revenue,
     sales, customer management, and reporting get handled differently.
     Time-to-market as well as innovative pricing, packaging and customer
-    management are critical. To succeed, businesses need to go beyond
-    traditional ERP systems and implement new solutions adapted to managing
-    subscription and usage revenue.
+    management are critical. 
+
+
+    To succeed, businesses need to go beyond traditional ERP systems and
+    implement new solutions adapted to managing subscription and usage revenue.
+
+
 
     Our agile monetization platform provides everything you need to turn your
     recurring revenue business into a success.
@@ -93,9 +97,7 @@ mainindustries:
     - ENERGY & UTILITIES
     - MOBILITY & TRANSPORT
     - RETAIL & CONSUMER
-  subtitle: >-
-    OUR PLATFORM IS ADAPTED FOR ALL INDUSTRIES AND ALL BUSINESS SIZES. IT WORKS
-    IN B2C, B2B AND B2BC
+  subtitle: 'ALL INDUSTRIES. ALL BUSINESS SIZES. B2C, B2B AND B2BX.'
   title: Don't start from scratch.
 separator5:
   description: Our customers
