@@ -2,33 +2,36 @@
 header:
   background: /img/uploads/header-home.jpg
   carousel:
-    - button:
-        name:
-        url:
+    - button: {}
       subtitle: Agile monetization platform.
       title: Stop selling product. <br> Start selling recurring services.
     - button: {}
       subtitle: Mobile World Congress. Barcelona. February 25 - 28 2019
       title: 'Let''s talk about the future of telecoms<br> '
-    - button:
-        name:
-        url:
+    - button: {}
       subtitle: Webinar. March 15 2019.
       title: 'Agile utilities: how to adapt to deregulation and technological change'
 separator1:
+  description: Why Opencell
   number: '01'
-  description: what is Opencell
 introduction:
-  title: Recurring business need the right software
   content: >
-      Companies move to recurring revenue models to accelerate predictable growth and higher financial valuations.
+    Companies move to recurring revenue models to accelerate predictable growth
+    and higher financial valuations.
 
-      But it’s not easy to make the shift. In the world of recurring revenue, sales, customer management, and reporting get handled differently. Time-to-market as well as innovative pricing, packaging and customer management are critical. To succeed, businesses need to go beyond traditional ERP systems and implement new solutions adapted to managing subscription and usage revenue.
+    But it’s not easy to make the shift. In the world of recurring revenue,
+    sales, customer management, and reporting get handled differently.
+    Time-to-market as well as innovative pricing, packaging and customer
+    management are critical. To succeed, businesses need to go beyond
+    traditional ERP systems and implement new solutions adapted to managing
+    subscription and usage revenue.
 
-      Our agile monetization platform provides everything you need to turn your recurring revenue business into a success.
+    Our agile monetization platform provides everything you need to turn your
+    recurring revenue business into a success.
+  title: Recurring business need the right software
 separator2:
+  description: Our platform
   number: '02'
-  description: what we do
 whatweprovide:
   button: DISCOVER
   content: >-
@@ -39,10 +42,10 @@ whatweprovide:
     We enable recurring revenue businesses to quickly launch new services, to
     monetize new revenue streams and deliver improved customer experiences.
   image: /img/uploads/hp_schema.png
-  title: What we provide.
+  title: Agile monetization. From quote to cash.
 separator3:
-  number: '03'
   description: what kind of client<br>we work with
+  number: '03'
 whatmakesus:
   columns:
     - content:
@@ -83,8 +86,8 @@ whatmakesus:
       title: SIMPLE
   title: What makes us different.
 separator4:
-  number: '04'
   description: what kind of client<br>we work with
+  number: '04'
 mainindustries:
   blocks:
     - 'TELCO, IOT & <br> CLOUD INFRASTRUCTURE'
@@ -95,16 +98,13 @@ mainindustries:
     OUR PLATFORM IS ADAPTED FOR ALL INDUSTRIES AND ALL BUSINESS SIZES. IT WORKS
     IN B2C, B2B AND B2BC
   title: Our main industries.
-separator5:
-  number:
-  description:
+separator5: {}
 ourcustomers:
+  button: Discover our customers
   logos:
     - alt: Adidas
+      link: {}
       url: /img/uploads/logo-adidas.svg
-      link:
-        url:
-        target:
     - alt: Dona International
       url: /img/uploads/logo-dona.svg
     - alt: Gunster
@@ -120,15 +120,15 @@ ourcustomers:
     - alt: Florida Chamber of Commerce
       url: /img/uploads/logo-fl-chamber.svg
   title: Our customers.
-  button: Discover our customers
   url: '#'
 separator6:
-  number: '05'
   description: Discover our videos
+  number: '05'
 worktogether:
   subtitle: TESTIMONIALS
   testimonials:
     - author: Olivier Hersent
+      portrait: /img/uploads/portrait1.jpg
       position: CEO @ Actility
       testimonial: >-
         Opencell provided the flexibility we needed to adapt the product billing
@@ -138,8 +138,8 @@ worktogether:
         to manage the complex financial flows matrix of ThingPark marketplace,
         and also make it available to our network operator partners for their
         own IoT billing & settlement needs.
-      portrait: /img/uploads/portrait1.jpg
     - author: Eric Le Bihan
+      portrait: /img/uploads/portrait1.jpg
       position: CEO @ Etiam
       testimonial: >-
         Opencell provided a flexible billing solution that was able to respond
@@ -150,7 +150,6 @@ worktogether:
         improved since we’re now able to bill on a monthly instead of quarterly
         basis. We’ve also improved our revenue assurance and been able to
         reallocate the FTE saved on billing tasks to new more value-added tasks.
-      portrait: /img/uploads/portrait1.jpg
     - author: Jean-Luc Raingeval
       position: Project Manager @ Orange
       testimonial: >-
@@ -165,8 +164,8 @@ worktogether:
         technical issues encountered during the implementation phase.
   title: We work together.
 separator7:
-  number: '06'
   description: Testimonies
+  number: '06'
 learnmore:
   subtitle: FEATURED VIDEOS
   title: Learn more.
@@ -174,3 +173,4 @@ learnmore:
     - videoid: RUML7IH2JnM
     - videoid: NvCVdZyY9fI
 ---
+
