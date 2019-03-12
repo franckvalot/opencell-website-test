@@ -165,13 +165,13 @@ worktogether:
         quickly developed and integrated into the core open source model. The
         support team was very proactive and quickly helped us to resolve all
         technical issues encountered during the implementation phase.
-  title: Wall of fame.
+  title: Wall of fame
 separator7:
   description: Additional resources
   number: '06'
 learnmore:
   subtitle: Featured videos
-  title: Breaking news.
+  title: Breaking news
   videoids:
     - videoid: RUML7IH2JnM
     - videoid: NvCVdZyY9fI
