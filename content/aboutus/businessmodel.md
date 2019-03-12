@@ -3,6 +3,9 @@ layout: businessmodel
 title: No strings attached.
 subtitle: Start a different relationship with your software provider.
 background: /img/uploads/header-about.jpg
+separator1:
+  number:
+  description:
 introduction:
   content: >-
     Our open source business model is simple. No upfront payments or
@@ -56,4 +59,3 @@ boxes:
       hosting options. We guarantee 99.95% availability and manage upgrades.
     url: /img/uploads/bm_hostingservices.svg
 ---
-

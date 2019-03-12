@@ -5,6 +5,9 @@ subtitle: >-
   Our multiple partner solutions make it easy to extend Opencell to fit your
   needs.
 background: /img/uploads/header-platform.jpg
+separator1:
+  number: 
+  description:
 introduction:
   content: >-
     Our connectors to market-leading apps makes it easy to connect Opencell with

@@ -5,6 +5,9 @@ subtitle: >-
   Our monetization platform keeps your entire<br> organization running smoothly
   under one roof.
 background: /img/uploads/header-solution-role.jpg
+separator1:
+  number:
+  description:
 roles:
   - background: >-
       Maria is the marketing VP of Opencorp. She’s managing a lot of offers and

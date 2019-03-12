@@ -3,6 +3,9 @@ layout: story
 title: We want to do things differently.
 subtitle: Bringing agility and simplicity to enterprise B2B software.
 background: /img/uploads/header-about.jpg
+separator1:
+  number: '01'
+  description: Our story
 ourstory:
   boxes:
     - content: 280% revenue growth in 2018
@@ -24,6 +27,9 @@ ourstory:
     Opencell is now the leading open source monetization platform with over 40
     successful implementations in multiple industries and countries.
   title: Story
+separator2:
+  number: '02'
+  description: Our team
 leadership:
   leaders:
     - name: DAVID MEYER
@@ -72,6 +78,9 @@ leadership:
           url: '#'
       url: /img/uploads/portrait3.jpg
   title: Leadership
+separator3:
+  number: '03'
+  description: Our investors
 investors:
   logos:
     - alt: Cap InnovEst
@@ -82,4 +91,3 @@ investors:
       url: /img/uploads/logo-bpifrance.png
   title: Investors & financial partners
 ---
-

@@ -3,6 +3,9 @@ layout: byindustry
 title: We have the right solution<br>for your industry.
 subtitle: Our agile monetization platform<br> can adapt to your business need.
 background: /img/uploads/header-solution-industry.jpg
+separator1:
+  number: 
+  description:
 industries:
   - content: >-
       ## CRITICAL FEATURES
@@ -30,6 +33,7 @@ industries:
     nav: TELCO
     title: 'Telco, cloud & IoT'
     videoid: Bey4XXJAqS8
+    image: /img/uploads/industry-telco-and-iot.jpg
   - content: >-
       ## CRITICAL FEATURES
 
@@ -42,7 +46,7 @@ industries:
 
 
       It can be has been successfully implemented in a wide variety with
-      enterprise as well as mid-sized businesses. 
+      enterprise as well as mid-sized businesses.
 
 
       ## CUSTOMERS
@@ -58,6 +62,7 @@ industries:
     nav: 'UTILITIES '
     title: Energy & utilities
     videoid: xcJtL7QggTI
+    image: /img/uploads/industry-utility.jpg
   - content: >-
       ## CRITICAL FEATURES
 
@@ -80,6 +85,7 @@ industries:
     nav: MOBILITY
     title: Mobility & transport
     videoid: xcJtL7QggTI
+    image: /img/uploads/industry-mobility-and-transports.jpg
   - content: >-
       ## CRITICAL FEATURES
 
@@ -97,5 +103,5 @@ industries:
     nav: RETAIL
     title: Retail & other
     videoid: xcJtL7QggTI
+    image: /img/uploads/industry-retail.jpg
 ---
-

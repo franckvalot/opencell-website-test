@@ -6,14 +6,14 @@
     {{ partial "header/navBar.html" . }}
     {{ partial "header/smallheader.html" (dict "Data" $Data) }}
 
-    {{ partial "sectiondescription.html" (dict "number" "01" "description" "Workplace")}}
+    {{ partial "sectiondescription.html" $Data.separator1}}
     <section class="hero-1">
       <div class="container">
         {{ partial "titleanddescription.html" (dict "Data" $Data.introduction) }}
       </div>
     </section>
 
-    {{ partial "sectiondescription.html" (dict "number" "02" "description" "Career")}}
+    {{ partial "sectiondescription.html" $Data.separator2}}
     <section class="hero-1 jobs">
       <div class="container">
         <div class="row justify-content-center">

@@ -44,7 +44,7 @@ collections:
                   fields:
                     - {label: Name, name: name, widget: string, required: false}
                     - {label: Url, name: url, widget: string, required: false}
-        - label: Separator1
+        - label: Separator 1
           name: separator1
           widget: object
           fields:
@@ -56,7 +56,7 @@ collections:
           fields:
             - {label: Title, name: title, widget: string}
             - {label: Content, name: content, widget: markdown}
-        - label: Separator2
+        - label: Separator 2
           name: separator2
           widget: object
           fields:
@@ -70,7 +70,7 @@ collections:
             - {label: Content, name: content, widget: markdown}
             - {label: Image, name: image, widget: image}
             - {label: Button, name: button, widget: string, default: DISCOVER}
-        - label: Separator3
+        - label: Separator 3
           name: separator3
           widget: object
           fields:
@@ -94,7 +94,7 @@ collections:
                   fields:
                     - {label: Title, name: title, widget: string}
                     - {label: Text, name: text, widget: string}
-        - label: Separator4
+        - label: Separator 4
           name: separator4
           widget: object
           fields:
@@ -109,7 +109,7 @@ collections:
             - label: Blocks
               name: blocks
               widget: list
-        - label: Separator5
+        - label: Separator 5
           name: separator5
           widget: object
           fields:
@@ -137,7 +137,7 @@ collections:
                   fields:
                     - {label: Url, name: url, widget: string, required: false}
                     - {label: Open in new page?, name: target, widget: select, options: ["internal", "external"], default: internal, required: false}
-        - label: Separator6
+        - label: Separator 6
           name: separator6
           widget: object
           fields:
@@ -158,7 +158,7 @@ collections:
               - {label: Author, name: author, widget: string}
               - {label: Position, name: position, widget: string}
               - {label: Portrait, name: portrait, widget: image, required: false}
-        - label: Separator7
+        - label: Separator 7
           name: separator7
           widget: object
           fields:
@@ -188,6 +188,18 @@ collections:
           - {label: Subtitle, name: subtitle, widget: string}
           - {label: Background Image, name: background, widget: image}
           - {label: Description, name: description, widget: text, required: false}
+          - label: Separator 1
+            name: separator1
+            widget: object
+            fields:
+              - {label: Number, name: number, widget: string, required: false}
+              - {label: Description, name: description, widget: string, required, false}
+          - label: Separator 2
+            name: separator2
+            widget: object
+            fields:
+              - {label: Number, name: number, widget: string, required: false}
+              - {label: Description, name: description, widget: string, required, false}
           - label: Modules
             name: modules
             widget: list
@@ -208,6 +220,12 @@ collections:
           - {label: Subtitle, name: subtitle, widget: string}
           - {label: Background Image, name: background, widget: image}
           - {label: Description, name: description, widget: text, required: false}
+          - label: Separator 1
+            name: separator1
+            widget: object
+            fields:
+              - {label: Number, name: number, widget: string, required: false}
+              - {label: Description, name: description, widget: string, required, false}
           - label: Introduction
             name: introduction
             widget: object
@@ -220,6 +238,12 @@ collections:
             fields:
               - {label: Title, name: title, widget: string}
               - {label: Description, name: description, widget: text}
+          - label: Separator 2
+            name: separator2
+            widget: object
+            fields:
+              - {label: Number, name: number, widget: string, required: false}
+              - {label: Description, name: description, widget: string, required, false}
           - label: Business Logic
             name: businesslogic
             widget: list
@@ -228,6 +252,12 @@ collections:
               - {label: Content, name: content, widget: markdown}
               - {label: Image, name: url, widget: image}
               - {label: Alternative, name: alt, widget: string}
+          - label: Separator 3
+            name: separator3
+            widget: object
+            fields:
+              - {label: Number, name: number, widget: string, required: false}
+              - {label: Description, name: description, widget: string, required, false}
           - label: Technologies
             name: technologies
             widget: object
@@ -255,6 +285,12 @@ collections:
           - {label: Subtitle, name: subtitle, widget: string}
           - {label: Background Image, name: background, widget: image}
           - {label: Description, name: description, widget: text, required: false}
+          - label: Separator 1
+            name: separator1
+            widget: object
+            fields:
+              - {label: Number, name: number, widget: string, required: false}
+              - {label: Description, name: description, widget: string, required, false}
           - label: Introduction
             name: introduction
             widget: object
@@ -292,6 +328,12 @@ collections:
           - {label: Subtitle, name: subtitle, widget: string}
           - {label: Background Image, name: background, widget: image}
           - {label: Description, name: description, widget: text, required: false}
+          - label: Separator 1
+            name: separator1
+            widget: object
+            fields:
+              - {label: Number, name: number, widget: string, required: false}
+              - {label: Description, name: description, widget: string, required, false}
           - label: Industries
             name: industries
             widget: list
@@ -310,6 +352,12 @@ collections:
           - {label: Subtitle, name: subtitle, widget: string}
           - {label: Background Image, name: background, widget: image}
           - {label: Description, name: description, widget: text, required: false}
+          - label: Separator 1
+            name: separator1
+            widget: object
+            fields:
+              - {label: Number, name: number, widget: string, required: false}
+              - {label: Description, name: description, widget: string, required, false}
           - label: Roles
             name: roles
             widget: list
@@ -336,6 +384,12 @@ collections:
           - {label: Subtitle, name: subtitle, widget: string}
           - {label: Background Image, name: background, widget: image}
           - {label: Description, name: description, widget: text, required: false}
+          - label: Separator 1
+            name: separator1
+            widget: object
+            fields:
+              - {label: Number, name: number, widget: string, required: false}
+              - {label: Description, name: description, widget: string, required, false}
           - label: Our Story Section
             name: ourstory
             widget: object
@@ -347,6 +401,12 @@ collections:
                 widget: list
                 fields:
                   - {label: Content, name: content, widget: string}
+          - label: Separator 2
+            name: separator2
+            widget: object
+            fields:
+              - {label: Number, name: number, widget: string, required: false}
+              - {label: Description, name: description, widget: string, required, false}
           - label: Leadership Section
             name: leadership
             widget: object
@@ -366,6 +426,12 @@ collections:
                       - {label: Name, name: name, widget: string}
                       - {label: Url, name: url, widget: string}
                       - {label: Icon, name: icon, widget: image}
+          - label: Separator 3
+            name: separator3
+            widget: object
+            fields:
+              - {label: Number, name: number, widget: string, required: false}
+              - {label: Description, name: description, widget: string, required, false}
           - label: Investors Section
             name: investors
             widget: object
@@ -395,6 +461,12 @@ collections:
           - {label: Subtitle, name: subtitle, widget: string}
           - {label: Background Image, name: background, widget: image}
           - {label: Description, name: description, widget: text, required: false}
+          - label: Separator 1
+            name: separator1
+            widget: object
+            fields:
+              - {label: Number, name: number, widget: string, required: false}
+              - {label: Description, name: description, widget: string, required, false}
           - label: Introduction paragraph
             name: introduction
             widget: object
@@ -418,6 +490,12 @@ collections:
           - {label: Subtitle, name: subtitle, widget: string}
           - {label: Background Image, name: background, widget: image}
           - {label: Description, name: description, widget: text, required: false}
+          - label: Separator 1
+            name: separator1
+            widget: object
+            fields:
+              - {label: Number, name: number, widget: string, required: false}
+              - {label: Description, name: description, widget: string, required, false}
           - label: Sections
             name: sections
             widget: list
@@ -447,6 +525,12 @@ collections:
           - {label: Subtitle, name: subtitle, widget: string}
           - {label: Background Image, name: background, widget: image}
           - {label: Description, name: description, widget: text, required: false}
+          - label: Separator 1
+            name: separator1
+            widget: object
+            fields:
+              - {label: Number, name: number, widget: string, required: false}
+              - {label: Description, name: description, widget: string, required, false}
           - label: Sections
             name: sections
             widget: list
@@ -466,6 +550,12 @@ collections:
                     fields:
                       - {label: Url, name: url, widget: string, required: false}
                       - {label: Open in new page?, name: target, widget: select, options: ["internal", "external"], default: internal, required: false}
+          - label: Separator 2
+            name: separator2
+            widget: object
+            fields:
+              - {label: Number, name: number, widget: string, required: false}
+              - {label: Description, name: description, widget: string, required, false}
           - label: We work together
             name: worktogether
             widget: object
@@ -490,6 +580,12 @@ collections:
           - {label: Subtitle, name: subtitle, widget: string}
           - {label: Background Image, name: background, widget: image}
           - {label: Description, name: description, widget: text, required: false}
+          - label: Separator 1
+            name: separator1
+            widget: object
+            fields:
+              - {label: Number, name: number, widget: string, required: false}
+              - {label: Description, name: description, widget: string, required, false}
           - label: Introduction paragraph
             name: introduction
             widget: object
@@ -502,6 +598,12 @@ collections:
                 fields:
                   - {label: Image, name: url, widget: image}
                   - {label: Alternative Text, name: alt, widget: string}
+          - label: Separator 2
+            name: separator2
+            widget: object
+            fields:
+              - {label: Number, name: number, widget: string, required: false}
+              - {label: Description, name: description, widget: string, required, false}
           - {label: Markdown, name: body, widget: hidden}
       - label: Press Releases
         name: aboutuspressreleases
@@ -512,6 +614,12 @@ collections:
           - {label: Subtitle, name: subtitle, widget: string}
           - {label: Background Image, name: background, widget: image}
           - {label: Description, name: description, widget: text}
+          - label: Separator 1
+            name: separator1
+            widget: object
+            fields:
+              - {label: Number, name: number, widget: string, required: false}
+              - {label: Description, name: description, widget: string, required, false}
           - label: Articles
             name: articles
             widget: list

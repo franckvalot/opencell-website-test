@@ -3,6 +3,13 @@ layout: modules
 title: No business is the same.
 subtitle: Our monetization platform adapts to your needs.
 background: /img/uploads/header-platform.jpg
+
+separator1:
+  number: '01'
+  description: Our solution
+separator2:
+  number: '02'
+  description: Capabilities
 modules:
   - contents:
     - content: >

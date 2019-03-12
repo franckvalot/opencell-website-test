@@ -5,6 +5,9 @@ subtitle: >-
   We partner with our customers to build the vertical solutions they need for
   their industry.
 background: /img/uploads/header-about.jpg
+separator1:
+  number:
+  description:
 sections:
   - logos:
       - alt: Actility
@@ -61,4 +64,3 @@ sections:
         url: /img/uploads/customer-logo-hubicus.png
     title: Retail & other
 ---
-

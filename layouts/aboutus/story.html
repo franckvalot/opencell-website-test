@@ -6,7 +6,7 @@
     {{ partial "header/navBar.html" . }}
     {{ partial "header/smallheader.html" (dict "Data" $Data) }}
 
-    {{ partial "sectiondescription.html" (dict "number" "01" "description" "Our story")}}
+    {{ partial "sectiondescription.html" $Data.separator1}}
     <section class="hero-1 ourstory">
       <div class="container">
         {{ partial "titleanddescription.html" (dict "Data" $Data.ourstory) }}
@@ -23,7 +23,7 @@
       </div>
     </section>
 
-    {{ partial "sectiondescription.html" (dict "number" "02" "description" "Our team")}}
+    {{ partial "sectiondescription.html" $Data.separator2}}
 
     <section class="hero-1 leadership">
       <div class="container">
@@ -51,7 +51,7 @@
       </div>
     </section>
 
-    {{ partial "sectiondescription.html" (dict "number" "03" "description" "Our investors")}}
+    {{ partial "sectiondescription.html" $Data.separator3}}
 
     {{ partial "logos.html" (dict "Data" $Data.investors) }}
 

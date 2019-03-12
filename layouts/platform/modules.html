@@ -6,11 +6,11 @@
     {{ partial "header/navBar.html" . }}
     {{ partial "header/smallheader.html" (dict "Data" $Data) }}
 
-    {{ partial "sectiondescription.html" (dict "number" "01" "description" "Our solution")}}
+    {{ partial "sectiondescription.html" $Data.separator1 }}
     {{ partial "sections/provide.html" (dict "Data" (.Site.GetPage "_index.md").Params.whatweprovide) }}
 
 
-    {{ partial "sectiondescription.html" (dict "number" "02" "description" "Capabilities")}}
+    {{ partial "sectiondescription.html" $Data.separator2 }}
 
 
     <section class="hero-1 modules d-sm-none d-md-block">

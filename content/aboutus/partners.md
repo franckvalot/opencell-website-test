@@ -5,6 +5,9 @@ subtitle: >-
   We implement 80% of our projects through our network of integration and
   consulting partners.
 background: /img/uploads/header-about.jpg
+separator1:
+  number:
+  description:
 sections:
   - logos:
       - alt: Cap Gemini
@@ -54,6 +57,9 @@ sections:
       - alt: IBM
         url: /img/uploads/logo-fl-chamber.svg
     title: Technology partners
+separator2:
+  number:
+  description:
 worktogether:
   subtitle: TESTIMONIALS
   testimonials:

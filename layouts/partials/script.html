@@ -8,7 +8,6 @@
       $(document).ready(function(){
         var path = window.location.pathname;
         var target = $('nav a[href="'+path+'"]');
-        console.log(target);
         target.addClass('active');
         if(target.hasClass("dropdown-item")){
           target.parents("li.dropdown").children("a.nav-link").addClass('active');

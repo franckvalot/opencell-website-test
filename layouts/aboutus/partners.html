@@ -7,13 +7,15 @@
     {{ partial "header/navBar.html" . }}
     {{ partial "header/smallheader.html" (dict "Data" $Data) }}
 
+    {{ partial "sectiondescription.html" $Data.separator1}}
+
     {{ range $Data.sections }}
       {{ partial "logos.html" (dict "Data" . ) }}
     {{ end }}
 
 
+    {{ partial "sectiondescription.html" $Data.separator2}}
     {{ partial "testimonials.html" $Data.worktogether }}
-
 
     <section class="hero-1">
       <div class="container">

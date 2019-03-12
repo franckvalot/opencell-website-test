@@ -1304,71 +1304,6 @@ section.contact .info{
     }
   }
 
-/* platformecosystem */
-/* solutionbyindustry */
-/* solutionbyrole */
-  section.ecosystem h2.navigation,
-  section.byindustry h2.navigation,
-  section.byrole h2.navigation{
-    font-size: 14px;
-    line-height: 25px;
-    letter-spacing: 0.200em;
-    display: block;
-    margin: 0;
-  }
-  section.byindustry  div.navigation,
-  section.byrole  div.navigation{
-    margin: 71px 0;
-  }
-  section.ecosystem  div.navigation{
-    padding: 41px 0;
-  }
-  section.byindustry.navigation-fixed div.navigation,
-  section.byrole.navigation-fixed div.navigation{
-    position: fixed;
-    background-color: white;
-    top: calc(60px - 71px);
-    left: 0;
-    right: 0;
-    z-index: 100;
-  }
-  @media (min-width:768px){
-    section.ecosystem  div.navigation {
-
-    }
-    section.byindustry  div.navigation,
-    section.byrole  div.navigation{
-      margin: 83px 0;
-    }
-    section.byindustry.navigation-fixed div.navigation,
-    section.byrole.navigation-fixed div.navigation{
-      top: calc(60px - 83px);
-    }
-    section.ecosystem h2.navigation,
-    section.byindustry h2.navigation,
-    section.byrole h2.navigation {
-      line-height: 16px;
-      display: inline-block;
-    }
-    section.ecosystem h2.navigation+h2.navigation:before,
-    section.byindustry h2.navigation+h2.navigation:before,
-    section.byrole h2.navigation+h2.navigation:before {
-      content: "/";
-      margin: 0 5px;
-      color: inherit;
-    }
-  }
-  @media (min-width:992px){
-    section.ecosystem h2.navigation+h2.navigation:before,
-    section.byindustry h2.navigation+h2.navigation:before,
-    section.byrole h2.navigation+h2.navigation:before {
-      margin: 0 20px;
-    }
-    section.byindustry.navigation-fixed div.navigation,
-    section.byrole.navigation-fixed div.navigation{
-      top: calc(100px - 83px);
-    }
-  }
 
 /* platformecosystem */
   .ecosystem h2.navigation a.active{
@@ -1386,7 +1321,7 @@ section.contact .info{
 
 /* solutionbyindustry */
   section.byindustry{
-    margin: 0 0 91px 0;
+    margin: 91px 0;
     padding: 0;
   }
   section.byindustry h1 {
@@ -1422,7 +1357,7 @@ section.contact .info{
 
 /* solutionbyrole */
   section.byrole{
-    margin: 0 0 130px 0;
+    margin: 130px 0;
     padding: 0;
   }
   section.byrole .content {
@@ -1476,6 +1411,76 @@ section.contact .info{
       order: 13;
     }
   }
+
+  /* platformecosystem */
+  /* solutionbyindustry */
+  /* solutionbyrole */
+    section.ecosystem h2.navigation,
+    section.byindustry h2.navigation,
+    section.byrole h2.navigation{
+      font-size: 14px;
+      line-height: 25px;
+      letter-spacing: 0.200em;
+      display: block;
+      margin: 0;
+    }
+    section.byindustry  div.navigation,
+    section.byrole  div.navigation,
+    section.byindustry.navigation,
+    section.byrole.navigation{
+      margin: 71px 0;
+    }
+    section.ecosystem  div.navigation{
+      padding: 41px 0;
+    }
+    section.byindustry.navigation-fixed div.navigation,
+    section.byrole.navigation-fixed div.navigation{
+      position: fixed;
+      background-color: white;
+      top: calc(60px - 71px);
+      left: 0;
+      right: 0;
+      z-index: 100;
+    }
+    @media (min-width:768px){
+      section.ecosystem  div.navigation {
+
+      }
+      section.byindustry  div.navigation,
+      section.byrole  div.navigation,
+      section.byindustry.navigation,
+      section.byrole.navigation{
+        margin: 83px 0;
+      }
+      section.byindustry.navigation-fixed div.navigation,
+      section.byrole.navigation-fixed div.navigation{
+        top: calc(60px - 83px);
+      }
+      section.ecosystem h2.navigation,
+      section.byindustry h2.navigation,
+      section.byrole h2.navigation {
+        line-height: 16px;
+        display: inline-block;
+      }
+      section.ecosystem h2.navigation+h2.navigation:before,
+      section.byindustry h2.navigation+h2.navigation:before,
+      section.byrole h2.navigation+h2.navigation:before {
+        content: "/";
+        margin: 0 5px;
+        color: inherit;
+      }
+    }
+    @media (min-width:992px){
+      section.ecosystem h2.navigation+h2.navigation:before,
+      section.byindustry h2.navigation+h2.navigation:before,
+      section.byrole h2.navigation+h2.navigation:before {
+        margin: 0 20px;
+      }
+      section.byindustry.navigation-fixed div.navigation,
+      section.byrole.navigation-fixed div.navigation{
+        top: calc(100px - 83px);
+      }
+    }
 
   /* readmore */
   .read-more .thumbnail{

@@ -3,6 +3,9 @@ layout: technology
 title: Powerful and scalable.
 subtitle: We use the latest open source technologies.
 background: /img/uploads/header-platform.jpg
+separator1:
+  number:
+  description:
 introduction:
   content: >-
     With billions of connected users and objects, usage-based services face
@@ -32,6 +35,9 @@ boxes:
       Built-in monitoring and alerting tools detect system errors as well as
       component status and performance. All relevant events are logged and
       accessible on our portal.
+separator2:
+  number:
+  description:
 businesslogic:
   - alt: Business logic
     content: >-
@@ -113,6 +119,9 @@ businesslogic:
       * Extension library
     title: Integrate with other systems
     url: /img/uploads/data-collection.svg
+separator3:
+  number:
+  description:
 technologies:
   introduction:
     content: >-
@@ -133,4 +142,3 @@ technologies:
       description: Improving User eXperience using React and Bootstrap
       url: /img/uploads/techno_react.png
 ---
-

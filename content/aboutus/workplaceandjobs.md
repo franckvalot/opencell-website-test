@@ -3,6 +3,9 @@ layout: workplaceandjobs
 title: We're hiring.
 subtitle: Come and help us change the world of enterprise software.
 background: /img/uploads/header-about.jpg
+separator1:
+  number: '01'
+  description: Workplace
 introduction:
   content: >+
     We're interested in engineers that are passionate about technology and
@@ -13,4 +16,7 @@ introduction:
     alt: Workplace
     url: /img/uploads/img_workplace.jpg
   title: What are we looking for.
+separator2:
+  number: '02'
+  description: Career
 ---

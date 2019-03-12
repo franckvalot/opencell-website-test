@@ -6,6 +6,8 @@
     {{ partial "header/navBar.html" . }}
     {{ partial "header/smallheader.html" (dict "Data" $Data ) }}
 
+    {{ partial "sectiondescription.html" $Data.separator1}}
+
     {{ partial "articles.html" (dict "Data" $Data "Title" "Press releases") }}
 
     {{ partial "sections/getdemo.html" . }}

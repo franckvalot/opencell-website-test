@@ -4,6 +4,9 @@ title: We want to do things differently.
 subtitle: Bringing agility and simplicity to enterprise B2B software.
 background: /img/uploads/header-press.jpg
 description:
+separator1:
+  number:
+  description:
 articles:
   - date: 2018-03-17T08:05:55.197Z
     description: >-
