@@ -97,7 +97,7 @@ mainindustries:
     - ENERGY & UTILITIES
     - MOBILITY & TRANSPORT
     - RETAIL & CONSUMER
-  subtitle: 'ALL INDUSTRIES. ALL BUSINESS SIZES. B2C, B2B AND B2BX.'
+  subtitle: WE CAN ACCELERATE YOUR TIME-TO-MARKET.
   title: Don't start from scratch.
 separator5:
   description: Our customers
