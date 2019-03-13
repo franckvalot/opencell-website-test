@@ -19,14 +19,15 @@
       {{ $scratch.Delete "tags"}}
       {{ end }}
       <div class="col-12 logo"></div>
-  </div>
-  {{ if .Data.button }}
-  <div class="row align-items-center justify-content-center text-center">
-    <div class="col">
-      <form action="{{ .Data.url }}" method="get">
-        <button type="button" name="button" class="opencell-btn">{{ .Data.button | upper }}</button>
-      </form>
     </div>
+    {{ if .Data.button }}
+    <div class="row align-items-center justify-content-center text-center">
+      <div class="col">
+        <form action="{{ .Data.url }}" method="get">
+          <button type="button" name="button" class="opencell-btn">{{ .Data.button | upper }}</button>
+        </form>
+      </div>
+    </div>
+    {{ end }}
   </div>
-  {{ end }}
 </section>

@@ -6,7 +6,7 @@ subtitle: >-
   needs.
 background: /img/uploads/header-platform.jpg
 separator1:
-  number: 
+  number:
   description:
 introduction:
   content: >-
@@ -15,7 +15,7 @@ introduction:
     integration with your business intelligence and general ledger system, we
     have the capacity to integrate quickly with your core applications.
   title: Our growing ecosystem.
-ecosysindustags:
+modulestags:
   - CRM
   - SELF-CARE
   - CUSTOMER-CARE
@@ -26,16 +26,6 @@ ecosysindustags:
   - BI
   - MARKETING
   - ERP
-ecosysroletags:
-  - FINANCE
-  - AR MANAGER
-  - PAYMENT
-  - REPORTING
-  - ORDER
-  - INVOICE
-  - MEDIATION
-  - CATALOG
-  - BILLING
 customers:
   logos:
     - alt: Gunster

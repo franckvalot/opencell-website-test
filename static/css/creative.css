@@ -580,13 +580,18 @@ section.contact .info{
     -webkit-filter: grayscale(100%);
     filter: grayscale(100%);
   }
-  .customer-logo .logo {
+  .customer-logo .logo,
+  .rosace-logo .logo{
     border-bottom: 1px solid #E6DCDC;
     border-right: 1px solid #E6DCDC;
     height: 240px;
   }
+  .rosace-logo .logo{
+    height: 180px;
+  }
 
-  .customer-logo .logo:nth-child(2n+0){
+  .customer-logo .logo:nth-child(2n+0),
+  .rosace-logo .logo:nth-child(2n+0){
     border-right: none;
   }
   @media(min-width: 768px){
@@ -599,6 +604,9 @@ section.contact .info{
     }
   }
   @media(min-width: 992px){
+    .rosace-logo .logo{
+      height: 240px;
+    }
     .customer-logo .logo:nth-child(3n+0){
       border-bottom: 1px solid #E6DCDC;
       border-right: 1px solid #E6DCDC;
@@ -608,10 +616,12 @@ section.contact .info{
     }
   }
 
-  .customer-logo .logo:nth-last-child(2){
+  .customer-logo .logo:nth-last-child(2),
+  .rosace-logo .logo:nth-last-child(2){
     border-right: none;
   }
-  .customer-logo .logo:nth-last-child(1){
+  .customer-logo .logo:nth-last-child(1),
+  .rosace-logo .logo:nth-last-child(1){
     border: none;
     height: 1px;
     margin-top: -1px;
