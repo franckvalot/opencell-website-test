@@ -62,13 +62,16 @@ function sectiondescription(item){
   }
 }
 function titleanddescription(item){
-  return [h('div', {className:'row justify-content-center'},
-      h('h1', {className:'col-12 text-center', dangerouslySetInnerHTML: {__html: item.getIn(['widgets', 'title'])}})
-    ),
-    h('div', {className:'row justify-content-center text-center'},
-      h('div', {className:'col-10 col-md-8', dangerouslySetInnerHTML: {__html: item.getIn(['widgets','content'])}})
-    )
-  ];
+  (item ? item.map(function(item){
+    return [h('div', {className:'row justify-content-center'},
+        h('h1', {className:'col-12 text-center', dangerouslySetInnerHTML: {__html: item.getIn(['widgets', 'title'])}})
+      ),
+      h('div', {className:'row justify-content-center text-center'},
+        h('div', {className:'col-10 col-md-8', dangerouslySetInnerHTML: {__html: item.getIn(['widgets','content'])}})
+      )
+    ];
+  });
+  :null);
 }
 function logos(item){
   return h('section',{className:'hero-1 logos'},
@@ -176,7 +179,7 @@ var IndexPreview = createClass({
   render: function(){
       var entry = this.props.entry;
       var headerdata = entry.getIn(['data', 'header']);
-      var introductiondata = this.props.widgetFor('introduction');
+      var introductiondata = this.props.widgetsFor('introduction');
       var whatweprovidedata = entry.getIn(['data', 'whatweprovide']);
       var whatmakesusdata = entry.getIn(['data', 'whatmakesus']);
       var mainindustriesdata = entry.getIn(['data', 'mainindustries']);
@@ -242,7 +245,7 @@ var IndexPreview = createClass({
               h('img', {className:'img-fluid', src: whatweprovidedata.get('image'), alt:''})
             ),
             h('div', {className:'col-12 col-md-12 col-lg-6 description'},
-              this.props.widgetFor('whatweprovide').getIn(['widgets', 'content']),
+              this.props.widgetsFor('whatweprovide').getIn(['widgets', 'content']),
               h('button', {className:'opencell-btn'}, 'DISCOVER')
             )
           )
