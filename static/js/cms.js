@@ -62,21 +62,9 @@ function sectiondescription(item){
   }
 }
 function titleanddescription(item){
-  console.log(item);
-  console.log(item.getIn(['widgets', 'title']));
   return [h('div', {className:'row justify-content-center'},
-      h('h1', {className:'col-12 text-center', dangerouslySetInnerHTML: {__html: item.getIn(['widgets', 'title'])}})
-    ),
-    h('div', {className:'row justify-content-center text-center'},
-      h('div', {className:'col-10 col-md-8', dangerouslySetInnerHTML: {__html: item.getIn(['widgets','content'])}})
-    ),
-    (item.getIn(['data', 'img']) != null ?
-    [h('div', {className:'w-100'},''),
-    h('div', {className:'col'},
-      h('img', {className:'img-fluid', src: item.getIn(['data', 'img']).get('url'), alt:getIn(['data', 'img']).get('alt'), style:{marginTop:'50px'}})
-    )]
-    :
-    null)
+      h('h1', {className:'col-12 text-center'}, "Hello")
+    )
   ];
 }
 function logos(item){
