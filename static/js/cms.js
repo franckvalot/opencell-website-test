@@ -493,6 +493,7 @@ var PlatformEcosystemPreview = createClass({
     var entry = this.props.entry;
 
     return [smallHeader(entry),
+      sectiondescription(entry.getIn(['data', 'separator1'])),
       h('section', {className:'hero-1'},
         h('div', {className:'container'},
           titleanddescription(entry.getIn(['data', 'introduction']))
@@ -539,7 +540,8 @@ var SolutionByIndustryPreview = createClass({
     var industriesdata = entry.getIn(['data', 'industries']);
 
     return [smallHeader(entry),
-    h('section', {className:'byindustry'},
+    sectiondescription(entry.getIn(['data', 'separator1'])),
+    h('section', {className:'byindustry navigation'},
       h('div', {className:'navigation text-center'},
         h('div', {className:'container'},
           industriesdata.map(function(item){
@@ -556,8 +558,10 @@ var SolutionByIndustryPreview = createClass({
             h('div', {className:'row justify-content-center'},
               h('h1', {className:'col text-center'}, item.getIn(['data', 'title'])),
               h('div', {className:'w-100'}, ),
-              h('div', {className:'col-12 col-md-10  embed-responsive embed-responsive-16by9 video'},
-                h('iframe', {src:'https://www.youtube.com/embed/' + item.getIn(['data', 'videoid']) + '?controls=0', frameborder:'0', allow:'accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture', allowfullscreen:'true'}, '')
+              h('div', {className:'col-12 col-md-10 visual text-center' + (item.getIn(['data', 'videoids']) ? item.getIn(['data', 'videoids']):'')},
+                h('a', {},
+                  h('img', {src: item.getIn(['data', 'image']), alt:item.getIn(['data', 'title'])})
+                )
               ),
               h('div', {className:'col-12 content'},
                 h('div', {className:'row justify-content-center'},

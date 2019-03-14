@@ -28,7 +28,7 @@
         <div class="row justify-content-center">
           <h1 class="col text-center">{{ .title }}</h1>
           <div class="w-100"></div>
-          <div class="col-12 col-md-10 visual {{if .videoid}}hover{{end}} text-center">
+          <div class="col-12 col-md-10 visual text-center {{if .videoid}}hover{{end}}">
 						<a {{with .videoid}}data-lity href="https://www.youtube.com/watch?v={{.}}"{{end}}>
 							<img src="{{ .image }}" alt="{{ .title }}">
 						</a>
