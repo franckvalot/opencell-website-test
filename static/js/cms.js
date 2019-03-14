@@ -49,8 +49,7 @@ function smallHeader(item){
     }
 }
 function sectiondescription(item){
-  console.log(item);
-  if(item || item.get('number') || item.get('description')){
+  if(item && item.get('number') && item.get('description')){
     return h('section', {className:'description'},
             h('div', {className:'container'},
               h('div', {className:'row align-items-top'},
