@@ -70,7 +70,7 @@ function titleanddescription(item){
         h('div', {className:'col-10 col-md-8', dangerouslySetInnerHTML: {__html: item.getIn(['widgets','content'])}})
       )
     ];
-  });
+  })
   :null);
 }
 function logos(item){
