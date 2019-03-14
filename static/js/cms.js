@@ -49,17 +49,19 @@ function smallHeader(item){
     }
 }
 function sectiondescription(item){
-  return h('section', {className:'description'},
-          h('div', {className:'container'},
-            h('div', {className:'row align-items-top'},
-              h('div', {className:'col d-none d-md-block'},
-                h('span', {}, item.get("number")),
-                h('hr', {}),
-                h('span', {dangerouslySetInnerHTML: {__html:item.get("description")}})
+  if(item || item.get("number") || item.get("description")){
+    return h('section', {className:'description'},
+            h('div', {className:'container'},
+              h('div', {className:'row align-items-top'},
+                h('div', {className:'col d-none d-md-block'},
+                  h('span', {}, item.get("number")),
+                  h('hr', {}),
+                  h('span', {dangerouslySetInnerHTML: {__html:item.get("description")}})
+                )
               )
             )
-          )
-        );
+          );
+  }
 }
 function titleanddescription(item){
   return [h('div', {className:'row justify-content-center'},
