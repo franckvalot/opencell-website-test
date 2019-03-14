@@ -63,15 +63,15 @@ function sectiondescription(item){
 }
 function titleanddescription(item){
   return [h('div', {className:'row justify-content-center'},
-      h('h1', {className:'col-12 text-center', dangerouslySetInnerHTML: {__html: item.get('title')}})
+      h('h1', {className:'col-12 text-center', dangerouslySetInnerHTML: {__html: item.getIn(['widgets', 'title'])}})
     ),
     h('div', {className:'row justify-content-center text-center'},
-      h('div', {className:'col-10 col-md-8', dangerouslySetInnerHTML: {__html: item.get('content')}})
+      h('div', {className:'col-10 col-md-8', dangerouslySetInnerHTML: {__html: item.getIn(['widgets','content'])}})
     ),
-    (item.get('img') != null ?
+    (item.getIn(['data', 'img']) != null ?
     [h('div', {className:'w-100'},''),
     h('div', {className:'col'},
-      h('img', {className:'img-fluid', src: item.get('img').get('url'), alt:item.get('img').get('alt'), style:{marginTop:'50px'}})
+      h('img', {className:'img-fluid', src: item.getIn(['data', 'img']).get('url'), alt:getIn(['data', 'img']).get('alt'), style:{marginTop:'50px'}})
     )]
     :
     null)
@@ -183,7 +183,7 @@ var IndexPreview = createClass({
   render: function(){
       var entry = this.props.entry;
       var headerdata = entry.getIn(['data', 'header']);
-      var introductiondata = entry.getIn(['data', 'introduction']);
+      var introductiondata = this.props.widgetsFor('introduction');
       var whatweprovidedata = entry.getIn(['data', 'whatweprovide']);
       var whatmakesusdata = entry.getIn(['data', 'whatmakesus']);
       var mainindustriesdata = entry.getIn(['data', 'mainindustries']);
