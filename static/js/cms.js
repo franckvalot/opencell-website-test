@@ -234,13 +234,13 @@ var IndexPreview = createClass({
           )
         )
       ),
-      sectiondescription(entry.getIn(['data', 'seperator1'])),
+      sectiondescription(entry.getIn(['data', 'separator1'])),
       h('section', {className:'hero-1'},
         h('div', {className:'container'},
           titleanddescription(introductiondata)
         )
       ),
-      sectiondescription(entry.getIn(['data', 'seperator2'])),
+      sectiondescription(entry.getIn(['data', 'separator2'])),
       h('section', {className:'hero-1 whatweprovide'},
         h('div', {className:'container'},
           h('div', {className:'row align-items-center justify-content-center'},
@@ -257,7 +257,7 @@ var IndexPreview = createClass({
           )
         )
       ),
-      sectiondescription(entry.getIn(['data', 'seperator3'])),
+      sectiondescription(entry.getIn(['data', 'separator3'])),
       h('section', {className:'hero-1 whatmakesus'},
         h('div', {className:'container'},
           h('div', {className:'row justify-content-center'},
@@ -277,7 +277,7 @@ var IndexPreview = createClass({
           )
         )
       ),
-      sectiondescription(entry.getIn(['data', 'seperator4'])),
+      sectiondescription(entry.getIn(['data', 'separator4'])),
       h('section', {className:'hero-1 mainindustries'},
         h('div', {className:'container'},
           h('div', {className:'row justify-content-center'},
@@ -294,11 +294,11 @@ var IndexPreview = createClass({
           )
         )
       ),
-      sectiondescription(entry.getIn(['data', 'seperator5'])),
+      sectiondescription(entry.getIn(['data', 'separator5'])),
       logos(ourcustomersdata),
-      sectiondescription(entry.getIn(['data', 'seperator6'])),
+      sectiondescription(entry.getIn(['data', 'separator6'])),
       testimonials(worktogetherdata),
-      sectiondescription(entry.getIn(['data', 'seperator7'])),
+      sectiondescription(entry.getIn(['data', 'separator7'])),
       h('section', {className:'hero-1'},
         h('div', {className:'container'},
           h('div', {className:'row justify-content-center text-center'},
