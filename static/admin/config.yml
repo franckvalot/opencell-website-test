@@ -297,11 +297,8 @@ collections:
             fields:
               - {label: Title, name: title, widget: string}
               - {label: Content, name: content, widget: markdown}
-          - label: Industry tags
-            name: ecosysindustags
-            widget: list
-          - label: Role tags
-            name: ecosysroletags
+          - label: Modules tags
+            name: modulestags
             widget: list
           - label: Logos
             name: logos
