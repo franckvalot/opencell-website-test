@@ -498,30 +498,34 @@ var PlatformEcosystemPreview = createClass({
           titleanddescription(entry.getIn(['data', 'introduction']))
         )
       ),
-      h('section', {className:'hero-1 reduce-margin ecosystem'},
+      h('section', {className:'hero-1 d-none d-md-block reduce-margin ecosystem'},
         h('div', {className:'navigation text-center'},
           h('div', {className:'container'},
-            entry.getIn(['data', 'ecosysindustags']).map(function(item){
+            entry.getIn(['data', 'modulestags']).map(function(item){
               return h('h2', {className:'navigation'}, h('a', {}, (item  ? item.toUpperCase():null)));
-            })
-          )
-        ),
-        h('div', {className:'navigation text-center'},
-          h('div', {className:'container'},
-            entry.getIn(['data', 'ecosysroletags']).map(function(item){
-              return h('h2', {className:'navigation'}, h('a', {}, (item ? item.toUpperCase():null)));
             })
           )
         )
       ),
-      h('section', {className:'hero-1 reduce-margin'},
+      h('section', {className:'hero-1 d-none d-md-block reduce-margin text-center'},
         h('div', {className:'container'},
-          h('div', {className:'row align-items-center justify-content-center customer-logo'},
-            entry.getIn(['data', 'logos']).map(function(item){
-              return h('div', {className:'col-6 col-md-4 col-lg-3 logo'},
-                h('img', {className:'img-fluid', src:item.get('url'), alt:item.get('alt')})
-              );
-            })
+          h('div', {className:'row justify-content-center'},
+            h('div', {className:'col-7 col-lg-7', dangerouslySetInnerHTML: {__html:entry.getIn(['data', 'body'])}}),
+            h('div', {className:'col'},
+              h('div', {className:'row align-items-center justify-content-center rosace-logo'},
+                entry.getIn(['data', 'logos']).map(function(item){
+                  return h('div', {className:'col-6 logo'},
+                    h('div', {className:'row align-items-center h-100'},
+                      h('div', {className:'col'},
+                        h('img', {className:'img-fluid', src:item.get('url'), alt:item.get('alt')})
+                      )
+                    )
+                  );
+                }),
+                h('div', {className:'col-12 logo'}, '')
+              )
+            )
+
           )
         )
       )
