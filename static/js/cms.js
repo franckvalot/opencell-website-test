@@ -51,13 +51,11 @@ function smallHeader(item){
 function sectiondescription(item){
   if(item && item.get('number') && item.get('description')){
     return h('section', {className:'description'},
-            h('div', {className:'container'},
+            h('div', {className:'container d-none d-md-block'},
               h('div', {className:'row align-items-top'},
-                h('div', {className:'col d-none d-md-block'},
-                  h('span', {}, item.get('number')),
-                  h('hr', {}),
-                  h('span', {dangerouslySetInnerHTML: {__html:item.get('description')}})
-                )
+                h('span', {}, item.get('number')),
+                h('hr', {}),
+                h('span', {dangerouslySetInnerHTML: {__html:item.get('description')}})
               )
             )
           );
@@ -288,7 +286,9 @@ var IndexPreview = createClass({
           h('div', {className:'row justify-content-center text-center'},
             mainindustriesdata.get('blocks').map(function(item){
               return h('div', {className:'col-12 col-md-6 box'},
-                h('div', {className:'row align-items-center justify-content-center', dangerouslySetInnerHTML: {__html: item}})
+                h('a', {},
+                  h('div', {className:'row align-items-center justify-content-center', dangerouslySetInnerHTML: {__html: item}})
+                )
               );
             })
           )
