@@ -63,8 +63,18 @@ function sectiondescription(item){
 }
 function titleanddescription(item){
   return [h('div', {className:'row justify-content-center'},
-      h('h1', {className:'col-12 text-center'}, "Hello")
-    )
+      h('h1', {className:'col-12 text-center', dangerouslySetInnerHTML: {__html: item.get('title')}})
+    ),
+    h('div', {className:'row justify-content-center text-center'},
+      h('div', {className:'col-10 col-md-8', dangerouslySetInnerHTML: {__html: item.get('content')}})
+    ),
+    (item.get('img') != null ?
+    [h('div', {className:'w-100'},''),
+    h('div', {className:'col'},
+      h('img', {className:'img-fluid', src: item.get('img').get('url'), alt:item.get('img').get('alt'), style:{marginTop:'50px'}})
+    )]
+    :
+    null)
   ];
 }
 function logos(item){
@@ -173,13 +183,15 @@ var IndexPreview = createClass({
   render: function(){
       var entry = this.props.entry;
       var headerdata = entry.getIn(['data', 'header']);
-      var introductiondata = this.props.widgetsFor('introduction');
+      var introductiondata = entry.getIn(['data', 'introduction']);
       var whatweprovidedata = entry.getIn(['data', 'whatweprovide']);
       var whatmakesusdata = entry.getIn(['data', 'whatmakesus']);
       var mainindustriesdata = entry.getIn(['data', 'mainindustries']);
       var ourcustomersdata = entry.getIn(['data', 'ourcustomers']);
       var worktogetherdata = entry.getIn(['data', 'worktogether']);
       var learnmoredata = entry.getIn(['data', 'learnmore']);
+
+      console.log(this.props.widgetsFor('introduction').getIn(['data', 'title']));
 
       return [h('header', {className:'hero', style:{backgroundImage: (headerdata.get('background') ? 'url(' + headerdata.get('background') +')':null)}},
         h('div', {className:'header-content-inner'},
