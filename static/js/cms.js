@@ -342,7 +342,7 @@ var PlatformModulesPreview = createClass({
                   h('h1', {className:'col-12'}, 'Modules'),
                   h('ul', {className:'col-12'},
                     entry.getIn(['data', 'modules']).map(function(item, index){
-                      return h('li', {className:(index == 0 ? 'active' : null)},
+                      return h('li', {className:(index == 0 ? 'active' : '')},
                         h('h2', {}, (item.get('title') ? item.get('title').toUpperCase() : null))
                       );
                     })
@@ -352,22 +352,30 @@ var PlatformModulesPreview = createClass({
               h('div', {className:'col-12 col-md-7 text-left content'},
                 h('div', {className:'row justify-content-center h-100'},
                   entry.getIn(['data', 'modules']).map(function(item, index){
-                    return h('div', {className:'col' + (index == 0  ? ' active':null)},
+                    return h('div', {className:'col' + (index == 0  ? ' active':'')},
                       h('h1', {className:'col-12'}, item.get('title')),
                       h('div', {className:'carousel slide col-12 h-75'},
                         h('ol', {className:'carousel-indicators'},
                           item.get('contents').map(function(item, index){
-                            return h('li', {className:(index == 0  ? 'active':null)}, '');
+                            return h('li', {className:(index == 0  ? 'active':'')}, '');
                           })
                         ),
                         h('div', {className:'carousel-inner h-100'},
-                          h('div', {className:'carousel-item' + (index == 0  ? ' active':null)},
+                          h('div', {className:'carousel-item' + (index == 0  ? ' active':'')},
                             h('div', {className:'row justify-content-center h-100'},
                               h('div', {className:'col-12'},
                                 h('div', {}, item.get('content'))
                               )
                             )
                           )
+                        ),
+                        h('a', {className:'carousel-control-prev', href:'#'},
+                          h('span', {className:'carousel-control-prev-icon'},''),
+                          h('span', {className:'sr-only'}, 'Previous')
+                        ),
+                        h('a', {className:'carousel-control-next', href:'#'},
+                          h('span', {className:'carousel-control-next-icon'},''),
+                          h('span', {className:'sr-only'}, 'Next')
                         )
                       )
                     );
