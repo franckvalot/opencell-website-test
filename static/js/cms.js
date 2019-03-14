@@ -405,6 +405,7 @@ var PlatformTechnologyPreview = createClass({
       }
 
       return [smallHeader(entry),
+      sectiondescription(entry.getIn(['data', 'separator1'])),
       h('section', {className:'hero-1'},
         h('div', {className:'container'},
           titleanddescription(entry.getIn(['data', 'introduction']))
@@ -425,6 +426,7 @@ var PlatformTechnologyPreview = createClass({
           )
         )
       ),
+      sectiondescription(entry.getIn(['data', 'separator1'])),
       h('section', {className:'hero-2 platformtechnology businesslogic'},
         h('div', {className:'container'},
           h('div', {className:'row align-items-center justify-content-center'},
@@ -444,8 +446,10 @@ var PlatformTechnologyPreview = createClass({
                   (businesslogicdata ? businesslogicdata.map(function(item, index){
                     return h('div', {className:'carousel-item col-12' + (index == 0 ? ' active':'')},
                       h('div', {className:'row align-items-center h-100'},
-                        h('h1', {className:'text-center text-md-left'}, item.getIn(['data', 'title'])),
-                        h('p', {}, item.getIn(['widgets', 'content']))
+                        h('div', {className:'col'},
+                          h('h1', {className:'text-center text-md-left', dangerouslySetInnerHTML: {__html: item.getIn(['data', 'title'])}}),
+                          h('p', {}, item.getIn(['widgets', 'content']))
+                        )
                       )
                     );
                   }):null)
@@ -464,13 +468,15 @@ var PlatformTechnologyPreview = createClass({
         h('div', {className:'container'},
           h('div', {className:'row align-items-center justify-content-center'},
             technologiesdata.get('technologies').map(function(item){
-                return h('div', {className:'col-10 col-md row align-items-center justify-content-center'},
-                  h('div', {className:'col text-center description'},
-                    item.get('description')
-                  ),
-                  h('div', {className:'w-100'},''),
-                  h('div', {className:'col text-center img'},
-                    h('img', {className:'img-fluid', src: item.get('url'), alt: item.get('alt')})
+                return h('div', {className:'col-10 col-md'},
+                  h('div', {className:'row align-items-center justify-content-center'},
+                    h('div', {className:'col text-center description'},
+                      item.get('description')
+                    ),
+                    h('div', {className:'w-100'},''),
+                    h('div', {className:'col text-center img'},
+                      h('img', {className:'img-fluid', src: item.get('url'), alt: item.get('alt')})
+                    )
                   )
                 );
             })
