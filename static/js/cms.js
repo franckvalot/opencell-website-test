@@ -191,7 +191,6 @@ var IndexPreview = createClass({
       var worktogetherdata = entry.getIn(['data', 'worktogether']);
       var learnmoredata = entry.getIn(['data', 'learnmore']);
 
-      console.log(entry);
 
       return [h('header', {className:'hero', style:{backgroundImage: (headerdata.get('background') ? 'url(' + headerdata.get('background') +')':null)}},
         h('div', {className:'header-content-inner'},
@@ -251,7 +250,7 @@ var IndexPreview = createClass({
               h('img', {className:'img-fluid', src: whatweprovidedata.get('image'), alt:''})
             ),
             h('div', {className:'col-12 col-md-12 col-lg-6 description'},
-              this.props.widgetsFor('whatweprovide').getIn(['widgets', 'content']),
+              whatweprovidedata.get('content'),
               h('button', {className:'opencell-btn'}, 'DISCOVER')
             )
           )
