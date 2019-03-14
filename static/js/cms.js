@@ -513,7 +513,7 @@ var PlatformEcosystemPreview = createClass({
             h('div', {className:'col-7 col-lg-7', dangerouslySetInnerHTML: {__html:entry.getIn(['data', 'body'])}}),
             h('div', {className:'col'},
               h('div', {className:'row align-items-center justify-content-center rosace-logo'},
-                entry.getIn(['data', 'logos']).map(function(item){
+                entry.getIn(['data', 'customers']).get('logos').map(function(item){
                   return h('div', {className:'col-6 logo'},
                     h('div', {className:'row align-items-center h-100'},
                       h('div', {className:'col'},
