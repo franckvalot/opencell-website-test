@@ -331,27 +331,25 @@ var PlatformModulesPreview = createClass({
   render: function(){
       var entry = this.props.entry;
 
-      var moduleslist = function(item, index){
-        return h('li', {className:(index == 0 ? 'active' : null), 'data-target':'#carouselModules', 'data-slide-to':'index'},
-          h('h2', {}, item.get('title'))
-        );
-      }
-
       var indicators = function(item, index){
         return h('li', {className:(index == 0 ? 'active' : null), 'data-target':'#carouselModules', 'data-slide-to':'index'},'');
       }
 
       return [smallHeader(entry),
-      sectiondescription("01", "Our solution"),
-      sectiondescription("01", "Capabilities"),
-        h('section', {className:'hero-1 modules'},
+        sectiondescription(entry.getIn(['data', 'separator1'])),
+        sectiondescription(entry.getIn(['data', 'separator2'])),
+        h('section', {className:'hero-1 modules d-sm-none d-md-block'},
           h('div', {className:'container'},
             h('div', {className:'row justify-content-center'},
               h('div', {className:'col-12 col-md-5 col-lg-5 text-center list'},
                 h('div', {className:'row justify-content-center'},
                   h('h1', {className:'col-12'}, 'Modules'),
-                  h('ul', {className:'col-12', 'data-ride':'carousel'},
-                    entry.getIn(['data', 'modules']).map(moduleslist)
+                  h('ul', {className:'col-12'},
+                    entry.getIn(['data', 'modules']).map(function(item, index){
+                      return h('li', {className:(index == 0 ? 'active' : null)},
+                        h('h2', {}, (item.get('title') ? item.get('title').toUpperCase() : null))
+                      );
+                    })
                   )
                 )
               ),
