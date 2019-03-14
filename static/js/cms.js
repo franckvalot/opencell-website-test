@@ -48,21 +48,19 @@ function smallHeader(item){
       );
     }
 }
-
-function sectiondescription(number, description){
+function sectiondescription(item){
   return h('section', {className:'description'},
           h('div', {className:'container'},
             h('div', {className:'row align-items-top'},
               h('div', {className:'col d-none d-md-block'},
-                h('span', {}, number),
+                h('span', {}, item.get("number")),
                 h('hr', {}),
-                h('span', {dangerouslySetInnerHTML: {__html:description}})
+                h('span', {dangerouslySetInnerHTML: {__html:item.get("description")}})
               )
             )
           )
         );
 }
-
 function titleanddescription(item){
   return [h('div', {className:'row justify-content-center'},
       h('h1', {className:'col-12 text-center', dangerouslySetInnerHTML: {__html: item.get('title')}})
@@ -79,7 +77,6 @@ function titleanddescription(item){
     null)
   ];
 }
-
 function logos(item){
   return h('section',{className:'hero-1 logos'},
     h('div', {className:'container'},
@@ -139,7 +136,6 @@ function article(item){
     )
   );
 }
-
 function testimonials(item){
   return h('section', {className:'hero-1 worktogether'},
     h('div', {className:'container'},
@@ -236,13 +232,13 @@ var IndexPreview = createClass({
           )
         )
       ),
-      sectiondescription("01", "what is Opencell"),
+      sectiondescription(entry.getIn(['data', 'seperator1'])),
       h('section', {className:'hero-1'},
         h('div', {className:'container'},
           titleanddescription(introductiondata)
         )
       ),
-      sectiondescription("02", "what we do"),
+      sectiondescription(entry.getIn(['data', 'seperator2'])),
       h('section', {className:'hero-1 whatweprovide'},
         h('div', {className:'container'},
           h('div', {className:'row align-items-center justify-content-center'},
@@ -259,7 +255,7 @@ var IndexPreview = createClass({
           )
         )
       ),
-      sectiondescription("03", "what kind of client<br>we work with"),
+      sectiondescription(entry.getIn(['data', 'seperator3'])),
       h('section', {className:'hero-1 whatmakesus'},
         h('div', {className:'container'},
           h('div', {className:'row justify-content-center'},
@@ -279,7 +275,7 @@ var IndexPreview = createClass({
           )
         )
       ),
-      sectiondescription("04", "what kind of client<br>we work with"),
+      sectiondescription(entry.getIn(['data', 'seperator4'])),
       h('section', {className:'hero-1 mainindustries'},
         h('div', {className:'container'},
           h('div', {className:'row justify-content-center'},
@@ -297,9 +293,9 @@ var IndexPreview = createClass({
         )
       ),
       logos(ourcustomersdata),
-      sectiondescription("05", "Discover our videos"),
+      sectiondescription(entry.getIn(['data', 'seperator5'])),
       testimonials(worktogetherdata),
-      sectiondescription("06", "Discover our videos"),
+      sectiondescription(entry.getIn(['data', 'seperator6'])),
       h('section', {className:'hero-1'},
         h('div', {className:'container'},
           h('div', {className:'row justify-content-center text-center'},
