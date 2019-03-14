@@ -191,7 +191,7 @@ var IndexPreview = createClass({
       var worktogetherdata = entry.getIn(['data', 'worktogether']);
       var learnmoredata = entry.getIn(['data', 'learnmore']);
 
-      console.log(this.props.widgetsFor('introduction').getIn(['data', 'title']));
+      console.log(this.props.widgetsFor('introduction'));
 
       return [h('header', {className:'hero', style:{backgroundImage: (headerdata.get('background') ? 'url(' + headerdata.get('background') +')':null)}},
         h('div', {className:'header-content-inner'},
