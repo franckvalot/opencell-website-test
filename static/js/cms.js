@@ -152,6 +152,12 @@ function testimonials(item){
               h('div', {className:'row justify-content-center align-items-center h-100'},
                 h('div', {className:'col'},
                   h('div', {className:'row justify-content-center'},
+                    (item.get('portrait') ?
+                    [h('div', {className:'col-6 col-lg-2 text-center'},
+                      h('img', {src:item.get('portrait')})
+                    ),
+                    h('div', {className:'w-100'}, '')]
+                    :null),
                     h('div', {className:'col-12 col-lg quote text-center'}, item.get('testimonial')),
                     h('div', {className:'w-100'}, ''),
                     h('hr', {}),
