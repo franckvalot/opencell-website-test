@@ -361,13 +361,15 @@ var PlatformModulesPreview = createClass({
                           })
                         ),
                         h('div', {className:'carousel-inner h-100'},
-                          h('div', {className:'carousel-item' + (index == 0  ? ' active':'')},
-                            h('div', {className:'row justify-content-center h-100'},
-                              h('div', {className:'col-12'},
-                                h('div', {}, item.get('content'))
+                          item.get('contents').map(function(item, index){
+                            return h('div', {className:'carousel-item' + (index == 0  ? ' active':'')},
+                              h('div', {className:'row justify-content-center h-100'},
+                                h('div', {className:'col-12'},
+                                  h('div', {}, item.get('content'))
+                                )
                               )
-                            )
-                          )
+                            );
+                          })
                         ),
                         h('a', {className:'carousel-control-prev', href:'#'},
                           h('span', {className:'carousel-control-prev-icon'},''),
