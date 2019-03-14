@@ -572,7 +572,8 @@ section.contact .info{
 }
 
 /* logos */
-  .customer-logo img {
+  .customer-logo img,
+  .rosace-logo .logo img{
     padding-left: 15%;
     padding-right: 15%;
     max-height: 135px;
