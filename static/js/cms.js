@@ -176,7 +176,7 @@ var IndexPreview = createClass({
   render: function(){
       var entry = this.props.entry;
       var headerdata = entry.getIn(['data', 'header']);
-      var introductiondata = this.props.widgetsFor('introduction');
+      var introductiondata = this.props.widgetFor('introduction');
       var whatweprovidedata = entry.getIn(['data', 'whatweprovide']);
       var whatmakesusdata = entry.getIn(['data', 'whatmakesus']);
       var mainindustriesdata = entry.getIn(['data', 'mainindustries']);
@@ -242,7 +242,7 @@ var IndexPreview = createClass({
               h('img', {className:'img-fluid', src: whatweprovidedata.get('image'), alt:''})
             ),
             h('div', {className:'col-12 col-md-12 col-lg-6 description'},
-              this.props.widgetsFor('whatweprovide').getIn(['widgets', 'content']),
+              this.props.widgetFor('whatweprovide').getIn(['widgets', 'content']),
               h('button', {className:'opencell-btn'}, 'DISCOVER')
             )
           )
