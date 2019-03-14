@@ -49,14 +49,15 @@ function smallHeader(item){
     }
 }
 function sectiondescription(item){
-  if(item || item.get("number") || item.get("description")){
+  console.log(item);
+  if(item || item.get('number') || item.get('description')){
     return h('section', {className:'description'},
             h('div', {className:'container'},
               h('div', {className:'row align-items-top'},
                 h('div', {className:'col d-none d-md-block'},
-                  h('span', {}, item.get("number")),
+                  h('span', {}, item.get('number')),
                   h('hr', {}),
-                  h('span', {dangerouslySetInnerHTML: {__html:item.get("description")}})
+                  h('span', {dangerouslySetInnerHTML: {__html:item.get('description')}})
                 )
               )
             )
@@ -294,10 +295,11 @@ var IndexPreview = createClass({
           )
         )
       ),
-      logos(ourcustomersdata),
       sectiondescription(entry.getIn(['data', 'seperator5'])),
-      testimonials(worktogetherdata),
+      logos(ourcustomersdata),
       sectiondescription(entry.getIn(['data', 'seperator6'])),
+      testimonials(worktogetherdata),
+      sectiondescription(entry.getIn(['data', 'seperator7'])),
       h('section', {className:'hero-1'},
         h('div', {className:'container'},
           h('div', {className:'row justify-content-center text-center'},
