@@ -356,9 +356,18 @@ var PlatformModulesPreview = createClass({
                       h('h1', {className:'col-12'}, item.get('title')),
                       h('div', {className:'carousel slide col-12 h-75'},
                         h('ol', {className:'carousel-indicators'},
-                          item.get('content').map(function(item, index){
+                          item.get('contents').map(function(item, index){
                             return h('li', {className:(index == 0  ? 'active':null)}, '');
                           })
+                        ),
+                        h('div', {className:'carousel-inner h-100'},
+                          h('div', {className:'carousel-item' + (index == 0  ? ' active':null)},
+                            h('div', {className:'row justify-content-center h-100'},
+                              h('div', {className:'col-12'},
+                                h('div', {}, item.get('content'))
+                              )
+                            )
+                          )
                         )
                       )
                     );
