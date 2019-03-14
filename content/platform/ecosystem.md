@@ -24,35 +24,44 @@ modulestags:
   - OSS/ESB
   - eCOMMERCE
   - BI
-  - MARKETING
   - ERP
 customers:
   logos:
     - alt: Gunster
       tags:
-        - AR MANAGER
-        - ORDER
-        - INVOICE
+        - CRM
+        - SELF-CARE
+        - ERP
       url: /img/uploads/logo-gunster.svg
     - alt: Adidas
       tags:
-        - PAYMENT
-        - INVOICE
+        - Bank & PSP
+        - PUBLISHING
+        - OSS/ESB
+        - eCOMMERCE
       url: /img/uploads/logo-adidas.svg
     - alt: Dona International
       tags:
-        - ERM
-        - Bank & PSP
-        - OSS/ESB
+        - CRM
+        - SELF-CARE
+        - PUBLISHING
+        - eCOMMERCE
+        - ERP
       url: /img/uploads/logo-dona.svg
     - alt: Gunster
       tags:
-        - ECOMMERCE
+        - OSS/ESB
+        - eCOMMERCE
+        - BI
+        - ERP
       url: /img/uploads/logo-gunster.svg
     - alt: Mosaic
       tags:
-        - ERM
-        - ECOMMERCE
+        - CRM
+        - SELF-CARE
+        - CUSTOMER-CARE
+        - Bank & PSP
+        - PUBLISHING
       url: /img/uploads/logo-mosaic.svg
 ---
 <svg id="rosace" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 792.292 926">

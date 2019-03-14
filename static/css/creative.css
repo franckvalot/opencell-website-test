@@ -572,8 +572,7 @@ section.contact .info{
 }
 
 /* logos */
-  .customer-logo img,
-  .rosace-logo .logo img{
+  .customer-logo img{
     padding-left: 15%;
     padding-right: 15%;
     max-height: 135px;
@@ -581,18 +580,13 @@ section.contact .info{
     -webkit-filter: grayscale(100%);
     filter: grayscale(100%);
   }
-  .customer-logo .logo,
-  .rosace-logo .logo{
+  .customer-logo .logo{
     border-bottom: 1px solid #E6DCDC;
     border-right: 1px solid #E6DCDC;
     height: 240px;
   }
-  .rosace-logo .logo{
-    height: 180px;
-  }
 
-  .customer-logo .logo:nth-child(2n+0),
-  .rosace-logo .logo:nth-child(2n+0){
+  .customer-logo .logo:nth-child(2n+0){
     border-right: none;
   }
   @media(min-width: 768px){
@@ -605,9 +599,6 @@ section.contact .info{
     }
   }
   @media(min-width: 992px){
-    .rosace-logo .logo{
-      height: 240px;
-    }
     .customer-logo .logo:nth-child(3n+0){
       border-bottom: 1px solid #E6DCDC;
       border-right: 1px solid #E6DCDC;
@@ -617,12 +608,10 @@ section.contact .info{
     }
   }
 
-  .customer-logo .logo:nth-last-child(2),
-  .rosace-logo .logo:nth-last-child(2){
+  .customer-logo .logo:nth-last-child(2){
     border-right: none;
   }
-  .customer-logo .logo:nth-last-child(1),
-  .rosace-logo .logo:nth-last-child(1){
+  .customer-logo .logo:nth-last-child(1){
     border: none;
     height: 1px;
     margin-top: -1px;
@@ -1091,17 +1080,18 @@ section.contact .info{
       line-height: 30px;
       letter-spacing: 0.10em;
     }
-    .customers .logos {
+    .customers .logos{
       max-width: calc(calc(100% - 300px) + 42px);
       margin-left: -42px;
       padding: 45px 25px 45px calc(25px + 42px);
     }
-    .customers .logos img {
+    .customers .logos img{
       padding: 35px 15px;
     }
   }
   @media (min-width:1200px){
-    .customers .logos {
+    .customers .logos,
+    .rosace-logo {
       padding: 150px 120px 150px calc(120px + 42px);
     }
   }
@@ -1329,6 +1319,33 @@ section.contact .info{
       color: #4B4B4B;
   }
 
+  .rosace:first-child{
+    z-index: 10;
+  }
+  .rosace:last-child{
+    background-color: #F9F9F8;
+    margin: 0;
+    margin-left: -150px;
+  }
+  .rosace .logos {
+    z-index: 0;
+    padding: 45px 25px 45px calc(25px + 100px);
+  }
+  .rosace .logos > div{
+    height: 25%;
+  }
+  .rosace .logos img {
+    padding: 45px 15px;
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+    padding: 35px 15px;
+  }
+
+  @media (min-width:1200px){
+    .rosace .logos {
+      padding: 75px 60px 75px calc(60px + 100px);
+    }
+  }
 
 /* solutionbyindustry */
   section.byindustry{

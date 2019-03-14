@@ -27,24 +27,19 @@
     <section class="hero-1 d-none d-md-block reduce-margin text-center">
       <div class="container">
         <div class="row justify-content-center">
-          <div class="col-6 col-lg-6">
+          <div class="col-6 col-lg-6 rosace">
             {{ .RawContent | safeHTML }}
           </div>
-          <div class="col">
-            <div class="row align-items-center justify-content-center rosace-logo">
+          <div class="col rosace">
+            <div class="row align-items-center justify-content-center logos">
               {{ $scratch := newScratch }}
               {{ range $Data.customers.logos }}
               {{range .tags}}{{ $scratch.Add "tags" (slice (anchorize .))}}{{end}}
-              <div class="col-6 logo">
-                <div class="row align-items-center h-100">
-                  <div class="col">
-                    {{with .link}}{{if (and .url .target)}}<a href="{{.url}}" {{if eq .target "external"}}target="_blank"{{end}}>{{end}}{{end}}<img src="{{ .url }}" class="img-fluid {{ if .description }} cursor{{end}}" alt="{{ .alt }}" {{if .tags}} data-tags="{{ jsonify ($scratch.Get "tags" )}}"{{ end }}>  {{with .link}}{{if (and .url .target)}}</a>{{end}}{{end}}
-                  </div>
-                </div>
+              <div class="col-4">
+                {{with .link}}{{if (and .url .target)}}<a href="{{.url}}" {{if eq .target "external"}}target="_blank"{{end}}>{{end}}{{end}}<img src="{{ .url }}" class="img-fluid {{ if .description }} cursor{{end}}" alt="{{ .alt }}" {{if .tags}} data-tags="{{ jsonify ($scratch.Get "tags" )}}"{{ end }}>  {{with .link}}{{if (and .url .target)}}</a>{{end}}{{end}}
               </div>
               {{ $scratch.Delete "tags"}}
               {{ end }}
-              <div class="col-12 logo"></div>
             </div>
           </div>
         </div>
@@ -56,7 +51,7 @@
 
     {{ partial "script.html" }}
     <script type="text/javascript">
-      var logosdata = $('.rosace-logo>div:not(:last-child)').clone();
+      var logosdata = $('.rosace .logos > div').clone();
       function hasCommonElement(arr1,arr2)
       {
          var bExists = false;
@@ -73,25 +68,37 @@
          return bExists;
       }
 
-      $('h2.navigation').click(function () {
+      function resetLogos(){
+        $('.rosace .logos>div').remove();
+        $('.rosace .logos').append(logosdata);
+      }
+      function resetAll(){
+        resetRosace();
+        resetLogos();
 
+      }
+      function filterLogos(currentTag){
+        if(currentTag){
+          resetLogos();
+          $('.rosace .logos>div').filter(function(){
+            return !hasCommonElement([currentTag],$(this).find('img').data('tags'));
+          }).remove();
+        }
+        else{
+          resetAll();
+        }
+      }
+      $('h2.navigation').click(function () {
         $(this).siblings().children('a').removeClass('active');
         $(this).children('a').toggleClass('active');
 
         var currentTag =  $(this).children('a.active').data('target');
-        $('.rosace-logo>div:not(:last-child)').remove();
-        $('.rosace-logo').prepend(logosdata);
 
-        if(currentTag){
-          $('.rosace-logo>div:not(:last-child)').filter(function(){
-            return !hasCommonElement([currentTag],$(this).find('img').data('tags'));
-          }).remove();
-          setActiveModule($("svg#rosace .rosace > *[data-target=\""+ currentTag +"\"]"));
-          updateRosace($("svg#rosace .rosace > *[data-target=\""+ currentTag+"\"]"));
-        }
-        else{
-          resetRosace();
-        }
+        filterLogos(currentTag);
+
+        setActiveModule($("svg#rosace .rosace > *[data-target=\""+ currentTag +"\"]"));
+        updateRosace($("svg#rosace .rosace > *[data-target=\""+ currentTag+"\"]"));
+
       });
     </script>
     <script type="text/javascript">
@@ -139,31 +146,22 @@
       function setActiveModule(item){
         item.siblings().removeClass("active");
         item.addClass("active");
+        updateRosace(item);
       }
 
       $( document ).ready(function() {
         $("svg#rosace .rosace > *:not(.disabled)").click(
           function(){
             if($(this).hasClass("active")){
-              resetRosace();
+              resetAll();
               $('h2.navigation').children("a").removeClass('active');
-              $('.rosace-logo').prepend(logosdata);
             }
             else{
               var currentTag =  $(this).data('target');
-
               $('h2.navigation').children("a").removeClass('active');
               $('h2.navigation').children("a[data-target=\""+ currentTag+"\"]").addClass('active');
-              $('.rosace-logo>div:not(:last-child)').remove();
-              $('.rosace-logo').prepend(logosdata);
-
-              if(currentTag){
-                $('.rosace-logo>div:not(:last-child)').filter(function(){
-                  return !hasCommonElement([currentTag],$(this).find('img').data('tags'));
-                }).remove();
-              }
               setActiveModule($(this));
-              updateRosace($(this));
+              filterLogos(currentTag);
             }
           }
         )

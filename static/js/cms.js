@@ -590,7 +590,7 @@ var SolutionByRolePreview = createClass({
       return h('li', {}, item.get('benefit'));
     }
     return [smallHeader(entry),
-      h('section', {className:'byindustry'},
+      h('section', {className:'byrole navigation'},
         h('div', {className:'navigation text-center'},
           h('div', {className:'container'},
             rolesdata.map(function(item){
@@ -601,6 +601,7 @@ var SolutionByRolePreview = createClass({
           )
         ),
       ),
+      sectiondescription(entry.getIn(['data', 'separator1'])),
       rolesdata.map(function(item){
         return h('section', {className:'hero-1 byrole alternate'},
           h('div', {className:'container'},
