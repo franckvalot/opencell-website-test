@@ -630,27 +630,6 @@ var SolutionByRolePreview = createClass({
   }
 })
 
-var AboutUsPressReleasesPreview = createClass({
-  render: function(){
-      var entry = this.props.entry;
-      var articlesdata = entry.getIn(['data', 'articles']);
-
-      return [smallHeader(entry),
-      h('section', {className:'hero-1 articles'},
-        h('div', {className:'container'},
-          h('div', {className:'row justify-content-center'},
-            h('div', {className:'col-12 text-center'}, 'Press releases')
-          ),
-          h('div', {className:'row justify-content-center'},
-            articlesdata.map(article)
-          )
-        )
-      ),
-      scripts()
-      ];
-  }
-})
-
 var AboutUSStoryPreview = createClass({
   render: function(){
     var entry = this.props.entry;
@@ -829,6 +808,28 @@ var AboutUsWorkplaceAndJobsPreview = createClass({
         )
       ),
       sectiondescription(entry.getIn(['data', 'separator2'])),
+      scripts()
+      ];
+  }
+})
+
+var AboutUsPressReleasesPreview = createClass({
+  render: function(){
+      var entry = this.props.entry;
+      var articlesdata = entry.getIn(['data', 'articles']);
+
+      return [smallHeader(entry),
+      sectiondescription(entry.getIn(['data', 'separator1'])),
+      h('section', {className:'hero-1 articles'},
+        h('div', {className:'container'},
+          h('div', {className:'row justify-content-center'},
+            h('div', {className:'col-12 text-center'}, 'Press releases')
+          ),
+          h('div', {className:'row justify-content-center'},
+            articlesdata.map(article)
+          )
+        )
+      ),
       scripts()
       ];
   }
