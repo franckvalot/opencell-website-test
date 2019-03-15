@@ -800,7 +800,7 @@ var AboutUsParnersPreview = createClass({
             return logos(item);
           })
         :null),
-        sectiondescription(entry.getIn(['data', 'separator1'])),
+        sectiondescription(entry.getIn(['data', 'separator2'])),
         testimonials(entry.getIn(['data', 'worktogether'])),
         h('div', {className:'hero-1'},
           h('div', {className:'container'},
@@ -822,13 +822,13 @@ var AboutUsWorkplaceAndJobsPreview = createClass({
       var entry = this.props.entry;
 
       return [smallHeader(entry),
-      sectiondescription("01", "Workplace"),
+      sectiondescription(entry.getIn(['data', 'separator1'])),
       h('section', {className:'hero-1'},
         h('div', {className:'container'},
           titleanddescription(entry.getIn(['data', 'introduction']))
         )
       ),
-      sectiondescription("02", "Career"),
+      sectiondescription(entry.getIn(['data', 'separator2'])),
       scripts()
       ];
   }
