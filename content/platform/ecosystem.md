@@ -48,13 +48,13 @@ customers:
         - eCOMMERCE
         - ERP
       url: /img/uploads/logo-dona.svg
-    - alt: Gunster
+    - alt: Eckerd
       tags:
         - OSS/ESB
         - eCOMMERCE
         - BI
         - ERP
-      url: /img/uploads/logo-gunster.svg
+      url: /img/uploads/logo-eckerd.svg
     - alt: Mosaic
       tags:
         - CRM

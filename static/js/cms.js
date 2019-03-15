@@ -659,7 +659,7 @@ var AboutUSStoryPreview = createClass({
     var investorsdata = entry.getIn(['data', 'investors']);
 
     return [smallHeader(entry),
-    sectiondescription("01", "Our story"),
+    sectiondescription(entry.getIn(['data', 'separator1'])),
     h('section', {className:'hero-1 ourstory'},
       h('div', {className:'container'},
         titleanddescription(ourstorydata),
@@ -681,7 +681,7 @@ var AboutUSStoryPreview = createClass({
         )
       )
     ),
-    sectiondescription("02", "Our team"),
+    sectiondescription(entry.getIn(['data', 'separator2'])),
     h('section', {className:'hero-1 leadership'},
       h('div', {className:'container'},
         h('div', {className:'row justify-content-center'},
@@ -711,7 +711,7 @@ var AboutUSStoryPreview = createClass({
         )
       )
     ),
-    sectiondescription("03", "Our investors"),
+    sectiondescription(entry.getIn(['data', 'separator3'])),
     logos(investorsdata),
     scripts()
     ];
@@ -723,6 +723,7 @@ var AboutUsBusinessModelPreview = createClass({
       var entry = this.props.entry;
       var introductiondata = entry.getIn(['data', 'introduction']);
       return [smallHeader(entry),
+        sectiondescription(entry.getIn(['data', 'separator1'])),
         h('section', {className:'hero-1'},
           h('div', {className:'container'},
             titleanddescription(introductiondata)
@@ -754,6 +755,7 @@ var AboutUsCustomersPreview = createClass({
       var introductiondata = entry.getIn(['data', 'introduction']);
 
       return [smallHeader(entry),
+        sectiondescription(entry.getIn(['data', 'separator1'])),
         (entry.getIn(['data', 'sections']) ?
           entry.getIn(['data', 'sections']).map(function(item){
             return h('section', {className:'hero-1 customers'},
@@ -792,12 +794,25 @@ var AboutUsParnersPreview = createClass({
       var entry = this.props.entry;
 
       return [smallHeader(entry),
+        sectiondescription(entry.getIn(['data', 'separator1'])),
         (entry.getIn(['data', 'sections']) ?
           entry.getIn(['data', 'sections']).map(function(item){
             return logos(item);
           })
         :null),
-        testimonials(entry.getIn(['data', 'worktogether']))
+        sectiondescription(entry.getIn(['data', 'separator1'])),
+        testimonials(entry.getIn(['data', 'worktogether'])),
+        h('div', {className:'hero-1'},
+          h('div', {className:'container'},
+            h('div', {className:'row justify-content-center'},
+              h('h2', {className:'col-10 col-md-6 col-lg-6 text-center'}, "INTERESTING IN BECOMING A PARTNER?"),
+              h('div', {className:'w-100'}, ),
+              h('form', {className:''},
+                h('button', {className:'opencell-btn'}, "GET IN TOUCH")
+              )
+            )
+          )
+        )
       ];
   }
 })
