@@ -42,7 +42,8 @@
               <a class="nav-link glyphicon glyphicon-search" href="#"></a>
             </li>
             <li class="nav-item">
-              <form action="#" method="get">
+              <form action="{{.Site.Params.navbar.url.contact}}" method="get">
+                <input class="hide" type="text" name="from" value="{{(printf "navbar/%s" .Page.RelPermalink) | anchorize}}"/>
                 <button type="submit" class="opencell-btn">GET A DEMO</button>
               </form>
             </li>

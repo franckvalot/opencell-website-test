@@ -11,15 +11,7 @@
             <iframe class="youtube" src="https://www.youtube.com/embed/{{ .Params.videoid }}?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
         </div>
-        <div class="row justify-content-center text-left">
-          <p class="col col-md-10 col-lg-8 publication-date"><span>Published on: </span><span>{{ dateFormat "02 Jan 2006" .Date }}</span><span>, by: </span><span class="author">{{ .Params.author }}</span></p>
-          <hr class="w-100"></hr>
-          <h1 class="col col-md-10 col-lg-8">{{ .Title }}</h1>
-          <div class="w-100"></div>
-          <div class="col col-md-10 col-lg-8 markdown">
-            {{ .Content | markdownify }}
-          </div>
-        </div>
+        {{ partial "blogs/content.html" . }}
     </section>
 
 

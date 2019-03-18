@@ -11,7 +11,7 @@
           {{range $Data.blocks}}
             <div class="col-12 col-md-6 box">
               <a href="{{$Site.Params.navbar.url.byIndustry}}#{{ replace . "<br>" "" | safeHTML  | anchorize }}"><div class="row align-items-center justify-content-center">
-                {{ . | safeHTML}}
+                {{ . | upper |safeHTML}}
               </div></a>
             </div>
           {{end}}

@@ -7,7 +7,7 @@
     {{ partial "header/smallheader.html" (dict "Data" $Data) }}
 
     {{ partial "sectiondescription.html" $Data.separator1 }}
-    {{ partial "sections/provide.html" (dict "Data" (.Site.GetPage "_index.md").Params.whatweprovide) }}
+    {{ partial "sections/provide.html" (dict "Data" (.Site.GetPage "_index.md").Params.whatweprovide "Page" .Page) }}
 
 
     {{ partial "sectiondescription.html" $Data.separator2 }}

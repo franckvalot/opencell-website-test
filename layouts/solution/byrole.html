@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 {{ $Data := .Params }}
+{{ $Page := . }}
 <html>
   {{ partial "head.html" . }}
   <body>
@@ -39,6 +40,7 @@
               {{ end}}
             </ul>
             <form class="text-left" action="{{ .Site.Params.url.getInTouch }}" method="get">
+                <input class="hide" type="text" name="from" value="{{(printf "cta/%s" $Page.RelPermalink) | anchorize}}"/>
               <button type="submit" name="button" class="opencell-btn">TRY NOW</button>
             </form>
           </div>

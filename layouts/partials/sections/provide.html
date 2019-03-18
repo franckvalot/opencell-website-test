@@ -11,7 +11,10 @@
           </div>
           <div class="col-12 col-md-12 col-lg-6 description">
             {{ .Data.content | markdownify }}
-            <button type="button" name="button" class="opencell-btn">DISCOVER</button>
+            <form action="{{ .Site.Params.navbar.url.contact}}" method="get">
+              <input class="hide" type="text" name="from" value="{{(printf "cta/%s" .Page.RelPermalink) | anchorize}}"/>
+              <button type="submit" name="button" class="opencell-btn">DISCOVER</button>
+            </form>
           </div>
         </div>
       </div>

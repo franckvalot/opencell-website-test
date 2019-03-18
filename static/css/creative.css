@@ -84,6 +84,9 @@
     visibility: hidden;
   }
 
+  form input.hide{
+    display: none;
+  }
 /*=======
   BODY */
 
@@ -1307,6 +1310,9 @@ section.contact .info{
 
 
 /* platformecosystem */
+section.ecosystem{
+  margin-bottom: 50px;
+}
   .ecosystem h2.navigation a.active{
     color: #EB5048;
   }
@@ -1318,18 +1324,15 @@ section.contact .info{
   .ecosystem div.navigation:first-child h2.navigation a.active{
       color: #4B4B4B;
   }
-
-  .rosace:first-child{
-    z-index: 10;
+  div.rosace:first-child{
+    padding-right: 40px;
   }
-  .rosace:last-child{
+  div.rosace:last-child{
+    margin-left: 40px;
     background-color: #F9F9F8;
-    margin: 0;
-    margin-left: -150px;
   }
   .rosace .logos {
-    z-index: 0;
-    padding: 45px 25px 45px calc(25px + 100px);
+
   }
   .rosace .logos > div{
     height: 25%;
@@ -1343,7 +1346,7 @@ section.contact .info{
 
   @media (min-width:1200px){
     .rosace .logos {
-      padding: 75px 60px 75px calc(60px + 100px);
+
     }
   }
 
@@ -1471,9 +1474,6 @@ section.contact .info{
       z-index: 100;
     }
     @media (min-width:768px){
-      section.ecosystem  div.navigation {
-
-      }
       section.byindustry  div.navigation,
       section.byrole  div.navigation,
       section.byindustry.navigation,
@@ -1502,7 +1502,7 @@ section.contact .info{
       section.ecosystem h2.navigation+h2.navigation:before,
       section.byindustry h2.navigation+h2.navigation:before,
       section.byrole h2.navigation+h2.navigation:before {
-        margin: 0 20px;
+        margin: 0 15px;
       }
       section.byindustry.navigation-fixed div.navigation,
       section.byrole.navigation-fixed div.navigation{
@@ -1569,6 +1569,10 @@ section.contact .info{
     padding: 0;
     position: relative;
     top: -2px;
+  }
+
+  section.blog{
+    margin-top: 0;
   }
 
   section.blog,

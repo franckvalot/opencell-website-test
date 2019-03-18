@@ -20,7 +20,7 @@ introduction:
     But it’s not easy to make the shift. In the world of recurring revenue,
     sales, customer management, and reporting get handled differently.
     Time-to-market as well as innovative pricing, packaging and customer
-    management are critical. 
+    management are critical.
 
 
     To succeed, businesses need to go beyond traditional ERP systems and
@@ -87,10 +87,10 @@ separator4:
   number: '04'
 mainindustries:
   blocks:
-    - 'TELCO, IOT & <br> CLOUD INFRASTRUCTURE'
-    - ENERGY & UTILITIES
-    - MOBILITY & TRANSPORT
-    - RETAIL & CONSUMER
+    - TELECOM
+    - ENERGY
+    - MOBILITY
+    - RETAIL
   subtitle: WE CAN ACCELERATE YOUR TIME-TO-MARKET.
   title: Don't start from scratch.
 separator5:
@@ -170,4 +170,3 @@ learnmore:
     - videoid: RUML7IH2JnM
     - videoid: NvCVdZyY9fI
 ---
-

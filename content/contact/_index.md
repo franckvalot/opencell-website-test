@@ -8,6 +8,8 @@ form:
   title: Send us a message
   firstname: First name
   lastname: Last name
+  company: Company
+  position: Position
   email: Email adress
   message: Message
   button: SEND
@@ -17,8 +19,8 @@ form:
         hello@opencellsoft.fr
     - paragraph: >-
         À Paris :<br>
-        14 rue Crespin du Gast<br>
-        75 011 PARIS
+        52/46 rue Kleber<br>
+        92300 Levallois
     - paragraph: >-
         À Dijon :<br>
         LBA Centre d’affaires<br>

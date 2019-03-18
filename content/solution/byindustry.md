@@ -4,7 +4,7 @@ title: We have the right solution<br>for your industry.
 subtitle: Our agile monetization platform<br> can adapt to your business need.
 background: /img/uploads/header-solution-industry.jpg
 separator1:
-  number: 
+  number:
   description:
 industries:
   - content: >-
@@ -31,7 +31,7 @@ industries:
 
       * Salt Mobile
     nav: TELCO
-    title: 'Telco, cloud & IoT'
+    title: Telecom
     videoid: Bey4XXJAqS8
     image: /img/uploads/industry-telco-and-iot.jpg
   - content: >-
@@ -60,7 +60,7 @@ industries:
 
       * Total Spring
     nav: 'UTILITIES '
-    title: Energy & utilities
+    title: Energy
     videoid: xcJtL7QggTI
     image: /img/uploads/industry-utility.jpg
   - content: >-
@@ -83,7 +83,7 @@ industries:
 
       * Velib 2
     nav: MOBILITY
-    title: Mobility & transport
+    title: Mobility
     videoid: xcJtL7QggTI
     image: /img/uploads/industry-mobility-and-transports.jpg
   - content: >-
@@ -101,7 +101,7 @@ industries:
 
       * Fnac Darty
     nav: RETAIL
-    title: Retail & other
+    title: Retail
     videoid: xcJtL7QggTI
     image: /img/uploads/industry-retail.jpg
 ---
