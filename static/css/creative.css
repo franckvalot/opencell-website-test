@@ -838,8 +838,7 @@ section.contact .info{
   }
 
   section.worktogether .testimonials .quote {
-    font-family: 'GT-Walsheim-Bold';
-    font-weight: Regular;
+    font-family: 'GT-Walsheim-Regular';
     font-size: 20px;
     line-height: 28px;
     letter-spacing: 0.010em;
