@@ -838,10 +838,10 @@ section.contact .info{
   }
 
   section.worktogether .testimonials .quote {
-    font-family: 'Noe-Display-Regular';
-    font-weight: bold;
+    font-family: 'GT-Walsheim-Bold';
+    font-weight: Regular;
     font-size: 20px;
-    line-height: 35px;
+    line-height: 28px;
     letter-spacing: 0.010em;
   }
 
@@ -867,7 +867,7 @@ section.contact .info{
   }
   @media (min-width:992px){
     section.worktogether .testimonials .quote {
-      font-size: 22px;
+      font-size: 25px;
       line-height: 40px;
     }
   }

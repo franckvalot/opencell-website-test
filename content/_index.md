@@ -90,7 +90,7 @@ mainindustries:
     - TELECOM
     - ENERGY
     - MOBILITY
-    - RETAIL
+    - RETAIL & OTHER
   subtitle: WE CAN ACCELERATE YOUR TIME-TO-MARKET.
   title: Don't start from scratch.
 separator5:

@@ -100,7 +100,7 @@ industries:
 
 
       * Fnac Darty
-    nav: RETAIL
+    nav: RETAIL & OTHER
     title: Retail
     videoid: xcJtL7QggTI
     image: /img/uploads/industry-retail.jpg
