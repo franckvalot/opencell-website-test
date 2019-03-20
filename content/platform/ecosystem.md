@@ -17,49 +17,43 @@ introduction:
   title: Our growing ecosystem.
 modulestags:
   - CRM
-  - SELF-CARE
-  - CUSTOMER-CARE
   - Bank & PSP
   - PUBLISHING
-  - OSS/ESB
+  - OSS
   - eCOMMERCE
-  - BI
+  - Business intelligence
   - ERP
 customers:
   logos:
     - alt: Gunster
       tags:
         - CRM
-        - SELF-CARE
         - ERP
       url: /img/uploads/logo-gunster.svg
     - alt: Adidas
       tags:
         - Bank & PSP
         - PUBLISHING
-        - OSS/ESB
+        - OSS
         - eCOMMERCE
       url: /img/uploads/logo-adidas.svg
     - alt: Dona International
       tags:
         - CRM
-        - SELF-CARE
         - PUBLISHING
         - eCOMMERCE
         - ERP
       url: /img/uploads/logo-dona.svg
     - alt: Eckerd
       tags:
-        - OSS/ESB
+        - OSS
         - eCOMMERCE
-        - BI
+        - Business intelligence
         - ERP
       url: /img/uploads/logo-eckerd.svg
     - alt: Mosaic
       tags:
         - CRM
-        - SELF-CARE
-        - CUSTOMER-CARE
         - Bank & PSP
         - PUBLISHING
       url: /img/uploads/logo-mosaic.svg
@@ -93,7 +87,7 @@ customers:
     </style>
   </defs>
   <g class="rosace" transform="translate(-270.819 -121.982)">
-    <g data-target="customer-care" id="customer-care" transform="translate(432.278 267.164)">
+    <g class="disabled" data-target="customer-care" id="customer-care" transform="translate(432.278 267.164)">
       <path class="box" id="box-customer-care" d="M564.489,758.594l0,0a288.632,288.632,0,0,1-95.214-471.278l.079-.082q4.826-4.826,9.881-9.424a288.8,288.8,0,0,1,80.65-51.894l-20.518-47.966A341.326,341.326,0,0,0,332.569,491.3c0,117.636,59.91,221.539,150.819,282.815a340.393,340.393,0,0,0,62.055,33.064l19.591-48.368C564.853,758.734,564.671,758.665,564.489,758.594Z" transform="translate(-332.569 -177.948)" fill="#d73533" stroke="#fff" stroke-miterlimit="10" stroke-width="2"/>
       <g id="txt-customer-care" transform="translate(88.05 24.91)">
         <path id="Tracé_735" data-name="Tracé 735" d="M376.648,221.787a5.308,5.308,0,0,1-.283,6.992,5.833,5.833,0,1,1-8.978-7.448A5.218,5.218,0,0,1,374.482,220l-1.717,2.058a2.707,2.707,0,0,0-3.579.726,3.524,3.524,0,0,0,5.423,4.488,2.744,2.744,0,0,0,.29-3.394Z" transform="translate(-365.905 -135.245)" fill="#fff"/>
@@ -110,7 +104,7 @@ customers:
         <path id="Tracé_746" data-name="Tracé 746" d="M409.376,191.079l1.115,2.258,3.759-1.859.89,1.8-3.759,1.857,1.08,2.184,3.759-1.857.911,1.846-6.056,2.993-4.91-9.929,6.059-3,.911,1.844Z" transform="translate(-299.827 -187.379)" fill="#fff"/>
       </g>
     </g>
-    <g data-target="self-care" id="self-care" transform="translate(379.056 220.208)">
+    <g class="disabled" data-target="self-care" id="self-care" transform="translate(379.056 220.208)">
       <path class="box" id="box-self-care" d="M515.847,804.424c-90.906-61.276-150.816-165.179-150.816-282.815,0-115.591,57.852-217.91,146.109-279.566a340.558,340.558,0,0,1,60.684-33.782l-20.732-48.468a392.591,392.591,0,0,0-40.473,20.164c-118.412,67.816-198.2,195.414-198.2,341.653,0,148.589,82.38,277.921,203.948,344.862a391.719,391.719,0,0,0,41.746,19.868L577.9,837.488A340.48,340.48,0,0,1,515.847,804.424Z" transform="translate(-312.419 -159.792)" fill="#c1001c" stroke="#fff" stroke-miterlimit="10" stroke-width="2"/>
       <g id="txt-self-care" transform="translate(158.355 25.827)">
         <path id="Tracé_748" data-name="Tracé 748" d="M377.683,194.532a1.734,1.734,0,0,0,2.575.362,1.337,1.337,0,0,0,.309-1.939c-.555-.671-1.331-.441-2.319-.1-1.978.689-3.782,1.313-5.15-.346-1.4-1.7-.6-3.669.969-4.968,2-1.651,4.076-1.228,5.275.225l-1.978,1.632a1.377,1.377,0,0,0-2.092-.346,1.181,1.181,0,0,0-.309,1.712c.454.549,1.167.5,2.158.129,1.947-.724,3.88-1.416,5.322.33,1.368,1.661.885,3.785-.948,5.3-1.9,1.572-4.179,1.6-5.79-.354Z" transform="translate(-372.372 -141.822)" fill="#fff"/>
@@ -189,7 +183,7 @@ customers:
         </g>
       </g>
     </g>
-    <g data-target="bi" data-parents="reporting-manager finance-manager" id="business-intelligence">
+    <g data-target="business-intelligence" data-parents="reporting-manager finance-manager" id="business-intelligence">
       <path class="box" id="box-business-intelligence" d="M384.515,271.7l65.306,65.309a195.614,195.614,0,0,1,138.743-57.467V187.181A287.675,287.675,0,0,0,384.515,271.7Z" transform="translate(184.969 105.37)" fill="#850a18" stroke="#fff" stroke-miterlimit="10" stroke-width="2"/>
       <g id="txt-business-intelligence" transform="translate(629.312 331.636)">
         <g id="Groupe_369" data-name="Groupe 369" transform="translate(8.035)">

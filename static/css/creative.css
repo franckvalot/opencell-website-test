@@ -1501,7 +1501,7 @@ section.ecosystem{
       section.ecosystem h2.navigation+h2.navigation:before,
       section.byindustry h2.navigation+h2.navigation:before,
       section.byrole h2.navigation+h2.navigation:before {
-        margin: 0 15px;
+        margin: 0 20px;
       }
       section.byindustry.navigation-fixed div.navigation,
       section.byrole.navigation-fixed div.navigation{
