@@ -38,21 +38,21 @@ leadership:
         - icon: /img/uploads/icon-square-linkedin.svg
           name: LinkedIn
           url: '#'
-      url: /img/uploads/portrait1.jpg
+      url: /img/uploads/portrait-david-meyer.jpg
     - name: ETHAN BEARDSLEY
       position: CMO & CFO
       socialnetworks:
         - icon: /img/uploads/icon-square-linkedin.svg
           name: LinkedIn
           url: '#'
-      url: /img/uploads/portrait2.jpg
+      url: /img/uploads/portrait-ethan-beardsley.jpg
     - name: STEPHANE DINE
       position: COO
       socialnetworks:
         - icon: /img/uploads/icon-square-linkedin.svg
           name: LinkedIn
           url: '#'
-      url: /img/uploads/portrait4.jpg
+      url: /img/uploads/portrait-stephane-dine.jpg
     - name: CEDRIC BASSAGET
       position: VP Sales
       socialnetworks:
@@ -62,21 +62,21 @@ leadership:
         - icon: /img/uploads/icon-square-twitter.svg
           name: Twitter
           url: '#'
-      url: /img/uploads/portrait5.jpg
+      url: /img/uploads/portrait-cedric-bassaget.jpg
     - name: EMMANUEL PIERRE
       position: CPO / Head of Product
       socialnetworks:
         - icon: /img/uploads/icon-square-linkedin.svg
           name: LinkedIn
           url: '#'
-      url: /img/uploads/portrait6.jpg
+      url: /img/uploads/portrait-emmanuel-pierre.jpg
     - name: WASSIM DRIRA
       position: CTO
       socialnetworks:
         - icon: /img/uploads/icon-square-linkedin.svg
           name: LinkedIn
           url: '#'
-      url: /img/uploads/portrait3.jpg
+      url: /img/uploads/portrait-wassime-drira.jpg
   title: 'We know enterprise software. '
 separator3:
   description: Investors
@@ -91,4 +91,3 @@ investors:
       url: /img/uploads/logo-bpifrance.png
   title: Financed for growth.
 ---
-
