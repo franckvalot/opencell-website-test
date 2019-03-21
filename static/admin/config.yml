@@ -20,6 +20,9 @@ collections:
         name: indexdata
         file: content/_index.md
         fields:
+        - label: Page title
+          name: pagetitle
+          widget: string
         - label: Header
           name: header
           widget: object
@@ -183,6 +186,7 @@ collections:
         name: platformmodules
         file: content/platform/modules.md
         fields:
+          - {label: Page title, name: pagetitle, widget: string}
           - {label: Layout, name: layout, widget: hidden, default: modules}
           - {label: Title, name: title, widget: string}
           - {label: Subtitle, name: subtitle, widget: string}
@@ -215,6 +219,7 @@ collections:
         name: platformtechnology
         file: content/platform/technology.md
         fields:
+          - {label: Page title, name: pagetitle, widget: string}
           - {label: Layout, name: layout, widget: hidden, default: technology}
           - {label: Title, name: title, widget: string}
           - {label: Subtitle, name: subtitle, widget: string}
@@ -280,6 +285,7 @@ collections:
         name: platformecosystem
         file: content/platform/ecosystem.md
         fields:
+          - {label: Page title, name: pagetitle, widget: string}
           - {label: Layout, name: layout, widget: hidden, default: ecosystem}
           - {label: Title, name: title, widget: string}
           - {label: Subtitle, name: subtitle, widget: string}
@@ -322,6 +328,7 @@ collections:
         name: solutionbyindustry
         file: content/solution/byindustry.md
         fields:
+          - {label: Page title, name: pagetitle, widget: string}
           - {label: Layout, name: layout, widget: hidden, default: byindustry}
           - {label: Title, name: title, widget: string}
           - {label: Subtitle, name: subtitle, widget: string}
@@ -347,6 +354,7 @@ collections:
         name: solutionbyrole
         file: content/solution/byrole.md
         fields:
+          - {label: Page title, name: pagetitle, widget: string}
           - {label: Layout, name: layout, widget: hidden, default: byrole}
           - {label: Title, name: title, widget: string}
           - {label: Subtitle, name: subtitle, widget: string}
@@ -379,6 +387,7 @@ collections:
         name: aboutusstory
         file: content/aboutus/story.md
         fields:
+          - {label: Page title, name: pagetitle, widget: string}
           - {label: Layout, name: layout, widget: hidden, default: story}
           - {label: Title, name: title, widget: string}
           - {label: Subtitle, name: subtitle, widget: string}
@@ -456,6 +465,7 @@ collections:
         name: aboutusbusinessmodel
         file: content/aboutus/businessmodel.md
         fields:
+          - {label: Page title, name: pagetitle, widget: string}
           - {label: Layout, name: layout, widget: hidden, default: businessmodel}
           - {label: Title, name: title, widget: string}
           - {label: Subtitle, name: subtitle, widget: string}
@@ -485,6 +495,7 @@ collections:
         name: aboutuscustomers
         file: content/aboutus/customers.md
         fields:
+          - {label: Page title, name: pagetitle, widget: string}
           - {label: Layout, name: layout, widget: hidden, default: customers}
           - {label: Title, name: title, widget: string}
           - {label: Subtitle, name: subtitle, widget: string}
@@ -520,6 +531,7 @@ collections:
         name: aboutuspartners
         file: content/aboutus/partners.md
         fields:
+          - {label: Page title, name: pagetitle, widget: string}
           - {label: Layout, name: layout, widget: hidden, default: partners}
           - {label: Title, name: title, widget: string}
           - {label: Subtitle, name: subtitle, widget: string}
@@ -575,6 +587,7 @@ collections:
         name: aboutusworkplaceandjobs
         file: content/aboutus/workplaceandjobs.md
         fields:
+          - {label: Page title, name: pagetitle, widget: string}
           - {label: Layout, name: layout, widget: hidden, default: workplaceandjobs}
           - {label: Title, name: title, widget: string}
           - {label: Subtitle, name: subtitle, widget: string}
@@ -609,6 +622,7 @@ collections:
         name: aboutuspressreleases
         file: content/aboutus/pressreleases.md
         fields:
+          - {label: Page title, name: pagetitle, widget: string}
           - {label: Layout, name: layout, widget: hidden, default: pressreleases}
           - {label: Title, name: title, widget: string}
           - {label: Subtitle, name: subtitle, widget: string}
@@ -629,6 +643,39 @@ collections:
               - {label: Article Link, name: url, widget: string}
               - {label: Button, name: button, widget: string, default: READ}
           - {label: Markdown, name: body, widget: hidden}
+
+  - label: Contact
+    name: "contact"
+    folder: "content/contacts/"
+    create: true
+    fields:
+      - {label: Page title, name: pagetitle, widget: string}
+      - {label: Layout, name: layout, widget: hidden, default: contact}
+      - {label: Title, name: title, widget: string}
+      - {label: Subtitle, name: subtitle, widget: string}
+      - {label: Description, name: description, widget: text, required: false}
+      - label: Form
+        name: form
+        widget: object
+        fields:
+          - {label: Title, name: title, widget: string}
+          - {label: Form url, name: url, widget: string}
+          - label: Fields
+            name: fields
+            widget: list
+            fields:
+              - {label: Field label, name: fieldlabel, widget: string}
+              - {label: Field name, name: fieldname, widget: string}
+              - {label: Placeholder, name: placeholder, widget: string}
+              - {label: Type,  name: type, widget: select, options: ['text', 'email', 'textarea'], default: 'text'}
+          - {label: Button, name: button, widget: string}
+          - label: Infobox
+            name: infobox
+            widget: list
+            fields:
+              - {label: Paragraph, name: paragraph, widget: text}
+      - {label: Markdown, name: body, widget: hidden}
+
   - label: Knowledge Center
     name: knowledgecenter
     files:
@@ -636,6 +683,7 @@ collections:
         name: knowledgecenterindex
         file: content/knowledgecenter/_index.md
         fields:
+          - {label: Page title, name: pagetitle, widget: string}
           - {label: Layout, name: layout, widget: hidden, default: index}
           - {label: Title, name: title, widget: string}
           - {label: Subtitle, name: subtitle, widget: string, required: false}
@@ -664,6 +712,7 @@ collections:
     create: true
     fields:
       - {label: Draft,  name: draft, widget: select, options: ['true', 'false'], default: 'true'}
+      - {label: Page title, name: pagetitle, widget: string}
       - {label: Title, name: title, widget: string}
       - {label: Subtitle, name: subtitle, widget: string}
       - {label: Description, name: description, widget: text, required: false}
