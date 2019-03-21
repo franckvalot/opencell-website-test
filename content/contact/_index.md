@@ -6,13 +6,33 @@ subtitle: >-
   Duis eu lorem eget nunc varius porta non at lorem.
 form:
   title: Send us a message
-  firstname: First name
-  lastname: Last name
-  company: Company
-  position: Position
-  email: Email adress
-  message: Message
+  url: https://opencellsoft.us20.list-manage.com/subscribe/post?u=453beaf1334d4a5f59589b4cc&amp;id=c08f0c2c71
   button: SEND
+  fields:
+    - fieldlabel: First name
+      fieldname: FNAME
+      placeholder: John
+      type: text
+    - fieldlabel: Last name
+      fieldname: LNAME
+      placeholder: Doe
+      type: text
+    - fieldlabel: Company
+      fieldname: COMPANY
+      placeholder: Opencell
+      type: text
+    - fieldlabel: Position
+      fieldname: POSITION
+      placeholder: Marketing Manager
+      type: text
+    - fieldlabel: Email address
+      fieldname: EMAIL
+      placeholder: john.doe@opencellsoft.com
+      type: email
+    - fieldlabel: Message
+      fieldname: MESSAGE
+      placeholder:
+      type: textarea
   infobox:
     - paragraph: >-
         + 33 1 00 00 00 00<br>

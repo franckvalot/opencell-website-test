@@ -9,33 +9,19 @@
     <section class="hero-1 contact">
       <div class="container">
         <div class="row justify-content-center">
-          <form class="col-12 col-md-9 content" action="#" method="POST">
+          <form class="col-12 col-md-9 content" action="{{.url}}" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
             <div class="row">
               <h1 class="col-12">{{ .title }}</h1>
+              {{ range .fields }}
               <div class="col-12">
-                <div>{{ .firstname }} :</div>
-                <input type="text" name="firstname" value="" placeholder="John">
+                <div>{{ .fieldlabel }} :</div>
+                {{if (eq .type "textarea")}}
+                <textarea type="text" value="" name="{{.fieldname}}" class="" id="mce-{{.fieldname}}" placeholder="{{.placeholder}}"></textarea>
+                {{ else }}
+                <input type="{{.type}}" value="" name="{{.fieldname}}" class="" id="mce-{{.fieldname}}" placeholder="{{.placeholder}}">
+                {{ end }}
               </div>
-              <div class="col-12">
-                <div>{{ .lastname }} :</div>
-                <input type="text" name="company" value="" placeholder="Doe">
-              </div>
-              <div class="col-12">
-                <div>{{ .company }} :</div>
-                <input type="text" name="position" value="" placeholder="Opencell">
-              </div>
-              <div class="col-12">
-                <div>{{ .position }} :</div>
-                <input type="text" name="lastname" value="" placeholder="Marketing Manager">
-              </div>
-              <div class="col-12">
-                <div>{{ .email }} :</div>
-                <input type="email" name="email" value="" placeholder="john.doe@opencellsoft.com">
-              </div>
-              <div class="col-12">
-                <div>{{ .message }} :</div>
-                <textarea type="text" name="message" value=""></textarea>
-              </div>
+              {{ end }}
               <div class="col-12 text-right">
                 <button type="submit" name="button" class="opencell-btn">{{ .button }}</button>
               </div>
