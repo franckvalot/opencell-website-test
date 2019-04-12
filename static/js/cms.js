@@ -899,8 +899,7 @@ var CaseStudiesPreview = createClass({
               )
             )
           })
-        :null),
-        // dangerouslySetInnerHTML: {__html: item.get('title')}
+        :null)
       ];
   }
 })
@@ -1037,6 +1036,8 @@ CMS.registerPreviewTemplate("aboutusbusinessmodel", AboutUsBusinessModelPreview)
 CMS.registerPreviewTemplate("aboutuscustomers", AboutUsCustomersPreview);
 CMS.registerPreviewTemplate("aboutuspartners", AboutUsParnersPreview);
 CMS.registerPreviewTemplate("aboutusworkplaceandjobs", AboutUsWorkplaceAndJobsPreview);
+
+CMS.registerPreviewTemplate("casestudies", CaseStudiesPreview);
 
 CMS.registerPreviewTemplate("knowledgecenterindex", KnowledgeCenterPreview);
 
