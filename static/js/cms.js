@@ -835,6 +835,76 @@ var AboutUsPressReleasesPreview = createClass({
   }
 })
 
+var CaseStudiesPreview = createClass({
+  render: function(){
+      var entry = this.props.entry;
+
+      return [smallHeader(entry),
+        (entry.getIn(['data', 'casestudies']) ?
+          entry.getIn(['data', 'casestudies']).map(function(item){
+            return h('section', {className:'hero-1 casestudy'},
+              h('div', {className:'container'},
+                h('div', {className:'row justify-content-center text-center'},
+                  h('h1', {className:'col-12 text-center', dangerouslySetInnerHTML: {__html: item.get('title')}}),
+                  h('div', {className:'w-100'}),
+                  h('h2', {className:'col-12 col-md-8 col-lg-6', dangerouslySetInnerHTML: {__html: item.get('subtitle')}})
+                ),
+                h('hr', {className:'w-100'}),
+                h('div', {className:'row justify-content-center'},
+                  h('div', {className:'col-12 col-lg-6'},
+                    h('div', {className:'col logo'},
+                      h('img', {src:item.get('logo'), alt:item.get('alt')})
+                    ),
+                    h('div', {className:'col'},
+                      h('div', {}, item.get('who')),
+                      h('div', {}, item.get('position')),
+                      h('div', {}, item.get('where'))
+                    ),
+                    h('hr', {className:'w-100'}),
+                    h('div', {className:'col quote'}, item.get('content'))
+                  ),
+                  h('div', {className:'col-12 col-lg-6'},
+                    h('div', {className:'carousel slide'},
+                      h('ol', {className:'carousel-indicators'},
+                        (item.get('carousel') ?
+                        item.get('carousel').map(function(item, index){
+                          return h('li', {className:(index == 0 ? 'active':null)}, '');
+                        })
+                        :null)
+                      ),
+                      h('div', {className:'carousel-inner'},
+                        (item.get('carousel') ?
+                          item.get('carousel').map(function(item, index){
+                          return h('div', {className:(index == 0 ? 'carousel-item active':'carousel-item')},
+                            h('div', {className:'row justify-content-center align-items-center h-100'},
+                              h('div', {className:'col'},
+                                h('div', {}, item.get('content'))
+                              )
+                            )
+                          );
+                        })
+                        :null)
+                      ),
+                      h('a', {className:'carousel-control-prev', href:'#'},
+                        h('span', {className:'carousel-control-prev-icon'},''),
+                        h('span', {className:'sr-only'}, 'Previous')
+                      ),
+                      h('a', {className:'carousel-control-next', href:'#'},
+                        h('span', {className:'carousel-control-next-icon'},''),
+                        h('span', {className:'sr-only'}, 'Next')
+                      )
+                    )
+                  )
+                )
+              )
+            )
+          })
+        :null),
+        // dangerouslySetInnerHTML: {__html: item.get('title')}
+      ];
+  }
+})
+
 var KnowledgeCenterPreview = createClass({
   render: function(){
       var entry = this.props.entry;

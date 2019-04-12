@@ -712,15 +712,18 @@ collections:
     create: true
     fields:
       - {label: Draft,  name: draft, widget: select, options: ['true', 'false'], default: 'true'}
+      - {label: Type, name: type, widget: hidden, default: casestudies}
       - {label: Page title, name: pagetitle, widget: string}
       - {label: Title, name: title, widget: string}
       - {label: Subtitle, name: subtitle, widget: string}
       - {label: Description, name: description, widget: text, required: false}
       - {label: Date, name: date, widget: date}
-      - label: Case study
-        name: casestudy
+      - label: Case studies
+        name: casestudies
         widget: object
         fields:
+          - {label: Title, name: title, widget: string}
+          - {label: Subtitle, name: subtitle, widget: string}
           - {label: Logo, name: logo, widget: image}
           - {label: Alternative, name: alt, widget: string}
           - {label: Who, name: who, widget: string}
