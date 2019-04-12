@@ -1739,6 +1739,7 @@ JOB OFFERS */
   }
   section.casestudy .quote{
     padding: 0 50px;
+    margin: 32px 0;
   }
   section.casestudy .quote::before,
   section.casestudy .quote::after {
