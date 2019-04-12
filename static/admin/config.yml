@@ -720,7 +720,7 @@ collections:
       - {label: Date, name: date, widget: date}
       - label: Case studies
         name: casestudies
-        widget: object
+        widget: list
         fields:
           - {label: Title, name: title, widget: string}
           - {label: Subtitle, name: subtitle, widget: string}
