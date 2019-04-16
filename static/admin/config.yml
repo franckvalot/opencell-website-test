@@ -4,7 +4,9 @@ backend:
     - admin
     - editor
   branch: test # Branch to update (optional; defaults to master)
-  publish_mode: editorial_workflow
+  site_domain: cms.netlify.com
+
+publish_mode: editorial_workflow
 
 media_folder: "static/img/uploads"
 public_folder: "/img/uploads"

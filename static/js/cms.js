@@ -1,3 +1,5 @@
+import CMS from 'netlify-cms'
+
 var Template = createClass({
   render: function(){
       var entry = this.props.entry;
@@ -185,6 +187,7 @@ function testimonials(item){
     )
   );
 }
+
 var IndexPreview = createClass({
   render: function(){
       var entry = this.props.entry;

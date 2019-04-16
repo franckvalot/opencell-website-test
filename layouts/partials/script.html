@@ -15,7 +15,18 @@
       });
     </script>
 
-
+    <script>
+      if (window.netlifyIdentity) {
+        window.netlifyIdentity.on("init", user => {
+          if (!user) {
+            window.netlifyIdentity.on("login", () => {
+              document.location.href = "/admin/";
+            });
+          }
+        });
+      }
+    </script>
+    
     <!-- Cookie Consent by https://TermsFeed.com -->
     <script type="text/javascript" src="//termsfeed.com/cookie-consent/releases/3.0.0/cookie-consent.js"></script>
     <script type="text/javascript" cookie-consent="tracking">
