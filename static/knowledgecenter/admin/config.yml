@@ -1,0 +1,851 @@
+backend:
+  name: git-gateway
+  accept_roles:
+    - admin
+    - editor
+  branch: test # Branch to update (optional; defaults to master)
+  site_domain: cms.netlify.com
+
+publish_mode: editorial_workflow
+
+media_folder: "static/img/uploads"
+public_folder: "/img/uploads"
+
+display_url: https://opencell-test.netlify.com/
+logo_url: /img/logo-opencell.svg
+
+collections:
+  - label: Index
+    name: index
+    files:
+      - label: Index Data
+        name: indexdata
+        file: content/_index.md
+        fields:
+        - label: Page title
+          name: pagetitle
+          widget: string
+        - label: Header
+          name: header
+          widget: object
+          fields:
+            - label: Background Image
+              name: background
+              widget: image
+              required: false
+            - label: Carousel
+              name: carousel
+              widget: list
+              fields:
+                - label: Title
+                  name: title
+                  widget: string
+                - label: Subtitle
+                  name: subtitle
+                  widget: string
+                - label: Button
+                  name: button
+                  widget: object
+                  fields:
+                    - {label: Name, name: name, widget: string, required: false}
+                    - {label: Url, name: url, widget: string, required: false}
+        - label: Separator 1
+          name: separator1
+          widget: object
+          fields:
+            - {label: Number, name: number, widget: string, required: false}
+            - {label: Description, name: description, widget: string, required, false}
+        - label: Introduction
+          name: introduction
+          widget: object
+          fields:
+            - {label: Title, name: title, widget: string}
+            - {label: Content, name: content, widget: markdown}
+        - label: Separator 2
+          name: separator2
+          widget: object
+          fields:
+            - {label: Number, name: number, widget: string, required: false}
+            - {label: Description, name: description, widget: string, required, false}
+        - label: What we provide
+          name: whatweprovide
+          widget: object
+          fields:
+            - {label: Title, name: title, widget: string}
+            - {label: Content, name: content, widget: markdown}
+            - {label: Image, name: image, widget: image}
+            - {label: Button, name: button, widget: string, default: DISCOVER}
+        - label: Separator 3
+          name: separator3
+          widget: object
+          fields:
+            - {label: Number, name: number, widget: string, required: false}
+            - {label: Description, name: description, widget: string, required, false}
+        - label: What makes us
+          name: whatmakesus
+          widget: object
+          fields:
+            - {label: Title, name: title, widget: string}
+            - label: Columns
+              name: columns
+              widget: list
+              allow_add: false
+              fields:
+                - {label: Title, name: title, widget: string}
+                - label: Content
+                  name: content
+                  widget: list
+                  allow_add: false
+                  fields:
+                    - {label: Title, name: title, widget: string}
+                    - {label: Text, name: text, widget: string}
+        - label: Separator 4
+          name: separator4
+          widget: object
+          fields:
+            - {label: Number, name: number, widget: string, required: false}
+            - {label: Description, name: description, widget: string, required, false}
+        - label: Our main industries
+          name: mainindustries
+          widget: object
+          fields:
+            - {label: Title, name: title, widget: string}
+            - {label: Subtitle, name: subtitle, widget: string}
+            - label: Blocks
+              name: blocks
+              widget: list
+        - label: Separator 5
+          name: separator5
+          widget: object
+          fields:
+            - {label: Number, name: number, widget: string, required: false}
+            - {label: Description, name: description, widget: string, required, false}
+        - label: Our customers
+          name: ourcustomers
+          widget: object
+          fields:
+            - {label: Title, name: title, widget: string}
+            - {label: Button, name: button, widget: string}
+            - {label: Button URL, name: url, widget: string}
+            - label: Logos
+              name: logos
+              widget: list
+              allow_add: true
+              fields:
+                - {label: Alternative, name: alt, widget: string}
+                - {label: Logo, name: url, widget: image}
+                - {label: Description, name: description, widget: markdown, required: false}
+                - label: URL
+                  name: link
+                  widget: object
+                  required: false
+                  fields:
+                    - {label: Url, name: url, widget: string, required: false}
+                    - {label: Open in new page?, name: target, widget: select, options: ["internal", "external"], default: internal, required: false}
+        - label: Separator 6
+          name: separator6
+          widget: object
+          fields:
+            - {label: Number, name: number, widget: string, required: false}
+            - {label: Description, name: description, widget: string, required, false}
+        - label: We work together
+          name: worktogether
+          widget: object
+          fields:
+            - {label: Title, name: title, widget: string}
+            - {label: Subtitle, name: subtitle, widget: string}
+            - label: Testimonials
+              name: testimonials
+              widget: list
+              allow_add: true
+              fields:
+              - {label: Testimonial, name: testimonial, widget: text}
+              - {label: Author, name: author, widget: string}
+              - {label: Position, name: position, widget: string}
+              - {label: Portrait, name: portrait, widget: image, required: false}
+        - label: Separator 7
+          name: separator7
+          widget: object
+          fields:
+            - {label: Number, name: number, widget: string, required: false}
+            - {label: Description, name: description, widget: string, required, false}
+        - label: Learn more
+          name: learnmore
+          widget: object
+          fields:
+            - {label: Title, name: title, widget: string}
+            - {label: Subtitle, name: subtitle, widget: string}
+            - label: Videos
+              name: videoids
+              widget: list
+              fields:
+                - {label: "Video Id", name: "videoid", widget: string}
+        - {label: Markdown, name: body, widget: hidden}
+  - label: Platform
+    name: platform
+    files:
+      - label: Modules
+        name: platformmodules
+        file: content/platform/modules.md
+        fields:
+          - {label: Page title, name: pagetitle, widget: string}
+          - {label: Layout, name: layout, widget: hidden, default: modules}
+          - {label: Title, name: title, widget: string}
+          - {label: Subtitle, name: subtitle, widget: string}
+          - {label: Background Image, name: background, widget: image}
+          - {label: Description, name: description, widget: text, required: false}
+          - label: Separator 1
+            name: separator1
+            widget: object
+            fields:
+              - {label: Number, name: number, widget: string, required: false}
+              - {label: Description, name: description, widget: string, required, false}
+          - label: Separator 2
+            name: separator2
+            widget: object
+            fields:
+              - {label: Number, name: number, widget: string, required: false}
+              - {label: Description, name: description, widget: string, required, false}
+          - label: Modules
+            name: modules
+            widget: list
+            fields:
+              - {label: Title, name: title, widget: string}
+              - label: Contents (Carousel)
+                name: contents
+                widget: list
+                fields:
+                  - {label: Content, name: content, widget: text}
+          - {label: Markdown, name: body, widget: hidden}
+      - label: Technology
+        name: platformtechnology
+        file: content/platform/technology.md
+        fields:
+          - {label: Page title, name: pagetitle, widget: string}
+          - {label: Layout, name: layout, widget: hidden, default: technology}
+          - {label: Title, name: title, widget: string}
+          - {label: Subtitle, name: subtitle, widget: string}
+          - {label: Background Image, name: background, widget: image}
+          - {label: Description, name: description, widget: text, required: false}
+          - label: Separator 1
+            name: separator1
+            widget: object
+            fields:
+              - {label: Number, name: number, widget: string, required: false}
+              - {label: Description, name: description, widget: string, required, false}
+          - label: Introduction
+            name: introduction
+            widget: object
+            fields:
+              - {label: Title, name: title, widget: string}
+              - {label: Content, name: content, widget: text}
+          - label: Boxes
+            name: boxes
+            widget: list
+            fields:
+              - {label: Title, name: title, widget: string}
+              - {label: Description, name: description, widget: text}
+          - label: Separator 2
+            name: separator2
+            widget: object
+            fields:
+              - {label: Number, name: number, widget: string, required: false}
+              - {label: Description, name: description, widget: string, required, false}
+          - label: Business Logic
+            name: businesslogic
+            widget: list
+            fields:
+              - {label: Title, name: title, widget: string}
+              - {label: Content, name: content, widget: markdown}
+              - {label: Image, name: url, widget: image}
+              - {label: Alternative, name: alt, widget: string}
+          - label: Separator 3
+            name: separator3
+            widget: object
+            fields:
+              - {label: Number, name: number, widget: string, required: false}
+              - {label: Description, name: description, widget: string, required, false}
+          - label: Technologies
+            name: technologies
+            widget: object
+            fields:
+              - label: Introduction
+                name: introduction
+                widget: object
+                fields:
+                  - {label: Title, name: title, widget: string}
+                  - {label: Content, name: content, widget: markdown}
+              - label: Technologies
+                name: technologies
+                widget: list
+                fields:
+                  - {label: Icon, name: url, widget: image}
+                  - {label: Alternative, name: alt, widget: string}
+                  - {label: Description, name: description, widget: text}
+          - {label: Markdown, name: body, widget: hidden}
+      - label: Ecosystem
+        name: platformecosystem
+        file: content/platform/ecosystem.md
+        fields:
+          - {label: Page title, name: pagetitle, widget: string}
+          - {label: Layout, name: layout, widget: hidden, default: ecosystem}
+          - {label: Title, name: title, widget: string}
+          - {label: Subtitle, name: subtitle, widget: string}
+          - {label: Background Image, name: background, widget: image}
+          - {label: Description, name: description, widget: text, required: false}
+          - label: Separator 1
+            name: separator1
+            widget: object
+            fields:
+              - {label: Number, name: number, widget: string, required: false}
+              - {label: Description, name: description, widget: string, required, false}
+          - label: Introduction
+            name: introduction
+            widget: object
+            fields:
+              - {label: Title, name: title, widget: string}
+              - {label: Content, name: content, widget: markdown}
+          - label: Modules tags
+            name: modulestags
+            widget: list
+          - label: Customers
+            name: customers
+            widget: object
+            fields:
+            - label: Logos
+              name: logos
+              widget: list
+              fields:
+                - {label: Alternative text, name: alt, widget: string}
+                - {label: Logo, name: url, widget: image}
+                - {label: Description, name: description, widget: markdown, required: false}
+                - label: Tags
+                  name: tags
+                  widget: list
+          - {label: Markdown, name: body, widget: hidden}
+  - label: Solution
+    name: solution
+    files:
+      - label: By Industry
+        name: solutionbyindustry
+        file: content/solution/byindustry.md
+        fields:
+          - {label: Page title, name: pagetitle, widget: string}
+          - {label: Layout, name: layout, widget: hidden, default: byindustry}
+          - {label: Title, name: title, widget: string}
+          - {label: Subtitle, name: subtitle, widget: string}
+          - {label: Background Image, name: background, widget: image}
+          - {label: Description, name: description, widget: text, required: false}
+          - label: Separator 1
+            name: separator1
+            widget: object
+            fields:
+              - {label: Number, name: number, widget: string, required: false}
+              - {label: Description, name: description, widget: string, required, false}
+          - label: Industries
+            name: industries
+            widget: list
+            fields:
+              - {label: Title, name: title, widget: string}
+              - {label: Navigation title, name: nav, widget: string}
+              - {label: Video Id, name: videoid, widget: string}
+              - {label: Content, name: content, widget: markdown}
+              - {label: Image, name: image, widget: image}
+          - {label: Markdown, name: body, widget: hidden}
+      - label: By Role
+        name: solutionbyrole
+        file: content/solution/byrole.md
+        fields:
+          - {label: Page title, name: pagetitle, widget: string}
+          - {label: Layout, name: layout, widget: hidden, default: byrole}
+          - {label: Title, name: title, widget: string}
+          - {label: Subtitle, name: subtitle, widget: string}
+          - {label: Background Image, name: background, widget: image}
+          - {label: Description, name: description, widget: text, required: false}
+          - label: Separator 1
+            name: separator1
+            widget: object
+            fields:
+              - {label: Number, name: number, widget: string, required: false}
+              - {label: Description, name: description, widget: string, required, false}
+          - label: Roles
+            name: roles
+            widget: list
+            fields:
+              - {label: Title, name: title, widget: string}
+              - {label: Navigation title, name: nav, widget: string}
+              - {label: Image, name: url, widget: image}
+              - {label: Background, name: background, widget: text}
+              - label: Benefits
+                name: benefits
+                widget: list
+                fields:
+                  - {label: Benefit, name: benefit, widget: text}
+          - {label: Markdown, name: body, widget: hidden}
+  - label: About Us
+    name: aboutus
+    files:
+      - label: Story Page (Main)
+        name: aboutusstory
+        file: content/aboutus/story.md
+        fields:
+          - {label: Page title, name: pagetitle, widget: string}
+          - {label: Layout, name: layout, widget: hidden, default: story}
+          - {label: Title, name: title, widget: string}
+          - {label: Subtitle, name: subtitle, widget: string}
+          - {label: Background Image, name: background, widget: image}
+          - {label: Description, name: description, widget: text, required: false}
+          - label: Separator 1
+            name: separator1
+            widget: object
+            fields:
+              - {label: Number, name: number, widget: string, required: false}
+              - {label: Description, name: description, widget: string, required, false}
+          - label: Our Story Section
+            name: ourstory
+            widget: object
+            fields:
+              - {label: Title, name: title, widget: string}
+              - {label: Content, name: content, widget: text}
+              - label: Boxes
+                name: boxes
+                widget: list
+                fields:
+                  - {label: Content, name: content, widget: string}
+          - label: Separator 2
+            name: separator2
+            widget: object
+            fields:
+              - {label: Number, name: number, widget: string, required: false}
+              - {label: Description, name: description, widget: string, required, false}
+          - label: Leadership Section
+            name: leadership
+            widget: object
+            fields:
+              - {label: Title, name: title, widget: string}
+              - label: Leaders
+                name: leaders
+                widget: list
+                fields:
+                  - {label: Name, name: name, widget: string}
+                  - {label: Position, name: position, widget: string}
+                  - {label: Photo, name: url, widget: image}
+                  - label: Social network
+                    name: socialnetworks
+                    widget: list
+                    fields:
+                      - {label: Name, name: name, widget: string}
+                      - {label: Url, name: url, widget: string}
+                      - {label: Icon, name: icon, widget: image}
+          - label: Separator 3
+            name: separator3
+            widget: object
+            fields:
+              - {label: Number, name: number, widget: string, required: false}
+              - {label: Description, name: description, widget: string, required, false}
+          - label: Investors Section
+            name: investors
+            widget: object
+            fields:
+              - {label: Title, name: title, widget: string}
+              - label: Investors
+                name: logos
+                widget: list
+                fields:
+                  - {label: Alternative, name: alt, widget: string}
+                  - {label: Logo, name: url, widget: image}
+                  - {label: Description, name: description, widget: markdown, required: false}
+                  - label: URL
+                    name: link
+                    widget: object
+                    required: false
+                    fields:
+                      - {label: Url, name: url, widget: string, required: false}
+                      - {label: Open in new page?, name: target, widget: select, options: ["internal", "external"], default: internal, required: false}
+          - {label: Markdown, name: body, widget: hidden}
+      - label: Business Model
+        name: aboutusbusinessmodel
+        file: content/aboutus/businessmodel.md
+        fields:
+          - {label: Page title, name: pagetitle, widget: string}
+          - {label: Layout, name: layout, widget: hidden, default: businessmodel}
+          - {label: Title, name: title, widget: string}
+          - {label: Subtitle, name: subtitle, widget: string}
+          - {label: Background Image, name: background, widget: image}
+          - {label: Description, name: description, widget: text, required: false}
+          - label: Separator 1
+            name: separator1
+            widget: object
+            fields:
+              - {label: Number, name: number, widget: string, required: false}
+              - {label: Description, name: description, widget: string, required, false}
+          - label: Introduction paragraph
+            name: introduction
+            widget: object
+            fields:
+              - { label: Title, name: title, widget: string }
+              - { label: Content, name: content, widget: text }
+          - label: Boxes
+            name: boxes
+            widget: list
+            fields:
+              - {label: Title, name: title, widget: string}
+              - {label: Description, name: description, widget: text}
+              - {label: Icon, name: url, widget: image}
+          - {label: Markdown, name: body, widget: hidden}
+      - label: Customers
+        name: aboutuscustomers
+        file: content/aboutus/customers.md
+        fields:
+          - {label: Page title, name: pagetitle, widget: string}
+          - {label: Layout, name: layout, widget: hidden, default: customers}
+          - {label: Title, name: title, widget: string}
+          - {label: Subtitle, name: subtitle, widget: string}
+          - {label: Background Image, name: background, widget: image}
+          - {label: Description, name: description, widget: text, required: false}
+          - label: Separator 1
+            name: separator1
+            widget: object
+            fields:
+              - {label: Number, name: number, widget: string, required: false}
+              - {label: Description, name: description, widget: string, required, false}
+          - label: Sections
+            name: sections
+            widget: list
+            fields:
+              - {label: Title, name: title, widget: string}
+              - label: Logos
+                name: logos
+                widget: list
+                fields:
+                  - {label: Alternative, name: alt, widget: string}
+                  - {label: Logo, name: url, widget: image}
+                  - {label: Description, name: description, widget: markdown, required: false}
+                  - label: URL
+                    name: link
+                    widget: object
+                    required: false
+                    fields:
+                      - {label: Url, name: url, widget: string, required: false}
+                      - {label: Open in new page?, name: target, widget: select, options: ["internal", "external"], default: internal, required: false}
+          - {label: Markdown, name: body, widget: hidden}
+      - label: Partners
+        name: aboutuspartners
+        file: content/aboutus/partners.md
+        fields:
+          - {label: Page title, name: pagetitle, widget: string}
+          - {label: Layout, name: layout, widget: hidden, default: partners}
+          - {label: Title, name: title, widget: string}
+          - {label: Subtitle, name: subtitle, widget: string}
+          - {label: Background Image, name: background, widget: image}
+          - {label: Description, name: description, widget: text, required: false}
+          - label: Separator 1
+            name: separator1
+            widget: object
+            fields:
+              - {label: Number, name: number, widget: string, required: false}
+              - {label: Description, name: description, widget: string, required, false}
+          - label: Sections
+            name: sections
+            widget: list
+            fields:
+              - {label: Title, name: title, widget: string}
+              - label: Logos
+                name: logos
+                widget: list
+                fields:
+                  - {label: Alternative, name: alt, widget: string}
+                  - {label: Logo, name: url, widget: image}
+                  - {label: Description, name: description, widget: markdown, required: false}
+                  - label: URL
+                    name: link
+                    widget: object
+                    required: false
+                    fields:
+                      - {label: Url, name: url, widget: string, required: false}
+                      - {label: Open in new page?, name: target, widget: select, options: ["internal", "external"], default: internal, required: false}
+          - label: Separator 2
+            name: separator2
+            widget: object
+            fields:
+              - {label: Number, name: number, widget: string, required: false}
+              - {label: Description, name: description, widget: string, required, false}
+          - label: We work together
+            name: worktogether
+            widget: object
+            fields:
+              - {label: Title, name: title, widget: string}
+              - {label: Subtitle, name: subtitle, widget: string}
+              - label: Testimonials
+                name: testimonials
+                widget: list
+                allow_add: true
+                fields:
+                - {label: Testimonial, name: testimonial, widget: text}
+                - {label: Author, name: author, widget: string}
+                - {label: Position, name: position, widget: string}
+                - {label: Portrait, name: portrait, widget: image, required: false}
+      - label: Workplace & jobs
+        name: aboutusworkplaceandjobs
+        file: content/aboutus/workplaceandjobs.md
+        fields:
+          - {label: Page title, name: pagetitle, widget: string}
+          - {label: Layout, name: layout, widget: hidden, default: workplaceandjobs}
+          - {label: Title, name: title, widget: string}
+          - {label: Subtitle, name: subtitle, widget: string}
+          - {label: Background Image, name: background, widget: image}
+          - {label: Description, name: description, widget: text, required: false}
+          - label: Separator 1
+            name: separator1
+            widget: object
+            fields:
+              - {label: Number, name: number, widget: string, required: false}
+              - {label: Description, name: description, widget: string, required, false}
+          - label: Introduction paragraph
+            name: introduction
+            widget: object
+            fields:
+              - {label: Title, name: title, widget: string}
+              - {label: Content, name: content, widget: text}
+              - label: Image
+                name: img
+                widget: object
+                fields:
+                  - {label: Image, name: url, widget: image}
+                  - {label: Alternative Text, name: alt, widget: string}
+          - label: Separator 2
+            name: separator2
+            widget: object
+            fields:
+              - {label: Number, name: number, widget: string, required: false}
+              - {label: Description, name: description, widget: string, required, false}
+          - {label: Markdown, name: body, widget: hidden}
+      - label: Press Releases
+        name: aboutuspressreleases
+        file: content/aboutus/pressreleases.md
+        fields:
+          - {label: Page title, name: pagetitle, widget: string}
+          - {label: Layout, name: layout, widget: hidden, default: pressreleases}
+          - {label: Title, name: title, widget: string}
+          - {label: Subtitle, name: subtitle, widget: string}
+          - {label: Background Image, name: background, widget: image}
+          - {label: Description, name: description, widget: text}
+          - label: Separator 1
+            name: separator1
+            widget: object
+            fields:
+              - {label: Number, name: number, widget: string, required: false}
+              - {label: Description, name: description, widget: string, required, false}
+          - label: Articles
+            name: articles
+            widget: list
+            fields:
+              - {label: Date of release, name: date, widget: date}
+              - {label: Description, name: description, widget: text}
+              - {label: Article Link, name: url, widget: string}
+              - {label: Button, name: button, widget: string, default: READ}
+          - {label: Markdown, name: body, widget: hidden}
+
+  - label: Contact
+    name: "contact"
+    folder: "content/contact/"
+    create: true
+    fields:
+      - {label: Page title, name: pagetitle, widget: string}
+      - {label: Layout, name: layout, widget: hidden, default: contact}
+      - {label: Title, name: title, widget: string}
+      - {label: Subtitle, name: subtitle, widget: string}
+      - {label: Description, name: description, widget: text, required: false}
+      - label: Form
+        name: form
+        widget: object
+        fields:
+          - {label: Title, name: title, widget: string}
+          - {label: Form url, name: url, widget: string}
+          - label: Fields
+            name: fields
+            widget: list
+            fields:
+              - {label: Field label, name: fieldlabel, widget: string}
+              - {label: Field name, name: fieldname, widget: string}
+              - {label: Placeholder, name: placeholder, widget: string}
+              - {label: Type,  name: type, widget: select, options: ['text', 'email', 'textarea'], default: 'text'}
+          - {label: Button, name: button, widget: string}
+          - label: Infobox
+            name: infobox
+            widget: list
+            fields:
+              - {label: Paragraph, name: paragraph, widget: text}
+      - {label: Markdown, name: body, widget: hidden}
+
+  - label: Knowledge Center
+    name: knowledgecenter
+    files:
+      - label: Index Page
+        name: knowledgecenterindex
+        file: content/knowledgecenter/_index.md
+        fields:
+          - {label: Page title, name: pagetitle, widget: string}
+          - {label: Layout, name: layout, widget: hidden, default: index}
+          - {label: Title, name: title, widget: string}
+          - {label: Subtitle, name: subtitle, widget: string, required: false}
+          - {label: Description, name: description, widget: text, required: false}
+          - label: Sections
+            name: sections
+            widget: list
+            fields:
+              - {label: Title, name: title, widget: string}
+              - {label: Description, name: description, widget: text}
+              - {label: Button, name: button, widget: string, default: READ}
+              - {label: URL, name: url, widget: string, default: \#}
+              - label: Subsections
+                name: subsections
+                widget: list
+                fields:
+                  - {label: Title, name: title, widget: string}
+                  - label: Privacy
+                    name: privacy
+                    widget: select
+                    options: ['public', 'registered', 'private']
+          - {label: Markdown, name: body, widget: hidden}
+  - label: "Case studies"
+    name: "casestudies"
+    folder: "content/casestudies"
+    create: true
+    fields:
+      - {label: Draft,  name: draft, widget: select, options: ['true', 'false'], default: 'true'}
+      - {label: Type, name: type, widget: hidden, default: casestudies}
+      - {label: Page title, name: pagetitle, widget: string}
+      - {label: Title, name: title, widget: string}
+      - {label: Subtitle, name: subtitle, widget: string}
+      - {label: Description, name: description, widget: text, required: false}
+      - {label: Date, name: date, widget: date}
+      - label: Case studies
+        name: casestudies
+        widget: list
+        fields:
+          - {label: Title, name: title, widget: string}
+          - {label: Subtitle, name: subtitle, widget: string}
+          - {label: Logo, name: logo, widget: image}
+          - {label: Alternative, name: alt, widget: string}
+          - {label: Who, name: who, widget: string}
+          - {label: Position, name: position, widget: string}
+          - {label: Where, name: where, widget: string}
+          - {label: Content, name: content, widget: markdown}
+          - label: Carousel
+            name: carousel
+            widget: list
+            fields:
+              - {label: Content, name: content, widget: markdown}
+      - {label: Body, name: body, widget: hidden}
+  - label: Our Blog - Articles
+    name: "blogarticle"
+    folder: "content/knowledgecenter/product/ourblog/articles"
+    create: true
+    fields:
+      - {label: Type, name: type, widget: hidden, default: blogarticle}
+      - {label: Draft,  name: draft, widget: select, options: ['true', 'false'], default: 'true'}
+      - {label: Title, name: title, widget: string}
+      - {label: Subtitle, name: subtitle, widget: string}
+      - {label: Description, name: description, widget: text, required: false}
+      - {label: Author, name: author, widget: string}
+      - {label: Date, name: date, widget: date}
+      - label: Tags
+        name: articlestags
+        widget: list
+        required: false
+      - {label: Thumbnail, name: thumbnail, widget: image}
+      - {label: Body, name: body, widget: markdown}
+  - label: Our Blog - Videos
+    name: "blogvideo"
+    folder: "content/knowledgecenter/product/ourblog/videos"
+    create: true
+    fields:
+    - {label: Type, name: type, widget: hidden, default: blogvideo}
+    - {label: Draft,  name: draft, widget: select, options: ['true', 'false'], default: 'true'}
+    - {label: Title, name: title, widget: string}
+    - {label: Subtitle, name: subtitle, widget: string}
+    - {label: Description, name: description, widget: text, required: false}
+    - {label: Author, name: author, widget: string}
+    - {label: Date, name: date, widget: date}
+    - label: Tags
+      name: videostags
+      widget: list
+      required: false
+    - {label: Video ID, name: videoid, widget: string}
+    - {label: Body, name: body, widget: markdown}
+  - label: Releases
+    name: "releases"
+    folder: "content/knowledgecenter/developer/releases"
+    create: true
+    fields:
+    - {label: Type, name: type, widget: hidden, default: releases}
+    - {label: Draft,  name: draft, widget: select, options: ['true', 'false'], default: 'true'}
+    - {label: Title, name: title, widget: string}
+    - {label: Subtitle, name: subtitle, widget: string}
+    - {label: Description, name: description, widget: text, required: false}
+    - {label: Author, name: author, widget: string}
+    - {label: Date, name: date, widget: date}
+    - label: Tags
+      name: releasestags
+      widget: list
+      required: false
+    - {label: Body, name: body, widget: markdown}
+  - label: Releases Schedule
+    name: "releaseschedule"
+    folder: "content/knowledgecenter/developer/releaseschedule"
+    create: true
+    fields:
+    - {label: Type, name: type, widget: hidden, default: releaseschedule}
+    - {label: Draft,  name: draft, widget: select, options: ['true', 'false'], default: 'true'}
+    - {label: Title, name: title, widget: string}
+    - {label: Subtitle, name: subtitle, widget: string}
+    - {label: Description, name: description, widget: text, required: false}
+    - {label: Author, name: author, widget: string}
+    - {label: Date, name: date, widget: date}
+    - {label: Body, name: body, widget: markdown}
+  - label: "Jobs"
+    name: "jobs"
+    folder: "content/jobs"
+    create: true
+    fields:
+      - {label: Draft,  name: draft, widget: select, options: ['true', 'false'], default: 'true'}
+      - {label: Title, name: title, widget: string}
+      - {label: Subtitle, name: subtitle, widget: string}
+      - {label: Description, name: description, widget: text}
+      - {label: Date, name: date, widget: date}
+      - {label: Button, name: button, widget: string}
+      - {label: Thumbnail, name: thumbnail, widget: image, required: false}
+      - {label: Body, name: body, widget: markdown}
+  - label: "Metadatas"
+    name: "metadatas"
+    files:
+    - label: "All Pages"
+      name: "allpagesmetadatas"
+      file: "data/metadatas/allpages.yml"
+      fields:
+      - label: "Metadatas"
+        name: metadatas
+        widget: list
+        fields:
+        - {label: 'Name', name: 'name', widget: string}
+        - {label: 'Content', name: 'content', widget: string}
+  - label: Documents
+    name: documents
+    folder: content/documents
+    create: true
+    fields:
+      - {label: Draft,  name: draft, widget: select, options: ['true', 'false'], default: 'true'}
+      - {label: Type of documents, name: type, widget: string}
+      - {label: Section of documents, name: section, widget: string}
+      - {label: Title, name: title, widget: string}
+      - {label: Subtitle, name: subtitle, widget: string}
+      - {label: Description, name: description, widget: text, required: false}
+      - {label: Author, name: author, widget: string}
+      - {label: Date, name: date, widget: date}
+      - {label: Thumbnail, name: thumbnail, widget: image, required: false}
+      - {label: Video ID, name: videoid, widget: string, required: false}
+      - {label: Body, name: body, widget: markdown}
+      - label: Tags
+        name: tags
+        widget: list
