@@ -5,7 +5,7 @@ backend:
     - editor
   branch: test # Branch to update (optional; defaults to master)
   site_domain: cms.netlify.com
-
+  base_url: https://api.netlify.com
 publish_mode: editorial_workflow
 
 media_folder: "static/img/uploads"

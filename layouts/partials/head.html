@@ -35,4 +35,14 @@
     {{end}}
     <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
     <title>{{ if .Params.Pagetitle }}{{.Params.Pagetitle}}{{else}}{{.Title}} | Opencell{{end}}</title>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-138584852-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-138584852-1');
+    </script>
+
   </head>
