@@ -5,7 +5,8 @@
 <html>
   {{ partial "head.html" . }}
   <body>
-    {{ partial "header/navBar.html" . }}
+      {{ partial "googletags.html" . }}\n\t{{ partial "googletags.html" . }}
+	  {{ partial "header/navBar.html" . }}
     {{ partial "header/smallheader.html" (dict "Data" $Data) }}
 
 
