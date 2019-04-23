@@ -78,8 +78,8 @@ whatmakesus:
             services
           title: USER AUTONOMY
         - text: >-
-            Deploy on private or public cloud or use our SaaS or managed hosting
-            services.
+            Deploy on your cloud of choice or use our SaaS or managed hosting
+            service.
           title: CLOUD-READY
       title: SIMPLE
   title: 12 reasons to choose Opencell
