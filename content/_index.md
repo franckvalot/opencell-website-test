@@ -1,5 +1,5 @@
 ---
-pagetitle: Opencell
+pagetitle: Opencell - Agile monetization platform
 header:
   background: /img/uploads/header-home.jpg
   carousel:
@@ -100,24 +100,24 @@ separator5:
 ourcustomers:
   button: Discover our customers
   logos:
-    - alt: Adidas
+    - alt: Orange
       link: {}
       url: /img/uploads/logo-adidas.svg
-    - alt: Dona International
+    - alt: Engie
       url: /img/uploads/logo-dona.svg
-    - alt: Gunster
+    - alt: Acetiam
       url: /img/uploads/logo-gunster.svg
-    - alt: Mosaic
+    - alt: Diabolocom
       url: /img/uploads/logo-mosaic.svg
-    - alt: Eckerd
+    - alt: Actility
       url: /img/uploads/logo-eckerd.svg
-    - alt: Florida State University
+    - alt: Salt
       url: /img/uploads/logo-fsu.svg
-    - alt: Rayonier
+    - alt: Plüm Energie
       url: /img/uploads/logo-rayonier.svg
-    - alt: Florida Chamber of Commerce
+    - alt: Odigo
       url: /img/uploads/logo-fl-chamber.svg
-  title: Working together.
+  title: Working together
   url: /aboutus/customers/
 separator6:
   description: Testimonials
