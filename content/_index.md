@@ -5,6 +5,10 @@ header:
   carousel:
     - subtitle: Agile monetization platform
       title: Stop selling product.</br> Start selling recurring services.
+    - button:
+        name: Get in touch
+      subtitle: 'Join us May 16-18 for Viva Technologies in Paris. '
+      title: Meet the team.
 separator1:
   description: A new paradigm
   number: '01'
