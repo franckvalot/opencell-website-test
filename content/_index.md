@@ -2,7 +2,13 @@
 pagetitle: Opencell
 header:
   background: /img/uploads/header-home.jpg
-  carousel: []
+  carousel:
+    - subtitle: Agile monetization platform
+      title: Stop selling product.</br> Start selling recurring services.
+    - button:
+        name: Set up a meeting.
+      subtitle: Join us for Viva Technologies in Paris from May 16 to May 18.
+      title: Meet the team.
 separator1:
   description: A new paradigm
   number: '01'
