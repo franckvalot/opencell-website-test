@@ -44,34 +44,34 @@ whatmakesus:
   columns:
     - content:
         - text: >-
-            Modular platform for total or partial replacement of your existing
-            solution.
+            Modular platform for total or partial replacement of existing
+            solution
           title: FULL ORDER-TO-CASH CAPABILITY
-        - text: Role-based customized interfaces using our flexible portal.
+        - text: Role-based customized UX using our flexible portal technology
           title: USER EXPERIENCE
-        - text: Multi-level customer hierarchy and commissioning capability.
-          title: 'B2C, B2B OR B2B2C'
-        - text: Exceptional scalability at low cost due to our big data technology.
+        - text: Multi-level customer hierarchy and commissioning capability
+          title: 'B2C, B2B OR B2B2X'
+        - text: Big data technology for exceptional scalability at low cost
           title: SCALABILITY
       title: POWERFUL
     - content:
-        - text: Over 400 rich APIs for quick configuration and easy integration.
+        - text: Over 400 rich APIs for quick configuration and easy integration
           title: BEST IN-CLASS APIs
-        - text: Pre-configured templates adapted to your industry.
+        - text: Pre-configured templates adapted to your industry vertical
           title: BUSINESS FIT
-        - text: Easily add and manage custom data within your application.
+        - text: Easily add and manage custom data within your application
           title: FLEXIBLE DATA MODEL
-        - text: Even complex projects go live in less than three months.
+        - text: Even complex projects go live in less than three months
           title: QUICK TIME-TO-MARKET
       title: AGILE
     - content:
-        - text: Easy to understand pricing adapted to your business model.
+        - text: Easy-to-understand pricing adapted to your business model
           title: SIMPLE PRICING MODEL
-        - text: No vendor lock-in so we work extra hard to keep you happy.
+        - text: No vendor lock-in so we work extra hard to keep you happy
           title: OPEN SOURCE
         - text: >-
             Quick user adoption avoids long-term reliance on third-party
-            services.
+            services
           title: USER AUTONOMY
         - text: >-
             Deploy on private or public cloud or use our SaaS or managed hosting
