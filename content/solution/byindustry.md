@@ -32,7 +32,6 @@ industries:
       * Salt Mobile
     nav: TELCO
     title: Telecom
-    videoid: Bey4XXJAqS8
     image: /img/uploads/industry-telco-and-iot.jpg
   - content: >-
       ## CRITICAL FEATURES
@@ -61,7 +60,6 @@ industries:
       * Total Spring
     nav: 'UTILITIES '
     title: Energy
-    videoid: xcJtL7QggTI
     image: /img/uploads/industry-utility.jpg
   - content: >-
       ## CRITICAL FEATURES
@@ -84,7 +82,6 @@ industries:
       * Velib 2
     nav: MOBILITY
     title: Mobility
-    videoid: xcJtL7QggTI
     image: /img/uploads/industry-mobility-and-transports.jpg
   - content: >-
       ## CRITICAL FEATURES
@@ -102,6 +99,5 @@ industries:
       * Fnac Darty
     nav: RETAIL & OTHER
     title: Retail & Other
-    videoid: xcJtL7QggTI
     image: /img/uploads/industry-retail.jpg
 ---
