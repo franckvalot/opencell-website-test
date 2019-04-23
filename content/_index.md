@@ -1,5 +1,5 @@
 ---
-pagetitle: Opencell - Agile monetization platform
+pagetitle: Agile monetization platform - Opencell
 header:
   background: /img/uploads/header-home.jpg
   carousel:
