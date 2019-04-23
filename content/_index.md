@@ -2,15 +2,9 @@
 pagetitle: Opencell
 header:
   background: /img/uploads/header-home.jpg
-  carousel:
-    - button: {}
-      subtitle: Agile monetization platform.
-      title: Stop selling product. <br> Start selling recurring services.
-    - button: {}
-      subtitle: Webinar. March 15 2019.
-      title: 'Agile utilities: how to adapt to deregulation and technological change'
+  carousel: []
 separator1:
-  description: Why Opencell
+  description: A new paradigm
   number: '01'
 introduction:
   content: >-
@@ -26,7 +20,7 @@ introduction:
 
     To succeed, businesses need to go beyond traditional ERP systems and
     implement new solutions adapted to managing subscription and usage revenue.
-  title: Recurring business need the right software.
+  title: Recurring business needs the right software.
 separator2:
   description: Our platform
   number: '02'
@@ -57,13 +51,13 @@ whatmakesus:
           title: 'B2C, B2B OR B2B2C'
         - text: Exceptional scalability at low cost due to our big data technology.
           title: SCALABILITY
-      title: POWERFUL
+      title: 12 reasons to love us.
     - content:
         - text: Over 400 rich APIs for quick configuration and easy integration.
           title: BEST IN-CLASS APIs
-        - text: Pre-configured templates for your industry.
+        - text: Pre-configured templates adapted to your industry.
           title: BUSINESS FIT
-        - text: Easily add the custom data you need for your business.
+        - text: Easily add and manage custom data within your application.
           title: FLEXIBLE DATA MODEL
         - text: Even complex projects go live in less than three months.
           title: QUICK TIME-TO-MARKET
@@ -71,7 +65,7 @@ whatmakesus:
     - content:
         - text: Easy to understand pricing adapted to your business model.
           title: SIMPLE PRICING MODEL
-        - text: No vendor lock-in means we work extra hard to keep you happy.
+        - text: No vendor lock-in so we work extra hard to keep you happy.
           title: OPEN SOURCE
         - text: >-
             Quick user adoption avoids long-term reliance on third-party
@@ -92,7 +86,7 @@ mainindustries:
     - ENERGY
     - MOBILITY
     - RETAIL & OTHER
-  subtitle: WE CAN ACCELERATE YOUR TIME-TO-MARKET.
+  subtitle: WE ACCELERATE YOUR TIME-TO-MARKET.
   title: Don't start from scratch.
 separator5:
   description: Our customers
@@ -171,3 +165,4 @@ learnmore:
     - videoid: RUML7IH2JnM
     - videoid: NvCVdZyY9fI
 ---
+
