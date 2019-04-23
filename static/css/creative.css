@@ -87,6 +87,10 @@
   form input.hide{
     display: none;
   }
+
+  #btn_getdemo:hover{
+    cursor: pointer;
+  }
 /*=======
   BODY */
 

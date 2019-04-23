@@ -118,7 +118,7 @@ ourcustomers:
     - alt: Florida Chamber of Commerce
       url: /img/uploads/logo-fl-chamber.svg
   title: Working together.
-  url: '#'
+  url: /aboutus/customers/
 separator6:
   description: Testimonials
   number: '05'
@@ -171,4 +171,3 @@ learnmore:
     - videoid: RUML7IH2JnM
     - videoid: NvCVdZyY9fI
 ---
-

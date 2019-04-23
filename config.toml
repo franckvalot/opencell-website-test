@@ -10,7 +10,7 @@ enableEmoji = "true"
     [params.navbar.url]
       platform   = "/platform/modules/"
       solution    = "/solution/byindustry/"
-      support     = "/support/"
+      support     = "/knowledgecenter/"
       contact     = "/contact/"
       getADemo    = "#"
       logIn       = "/admin"

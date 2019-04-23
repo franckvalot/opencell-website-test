@@ -13,7 +13,7 @@
       </div>
     </section>
     {{ partial "sectiondescription.html" $Data.separator2 }}
-    {{ partial "sections/provide.html" (dict "Data" $Data.whatweprovide "showTitle" true "Page" .Page) }}
+    {{ partial "sections/provide.html" (dict "Data" $Data.whatweprovide "showTitle" true "Page" .Page "Site" .Site) }}
     {{ partial "sectiondescription.html" $Data.separator3 }}
     {{ partial "sections/whatmakesus.html" $Data.whatmakesus }}
     {{ partial "sectiondescription.html" $Data.separator4 }}
