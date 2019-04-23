@@ -4,7 +4,7 @@ title: Play as a team.
 subtitle: >-
   Our monetization platform keeps your entire<br> organization running smoothly
   under one roof.
-background: /img/uploads/header-solution-role.jpg
+background: /img/uploads/byrole-header-solution-role.jpg
 separator1:
   number:
   description:
@@ -23,7 +23,7 @@ roles:
       - benefit: Segment your pricing.
     nav: Marketing
     title: Iterate your model.
-    url: /img/uploads/iterate-your-model.jpg
+    url: /img/uploads/byrole-iterate-your-model.jpg
   - background: >
       Jeff is a regional sales manager at Opencorp. He’s been struggling to
       produce quotes and manage the subscription process for an increasing
@@ -38,7 +38,7 @@ roles:
       - benefit: 'Track critical sales metrics (MRR, bookings etc) instantly. '
     nav: Sales
     title: Scale your sales.
-    url: /img/uploads/get-new-customers.jpg
+    url: /img/uploads/byrole-get-new-customers.jpg
   - background: >
       Bill (no pun intended), the operations manager at Opencorp is struggling
       with increased volume on his current system as the data load and
@@ -58,7 +58,7 @@ roles:
           segmentation rules.
     nav: Operations
     title: Easy billing.
-    url: /img/uploads/bill-efficiently.jpg
+    url: /img/uploads/byrole-bill-efficiently.jpg
   - background: >-
       Marie is the CFO of Opencorp. She loves the predictability of the
       company's business model but she needs the right tool to automate revenue
@@ -71,7 +71,7 @@ roles:
       - benefit: 'Dashboards with key non-GAAP metrics including MRR, churn and orders.'
     nav: Finance
     title: 'Get your numbers right. '
-    url: /img/uploads/get-your-numbers-right.jpg
+    url: /img/uploads/byrole-get-your-numbers-right.jpg
   - background: >
       Daphne is a customer service manager who’s handling frequent requests from
       customers that need to renew their contracts or obtain billing
@@ -87,7 +87,7 @@ roles:
           through their self-service portal.
     nav: Customer service
     title: Keep your customers happy.
-    url: /img/uploads/keep-your-customers-smiling.jpg
+    url: /img/uploads/byrole-keep-your-customers-smiling.jpg
   - background: >
       Michelle is the CTO of Opencorp. She’s fed up with the complexity and cost
       of her current solution and needs a recurring billing platform that can
@@ -101,5 +101,5 @@ roles:
       - benefit: Avoid vendor lock-in with open source licensing model
     nav: IT
     title: Make IT happen.
-    url: /img/uploads/make-it-happen.jpg
+    url: /img/uploads/byrole-make-it-happen.jpg
 ---
