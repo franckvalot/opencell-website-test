@@ -159,8 +159,8 @@ separator7:
   description: Additional resources
   number: '06'
 learnmore:
-  subtitle: Featured videos
-  title: Breaking news
+  subtitle: Featured interviews with our customers and partners
+  title: Videos
   videoids:
     - videoid: RUML7IH2JnM
     - videoid: NvCVdZyY9fI
