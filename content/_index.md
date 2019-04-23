@@ -5,10 +5,6 @@ header:
   carousel:
     - subtitle: Agile monetization platform
       title: Stop selling product.</br> Start selling recurring services.
-    - button:
-        name: Set up a meeting.
-      subtitle: Join us for Viva Technologies in Paris from May 16 to May 18.
-      title: Meet the team.
 separator1:
   description: A new paradigm
   number: '01'
@@ -57,7 +53,7 @@ whatmakesus:
           title: 'B2C, B2B OR B2B2C'
         - text: Exceptional scalability at low cost due to our big data technology.
           title: SCALABILITY
-      title: 12 reasons to love us.
+      title: POWERFUL
     - content:
         - text: Over 400 rich APIs for quick configuration and easy integration.
           title: BEST IN-CLASS APIs
@@ -82,7 +78,7 @@ whatmakesus:
             services.
           title: CLOUD-READY
       title: SIMPLE
-  title: Stand out from the crowd.
+  title: 12 reasons to choose Opencell
 separator4:
   description: Our verticals
   number: '04'
