@@ -739,7 +739,7 @@ collections:
       - {label: Body, name: body, widget: hidden}
   - label: Our Blog - Articles
     name: "blogarticle"
-    folder: "content/articles"
+    folder: "content/article"
     create: true
     fields:
       - {label: Title, name: title, widget: string}
@@ -755,7 +755,7 @@ collections:
       - {label: Body, name: body, widget: markdown}
   - label: Our Blog - Videos
     name: "blogvideo"
-    folder: "content/videos"
+    folder: "content/video"
     create: true
     fields:
     - {label: Title, name: title, widget: string}
