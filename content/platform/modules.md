@@ -102,31 +102,23 @@ modules:
   - contents:
       - content: >
           Our accounts receivable module manages cash applications, payment
-          methods, open balances and automatic dunning actions.
-      - content: >
-          Payments can be matched manually via GUI to corresponding payments
-          operations or automatically by payment job. Connectors to main payment
-          gateways are available. If your payment gateway isn’t available, our
-          rich APIs make it easy for you integrate your platform of choice.
-      - content: >
+          methods, open balances and automatic dunning actions. Payments can be
+          matched manually via GUI to corresponding payments operations or
+          automatically by payment job. Configurable aging reports are also
+          provided.
+      - content: >+
           In the event of late payment, automatic dunning actions such as
-          sending email or adding a fee can be configured. You can send
-          notifications and reminders to customers through their preferred
-          communications channels (including mobile devices), configure
-          escalations in multiple stages, and differentiate escalation
+          sending email or adding a fee can be configured. Notifications and
+          reminders can be sent to customers through their preferred
+          communications channels (including mobile devices), escalation can be
+          be configured in multiple stages and differentiated escalation
           procedures based on product line, account group, or other factors of
-          your choice. You can use workflows service activation to suspend
-          service automatically at any stage in the escalation process, or
-          continue to deliver service as long as you’d like.
+          your choice can be included. Workflows can also be used to suspend
+          service automatically at any stage in the escalation process.
 
-
-          Configurable aging reports are also provided.
     title: AR manager
   - contents:
-      - content: >
-          Recurring revenue comes with recurring payments that you can schedule
-          and process automatically.
-      - content: >
+      - content: >-
           Our payment manager lets you handle multiple payment processors. It
           manages credit card and ACH (direct debit) for one-time and recurring
           payments. It helps you lower your costs by routing payments to the
@@ -134,11 +126,15 @@ modules:
           method, or other criteria that you choose.
       - content: >
           Customers can pre-pay for products and services pay upon receipt, or
-          use a combination of both. In situations where a payment fails,
-          Opencell gives you complete control over when and how often to retry.
-          You can make it a requirement that your customers pre-pay for products
-          and services, allow them to pay upon receipt, or use a combination of
-          both.
+          use a combination of both. When a payment fails, you can decide how
+          often to retry. You can make it a requirement that your customers
+          pre-pay for products and services, allow them to pay upon receipt, or
+          use a combination of both.
+
+
+          Connectors to main payment gateways are available. If your payment
+          gateway isn’t available, our rich APIs make it easy for you integrate
+          your platform of choice.
       - content: >
           When payments fail, they are automatically retried. Failed payments
           can set off automatic dunning processes.
