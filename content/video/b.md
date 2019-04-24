@@ -1,7 +1,7 @@
 ---
 title: Customer stories | Episode 2 | CGI
-subtitle: Subtitle
-description: Blablabla
+subtitle: Customer stories
+description: ''
 author: Franck Valot
 date: 2019-01-17T08:05:55.197Z
 videostags:
