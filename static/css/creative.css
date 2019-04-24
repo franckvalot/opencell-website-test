@@ -1785,6 +1785,9 @@ CASE STUDY */
   .markdown a{
     color: #EF6155;
   }
+  .markdown img{
+    max-width: 100%;
+  }
   .markdown a:hover{
     text-decoration: underline;
   }

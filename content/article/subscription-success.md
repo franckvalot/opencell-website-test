@@ -7,7 +7,6 @@ author: Ethan
 date: 2019-04-24T06:50:41.105Z
 thumbnail: /img/uploads/header-press.jpg
 ---
-![](/img/uploads/sc-1-.png)
 
 When we started Opencell, we were convinced that recurring businesses needed a subscription management platform that was easy to configure and simple to set up. We wanted to provide a solution that could go live quickly and make it easy to iterate but that could still handle complex use cases and heavy usage volume.
 
@@ -19,19 +18,19 @@ The **latest version of Opencell** that will be released mid-November is a huge 
 
 Our **marketing manager portal** now makes it possible for marketing teams to manage product and service catalogues and bundles by manipulating only your key business drivers. You can now instantly change offer prices and manage availability dates with differentiated channels and segments without waiting weeks for IT to process your change request.
 
-[![Marketing Manager](/img/uploads/mm-1-.png)](/img/uploads/mm-1-.png)
+[![Marketing Manager](/img/uploads/article-mm-1.png)](/img/uploads/article-mm-1.png)
 
 <hr/>
 
 Our **selfcare portal** provides an out-of-the box responsive UI that you can plug into your applications and or website. It provides guest and identified user management, a full register and shop process and the ability to manage/upgrade/downgrade offers and services. Your customers can consult and pay their bills online, track their usage and follow their order or service activation.
 
-[![Selfcare](/img/uploads/sc-1-.png)](/img/uploads/sc-1-.png)
+[![Selfcare](/img/uploads/article-sc-1.png)](/img/uploads/article-sc-1.png)
 
 <hr/>
 
 Our **customer care portal** lets your sales administration manage customer hierarchies, accounts and subscriptions through an intuitive interface.
 
-[![Customercare](/img/uploads/cc-1-.png)](/img/uploads/cc-1-.png)
+[![Customercare](/img/uploads/article-cc-1.png)](/img/uploads/article-cc-1.png)
 
 
  <hr/>
