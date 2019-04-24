@@ -81,28 +81,23 @@ modules:
           standard metrics used to manage a subscription business including
           monthly recurring revenue (MRR), annual recurring revenue (ARR), churn
           and total contract value.
-      - content: >
+
           Our data warehouse can be easily connected with practically any third
           party data analytics or business intelligence package such as Qlikview
           or PowerBI.
     title: Reporting manager
   - contents:
-      - content: >
-          Revenue recognition in subscription businesses is tricky. You bill in
-          advance and need to recognize revenue over time. You bill in arrears
-          and need to make sure you accrue for revenue that you will bill at a
-          later date.
-      - content: >
-          Opencell provides you with the forward-looking tools you need to
-          manage your subscription business including possibility to apply
-          customized revenue recognition rules to invoice line items.
-      - content: >
-          We also give you the ability to manage your chart of accounts and
-          financial periods so you can keep your transactions in synch with your
-          downstream ledgers.
-      - content: >
-          Mapping to downstream accounting systems is easily performed on a
-          summary or detailed basis using flat file exports or our rich APIs.
+      - content: >+
+          We provide the forward-looking financial tools you need to manage your
+          recurring revenue business. 
+
+          Customized revenue recognition rules can be applied to invoice line
+          items in order to manage your revenue recognition process. 
+
+          Chart of accounts management and financial period closes make it easy
+          to synch your transactions with your downstream financial systems on a
+          summary or detailed basis.
+
     title: Finance manager
   - contents:
       - content: >
