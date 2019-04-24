@@ -42,40 +42,38 @@ modules:
           features for structuring thousands of products—from simple to
           complex—so you’ll be able to successfully manage every single product,
           bundle, package and plan in your catalog.
-      - content: >
+      - content: >+
           Using a simplified business offer model, our catalog manager lets
           users create a new offer with its services, charges, counters, price
           plans, custom fields, mediation scripts, webhooks etc. in just a few
-          clicks.
-      - content: >
-          In the event that more complex offers need to be created, advanced
-          functionalities can be used to build an offer from scratch. Our rich
-          configuration possibilities mean that we can practically guarantee
-          that we’ll be able to model whatever offer your product or marketing
-          teams dreams up.
+          clicks. If more complex offers need to be created, advanced
+          functionalities can be used to build an offer from scratch to model
+          whatever offer your product or marketing teams dreams up.
+
     title: Catalog manager
   - contents:
       - content: >
           Our order manager keeps customer data in sync, executes both simple
-          and complex workflows and drive processes at-scale. Event
-          notifications that push data-rich messages across system boundaries
-          with APIs allow access to Opencell data from anywhere.
-      - content: >
-          Workflows manage business processes with automated rules, flows, and
-          forms.
-      - content: >
-          You can measure time, disk space, bandwidth, downloads and notify a
-          customer when they cross a usage threshold and offer them an upgrade.
-          It’s easy to configure which services are available in a plan and
-          implement automatic enablement and provisioning.
-      - content: >
-          We make it easy for business users to make changes without going
-          through IT. You can trigger automated provisioning and a wide variety
-          of other business functions in real time. You can alert customers
-          about time-sensitive discounts, expired credit cards, or impending
-          usage thresholds without building complex logic yourself.  You can
-          schedule any service, process, or activity to occur at any time, based
-          on any trigger.
+          and complex workflows and drives processes at-scale with automated
+          rules; flows and forms. Event notifications push data-rich messages
+          across system boundaries while APIs allow access to Opencell data from
+          anywhere.
+      - content: >-
+          Manage business processes in real-time with automated rules, flows,
+          and forms. 
+
+          Schedule any service, process, or activity to occur at any time, based
+          on any trigger
+
+          Measure time, disk space, bandwidth, downloads and notify customers
+          when usage thresholds are crossed with an upgrade message. 
+
+          Configure which services are available in a plan and implement
+          automatic enablement and provisioning so it's easy for business users
+          to make changes without going through IT. 
+
+          Alert customers about time-sensitive discounts, expired credit cards,
+          or impending usage thresholds without building complex logic. 
     title: Order manager
   - contents:
       - content: >
