@@ -185,17 +185,17 @@ modules:
     title: Customer care portal
   - contents:
       - content: >
-          Modern subscription businesses emphasize multi-channel service
-          options. Customers expect to be able to access and modify their
-          information anytime, anywhere.
-      - content: >
+          Modern subscription businesses emphasize multi-channel service options
+          since customers expect to be able to access and modify their
+          information anytime, anywhere. 
+
           To facilitate this process, Opencell provides a customizable selfcare
-          portal where customers can directly change; upgrade or downgrade
-          subscriptions, subscribe to new offers, check payment status etc.
-      - content: >
-          Using our selfcare portal functionality for your recurring revenue
-          business means you can probably avoid the hassle of using a
-          third-party e-commerce system such as Magento or Drupal.
+          portal where customers can directly change, upgrade or downgrade
+          subscriptions, subscribe to new offers, check payment status etc. 
+
+          Using our selfcare portal means you can probably avoid the hassle of
+          integrating with a third-party e-commerce system such as Magento or
+          Drupal.
     title: Self care portal
 ---
 
