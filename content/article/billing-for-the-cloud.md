@@ -1,5 +1,4 @@
 ---
-draft: 'false'
 title: Billing for the cloud
 subtitle: >-
   Don't let your billing system limit your capacity to create a unique value
@@ -9,7 +8,7 @@ description: >-
   go-to-market strategies that will serve as strategic differentiators in a
   hyper-competitive market.
 author: Ethan Beardsley
-date: 2019-01-17T08:05:55.197Z
+date: 2016-08-17T08:05:55.197Z
 articlestags:
   - billing
   - cloud
