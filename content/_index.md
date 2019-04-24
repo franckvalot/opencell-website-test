@@ -154,7 +154,7 @@ worktogether:
         proof of concept workshop were quickly developed and integrated into the
         core open source model. The support team was very proactive and quickly
         helped us to resolve all technical issues....
-  title: Hear it from our customers
+  title: Hear it from our customers.
 separator7:
   description: Additional resources
   number: '06'
