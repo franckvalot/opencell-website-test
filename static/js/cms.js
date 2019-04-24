@@ -978,7 +978,7 @@ var BlogPreview = createClass({
       var month = months[date.getMonth()];
       var year = date.getFullYear();
       var dateString = day + ' ' + month + ' ' + year;
-      var classSection = null;
+      var classSection = 'blog';
       switch (type) {
         case 'blogarticle':
           classSection = 'blog';
