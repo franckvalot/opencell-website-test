@@ -1,12 +1,12 @@
 ---
-draft: false
 title: Customer stories | Episode 3 | Sofrecom
-subtitle: Subtitle
+subtitle: Customer stories
 description: Blablabla
 author: Franck Valot
-videoid: NvCVdZyY9fI
 date: 2019-01-17T08:05:55.197Z
-videostags: [four, five]
+videostags:
+  - ''
+videoid: NvCVdZyY9fI
 ---
 
 ## Customer stories | Episode 3 | Sofrecom
