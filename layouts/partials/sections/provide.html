@@ -1,15 +1,20 @@
-    <section class="hero-2">
+    <section class="hero-1 whatweprovide">
       <div class="container">
+        {{ if .showTitle }}
         <div class="row align-items-center justify-content-center">
-          <h1 class="col-12 text-center">What we provide.</h1>
+          <h1 class="col-12 text-center">{{ .Data.title }}</h1>
         </div>
+        {{ end }}
         <div class="row align-items-center justify-content-center">
-          <div class="col-12 col-md-8 col-lg-6">
-            <img src="{{ .Site.Data.indexpage.whatweprovide.image }}" class="img-fluid" alt="">
+          <div class="col-12 col-md-8 col-lg-6 img">
+            <img src="{{ .Data.image }}" class="img-fluid" alt="">
           </div>
-          <div class="col-12 col-md-4 col-lg-6">
-            {{ .Site.Data.indexpage.whatweprovide.content | markdownify }}
-            <button type="button" name="button" class="opencell-btn">DISCOVER</button>
+          <div class="col-12 col-md-12 col-lg-6 description">
+            {{ .Data.content | markdownify }}
+            <form action="{{ .Site.Params.navbar.url.contact}}" method="get">
+              <input class="hide" type="text" name="from" value="{{(printf "cta/%s" .Page.RelPermalink) | anchorize}}"/>
+              <button type="submit" name="button" class="opencell-btn">DISCOVER</button>
+            </form>
           </div>
         </div>
       </div>

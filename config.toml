@@ -1,5 +1,46 @@
 baseURL = ""
 languageCode = "en-us"
 title = "Opencellsoft"
+disqusShortname = "opencell"
+
+enableEmoji = "true"
 
 [params]
+  [params.navbar]
+    [params.navbar.url]
+      platform   = "/platform/modules/"
+      solution    = "/solution/byindustry/"
+      support     = "/knowledgecenter/"
+      contact     = "/contact/"
+      getADemo    = "#"
+      logIn       = "/admin"
+      aboutUs     = "/aboutus/story/"
+      story       = "/aboutus/story/"
+      businessModel = "/aboutus/businessmodel/"
+      customers = "/aboutus/customers/"
+      partners = "/aboutus/partners/"
+      workplaceAndJobs = "/aboutus/workplaceandjobs/"
+      pressreleases = "/aboutus/pressreleases/"
+      byIndustry = "/solution/byindustry/"
+      byRole = "/solution/byrole/"
+      modules = "/platform/modules/"
+      technology = "/platform/technology/"
+      ecosystem = "/platform/ecosystem/"
+  [params.resources]
+    [params.resources.url]
+      knowledgecenter = "/knowledgecenter/"
+      blog = "/article/"
+      video = "/video/"
+      webinar = "/webinar/"
+      releaseschedule = "/knowledgecenter/developer/releaseschedule/"
+      releases = "/knowledgecenter/developer/releases/"
+
+  [params.url]
+    getInTouch  = "/contact/"
+    getDemo  = "#"
+    contact = "/contact/"
+
+[taxonomies]
+  releasestags = "releasestags"
+  videostags = "videostags"
+  articlestags = "articlestags"

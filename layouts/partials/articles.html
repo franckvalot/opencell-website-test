@@ -1,0 +1,12 @@
+<section class="hero-1 articles">
+  <div class="container">
+    <div class="row justify-content-center">
+      <h1 class="col-12 text-center">{{ .Title }}</h1>
+    </div>
+    <div class="row justify-content-center">
+      {{range .Data.articles }}
+      {{ partial "article.html" . }}
+      {{ end }}
+    </div>
+  </div>
+</section>

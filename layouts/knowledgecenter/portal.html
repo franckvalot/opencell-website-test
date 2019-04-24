@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+{{ $Data := .Params }}
+<html>
+  {{ partial "head.html" . }}
+  <body>
+    {{ partial "googletags.html" . }}
+	  {{ partial "header/navBar.html" . }}
+    {{ partial "header/smallheader.html" (dict "Data" $Data) }}
+    <section class="hero-1 knowledgecenter">
+      <div class="container">
+        <div class="row justify-content-center text-left">
+          <div class="col col-md-10 col-lg-8">
+            <div>
+              <span>Published on: </span><span>{{ dateFormat "02 Jan 2006" .Date }}</span><span>, by: </span><span class="author">{{ .Params.author }}</span>
+            </div>
+            <div>
+              <span>Last modified on: </span><span>{{ dateFormat "02 Jan 2006" .Lastmod  }}</span>
+            </div>
+          </div>
+          <hr class="w-100"></hr>
+          <div class="col col-md-10 col-lg-8">
+            {{ .Content | markdownify }}
+          </div>
+        </div>
+    </section>
+
+    {{ partial "sections/getdemo.html" . }}
+    {{ partial "sections/mentions.html" . }}
+    {{ partial "script.html" }}
+  </body>
+</html>

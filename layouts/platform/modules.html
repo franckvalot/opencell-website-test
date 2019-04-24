@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+{{ $Data := .Params }}
+<html>
+  {{ partial "head.html" . }}
+  <body>
+      {{ partial "googletags.html" . }}\n\t{{ partial "googletags.html" . }}
+	  {{ partial "header/navBar.html" . }}
+    {{ partial "header/smallheader.html" (dict "Data" $Data) }}
+
+    {{ partial "sectiondescription.html" $Data.separator1 }}
+    {{ partial "sections/provide.html" (dict "Data" (.Site.GetPage "_index.md").Params.whatweprovide "Page" .Page) }}
+
+
+    {{ partial "sectiondescription.html" $Data.separator2 }}
+
+
+    <section class="hero-1 modules d-sm-none d-md-block">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-12 col-md-5 text-center list">
+            <div class="row justify-content-center">
+              <h1 class="col-12">Modules</h1>
+              <ul class="col-12">
+                {{ range $index, $contents := $Data.modules }}
+                <li data-module="{{$contents.title | anchorize }}" {{if eq $index 0}}class="active"{{end}}><h2>{{ $contents.title | upper }}</h2></li>
+                {{ end }}
+              </ul>
+            </div>
+          </div>
+          <div class="col-12 col-md-7 text-left content">
+            <div class="row justify-content-center h-100">
+              {{ range $index, $module := $Data.modules }}
+              <div data-module="{{$module.title | anchorize }}" class="col{{if eq $index 0}} active{{end}}">
+                <h1 class="col-12">
+                  {{ $module.title }}
+                </h1>
+                <div id="carousel-{{$module.title | anchorize }}"class="carousel slide col-12 h-75">
+                  <ol class="carousel-indicators">
+                    {{ range $index, $content := $module.contents }}
+                    <li data-target="#carousel-{{$module.title | anchorize}}" data-slide-to="{{$index}}" {{if eq $index 0}}class="active"{{end}}></li>
+                    {{end}}
+                  </ol>
+                  <div class="carousel-inner h-100">
+                    {{ range $index, $content := $module.contents }}
+                    <div class="carousel-item {{if eq $index 0}}active{{end}}">
+                      <div class="row justify-content-center h-100">
+                        <div class="col-12">
+                          {{ $content.content | markdownify }}
+                        </div>
+                      </div>
+                    </div>
+                    {{ end }}
+                  </div>
+                  <a class="carousel-control-prev" href="#carousel-{{$module.title | anchorize}}" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                  </a>
+                  <a class="carousel-control-next" href="#carousel-{{$module.title | anchorize}}" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                  </a>
+                </div>
+              </div>
+              {{ end }}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    {{ partial "sections/getdemo.html" . }}
+    {{ partial "sections/mentions.html" . }}
+
+    {{ partial "script.html" }}
+    <script type="text/javascript">
+      $(document).ready(function(){
+        $(".modules .list ul li").click(function(){
+          $(this).siblings().removeClass('active');
+          $(this).addClass('active');
+          $(".modules .content > div > div").removeClass("active");
+          var currentModule = $(this).data("module");
+          $(".modules .content > div > div[data-module='" +currentModule + "']").addClass('active');
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+{{ $Data := .Params }}
+{{ $Site := .Site }}
+{{ $Page := . }}
+<html>
+  {{ partial "head.html" . }}
+  <body>
+      {{ partial "googletags.html" . }}\n\t{{ partial "googletags.html" . }}
+	  {{ partial "header/navBar.html" . }}
+    {{ partial "header/smallheader.html" (dict "Data" $Data) }}
+
+
+    <section class="byindustry navigation">
+      <div class="navigation text-center">
+        <div class="container">
+          {{ range $Data.industries }}
+            <h2 class="navigation">
+              <a href="#{{ replace .title  "<br>" "" | safeHTML  | anchorize }}">{{ .nav | upper}}</a>
+            </h2>
+          {{ end }}
+        </div>
+      </div>
+    </section>
+
+    {{ partial "sectiondescription.html" $Data.separator1}}
+    {{ range $Data.industries }}
+    <section class="hero-1 byindustry" >
+      <div class="container">
+        <a class="anchor" id="{{ replace .title  "<br>" "" | safeHTML  | anchorize }}"></a>
+        <div class="row justify-content-center">
+          <h1 class="col text-center">{{ .title }}</h1>
+          <div class="w-100"></div>
+          <div class="col-12 col-md-10 visual text-center {{if .videoid}}hover{{end}}">
+						<a {{with .videoid}}data-lity href="https://www.youtube.com/watch?v={{.}}"{{end}}>
+							<img src="{{ .image }}" alt="{{ .title }}">
+						</a>
+          </div>
+          <div class="col-12 content">
+            <div class="row justify-content-center">
+              <div class="col-10 col-md">
+                <div class="col">{{ .content | markdownify }}</div>
+              </div>
+              <div class="w-100"></div>
+              <form action="{{ $Site.Params.url.getInTouch }}" method="get">
+                <input class="hide" type="text" name="from" value="{{(printf "cta/%s" $Page.RelPermalink) | anchorize}}"/>
+                <button type="submit" name="button" class="opencell-btn">TRY NOW</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    {{ end }}
+
+    {{ partial "sections/getdemo.html" . }}
+    {{ partial "sections/mentions.html" . }}
+
+    {{ partial "script.html" }}
+    {{ partial "script-subnavigation.html" }}
+  </body>
+</html>

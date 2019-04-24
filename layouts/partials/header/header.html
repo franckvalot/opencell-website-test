@@ -1,0 +1,39 @@
+    <header class="hero" {{ if .background }}style="background-image: url('{{.background}}');"{{end}}>
+      <div class="header-content-inner">
+        <div id="carouselHeader" class="carousel slide row align-items-center" data-ride="carousel">
+          <ol class="carousel-indicators">
+            {{ range $index, $element := .carousel }}
+            <li data-target="#carouselHeader" data-slide-to="{{$index}}" {{if eq $index 0}}class="active"{{end}}></li>
+            {{end}}
+          </ol>
+          <div class="carousel-inner">
+            {{ range $index, $element := .carousel }}
+            <div class="carousel-item {{if eq $index 0}}active{{end}}">
+              <div class="row align-items-center h-100">
+                <div class="col">
+                  <h1>{{ $element.title | safeHTML }}</h1>
+                  <p>{{ $element.subtitle }}</p>
+                  {{ with $element.button }}
+                  {{ if (and .name .url)}}
+                  <form action="{{.url}}" method="get">
+                    <button class="opencell-btn" type="button" name="button">{{ .name}}</button>
+                  </form>
+                  {{ end }}
+                  {{ end }}
+                </div>
+
+              </div>
+            </div>
+            {{end}}
+          </div>
+          <a class="carousel-control-prev" href="#carouselHeader" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#carouselHeader" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+      </div>
+    </header>

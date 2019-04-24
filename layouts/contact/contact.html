@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+{{ $Data := .Params }}
+<html>
+  {{ partial "head.html" . }}
+  <body>
+    {{ partial "googletags.html" . }}
+	  {{ partial "header/navBar.html" . }}
+    {{ partial "header/smallheader.html" (dict "Data" $Data )}}
+    {{ with $Data.form }}
+    <section class="hero-1 contact">
+      <div class="container">
+        <div class="row justify-content-center">
+          <form class="col-12 col-md-9 content" action="{{.url}}" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+            <div class="row">
+              <h1 class="col-12">{{ .title }}</h1>
+              {{ range .fields }}
+              <div class="col-12">
+                <div>{{ .fieldlabel }} :</div>
+                {{if (eq .type "textarea")}}
+                <textarea type="text" value="" name="{{.fieldname}}" class="" id="mce-{{.fieldname}}" placeholder="{{.placeholder}}"></textarea>
+                {{ else }}
+                <input type="{{.type}}" value="" name="{{.fieldname}}" class="" id="mce-{{.fieldname}}" placeholder="{{.placeholder}}">
+                {{ end }}
+              </div>
+              {{ end }}
+              <div class="col-12 text-right">
+                <button type="submit" name="button" class="opencell-btn">{{ .button }}</button>
+              </div>
+            </div>
+          </form>
+          <div class="col-12 col-md-4 text-center info">
+            <div class="row align-items-center justify-content-center">
+              {{ range .infobox }}
+              <p class="col-12">{{ .paragraph | safeHTML }}</p>
+              {{ end }}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    {{ end }}
+
+    {{ partial "sections/getdemo.html" . }}
+    {{ partial "sections/mentions.html" . }}
+    {{ partial "script.html" }}
+  </body>
+</html>

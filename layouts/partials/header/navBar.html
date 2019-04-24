@@ -1,33 +1,59 @@
 <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-white">
       <div class="container">
-        <a class="navbar-brand" href="index.html"><img src="img/logo-opencell.svg" alt="Opencell-logo"></a>
+        <a class="navbar-brand" href="/index.html"><img src="/img/logo-opencell.svg" alt="Opencell-logo"></a>
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="#">PLATFORM</a>
+            <li class="nav-item dropdown">
+              <a class="nav-link" href="{{ .Site.Params.navbar.url.platform }}" id="navbarDropdownPlatform" role="button">PLATFORM</a>
+              <div class="dropdown-menu dropdown-menu-center" aria-labelledby="navbarDropdownPlatform">
+                <a class="dropdown-item" href="{{ .Site.Params.navbar.url.modules }}">Modules</a>
+                <a class="dropdown-item" href="{{ .Site.Params.navbar.url.technology }}">Technology</a>
+                <a class="dropdown-item" href="{{ .Site.Params.navbar.url.ecosystem }}">Ecosystem</a>
+              </div>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link" href="{{ .Site.Params.navbar.url.solution }}" id="navbarDropdownSolution" role="button">SOLUTION</a>
+              <div class="dropdown-menu dropdown-menu-center" aria-labelledby="navbarDropdownSolution">
+                <a class="dropdown-item" href="{{ .Site.Params.navbar.url.byIndustry }}">By industry</a>
+                <a class="dropdown-item" href="{{ .Site.Params.navbar.url.byRole }}">By role</a>
+              </div>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link" href="{{ .Site.Params.navbar.url.aboutus }}" id="navbarDropdownAboutus" role="button">ABOUT US</a>
+              <div class="dropdown-menu dropdown-menu-center" aria-labelledby="navbarDropdownAboutus">
+                <a class="dropdown-item" href="{{ .Site.Params.navbar.url.story }}">Story</a>
+                <a class="dropdown-item" href="{{ .Site.Params.navbar.url.businessModel }}">Business model</a>
+                <a class="dropdown-item" href="{{ .Site.Params.navbar.url.customers }}">Customers</a>
+                <a class="dropdown-item" href="{{ .Site.Params.navbar.url.partners }}">Partners</a>
+                <a class="dropdown-item" href="{{ .Site.Params.navbar.url.workplaceAndJobs }}">Workplace & jobs</a>
+                <a class="dropdown-item" href="{{ .Site.Params.navbar.url.pressreleases }}">Press releases</a>
+              </div>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">SOLUTION</a>
+              <a class="nav-link" href="{{ .Site.Params.navbar.url.support }}">SUPPORT</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">ABOUT US</a>
+              <a class="nav-link" href="{{ .Site.Params.navbar.url.contact }}">CONTACT</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">SUPPORT</a>
+              <a class="nav-link glyphicon glyphicon-search" href="#"></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">SEARCH</a>
+              <form action="{{.Site.Params.navbar.url.contact}}" method="get">
+                <input class="hide" type="text" name="from" value="{{(printf "navbar/%s" .Page.RelPermalink) | anchorize}}"/>
+                <button type="submit" class="opencell-btn">GET A DEMO</button>
+              </form>
             </li>
             <li class="nav-item">
-              <button type="button" name="getDemo" class="opencell-btn">GET A DEMO</button>
-            </li>
-            <li class="nav-item">
-              <button type="button" name="login" class="opencell-btn">LOG IN</button>
+              <form action="{{ .Site.Params.navbar.url.logIn }}" method="get">
+                <button type="submit" class="opencell-btn">LOG IN</button>
+              </form>
             </li>
           </ul>
         </div>
       </div>
     </nav>
+    <div class="navbar-spacer"></div>

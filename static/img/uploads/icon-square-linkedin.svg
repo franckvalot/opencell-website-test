@@ -1,0 +1,8 @@
+<svg id="icon-square-linkedin" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+  <rect id="square" data-name="square" width="32" height="32" fill="#007bb5"/>
+  <g id="Groupe_1" data-name="Groupe 1">
+    <rect id="Rectangle_1" data-name="Rectangle 1" width="4" height="14" transform="translate(7 11)" fill="#fff"/>
+    <path id="Tracé_5" data-name="Tracé 5" d="M20.5,11c-2.791,0-3.271,1.018-3.5,2V11H13V25h4V17a1.8,1.8,0,0,1,2-2,1.8,1.8,0,0,1,2,2v8h4V18C25,14,24.479,11,20.5,11Z" fill="#fff"/>
+    <circle id="Ellipse_1" data-name="Ellipse 1" cx="2" cy="2" r="2" transform="translate(7 6)" fill="#fff"/>
+  </g>
+</svg>

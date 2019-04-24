@@ -1,42 +1,20 @@
-    <section class="hero-1">
+    <section class="hero-1 whatmakesus">
       <div class="container">
         <div class="row justify-content-center">
-          <h1 class="col text-center">What makes us</h1>
+          <h1 class="col-12 text-center">{{ .title }}</h1>
         </div>
-        <div class="row  justify-content-center whatmakesus text-center">
-          <div class="col-8 col-md-4">
-            <div class="title-box text-center">POWERFUL</div>
-            <h2>FULL ORDER-TO-CASH CAPABILITY</h2>
-            <p>Our modular platform can totally or partially replace your existing solution.</p>
-            <h2>USER EXPERIENCE</h2>
-            <p>Role-based customized experiences  using our flexible portal.</p>
-            <h2>B2C, B2B OR B2B2C</h2>
-            <p>Multi-level customer hierarchy and commissioning capability.</p>
-            <h2>SCALABILITY</h2>
-            <p>Big data technology providing exceptional scalability at  low cost.</p>
+        <div class="row justify-content-center text-center">
+          {{ range .columns}}
+          <div class="col-12 col-md-4">
+            <div class="row justify-content-center align-items-center title">{{ .title | safeHTML }}</div>
+            {{ range .content }}
+            <div>
+              {{if .title }}<h2 class="row justify-content-center align-items-center">{{ .title }}</h2>{{end}}
+              {{if .text }}<p class="row justify-content-center">{{ .text }}</p>{{end}}
+            </div>
+            {{ end }}
           </div>
-          <div class="col-8 col-md-4">
-            <div class="title-box text-center">AGILE</div>
-            <h2>BEST CLASS IN APIs</h2>
-            <p>Over 400 rich APIs for quick configuration and easy integration.</p>
-            <h2>BUSINESS FIT</h2>
-            <p>Pre-configured templates for your industry.</p>
-            <h2>FLEXIBAL DATA MODEL</h2>
-            <p>Meet your requirements without custom developments.</p>
-            <h2>QUICK TIME-TO-MARKET</h2>
-            <p>Complex projects go-live in less than three months.</p>
-          </div>
-          <div class="col-8 col-md-4 col-lg-3">
-            <div class="title-box text-center">SIMPLE</div>
-            <h2>SIMPLE PRICING MODEL</h2>
-            <p>Easy to understand pricing adapted to customer business model.</p>
-            <h2>OPEN SOURCE</h2>
-            <p>No vendor lock-in means we work extra hard to keep customers happy.</p>
-            <h2>AUTONOMY</h2>
-            <p>Quick user adoption means you don’t need to rely on third-party services.</p>
-            <h2>CLOUD READY</h2>
-            <p>Deploy on private or public cloud or use our SaaS or managed hosting services.</p>
-          </div>
+          {{ end }}
         </div>
       </div>
     </section>

@@ -1,0 +1,22 @@
+      <div class="row justify-content-center text-left">
+        <div class="col col-md-10 col-lg-8 publication-date">
+          <div class="">
+            <span>Published on: </span>
+            <span>{{ dateFormat "02 Jan 2006" .Date }}</span>
+            {{if ne (dateFormat "02 Jan 2006" .Date) (dateFormat "02 Jan 2006" .Lastmod)}}
+            <span>, Modified on: </span>
+            <span>{{ dateFormat "02 Jan 2006" .Lastmod }}</span>
+            {{ end }}
+          </div>
+          <div class="">
+            <span>by: </span>
+            <span class="author">{{ .Params.author }}</span>
+          </div>
+        </div>
+        <hr class="w-100"></hr>
+        <h1 class="col col-md-10 col-lg-8">{{ .Title }}</h1>
+        <div class="w-100"></div>
+        <div class="col col-md-10 col-lg-8 markdown">
+          {{ .Content | markdownify }}
+        </div>
+      </div>

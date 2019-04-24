@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+{{ $Data := .Params }}
+{{ $Page := . }}
+
+<html>
+  {{ partial "head.html" . }}
+  <body>
+    {{ partial "googletags.html" . }}
+	  {{ partial "header/navBar.html" . }}
+    {{ partial "header/smallheader.html" (dict "Data" $Data) }}
+
+    {{ partial "sectiondescription.html" $Data.separator1}}
+
+    {{ range $Data.sections }}
+      {{ partial "logos.html" (dict "Data" . ) }}
+    {{ end }}
+
+
+    {{ partial "sectiondescription.html" $Data.separator2}}
+    {{ partial "testimonials.html" $Data.worktogether }}
+
+    <section class="hero-1">
+      <div class="container">
+        <div class="row justify-content-center">
+          <h2 class="col-10 col-md-6 col-lg-6 text-center">INTERESTING IN BECOMING A PARTNER? </h2>
+          <div class="w-100">
+          </div>
+          <form action="{{ .Site.Params.url.getInTouch }}" method="get">
+            <input class="hide" type="text" name="from" value="{{(printf "cta/%s" $Page.RelPermalink) | anchorize}}"/>
+            <button class="opencell-btn" type="submit" name="button">GET IN TOUCH</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    {{ partial "sections/getdemo.html" . }}
+    {{ partial "sections/mentions.html" . }}
+
+    {{ partial "script.html" }}
+    {{ partial "script-logos.html" }}
+  </body>
+</html>

@@ -1,0 +1,53 @@
+{{ if or (.item) (._postman_isSubFolder)}}
+    <div class="docs-item">
+      <div class="docs-desc">
+        <a class="anchor" id="{{ md5 .name}}"></a>
+        <h2 class="pm-h2 docs-desc-title docs-desc-title--folder">{{ .name }}</h2>
+        <div class="docs-desc-body pm-markdown">
+          {{ .description | markdownify }}
+        </div>
+      </div>
+    </div>
+    {{ range .item }}
+      {{ partial "doc/postmandocitem.html" . }}
+    {{ end }}
+{{ else }}
+  <div class="docs-desc">
+    <a class="anchor" id="{{ md5 .name}}"></a>
+    <div>
+      <h2 class="pm-h2 docs-desc-title docs-desc-title--request">
+        <span class="pm-method-color-{{ .request.method | lower}}">{{ .request.method | upper}} </span>{{ .name }}
+      </h2>
+      <div class="docs-desc-title__url">{{ .request.url.raw }}</div>
+    </div>
+    <div class="docs-desc-body">
+      <div class="pm-markdown"></div>
+      <div class="docs-request-headers">
+        <h4 class="pm-h4">Headers</h4>
+        <table class="pm-table docs-request-table">
+          <tbody>
+            {{ range .request.header }}
+            <tr>
+              <td class="weight--medium">{{ .key }}</td>
+              <td>{{.value}}<div class="pm-markdown docs-request-table__desc"></div></td>
+            </tr>
+            {{ end }}
+          </tbody>
+        </table>
+      </div>
+      {{ with .request }}
+      {{ if .body }}
+      <div class="docs-request-body">
+        <h4 class="pm-h4 docs-request-body__title">Body</h4>
+        <span class="docs-request-body__mode push-half--left">{{ .body.mode }} ({{ range .header}}{{if eq .key "Content-Type"}}{{.value}}{{end}}{{end}})</span>
+        <pre class="docs-request-body__raw">
+          <code>
+{{ .body.raw }}
+          </code>
+      </pre>
+    </div>
+    {{ end }}
+    {{ end }}
+    </div>
+  </div>
+{{ end }}

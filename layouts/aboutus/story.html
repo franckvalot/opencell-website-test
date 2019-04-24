@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+{{ $Data := .Params }}
+<html>
+  {{ partial "head.html" . }}
+  <body>
+    {{ partial "googletags.html" . }}
+	  {{ partial "header/navBar.html" . }}
+    {{ partial "header/smallheader.html" (dict "Data" $Data) }}
+
+    {{ partial "sectiondescription.html" $Data.separator1}}
+    <section class="hero-1 ourstory">
+      <div class="container">
+        {{ partial "titleanddescription.html" (dict "Data" $Data.ourstory) }}
+        <div class="row margin text-center">
+          {{ range $index, $element :=  $Data.ourstory.boxes }}
+          <div class="row align-items-center justify-content-center box">
+            <div>{{ .content }}</div>
+          </div>
+          {{ if and (eq (mod (add $index 1) 3) 0) (gt $index 0)}}
+          <div class="col-12 d-none d-md-block d-lg-none"></div>
+          {{ end }}
+          {{ end }}
+        </div>
+      </div>
+    </section>
+
+    {{ partial "sectiondescription.html" $Data.separator2}}
+
+    <section class="hero-1 leadership">
+      <div class="container">
+        <div class="row justify-content-center">
+          <h1 class="col-12 text-center">{{ $Data.leadership.title}}</h1>
+        </div>
+        <div class="row justify-content-center">
+          {{ range $Data.leadership.leaders }}
+          <div class="col-8 col-md-6 col-lg-4 box text-center">
+            <img src="{{ .url }}" alt="{{ .name }}">
+            <div>
+              <h2>{{ .name | upper }}</h2>
+              <p>{{ .position }}</p>
+              {{ with .socialnetworks }}
+              <div class="socialnetworks">
+                {{ range .}}
+                <a href="{{.url}}"><img src="{{ .icon }}" alt="{{ .name }}"></a>
+                {{ end }}
+              </div>
+              {{ end }}
+            </div>
+          </div>
+          {{ end }}
+        </div>
+      </div>
+    </section>
+
+    {{ partial "sectiondescription.html" $Data.separator3}}
+
+    {{ partial "logos.html" (dict "Data" $Data.investors) }}
+
+    {{ partial "sections/getdemo.html" . }}
+    {{ partial "sections/mentions.html" . }}
+
+    {{ partial "script.html" }}
+    {{ partial "script-logos.html" }}
+  </body>
+</html>

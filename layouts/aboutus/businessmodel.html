@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+{{ $Data := .Params }}
+<html>
+  {{ partial "head.html" . }}
+  <body>
+    {{ partial "googletags.html" . }}
+	  {{ partial "header/navBar.html" . }}
+    {{ partial "header/smallheader.html" (dict "Data" $Data) }}
+
+    {{ partial "sectiondescription.html" $Data.separator1}}
+    <section class="hero-1">
+      <div class="container">
+        {{ partial "titleanddescription.html" (dict "Data" $Data.introduction) }}
+      </div>
+    </section>
+
+    <section class="hero-1 businessmodel reduce-margin">
+      <div class="container">
+        <div class="row justify-content-center">
+          {{ range $Data.boxes }}
+          <div class="col-11 col-md-5 text-center box">
+            <div class="row justify-content-center">
+              <img src="{{ .url }}" alt="icon">
+              <h2 class="col-12">{{ .title }}</h2>
+              <p class="col-12">{{ .description }}</p>
+            </div>
+          </div>
+          {{ end }}
+        </div>
+      </div>
+    </section>
+
+
+
+    {{ partial "sections/getdemo.html" . }}
+    {{ partial "sections/mentions.html" . }}
+
+    {{ partial "script.html" }}
+  </body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+{{ $Data := .Params }}
+<html>
+  {{ partial "head.html" . }}
+  <body>
+    {{ partial "googletags.html" . }}
+	  {{ partial "header/navBar.html" . }}
+    {{ partial "header/smallheader.html" (dict "Data" $Data) }}
+
+    {{ partial "sectiondescription.html" $Data.separator1}}
+    <section class="hero-1">
+      <div class="container">
+        {{ partial "titleanddescription.html" (dict "Data" $Data.introduction) }}
+        <div id="carouselWorkplace" class="carousel slide" data-ride="carousel">
+          <div class="carousel-inner testimonials">
+            {{ range $index, $element := $Data.workplace }}
+            <div class="carousel-item {{if eq $index 0}}active{{end}}">
+              <div class="row justify-content-center align-items-center h-100">
+                <div class="col">
+                  <img class="img-fluid" src="{{ $element.url }}" alt="{{ $element.alt }}">
+                </div>
+              </div>
+            </div>
+            {{ end }}
+          </div>
+          <a class="carousel-control-prev" href="#carouselWorkplace" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#carouselWorkplace" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    {{ partial "sectiondescription.html" $Data.separator2}}
+    <section class="hero-1 jobs">
+      <div class="container">
+        <div class="row justify-content-center">
+          <h1 class="col-12 text-center">Jobs</h1>
+        </div>
+        <div class="row justify-content-center">
+          {{ range (where .Site.Pages "Type" "=" "jobs") }}
+          {{ if .IsPage }}
+            {{ partial "article.html" . }}
+          {{ end }}
+          {{ end }}
+        </div>
+      </div>
+    </section>
+
+
+    {{ partial "sections/getdemo.html" . }}
+    {{ partial "sections/mentions.html" . }}
+
+    {{ partial "script.html" }}
+  </body>
+</html>

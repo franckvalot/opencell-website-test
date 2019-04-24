@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+{{ $Data := .Params }}
+{{ $Page := . }}
+<html>
+  {{ partial "head.html" . }}
+  <body>
+      {{ partial "googletags.html" . }}\n\t{{ partial "googletags.html" . }}
+	  {{ partial "header/navBar.html" . }}
+    {{ partial "header/smallheader.html" (dict "Data" $Data) }}
+
+
+    <section class="byrole navigation">
+      <div class="navigation text-center">
+        <div class="container">
+          {{ range $Data.roles }}
+            <h2 class="navigation">
+              <a href="#{{ anchorize .nav }}">{{ .nav | upper}}</a>
+            </h2>
+          {{ end }}
+        </div>
+      </div>
+    </section>
+
+    {{ partial "sectiondescription.html" $Data.separator1}}
+    {{ range $Data.roles }}
+    <section class="hero-1 byrole alternate" >
+      <div class="container">
+        <a class="anchor" id="{{ anchorize .nav }}"></a>
+        <div class="row justify-content-center">
+          <div class="col-6 col-md-5 img">
+            <img src="{{ .url }}" class="img-fluid" alt="{{ .title }}">
+          </div>
+          <div class="col-10 col-md-10 content">
+            <h1>{{ .title }}</h1>
+            <h2>BACKGROUND</h2>
+            <p>{{ .background }}</p>
+            <h2>BENEFITS</h2>
+            <ul>
+              {{ range .benefits }}
+              <li>{{ .benefit }}</li>
+              {{ end}}
+            </ul>
+            <form class="text-left" action="{{ .Site.Params.url.getInTouch }}" method="get">
+                <input class="hide" type="text" name="from" value="{{(printf "cta/%s" $Page.RelPermalink) | anchorize}}"/>
+              <button type="submit" name="button" class="opencell-btn">TRY NOW</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    {{ end }}
+
+    {{ partial "sections/getdemo.html" . }}
+    {{ partial "sections/mentions.html" . }}
+
+    {{ partial "script.html" }}
+    {{ partial "script-subnavigation.html" }}
+  </body>
+</html>

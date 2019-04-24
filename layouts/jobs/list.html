@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+{{ $Data := .Site.Data.aboutus.pressreleases }}
+<html>
+  {{ partial "head.html" . }}
+  <body>
+    {{ partial "googletags.html" . }}
+	  {{ partial "header/navBar.html" . }}
+    {{ partial "header/smallheader.html" (dict "Title" "Job Offers") }}
+
+    <section class="hero-1">
+      <div class="container">
+        <div class="row justify-content-center">
+          {{ range .Pages }}
+          {{ if .IsPage }}
+            {{ partial "article.html" . }}
+          {{ end }}
+          {{ end }}
+        </div>
+      </div>
+    </section>
+
+    {{ partial "sections/getdemo.html" . }}
+    {{ partial "sections/mentions.html" . }}
+
+    {{ partial "script.html" }}
+  </body>
+</html>

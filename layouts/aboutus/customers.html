@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+{{ $Data := .Params }}
+<html>
+  {{ partial "head.html" . }}
+  <body>
+    {{ partial "googletags.html" . }}
+	  {{ partial "header/navBar.html" . }}
+    {{ partial "header/smallheader.html" (dict "Data" $Data) }}
+
+    {{ partial "sectiondescription.html" $Data.separator1}}
+    {{ range $Data.sections }}
+    <section class="hero-1 customers">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col list">
+            <div class="row align-items-center text-center box">
+              <h1>{{ .title }}</h1>
+            </div>
+            <ul>
+              {{ range .logos }}
+              <li><h2>{{ .alt | upper }}</h2></li>
+              {{ end }}
+            </ul>
+          </div>
+          <div class="col-12 col-md-8 col-lg-10 logos">
+            <div class="row align-items-center justify-content-center">
+              {{ range .logos }}
+              <div class="col-6 col-lg-4">
+                <img src="{{ .url }}" class="img-fluid" alt="{{ .alt }}">
+              </div>
+              {{ end }}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    {{ end }}
+
+
+    {{ partial "sections/getdemo.html" . }}
+    {{ partial "sections/mentions.html" . }}
+
+    {{ partial "script.html" }}
+  </body>
+</html>

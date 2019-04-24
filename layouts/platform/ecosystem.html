@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+{{ $Data := .Params }}
+<html>
+  {{ partial "head.html" . }}
+  <body>
+      {{ partial "googletags.html" . }}\n\t{{ partial "googletags.html" . }}
+	  {{ partial "header/navBar.html" . }}
+    {{ partial "header/smallheader.html" (dict "Data" $Data) }}
+    {{ partial "sectiondescription.html" $Data.separator1 }}
+    <section class="hero-1">
+      <div class="container">
+        {{ partial "titleanddescription.html" (dict "Data" $Data.introduction) }}
+      </div>
+    </section>
+
+    <section class="hero-1 d-none d-md-block reduce-margin ecosystem">
+      <div class="navigation text-center">
+        <div class="container">
+        {{ range $Data.modulestags }}
+          <h2 class="navigation">
+            <a class="cursor" data-target="{{ anchorize . }}">{{ . | upper}}</a>
+          </h2>
+        {{ end }}
+        </div>
+      </div>
+    </section>
+
+    <section class="hero-1 d-none d-md-block reduce-margin text-center">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-6 rosace">
+            {{ .RawContent | safeHTML }}
+          </div>
+          <div class="col rosace">
+            <div class="row align-items-center justify-content-center logos">
+              {{ $scratch := newScratch }}
+              {{ range $Data.customers.logos }}
+              {{range .tags}}{{ $scratch.Add "tags" (slice (anchorize .))}}{{end}}
+              <div class="col-4">
+                {{with .link}}{{if (and .url .target)}}<a href="{{.url}}" {{if eq .target "external"}}target="_blank"{{end}}>{{end}}{{end}}<img src="{{ .url }}" class="img-fluid {{ if .description }} cursor{{end}}" alt="{{ .alt }}" {{if .tags}} data-tags="{{ jsonify ($scratch.Get "tags" )}}"{{ end }}>  {{with .link}}{{if (and .url .target)}}</a>{{end}}{{end}}
+              </div>
+              {{ $scratch.Delete "tags"}}
+              {{ end }}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    {{ partial "sections/getdemo.html" . }}
+    {{ partial "sections/mentions.html" . }}
+
+    {{ partial "script.html" }}
+    <script type="text/javascript">
+      var logosdata = $('.rosace .logos > div').clone();
+      function hasCommonElement(arr1,arr2)
+      {
+         var bExists = false;
+         $.each(arr2, function(index, value){
+
+           if($.inArray(value,arr1)!=-1){
+              bExists = true;
+           }
+
+           if(bExists){
+               return false;  //break
+           }
+         });
+         return bExists;
+      }
+
+      function resetLogos(){
+        $('.rosace .logos>div').remove();
+        $('.rosace .logos').append(logosdata);
+      }
+      function resetAll(){
+        resetRosace();
+        resetLogos();
+
+      }
+      function filterLogos(currentTag){
+        if(currentTag){
+          resetLogos();
+          $('.rosace .logos>div').filter(function(){
+            return !hasCommonElement([currentTag],$(this).find('img').data('tags'));
+          }).remove();
+        }
+        else{
+          resetAll();
+        }
+      }
+      $('h2.navigation').click(function () {
+        $(this).siblings().children('a').removeClass('active');
+        $(this).children('a').toggleClass('active');
+
+        var currentTag =  $(this).children('a.active').data('target');
+
+        filterLogos(currentTag);
+
+        setActiveModule($("svg#rosace .rosace > *[data-target=\""+ currentTag +"\"]"));
+        updateRosace($("svg#rosace .rosace > *[data-target=\""+ currentTag+"\"]"));
+
+      });
+    </script>
+    <script type="text/javascript">
+      function activeParents(item){
+        var dataparents = item.data("parents")
+        var parents=null;
+        if(dataparents){
+          parents = dataparents.split(" ");
+          for(var i = 0; i<parents.length; i++){
+            activeParents($("#"+parents[i]));
+            $("#"+parents[i]).removeClass("innactive");
+          }
+        }
+      }
+
+      function hoverParents(item){
+        var dataparents = item.data("parents")
+        var parents=null;
+        if(dataparents){
+          parents = dataparents.split(" ");
+          for(var i = 0; i<parents.length; i++){
+            hoverParents($("#"+parents[i]));
+            $("#"+parents[i]).addClass("hover");
+          }
+        }
+      }
+
+      function updateRosace(item){
+        item.siblings().addClass("innactive");
+        item.removeClass("innactive");
+        activeParents(item);
+      }
+
+      function resetRosace(){
+        $("svg#rosace .rosace > *").removeClass("active");
+        $("svg#rosace .rosace > *").removeClass("innactive");
+      }
+
+      function hoverRosace(item){
+        $("#rosace .hover").removeClass("hover");
+        item.addClass("hover");
+        hoverParents(item);
+      }
+
+      function setActiveModule(item){
+        item.siblings().removeClass("active");
+        item.addClass("active");
+        updateRosace(item);
+      }
+
+      $( document ).ready(function() {
+        $("svg#rosace .rosace > *:not(.disabled)").click(
+          function(){
+            if($(this).hasClass("active")){
+              resetAll();
+              $('h2.navigation').children("a").removeClass('active');
+            }
+            else{
+              var currentTag =  $(this).data('target');
+              $('h2.navigation').children("a").removeClass('active');
+              $('h2.navigation').children("a[data-target=\""+ currentTag+"\"]").addClass('active');
+              setActiveModule($(this));
+              filterLogos(currentTag);
+            }
+          }
+        )
+        $("svg#rosace .rosace > *").hover(
+          function(){
+            hoverRosace($(this));
+          },
+          function(){
+            $("#rosace .hover").removeClass("hover");
+          }
+        )
+      });
+    </script>
+  </body>
+</html>

@@ -1,24 +1,25 @@
+{{ $Params := .Site.Params }}
     <section class="footer">
       <div class="container">
-        <div class="row justify-content-center text-center text-md-left footer">
-          <div class="col-12 col-md-12 col-lg-4">
-            <a class="mention-logo" href="index.html"><img src="img/logo-opencell-white.svg" alt="Opencell-logo"></a>
+        <div class="row justify-content-center text-center text-md-left">
+          <div class="col-12 col-md-12 col-lg-3">
+            <a class="mention-logo" href="index.html"><img src="/img/logo-opencell-white.svg" alt="Opencell-logo"></a>
             <div class="copyright">
-              © OpenCell 2018 <br>
+              © Opencell 2019 <br>
               Designed by Actes Studio
             </div>
           </div>
-          <div class="col-12 col-sm-6 col-md-3 col-lg-2">
+          <div class="links">
             <h1>Sitemap</h1>
             <ul>
-              <li>Platform</li>
-              <li>Solution</li>
-              <li>About Us</li>
-              <li>Support</li>
-              <li>Contact</li>
+              <li><a href="{{ $Params.navbar.url.platform }}">Platform</a></li>
+              <li><a href="{{ $Params.navbar.url.solution }}">Solution</a></li>
+              <li><a href="{{ $Params.navbar.url.aboutUs }}">About Us</a></li>
+              <li><a href="{{ $Params.navbar.url.support }}">Support</a></li>
+              <li><a href="{{ $Params.url.contact }}">Contact</a></li>
             </ul>
           </div>
-          <div class="col-12 col-sm-6 col-md-3 col-lg-2">
+          <div class="links">
             <h1>Case Studies</h1>
             <ul>
               <li>Actility</li>
@@ -27,19 +28,20 @@
               <li>Diabolocom</li>
             </ul>
           </div>
-          <div class="col-12 col-sm-6 col-md-3 col-lg-2">
-            <h1>Ressources</h1>
+          <div class="links">
+            <h1>Resources</h1>
             <ul>
-              <li>Video</li>
-              <li>Webinar</li>
-              <li>Blog</li>
+              <li><a href="{{ $Params.resources.url.knowledgecenter }}">Knowledge center</a></li>
+              <li><a href="{{ $Params.resources.url.blog }}">Blog</a></li>
+              <li><a href="{{ $Params.resources.url.video }}">Video</a></li>
+              <li><a href="{{ $Params.resources.url.webinar }}">Webinar</a></li>
             </ul>
           </div>
-          <div class="col-12 col-sm-6 col-md-3 col-lg-2">
+          <div class="links">
             <h1>Legal</h1>
             <ul>
               <li>Terms & Conditions</li>
-              <li>Confidientiality</li>
+              <li>Confidentiality</li>
               <li>Licensing & Download</li>
             </ul>
           </div>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+{{ $currentPage := .}}
+<html>
+  {{ partial "head.html" . }}
+  <body>
+      {{ partial "googletags.html" . }}\n\t{{ partial "googletags.html" . }}
+	  {{ partial "header/navBar.html" . }}
+
+    <section class="hero-1 releaseschedule">
+      <div class="container">
+        {{ partial "blogs/content.html" . }}
+    </section>
+
+    <aside id="comments" class="hero-1">
+      <div class="container">
+        <div><h3>Comments</h3></div>
+        {{ template "_internal/disqus.html" . }}
+      </div>
+    </aside>
+
+    {{ partial "sections/getdemo.html" . }}
+    {{ partial "sections/mentions.html" . }}
+
+    {{ partial "script.html" }}
+  </body>
+</html>
