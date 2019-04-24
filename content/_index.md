@@ -107,7 +107,7 @@ ourcustomers:
       url: /img/uploads/logo-dona.svg
     - alt: Acetiam
       url: /img/uploads/logo-gunster.svg
-    - alt: Diabolocom
+    - alt: Fnac Darty
       url: /img/uploads/logo-mosaic.svg
     - alt: Actility
       url: /img/uploads/logo-eckerd.svg
@@ -123,7 +123,7 @@ separator6:
   description: Testimonials
   number: '05'
 worktogether:
-  subtitle: Hear it from our customers
+  subtitle: ' '
   testimonials:
     - author: Olivier Hersent
       portrait: ''
@@ -154,7 +154,7 @@ worktogether:
         proof of concept workshop were quickly developed and integrated into the
         core open source model. The support team was very proactive and quickly
         helped us to resolve all technical issues....
-  title: What they're saying
+  title: Hear it from our customers
 separator7:
   description: Additional resources
   number: '06'
