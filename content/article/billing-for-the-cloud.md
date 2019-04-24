@@ -7,7 +7,7 @@ description: >-
   Cloud service providers require sophisticated monetization and billing
   go-to-market strategies that will serve as strategic differentiators in a
   hyper-competitive market.
-author: Ethan Beardsley
+author: Ethan
 date: 2016-08-17T08:05:55.197Z
 articlestags:
   - billing
