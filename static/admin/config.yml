@@ -348,7 +348,7 @@ collections:
             fields:
               - {label: Title, name: title, widget: string}
               - {label: Navigation title, name: nav, widget: string}
-              - {label: Video Id, name: videoid, widget: string}
+              - {label: Video Id, name: videoid, widget: string, required: false}
               - {label: Content, name: content, widget: markdown}
               - {label: Image, name: image, widget: image}
           - {label: Markdown, name: body, widget: hidden}
