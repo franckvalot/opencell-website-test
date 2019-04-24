@@ -171,12 +171,12 @@ modules:
     title: Marketing manager
   - contents:
       - content: >-
-          Our customer care provides the 360° view that your customer service,
-          contract administration teams and third-party partners need to give
-          quick responses to customers when they need to change their address,
-          cancel or renew their contracts or apply a refund or credit. Workflow
-          processes can be used to create or validate customer offers, manage or
-          validate creation of customer accounts.
+          Our customer care provides the 360° view and capability that your
+          customer service, contract administration teams as well as third-party
+          partners need when they need to change their address, cancel or renew
+          their contracts or apply a refund or credit. Workflow processes can be
+          used to create or validate customer offers, manage or validate
+          creation of customer accounts.
 
 
           If you don’t have a need for a full-fledged CRM system, our customer
