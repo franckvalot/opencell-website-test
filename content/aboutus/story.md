@@ -1,4 +1,5 @@
 ---
+pagetitle: Open source monetization platform - Opencell
 layout: story
 title: We want to do things differently.
 subtitle: Bringing agility and simplicity to enterprise B2B software.
@@ -10,7 +11,7 @@ ourstory:
   boxes:
     - content: 280% revenue growth in 2018
     - content: 40 references in multiple industries.
-    - content: 3M € in cumulative funding
+    - content: 3M€ in cumulative funding
     - content: 1.2M€ in annual R&D spending
     - content: 55 FTEs based primarily in France and Morocco.
   content: >-
@@ -20,8 +21,8 @@ ourstory:
 
     Our mission is to provide the first agile monetization platform capable of
     filling the gap between costly and complex vertical billing solutions used
-    by telci and utility players and the rigid "one size fits all" SaaS
-    solutions that cover only  the most basic requirements.
+    by incumbent telco and utility players and the overly simple "one size fits
+    all" SaaS solutions that cover only the most basic requirements.
 
 
     Opencell is now the leading open source monetization platform with over 40
@@ -89,5 +90,6 @@ investors:
       url: /img/uploads/logo-kima.png
     - alt: BPI France
       url: /img/uploads/logo-bpifrance.png
-  title: Financed for growth.
+  title: Financed for growth
 ---
+
