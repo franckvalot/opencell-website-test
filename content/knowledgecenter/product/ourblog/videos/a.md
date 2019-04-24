@@ -1,15 +1,13 @@
 ---
 type: blogvideo
 draft: false
-title: Customer stories | Episode 1 | Actility
+title: Customer stories | Episode 1 | Actitily
 subtitle: Subtitle
-description: Blablabla
+description: ''
 author: Franck Valot
 date: 2019-01-17T08:05:55.197Z
 videostags:
-  - one
-  - two
-  - three
+  - Interview
 videoid: RUML7IH2JnM
 ---
 ## Customer stories | Episode 1 | Actility
