@@ -2,7 +2,7 @@
 title: 'Getting ready for everything as a service - Opencell '
 subtitle: How digital services are transforming enterprise IT requirements.
 author: Ethan
-date: 2019-04-24T05:26:10.760Z
+date: 2016-08-10T05:26:10.760Z
 thumbnail: /img/uploads/header-press.jpg
 ---
 
