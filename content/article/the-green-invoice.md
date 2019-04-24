@@ -1,9 +1,8 @@
 ---
-draft: 'false'
 title: The green invoice
 subtitle: How smart billing can help create a greener economy
 author: Ethan
-date: 2015-10-20T18:17:04.075Z
+date: 2015-10-19T18:17:04.075Z
 articlestags:
   - billing
   - utilities
