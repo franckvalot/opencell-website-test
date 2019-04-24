@@ -1,5 +1,4 @@
 ---
-type: blogvideo
 draft: false
 title: Customer stories | Episode 1 | Actility
 subtitle: Subtitle

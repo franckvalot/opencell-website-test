@@ -1,17 +1,15 @@
 ---
-type: blogarticle
 draft: false
-title: Insérer ici le titre de l'article
-subtitle: ' '
-description: This is a description of the article
-author: Franck
-date: 2019-01-27T17:00:00.000Z
-articlestags:
-  - ''
-thumbnail: /img/uploads/portrait3.jpg
+title: Customer stories | Episode 3 | Sofrecom
+subtitle: Subtitle
+description: Blablabla
+author: Franck Valot
+videoid: NvCVdZyY9fI
+date: 2019-01-17T08:05:55.197Z
+videostags: [four, five]
 ---
 
-## LOREM IPSUM DOLOR SIT AMET CONSECTUR ADIPISCING ELIT.
+## Customer stories | Episode 3 | Sofrecom
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. In id leo vestibulum, pharetra lectus nec, condimentum risus. Praesent sed ornare nisi. Pellentesque elementum, tortor in cursus viverra, sapien turpis accumsan tortor, eget sodales magna massa convallis neque. Aenean convallis efficitur metus. Nunc in massa vel mi molestie interdum id eget est. Mauris quis gravida nisl. Nam quis suscipit massa. Nulla rhoncus sapien ut tempus pulvinar. Morbi aliquam, lectus sit amet auctor convallis, nulla elit faucibus ante, ut convallis nunc mauris faucibus tortor. Nam mattis auctor massa eu condimentum. Suspendisse a velit elementum, porttitor nisi quis, venenatis urna.
 

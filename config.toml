@@ -29,8 +29,8 @@ enableEmoji = "true"
   [params.resources]
     [params.resources.url]
       knowledgecenter = "/knowledgecenter/"
-      blog = "/knowledgecenter/product/ourblog/articles/"
-      video = "/knowledgecenter/product/ourblog/videos/"
+      blog = "/article/"
+      video = "/video/"
       webinar = "/webinar/"
       releaseschedule = "/knowledgecenter/developer/releaseschedule/"
       releases = "/knowledgecenter/developer/releases/"

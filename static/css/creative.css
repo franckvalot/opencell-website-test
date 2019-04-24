@@ -1586,6 +1586,10 @@ section.ecosystem{
     padding-bottom: 0;
   }
 
+  section.read-more .description > div {
+    margin-top: 20px;
+  }
+
   .blog .tags,
   .video .tags,
   .releases .tags{

@@ -1,5 +1,4 @@
 ---
-type: blogarticle
 draft: 'false'
 title: Billing for the cloud
 subtitle: >-
@@ -8,7 +7,7 @@ subtitle: >-
 description: >-
   Cloud service providers require sophisticated monetization and billing
   go-to-market strategies that will serve as strategic differentiators in a
-  hyper-competitive market. 
+  hyper-competitive market.
 author: Ethan Beardsley
 date: 2019-01-17T08:05:55.197Z
 articlestags:
@@ -25,7 +24,7 @@ In this article, we'll discuss the key drivers of cloud provider monetization mo
 
 # Different needs for different businesses
 
-Cloud providers seek to align billing metrics with service usage. Consequently, the monetization models will differ according to service type. 
+Cloud providers seek to align billing metrics with service usage. Consequently, the monetization models will differ according to service type.
 
 ## Infrastructure as a service (Iaas)
 
@@ -79,13 +78,13 @@ For IaaS businesses, you'll probably need to look at convergent billing systems 
 
 If you're running a SaaS business, you might be able to start with simpler solutions that will focus more on managing recurring subscriptions but this could have certain drawbacks, particularly in terms of managing the complexity of the underlying infrastructure if you're considering running your SaaS business on a public cloud.
 
-Here's a checklist of some of the key features and requirements that you should consider when choosing your billing system. 
+Here's a checklist of some of the key features and requirements that you should consider when choosing your billing system.
 
 ## Mediation and event management
 
 IaaS cloud providers, in particular, will need to develop offers adapted to big data and IoT clouds. This will require the ability to aggregate huge quantities of data points, such as API calls or data series, to create ratable, billable information. This capability will probably constitute a significant strategic differentiator for smaller IaaS players focused on creating aggregated offers using the cloud offerings of the "hyperscale" public cloud players.
 
-Cloud providers that anticipate the need to mediate and aggregate a large number of events should therefore look carefully at available mediation and data integration options (integrated or third party) when selecting their billing solution. 
+Cloud providers that anticipate the need to mediate and aggregate a large number of events should therefore look carefully at available mediation and data integration options (integrated or third party) when selecting their billing solution.
 
 ## Complex charging
 
@@ -98,7 +97,7 @@ IaaS providers, and to a lesser extent PaaS and SaaS providers, need to be able 
 * Tiered: 0-10 units for $2. 10-20 units for $1.5. 20-30 units for $1 each.
 * Minimum fee: $10 per month minimum + $1per item consumed.
 * Capped: $1 per unit consumed with maximum of $20 month
-* Additional complexity will come if you need to manage prepaid wallets and capping scenarios. 
+* Additional complexity will come if you need to manage prepaid wallets and capping scenarios.
 
 ## Back-to-back billing
 
@@ -106,19 +105,19 @@ Many cloud providers function as resellers of services provided by hyperscale pr
 
 Allocating these costs against customers and creating invoices manually is an incredibly complex labor-intensive and error-prone process. Use of inadequate tools that don't accurately reprocess usage can result in reduced margins.
 
-In evaluating a billing solution, all cloud providers should make sure that it allows a smooth recharging of cloud infrastructure spending against customized price plans. If you want to bill back-to-back, you'll need to make sure that your billing solution can mirror that of your underlying IaaS provider. 
+In evaluating a billing solution, all cloud providers should make sure that it allows a smooth recharging of cloud infrastructure spending against customized price plans. If you want to bill back-to-back, you'll need to make sure that your billing solution can mirror that of your underlying IaaS provider.
 
 ## Discounts
 
 Almost all cloud providers will need to be able to manage incentives and cross-discounts (e.g., "If you buy services from Cloud A, you can get services from Cloud B at a different discount.").
 
-Your billing system should be able to handle tiered discounts, where the enterprise price point decreases "per unit" for higher usage, or for usage in off peak time periods, reflecting the desire to incent customers to spread processing as much as possible and thus maximize the utilization of the cloud provider infrastructure. 
+Your billing system should be able to handle tiered discounts, where the enterprise price point decreases "per unit" for higher usage, or for usage in off peak time periods, reflecting the desire to incent customers to spread processing as much as possible and thus maximize the utilization of the cloud provider infrastructure.
 
 ## Customer management
 
 Flexibility in defining the billing entity is critical, particularly in dealing with large enterprise customers. A billing entity could be an enterprise, enterprise department, enterprise project, or a government agency. Such customer entities can be changed as departments merge or new departments are created. With cloud computing's "pay per use" model, defining and redefining customer entities must be handled by cloud billing systems since it will be expected by major corporate customers.
 
-You should make sure that sure that you provide provides the organizational flexibility to bill at all levels of your client's organizational hierarchy. Ability to perform billing at a detailed level will add significant value for your end customers, particularly in a context where hyperscale players struggle to provide detailed billing information. 
+You should make sure that sure that you provide provides the organizational flexibility to bill at all levels of your client's organizational hierarchy. Ability to perform billing at a detailed level will add significant value for your end customers, particularly in a context where hyperscale players struggle to provide detailed billing information.
 
 ## Vendor management
 
@@ -126,7 +125,7 @@ Cloud providers, in particular SaaS providers often partner with other IaaS prov
 
 For this reason, they need to keep track of not only the enterprise balance per business unit or department, but also the partner balance, so that they can settle with the partner. Such balance may be maintained per module, or even per module combined with embedded technology from another partner (e.g., software license + database).
 
-It is particularly important that the cloud provider understand all of these costs in order to create a working usage-based model for the enterprise customer. Having the power to dynamically model and compare IaaS offers also provides SaaS vendors to dynamically arbitrage cloud IaaS solutions and drive bottom-line efficiencies. 
+It is particularly important that the cloud provider understand all of these costs in order to create a working usage-based model for the enterprise customer. Having the power to dynamically model and compare IaaS offers also provides SaaS vendors to dynamically arbitrage cloud IaaS solutions and drive bottom-line efficiencies.
 
 ## Multi-channel and self-service
 

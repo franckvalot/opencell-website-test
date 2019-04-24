@@ -713,7 +713,6 @@ collections:
     folder: "content/casestudies"
     create: true
     fields:
-      - {label: Draft,  name: draft, widget: select, options: ['true', 'false'], default: 'true'}
       - {label: Type, name: type, widget: hidden, default: casestudies}
       - {label: Page title, name: pagetitle, widget: string}
       - {label: Title, name: title, widget: string}
@@ -740,11 +739,9 @@ collections:
       - {label: Body, name: body, widget: hidden}
   - label: Our Blog - Articles
     name: "blogarticle"
-    folder: "content/knowledgecenter/product/ourblog/articles"
+    folder: "content/articles"
     create: true
     fields:
-      - {label: Type, name: type, widget: hidden, default: blogarticle}
-      - {label: Draft,  name: draft, widget: select, options: ['true', 'false'], default: 'true'}
       - {label: Title, name: title, widget: string}
       - {label: Subtitle, name: subtitle, widget: string}
       - {label: Description, name: description, widget: text, required: false}
@@ -758,11 +755,9 @@ collections:
       - {label: Body, name: body, widget: markdown}
   - label: Our Blog - Videos
     name: "blogvideo"
-    folder: "content/knowledgecenter/product/ourblog/videos"
+    folder: "content/videos"
     create: true
     fields:
-    - {label: Type, name: type, widget: hidden, default: blogvideo}
-    - {label: Draft,  name: draft, widget: select, options: ['true', 'false'], default: 'true'}
     - {label: Title, name: title, widget: string}
     - {label: Subtitle, name: subtitle, widget: string}
     - {label: Description, name: description, widget: text, required: false}
@@ -780,7 +775,6 @@ collections:
     create: true
     fields:
     - {label: Type, name: type, widget: hidden, default: releases}
-    - {label: Draft,  name: draft, widget: select, options: ['true', 'false'], default: 'true'}
     - {label: Title, name: title, widget: string}
     - {label: Subtitle, name: subtitle, widget: string}
     - {label: Description, name: description, widget: text, required: false}
@@ -797,7 +791,6 @@ collections:
     create: true
     fields:
     - {label: Type, name: type, widget: hidden, default: releaseschedule}
-    - {label: Draft,  name: draft, widget: select, options: ['true', 'false'], default: 'true'}
     - {label: Title, name: title, widget: string}
     - {label: Subtitle, name: subtitle, widget: string}
     - {label: Description, name: description, widget: text, required: false}
@@ -809,7 +802,6 @@ collections:
     folder: "content/jobs"
     create: true
     fields:
-      - {label: Draft,  name: draft, widget: select, options: ['true', 'false'], default: 'true'}
       - {label: Title, name: title, widget: string}
       - {label: Subtitle, name: subtitle, widget: string}
       - {label: Description, name: description, widget: text}
@@ -835,7 +827,6 @@ collections:
     folder: content/documents
     create: true
     fields:
-      - {label: Draft,  name: draft, widget: select, options: ['true', 'false'], default: 'true'}
       - {label: Type of documents, name: type, widget: string}
       - {label: Section of documents, name: section, widget: string}
       - {label: Title, name: title, widget: string}
