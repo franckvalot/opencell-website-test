@@ -4,7 +4,9 @@ layout: technology
 title: Powerful and scalable.
 subtitle: We use the latest open source technologies.
 background: /img/uploads/header-platform.jpg
-separator1: {}
+separator1:
+  description: Our platform
+  number: '01'
 introduction:
   content: >-
     With billions of connected users and objects, usage-based services face
@@ -34,7 +36,9 @@ boxes:
       Built-in monitoring and alerting tools detect system errors as well as
       component status and performance. All relevant events are logged and
       accessible on our portal.
-separator2: {}
+separator2:
+  description: Our toolbox
+  number: '02'
 businesslogic:
   - alt: Business logic
     content: >-
@@ -116,7 +120,9 @@ businesslogic:
       * Extension library
     title: Integrate with other systems
     url: /img/uploads/data-collection.svg
-separator3: {}
+separator3:
+  description: Our core technologies
+  number: '03'
 technologies:
   introduction:
     content: >-
