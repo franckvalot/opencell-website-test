@@ -1,11 +1,10 @@
 ---
+pagetitle: Vertical monetization solutions for your industry - Opencell
 layout: byindustry
 title: We have the right solution<br>for your industry.
 subtitle: Our agile monetization platform<br> can adapt to your business need.
 background: /img/uploads/header-solution-industry.jpg
-separator1:
-  number:
-  description:
+separator1: {}
 industries:
   - content: >-
       ## CRITICAL FEATURES
@@ -30,9 +29,9 @@ industries:
       * Orange
 
       * Salt Mobile
-    nav: TELCO
-    title: Telecom
     image: /img/uploads/industry-telco-and-iot.jpg
+    nav: TELCO
+    title: 'Telecom, cloud & IoT'
   - content: >-
       ## CRITICAL FEATURES
 
@@ -58,9 +57,9 @@ industries:
       * Rensource
 
       * Total Spring
-    nav: 'UTILITIES '
-    title: Energy
     image: /img/uploads/industry-utility.jpg
+    nav: 'UTILITIES '
+    title: Energy & utilities
   - content: >-
       ## CRITICAL FEATURES
 
@@ -75,14 +74,14 @@ industries:
 
       * Brisa
 
-      * Ile de France Mobilités
-
       * PSA
 
-      * Velib 2
+      * Smoove
+
+      * Worldline
+    image: /img/uploads/industry-mobility-and-transports.jpg
     nav: MOBILITY
     title: Mobility
-    image: /img/uploads/industry-mobility-and-transports.jpg
   - content: >-
       ## CRITICAL FEATURES
 
@@ -97,7 +96,12 @@ industries:
 
 
       * Fnac Darty
-    nav: RETAIL & OTHER
-    title: Retail & Other
+
+      * Acetiam
+
+      * Hubicus
     image: /img/uploads/industry-retail.jpg
+    nav: RETAIL & OTHER
+    title: Retail & other
 ---
+
